@@ -1,5 +1,5 @@
-# PHYS4410: Modern Astrophysics 
-Lecture notes for PHYS 4410 Modern Astrophysics.  This course is designed using "An Introduction to Modern Astrophysics" by Carroll & Ostlie, where it will include summaries of the course material and code implementation/exercises.  The course is divided into three sections (Introduction, Stars, and Galaxies) that will cover ~5-6 chapters for each section from the texbook.  In addition to homework assigments and exams, each student will give an in-class presention using information from an instructor-assigned:
+# ASTR4410: Modern Astrophysics 
+Lecture notes for ASTR4410 Modern Astrophysics.  This course is designed using **An Introduction to Modern Astrophysics** by Carroll & Ostlie, where it will include summaries of the course material and code implementation/exercises.  The course is divided into three sections (Introduction, Stars, and Galaxies) that will cover ~5-6 chapters for each section from the texbook.  In addition to homework assigments and exams, each student will give an in-class presention using information from an instructor-assigned:
 
 - tutorial using astropy
 
