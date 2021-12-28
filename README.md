@@ -11,14 +11,14 @@ where both prestentations will be assessed by both the instructor and fellow stu
 
 ## Introduction
 - Chapter 3: The Continuous Spectrum of Light
-- Chapter 4: The Theory of Special Relativity
 - Chapter 5: The Interaction of Light and Matter
+- Chapter 6: Telescopes
 - Chapter 8: The Classification of Stellar Spectra
 - Chapter 9: Stellar Atmospheres
-- Chapter 10: The Interiors of Stars
+- Chapter 10: The Sun
 
 ## Stars
-- Chapter 11: The Sun
+- Chapter 11: The Interiors of Stars
 - Chapter 12: The Interstellar Medium and Star Formation
 - Chapter 13: Main-Sequence and Post-Main-Sequence Stellar Evolution
 - Chapter 14: Stellar Pulsation
