@@ -27,9 +27,7 @@ The method used is called **trigonometric parallax**, which is the measurement o
 
 The perceived angular displacement is smaller as the distance to the object increases and hence, finding the distance to the nearest stars requires a longer baseline than Earth's diameter.  Luckily, we can obtain a much longer baseline for free because the Earth's position relative to the Sun changes (i.e., the Earth orbits the Sun) and we obtain a different vantage point every 6 months.  The new baseline is equal to the diameter of Earth's orbit (2 AU) and will reveal the back-and-forth change in position of nearby stars.  We must remember that the stars themselves could be moving (i.e., the star's *proper motion*) and this motion can be determined after removing the known periodic motion due to the change in Earth's position.  The measurement of the **parallax angle** $p$ (the *half*-angle of the full angular displacement) determines the distance $d$ to the star by:
 
-$\begin{align}
-d = \frac{1\; AU}{\tan p} \approx \frac{1}{p}\; AU 
-\end{align}$ 
+$d = \frac{1\; AU}{\tan p} \approx \frac{1}{p}\; AU $ 
 
 where the small-angle approximation $\tan p \approx p$ is applied and $p$ is measured in **radians**.  In most instances, the parallax angle $p$ is not measured in radians, but in *arcseconds* and requires an appropriate conversion by:
 
