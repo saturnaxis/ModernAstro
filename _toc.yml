@@ -1,0 +1,11 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+format: jb-book
+root: home
+parts:
+- caption: Lectures
+  numbered: true
+  chapters:
+  - file: Chapter_3/continuous-spectrum-of-light
+  - file: Chapter_5/interaction-of-light-and-matter
