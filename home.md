@@ -1,5 +1,5 @@
 # ASTR4410: Modern Astrophysics 
-Lecture notes for ASTR4410 Modern Astrophysics.  This course is designed using **An Introduction to Modern Astrophysics** by Carroll & Ostlie, where it will include summaries of the course material and code implementation/exercises.  The course is divided into three sections (Introduction, Stars, and Galaxies) that will cover ~5-6 chapters for each section from the texbook.  In addition to homework assigments and exams, each student will give an in-class presention using information from an instructor-assigned:
+Lecture notes for ASTR4410 Modern Astrophysics.  This course is designed using **An Introduction to Modern Astrophysics** by Carroll & Ostlie, where it will include summaries of the course material and code implementation/exercises.  The course is divided into three sections (Introduction, Stars, and Galaxies) that will cover ~5-6 chapters for each section from the textbook.  In addition to homework assignments and exams, each student will give an in-class presentation using information from an instructor-assigned:
 
 - tutorial using astropy
 
@@ -7,7 +7,7 @@ and
 
 - a review paper from Annual Review of Astronomy and Astrophysics
 
-where both prestentations will be assessed by both the instructor and fellow students.  The presentation using the astropy tutorials must explain to the class: how to use the relevant tools and connect to the material in the associated chapters of the textbook (as indicated below).
+where both presentations will be assessed by both the instructor and fellow students.  The presentation using the astropy tutorials must explain to the class: how to use the relevant tools and connect to the material in the associated chapters of the textbook (as indicated below).
 
 ## Introduction
 - Chapter 3: The Continuous Spectrum of Light
@@ -44,7 +44,7 @@ where both prestentations will be assessed by both the instructor and fellow stu
 - Chemical Composition of the Sun (Asplund et al. 2009)
 - Interstellar Dust Grains (Draine 2003)
 - Theory of Star Formation (McKee and Ostriker 2007)
-- Evolutiong of Asymptotic Giant Branch Stars (Herwig 2005)
+- Evolution of Asymptotic Giant Branch Stars (Herwig 2005)
 - Star Formation in the Milky Way and Nearby Galaxies (Kennicutt and Evans 2012)
 - The Evolution of Galaxy Structure Over Cosmic Time (Conselice 2014)
 
