@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -244,6 +246,79 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-optics">
+   3.1. Basic Optics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refraction-and-reflection">
+     3.1.1. Refraction and Reflection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-focal-plane">
+     3.1.2. The Focal Plane
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resolution-and-the-rayleigh-criterion">
+     3.1.3. Resolution and the Rayleigh Criterion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seeing">
+     3.1.4. Seeing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aberrations">
+     3.1.5. Aberrations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#brightness-of-an-image">
+     3.1.6. Brightness of an Image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problems">
+     3.1.7.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optical-telescopes">
+   3.2. Optical Telescopes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radio-telescopes">
+   3.3. Radio Telescopes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ir-uv-x-ray-and-gamma-ray-astronomy">
+   3.4. IR, UV, X-ray, and Gamma-ray Astronomy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#all-sky-surveys-and-virtual-observatories">
+   3.5. All Sky Surveys and Virtual Observatories
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -254,7 +329,80 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="telescopes">
 <h1><span class="section-number">3. </span>Telescopes<a class="headerlink" href="#telescopes" title="Permalink to this headline">¶</a></h1>
-<p>Under Construction</p>
+<div class="section" id="basic-optics">
+<h2><span class="section-number">3.1. </span>Basic Optics<a class="headerlink" href="#basic-optics" title="Permalink to this headline">¶</a></h2>
+<p>The development of optics greatly enhanced our window into the universe starting with Galileo’s innovative use of the telescope.  Today we “see” with many different sets of eyes to get a fuller picture of the cosmos, discover faint objects otherwise unseen, and resolve distant objects in greater detail.</p>
+<div class="section" id="refraction-and-reflection">
+<h3><span class="section-number">3.1.1. </span>Refraction and Reflection<a class="headerlink" href="#refraction-and-reflection" title="Permalink to this headline">¶</a></h3>
+<p>The first “telescope” was developed by Hans Lippershey in 1608 and a year later <a class="reference external" href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a> built his own version with about <span class="math notranslate nohighlight">\(3\times\)</span> magnification and later improved upon the design to obtain a version with <span class="math notranslate nohighlight">\(30\times\)</span> magnification.  These <strong>refracting</strong> telescopes consisted of lenses through which the light would pass and form an image.  In 1671, <a class="reference external" href="https://en.wikipedia.org/wiki/Isaac_Newton">Isaac Newton</a> showed that any refracting telescope would suffer from the dispersion of light into colors and he developed the <strong>reflecting</strong> telescope that used a mirror instead of a lens to bypass the problem.</p>
+<p>Both types of telescopes use a lens to produce an image, which makes a natural starting point.  <a class="reference external" href="https://en.wikipedia.org/wiki/Snell%27s_law">Snell’s law of refraction</a> describes how the path of a light ray changes as it travels through a lens. When a wave travels across a boundary between two media, its path is bent (<em>refracts</em>) at the interface.  The amount that the ray bends is material dependent and characterized by a wavelength-dependent index of refraction <span class="math notranslate nohighlight">\(n_\lambda = c/v_\lambda\)</span>, where <span class="math notranslate nohighlight">\(v_\lambda\)</span> represents the speed of light with the medium.</p>
+<p>The incoming ray possesses an angle of incidence <span class="math notranslate nohighlight">\(\theta_i\)</span> and the refracted ray is bent by <span class="math notranslate nohighlight">\(\theta_r\)</span>, where both angles are measured relative to the normal to the interface.  Then Snell’s law is given by</p>
+<div class="math notranslate nohighlight">
+\[
+n_1 \sin \theta_i = n_2 \sin \theta_r. \tag{1}
+\]</div>
+<p>Lens are shaped from glass so that the light rays can converge or diverge due to Snell’s law.  The light rays are traced where the lens is set perpendicular to the horizontal (or <strong>optical axis</strong>) to produce an axis of symmetry.  <em>Converging</em> lenses force the light rays to come to a point on the optical axis (opposite from the incoming rays).  This unique point is called the <strong>focal point</strong> of the lens and the distance to that point from the center of the lens is called the <strong>focal length</strong> <span class="math notranslate nohighlight">\(f\)</span>.  By changing the curvature of the lens, the light rays can instead diverge from the optical axis to make a <em>diverging</em> lens.  As a result, the focal point lies on the <em>same</em> side as the incoming rays.  For a converging lens , the focal length is defined as positive, where the focal length is negative for a diverging lens.</p>
+<p>The focal length <span class="math notranslate nohighlight">\(f_\lambda\)</span> of a thin lens can be calculated from the index of refraction <span class="math notranslate nohighlight">\(n_\lambda\)</span> and the radii of curvature of each surface (<span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span>) assuming the surfaces are spheroidal.  The sign convention for the radii is positive (convex) and negative (concave).  The focal length is given by the <strong>lensmaker’s formula</strong>,</p>
+<div class="math notranslate nohighlight">
+\[ 
+f_\lambda = \frac{1}{n_\lambda - 1}\left( \frac{R_1 R_2}{R_1 + R_2}\right). \tag {2}
+\]</div>
+<p>For mirrors, the focal length <span class="math notranslate nohighlight">\(f\)</span> is wavelength-independent since the light rays do not penetrate the surface and angle of reflection is equal to the angle of incidence (<span class="math notranslate nohighlight">\(\theta_i = \theta_r\)</span>).  A spheroidal mirror has a focal length at half the radius of curvature (<span class="math notranslate nohighlight">\(f=R/2\)</span>) and can be positive/negative depending on the geometry.  Converging mirrors are generally used as the primary mirror in modern telescopes, although diverging or flat mirrors may be used for more complicated optical systems.</p>
+</div>
+<div class="section" id="the-focal-plane">
+<h3><span class="section-number">3.1.2. </span>The Focal Plane<a class="headerlink" href="#the-focal-plane" title="Permalink to this headline">¶</a></h3>
+<p>To record an image, the detector must be placed in the <strong>focal plane</strong> of the telescope, which is defined as the plane passing through the focal point and oriented perpendicular to the optical axis of the system.  The image separation of two point sources on teh focal plane is relate to the focal length.  At the position of the focal plane, the rays from the on-axis source will converge at the focal point while the rays fro the other source will <em>approximately</em> meet a distance <span class="math notranslate nohighlight">\(y\)</span> from the focal point.  Using the geometry of a triangle with a long side <span class="math notranslate nohighlight">\(f\)</span> and angle <span class="math notranslate nohighlight">\(\theta\)</span> (incoming light rays from the source relative to the optical axis), the short side <span class="math notranslate nohighlight">\(y\)</span> can be determined by</p>
+<div class="math notranslate nohighlight">
+\[
+y = f \tan \theta.
+\]</div>
+<p>The field of view for the telescope is typically small so that the angle <span class="math notranslate nohighlight">\(\theta\)</span> is also small.  For a sufficiently small <span class="math notranslate nohighlight">\(\theta\)</span>, the small-angle approximation (<span class="math notranslate nohighlight">\(\tan\theta \approx \theta\)</span>) can be used to give</p>
+<div class="math notranslate nohighlight">
+\[
+y = f\theta. \tag{3}
+\]</div>
+<p>This leads to the <a class="reference external" href="https://en.wikipedia.org/wiki/Plate_scale">plate scale</a> (<span class="math notranslate nohighlight">\(d\theta/dy = p = 1/f\)</span>), which connects the angular separation of the objects on the sky with the linear separation of their images at the focal plane.  The plate scale is typically given in arcseconds/mm due to the history of using of photographic plates. The plate scale of JWST’s fine guidance sensor is about 0.065 <span class="math notranslate nohighlight">\(^{\prime\prime}\)</span> per pixel.</p>
+</div>
+<div class="section" id="resolution-and-the-rayleigh-criterion">
+<h3><span class="section-number">3.1.3. </span>Resolution and the Rayleigh Criterion<a class="headerlink" href="#resolution-and-the-rayleigh-criterion" title="Permalink to this headline">¶</a></h3>
+<p>To resolve two closely spaced objects, its not simply a matter of choosing a sufficiently long focal length.  There is a fundamental limit to our ability to <em>resolve</em> the objects due to the diffraction produced by the advancing wavefronts from each object.  This phenomenon is related to the single slit diffraction pattern produced by a slit of width <span class="math notranslate nohighlight">\(D\)</span>.  Any ray passing through the opening (or <strong>aperture</strong>) and arriving at a specific point can be though of as being associated with another ray passing through the aperture a distance of <span class="math notranslate nohighlight">\(D/2\)</span> away and arriving at the same point.  If the two rays are a half-wavelength (<span class="math notranslate nohighlight">\(\lambda/2\)</span>) out of phase, then destructive interference will occur.  This leads to the relation</p>
+<div class="math notranslate nohighlight">
+\[
+D \sin \theta = m \lambda, \tag{4}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(m = 1,2,3,\ldots\)</span> for dark fringes.  If a circular aperture is used (i.e., a telescope) the symmetry produces a series of concentric rings instead of the iconic diffraction pattern.  The mathematics of this pattern was solved by George Airy in 1835 and is known as the <strong>Airy disk</strong>.  If we relax Eqn 4 so that <span class="math notranslate nohighlight">\(m\)</span> is no longer an integer, then it can be used to find the maxima as well.</p>
+<p>Two sources that are sufficiently close together will have diffraction rings that overlap and it becomes impossible to resolve.  The two images are said to unresolved when the central maximum of one pattern falls inside the location of the first minimum of the other, where this condition is the <strong>Rayleigh criterion</strong>.  Assuming that angular separation <span class="math notranslate nohighlight">\(\theta_{\rm min}\)</span> is quite small and invoking the small-angle approximation, the Rayleigh criterion is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\theta_{\rm min} = 1.22 \frac{\lambda}{D} \tag{5}
+\]</div>
+<p>for a circular aperture, where <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength of light and <span class="math notranslate nohighlight">\(D\)</span> is the diameter of the telescope’s primary mirror.</p>
+</div>
+<div class="section" id="seeing">
+<h3><span class="section-number">3.1.4. </span>Seeing<a class="headerlink" href="#seeing" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="aberrations">
+<h3><span class="section-number">3.1.5. </span>Aberrations<a class="headerlink" href="#aberrations" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="brightness-of-an-image">
+<h3><span class="section-number">3.1.6. </span>Brightness of an Image<a class="headerlink" href="#brightness-of-an-image" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="problems">
+<h3><span class="section-number">3.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="optical-telescopes">
+<h2><span class="section-number">3.2. </span>Optical Telescopes<a class="headerlink" href="#optical-telescopes" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="radio-telescopes">
+<h2><span class="section-number">3.3. </span>Radio Telescopes<a class="headerlink" href="#radio-telescopes" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ir-uv-x-ray-and-gamma-ray-astronomy">
+<h2><span class="section-number">3.4. </span>IR, UV, X-ray, and Gamma-ray Astronomy<a class="headerlink" href="#ir-uv-x-ray-and-gamma-ray-astronomy" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="all-sky-surveys-and-virtual-observatories">
+<h2><span class="section-number">3.5. </span>All Sky Surveys and Virtual Observatories<a class="headerlink" href="#all-sky-surveys-and-virtual-observatories" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
