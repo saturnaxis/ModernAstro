@@ -241,6 +241,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/docs/Chapter_6/telescopes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/docs/Chapter_6/telescopes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -272,23 +294,18 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#seeing">
-     3.1.4. Seeing
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aberrations">
-     3.1.5. Aberrations
+     3.1.4. Aberrations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#brightness-of-an-image">
-     3.1.6. Brightness of an Image
+     3.1.5. Brightness of an Image
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#problems">
-     3.1.7.
+     3.1.6.
      <strong>
       Problems
      </strong>
@@ -335,12 +352,51 @@
 <div class="section" id="refraction-and-reflection">
 <h3><span class="section-number">3.1.1. </span>Refraction and Reflection<a class="headerlink" href="#refraction-and-reflection" title="Permalink to this headline">¶</a></h3>
 <p>The first “telescope” was developed by Hans Lippershey in 1608 and a year later <a class="reference external" href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a> built his own version with about <span class="math notranslate nohighlight">\(3\times\)</span> magnification and later improved upon the design to obtain a version with <span class="math notranslate nohighlight">\(30\times\)</span> magnification.  These <strong>refracting</strong> telescopes consisted of lenses through which the light would pass and form an image.  In 1671, <a class="reference external" href="https://en.wikipedia.org/wiki/Isaac_Newton">Isaac Newton</a> showed that any refracting telescope would suffer from the dispersion of light into colors and he developed the <strong>reflecting</strong> telescope that used a mirror instead of a lens to bypass the problem.</p>
-<p>Both types of telescopes use a lens to produce an image, which makes a natural starting point.  <a class="reference external" href="https://en.wikipedia.org/wiki/Snell%27s_law">Snell’s law of refraction</a> describes how the path of a light ray changes as it travels through a lens. When a wave travels across a boundary between two media, its path is bent (<em>refracts</em>) at the interface.  The amount that the ray bends is material dependent and characterized by a wavelength-dependent index of refraction <span class="math notranslate nohighlight">\(n_\lambda = c/v_\lambda\)</span>, where <span class="math notranslate nohighlight">\(v_\lambda\)</span> represents the speed of light with the medium.</p>
+<p>Both types of telescopes use a lens to produce an image, which makes a natural starting point.  <a class="reference external" href="https://en.wikipedia.org/wiki/Snell%27s_law">Snell’s law of refraction</a> describes how the path of a light ray changes as it travels through a lens. When a wave travels across a boundary between two media, its path is bent (<em>refracts</em>) at the interface.  The amount that the ray bends is material dependent and characterized by a wavelength-dependent index of refraction <span class="math notranslate nohighlight">\(n_\lambda = c/v_\lambda\)</span>, where <span class="math notranslate nohighlight">\(v_\lambda\)</span> represents the speed of light within the medium.  Alternatively, the index of refraction indicates how much the speed of light decreases within the medium (<span class="math notranslate nohighlight">\(v_\lambda = c/n_\lambda\)</span>) compared to vacuum.  Note that the frequency <span class="math notranslate nohighlight">\(\nu\)</span> of the wave remains unchanged and the refracted wavelength must change.</p>
 <p>The incoming ray possesses an angle of incidence <span class="math notranslate nohighlight">\(\theta_i\)</span> and the refracted ray is bent by <span class="math notranslate nohighlight">\(\theta_r\)</span>, where both angles are measured relative to the normal to the interface.  Then Snell’s law is given by</p>
 <div class="math notranslate nohighlight">
 \[
 n_1 \sin \theta_i = n_2 \sin \theta_r. \tag{1}
 \]</div>
+<ul class="simple">
+<li><p><strong>Green light (<span class="math notranslate nohighlight">\(\lambda_{\rm air} = 540\)</span> nm) is incident from air to glass (<span class="math notranslate nohighlight">\(n=1.51\)</span>).</strong></p>
+<ul>
+<li><p><strong>What is the wavelength of light in the glass?</strong></p></li>
+<li><p><strong>If <span class="math notranslate nohighlight">\(\theta_i = 37^\circ\)</span>, what is the angle of refraction?</strong></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">refract_lambda</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength in medium 1</span>
+    <span class="c1">#n1 = index of refraction of medium 1</span>
+    <span class="c1">#n2 = index of refraction of medium 2</span>
+    <span class="k">return</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">snell_law</span><span class="p">(</span><span class="n">th1</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">):</span>
+    <span class="c1">#th1 = angle in medium 1 (relative to normal) in radians</span>
+    <span class="c1">#n1 = index of refraction of medium 1</span>
+    <span class="c1">#n2 = index of refraction of medium 2</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">((</span><span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th1</span><span class="p">))</span>
+
+<span class="n">lambda_air</span> <span class="o">=</span> <span class="mi">540</span>
+<span class="n">n_air</span> <span class="o">=</span> <span class="mf">1.00029</span>
+<span class="n">n_glass</span> <span class="o">=</span> <span class="mf">1.51</span>
+<span class="n">theta_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">37</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The wavelength in glass is </span><span class="si">%3d</span><span class="s2"> nm.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">refract_lambda</span><span class="p">(</span><span class="n">lambda_air</span><span class="p">,</span><span class="n">n_air</span><span class="p">,</span><span class="n">n_glass</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The angle of refraction is </span><span class="si">%2.1f</span><span class="s2"> deg.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">snell_law</span><span class="p">(</span><span class="n">theta_i</span><span class="p">,</span><span class="n">n_air</span><span class="p">,</span><span class="n">n_glass</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The wavelength in glass is 357 nm.
+The angle of refraction is 23.5 deg.
+</pre></div>
+</div>
+</div>
+</div>
 <p>Lens are shaped from glass so that the light rays can converge or diverge due to Snell’s law.  The light rays are traced where the lens is set perpendicular to the horizontal (or <strong>optical axis</strong>) to produce an axis of symmetry.  <em>Converging</em> lenses force the light rays to come to a point on the optical axis (opposite from the incoming rays).  This unique point is called the <strong>focal point</strong> of the lens and the distance to that point from the center of the lens is called the <strong>focal length</strong> <span class="math notranslate nohighlight">\(f\)</span>.  By changing the curvature of the lens, the light rays can instead diverge from the optical axis to make a <em>diverging</em> lens.  As a result, the focal point lies on the <em>same</em> side as the incoming rays.  For a converging lens , the focal length is defined as positive, where the focal length is negative for a diverging lens.</p>
 <p>The focal length <span class="math notranslate nohighlight">\(f_\lambda\)</span> of a thin lens can be calculated from the index of refraction <span class="math notranslate nohighlight">\(n_\lambda\)</span> and the radii of curvature of each surface (<span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span>) assuming the surfaces are spheroidal.  The sign convention for the radii is positive (convex) and negative (concave).  The focal length is given by the <strong>lensmaker’s formula</strong>,</p>
 <div class="math notranslate nohighlight">
@@ -376,19 +432,104 @@ D \sin \theta = m \lambda, \tag{4}
 \[
 \theta_{\rm min} = 1.22 \frac{\lambda}{D} \tag{5}
 \]</div>
-<p>for a circular aperture, where <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength of light and <span class="math notranslate nohighlight">\(D\)</span> is the diameter of the telescope’s primary mirror.</p>
+<p>for a circular aperture, where <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength of light and <span class="math notranslate nohighlight">\(D\)</span> is the diameter of the telescope’s primary mirror.  Ground-based telescopes rarely approach the theoretical limit without assistance through adaptive optics due to the turbulence of the atmosphere or “seeing”.  Local conditions affect the degree of twinkling observed, where observatories high above sea level (“above the weather”) provide the best observing conditions.</p>
+<ul class="simple">
+<li><p><strong>A single slit of width D = 0.1 mm is illuminated by light through a visual Johnson filter and diffraction bands are observed on a screen 0.5 m from the slit.  How far is the third dark band from the central bright band?</strong></p></li>
+<li><p><strong>What is the diffraction limit (in arcseconds) for JWST’s fine guidance sensor (<a class="reference external" href="https://webb.nasa.gov/content/observatory/instruments/fgs.html">FGS</a>) at 5 <span class="math notranslate nohighlight">\(\mu m\)</span>?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">single_slit_th</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+    <span class="c1">#D = slit width</span>
+    <span class="c1">#l = lambda; wavelength of light; must match units with D</span>
+    <span class="c1">#m = order of dark fringes</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="n">D</span><span class="p">)</span> <span class="c1">#return theta in radians</span>
+
+<span class="k">def</span> <span class="nf">diff_limit</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+    <span class="c1">#D = aperture size</span>
+    <span class="c1">#l = lambda; wavelength of light</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mf">1.22</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="n">D</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">*</span><span class="mi">3600</span> <span class="c1">#return theta_min in arcseconds</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="mf">1e-3</span> <span class="c1">#converted to m</span>
+<span class="n">V_johnson</span> <span class="o">=</span> <span class="mi">550</span><span class="o">*</span><span class="mf">1e-9</span> <span class="c1">#converted peak visual wavelength to m</span>
+<span class="n">th_diff</span> <span class="o">=</span> <span class="n">single_slit_th</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">V_johnson</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The diffraction angle of the third dark band is </span><span class="si">%2.1f</span><span class="s2"> deg.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">th_diff</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The distance from the central bright band is </span><span class="si">%1.3f</span><span class="s2"> m.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">th_diff</span><span class="p">)))</span>
+
+<span class="n">D_JWST</span> <span class="o">=</span> <span class="mf">6.5</span> <span class="c1">#diameter of primary mirror</span>
+<span class="n">l_FGS</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="mf">1e-6</span> <span class="c1">#converted to m</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The diffraction limit for JWST&#39;s FGS at 5 um is </span><span class="si">%2.2f</span><span class="s2"> arcsec.&quot;</span> <span class="o">%</span> <span class="n">diff_limit</span><span class="p">(</span><span class="n">D_JWST</span><span class="p">,</span><span class="n">l_FGS</span><span class="p">))</span>
+</pre></div>
 </div>
-<div class="section" id="seeing">
-<h3><span class="section-number">3.1.4. </span>Seeing<a class="headerlink" href="#seeing" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The diffraction angle of the third dark band is 0.9 deg.
+The distance from the central bright band is 0.008 m.
+The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="aberrations">
-<h3><span class="section-number">3.1.5. </span>Aberrations<a class="headerlink" href="#aberrations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.4. </span>Aberrations<a class="headerlink" href="#aberrations" title="Permalink to this headline">¶</a></h3>
+<p>Image distortions or aberrations affect both lens and mirror systems.  Refracting telescopes suffer from <a class="reference external" href="https://en.wikipedia.org/wiki/Chromatic_aberration">chromatic aberration</a>, which is a distortion due to the wavelength-dependent focus of a lens.  The lensmaker’s formula (Eqn 2) depends on the radii of curvature and the index of refraction <span class="math notranslate nohighlight">\(n\)</span>, but <span class="math notranslate nohighlight">\(n\)</span> also depends on the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  This translates into a wavelength-dependent focal length, where the focal point for red light is different than for blue light.</p>
+<p>There can be aberrations that result from the shape of the reflecting or refracting surface.  Imperfections in the grinding/polishing of lens/mirrors mean not all areas will focus a parallel set of light rays to a single point.  This type of distortion is called <a class="reference external" href="https://en.wikipedia.org/wiki/Spherical_aberration">spherical aberration</a> and can be overcome with a corrective lens.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Hubble_Space_Telescope">Hubble Space Telescope</a> (HST) initially had imaging problems due to spherical aberration when a mistake was made while grinding the primary and left the center of the mirror too shallow by about 2 <span class="math notranslate nohighlight">\(\mu m\)</span>.  A repair mission in 1993, installed a special corrective optics package on the telescope.</p>
+<p>A <strong>coma</strong> produces elongated images of a point sources that lie off the optical axis. An <strong>astigmatism</strong> is a defect where different parts of a lens or mirror converge an image a slightly different locations on the focal plane.  Correcting for astigmatism can create other problems, such as the <strong>curvature of field</strong> that is due to the focusing of images on a curve rather than on a flat surface.</p>
 </div>
 <div class="section" id="brightness-of-an-image">
-<h3><span class="section-number">3.1.6. </span>Brightness of an Image<a class="headerlink" href="#brightness-of-an-image" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.5. </span>Brightness of an Image<a class="headerlink" href="#brightness-of-an-image" title="Permalink to this headline">¶</a></h3>
+<p>It might be assumed that the brightness of an extended (resolved) image depends on the area of the aperture.  This is the case for photography, where the camera has an adjustable aperture (iris) that controls how much light enters the camera to reach the detector on the focal plane.  For most astronomical applications, the aperture is fully open because the object is effectively infinitely far away (i.e., distance <span class="math notranslate nohighlight">\(r \gg \)</span> focal length <span class="math notranslate nohighlight">\(f\)</span>).  Then, it can be shown that the <strong>intensity</strong> of the radiation is the same for both the object and image; independent of the area of the aperture.  The exception is for bright objects (e.g., the Moon), where an adjustable iris helps prevent over-exposing the image (i.e., saturation).</p>
+<p>The light-gathering power of telescopes is the <strong>illumination</strong> <span class="math notranslate nohighlight">\(J\)</span> or the number of photons per second that are focused onto a unit area of a resolved image.  When comparing telescopes, the amount of light collected is proportional to the area of the aperture or the illumination <span class="math notranslate nohighlight">\(J \propto \pi D^2/4\)</span>, where <span class="math notranslate nohighlight">\(D\)</span> is the diameter of the telescope’s aperture.  Through the plate scale (Eqn 3) we have the linear size of the image proportional to the focal length of the lens and the image area is proportional to <span class="math notranslate nohighlight">\(f^2\)</span>.  The illumination is proportional to the ratio of the aperture diameter <span class="math notranslate nohighlight">\(D\)</span> to the focal length <span class="math notranslate nohighlight">\(f\)</span> (i.e., $J\propto D^2/f^2).  The inverse of the ratio is ofter referred to as the <strong>focal ratio</strong> (or f-ratio),</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac{f}{D}. \tag{6} \]</div>
+<p>The illumination indicates the amount of time required to collect the photons needed to form a bright image.  A larger focal ratio corresponds to a slower telescope, which means that a longer exposure is necessary to reach an equivalent illumination.</p>
+<ul class="simple">
+<li><p><strong>The twin telescopes of the Keck Observatory at Mauna Kea have primary mirrors 10 m in diameter with focal lengths of 17.5 m.  What is the focal ratios of each telescope?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">F_ratio</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">D</span><span class="p">):</span>
+    <span class="c1">#f = focal length of the telescope</span>
+    <span class="c1">#D = diameter of the telescope aperture; must match units with f</span>
+    <span class="k">return</span> <span class="n">f</span><span class="o">/</span><span class="n">D</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The focal ratio of each telescope is f/</span><span class="si">%1.2f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">F_ratio</span><span class="p">(</span><span class="mf">17.5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The focal ratio of each telescope is f/1.75.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="problems">
-<h3><span class="section-number">3.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.1.6. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>1. The diffraction pattern for a single slit is given by</p>
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[ I(\theta) = I_o\left[\frac{\sin(\beta/2)}{\beta/2}\right]^2 \]</div>
+</div></blockquote>
+<blockquote>
+<div><p>where <span class="math notranslate nohighlight">\(\beta = 2\pi D\sin(\theta)/\lambda\)</span>.</p>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><p><strong>(a)</strong> Plot <span class="math notranslate nohighlight">\(I/I_o\)</span> vs <span class="math notranslate nohighlight">\(m\)</span> over the range {-3,3}.</p>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><p><strong>(b)</strong> If the slit has an aperture of 1.0 <span class="math notranslate nohighlight">\(\mu m\)</span>, what angle <span class="math notranslate nohighlight">\(\theta\)</span> (in deg.) corresponds to the first minimum if the wavelength of light is 500 nm?</p>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><p>2. Using the Rayleigh criterion, estimate the angular resolution limit of the human eye at 440 nm. Assume the pupil diameter is 5 mm.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="optical-telescopes">
