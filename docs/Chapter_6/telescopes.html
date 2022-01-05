@@ -317,11 +317,61 @@
   <a class="reference internal nav-link" href="#optical-telescopes">
    3.2. Optical Telescopes
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refracting-telescopes">
+     3.2.1. Refracting Telescopes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reflecting-telescopes">
+     3.2.2. Reflecting Telescopes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#telescope-mounts">
+     3.2.3. Telescope Mounts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adaptive-optics">
+     3.2.4. Adaptive Optics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#space-based-observatories">
+     3.2.5. Space-based Observatories
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electronic-detectors">
+     3.2.6. Electronic Detectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     3.2.7.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#radio-telescopes">
    3.3. Radio Telescopes
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     3.3.1.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ir-uv-x-ray-and-gamma-ray-astronomy">
@@ -534,9 +584,59 @@ The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
 </div>
 <div class="section" id="optical-telescopes">
 <h2><span class="section-number">3.2. </span>Optical Telescopes<a class="headerlink" href="#optical-telescopes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="refracting-telescopes">
+<h3><span class="section-number">3.2.1. </span>Refracting Telescopes<a class="headerlink" href="#refracting-telescopes" title="Permalink to this headline">¶</a></h3>
+<p>The major optical component of a refracting telescope is the primary (or <em>objective</em>) lens with a focal length <span class="math notranslate nohighlight">\(f_{\rm obj}\)</span>.  The objective lens collects the light and brings the light to a focus at the focal plane, where a photographic plate or other detector can be placed at the focal plane to record the image.  The eyepiece serves as a magnifying glass and would be placed a distance from the focal plane equal to its focal length <span class="math notranslate nohighlight">\(f_{\rm eye}\)</span>.  The path of rays coming from a point source lying off the optical axis (at an angle <span class="math notranslate nohighlight">\(\theta\)</span>) ultimately emerge from the eyepiece an an angle <span class="math notranslate nohighlight">\(\phi\)</span> from the optical axis.</p>
+<p align="center"> 
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_6/refract_telescope.jpg?raw=true?"/>
+</p>
+<center>
+<div style='width: 450px'><b>Figure 1</b>: A refracting telescope is composed of an objective lens and an eyepiece. (Carroll & Ostlie, 2007) </div>
+</center>
+<p>The <strong>angular magnification</strong> produced by this arrangement of lenses can be shown to be</p>
+<div class="math notranslate nohighlight">
+\[ m = \frac{f_{\rm obj}}{f_{\rm eye}}, \tag{7} \]</div>
+<p>where a review is available on <a class="reference external" href="https://openstax.org/books/college-physics/pages/26-5-telescopes">openstax.org/books/college-physics</a>.  Since the objective lens tends to be a fixed part of the telescope, several eyepieces (of different focal lengths) can be used to produce different angular magnifications.  Note that viewing a large image requires a long objective in combination with a short focal length for the eyepiece.</p>
+<p>Recall that the illumination is inversely proportional to the square of the objective’s focal length and a larger diameter objective is needed to compensate.  However, there are practical limitations for to the size of a refracting telescope’s objective.  The lens is supported only around its edges and the shape of the lens deforms due to gravity when the size and weight are increased.  Furthermore, the type of deformation changes as the orientation of the telescope varies.</p>
+<p>Another limitation is the construction of the lens, which can have defects.  The light must pass through the <em>entire volume</em> of the lens and the quality must be nearly optically perfect.  Defects in the desired shape of the lens must be kept to a small fraction (<span class="math notranslate nohighlight">\(\lambda/20\)</span>) of the wavelength (<span class="math notranslate nohighlight">\(\lambda = 400-700\)</span> nm for visible light).  A large objective lens also has a slow thermal response, where the telescope must adjust to the temperature of the outside air after the dome is opened.  Thermally driven air currents develop around the telescope, which compound the normal concerns around “seeing”.  The overall shape of the telescope will change as a consequence of thermal expansion, which alters the optical alignment.</p>
+<p>Considering all of these challenges (along with the unique problem of chromatic aberration), the vast majority of all large modern telescopes are reflectors.  The largest refracting telescope in use today is at the <a class="reference external" href="https://en.wikipedia.org/wiki/Yerkes_Observatory">Yerkes Observatory</a> in Williams Bay, Wisconsin.  It has a 40-in (1.02 m) objective with a focal length of 19.36 m.</p>
+</div>
+<div class="section" id="reflecting-telescopes">
+<h3><span class="section-number">3.2.2. </span>Reflecting Telescopes<a class="headerlink" href="#reflecting-telescopes" title="Permalink to this headline">¶</a></h3>
+<p>A reflecting telescope is designed by replacing the objective lens with a mirror, which either reduces or eliminates many of the problems with refracting telescopes.  The light does not pass through a mirror and thus, much less precision is required in its construction (i.e., only one surface needs to be ground with precision).  The weight of the mirror can be minimized by using a lighter honeycomb structure behind the reflecting surface.  As a result, parts of the mirror can be mechanically deformed to correct for thermal and/or gravitational effects as the telescope moves (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Adaptive_optics">adaptive optics</a>).</p>
+<p>Although there are many benefits in using a mirror, there are some costs.  The primary mirror reflects the light back along the optical axis (i.e., law of reflection) to the focal point (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Reflecting_telescope#Prime_focus">prime focus</a>).  A detector can be placed at this location, but some of the incident light is blocked.  Additionally, the structure supporting the detector introduces diffraction spikes in the image of the stars.  Isaac Newton found a solution to the problem of the prime focus by placing a small, flat mirror in the reflected light’s path changing the location of the focal point.  A <a class="reference external" href="https://en.wikipedia.org/wiki/Newtonian_telescope">Newtonian telescope</a> design suffers a mechanical cost because the eyepiece (or detector) must be placed a significant distance from the telescope’s center of mass and would exert a significant torque on the telescope.</p>
+<p>The secondary mirror effectively produces a shadow on the primary mirror (rendering a small area useless) and a hole can be bored into the primary mirror so that the reflected light comes through the hole.  This <a class="reference external" href="https://en.wikipedia.org/wiki/Cassegrain_reflector">Cassegrain</a> design makes it possible to place a massive detector near the telescope’s center of mass and the observer can stay near the bottom of the telescope.  The secondary mirror is usually convex, while the primary mirror is concave .  However, a <a class="reference external" href="https://en.wikipedia.org/wiki/Ritchey%E2%80%93Chr%C3%A9tien_telescope">Ritchey-Chrétien</a> has a hyperbolic primary mirror rather than a parabolic one.  The Ritchey-Chrétien design has a wider field of view and eliminates off-axis optical errors (coma).  Some well-known examples are the Hubble Space Telescope, the Keck telescopes and the ESO Very Large Telescope.</p>
+<p>If the instrument package is too massive, astronomers use a series of mirrors to reflect the light down the telescope’s mount to a <em>coudé room</em> located below the telescope (i.e., <strong>coudé telescope</strong>).  Because of the extended optical path, a very long focal length is needed and is particularly useful in spectral line studies.  A modification of the Cassegrain design uses a spheroidal primary mirror (to minimize coma) combined with a “correcting” lens to help remove spherical aberration.  The benefit of a <a class="reference external" href="https://en.wikipedia.org/wiki/Schmidt%E2%80%93Cassegrain_telescope">Schmidt-Cassegrain telescope</a> is a wider field of view and is important for survey studies of large regions of sky.</p>
+</div>
+<div class="section" id="telescope-mounts">
+<h3><span class="section-number">3.2.3. </span>Telescope Mounts<a class="headerlink" href="#telescope-mounts" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="adaptive-optics">
+<h3><span class="section-number">3.2.4. </span>Adaptive Optics<a class="headerlink" href="#adaptive-optics" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="space-based-observatories">
+<h3><span class="section-number">3.2.5. </span>Space-based Observatories<a class="headerlink" href="#space-based-observatories" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="electronic-detectors">
+<h3><span class="section-number">3.2.6. </span>Electronic Detectors<a class="headerlink" href="#electronic-detectors" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">3.2.7. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>3. A refracting astronomical telescope has a magnifying power of 150 when adjusted for minimum eyestrain.  Its eyepiece has a focal length of + 1.20 cm.  Determine the focal length of the objective lens.</p>
+<p>4. The large telescope at Mt Palomar has a concave objective mirror diameter of 5.0 m and radius of curvature 46 m.  What is the magnifying power of the instrument when it is used with an eyepiece of focal length 1.25 cm?</p>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="radio-telescopes">
 <h2><span class="section-number">3.3. </span>Radio Telescopes<a class="headerlink" href="#radio-telescopes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3><span class="section-number">3.3.1. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>5. What would the diameter of a single radio dish need to be to have a collecting area equivalent to the 27 telescopes of the VLA?</p>
+<p>6. How much must the pointing angle of a two-element radio interferometer be changed in order to move from one interference maximum to the next?  Assume that the two telescopes are separated by the diameter of Earth and that the observation is being made at a wavelength of 21 cm. Express your answer in arcseconds.</p>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="ir-uv-x-ray-and-gamma-ray-astronomy">
 <h2><span class="section-number">3.4. </span>IR, UV, X-ray, and Gamma-ray Astronomy<a class="headerlink" href="#ir-uv-x-ray-and-gamma-ray-astronomy" title="Permalink to this headline">¶</a></h2>
