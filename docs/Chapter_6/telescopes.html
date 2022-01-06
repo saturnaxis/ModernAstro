@@ -359,8 +359,20 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spectral-flux-density">
+     3.3.1. Spectral Flux Density
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improving-resolution-large-apertures-and-interferometry">
+   3.4. Improving Resolution: Large Apertures and Interferometry
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     3.3.1.
+     3.4.1.
      <strong>
       Problems
      </strong>
@@ -370,7 +382,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ir-uv-x-ray-and-gamma-ray-astronomy">
-   3.4. IR, UV, X-ray, and Gamma-ray Astronomy
+   3.5. IR, UV, X-ray, and Gamma-ray Astronomy
   </a>
  </li>
 </ul>
@@ -489,9 +501,9 @@ D \sin \theta = m \lambda, \tag{4}
     <span class="c1">#D = aperture size</span>
     <span class="c1">#l = lambda; wavelength of light</span>
     <span class="k">return</span> <span class="p">(</span><span class="mf">1.22</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="n">D</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">*</span><span class="mi">3600</span> <span class="c1">#return theta_min in arcseconds</span>
-<span class="n">D</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="mf">1e-3</span> <span class="c1">#converted to m</span>
+<span class="n">D_slit</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="mf">1e-3</span> <span class="c1">#converted to m</span>
 <span class="n">V_johnson</span> <span class="o">=</span> <span class="mi">550</span><span class="o">*</span><span class="mf">1e-9</span> <span class="c1">#converted peak visual wavelength to m</span>
-<span class="n">th_diff</span> <span class="o">=</span> <span class="n">single_slit_th</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">V_johnson</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">th_diff</span> <span class="o">=</span> <span class="n">single_slit_th</span><span class="p">(</span><span class="n">D_slit</span><span class="p">,</span><span class="n">V_johnson</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The diffraction angle of the third dark band is </span><span class="si">%2.1f</span><span class="s2"> deg.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">th_diff</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The distance from the central bright band is </span><span class="si">%1.3f</span><span class="s2"> m.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">th_diff</span><span class="p">)))</span>
 
@@ -621,8 +633,80 @@ The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
 </div>
 <div class="section" id="radio-telescopes">
 <h2><span class="section-number">3.3. </span>Radio Telescopes<a class="headerlink" href="#radio-telescopes" title="Permalink to this headline">¶</a></h2>
+<p>By the 1930s, radio was the state-of-the-art in terms of communications for the United States and Europe.  Companies, such as Bell Labs, were interested in short wave (<span class="math notranslate nohighlight">\(\lambda = 10-20\)</span> m) transmissions for use in a trans-Atlantic radio service, where properties of the atmosphere and ionosphere could introduce static to radio voice transmissions.  In 1928, <a class="reference external" href="https://en.wikipedia.org/wiki/Karl_Guthe_Jansky">Karl Jansky</a> was assigned the task of investigating the sources of static and by 1931, he discovered that some of the static in his receiver was of “extraterrestrial origin.”  Jansky concluded (correctly) that much of the measured signal originated from the plane of the Milky Way.  Jansky’s work pioneered the birth of <a class="reference external" href="https://en.wikipedia.org/wiki/Radio_astronomy"><em>radio astronomy</em></a> as a new way to view and investigate the cosmos.</p>
+<p>Radio telescopes operate differently from their optical counterparts, where radio observations can be taken any time of day or night.  But, observations from the Earth’s surface are limited to a specific range of wavelengths (i.e., those that can pass through the atmosphere). At long wavelengths, transmission is limited by the ionosphere.  Water vapor interferes with radio astronomy at shorter wavelengths, which has led to building radio observatories that conduct observations at millimeter wavelengths at very high and dry sites (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Atacama_Large_Millimeter_Array">ALMA</a>), to minimize the water vapor content in the line of sight.  These are some of the known sources of noise to avoid and the increasing needs of human telecommunication force astronomers to build observatories in remote areas.</p>
+<div class="section" id="spectral-flux-density">
+<h3><span class="section-number">3.3.1. </span>Spectral Flux Density<a class="headerlink" href="#spectral-flux-density" title="Permalink to this headline">¶</a></h3>
+<p>A radio telescope typically uses a parabolic dish to reflect the radio energy to an antenna, where the signal is amplified and processed to produce a <em>radio map</em> at a particular wavelength.</p>
+<p align="center"> 
+<img src="https://public.nrao.edu/wp-content/uploads/2018/02/3C402_NDV1.jpg"/>
+</p>
+<center>
+<div style='width: 450px'><b>Figure 2</b>: (Left) NRAO VLA Sky Survey (NVSS); (Middle) 2nd Digitized Sky Survey Red (DSS2R*); (Right) 2017 Very Large Array Sky Survey (VLASS). (image credit: <a href="https://public.nrao.edu/blogs/dr-claire-chandler/">NRAO</a>) </div>
+</center>
+<p>The strength of a radio source is measured in terms of the <strong>spectral flux density</strong> <span class="math notranslate nohighlight">\(S(\nu)\)</span>, which is the amount of energy per second (W) per unit of frequency (Hz) per unit area (<span class="math notranslate nohighlight">\({\rm m}^2\)</span>).  To determine the power collected by the receiver, the spectral flux must be integrated over the telescope’s collecting area and over the detector’s bandwidth (i.e., frequency interval).  Mathematically the power is given as</p>
+<div class="math notranslate nohighlight">
+\[ P = \int_A \int_\nu S(\nu)f_\nu d\nu dA, \tag{8} \]</div>
+<p>where <span class="math notranslate nohighlight">\(f_\nu\)</span> is the detector efficiency at a particular frequency <span class="math notranslate nohighlight">\(\nu\)</span>.  If the detector is 100% efficient, then <span class="math notranslate nohighlight">\(f_\nu = 1\)</span>; otherwise it is a value between 0-1.  If <span class="math notranslate nohighlight">\(S(\nu)\)</span> is approximately constant over the bandwidth (and 100% efficient), then the integral simplifies to <span class="math notranslate nohighlight">\(P = SA\Delta \nu\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is the effective area of the aperture.  The unit for the spectral flux density is a jansky (Jy), where 1 Jy = <span class="math notranslate nohighlight">\(10^{-26}\)</span> <span class="math notranslate nohighlight">\({\rm W}/{\rm m}^2/{\rm Hz}\)</span>.  Typical measurements are on the order of mJy, where a large aperture is needed to collect enough photons to be measurable.</p>
+<ul class="simple">
+<li><p><strong>The third strongest radio source in the sky is the galaxy Cygnus A, where its spectral density is 4500 Jy at 400 MHz.  What is the power collected of this source over a 5 MHz frequency band with a 25 m radio telescope?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">radio_power</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">D_scope</span><span class="p">,</span><span class="n">freq_band</span><span class="p">):</span>
+    <span class="c1">#S = spectral flux density (in Jy; assumed constant over the frequency band)</span>
+    <span class="c1">#D = diameter of the telescope (in m)</span>
+    <span class="c1">#freq_band = frequency band (in Hz)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">S</span><span class="o">*</span><span class="mf">1e-26</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">0.25</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">D_scope</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">freq_band</span> <span class="c1">#returns power (in W)</span>
+
+<span class="n">source_S</span> <span class="o">=</span> <span class="mi">4500</span> <span class="c1">#Jy</span>
+<span class="n">D_scope</span> <span class="o">=</span> <span class="mi">25</span> <span class="c1">#m</span>
+<span class="n">delta_nu</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="mf">1e6</span> <span class="c1">#converted to Hz</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The power collected of the source is </span><span class="si">%1.1e</span><span class="s2"> W.&quot;</span> <span class="o">%</span> <span class="n">radio_power</span><span class="p">(</span><span class="n">source_S</span><span class="p">,</span><span class="n">D_scope</span><span class="p">,</span><span class="n">delta_nu</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The power collected of the source is 1.1e-13 W.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="improving-resolution-large-apertures-and-interferometry">
+<h2><span class="section-number">3.4. </span>Improving Resolution: Large Apertures and Interferometry<a class="headerlink" href="#improving-resolution-large-apertures-and-interferometry" title="Permalink to this headline">¶</a></h2>
+<p>The resolution of a single small radio telescope poor due to Rayleigh’s criterion (Eqn 5) because the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is necessarily large compared to the optical regime.  To obtain a comparable resolution requires a very large aperture.  However, an advantage of long wavelengths is that small deviations from an ideal parabolic shape isn’t as crucial.  For example, observing at 21 cm requires variations of <span class="math notranslate nohighlight">\(\leq1\)</span> cm (i.e., <span class="math notranslate nohighlight">\(\lambda/20\)</span>) in the shape of the dish to produce tolerable images.</p>
+<ul class="simple">
+<li><p><strong>What diameter radio dish would be required to observe at 21 cm with a resolution equivalent to the Keck telescopes (<span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>)?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dish_size</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">th</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength in m</span>
+    <span class="c1">#th = angular resolution; in arcseconds</span>
+    <span class="k">return</span> <span class="mf">1.22</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="p">(</span><span class="n">th</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="o">/</span><span class="mf">3600.</span><span class="p">)</span> <span class="c1"># returns dish size in m</span>
+
+<span class="n">l_rad</span> <span class="o">=</span> <span class="mf">0.21</span> <span class="c1">#21 cm --&gt; m</span>
+<span class="n">ang_res</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#angular resolution of Keck in arcseconds</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A radio dish with a resolution comparable to Keck would be </span><span class="si">%2.1f</span><span class="s2"> km.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">dish_size</span><span class="p">(</span><span class="n">l_rad</span><span class="p">,</span><span class="n">ang_res</span><span class="p">)</span><span class="o">/</span><span class="mf">1000.</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A radio dish with a resolution comparable to Keck would be 105.7 km.
+</pre></div>
+</div>
+</div>
+</div>
+<p>For comparison, the dish at <a class="reference external" href="https://en.wikipedia.org/wiki/Arecibo_Observatory">Arecibo Observatory</a> is 305 m across and was the largest single aperture radio telescope before the construction of the Five-hundred-meter Aperture Spherical radio Telescope (<a class="reference external" href="https://en.wikipedia.org/wiki/Five-hundred-meter_Aperture_Spherical_Telescope">FAST</a>) in southwest China.  The aperture would need to be about <span class="math notranslate nohighlight">\(200\times\)</span> larger to observe down to <span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>.</p>
+<p>The solution to improved resolution is accomplished through a technique called interferometry, which uses multiple telescopes to mimic a larger aperture.  As a result, astronomers have nevertheless been able to resolve radio images to better than <span class="math notranslate nohighlight">\(0.001^{\prime\prime}\)</span>.  For interferometry to work, astronomers utilize two radio telescopes (of modest size) separated by a baseline distance <span class="math notranslate nohighlight">\(d\)</span>.  This is similar to the Young double-slit experiment, where the baseline is analogous to the slit spacing.  For the  signal to arrive at both telescopes <em>in-phase</em> and at a maximum intensity, the extra distance traveled to one telescope must be an integral number of wavelengths <span class="math notranslate nohighlight">\(L = n\lambda\)</span>, where <span class="math notranslate nohighlight">\(n = 0,1,2,\ldots\)</span>.  Alternatively, the signal will destructively interfere if the distance <span class="math notranslate nohighlight">\(L = (n-1/2)\lambda\)</span> is a odd number of half-wavelengths.  The pointing angle <span class="math notranslate nohighlight">\(\theta\)</span> is then determined as</p>
+<div class="math notranslate nohighlight">
+\[ \sin \theta = \frac{L}{d}, \tag{9} \]</div>
+<p>if the signals of the two antennas are combined and a source can be accurately located.</p>
 <div class="section" id="id2">
-<h3><span class="section-number">3.3.1. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.4.1. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>5. What would the diameter of a single radio dish need to be to have a collecting area equivalent to the 27 telescopes of the VLA?</p>
 <p>6. How much must the pointing angle of a two-element radio interferometer be changed in order to move from one interference maximum to the next?  Assume that the two telescopes are separated by the diameter of Earth and that the observation is being made at a wavelength of 21 cm. Express your answer in arcseconds.</p>
@@ -630,7 +714,7 @@ The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
 </div>
 </div>
 <div class="section" id="ir-uv-x-ray-and-gamma-ray-astronomy">
-<h2><span class="section-number">3.4. </span>IR, UV, X-ray, and Gamma-ray Astronomy<a class="headerlink" href="#ir-uv-x-ray-and-gamma-ray-astronomy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.5. </span>IR, UV, X-ray, and Gamma-ray Astronomy<a class="headerlink" href="#ir-uv-x-ray-and-gamma-ray-astronomy" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
