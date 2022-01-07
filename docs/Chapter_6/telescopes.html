@@ -363,16 +363,14 @@
      3.3.1. Spectral Flux Density
     </a>
    </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#improving-resolution-large-apertures-and-interferometry">
-   3.4. Improving Resolution: Large Apertures and Interferometry
-  </a>
-  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#improving-resolution-large-apertures-and-interferometry">
+     3.3.2. Improving Resolution: Large Apertures and Interferometry
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     3.4.1.
+     3.3.3.
      <strong>
       Problems
      </strong>
@@ -382,8 +380,20 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ir-uv-x-ray-and-gamma-ray-astronomy">
-   3.5. IR, UV, X-ray, and Gamma-ray Astronomy
+   3.4. IR, UV, X-ray, and Gamma-ray Astronomy
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmospheric-windows-in-the-em-spectrum">
+     3.4.1. Atmospheric Windows in the EM Spectrum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observing-above-the-atmosphere">
+     3.4.2. Observing Above the Atmosphere
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -642,7 +652,7 @@ The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
 <img src="https://public.nrao.edu/wp-content/uploads/2018/02/3C402_NDV1.jpg"/>
 </p>
 <center>
-<div style='width: 450px'><b>Figure 2</b>: (Left) NRAO VLA Sky Survey (NVSS); (Middle) 2nd Digitized Sky Survey Red (DSS2R*); (Right) 2017 Very Large Array Sky Survey (VLASS). (image credit: <a href="https://public.nrao.edu/blogs/dr-claire-chandler/">NRAO</a>) </div>
+<div style='width: 700px'><b>Figure 2</b>: (Left) NRAO VLA Sky Survey (NVSS); (Middle) 2nd Digitized Sky Survey Red (DSS2R*); (Right) 2017 Very Large Array Sky Survey (VLASS). (image credit: <a href="https://public.nrao.edu/blogs/dr-claire-chandler/">NRAO</a>) </div>
 </center>
 <p>The strength of a radio source is measured in terms of the <strong>spectral flux density</strong> <span class="math notranslate nohighlight">\(S(\nu)\)</span>, which is the amount of energy per second (W) per unit of frequency (Hz) per unit area (<span class="math notranslate nohighlight">\({\rm m}^2\)</span>).  To determine the power collected by the receiver, the spectral flux must be integrated over the telescope’s collecting area and over the detector’s bandwidth (i.e., frequency interval).  Mathematically the power is given as</p>
 <div class="math notranslate nohighlight">
@@ -674,9 +684,8 @@ The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="improving-resolution-large-apertures-and-interferometry">
-<h2><span class="section-number">3.4. </span>Improving Resolution: Large Apertures and Interferometry<a class="headerlink" href="#improving-resolution-large-apertures-and-interferometry" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">3.3.2. </span>Improving Resolution: Large Apertures and Interferometry<a class="headerlink" href="#improving-resolution-large-apertures-and-interferometry" title="Permalink to this headline">¶</a></h3>
 <p>The resolution of a single small radio telescope poor due to Rayleigh’s criterion (Eqn 5) because the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is necessarily large compared to the optical regime.  To obtain a comparable resolution requires a very large aperture.  However, an advantage of long wavelengths is that small deviations from an ideal parabolic shape isn’t as crucial.  For example, observing at 21 cm requires variations of <span class="math notranslate nohighlight">\(\leq1\)</span> cm (i.e., <span class="math notranslate nohighlight">\(\lambda/20\)</span>) in the shape of the dish to produce tolerable images.</p>
 <ul class="simple">
 <li><p><strong>What diameter radio dish would be required to observe at 21 cm with a resolution equivalent to the Keck telescopes (<span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>)?</strong></p></li>
@@ -704,9 +713,19 @@ The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
 <p>The solution to improved resolution is accomplished through a technique called interferometry, which uses multiple telescopes to mimic a larger aperture.  As a result, astronomers have nevertheless been able to resolve radio images to better than <span class="math notranslate nohighlight">\(0.001^{\prime\prime}\)</span>.  For interferometry to work, astronomers utilize two radio telescopes (of modest size) separated by a baseline distance <span class="math notranslate nohighlight">\(d\)</span>.  This is similar to the Young double-slit experiment, where the baseline is analogous to the slit spacing.  For the  signal to arrive at both telescopes <em>in-phase</em> and at a maximum intensity, the extra distance traveled to one telescope must be an integral number of wavelengths <span class="math notranslate nohighlight">\(L = n\lambda\)</span>, where <span class="math notranslate nohighlight">\(n = 0,1,2,\ldots\)</span>.  Alternatively, the signal will destructively interfere if the distance <span class="math notranslate nohighlight">\(L = (n-1/2)\lambda\)</span> is a odd number of half-wavelengths.  The pointing angle <span class="math notranslate nohighlight">\(\theta\)</span> is then determined as</p>
 <div class="math notranslate nohighlight">
 \[ \sin \theta = \frac{L}{d}, \tag{9} \]</div>
-<p>if the signals of the two antennas are combined and a source can be accurately located.</p>
+<p>if the signals of the two antennas are combined and a source can be accurately located.  The image resolution can be increased if two signals are received and reconstructed such that the resulting signal is coherent.  Clearly, Equation 9 shows this is most easily done with a longer baseline <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Very-long-baseline_interferometry">Very long baseline interferometry</a> (VLBI) is possible using instruments across a whole continent or even between continents. for example, the Event Horizon Telescope (<a class="reference external" href="https://en.wikipedia.org/wiki/Event_Horizon_Telescope">EHT</a>) combined contemporaneous observations of M87’s galactic center to produce a direct image of a black hole’s accretion disk.  It used data from radio telescopes across the world, where the exact time of data acquisition was recorded and reconstructed the image.</p>
+<p>A single antenna has its greatest sensitivity along its pointed direction, but it can also be sensitive to radio sources at other angles.  A typical antenna <a class="reference external" href="https://en.wikipedia.org/wiki/Radiation_pattern">pattern</a> maximizes the symmetry in dipole radiation, where there are three regions: a main lobe, back lobe and sidelobes.  The <em>longer</em> the lobe, the more sensitive the telescope is in that direction.  Note that the directionality of the beam is not perfect and components of the sidelobes contributed to a background noise.  The narrowness of the main lobe is referred to as the <strong>half-power beam width</strong> (HPBW) or angular width at half its length.  This width can be modulated by the addition of other telescopes to produce a particular diffraction pattern (i.e., similar to the increase in grating lines for optical diffraction) and the effect of the sidelobes can be reduced.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sidelobes_en.svg/800px-Sidelobes_en.svg.png"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 3</b>: Typical polar radiation plot. Most antennas show a pattern of "lobes" or maxima of radiation. In a directive antenna, shown here, the largest lobe, in the desired direction of propagation, is called the "main lobe". The other lobes are called "sidelobes" and usually represent radiation in unwanted directions. (image credit: <a href="https://en.wikipedia.org/wiki/Radiation_pattern">Wikipedia</a>) </div>
+</center>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Very_Large_Array">Very Large Array</a> (VLA) in Socorro, New Mexico consists of 27 radio telescopes in a movable Y configuration.  The 25 m telescopes are on tracks, use receivers sensitive at a variety of frequencies, and can have a maximum configuration diameter of 27 km.  It is capable of producing a high-resolution map of the sky by combining data from all of the individual telescopes.  The effective collecting area is 27 times greater than a single telescope.</p>
+</div>
 <div class="section" id="id2">
-<h3><span class="section-number">3.4.1. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.3. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>5. What would the diameter of a single radio dish need to be to have a collecting area equivalent to the 27 telescopes of the VLA?</p>
 <p>6. How much must the pointing angle of a two-element radio interferometer be changed in order to move from one interference maximum to the next?  Assume that the two telescopes are separated by the diameter of Earth and that the observation is being made at a wavelength of 21 cm. Express your answer in arcseconds.</p>
@@ -714,7 +733,37 @@ The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
 </div>
 </div>
 <div class="section" id="ir-uv-x-ray-and-gamma-ray-astronomy">
-<h2><span class="section-number">3.5. </span>IR, UV, X-ray, and Gamma-ray Astronomy<a class="headerlink" href="#ir-uv-x-ray-and-gamma-ray-astronomy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.4. </span>IR, UV, X-ray, and Gamma-ray Astronomy<a class="headerlink" href="#ir-uv-x-ray-and-gamma-ray-astronomy" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="atmospheric-windows-in-the-em-spectrum">
+<h3><span class="section-number">3.4.1. </span>Atmospheric Windows in the EM Spectrum<a class="headerlink" href="#atmospheric-windows-in-the-em-spectrum" title="Permalink to this headline">¶</a></h3>
+<p>Optical and radio telescopes can detect a vast majority of the radiation that reaches Earth’s surface.  The Earth’s atmosphere is opaque to most of the remaining electromagnetic spectrum.  The primary contributor to IR absorption is water vapor, where some observatories are placed above the atmospheric water vapor to make their observations.  NASA and the UK operate IR telescopes on Mauna Kea, where the humidity is quite low.  The Stratospheric Observatory for Infrared Astronomy (<a class="reference external" href="https://en.wikipedia.org/wiki/Stratospheric_Observatory_for_Infrared_Astronomy">SOFIA</a>) uses a 2.5 m telescope mounted in a Boeing 747 with a large door in the aft fuselage and is designed for overnight flights at altitudes of about 12 km to make observations.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atmospheric_electromagnetic_opacity.svg/1920px-Atmospheric_electromagnetic_opacity.svg.png"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 4</b>: Opacity of the Earth's atmosphere as a function of wavelength. (image credit: <a href="https://en.wikipedia.org/wiki/Radio_window">Wikipedia</a>) </div>
+</center>
+<p>In addition to atmospheric absorption, IR observations are complicated by the background heat of the telescope and detector.  From Wien’s law, the peak wavelength of an object near room temperature (300 K) is nearly 10 <span class="math notranslate nohighlight">\(\mu {\rm m}\)</span>, which could be in an observer’s wavelength region of interest.  Thus, steps must be taken to cool the detector to remove the signal from the background heat.</p>
+</div>
+<div class="section" id="observing-above-the-atmosphere">
+<h3><span class="section-number">3.4.2. </span>Observing Above the Atmosphere<a class="headerlink" href="#observing-above-the-atmosphere" title="Permalink to this headline">¶</a></h3>
+<p>In 1983, the <a class="reference external" href="https://en.wikipedia.org/wiki/IRAS">Infrared Astronomy Satellite</a> (IRAS) was placed in in orbit 900 km above the Earth’s surface.  It was cooled to liquid helium temperatures and its detector was sensitive to wavelengths from 12-100 <span class="math notranslate nohighlight">\(\mu{\rm m}\)</span>.  IRAS detected dust in orbit around young stars, which was an indication of the formation of planetary systems.  It performed an all-sky survey in the IR, which resulted in the detection of about 350,000 sources and many of the sources (75,000) are starburst galaxies.  Other new discoveries included a dust ring surrounding Vega and the first images of the Milky Way’s core.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/IRAS_all-sky_infrared_survey.jpg"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 5</b>: Nearly the entire sky, as seen in infrared wavelengths and projected at one-half degree resolution, is shown in this image, assembled from six months of data from the Infrared Astronomical Satellite (IRAS). (image credit: <a href="https://en.wikipedia.org/wiki/IRAS">Wikipedia</a>) </div>
+</center>
+<p>From the success of IRAS, the European space Agency followed with the <strong>Infrared Space Observatory</strong> in 1995.  Later, the <a class="reference external" href="https://en.wikipedia.org/wiki/Spitzer_Space_Telescope">Spitzer Space Telescope</a> was placed into an Earth-trailing orbit in 2003 and was recently retired in 2020.  The mission was only planned to last 2.5 years.  The liquid helium was exhausted in 2009 and the telescope was repurposed to continue observing in its <strong>Warm Mission</strong>, which limited its observations to 3.6 and 4.5 <span class="math notranslate nohighlight">\(\mu{\rm m}\)</span>.  Spitzer had a 0.85 m (f/12) mirror constructed of beryllium and was cooled to less than 5.5 K prior to 2009.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Andromeda_galaxy_Ssc2005-20a1.jpg/1920px-Andromeda_galaxy_Ssc2005-20a1.jpg"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 6</b>: The Andromeda Galaxy imaged by the MIPS instrument at 24 &mu;m using the Spitzer Space Telescope. (image credit: <a href="https://en.wikipedia.org/wiki/Spitzer_Space_Telescope">Wikipedia</a>) </div>
+</center>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Cosmic_Background_Explorer">Cosmic Background Explorer</a> (COBE) was launched and operated from 1989-1993 investigating the microwave regime.  It measured the microwave background radiation as 2.7 K, which validated the previous measurements made from the ground. COBE was followed by two more advanced spacecraft: the <a class="reference external" href="https://en.wikipedia.org/wiki/Wilkinson_Microwave_Anisotropy_Probe">Wilkinson Microwave Anisotropy Probe</a> (WMAP) operated from 2001 to 2010 and the <a class="reference external" href="https://en.wikipedia.org/wiki/Planck_(spacecraft)">Planck spacecraft</a> from 2009 to 2013</p>
+<p>Shorter wavelengths require a very precise reflecting surface and it wasn’t until the Space Age could UV, X-ray, or Gamma-ray observations could be performed.  The <a class="reference external" href="https://en.wikipedia.org/wiki/International_Ultraviolet_Explorer">International Ultraviolet Explorer</a> (IUE) was operated from 1978-1996 and proved to be a remarkably productive instrument.  The most famous X-ray telescope <a class="reference external" href="https://en.wikipedia.org/wiki/Chandra_X-ray_Observatory">Chandra</a> has been in operation from 1999 and operates from 6.2 - 0.1 nm (0.2 - 10 keV) with an angular resolution of approximately <span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>.  Because X-rays cannot be focused in the same way that longer wavelengths can, grazing incidence mirrors are used to achieve the outstanding resolving power of Chandra.</p>
+</div>
 </div>
 </div>
 
