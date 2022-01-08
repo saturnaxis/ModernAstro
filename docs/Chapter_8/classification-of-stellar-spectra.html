@@ -241,6 +241,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/docs/Chapter_8/classification-of-stellar-spectra.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/docs/Chapter_8/classification-of-stellar-spectra.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -316,6 +338,8 @@
 <p>The science of astronomy progressed from a purely observational science of classification (prior to the 1800s) to a science interested in the fundamental inner workings of the stars (after the 1800s).  As early as 1817, stars were known to be chemically different through their spectra.</p>
 <div class="section" id="the-formation-of-spectral-lines">
 <h2><span class="section-number">4.1. </span>The Formation of Spectral Lines<a class="headerlink" href="#the-formation-of-spectral-lines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-spectral-types-of-stars">
+<h3><span class="section-number">4.1.1. </span>The Spectral Types of Stars<a class="headerlink" href="#the-spectral-types-of-stars" title="Permalink to this headline">¶</a></h3>
 <p>The initial spectral taxonomy used capital letters (from A…Z) that denoted the strength (or broadness) of the hydrogen absorption lines in a star and was developed by Edward Pickering and Williamina Fleming (Pickering’s assistant) in the 1890s at Harvard.  Pickering had many assistants working with him at the time, where several of them developed different classification schemes.  Antonia Maury’s scheme used the width of the spectral lines, which would have rearranged the Pickering’s B stars to come before the A stars.  Building on Maury’s work, Annie Jump Cannon rearranged the sequence of spectra so that O stars came before B and A stars, added subdivisions (e.g., A0-A9), and consolidated many of the classes.  As a result, the Harvard classification scheme became a <em>temperature</em> sequence with seven <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification">spectral types</a> (OBAFGKM) with O stars being the hottest.  Due to the reordering of letters, astronomy students developed mnemonics to remember the string of spectral types.  The traditional mnemonic and some other memorable versions are:</p>
 <ul class="simple">
 <li><p><strong>O</strong>h <strong>B</strong>e <strong>A</strong> <strong>F</strong>ine <strong>G</strong>irl/uy, <strong>K</strong>iss <strong>M</strong>e.</p></li>
@@ -403,12 +427,138 @@
 <div style='width: 450px'>
 <p><strong>Figure 2</strong>: A stack of all of the spectral images showing how the spectral features change systematically from types O5 through M5. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1984ApJS...56..257J/abstract">Jacoby, Hunter, &amp; Christian (1984)</a>; adapted by <a class="reference external" href="https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit1/SpTypes/index.html">Richard Pogge</a>)</p>
 </div>
-</div>
-<div class="section" id="the-spectral-types-of-stars">
-<h3><span class="section-number">4.1.1. </span>The Spectral Types of Stars<a class="headerlink" href="#the-spectral-types-of-stars" title="Permalink to this headline">¶</a></h3>
-</div>
+</div></div>
 <div class="section" id="the-maxwell-boltzmann-velocity-distribution">
 <h3><span class="section-number">4.1.2. </span>The Maxwell-Boltzmann Velocity Distribution<a class="headerlink" href="#the-maxwell-boltzmann-velocity-distribution" title="Permalink to this headline">¶</a></h3>
+<p>Electronic transitions explained the <em>existence</em> of absorption or emission spectral lines, but there must be some underlying physical foundation for the relative strength of spectral lines.  If the probability of transition was equal (independent of the orbital), then the absorption line strength of the Balmer lines should be equal.  This is clearly not the case as demonstrated by Figs. 1 and 2.  Then, two basic questions arise:</p>
+<ol class="simple">
+<li><p>In what orbitals are electrons most likely to be found?</p></li>
+<li><p>What are the relative numbers of atoms in various stages of ionization?</p></li>
+</ol>
+<p>Answering the first question will provide insight into which spectral lines we expect to be stronger than the other spectral lines.  While the second question will probe the relative strengths of the spectral lines.  The answers to both question are found in <strong>statistical mechanics</strong>, which is a branch of physics that studies the statistical properties of many body systems.  For example, a gas contains a huge number of particles and it would be impossible to calculate the detailed behavior of <em>all</em> the particles.  Information about how the behavior of the system can be determined using well-defined properties, such as its internal energy (temperature), pressure, and density.</p>
+<p>For a gas in thermal equilibrium (i.e., the gas in not rapidly changing in temperature), the <strong>Maxwell-Boltzmann velocity distribution function</strong> describes the number density of gas particles <span class="math notranslate nohighlight">\(n\)</span> within a given range of speed <span class="math notranslate nohighlight">\(v\)</span>.  The number of gas particles per unit volume having speeds between <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(v+dv\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[ n_v dv = n \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-mv^2/(2kT)}4\pi v^2 dv, \tag{1} \]</div>
+<p>which depends on the total number density <span class="math notranslate nohighlight">\(n\)</span>, the particle’s mass <span class="math notranslate nohighlight">\(m\)</span>, the Boltzmann constant <span class="math notranslate nohighlight">\(k\)</span>, and the temperature of the gas <span class="math notranslate nohighlight">\(T\)</span> (in K).</p>
+<ul class="simple">
+<li><p><strong>What is the most probable speed for hydrogen atoms in an A0 spectral-type star?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="k">def</span> <span class="nf">Maxwell_Boltzmann</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">dv</span><span class="p">):</span>
+    <span class="c1">#v = velocity</span>
+    <span class="c1">#dv = velocity interval</span>
+    <span class="n">factor</span> <span class="o">=</span> <span class="n">m_H</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T_eq</span><span class="p">)</span>
+    <span class="n">MB</span> <span class="o">=</span> <span class="p">(</span><span class="n">factor</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">factor</span><span class="o">*</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">MB</span>
+
+<span class="n">T_eq</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1">#K; surface temperature of an A0 star</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">1.380649e-23</span> <span class="c1">#J/K; Boltzmann constant</span>
+<span class="n">m_H</span> <span class="o">=</span> <span class="mf">1.67e-27</span> <span class="c1">#kg; mass of hydrogen </span>
+
+<span class="n">v_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">4e4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#velocity range in m/s</span>
+<span class="n">nv_n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v_rng</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">v_rng</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">nv_n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Maxwell_Boltzmann</span><span class="p">(</span><span class="n">v_rng</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">v_mp</span> <span class="o">=</span> <span class="n">v_rng</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)]</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_rng</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="n">nv_n</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$n_v/n$ ($10^{-5}$ s/m)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Speed ($10^4$ m/s)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The most probable speed for hydrogen atoms in an A0 star is </span><span class="si">%1.2e</span><span class="s2"> m/s.&quot;</span> <span class="o">%</span> <span class="n">v_mp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The most probable speed for hydrogen atoms in an A0 star is 1.29e+04 m/s.
+</pre></div>
+</div>
+<img alt="../_images/classification-of-stellar-spectra_2_1.png" src="../_images/classification-of-stellar-spectra_2_1.png" />
+</div>
+</div>
+<p>The exponent of the Maxwell-Boltzmann distribution function is the ratio of a gas particle’s kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span>) to the characteristic thermal energy (<span class="math notranslate nohighlight">\(kT\)</span>).  Particles above the thermal energy tend to either can escape so the overall distribution remains the same.  This is analogous as to why the temperature of a pot of boiling water doesn’t keep increasing.  The distribution peaks when the particle energies are equal at a <strong>most probable speed</strong> of</p>
+<div class="math notranslate nohighlight">
+\[ v_{mp} = \sqrt{\frac{2kT}{m}}. \tag{2}\]</div>
+<ul class="simple">
+<li><p><strong>How does this compare to our previous example?</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ v_{mp} = \sqrt{\frac{2(1.38\times 10^{-23})(10^4)}{1.67 \times 10^{-27}}} = 1.29 \times 10^4\;{\rm m/s} \]</div>
+<p>The high-speed exponential “tail” of the distribution function results in a somewhat higher <strong>root-mean-square speed</strong> of</p>
+<div class="math notranslate nohighlight">
+\[ v_{rms} = \sqrt{\frac{3kT}{m}}. \tag{3} \]</div>
+<p>The area under the curve of the Maxwell-Boltzmann distribution <em>fraction</em> of gas particles within a range of speeds or,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align} N/N_{total} &amp;= \frac{1}{n}\int_{v_1}^{v_2} n_v dv \\
+ &amp;= \left(\frac{m}{2\pi kT}\right)^{3/2} \int_{v_1}^{v_2} e^{-mv^2/(2kT)} 4\pi v^2 dv. \tag{4}\end{align}\end{split}\]</div>
+<p>Equation 4 has a closed-form solution when <span class="math notranslate nohighlight">\(v_1 = 0\)</span> and <span class="math notranslate nohighlight">\(v_2\rightarrow \infty\)</span>, it must be evaluated numerically in other cases.</p>
+<ul class="simple">
+<li><p><strong>What is the root-mean-square speed of the hydrogen atoms in an A0 star?</strong></p></li>
+<li><p><strong>What is the fraction of gas particles with speeds between 20-25 km/s?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_rms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">3</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T_eq</span><span class="p">)</span><span class="o">/</span><span class="n">m_H</span><span class="p">)</span> <span class="c1">#using Eqn 3</span>
+<span class="n">vrms_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">v_rms</span><span class="o">-</span><span class="n">v_rng</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">vrng_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">v_rng</span><span class="o">&gt;=</span><span class="mf">2e4</span><span class="p">,</span><span class="n">v_rng</span><span class="o">&lt;=</span><span class="mf">2.5e4</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">Simpsons_rule</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">func</span><span class="p">):</span>
+    <span class="c1">#width of each interval</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">tot_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">x_left</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">h</span>
+        <span class="n">x_right</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">i</span><span class="o">*</span><span class="n">h</span>
+        <span class="n">x_mid</span> <span class="o">=</span> <span class="n">x_left</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">tot_sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">h</span><span class="o">/</span><span class="mf">6.</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">x_left</span><span class="p">,</span><span class="n">h</span><span class="p">)</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="n">func</span><span class="p">(</span><span class="n">x_mid</span><span class="p">,</span><span class="n">h</span><span class="p">)</span><span class="o">+</span><span class="n">func</span><span class="p">(</span><span class="n">x_right</span><span class="p">,</span><span class="n">h</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">tot_sum</span>
+
+<span class="n">frac_rng</span> <span class="o">=</span> <span class="n">Simpsons_rule</span><span class="p">(</span><span class="mf">2e4</span><span class="p">,</span><span class="mf">2.5e4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">Maxwell_Boltzmann</span><span class="p">)</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_rng</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="n">nv_n</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_rms_2</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrms_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">v_rng</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$n_v/n$ ($10^{-5}$ s/m)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Speed ($10^4$ m/s)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The v_rms for the hydrogen atoms is </span><span class="si">%1.2e</span><span class="s2"> m/s.&quot;</span> <span class="o">%</span> <span class="n">v_rms_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The fraction of gas particles between 20-25 km/s is </span><span class="si">%1.3f</span><span class="s2"> or </span><span class="si">%2.1f%%</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">frac_rng</span><span class="p">,</span><span class="n">frac_rng</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The v_rms for the hydrogen atoms is 1.57e+04 m/s.
+The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
+</pre></div>
+</div>
+<img alt="../_images/classification-of-stellar-spectra_4_1.png" src="../_images/classification-of-stellar-spectra_4_1.png" />
+</div>
+</div>
 </div>
 <div class="section" id="the-boltzmann-equation">
 <h3><span class="section-number">4.1.3. </span>The Boltzmann Equation<a class="headerlink" href="#the-boltzmann-equation" title="Permalink to this headline">¶</a></h3>
