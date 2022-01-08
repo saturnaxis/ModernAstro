@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -244,6 +246,63 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-formation-of-spectral-lines">
+   4.1. The Formation of Spectral Lines
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-spectral-types-of-stars">
+     4.1.1. The Spectral Types of Stars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-maxwell-boltzmann-velocity-distribution">
+     4.1.2. The Maxwell-Boltzmann Velocity Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-boltzmann-equation">
+     4.1.3. The Boltzmann Equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-saha-equation">
+     4.1.4. The Saha Equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-the-boltzmann-and-saha-equations">
+     4.1.5. Combining The Boltzmann and Saha Equations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-hertzsprung-russell-diagram">
+   4.2. The Hertzsprung-Russell Diagram
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-enormous-range-in-stellar-radii">
+     4.2.1. An Enormous Range in Stellar Radii
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#morgan-keenan-luminosity-classes">
+     4.2.2. Morgan-Keenan Luminosity Classes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -254,7 +313,122 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-classification-of-stellar-spectra">
 <h1><span class="section-number">4. </span>The Classification of Stellar Spectra<a class="headerlink" href="#the-classification-of-stellar-spectra" title="Permalink to this headline">¶</a></h1>
-<p>Under Construction</p>
+<p>The science of astronomy progressed from a purely observational science of classification (prior to the 1800s) to a science interested in the fundamental inner workings of the stars (after the 1800s).  As early as 1817, stars were known to be chemically different through their spectra.</p>
+<div class="section" id="the-formation-of-spectral-lines">
+<h2><span class="section-number">4.1. </span>The Formation of Spectral Lines<a class="headerlink" href="#the-formation-of-spectral-lines" title="Permalink to this headline">¶</a></h2>
+<p>The initial spectral taxonomy used capital letters (from A…Z) that denoted the strength (or broadness) of the hydrogen absorption lines in a star and was developed by Edward Pickering and Williamina Fleming (Pickering’s assistant) in the 1890s at Harvard.  Pickering had many assistants working with him at the time, where several of them developed different classification schemes.  Antonia Maury’s scheme used the width of the spectral lines, which would have rearranged the Pickering’s B stars to come before the A stars.  Building on Maury’s work, Annie Jump Cannon rearranged the sequence of spectra so that O stars came before B and A stars, added subdivisions (e.g., A0-A9), and consolidated many of the classes.  As a result, the Harvard classification scheme became a <em>temperature</em> sequence with seven <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification">spectral types</a> (OBAFGKM) with O stars being the hottest.  Due to the reordering of letters, astronomy students developed mnemonics to remember the string of spectral types.  The traditional mnemonic and some other memorable versions are:</p>
+<ul class="simple">
+<li><p><strong>O</strong>h <strong>B</strong>e <strong>A</strong> <strong>F</strong>ine <strong>G</strong>irl/uy, <strong>K</strong>iss <strong>M</strong>e.</p></li>
+<li><p><strong>O</strong>ld, <strong>B</strong>ald, <strong>A</strong>nd <strong>F</strong>at <strong>G</strong>enerals <strong>K</strong>eep <strong>M</strong>istresses.</p></li>
+<li><p><strong>O</strong>h <strong>B</strong>oy, <strong>A</strong>n <strong>F</strong> <strong>G</strong>rade <strong>K</strong>ills <strong>M</strong>e.</p></li>
+<li><p><strong>O</strong>nly <strong>B</strong>oring, <strong>A</strong>stronomers <strong>F</strong>ind <strong>G</strong>ratitude <strong>K</strong>nowing <strong>M</strong>nemonics.</p></li>
+</ul>
+<p>Can you do better?</p>
+<p>Stars near the beginning of a given spectral type are referred to as <strong>early-type</strong> stars (e.g., A0), where those closer to the end are called <strong>late-type</strong> (e.g., A9).  Cannon classified around 200,000 spectra, where the results were collected into the <a class="reference external" href="https://en.wikipedia.org/wiki/Henry_Draper_Catalogue">Henry Draper Catalogue</a>.  The catalog bears the name of Henry Draper because he was one of the first to photograph and classify a star based on its spectral lines (e.g., Vega), and Pickering supervised photographic spectroscopy at Harvard College Observatory after Draper’s death.  Draper’s widow funded Pickering’s research under the Henry Draper Memorial.  today many stars are referred to by their HD numbers (e.g., Betelguese is HD 39801).</p>
+<p>Although we now know that Cannon’s classification scheme is based on surface temperatures, the physical basis of the Harvard spectral classification remained obscure to those who developed it.  Vega (A0) displays very strong hydrogen absorption lines compared to the Sun (G2), but the Sun has stronger calcium absorption lines.  This apparent dichotomy led to the following questions:</p>
+<ul class="simple">
+<li><p>Is this a result of a <em>compositional</em> difference between the stars?</p></li>
+</ul>
+<p>or</p>
+<ul class="simple">
+<li><p>Are the different <em>surface temperatures</em> responsible for the relative strengths of the absorption lines?</p></li>
+</ul>
+<p>The theoretical understanding of the quantum atom unlocked the secrets to stellar spectra.  Absorption lines are created when an atom absorbs a photon with <em>exactly</em> the energy required for an electron to make an upward transition between energy levels.  Emission lines are formed by the inverse process.  The distinction between spectra of stars with different temperatures are due to the electrons occupying different atomic orbitals in the <em>atmospheres</em> of these stars.  The details of spectral lines are complicated by the potential ionization stage of the the atoms.  <em>Note: an atom’s ionization stage is denoted by a Roman numeral (e.g., Ca II is singly ionized calcium).</em></p>
+<div align="center">
+<p><strong>Table 1</strong>: Harvard spectral classification.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Spectral <br>Type</p></th>
+<th class="text-align:center head"><p>Color</p></th>
+<th class="text-align:center head"><p>Effective<br>Temperature</p></th>
+<th class="text-align:left head"><p>Characteristics</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>O</p></td>
+<td class="text-align:center"><p>Blue-white</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\geq\)</span> 30,000 K</p></td>
+<td class="text-align:left"><p>Strong He II absorption/emission<br>He I absorption becoming stronger</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>B</p></td>
+<td class="text-align:center"><p>Blue-white</p></td>
+<td class="text-align:center"><p>10,000-30,000 K</p></td>
+<td class="text-align:left"><p>He I absorption strongest at B2<br>H I absorption becoming stronger</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>A</p></td>
+<td class="text-align:center"><p>White</p></td>
+<td class="text-align:center"><p>7500-10,000 K</p></td>
+<td class="text-align:left"><p>Balmer absorption lines strongest at A0<br>Ca II absorption becoming stronger</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>F</p></td>
+<td class="text-align:center"><p>Yellow-white</p></td>
+<td class="text-align:center"><p>6000-7500 K</p></td>
+<td class="text-align:left"><p>Ca II lines strengthen as Balmer lines weaken<br>Neutral metal absorption (Fe I, Cr I)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>G</p></td>
+<td class="text-align:center"><p>Yellow</p></td>
+<td class="text-align:center"><p>5200-6000 K</p></td>
+<td class="text-align:left"><p>Solar-type spectra<br>Ca II, Fe I, and other neutral metals strengthen</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>K</p></td>
+<td class="text-align:center"><p>Orange</p></td>
+<td class="text-align:center"><p>3700-5200 K</p></td>
+<td class="text-align:left"><p>Strong Ca II H &amp; K lines<br>Spectra dominated by metals</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>M</p></td>
+<td class="text-align:center"><p>Red</p></td>
+<td class="text-align:center"><p>2400-3700 K</p></td>
+<td class="text-align:left"><p>Spectra dominated by molecular absorption (oxides)<br>Neutral metals remain strong</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>L</p></td>
+<td class="text-align:center"><p>Dark red</p></td>
+<td class="text-align:center"><p>1300-2400 K</p></td>
+<td class="text-align:left"><p>Stronger in IR than in visible<br>Strong molecular absorption in metal hydrides (FeH), <br>water, carbon monoxide, and alkali metals <br>Molecular absorption in oxides weakening</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>T</p></td>
+<td class="text-align:center"><p>Infrared</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\leq\)</span> 1300 K</p></td>
+<td class="text-align:left"><p>Strong methane (CH_4) bands<br>Weakening carbon monoxide (CO) bands</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In Cannon’s classification scheme, the Balmer lines (hydrogen absorption) reach their maximum intensity when the effective surface temperature of the star reaches 10,000 K.  The visible neutral Helium (He I) lines occur at 22,000 K (B2 stars) and singly ionized calcium (Ca II) are most intense at 5250 K (K0 stars).  In astronomy, spectral lines of Ca II H and K are quoted, which are 396.8 nm and 393.3 nm, respectively.  Also, astronomers use the term <strong>metal</strong> to refer to a chemical element heavier than helium because hydrogen and helium are the most abundant elements in the universe. Table 1 includes the traditional Harvard classification scheme and the spectral types of very cool stars (L-Type) and <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Class_T:_methane_dwarfs">brown dwarfs</a> (T-Type).  Brown dwarfs are objects with too lite mass for nuclear fusion (of hydrogen) to occur in their interiors and are not considered stars.  Figure 1 illustrates how the spectra appear for a range of spectral classes (falsely colored).  Figure 2 demonstrates the resultant spectra after analysis and digitization.</p>
+<div align ="center">
+<p><img alt="Spectra" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Dwarf_star_spectra_%28luminosity_class_V%29_from_Pickles_1998.png" /><br>
+<strong>Figure 1</strong>: Montage of false color spectra for main-sequence stars. (image credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification">Wikipedia</a>)</p>
+</div>
+<div align ="center">
+<p><img alt="digitized spectra" src="https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit1/SpTypes/dwarfs.gif" /><br></p>
+<div style='width: 450px'>
+<p><strong>Figure 2</strong>: A stack of all of the spectral images showing how the spectral features change systematically from types O5 through M5. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1984ApJS...56..257J/abstract">Jacoby, Hunter, &amp; Christian (1984)</a>; adapted by <a class="reference external" href="https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit1/SpTypes/index.html">Richard Pogge</a>)</p>
+</div>
+</div>
+<div class="section" id="the-spectral-types-of-stars">
+<h3><span class="section-number">4.1.1. </span>The Spectral Types of Stars<a class="headerlink" href="#the-spectral-types-of-stars" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-maxwell-boltzmann-velocity-distribution">
+<h3><span class="section-number">4.1.2. </span>The Maxwell-Boltzmann Velocity Distribution<a class="headerlink" href="#the-maxwell-boltzmann-velocity-distribution" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-boltzmann-equation">
+<h3><span class="section-number">4.1.3. </span>The Boltzmann Equation<a class="headerlink" href="#the-boltzmann-equation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-saha-equation">
+<h3><span class="section-number">4.1.4. </span>The Saha Equation<a class="headerlink" href="#the-saha-equation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="combining-the-boltzmann-and-saha-equations">
+<h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="the-hertzsprung-russell-diagram">
+<h2><span class="section-number">4.2. </span>The Hertzsprung-Russell Diagram<a class="headerlink" href="#the-hertzsprung-russell-diagram" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="an-enormous-range-in-stellar-radii">
+<h3><span class="section-number">4.2.1. </span>An Enormous Range in Stellar Radii<a class="headerlink" href="#an-enormous-range-in-stellar-radii" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="morgan-keenan-luminosity-classes">
+<h3><span class="section-number">4.2.2. </span>Morgan-Keenan Luminosity Classes<a class="headerlink" href="#morgan-keenan-luminosity-classes" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
