@@ -559,9 +559,135 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <img alt="../_images/classification-of-stellar-spectra_4_1.png" src="../_images/classification-of-stellar-spectra_4_1.png" />
 </div>
 </div>
+<p>The Maxwell-Boltzmann distribution function describes the kinetic energy of gas particles within a star’s atmosphere at an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> and allows us to derive the most probable speed <span class="math notranslate nohighlight">\(v_{mp}\)</span> of the particles.  Recall our first question was to determine the most likely orbitals for the electrons.  While this cannot be answered fully yet, the next step will estimate the relative likelihood of a possible energy level through the Boltzmann equation.</p>
 </div>
 <div class="section" id="the-boltzmann-equation">
 <h3><span class="section-number">4.1.3. </span>The Boltzmann Equation<a class="headerlink" href="#the-boltzmann-equation" title="Permalink to this headline">¶</a></h3>
+<p>Collisions between gas particles cause some particles to gain and lose energy and thus, produce a definite distribution in the speeds of gas particles.  Statistical mechanics shows that orbitals of higher energy are less likely to be occupied by electrons.  Suppose there are two states of Energy <span class="math notranslate nohighlight">\(E_a\)</span> and <span class="math notranslate nohighlight">\(E_b\)</span> that are represented by a set of quantum numbers <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, respectively.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the first state <span class="math notranslate nohighlight">\(E_a\)</span> is the ground state of hydrogen (<span class="math notranslate nohighlight">\(E_a = -13.6\)</span> eV), then its quantum state is <span class="math notranslate nohighlight">\(s_a = \{1,0,0,+1/2\}\)</span>; in general, the individual elements are the quantum numbers, <span class="math notranslate nohighlight">\(\{n,\ell,m_\ell,m_s\}\)</span>. See Table 2 for a listing of the quantum numbers of for the ground (<span class="math notranslate nohighlight">\(n=1\)</span>) and 1st excited (<span class="math notranslate nohighlight">\(n=2\)</span>) states.</p>
+</div>
+<div align="center"> 
+<p><strong>Table 2</strong>: Quantum Numbers for the Hydrogen Atom.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:right head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(\ell\)</span></p></th>
+<th class="text-align:right head"><p><span class="math notranslate nohighlight">\(m_\ell\)</span></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(m_s\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:center"><p>+1/2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:center"><p>-1/2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:center"><p>+1/2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:center"><p>-1/2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:center"><p>+1/2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:center"><p>-1/2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:center"><p>+1/2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>0</p></td>
+<td class="text-align:center"><p>-1/2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>-1</p></td>
+<td class="text-align:center"><p>+1/2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p>2</p></td>
+<td class="text-align:right"><p>1</p></td>
+<td class="text-align:right"><p>-1</p></td>
+<td class="text-align:center"><p>-1/2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>There exists some probability <span class="math notranslate nohighlight">\(P(s_x)\)</span> that the system is in a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Then the ratio of the probability between orbital states represents the likelihood for which electrons may be found.  Using the states <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, the ratio of probability is given by</p>
+<div class="math notranslate nohighlight">
+\[ \frac{P(s_b)}{P(s_a)} = \frac{e^{-E_b/(kT)}}{e^{-E_a/(kT)}} = e^{-(E_b-E_a)/(kT)}, \tag{5} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An alternate form of the <a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_constant">Boltzmann constant</a> is <span class="math notranslate nohighlight">\(8.617333262145 \times 10^{-5}\)</span> eV/K, which is useful for solving problems when the energy is given in eV.</p>
+</div>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> is the common temperature of the two systems and <span class="math notranslate nohighlight">\(e^{-E_x/(kT)}\)</span> represents the <em>Boltzmann factor</em> for a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Suppose that <span class="math notranslate nohighlight">\(E_b &gt; E_a\)</span> and the temperature is decreasing (<span class="math notranslate nohighlight">\(T\rightarrow 0\)</span>), then the factor in the exponential <span class="math notranslate nohighlight">\(-(E_b-E_a)/(kT) \rightarrow -\infty\)</span> and so the ratio of probability <span class="math notranslate nohighlight">\(P(s_b)/P(s_a) \rightarrow 0\)</span>.  This means that there isn’t any thermal energy available to excite the electron to a higher energy level.  Conversely, if there is an infinite amount of energy (i.e., <span class="math notranslate nohighlight">\(T\rightarrow \infty\)</span>), then it is certain that an excitation will occur because <span class="math notranslate nohighlight">\(P(s_b)/P(s_a) \rightarrow 1\)</span>.</p>
+<p>It is often the case that then energy levels of the system may be <strong>degenerate</strong>, where more than one quantum state can have the same energy.  For example, two electrons in the ground state of hydrogen with opposite spins will have the same energy because <span class="math notranslate nohighlight">\(E_n\)</span> doesn’t depend on the quantum number <span class="math notranslate nohighlight">\(m_s\)</span>.  <em>Table 2 shows two states for the ground (<span class="math notranslate nohighlight">\(n=1\)</span>) state and eight states for the 1st excited (<span class="math notranslate nohighlight">\(n=2\)</span>) state so that the number of degenerate states <span class="math notranslate nohighlight">\(g_n = 2n^2\)</span>.</em> When taking averages, we must account for the degenerate states using a separate factor <span class="math notranslate nohighlight">\(g_x\)</span>, which is the statistical weight of the energy level.  The ratio of the probability between two degenerate states is given by</p>
+<div class="math notranslate nohighlight">
+\[  \frac{P(s_b)}{P(s_a)} = \frac{g_b e^{-E_b/(kT)}}{g_a e^{-E_a/(kT)}} = \frac{g_b}{g_a} e^{-(E_b-E_a)/(kT)} = \frac{N_b}{N_a}, \tag{6} \]</div>
+<p>which is typically indistinguishable from the ratio of the number of atoms <span class="math notranslate nohighlight">\(N_b/N_a\)</span> because stellar atmospheres contain a vast number of atoms.  Equation 6 is also called the <a class="reference external" href="https://phys.libretexts.org/Bookshelves/Astronomy__Cosmology/Book%3A_Stellar_Atmospheres_(Tatum)/08%3A_Boltzmann%27s_and_Saha%27s_Equations/8.04%3A_Boltzmann%27s_Equation">Boltzmann equation</a>.</p>
+<ul class="simple">
+<li><p><strong>At what temperature will equal numbers of atoms have electrons in the ground and 1st excited states?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>The ratio of the number of atoms between the 1st excited and ground states is <span class="math notranslate nohighlight">\(N_2/N_1\)</span>.  If these are in equal amounts, then the ratio is equal to unity.  To account for the degeneracy between states, we recall that <span class="math notranslate nohighlight">\(g_2 = 8\)</span> and <span class="math notranslate nohighlight">\(g_1 = 2\)</span>.  Finally, we can use the Boltzmann equation, along with the energy equation for hydrogen <span class="math notranslate nohighlight">\(E_n = 13.6/n^2\)</span> eV to get,
+$<span class="math notranslate nohighlight">\( 1= \frac{8}{2}e^{-[(-13.6/4 \;{\rm eV})-(-13.6 \;{\rm eV})/(kT)}.\)</span><span class="math notranslate nohighlight">\(
+Solving for the exponential, we get
+\)</span><span class="math notranslate nohighlight">\( 4^{-1} = e^{-10.2\;{\rm eV}/(kT)} \)</span><span class="math notranslate nohighlight">\(
+and taking the logarithm of both sides to get
+\)</span><span class="math notranslate nohighlight">\( \frac{10.2\;{\rm eV}}{kT} = \ln(4).\)</span><span class="math notranslate nohighlight">\(
+Solving for the temperature yields,
+\)</span><span class="math notranslate nohighlight">\( T = \frac{10.2\;{\rm eV}}{8.6173333\times 10^{-5}\;{\rm eV/K}\cdot\ln(4)} = 85,400\;{\rm K}.\)</span>$</p>
+</div></blockquote>
+<p>Extremely high temperatures are required for a significant number of hydrogen atoms to have electrons in the 1st excited state, where we have shown what it takes to get equal amounts.  Exploring all the possible ratios <span class="math notranslate nohighlight">\(N_2/N_{\rm tot}\)</span> (or <span class="math notranslate nohighlight">\(1/(1+N_1/N_2)\)</span>) as a function of temperature <span class="math notranslate nohighlight">\(T\)</span> reveals that only a small fraction (<span class="math notranslate nohighlight">\(\leq3.5\)</span>%) of electrons will be in the 1st excited state even if the temperature reaches 25,000 K.  We observe Balmer lines within stars at a much lower temperature (9520 K).  There must be another piece to this puzzle and it is found in the Saha equation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Boltzmann_Eq_H12</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#return the fraction of particles in the 1st excited state relative to the ground state of hydrogen (N_2/N_1)</span>
+    <span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">10.2</span><span class="o">/</span><span class="p">(</span><span class="n">k_boltz</span><span class="o">*</span><span class="n">T</span><span class="p">))</span>
+
+<span class="n">k_boltz</span> <span class="o">=</span> <span class="mf">8.6173333e-5</span> <span class="c1">#eV/K</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">T_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mf">2.5e4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">N2_Ntot</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="n">Boltzmann_Eq_H12</span><span class="p">(</span><span class="n">T_rng</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_rng</span><span class="p">,</span><span class="n">N2_Ntot</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Temperature (K)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$N_2/(N_1+N_2)$&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mf">2.5e4</span><span class="p">)</span>
+<span class="c1">#ax.set_yscale(&#39;log&#39;)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.04</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/classification-of-stellar-spectra_9_0.png" src="../_images/classification-of-stellar-spectra_9_0.png" />
+</div>
+</div>
 </div>
 <div class="section" id="the-saha-equation">
 <h3><span class="section-number">4.1.4. </span>The Saha Equation<a class="headerlink" href="#the-saha-equation" title="Permalink to this headline">¶</a></h3>
