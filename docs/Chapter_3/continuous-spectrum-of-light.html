@@ -1052,9 +1052,10 @@ B_\lambda(T) = \frac{a\lambda^{-5}}{e^{\frac{b}{\lambda T}}-1}. \tag{16}
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">init_session</span>
-<span class="n">init_session</span><span class="p">(</span><span class="n">quiet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="c1">#from sympy import init_session</span>
+<span class="c1">#init_session(quiet=True)</span>
+
 <span class="kn">from</span> <span class="nn">sympy.functions</span> <span class="kn">import</span> <span class="n">exp</span>
 <span class="kn">from</span> <span class="nn">sympy.abc</span> <span class="kn">import</span> <span class="n">h</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">T</span>
 <span class="c1">#l = lambda</span>
@@ -1066,10 +1067,8 @@ B_\lambda(T) = \frac{a\lambda^{-5}}{e^{\frac{b}{\lambda T}}-1}. \tag{16}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<img alt="../_images/continuous-spectrum-of-light_25_1.png" src="../_images/continuous-spectrum-of-light_25_1.png" />
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \frac{10 c^{2} h}{l^{6} \left(e^{\frac{c h}{T k l}} - 1\right)} + \frac{2 c^{3} h^{2} e^{\frac{c h}{T k l}}}{T k l^{7} \left(e^{\frac{c h}{T k l}} - 1\right)^{2}}\]</div>
 </div>
 </div>
 <p>See the <a class="reference external" href="https://docs.sympy.org/latest/index.html">SymPy</a> documentation for more details on its usage.</p>
@@ -1292,6 +1291,7 @@ The bolometric constant C_bol for the Sun is 14.20
 The bolometric correction BC for the Sun is -0.09
 </pre></div>
 </div>
+<img alt="../_images/continuous-spectrum-of-light_31_1.png" src="../_images/continuous-spectrum-of-light_31_1.png" />
 </div>
 </div>
 <p>The value of <span class="math notranslate nohighlight">\(C_{bol}\)</span> was first calibrated so that the bolometric correction <span class="math notranslate nohighlight">\(BC = m_{bol}-m_V &lt; 0\)</span> for all stars while still be close to zeros as possible.  However, it was discovered that some supergiant star have <em>positive</em> bolometric corrections.  Using Eqn. 21, the color indices (<span class="math notranslate nohighlight">\(U-B\)</span> or <span class="math notranslate nohighlight">\(B-V\)</span>) are determined through the flux ratio.  For <span class="math notranslate nohighlight">\(X-Y\)</span>, it follows that</p>
