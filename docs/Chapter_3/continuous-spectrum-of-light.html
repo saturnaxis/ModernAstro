@@ -453,7 +453,11 @@
 <p>To understand how intrinsically bright a star is, one must first know the distance to the star.  Most ancient civilizations believed that all the stars were fixed in the sky <strong>and</strong> the same distance away from us.  The ancient greeks, most notably <a class="reference external" href="http://atropos.as.arizona.edu/aiz/teaching/a204/lecture14.html">Ptolemy</a>, devised a method to determine the distance to the Moon using the apparent change in the Moon’s position relative to the background stars.  This was one of the first uses of <em>parallax</em>, where the baseline used was the radius of the Earth (determined earlier by Eratosthenes).</p>
 <p>Although the distance to the Moon could be calculated, the distance to each of the planets was unknown.  Kepler’s laws in their original form describe the <em>relative sizes</em> of the planetary orbits.  During 17th Century, the relative distances were given in astronomical units (thanks to Edmund Halley) due to the gap in our ability to measure the Solar System.  The true scale of the Solar System was partially revealed through a transit of <a class="reference external" href="https://skyandtelescope.org/astronomy-news/transits-of-venus-in-history-1631-1716/">Venus</a> in 1761, which was originally proposed by <a class="reference external" href="https://www.eso.org/public/outreach/eduoff/vt-2004/Education/EduSheet2.html">Halley</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">recommend</span> <span class="pre">it</span> <span class="pre">therefore</span> <span class="pre">again</span> <span class="pre">and</span> <span class="pre">again</span> <span class="pre">to</span> <span class="pre">those</span> <span class="pre">curious</span> <span class="pre">astronomers</span> <span class="pre">who,</span> <span class="pre">when</span> <span class="pre">I</span> <span class="pre">am</span> <span class="pre">dead,</span> <span class="pre">will</span> <span class="pre">have</span> <span class="pre">an</span> <span class="pre">opportunity</span> <span class="pre">of</span> <span class="pre">observing</span> <span class="pre">these</span> <span class="pre">things,</span> <span class="pre">that</span> <span class="pre">they</span> <span class="pre">remember</span> <span class="pre">my</span> <span class="pre">admonition,</span> <span class="pre">and</span> <span class="pre">diligently</span> <span class="pre">apply</span> <span class="pre">themselves</span> <span class="pre">with</span> <span class="pre">all</span> <span class="pre">imaginable</span> <span class="pre">success;</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">place,</span> <span class="pre">that</span> <span class="pre">they</span> <span class="pre">may</span> <span class="pre">not</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">unreasonable</span> <span class="pre">obscurity</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">cloudy</span> <span class="pre">sky</span> <span class="pre">be</span> <span class="pre">deprived</span> <span class="pre">of</span> <span class="pre">this</span> <span class="pre">most</span> <span class="pre">desirable</span> <span class="pre">sight,</span> <span class="pre">and</span> <span class="pre">then,</span> <span class="pre">that</span> <span class="pre">having</span> <span class="pre">ascertained</span> <span class="pre">with</span> <span class="pre">more</span> <span class="pre">exactness</span> <span class="pre">the</span> <span class="pre">magnitudes</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">planetary</span> <span class="pre">orbits,</span> <span class="pre">it</span> <span class="pre">may</span> <span class="pre">redound</span> <span class="pre">to</span> <span class="pre">their</span> <span class="pre">immortal</span> <span class="pre">glory.</span> <span class="pre">--Edmund</span> <span class="pre">Halley</span></code></p>
-<p>The method used is called <strong>trigonometric parallax</strong>, which is the measurement of the angular displacement of an object from two different vantage points and is related to the known distance between such points.  For example, the distance to the peak of a mountain can be determined by the peak’s angular position from two observation points separated by a known <em>baseline</em> distance.  Simple trigonometry (i.e., similar triangles) deduces the distance to the peak (see <a class="reference external" href="https://github.com/saturnaxis/PHYS4410/blob/main/Chapter_3/Figure_1.jpg">Figure 1</a>).</p>
+<p>The method used is called <strong>trigonometric parallax</strong>, which is the measurement of the angular displacement of an object from two different vantage points and is related to the known distance between such points.  For example, the distance to the peak of a mountain can be determined by the peak’s angular position from two observation points separated by a known <em>baseline</em> distance.  Simple trigonometry (i.e., similar triangles) deduces the distance to the peak.</p>
+<div align="center">
+<p><img alt="Figure 1" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_1.jpg?raw=true?" /><br>
+<strong>Figure 1</strong>: Trigonometric parallax: <span class="math notranslate nohighlight">\(d=B/\tan p\)</span>. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The perceived angular displacement is smaller as the distance to the object increases and hence, finding the distance to the nearest stars requires a longer baseline than Earth’s diameter.  Luckily, we can obtain a much longer baseline for free because the Earth’s position relative to the Sun changes (i.e., the Earth orbits the Sun) and we obtain a different vantage point every 6 months.  The new baseline is equal to the diameter of Earth’s orbit (2 AU) and will reveal the back-and-forth change in position of nearby stars.  We must remember that the stars themselves could be moving (i.e., the star’s <em>proper motion</em>) and this motion can be determined after removing the known periodic motion due to the change in Earth’s position.  The measurement of the <strong>parallax angle</strong> <span class="math notranslate nohighlight">\(p\)</span> (the <em>half</em>-angle of the full angular displacement) determines the distance <span class="math notranslate nohighlight">\(d\)</span> to the star by:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -464,7 +468,11 @@ d = \frac{1\; AU}{\tan p} \approx \frac{1}{p}\; AU,
 \[
 d = \frac{1}{p} \times \frac{180^\circ}{\pi} \times \frac{3600^{\prime\prime}}{1^\circ} \; AU \approx \frac{206,265}{p^{\prime\prime}} \; AU,
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(p^{\prime\prime}\)</span> is the parallax angle in arcseconds (see <a class="reference external" href="https://github.com/saturnaxis/PHYS4410/blob/main/Chapter_3/Figure_2.jpg">Figure 2</a>).  The nearest Sun-like stars lie in a binary system called <span class="math notranslate nohighlight">\(\alpha\)</span> Centauri, which has a parallax angle of 754 <span class="math notranslate nohighlight">\(\pm\)</span> 4.11 mas (milliarcseconds; <a class="reference external" href="https://arxiv.org/abs/1601.01636">Pourbaix &amp; Boffin (2016)</a>).</p>
+<p>where <span class="math notranslate nohighlight">\(p^{\prime\prime}\)</span> is the parallax angle in arcseconds.  The nearest Sun-like stars lie in a binary system called <span class="math notranslate nohighlight">\(\alpha\)</span> Centauri, which has a parallax angle of 754 <span class="math notranslate nohighlight">\(\pm\)</span> 4.11 mas (milliarcseconds; <a class="reference external" href="https://arxiv.org/abs/1601.01636">Pourbaix &amp; Boffin (2016)</a>).</p>
+<div align="center">
+<p><img alt="Figure 2" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_2.jpg?raw=true?" /><br>
+<strong>Figure 2</strong>: Stellar parallax: <span class="math notranslate nohighlight">\(d = 1/p^{\prime\prime}\)</span> pc. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <ul class="simple">
 <li><p><strong>What is the distance to <span class="math notranslate nohighlight">\(\alpha\)</span> Centauri (in AU)?</strong>  (Verify with a calculator.)</p>
 <ul>
@@ -498,7 +506,10 @@ d = \frac{1}{p} \times \frac{180^\circ}{\pi} \times \frac{3600^{\prime\prime}}{1
 \[
 d = \frac{1}{p^{\prime\prime}} \;pc. \tag{1}
 \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>To convert these <em>astronomical</em> distances into <em>physical</em> distances (i.e., meters), astronomers use the <strong>light-year</strong> or the distance that light travels through a vacuum in one Julian year (365.25 days).  One parsec is equal to 3.2615638 ly.</p>
+</div>
 <p>The first successful measurement of stellar parallax was made in 1838 by Friedrich Bessel (1784-1846).  He measured a parallax angle of 0.316 arcseconds for 61 Cygni and took 4 years of observation.  Prior to Bessel, others had tried to measure a <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_parallax">stellar parallax</a> but the aberration due to the optics (at the time) stymied all of those efforts.</p>
 <ul class="simple">
 <li><p><strong>What is the distance to <span class="math notranslate nohighlight">\(\alpha\)</span> Centauri (in pc)?</strong></p></li>
@@ -559,11 +570,14 @@ Prox Cen is 1.83% closer than Alpha Cen AB.
 <div class="section" id="problems">
 <h3><span class="section-number">1.1.1. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>1. In 1672, an international effort was made to measure the parallax angle of Mars at the time of opposition (when it was closest to Earth; see <a class="reference external" href="https://github.com/saturnaxis/PHYS4410/blob/main/Chapter_3/Figure_P1.jpg">Figure P1</a>).  Consider two observers who are separated by a baseline equal to Earth’s diameter.</p>
+<div><p>1. In 1672, an international effort was made to measure the parallax angle of Mars at the time of opposition (when it was closest to Earth; see <strong>Figure</strong>.  Consider two observers who are separated by a baseline equal to Earth’s diameter.</p>
 <blockquote>
 <div><p>If the difference in there measurements of Mars’ angular position is 33.6 <span class="math notranslate nohighlight">\(^{\prime\prime}\)</span>, what is the distance between Earth and Mars at the time of opposition? Express your answer both in units of m and in AU.</p>
 </div></blockquote>
 </div></blockquote>
+<div align="center">
+<p><img alt="Figure P1" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_P1.jpg?raw=true?" /></p>
+</div>
 <blockquote>
 <div><p>2. The parallax angle for Sirius is 0.3745 <span class="math notranslate nohighlight">\(^{\prime\prime}\)</span>.</p>
 <blockquote>
@@ -584,7 +598,7 @@ Prox Cen is 1.83% closer than Alpha Cen AB.
 100^{(m_2-m_1)/5} = \Delta B, \tag{2}
 \]</div>
 <p>where the apparent magnitude of each star (<span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>) is related the the relative change in brightness <span class="math notranslate nohighlight">\(\Delta B\)</span>.  A 1 magnitude difference corresponds to a change in brightness, <span class="math notranslate nohighlight">\(\Delta B = 2.511886... \approx 2.512\)</span>.</p>
-<p>Modern [photometric](<a class="reference external" href="https://en.wikipedia.org/wiki/Photometry_(astronomy)">https://en.wikipedia.org/wiki/Photometry_(astronomy)</a> detectors allow astronomers to measure the apparent magnitude of an object with an <a class="reference external" href="http://slittlefair.staff.shef.ac.uk/teaching/phy217/lectures/stats/L18/index.html">accuracy</a> of <span class="math notranslate nohighlight">\(\pm\)</span> 0.001 magnitude and the differences in magnitudes <span class="math notranslate nohighlight">\(\pm\)</span> 0.0001 (or ~100 ppm flux differences).  The brightest object detected (from Earth) is the Sun (m = -26.74) and the faintest is a small (<span class="math notranslate nohighlight">\(\sim\)</span> 15 m in diameter) Kuiper Belt Object (KBO) (m = +28.4) observed by the Hubble Space Telescope (HST) in 2003.  HST’s theoretical limit is m = +31.5 and the James Webb Space Telescope (JWST) will push this horizon to m = +34.</p>
+<p>Modern <a class="reference external" href="https://en.wikipedia.org/wiki/Photometry_(astronomy)">photometric</a> detectors allow astronomers to measure the apparent magnitude of an object with an <a class="reference external" href="http://slittlefair.staff.shef.ac.uk/teaching/phy217/lectures/stats/L18/index.html">accuracy</a> of <span class="math notranslate nohighlight">\(\pm\)</span> 0.001 magnitude and the differences in magnitudes <span class="math notranslate nohighlight">\(\pm\)</span> 0.0001 (or ~100 ppm flux differences).  The brightest object detected (from Earth) is the Sun (m = -26.74) and the faintest is a small (<span class="math notranslate nohighlight">\(\sim\)</span> 15 m in diameter) Kuiper Belt Object (KBO) (m = +28.4) observed by the Hubble Space Telescope (HST) in 2003.  HST’s theoretical limit is m = +31.5 and the James Webb Space Telescope (JWST) will push this horizon to m = +34.</p>
 <ul class="simple">
 <li><p><strong>How much fainter will JWST be capable of detecting compared to HST?</strong></p></li>
 </ul>
@@ -769,8 +783,20 @@ The distance modulus for the Sun is -31.57
 \[
 c = \lambda \nu \tag{10}.
 \]</div>
-<p>The particle nature of light was accepted as the <em>true</em> representation, largely based on Newton’s reputation.  Thomas Young (1773-1829) demonstrated the wave nature of light through his famous double-slit experiment.  <em>Note:</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Young_(scientist)">Thomas Young</a> was also instrumental in deciphering the Rosetta Stone, which unlocked the many mysteries of Ancient Egypt.</p>
+<p>The particle nature of light was accepted as the <em>true</em> representation, largely based on Newton’s reputation.  Thomas Young (1773-1829) demonstrated the wave nature of light through his famous double-slit experiment.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Young_(scientist)">Thomas Young</a> was also instrumental in deciphering the Rosetta Stone, which unlocked the many mysteries of Ancient Egypt.</p>
+</div>
+<div align="center">
+<p><img alt="Figure 3" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_3.jpg?raw=true?" /><br>
+<strong>Figure 3</strong>: Double slit experiment. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>For a double slit experiment, monochromatic light with a wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> from a single source passes through two narrow, parallel slits that are separated by a distance <span class="math notranslate nohighlight">\(d\)</span>.  There is a screen at a distance <span class="math notranslate nohighlight">\(L\)</span> beyond the two slits.  A wave model of light predicts that light and dark <em>interference</em> fringes should be observed.  As the light passes through the slits, the waves spread out radially as though the slits are wave sources with a succession of crests and troughs.  Waves obey a <em>superposition</em> principle where the two interacting waves add linearly (e.g., <span class="math notranslate nohighlight">\(\psi = A\psi_1 + B\psi_2\)</span>).  When the wave crests meet at the same time, a bright fringe or maximum is produced (i.e., <strong>constructive</strong> interference).  On the other hand, when the crest from one wave meets the trough of another, then the waves cancel each other out producing a dark fringe or minimum (i.e., <strong>destructive</strong> interference).</p>
+<div align="center">
+<p><img alt="Figure 4" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_4.jpg?raw=true?" /><br>
+<strong>Figure 4</strong>: Superposition principle for light waves: (a) Constructive interference. (b) Destructive interference. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -817,8 +843,11 @@ n \lambda \quad\quad\quad (n=0,1,2,\ldots;\; {\rm bright\;fringes}) \\
 (n-\frac{1}{2})\lambda \quad\quad (n=1,2,\ldots;\; {\rm dark\; fringes}).
 \end{cases}
 \end{split}\]</div>
-<p>The integer <span class="math notranslate nohighlight">\(n\)</span> represents the <strong>order</strong> of the maximum or minimum.  By measuring the fringes on the screen, Young was able to determine the wavelength of the light <em>before the development of spectra</em>.  <a class="reference external" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Table_1.jpg">Table 1</a> shows the range of wavelengths that astronomers utilize today.</p>
-<div class="cell docutils container">
+<p>The integer <span class="math notranslate nohighlight">\(n\)</span> represents the <strong>order</strong> of the maximum or minimum.  By measuring the fringes on the screen, Young was able to determine the wavelength of the light <em>before the development of spectra</em>.  <strong>Table 1</strong> shows the range of wavelengths that astronomers utilize today.</p>
+<div align="center">
+<p><img alt="Table 1" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Table_1.jpg?raw=true?" /><br>
+<strong>Table 1</strong>: The electromagnetic spectrum. (Carroll &amp; Ostlie (2007))</p>
+</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_lambda</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">fringe</span><span class="p">):</span>
     <span class="c1">#d = distance between slits in (m)</span>
@@ -860,6 +889,10 @@ Wavelength = 459.296 nm of dark fringe using order n = 10.
 <div class="section" id="maxwell-s-electromagnetic-wave-theory">
 <h3><span class="section-number">1.3.3. </span>Maxwell’s Electromagnetic Wave Theory<a class="headerlink" href="#maxwell-s-electromagnetic-wave-theory" title="Permalink to this headline">¶</a></h3>
 <p>Many discoveries were made in the 18th and 19th Century illustrating the properties of electricity and magnetism separately.  However, James Clerk Maxwell was the first to synthesize the prior knowledge and succeed in condensing everything known into <em>four</em> equations.  Maxwell found that his equations could produce wave equations for the electric (<span class="math notranslate nohighlight">\(E\)</span>) and magnetic (<span class="math notranslate nohighlight">\(B\)</span>) field vectors.  One of the main predictions was that these <em>electromagnetic waves</em> propagate through a vacuum with a characteristic speed <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_o \mu_o}\)</span>, where <span class="math notranslate nohighlight">\(\epsilon_o\)</span> and <span class="math notranslate nohighlight">\(\mu_o\)</span> are constants of nature that describe the permittivity and permeability of free space.  These equations showed that electromagnetic waves are <em>transverse</em> waves and could exhibit polarization (see <a class="reference external" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_5.jpg">Figure 5</a>).</p>
+<div align="center">
+<p><img alt="Figure 5" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_5.jpg?raw=true?" /><br>
+<strong>Figure 5</strong>: Electromagnetic wave. (Carroll &amp; Ostlie (2007))</p>
+</div>
 </div>
 <div class="section" id="the-poynting-vector-and-radiation-pressure">
 <h3><span class="section-number">1.3.4. </span>The Poynting Vector and Radiation Pressure<a class="headerlink" href="#the-poynting-vector-and-radiation-pressure" title="Permalink to this headline">¶</a></h3>
@@ -882,23 +915,20 @@ P_{\rm rad} = \frac{F_{\rm rad}}{A} = \begin{cases}
 \end{cases} 
 \end{split}\]</div>
 <p>where the radiation force due to a absorption has a factor of <span class="math notranslate nohighlight">\(\cos \theta\)</span> corresponding to the incident beam and the force due to a reflection has an additional <span class="math notranslate nohighlight">\(2\cos \theta\)</span> from the reaction force component that is perpendicular to the surface (see <a class="reference external" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_6.jpg">Figure 6</a>).  Radiation pressure has a negligible effect under everyday conditions on Earth.  But small objects, such as dust grains or even asteroids, can experience dramatic effects.  For example, the rings of Saturn are slowly driven into the planet due to radiation pressure from the Solar wind and cosmic rays (e.g., <a class="reference external" href="https://arxiv.org/abs/1201.3578">Jontof-Hutter &amp; Hamilton (2012)</a>).</p>
-</div>
+<div align="center">
+<p><img alt="Figure 6" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_6.jpg?raw=true?" /><br>
+<strong>Figure 6</strong>: Radiation pressure force. The surface area <span class="math notranslate nohighlight">\(A\)</span> is seen edge on. (Carroll &amp; Ostlie (2007))</p>
+</div></div>
 </div>
 <div class="section" id="blackbody-radiation">
 <h2><span class="section-number">1.4. </span>Blackbody Radiation<a class="headerlink" href="#blackbody-radiation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-connection-between-color-and-temperature">
 <h3><span class="section-number">1.4.1. </span>The Connection between Color and Temperature<a class="headerlink" href="#the-connection-between-color-and-temperature" title="Permalink to this headline">¶</a></h3>
 <p>The start of thermodynamics begins in earnest in the 19th Century.  Just prior to this epoch (in 1792), Thomas Wedgewood noticed that all of his ovens used to make porcelain became red-hot at the same temperature, independent of their size, shape, and construction.  Further investigation revealed that all objects emit light at all wavelengths with a varying degree of efficiency.  A special case was proposed where the object absorbs all of the incident light energy and re-radiates the incident energy with a characteristic spectrum.  Since this object reflects no light, it is known as a <strong>blackbody</strong> and the emitted energy is <strong>blackbody radiation</strong>.  Stars are blackbodies, at least to a rough first approximation.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:center head"><p><img alt="Blackbody Spectrum" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wiens_law.svg/1024px-Wiens_law.svg.png" /></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:center"><p><strong>Figure 7</strong> Blackbody radiation as a function of wavelength for various temperatures. Each temperature curve peaks at a different wavelength and Wien’s law describes the shift of that peak. (wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Wien%27s_displacement_law">Wien’s Law</a>)</p></td>
-</tr>
-</tbody>
-</table>
+<div align="center">
+<p><img alt="Blackbody Spectrum" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wiens_law.svg/1024px-Wiens_law.svg.png" /><br>
+<strong>Figure 7</strong> Blackbody radiation as a function of wavelength for various temperatures. Each temperature curve peaks at a different wavelength and Wien’s law describes the shift of that peak. (wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Wien%27s_displacement_law">Wien’s Law</a>)</p>
+</div>
 <p>A blackbody of temperature <span class="math notranslate nohighlight">\(T\)</span> emits a continuous spectrum with some energy at all wavelengths with a maximum intensity occurring at a wavelength <span class="math notranslate nohighlight">\(\lambda_{\rm max}\)</span>.  <strong>Wien’s displacement law</strong> describes the relationship between the temperature and the maximum wavelength as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1001,6 +1031,10 @@ The maximum wavelength for the Sun is: 502.0 nm (visible)
 B_\lambda(T) \approx \frac{2ckT}{\lambda^4}, \tag{14}
 \]</div>
 <p>and agrees well with the blackbody curve for long <span class="math notranslate nohighlight">\(\lambda\)</span>.  However, this result explodes for short <span class="math notranslate nohighlight">\(\lambda\)</span> (i.e., <span class="math notranslate nohighlight">\( \lim_{\lambda\rightarrow 0} B_\lambda(T) = \infty\)</span>).  The theoretical results was dubbed the “ultraviolet catastrophe” and is known today ast he <strong>Rayleigh-Jeans law</strong>.</p>
+<div align="center">
+<p><img alt="Figure 8" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_9.jpg?raw=true?" /><br>
+<strong>Figure 8</strong>: Blackbody radiation from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span>. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>At the same time, Wien worked on his own <a class="reference external" href="https://en.wikipedia.org/wiki/Wien_approximation">approximation</a> starting from the Stefan-Boltzmann law.  He developed a formula that was accurate at <em>short</em> wavelengths as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1293,6 +1327,10 @@ The bolometric correction BC for the Sun is -0.09
 <div class="section" id="the-color-color-diagram">
 <h3><span class="section-number">1.6.3. </span>The Color-Color-Diagram<a class="headerlink" href="#the-color-color-diagram" title="Permalink to this headline">¶</a></h3>
 <p>A <strong>color-color diagram</strong> shows the relation between the <span class="math notranslate nohighlight">\(U-B\)</span> and <span class="math notranslate nohighlight">\(B-V\)</span> color indices for main sequence stars (see <a class="reference external" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_11.jpg">Figure 11</a>).  Main-sequence stars are powered by the nuclear fusion of hydrogen nuclei and approximately 80-90% of all stars lie on the main-sequence.  If the stars were true blackbodies, then there is a linear relationship between the color indices.  When the color indices are plotted for real stars, astronomers find the observed relationship isn’t as simple.</p>
+<div align="center">
+<p><img alt="Figure 9" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_11.jpg?raw=true?" /><br>
+<strong>Figure 9</strong>: Color-color diagram for main-sequence stars. The dashed line is for a blackbody. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>Some light is absorbed as it travels from the stellar core through the star’s atmosphere.  The light is differentially absorbed as a function of the wavelength of light and the star’s temperature.  Very hot stars (Spectral type B0) agree better with the model black body compared to cooler stars (Spectral Type A0, F0, G0, K0, and M0).</p>
 </div>
 <div class="section" id="id4">
