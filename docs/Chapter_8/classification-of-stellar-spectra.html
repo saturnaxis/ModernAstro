@@ -702,7 +702,7 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <p>and is measured relative to the ground state energy <span class="math notranslate nohighlight">\(E_1\)</span>.  If we use the partition functions of two ionization stages (<span class="math notranslate nohighlight">\(Z_i\)</span> and <span class="math notranslate nohighlight">\(Z_{i+1}\)</span>), then the ratio of atoms in each stage is</p>
 <div class="math notranslate nohighlight">
 \[ \frac{N_{i+1}}{N_i} = \frac{2Z_{i+1}}{n_eZ_i}\left(\frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-\chi_i/(kT)}, \tag{8} \]</div>
-<p>where <span class="math notranslate nohighlight">\(m_e\)</span> is the mass of the electron, <span class="math notranslate nohighlight">\(n_e\)</span> is the number of free electrons per unit volume, and <span class="math notranslate nohighlight">\(\chi_i\)</span> is the ionization energy.  The factor of 2 in front of the partition function <span class="math notranslate nohighlight">\(Z_{i+1}\)</span> reflects the two possible spins of the free electron, <span class="math notranslate nohighlight">\(m_s = \pm 1/2\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(m_e\)</span> is the mass of the electron, <span class="math notranslate nohighlight">\(n_e\)</span> is the number of free electrons <em>per unit volume</em>, and <span class="math notranslate nohighlight">\(\chi_i\)</span> is the ionization energy.  The factor of 2 in front of the partition function <span class="math notranslate nohighlight">\(Z_{i+1}\)</span> reflects the two possible spins of the free electron, <span class="math notranslate nohighlight">\(m_s = \pm 1/2\)</span>.  Sometimes the pressure of the free electrons <span class="math notranslate nohighlight">\(P_e\)</span> is used in place of the electron number density using the ideal gas law (<span class="math notranslate nohighlight">\(P_e = n_e kT\)</span>).  The electron pressure ranges from <span class="math notranslate nohighlight">\(0.1-100 \;{\rm N/m^2}\)</span> in the atmospheres of cooler and hotter stars, respectively.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Equation 8 is nown as the <strong>Saha equation</strong>, after the Indian astrophysicist <a class="reference external" href="https://en.wikipedia.org/wiki/Meghnad_Saha">Meghnad Saha</a>.</p>
@@ -710,6 +710,105 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </div>
 <div class="section" id="combining-the-boltzmann-and-saha-equations">
 <h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this headline">¶</a></h3>
+<p>The Boltzmann equation describes what is <em>possible</em>, where the Saha equation describes what is <em>probable</em>.  Therefore, what we observe should be a combination of effects from both equations.  Consider the degree of ionization in a stellar atmosphere consisting of pure hydrogen and that the electron pressure is a constant <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span>.  Hydrogen has only two states: neutral hydrogen (H I) and ionized hydrogen (H II).  The fraction of atoms that are ionized depends on the ratio of the number ionized atoms <span class="math notranslate nohighlight">\(N_{\rm II}\)</span> and the total number of atoms <span class="math notranslate nohighlight">\(N_{\rm tot}=N_{\rm I} + N_{\rm II}\)</span>.  Ionized hydrogen is just a proton and thus, has no degeneracy and the partition function <span class="math notranslate nohighlight">\(Z_{\rm II} = 1\)</span>.  The partition function for the remaining neutral hydrogen (H I) is simply <span class="math notranslate nohighlight">\(Z_{\rm I} \approx g_1 = 2(1)^2 = 2\)</span>.  The temperatures of stellar atmospheres range from 5000 K - 25,000 K and the previous example (using the Boltzmann equation) showed that most electrons for the hydrogen atoms are in the ground state (<span class="math notranslate nohighlight">\(n=1\)</span>).  For neutral hydrogen, equation 7 becomes</p>
+<div class="math notranslate nohighlight">
+\[ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E_2-E_1)/(kT)} , \tag{9}  \]</div>
+<p>where the second term <span class="math notranslate nohighlight">\(g_2 e^{-(E_2-E_1)/(kT)} \rightarrow 0\)</span> because <span class="math notranslate nohighlight">\(kT = 0.4-2.2\)</span> eV for the appropriate temperature range and <span class="math notranslate nohighlight">\(e^{-(E_2-E_1)/(kT)} \ll 1\)</span>.  The ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm tot}\)</span> can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{N_{\rm II}}{N_{\rm tot}} = \frac{N_{\rm II}/N_{\rm I}}{1 + N_{\rm II}/N_{\rm I}}. \tag{10}\]</div>
+<p>Then the Saha equation can be used to determine the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span>.  Using the ionization energy <span class="math notranslate nohighlight">\(\chi_{\rm I} = 13.6\)</span> eV for hydrogen, the ideal gas law, and substituting the values for <span class="math notranslate nohighlight">\(Z_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(Z_{\rm II}\)</span> into Equation 8, the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> is given as</p>
+<div class="math notranslate nohighlight">
+\[ N_{\rm II}/N_{\rm I} = \frac{kT}{P_e}\left(\frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-13.6\;{\rm eV}/(kT)}. \tag{11}\]</div>
+<p>In the end, we want to know the fraction of ionized hydrogen atoms <span class="math notranslate nohighlight">\(N_2/N_{\rm tot}\)</span> present for a given temperature.  The Boltzmann equation (Eqn 6) provides the fraction of atoms in a higher energy state and the Saha equation (Eqn 11) can be used to determine the fraction of atoms that are not ionized.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the atoms are ionized, then they can’t have the electron in a higher energy level.</p>
+</div>
+<p>Assuming that nearly all the atoms are in either the ground state or the first excited state, we can employ the approximation for ratio in the number of non-ionized (neutral) particles to the total number of particles, <span class="math notranslate nohighlight">\(N_{\rm I}/(N_1 + N_2) \approx 1\)</span>, and write</p>
+<div class="math notranslate nohighlight">
+\[ \frac{N_2}{N_{\rm tot}} = \frac{N_2}{N_1+N_2} \frac{N_{\rm I}}{N_{\rm I}+N_{\rm II}} = \frac{N_2/N_1}{1 + N_2/N_1} \frac{1}{1+N_{\rm II}/N_{\rm I}} \tag{12} \]</div>
+<ul class="simple">
+<li><p><strong>Plot the fraction of ionized hydrogen as a function of temperature.</strong></p></li>
+<li><p><strong>Plot the fraction of hydrogen in the first excited state as a function of temperature.</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Saha_Eq_H12</span><span class="p">(</span><span class="n">P_e</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#return the fraction of ionized particles (N_II/N_I) for a pure hydrogen gas</span>
+    <span class="n">kT</span> <span class="o">=</span> <span class="n">k_boltz</span><span class="o">*</span><span class="n">T</span>
+    <span class="n">Z_I</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">+</span> <span class="mf">8.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">10.2</span><span class="o">/</span><span class="n">kT</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">kT</span><span class="o">/</span><span class="n">P_e</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Z_II</span><span class="o">/</span><span class="n">Z_I</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">m_e</span><span class="o">*</span><span class="n">kT</span><span class="o">/</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">chi_I</span><span class="o">/</span><span class="n">kT</span><span class="p">)</span>
+
+<span class="n">k_boltz</span> <span class="o">=</span> <span class="mf">1.38064852e-23</span> <span class="c1">#J/K</span>
+<span class="c1">#Convert to Joules because P_e is in N/m^2</span>
+<span class="n">chi_I</span> <span class="o">=</span> <span class="mf">13.6</span><span class="o">*</span><span class="mf">1.60218e-19</span> <span class="c1">#convert eV to J</span>
+<span class="n">m_e</span> <span class="o">=</span> <span class="mf">9.10938356e-31</span> <span class="c1">#kg; mass of electron; https://en.wikipedia.org/wiki/Electron</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">6.62607004e-34</span> <span class="c1">#J/s Planck constant</span>
+<span class="n">Z_II</span> <span class="o">=</span> <span class="mf">1.</span> 
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">T_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mf">2.5e4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">NII_NI</span> <span class="o">=</span> <span class="n">Saha_Eq_H12</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="n">T_rng</span><span class="p">)</span>
+<span class="n">NII_Ntot</span> <span class="o">=</span> <span class="n">NII_NI</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">NII_NI</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_rng</span><span class="p">,</span><span class="n">NII_Ntot</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">fifty_pct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">NII_Ntot</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.025</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">]</span><span class="o">-</span><span class="mi">5000</span><span class="p">)</span><span class="o">/</span><span class="mf">2e4</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fifty percent ionization occurs at T ~ </span><span class="si">%4d</span><span class="s2"> K.&quot;</span> <span class="o">%</span> <span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">25000</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Temperature (K)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$N_{</span><span class="se">\\</span><span class="s2">rm II}/N_{</span><span class="se">\\</span><span class="s2">rm tot}$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fifty percent ionization occurs at T ~ 9600 K.
+</pre></div>
+</div>
+<img alt="../_images/classification-of-stellar-spectra_12_1.png" src="../_images/classification-of-stellar-spectra_12_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Boltzmann_Eq_H12</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#return the fraction of particles in the 1st excited </span>
+    <span class="c1">#state relative to the ground state of hydrogen (N_2/N_1)</span>
+    <span class="n">k_boltz</span> <span class="o">=</span> <span class="mf">8.6173333e-5</span> <span class="c1">#eV/K</span>
+    <span class="k">return</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">10.2</span><span class="o">/</span><span class="p">(</span><span class="n">k_boltz</span><span class="o">*</span><span class="n">T</span><span class="p">))</span>
+
+<span class="n">N2_N1</span> <span class="o">=</span> <span class="n">Boltzmann_Eq_H12</span><span class="p">(</span><span class="n">T_rng</span><span class="p">)</span>
+<span class="n">N2_Ntotal</span> <span class="o">=</span> <span class="n">N2_N1</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">N2_N1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">NII_NI</span><span class="p">))</span><span class="o">/</span><span class="mf">1e-6</span>
+<span class="n">T_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">N2_Ntotal</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_rng</span><span class="p">,</span><span class="n">N2_Ntotal</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">T_max</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">N2_Ntotal</span><span class="p">)</span><span class="o">/</span><span class="mf">9.</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The peak occurs at T ~ </span><span class="si">%4d</span><span class="s2"> K.&quot;</span> <span class="o">%</span> <span class="n">T_rng</span><span class="p">[</span><span class="n">T_max</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">25000</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Temperature (K)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$N_2/N_{</span><span class="se">\\</span><span class="s2">rm total}$ ($10^{-6}$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The peak occurs at T ~ 9900 K.
+</pre></div>
+</div>
+<img alt="../_images/classification-of-stellar-spectra_13_1.png" src="../_images/classification-of-stellar-spectra_13_1.png" />
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="the-hertzsprung-russell-diagram">
