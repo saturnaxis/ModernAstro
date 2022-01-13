@@ -53,3 +53,7 @@ where both presentations will be assessed by both the instructor and fellow stud
 - Astrobetter: Tips and Tricks for Professional Astronomers (https://www.astrobetter.com/)
 - Astrobites: astro-ph reader's digest (https://astrobites.org/)
 - Arxiv:astro-ph preprint server (https://arxiv.org/archive/astro-ph)
+
+The contents of this book are licensed for free and open consumption under the
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+license.
