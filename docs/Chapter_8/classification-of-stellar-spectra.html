@@ -311,6 +311,11 @@
      4.1.5. Combining The Boltzmann and Saha Equations
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-to-the-sun">
+     4.1.6. Application to the Sun
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -825,6 +830,113 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <strong>Figure 3</strong>: The electron’s position in the hydrogen atom at different temperatures.  (a) The electron is in the ground state. (b) The is excited from <span class="math notranslate nohighlight">\(n=2\)</span> to a higher energy level (i.e., Balmer lines). (c) The atom is ionized. (Carroll &amp; Ostlie (2007))</p>
 </div>
 <p>Stellar atmospheres contain other elements (although predominantly composed of hydrogen) and the peak can range from ~7500 - 10,500 K depending on the electron pressure.  There is typically 1 helium atom for every 10 hydrogen atoms and the presence of helium (with its extra electrons) provides more opportunities for hydrogen to recombine.  A higher temperature is needed to obtain the same level of ionization once helium is added.  The Saha equation can be applied only to a gas in <em>thermodynamic equilibrium</em>, where the Maxwell-Boltzmann velocity distribution is an accurate representation of the system.  The gas density must be low (~1 <span class="math notranslate nohighlight">\({\rm kg/m^3}\)</span>) or the presence of neighboring ions will distort an atom’s orbitals and lower its ionization energy.</p>
+</div>
+<div class="section" id="application-to-the-sun">
+<h3><span class="section-number">4.1.6. </span>Application to the Sun<a class="headerlink" href="#application-to-the-sun" title="Permalink to this headline">¶</a></h3>
+<p>The Sun’s surface is a thin layer of its atmosphere called the <a class="reference external" href="https://en.wikipedia.org/wiki/Photosphere">photosphere</a>, which a characteristic temperature <span class="math notranslate nohighlight">\(T_e = 5777\)</span> K, an electron pressure of about <span class="math notranslate nohighlight">\(1.5\;{\rm N/m^2}\)</span>, and about 500,000 hydrogen atoms for each calcium atom.  The Boltzmann and Saha equations provide the relative strengths of absorption due to the Balmer lines and the calcium (Ca II H and K) lines.  Starting with the Balmer lines, we can use the Saha equation (Eqn 11) to determine the ratio of ionized to neutral hydrogen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The ratio of ionized to neutral hydrogen is: </span><span class="si">%1.2e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Saha_Eq_H12</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">5777</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The ratio of ionized to neutral hydrogen is: 7.70e-05
+</pre></div>
+</div>
+</div>
+</div>
+<p>Thus, there is only one ionized hydrogen (H II) for every ~13,000 neutral hydrogen (H I) atoms.  The Boltzmann equation (Eqn 6) reveals how many hydrogen atoms (with electrons) are in the first excited state.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of ratio of hydrogen atoms in the first excited state relative to the ground state is </span><span class="si">%1.2e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Boltzmann_Eq_H12</span><span class="p">(</span><span class="mi">5777</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of ratio of hydrogen atoms in the first excited state relative to the ground state is 5.05e-09
+</pre></div>
+</div>
+</div>
+</div>
+<p>Combining the Boltzmann and Saha equations (Eqn 12) we get that the result is that only one of every ~200 million hydrogen atoms is in the first excited state and capable of producing Balmer lines.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">NII_NI</span> <span class="o">=</span> <span class="n">Saha_Eq_H12</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">5777</span><span class="p">)</span>
+<span class="n">N2_N1</span> <span class="o">=</span> <span class="n">Boltzmann_Eq_H12</span><span class="p">(</span><span class="mi">5777</span><span class="p">)</span>
+<span class="n">N2_Ntotal</span> <span class="o">=</span> <span class="n">N2_N1</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">N2_N1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">NII_NI</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">N2_Ntotal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.05454248777915e-09
+</pre></div>
+</div>
+</div>
+</div>
+<p>Turning to the calcium atoms, we need to modify our functions to the ionization energy of Ca I (<span class="math notranslate nohighlight">\(\chi_I = 6.11\)</span> eV) and use tabulated values for the partition functions <span class="math notranslate nohighlight">\(Z_1 = 1.32\)</span> and <span class="math notranslate nohighlight">\(Z_2 = 2.30\)</span> <a class="reference external" href="https://www.google.com/books/edition/Astrophysics/OdK3AAAAIAAJ?hl=en">Aller (1963)</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Saha equation is sensitive to the ionization energy because <span class="math notranslate nohighlight">\(\chi/(kT)\)</span> appears as an exponent and <span class="math notranslate nohighlight">\(kT \approx 0.5\;{\rm eV} \ll \chi\)</span>.  Thus a small difference in the ionization energy produces a change of many powers of <span class="math notranslate nohighlight">\(e\)</span> in the Saha equation.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Saha_Eq_Ca12</span><span class="p">(</span><span class="n">P_e</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="n">Z_I</span><span class="p">,</span><span class="n">Z_II</span><span class="p">):</span>
+    <span class="c1">#return the fraction of ionized particles (N_II/N_I) for a pure hydrogen gas</span>
+    <span class="n">k_boltz</span> <span class="o">=</span> <span class="mf">1.38064852e-23</span> <span class="c1">#J/K</span>
+    <span class="n">kT</span> <span class="o">=</span> <span class="n">k_boltz</span><span class="o">*</span><span class="n">T</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">kT</span><span class="o">/</span><span class="n">P_e</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Z_II</span><span class="o">/</span><span class="n">Z_I</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">m_e</span><span class="o">*</span><span class="n">kT</span><span class="o">/</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">chi_I</span><span class="o">/</span><span class="n">kT</span><span class="p">)</span>
+
+<span class="n">chi_I</span> <span class="o">=</span> <span class="mf">6.11</span><span class="o">*</span><span class="mf">1.60218e-19</span> <span class="c1">#J; ionization energy of Ca I</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The ratio of ionized to neutral calcium is: </span><span class="si">%3d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Saha_Eq_Ca12</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span><span class="mi">5777</span><span class="p">,</span><span class="mf">1.32</span><span class="p">,</span><span class="mf">2.30</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The ratio of ionized to neutral calcium is: 918
+</pre></div>
+</div>
+</div>
+</div>
+<p>Practically all of the calcium atoms are ionized, where there are ~900 Ca II atoms to every one Ca I.  We can now use the Boltzmann equation to estimate the fraction of un-ionized calcium atoms that are also in the ground state.  The first excited state of Ca II is <span class="math notranslate nohighlight">\(E_2 - E_1 = 3.12\)</span> eV above the ground state, where the degeneracies for these states are <span class="math notranslate nohighlight">\(g_1 = 2\)</span> and <span class="math notranslate nohighlight">\(g_2 = 4\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Boltzmann_Eq_Ca12</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#return the fraction of particles in the 1st excited </span>
+    <span class="c1">#state relative to the ground state of hydrogen (N_2/N_1)</span>
+    <span class="n">k_boltz</span> <span class="o">=</span> <span class="mf">8.6173333e-5</span> <span class="c1">#eV/K</span>
+    <span class="n">E2_E1</span> <span class="o">=</span> <span class="mf">3.12</span> <span class="c1">#eV</span>
+    <span class="n">g_1</span><span class="p">,</span> <span class="n">g_2</span> <span class="o">=</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">4.</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">g_2</span><span class="o">/</span><span class="n">g_1</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">E2_E1</span><span class="o">/</span><span class="p">(</span><span class="n">k_boltz</span><span class="o">*</span><span class="n">T</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of ratio of calcium atoms in the first excited state relative to the ground state is </span><span class="si">%1.2e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Boltzmann_Eq_Ca12</span><span class="p">(</span><span class="mi">5777</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number of ratio of calcium atoms in the first excited state relative to the ground state is 3.79e-03
+</pre></div>
+</div>
+</div>
+</div>
+<p>Out of every ~265 Ca II ions, all but one are in the ground state and thus, capable of producing the CA II K line.  This implies that nearly all of the calcium atoms are singly ionized (Ca II) and in the ground state.</p>
+<div class="math notranslate nohighlight">
+\[ \left[\frac{N_1}{N_{\rm total}}\right]_{\rm Ca\;II} \approx \left[\frac{N_1}{N_1+N_2}\right]_{\rm Ca\;II} \left[\frac{N_{\rm II}}{N_{\rm total}}\right]_{\rm Ca} = \left(\frac{1}{1+0.00379}\right) \left(\frac{918}{1+918}\right) = 0.995 \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N1_Ntot</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">0.00379</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mf">918.</span><span class="o">/</span><span class="mf">919.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">N1_Ntot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9951402790605326
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="the-hertzsprung-russell-diagram">
