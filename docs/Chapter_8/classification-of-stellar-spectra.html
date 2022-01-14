@@ -927,16 +927,25 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N1_Ntot</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">0.00379</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="mf">918.</span><span class="o">/</span><span class="mf">919.</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">N1_Ntot</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">N1_Ntot</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9951402790605326
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.995
 </pre></div>
 </div>
 </div>
 </div>
+<p>The difference in strength between the Ca II H and K lines with the Balmer lines is due to relative abundance of atoms that are capable of producing the electron transitions.  There are ~500,000 hydrogen atoms for every calcium atom, but only a small fraction of those hydrogen atoms are capable of producing Balmer lines (i.e., un-ionized and in the first excited state).  By multiplying the number of hydrogen atoms relative to calcium by the fraction capable of producing the Balmer lines (from the Boltzmann Eq), we get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{500,000\;{\rm H}}{1\;{\rm Ca}} \times (5.06 \times 10^{-9}) \approx 0.00253\;\frac{{\rm H}}{\rm Ca} = \frac{1\;{\rm H}}{395\;{\rm Ca}}, \]</div>
+<p>which shows that there are ~400 times more Ca II ions (with electrons in the <em>ground</em> state) than neutral hydrogen atoms (with electrons in the <em>1st excited</em> state).  The strength of the H and K lines is <em>not</em> due to a greater abundance of calcium in the Sun, rather the strength reflects the sensitivity for the excitation and ionization of atomic states.  <strong>Figure 4</strong> shows how the spectral line strength varies with stellar spectral type.</p>
+<div align="center">
+<p><img alt="Figure 4" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_8/Figure_11.jpg?raw=true?" /><br>
+<strong>Figure 4</strong>: The dependance of spectral line strengths on stellar spectral type (or surface temperature). (Carroll &amp; Ostlie (2007))</p>
+</div>
+<p>In the early 20th century, it was the scientific consensus that if the Earth’s crust should be raised to the temperature of the Sun’s atmosphere, then it would give a very similar absorption spectrum.  The observations of the time had only uncovered that many of the same elements of Earth’s crust were also in the Sun.  <a class="reference external" href="https://en.wikipedia.org/wiki/Cecilia_Payne-Gaposchkin">Cecilia Payne-Gaposchkin</a> showed in her 1925 <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1925PhDT.........1P/abstract">PhD thesis</a> the connection between the spectral types and ionization states.  It was unclear at the time whether her interpretation would prove correct, but after a few years others confirmed her results and then the importance of her work was realized.</p>
 </div>
 </div>
 <div class="section" id="the-hertzsprung-russell-diagram">
