@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Telescopes &#8212; ASTR4410 Modern Astrophysics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_6/telescopes.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. The Classification of Stellar Spectra" href="../Chapter_8/classification-of-stellar-spectra.html" />
+    <link rel="prev" title="2. The Interaction of Matter and Light" href="../Chapter_5/interaction-of-light-and-matter.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-33QJ78JM1Q"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-33QJ78JM1Q');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">ASTR4410 Modern Astrophysics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../home.html">
+   ASTR4410: Modern Astrophysics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_3/continuous-spectrum-of-light.html">
+   1. The Continuous Spectrum of Light
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_5/interaction-of-light-and-matter.html">
+   2. The Interaction of Matter and Light
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Telescopes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_8/classification-of-stellar-spectra.html">
+   4. The Classification of Stellar Spectra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_9/stellar-atmospheres.html">
+   5. Stellar Atmospheres
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_10/sun.html">
+   6. The Sun
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Stars
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_11/interiors-of-stars.html">
+   7. The Interiors of Stars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_12/interstellar-medium-and-star-formation.html">
+   8. The Interstellar Medium and Star Formation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_13/stellar-evolution.html">
+   9. Main-Sequence and Post-Main-Sequence Stellar Evolution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_14/stellar-pulsation.html">
+   10. Stellar Pulsation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">
+   11. The Fate of Massive Stars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html">
+   12. The Degenerate Remnants of Stars
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Chapter_6/telescopes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/saturnaxis/ModernAstro"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_6/telescopes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_6/telescopes.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-optics">
+   3.1. Basic Optics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refraction-and-reflection">
+     3.1.1. Refraction and Reflection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-focal-plane">
+     3.1.2. The Focal Plane
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resolution-and-the-rayleigh-criterion">
+     3.1.3. Resolution and the Rayleigh Criterion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aberrations">
+     3.1.4. Aberrations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#brightness-of-an-image">
+     3.1.5. Brightness of an Image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problems">
+     3.1.6.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#optical-telescopes">
+   3.2. Optical Telescopes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refracting-telescopes">
+     3.2.1. Refracting Telescopes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reflecting-telescopes">
+     3.2.2. Reflecting Telescopes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adaptive-optics">
+     3.2.3. Adaptive Optics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#space-based-observatories">
+     3.2.4. Space-based Observatories
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electronic-detectors">
+     3.2.5. Electronic Detectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     3.2.6.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radio-telescopes">
+   3.3. Radio Telescopes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spectral-flux-density">
+     3.3.1. Spectral Flux Density
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#improving-resolution-large-apertures-and-interferometry">
+     3.3.2. Improving Resolution: Large Apertures and Interferometry
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     3.3.3.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ir-uv-x-ray-and-gamma-ray-astronomy">
+   3.4. IR, UV, X-ray, and Gamma-ray Astronomy
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmospheric-windows-in-the-em-spectrum">
+     3.4.1. Atmospheric Windows in the EM Spectrum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#observing-above-the-atmosphere">
+     3.4.2. Observing Above the Atmosphere
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="telescopes">
+<h1><span class="section-number">3. </span>Telescopes<a class="headerlink" href="#telescopes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-optics">
+<h2><span class="section-number">3.1. </span>Basic Optics<a class="headerlink" href="#basic-optics" title="Permalink to this headline">¶</a></h2>
+<p>The development of optics greatly enhanced our window into the universe starting with Galileo’s innovative use of the telescope.  Today we “see” with many different sets of eyes to get a fuller picture of the cosmos, discover faint objects otherwise unseen, and resolve distant objects in greater detail.</p>
+<div class="section" id="refraction-and-reflection">
+<h3><span class="section-number">3.1.1. </span>Refraction and Reflection<a class="headerlink" href="#refraction-and-reflection" title="Permalink to this headline">¶</a></h3>
+<p>The first “telescope” was developed by Hans Lippershey in 1608 and a year later <a class="reference external" href="https://en.wikipedia.org/wiki/Galileo_Galilei">Galileo Galilei</a> built his own version with about <span class="math notranslate nohighlight">\(3\times\)</span> magnification and later improved upon the design to obtain a version with <span class="math notranslate nohighlight">\(30\times\)</span> magnification.  These <strong>refracting</strong> telescopes consisted of lenses through which the light would pass and form an image.  In 1671, <a class="reference external" href="https://en.wikipedia.org/wiki/Isaac_Newton">Isaac Newton</a> showed that any refracting telescope would suffer from the dispersion of light into colors and he developed the <strong>reflecting</strong> telescope that used a mirror instead of a lens to bypass the problem.</p>
+<p>Both types of telescopes use a lens to produce an image, which makes a natural starting point.  <a class="reference external" href="https://en.wikipedia.org/wiki/Snell%27s_law">Snell’s law of refraction</a> describes how the path of a light ray changes as it travels through a lens. When a wave travels across a boundary between two media, its path is bent (<em>refracts</em>) at the interface.  The amount that the ray bends is material dependent and characterized by a wavelength-dependent index of refraction <span class="math notranslate nohighlight">\(n_\lambda = c/v_\lambda\)</span>, where <span class="math notranslate nohighlight">\(v_\lambda\)</span> represents the speed of light within the medium.  Alternatively, the index of refraction indicates how much the speed of light decreases within the medium (<span class="math notranslate nohighlight">\(v_\lambda = c/n_\lambda\)</span>) compared to vacuum.  Note that the frequency <span class="math notranslate nohighlight">\(\nu\)</span> of the wave remains unchanged and the refracted wavelength must change.</p>
+<p>The incoming ray possesses an angle of incidence <span class="math notranslate nohighlight">\(\theta_i\)</span> and the refracted ray is bent by <span class="math notranslate nohighlight">\(\theta_r\)</span>, where both angles are measured relative to the normal to the interface.  Then Snell’s law is given by</p>
+<div class="math notranslate nohighlight">
+\[
+n_1 \sin \theta_i = n_2 \sin \theta_r. \tag{1}
+\]</div>
+<ul class="simple">
+<li><p><strong>Green light (<span class="math notranslate nohighlight">\(\lambda_{\rm air} = 540\)</span> nm) is incident from air to glass (<span class="math notranslate nohighlight">\(n=1.51\)</span>).</strong></p>
+<ul>
+<li><p><strong>What is the wavelength of light in the glass?</strong></p></li>
+<li><p><strong>If <span class="math notranslate nohighlight">\(\theta_i = 37^\circ\)</span>, what is the angle of refraction?</strong></p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">refract_lambda</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength in medium 1</span>
+    <span class="c1">#n1 = index of refraction of medium 1</span>
+    <span class="c1">#n2 = index of refraction of medium 2</span>
+    <span class="k">return</span> <span class="n">l</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">snell_law</span><span class="p">(</span><span class="n">th1</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">):</span>
+    <span class="c1">#th1 = angle in medium 1 (relative to normal) in radians</span>
+    <span class="c1">#n1 = index of refraction of medium 1</span>
+    <span class="c1">#n2 = index of refraction of medium 2</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">((</span><span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">th1</span><span class="p">))</span>
+
+<span class="n">lambda_air</span> <span class="o">=</span> <span class="mi">540</span>
+<span class="n">n_air</span> <span class="o">=</span> <span class="mf">1.00029</span>
+<span class="n">n_glass</span> <span class="o">=</span> <span class="mf">1.51</span>
+<span class="n">theta_i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">37</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The wavelength in glass is </span><span class="si">%3d</span><span class="s2"> nm.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">refract_lambda</span><span class="p">(</span><span class="n">lambda_air</span><span class="p">,</span><span class="n">n_air</span><span class="p">,</span><span class="n">n_glass</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The angle of refraction is </span><span class="si">%2.1f</span><span class="s2"> deg.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">snell_law</span><span class="p">(</span><span class="n">theta_i</span><span class="p">,</span><span class="n">n_air</span><span class="p">,</span><span class="n">n_glass</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The wavelength in glass is 357 nm.
+The angle of refraction is 23.5 deg.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lens are shaped from glass so that the light rays can converge or diverge due to Snell’s law.  The light rays are traced where the lens is set perpendicular to the horizontal (or <strong>optical axis</strong>) to produce an axis of symmetry.  <em>Converging</em> lenses force the light rays to come to a point on the optical axis (opposite from the incoming rays).  This unique point is called the <strong>focal point</strong> of the lens and the distance to that point from the center of the lens is called the <strong>focal length</strong> <span class="math notranslate nohighlight">\(f\)</span>.  By changing the curvature of the lens, the light rays can instead diverge from the optical axis to make a <em>diverging</em> lens.  As a result, the focal point lies on the <em>same</em> side as the incoming rays.  For a converging lens , the focal length is defined as positive, where the focal length is negative for a diverging lens.</p>
+<p>The focal length <span class="math notranslate nohighlight">\(f_\lambda\)</span> of a thin lens can be calculated from the index of refraction <span class="math notranslate nohighlight">\(n_\lambda\)</span> and the radii of curvature of each surface (<span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span>) assuming the surfaces are spheroidal.  The sign convention for the radii is positive (convex) and negative (concave).  The focal length is given by the <strong>lensmaker’s formula</strong>,</p>
+<div class="math notranslate nohighlight">
+\[ 
+f_\lambda = \frac{1}{n_\lambda - 1}\left( \frac{R_1 R_2}{R_1 + R_2}\right). \tag {2}
+\]</div>
+<p>For mirrors, the focal length <span class="math notranslate nohighlight">\(f\)</span> is wavelength-independent since the light rays do not penetrate the surface and angle of reflection is equal to the angle of incidence (<span class="math notranslate nohighlight">\(\theta_i = \theta_r\)</span>).  A spheroidal mirror has a focal length at half the radius of curvature (<span class="math notranslate nohighlight">\(f=R/2\)</span>) and can be positive/negative depending on the geometry.  Converging mirrors are generally used as the primary mirror in modern telescopes, although diverging or flat mirrors may be used for more complicated optical systems.</p>
+</div>
+<div class="section" id="the-focal-plane">
+<h3><span class="section-number">3.1.2. </span>The Focal Plane<a class="headerlink" href="#the-focal-plane" title="Permalink to this headline">¶</a></h3>
+<p>To record an image, the detector must be placed in the <strong>focal plane</strong> of the telescope, which is defined as the plane passing through the focal point and oriented perpendicular to the optical axis of the system.  The image separation of two point sources on teh focal plane is relate to the focal length.  At the position of the focal plane, the rays from the on-axis source will converge at the focal point while the rays fro the other source will <em>approximately</em> meet a distance <span class="math notranslate nohighlight">\(y\)</span> from the focal point.  Using the geometry of a triangle with a long side <span class="math notranslate nohighlight">\(f\)</span> and angle <span class="math notranslate nohighlight">\(\theta\)</span> (incoming light rays from the source relative to the optical axis), the short side <span class="math notranslate nohighlight">\(y\)</span> can be determined by</p>
+<div class="math notranslate nohighlight">
+\[
+y = f \tan \theta.
+\]</div>
+<p>The field of view for the telescope is typically small so that the angle <span class="math notranslate nohighlight">\(\theta\)</span> is also small.  For a sufficiently small <span class="math notranslate nohighlight">\(\theta\)</span>, the small-angle approximation (<span class="math notranslate nohighlight">\(\tan\theta \approx \theta\)</span>) can be used to give</p>
+<div class="math notranslate nohighlight">
+\[
+y = f\theta. \tag{3}
+\]</div>
+<p>This leads to the <a class="reference external" href="https://en.wikipedia.org/wiki/Plate_scale">plate scale</a> (<span class="math notranslate nohighlight">\(d\theta/dy = p = 1/f\)</span>), which connects the angular separation of the objects on the sky with the linear separation of their images at the focal plane.  The plate scale is typically given in arcseconds/mm due to the history of using of photographic plates. The plate scale of JWST’s fine guidance sensor is about 0.065 <span class="math notranslate nohighlight">\(^{\prime\prime}\)</span> per pixel.</p>
+</div>
+<div class="section" id="resolution-and-the-rayleigh-criterion">
+<h3><span class="section-number">3.1.3. </span>Resolution and the Rayleigh Criterion<a class="headerlink" href="#resolution-and-the-rayleigh-criterion" title="Permalink to this headline">¶</a></h3>
+<p>To resolve two closely spaced objects, its not simply a matter of choosing a sufficiently long focal length.  There is a fundamental limit to our ability to <em>resolve</em> the objects due to the diffraction produced by the advancing wavefronts from each object.  This phenomenon is related to the single slit diffraction pattern produced by a slit of width <span class="math notranslate nohighlight">\(D\)</span>.  Any ray passing through the opening (or <strong>aperture</strong>) and arriving at a specific point can be though of as being associated with another ray passing through the aperture a distance of <span class="math notranslate nohighlight">\(D/2\)</span> away and arriving at the same point.  If the two rays are a half-wavelength (<span class="math notranslate nohighlight">\(\lambda/2\)</span>) out of phase, then destructive interference will occur.  This leads to the relation</p>
+<div class="math notranslate nohighlight">
+\[
+D \sin \theta = m \lambda, \tag{4}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(m = 1,2,3,\ldots\)</span> for dark fringes.  If a circular aperture is used (i.e., a telescope) the symmetry produces a series of concentric rings instead of the iconic diffraction pattern.  The mathematics of this pattern was solved by George Airy in 1835 and is known as the <strong>Airy disk</strong>.  If we relax Eqn 4 so that <span class="math notranslate nohighlight">\(m\)</span> is no longer an integer, then it can be used to find the maxima as well.</p>
+<p>Two sources that are sufficiently close together will have diffraction rings that overlap and it becomes impossible to resolve.  The two images are said to unresolved when the central maximum of one pattern falls inside the location of the first minimum of the other, where this condition is the <strong>Rayleigh criterion</strong>.  Assuming that angular separation <span class="math notranslate nohighlight">\(\theta_{\rm min}\)</span> is quite small and invoking the small-angle approximation, the Rayleigh criterion is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\theta_{\rm min} = 1.22 \frac{\lambda}{D} \tag{5}
+\]</div>
+<p>for a circular aperture, where <span class="math notranslate nohighlight">\(\lambda\)</span> is the wavelength of light and <span class="math notranslate nohighlight">\(D\)</span> is the diameter of the telescope’s primary mirror.  Ground-based telescopes rarely approach the theoretical limit without assistance through adaptive optics due to the turbulence of the atmosphere or “seeing”.  Local conditions affect the degree of twinkling observed, where observatories high above sea level (“above the weather”) provide the best observing conditions.</p>
+<ul class="simple">
+<li><p><strong>A single slit of width D = 0.1 mm is illuminated by light through a visual Johnson filter and diffraction bands are observed on a screen 0.5 m from the slit.  How far is the third dark band from the central bright band?</strong></p></li>
+<li><p><strong>What is the diffraction limit (in arcseconds) for JWST’s fine guidance sensor (<a class="reference external" href="https://webb.nasa.gov/content/observatory/instruments/fgs.html">FGS</a>) at 5 <span class="math notranslate nohighlight">\(\mu m\)</span>?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">single_slit_th</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+    <span class="c1">#D = slit width</span>
+    <span class="c1">#l = lambda; wavelength of light; must match units with D</span>
+    <span class="c1">#m = order of dark fringes</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="n">D</span><span class="p">)</span> <span class="c1">#return theta in radians</span>
+
+<span class="k">def</span> <span class="nf">diff_limit</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+    <span class="c1">#D = aperture size</span>
+    <span class="c1">#l = lambda; wavelength of light</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mf">1.22</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="n">D</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">180</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">*</span><span class="mi">3600</span> <span class="c1">#return theta_min in arcseconds</span>
+<span class="n">D_slit</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="mf">1e-3</span> <span class="c1">#converted to m</span>
+<span class="n">V_johnson</span> <span class="o">=</span> <span class="mi">550</span><span class="o">*</span><span class="mf">1e-9</span> <span class="c1">#converted peak visual wavelength to m</span>
+<span class="n">th_diff</span> <span class="o">=</span> <span class="n">single_slit_th</span><span class="p">(</span><span class="n">D_slit</span><span class="p">,</span><span class="n">V_johnson</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The diffraction angle of the third dark band is </span><span class="si">%2.1f</span><span class="s2"> deg.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">th_diff</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The distance from the central bright band is </span><span class="si">%1.3f</span><span class="s2"> m.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">th_diff</span><span class="p">)))</span>
+
+<span class="n">D_JWST</span> <span class="o">=</span> <span class="mf">6.5</span> <span class="c1">#diameter of primary mirror</span>
+<span class="n">l_FGS</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="mf">1e-6</span> <span class="c1">#converted to m</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The diffraction limit for JWST&#39;s FGS at 5 um is </span><span class="si">%2.2f</span><span class="s2"> arcsec.&quot;</span> <span class="o">%</span> <span class="n">diff_limit</span><span class="p">(</span><span class="n">D_JWST</span><span class="p">,</span><span class="n">l_FGS</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The diffraction angle of the third dark band is 0.9 deg.
+The distance from the central bright band is 0.008 m.
+The diffraction limit for JWST&#39;s FGS at 5 um is 0.19 arcsec.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="aberrations">
+<h3><span class="section-number">3.1.4. </span>Aberrations<a class="headerlink" href="#aberrations" title="Permalink to this headline">¶</a></h3>
+<p>Image distortions or aberrations affect both lens and mirror systems.  Refracting telescopes suffer from <a class="reference external" href="https://en.wikipedia.org/wiki/Chromatic_aberration">chromatic aberration</a>, which is a distortion due to the wavelength-dependent focus of a lens.  The lensmaker’s formula (Eqn 2) depends on the radii of curvature and the index of refraction <span class="math notranslate nohighlight">\(n\)</span>, but <span class="math notranslate nohighlight">\(n\)</span> also depends on the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  This translates into a wavelength-dependent focal length, where the focal point for red light is different than for blue light.</p>
+<p>There can be aberrations that result from the shape of the reflecting or refracting surface.  Imperfections in the grinding/polishing of lens/mirrors mean not all areas will focus a parallel set of light rays to a single point.  This type of distortion is called <a class="reference external" href="https://en.wikipedia.org/wiki/Spherical_aberration">spherical aberration</a> and can be overcome with a corrective lens.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Hubble_Space_Telescope">Hubble Space Telescope</a> (HST) initially had imaging problems due to spherical aberration when a mistake was made while grinding the primary and left the center of the mirror too shallow by about 2 <span class="math notranslate nohighlight">\(\mu m\)</span>.  A repair mission in 1993, installed a special corrective optics package on the telescope.</p>
+<p>A <strong>coma</strong> produces elongated images of a point sources that lie off the optical axis. An <strong>astigmatism</strong> is a defect where different parts of a lens or mirror converge an image a slightly different locations on the focal plane.  Correcting for astigmatism can create other problems, such as the <strong>curvature of field</strong> that is due to the focusing of images on a curve rather than on a flat surface.</p>
+</div>
+<div class="section" id="brightness-of-an-image">
+<h3><span class="section-number">3.1.5. </span>Brightness of an Image<a class="headerlink" href="#brightness-of-an-image" title="Permalink to this headline">¶</a></h3>
+<p>It might be assumed that the brightness of an extended (resolved) image depends on the area of the aperture.  This is the case for photography, where the camera has an adjustable aperture (iris) that controls how much light enters the camera to reach the detector on the focal plane.  For most astronomical applications, the aperture is fully open because the object is effectively infinitely far away (i.e., distance <span class="math notranslate nohighlight">\(r \gg \)</span> focal length <span class="math notranslate nohighlight">\(f\)</span>).  Then, it can be shown that the <strong>intensity</strong> of the radiation is the same for both the object and image; independent of the area of the aperture.  The exception is for bright objects (e.g., the Moon), where an adjustable iris helps prevent over-exposing the image (i.e., saturation).</p>
+<p>The light-gathering power of telescopes is the <strong>illumination</strong> <span class="math notranslate nohighlight">\(J\)</span> or the number of photons per second that are focused onto a unit area of a resolved image.  When comparing telescopes, the amount of light collected is proportional to the area of the aperture or the illumination <span class="math notranslate nohighlight">\(J \propto \pi D^2/4\)</span>, where <span class="math notranslate nohighlight">\(D\)</span> is the diameter of the telescope’s aperture.  Through the plate scale (Eqn 3) we have the linear size of the image proportional to the focal length of the lens and the image area is proportional to <span class="math notranslate nohighlight">\(f^2\)</span>.  The illumination is proportional to the ratio of the aperture diameter <span class="math notranslate nohighlight">\(D\)</span> to the focal length <span class="math notranslate nohighlight">\(f\)</span> (i.e., $J\propto D^2/f^2).  The inverse of the ratio is ofter referred to as the <strong>focal ratio</strong> (or f-ratio),</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac{f}{D}. \tag{6} \]</div>
+<p>The illumination indicates the amount of time required to collect the photons needed to form a bright image.  A larger focal ratio corresponds to a slower telescope, which means that a longer exposure is necessary to reach an equivalent illumination.</p>
+<ul class="simple">
+<li><p><strong>The twin telescopes of the Keck Observatory at Mauna Kea have primary mirrors 10 m in diameter with focal lengths of 17.5 m.  What is the focal ratios of each telescope?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">F_ratio</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">D</span><span class="p">):</span>
+    <span class="c1">#f = focal length of the telescope</span>
+    <span class="c1">#D = diameter of the telescope aperture; must match units with f</span>
+    <span class="k">return</span> <span class="n">f</span><span class="o">/</span><span class="n">D</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The focal ratio of each telescope is f/</span><span class="si">%1.2f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">F_ratio</span><span class="p">(</span><span class="mf">17.5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The focal ratio of each telescope is f/1.75.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="problems">
+<h3><span class="section-number">3.1.6. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>1. The diffraction pattern for a single slit is given by</p>
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[ I(\theta) = I_o\left[\frac{\sin(\beta/2)}{\beta/2}\right]^2 \]</div>
+</div></blockquote>
+<blockquote>
+<div><p>where <span class="math notranslate nohighlight">\(\beta = 2\pi D\sin(\theta)/\lambda\)</span>.</p>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><p><strong>(a)</strong> Plot <span class="math notranslate nohighlight">\(I/I_o\)</span> vs <span class="math notranslate nohighlight">\(m\)</span> over the range {-3,3}.</p>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><blockquote>
+<div><p><strong>(b)</strong> If the slit has an aperture of 1.0 <span class="math notranslate nohighlight">\(\mu m\)</span>, what angle <span class="math notranslate nohighlight">\(\theta\)</span> (in deg.) corresponds to the first minimum if the wavelength of light is 500 nm?</p>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><p>2. Using the Rayleigh criterion, estimate the angular resolution limit of the human eye at 440 nm. Assume the pupil diameter is 5 mm.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="optical-telescopes">
+<h2><span class="section-number">3.2. </span>Optical Telescopes<a class="headerlink" href="#optical-telescopes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="refracting-telescopes">
+<h3><span class="section-number">3.2.1. </span>Refracting Telescopes<a class="headerlink" href="#refracting-telescopes" title="Permalink to this headline">¶</a></h3>
+<p>The major optical component of a refracting telescope is the primary (or <em>objective</em>) lens with a focal length <span class="math notranslate nohighlight">\(f_{\rm obj}\)</span>.  The objective lens collects the light and brings the light to a focus at the focal plane, where a photographic plate or other detector can be placed at the focal plane to record the image.  The eyepiece serves as a magnifying glass and would be placed a distance from the focal plane equal to its focal length <span class="math notranslate nohighlight">\(f_{\rm eye}\)</span>.  The path of rays coming from a point source lying off the optical axis (at an angle <span class="math notranslate nohighlight">\(\theta\)</span>) ultimately emerge from the eyepiece an an angle <span class="math notranslate nohighlight">\(\phi\)</span> from the optical axis.</p>
+<p align="center"> 
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_6/refract_telescope.jpg?raw=true?"/>
+</p>
+<center>
+<div style='width: 450px'><b>Figure 1</b>: A refracting telescope is composed of an objective lens and an eyepiece. (Carroll & Ostlie, 2007) </div>
+</center>
+<p>The <strong>angular magnification</strong> produced by this arrangement of lenses can be shown to be</p>
+<div class="math notranslate nohighlight">
+\[ m = \frac{f_{\rm obj}}{f_{\rm eye}}, \tag{7} \]</div>
+<p>where a review is available on <a class="reference external" href="https://openstax.org/books/college-physics/pages/26-5-telescopes">openstax.org/books/college-physics</a>.  Since the objective lens tends to be a fixed part of the telescope, several eyepieces (of different focal lengths) can be used to produce different angular magnifications.  Note that viewing a large image requires a long objective in combination with a short focal length for the eyepiece.</p>
+<p>Recall that the illumination is inversely proportional to the square of the objective’s focal length and a larger diameter objective is needed to compensate.  However, there are practical limitations for to the size of a refracting telescope’s objective.  The lens is supported only around its edges and the shape of the lens deforms due to gravity when the size and weight are increased.  Furthermore, the type of deformation changes as the orientation of the telescope varies.</p>
+<p>Another limitation is the construction of the lens, which can have defects.  The light must pass through the <em>entire volume</em> of the lens and the quality must be nearly optically perfect.  Defects in the desired shape of the lens must be kept to a small fraction (<span class="math notranslate nohighlight">\(\lambda/20\)</span>) of the wavelength (<span class="math notranslate nohighlight">\(\lambda = 400-700\)</span> nm for visible light).  A large objective lens also has a slow thermal response, where the telescope must adjust to the temperature of the outside air after the dome is opened.  Thermally driven air currents develop around the telescope, which compound the normal concerns around “seeing”.  The overall shape of the telescope will change as a consequence of thermal expansion, which alters the optical alignment.</p>
+<p>Considering all of these challenges (along with the unique problem of chromatic aberration), the vast majority of all large modern telescopes are reflectors.  The largest refracting telescope in use today is at the <a class="reference external" href="https://en.wikipedia.org/wiki/Yerkes_Observatory">Yerkes Observatory</a> in Williams Bay, Wisconsin.  It has a 40-in (1.02 m) objective with a focal length of 19.36 m.</p>
+</div>
+<div class="section" id="reflecting-telescopes">
+<h3><span class="section-number">3.2.2. </span>Reflecting Telescopes<a class="headerlink" href="#reflecting-telescopes" title="Permalink to this headline">¶</a></h3>
+<p>A reflecting telescope is designed by replacing the objective lens with a mirror, which either reduces or eliminates many of the problems with refracting telescopes.  The light does not pass through a mirror and thus, much less precision is required in its construction (i.e., only one surface needs to be ground with precision).  The weight of the mirror can be minimized by using a lighter honeycomb structure behind the reflecting surface.  As a result, parts of the mirror can be mechanically deformed to correct for thermal and/or gravitational effects as the telescope moves (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Adaptive_optics">adaptive optics</a>).</p>
+<p>Although there are many benefits in using a mirror, there are some costs.  The primary mirror reflects the light back along the optical axis (i.e., law of reflection) to the focal point (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Reflecting_telescope#Prime_focus">prime focus</a>).  A detector can be placed at this location, but some of the incident light is blocked.  Additionally, the structure supporting the detector introduces diffraction spikes in the image of the stars.  Isaac Newton found a solution to the problem of the prime focus by placing a small, flat mirror in the reflected light’s path changing the location of the focal point.  A <a class="reference external" href="https://en.wikipedia.org/wiki/Newtonian_telescope">Newtonian telescope</a> design suffers a mechanical cost because the eyepiece (or detector) must be placed a significant distance from the telescope’s center of mass and would exert a significant torque on the telescope.</p>
+<p>The secondary mirror effectively produces a shadow on the primary mirror (rendering a small area useless) and a hole can be bored into the primary mirror so that the reflected light comes through the hole.  This <a class="reference external" href="https://en.wikipedia.org/wiki/Cassegrain_reflector">Cassegrain</a> design makes it possible to place a massive detector near the telescope’s center of mass and the observer can stay near the bottom of the telescope.  The secondary mirror is usually convex, while the primary mirror is concave .  However, a <a class="reference external" href="https://en.wikipedia.org/wiki/Ritchey%E2%80%93Chr%C3%A9tien_telescope">Ritchey-Chrétien</a> has a hyperbolic primary mirror rather than a parabolic one.  The Ritchey-Chrétien design has a wider field of view and eliminates off-axis optical errors (coma).  Some well-known examples are the Hubble Space Telescope, the Keck telescopes and the ESO Very Large Telescope.</p>
+<p>If the instrument package is too massive, astronomers use a series of mirrors to reflect the light down the telescope’s mount to a <em>coudé room</em> located below the telescope (i.e., <strong>coudé telescope</strong>).  Because of the extended optical path, a very long focal length is needed and is particularly useful in spectral line studies.  A modification of the Cassegrain design uses a spheroidal primary mirror (to minimize coma) combined with a “correcting” lens to help remove spherical aberration.  The benefit of a <a class="reference external" href="https://en.wikipedia.org/wiki/Schmidt%E2%80%93Cassegrain_telescope">Schmidt-Cassegrain telescope</a> is a wider field of view and is important for survey studies of large regions of sky.</p>
+</div>
+<div class="section" id="adaptive-optics">
+<h3><span class="section-number">3.2.3. </span>Adaptive Optics<a class="headerlink" href="#adaptive-optics" title="Permalink to this headline">¶</a></h3>
+<p>While large-aperture ground-based telescopes have a larger light-gathering power than small telescopes, they are still limited in resolving power due to thermal fluctuations of the atmosphere.  Even the Keck telescopes at Mauna Kea cannot resolve a source any better than a 0.2 m telescope without the aide of <em>active optics</em> to correct the distortions in the telescope’s mirrors and <a class="reference external" href="https://en.wikipedia.org/wiki/Adaptive_optics">adaptive optics</a> to compensate for atmospheric turbulence.  A small deformable (“rubber”) mirror is used with many piezoelectric crystals attached to the back.  To counteract changes in the shape of wavefronts due to Earth’s atmosphere, the crystals make <span class="math notranslate nohighlight">\(\mu m\)</span>-size adjustments to the shape of the mirror several hundred times per second.  To make the needed adjustments, the telescope monitors a guide star that is very near the target.</p>
+</div>
+<div class="section" id="space-based-observatories">
+<h3><span class="section-number">3.2.4. </span>Space-based Observatories<a class="headerlink" href="#space-based-observatories" title="Permalink to this headline">¶</a></h3>
+<p>To overcome the imaging problems imposed by Earth’s atmosphere, observational astronomy has made leaps through observatories on satellites in space.  The <span class="xref myst">Hubble Space Telescope</span> has a 2.4 m (f/24) primary using a Ritchey-Chrétien design, where long exposures of 150+ hours allow the telescope to detect objects as faint as <span class="math notranslate nohighlight">\(m_V = +30\)</span>.  On December 25, 2021 the <a class="reference external" href="https://en.wikipedia.org/wiki/James_Webb_Space_Telescope">James Webb Space Telescope</a> (JWST) was launched on an Ariane 5 rocket.  This telescope has a 6.5 m primary and will orbit at the Earth-Sun Lagrange point (L2).  This location was chosen for the spacecraft to minimize thermal emissions that would affect its IR detectors.</p>
+</div>
+<div class="section" id="electronic-detectors">
+<h3><span class="section-number">3.2.5. </span>Electronic Detectors<a class="headerlink" href="#electronic-detectors" title="Permalink to this headline">¶</a></h3>
+<p>For most of history, the human eye was the main tool of an astronomer to identify the stars for rituals, navigation, and agriculture.  <a class="reference external" href="https://en.wikipedia.org/wiki/Photographic_plate">Photographic plates</a> were developed at the end of the 19th century and became a mainstay for astronomers through much of the 20th century due to there persistence of vision.  Today, the semiconductor device known as the charge-coupled device (CCD) revolutionized the counting of photons  (through process similar to the photoelectric effect).  CCDs are able to detect nearly 100% of the incident photons over a very wide range of wavelengths.  CCDs also have a wide dynamic range, where they can differentiate between very bright and dim objects viewed simultaneously.</p>
+<p>A CCD works by collecting electrons that are excited into higher energy states (conduction bands) when a detector is struck by a photon.  The number of electrons collected in each pixel is proportional to the image brightness.  HST’s Wide Field and Planetary Camera (WF/PC 2) has 2.5 million pixels with each pixel capable of holding up to 70,000 electrons.  A very bright target (e.g., <span class="math notranslate nohighlight">\(\alpha\)</span> Cen AB (<a class="reference external" href="https://academic.oup.com/mnras/article/450/2/2043/981103">Brice-Olivier et al. 2015</a>)) requires a fast shutter so that the pixels don’t saturate (i.e., overflow with electrons).</p>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">3.2.6. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>3. A refracting astronomical telescope has a magnifying power of 150 when adjusted for minimum eyestrain.  Its eyepiece has a focal length of + 1.20 cm.  Determine the focal length of the objective lens.</p>
+<p>4. The large telescope at Mt Palomar has a concave objective mirror diameter of 5.0 m and radius of curvature 46 m.  What is the magnifying power of the instrument when it is used with an eyepiece of focal length 1.25 cm?</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="radio-telescopes">
+<h2><span class="section-number">3.3. </span>Radio Telescopes<a class="headerlink" href="#radio-telescopes" title="Permalink to this headline">¶</a></h2>
+<p>By the 1930s, radio was the state-of-the-art in terms of communications for the United States and Europe.  Companies, such as Bell Labs, were interested in short wave (<span class="math notranslate nohighlight">\(\lambda = 10-20\)</span> m) transmissions for use in a trans-Atlantic radio service, where properties of the atmosphere and ionosphere could introduce static to radio voice transmissions.  In 1928, <a class="reference external" href="https://en.wikipedia.org/wiki/Karl_Guthe_Jansky">Karl Jansky</a> was assigned the task of investigating the sources of static and by 1931, he discovered that some of the static in his receiver was of “extraterrestrial origin.”  Jansky concluded (correctly) that much of the measured signal originated from the plane of the Milky Way.  Jansky’s work pioneered the birth of <a class="reference external" href="https://en.wikipedia.org/wiki/Radio_astronomy"><em>radio astronomy</em></a> as a new way to view and investigate the cosmos.</p>
+<p>Radio telescopes operate differently from their optical counterparts, where radio observations can be taken any time of day or night.  But, observations from the Earth’s surface are limited to a specific range of wavelengths (i.e., those that can pass through the atmosphere). At long wavelengths, transmission is limited by the ionosphere.  Water vapor interferes with radio astronomy at shorter wavelengths, which has led to building radio observatories that conduct observations at millimeter wavelengths at very high and dry sites (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Atacama_Large_Millimeter_Array">ALMA</a>), to minimize the water vapor content in the line of sight.  These are some of the known sources of noise to avoid and the increasing needs of human telecommunication force astronomers to build observatories in remote areas.</p>
+<div class="section" id="spectral-flux-density">
+<h3><span class="section-number">3.3.1. </span>Spectral Flux Density<a class="headerlink" href="#spectral-flux-density" title="Permalink to this headline">¶</a></h3>
+<p>A radio telescope typically uses a parabolic dish to reflect the radio energy to an antenna, where the signal is amplified and processed to produce a <em>radio map</em> at a particular wavelength.</p>
+<p align="center"> 
+<img src="https://public.nrao.edu/wp-content/uploads/2018/02/3C402_NDV1.jpg"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 2</b>: (Left) NRAO VLA Sky Survey (NVSS); (Middle) 2nd Digitized Sky Survey Red (DSS2R*); (Right) 2017 Very Large Array Sky Survey (VLASS). (image credit: <a href="https://public.nrao.edu/blogs/dr-claire-chandler/">NRAO</a>) </div>
+</center>
+<p>The strength of a radio source is measured in terms of the <strong>spectral flux density</strong> <span class="math notranslate nohighlight">\(S(\nu)\)</span>, which is the amount of energy per second (W) per unit of frequency (Hz) per unit area (<span class="math notranslate nohighlight">\({\rm m}^2\)</span>).  To determine the power collected by the receiver, the spectral flux must be integrated over the telescope’s collecting area and over the detector’s bandwidth (i.e., frequency interval).  Mathematically the power is given as</p>
+<div class="math notranslate nohighlight">
+\[ P = \int_A \int_\nu S(\nu)f_\nu d\nu dA, \tag{8} \]</div>
+<p>where <span class="math notranslate nohighlight">\(f_\nu\)</span> is the detector efficiency at a particular frequency <span class="math notranslate nohighlight">\(\nu\)</span>.  If the detector is 100% efficient, then <span class="math notranslate nohighlight">\(f_\nu = 1\)</span>; otherwise it is a value between 0-1.  If <span class="math notranslate nohighlight">\(S(\nu)\)</span> is approximately constant over the bandwidth (and 100% efficient), then the integral simplifies to <span class="math notranslate nohighlight">\(P = SA\Delta \nu\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is the effective area of the aperture.  The unit for the spectral flux density is a jansky (Jy), where 1 Jy = <span class="math notranslate nohighlight">\(10^{-26}\)</span> <span class="math notranslate nohighlight">\({\rm W}/{\rm m}^2/{\rm Hz}\)</span>.  Typical measurements are on the order of mJy, where a large aperture is needed to collect enough photons to be measurable.</p>
+<ul class="simple">
+<li><p><strong>The third strongest radio source in the sky is the galaxy Cygnus A, where its spectral density is 4500 Jy at 400 MHz.  What is the power collected of this source over a 5 MHz frequency band with a 25 m radio telescope?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">radio_power</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">D_scope</span><span class="p">,</span><span class="n">freq_band</span><span class="p">):</span>
+    <span class="c1">#S = spectral flux density (in Jy; assumed constant over the frequency band)</span>
+    <span class="c1">#D = diameter of the telescope (in m)</span>
+    <span class="c1">#freq_band = frequency band (in Hz)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">S</span><span class="o">*</span><span class="mf">1e-26</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">0.25</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">D_scope</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">freq_band</span> <span class="c1">#returns power (in W)</span>
+
+<span class="n">source_S</span> <span class="o">=</span> <span class="mi">4500</span> <span class="c1">#Jy</span>
+<span class="n">D_scope</span> <span class="o">=</span> <span class="mi">25</span> <span class="c1">#m</span>
+<span class="n">delta_nu</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="mf">1e6</span> <span class="c1">#converted to Hz</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The power collected of the source is </span><span class="si">%1.1e</span><span class="s2"> W.&quot;</span> <span class="o">%</span> <span class="n">radio_power</span><span class="p">(</span><span class="n">source_S</span><span class="p">,</span><span class="n">D_scope</span><span class="p">,</span><span class="n">delta_nu</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The power collected of the source is 1.1e-13 W.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="improving-resolution-large-apertures-and-interferometry">
+<h3><span class="section-number">3.3.2. </span>Improving Resolution: Large Apertures and Interferometry<a class="headerlink" href="#improving-resolution-large-apertures-and-interferometry" title="Permalink to this headline">¶</a></h3>
+<p>The resolution of a single small radio telescope poor due to Rayleigh’s criterion (Eqn 5) because the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is necessarily large compared to the optical regime.  To obtain a comparable resolution requires a very large aperture.  However, an advantage of long wavelengths is that small deviations from an ideal parabolic shape isn’t as crucial.  For example, observing at 21 cm requires variations of <span class="math notranslate nohighlight">\(\leq1\)</span> cm (i.e., <span class="math notranslate nohighlight">\(\lambda/20\)</span>) in the shape of the dish to produce tolerable images.</p>
+<ul class="simple">
+<li><p><strong>What diameter radio dish would be required to observe at 21 cm with a resolution equivalent to the Keck telescopes (<span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>)?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dish_size</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">th</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength in m</span>
+    <span class="c1">#th = angular resolution; in arcseconds</span>
+    <span class="k">return</span> <span class="mf">1.22</span><span class="o">*</span><span class="n">l</span><span class="o">/</span><span class="p">(</span><span class="n">th</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="o">/</span><span class="mf">3600.</span><span class="p">)</span> <span class="c1"># returns dish size in m</span>
+
+<span class="n">l_rad</span> <span class="o">=</span> <span class="mf">0.21</span> <span class="c1">#21 cm --&gt; m</span>
+<span class="n">ang_res</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="c1">#angular resolution of Keck in arcseconds</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A radio dish with a resolution comparable to Keck would be </span><span class="si">%2.1f</span><span class="s2"> km.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">dish_size</span><span class="p">(</span><span class="n">l_rad</span><span class="p">,</span><span class="n">ang_res</span><span class="p">)</span><span class="o">/</span><span class="mf">1000.</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A radio dish with a resolution comparable to Keck would be 105.7 km.
+</pre></div>
+</div>
+</div>
+</div>
+<p>For comparison, the dish at <a class="reference external" href="https://en.wikipedia.org/wiki/Arecibo_Observatory">Arecibo Observatory</a> is 305 m across and was the largest single aperture radio telescope before the construction of the Five-hundred-meter Aperture Spherical radio Telescope (<a class="reference external" href="https://en.wikipedia.org/wiki/Five-hundred-meter_Aperture_Spherical_Telescope">FAST</a>) in southwest China.  The aperture would need to be about <span class="math notranslate nohighlight">\(200\times\)</span> larger to observe down to <span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>.</p>
+<p>The solution to improved resolution is accomplished through a technique called interferometry, which uses multiple telescopes to mimic a larger aperture.  As a result, astronomers have nevertheless been able to resolve radio images to better than <span class="math notranslate nohighlight">\(0.001^{\prime\prime}\)</span>.  For interferometry to work, astronomers utilize two radio telescopes (of modest size) separated by a baseline distance <span class="math notranslate nohighlight">\(d\)</span>.  This is similar to the Young double-slit experiment, where the baseline is analogous to the slit spacing.  For the  signal to arrive at both telescopes <em>in-phase</em> and at a maximum intensity, the extra distance traveled to one telescope must be an integral number of wavelengths <span class="math notranslate nohighlight">\(L = n\lambda\)</span>, where <span class="math notranslate nohighlight">\(n = 0,1,2,\ldots\)</span>.  Alternatively, the signal will destructively interfere if the distance <span class="math notranslate nohighlight">\(L = (n-1/2)\lambda\)</span> is a odd number of half-wavelengths.  The pointing angle <span class="math notranslate nohighlight">\(\theta\)</span> is then determined as</p>
+<div class="math notranslate nohighlight">
+\[ \sin \theta = \frac{L}{d}, \tag{9} \]</div>
+<p>if the signals of the two antennas are combined and a source can be accurately located.  The image resolution can be increased if two signals are received and reconstructed such that the resulting signal is coherent.  Clearly, Equation 9 shows this is most easily done with a longer baseline <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Very-long-baseline_interferometry">Very long baseline interferometry</a> (VLBI) is possible using instruments across a whole continent or even between continents. for example, the Event Horizon Telescope (<a class="reference external" href="https://en.wikipedia.org/wiki/Event_Horizon_Telescope">EHT</a>) combined contemporaneous observations of M87’s galactic center to produce a direct image of a black hole’s accretion disk.  It used data from radio telescopes across the world, where the exact time of data acquisition was recorded and reconstructed the image.</p>
+<p>A single antenna has its greatest sensitivity along its pointed direction, but it can also be sensitive to radio sources at other angles.  A typical antenna <a class="reference external" href="https://en.wikipedia.org/wiki/Radiation_pattern">pattern</a> maximizes the symmetry in dipole radiation, where there are three regions: a main lobe, back lobe and sidelobes.  The <em>longer</em> the lobe, the more sensitive the telescope is in that direction.  Note that the directionality of the beam is not perfect and components of the sidelobes contributed to a background noise.  The narrowness of the main lobe is referred to as the <strong>half-power beam width</strong> (HPBW) or angular width at half its length.  This width can be modulated by the addition of other telescopes to produce a particular diffraction pattern (i.e., similar to the increase in grating lines for optical diffraction) and the effect of the sidelobes can be reduced.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sidelobes_en.svg/800px-Sidelobes_en.svg.png"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 3</b>: Typical polar radiation plot. Most antennas show a pattern of "lobes" or maxima of radiation. In a directive antenna, shown here, the largest lobe, in the desired direction of propagation, is called the "main lobe". The other lobes are called "sidelobes" and usually represent radiation in unwanted directions. (image credit: <a href="https://en.wikipedia.org/wiki/Radiation_pattern">Wikipedia</a>) </div>
+</center>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Very_Large_Array">Very Large Array</a> (VLA) in Socorro, New Mexico consists of 27 radio telescopes in a movable Y configuration.  The 25 m telescopes are on tracks, use receivers sensitive at a variety of frequencies, and can have a maximum configuration diameter of 27 km.  It is capable of producing a high-resolution map of the sky by combining data from all of the individual telescopes.  The effective collecting area is 27 times greater than a single telescope.</p>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">3.3.3. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>5. What would the diameter of a single radio dish need to be to have a collecting area equivalent to the 27 telescopes of the VLA?</p>
+<p>6. How much must the pointing angle of a two-element radio interferometer be changed in order to move from one interference maximum to the next?  Assume that the two telescopes are separated by the diameter of Earth and that the observation is being made at a wavelength of 21 cm. Express your answer in arcseconds.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="ir-uv-x-ray-and-gamma-ray-astronomy">
+<h2><span class="section-number">3.4. </span>IR, UV, X-ray, and Gamma-ray Astronomy<a class="headerlink" href="#ir-uv-x-ray-and-gamma-ray-astronomy" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="atmospheric-windows-in-the-em-spectrum">
+<h3><span class="section-number">3.4.1. </span>Atmospheric Windows in the EM Spectrum<a class="headerlink" href="#atmospheric-windows-in-the-em-spectrum" title="Permalink to this headline">¶</a></h3>
+<p>Optical and radio telescopes can detect a vast majority of the radiation that reaches Earth’s surface.  The Earth’s atmosphere is opaque to most of the remaining electromagnetic spectrum.  The primary contributor to IR absorption is water vapor, where some observatories are placed above the atmospheric water vapor to make their observations.  NASA and the UK operate IR telescopes on Mauna Kea, where the humidity is quite low.  The Stratospheric Observatory for Infrared Astronomy (<a class="reference external" href="https://en.wikipedia.org/wiki/Stratospheric_Observatory_for_Infrared_Astronomy">SOFIA</a>) uses a 2.5 m telescope mounted in a Boeing 747 with a large door in the aft fuselage and is designed for overnight flights at altitudes of about 12 km to make observations.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atmospheric_electromagnetic_opacity.svg/1920px-Atmospheric_electromagnetic_opacity.svg.png"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 4</b>: Opacity of the Earth's atmosphere as a function of wavelength. (image credit: <a href="https://en.wikipedia.org/wiki/Radio_window">Wikipedia</a>) </div>
+</center>
+<p>In addition to atmospheric absorption, IR observations are complicated by the background heat of the telescope and detector.  From Wien’s law, the peak wavelength of an object near room temperature (300 K) is nearly 10 <span class="math notranslate nohighlight">\(\mu {\rm m}\)</span>, which could be in an observer’s wavelength region of interest.  Thus, steps must be taken to cool the detector to remove the signal from the background heat.</p>
+</div>
+<div class="section" id="observing-above-the-atmosphere">
+<h3><span class="section-number">3.4.2. </span>Observing Above the Atmosphere<a class="headerlink" href="#observing-above-the-atmosphere" title="Permalink to this headline">¶</a></h3>
+<p>In 1983, the <a class="reference external" href="https://en.wikipedia.org/wiki/IRAS">Infrared Astronomy Satellite</a> (IRAS) was placed in in orbit 900 km above the Earth’s surface.  It was cooled to liquid helium temperatures and its detector was sensitive to wavelengths from 12-100 <span class="math notranslate nohighlight">\(\mu{\rm m}\)</span>.  IRAS detected dust in orbit around young stars, which was an indication of the formation of planetary systems.  It performed an all-sky survey in the IR, which resulted in the detection of about 350,000 sources and many of the sources (75,000) are starburst galaxies.  Other new discoveries included a dust ring surrounding Vega and the first images of the Milky Way’s core.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/IRAS_all-sky_infrared_survey.jpg"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 5</b>: Nearly the entire sky, as seen in infrared wavelengths and projected at one-half degree resolution, is shown in this image, assembled from six months of data from the Infrared Astronomical Satellite (IRAS). (image credit: <a href="https://en.wikipedia.org/wiki/IRAS">Wikipedia</a>) </div>
+</center>
+<p>From the success of IRAS, the European space Agency followed with the <strong>Infrared Space Observatory</strong> in 1995.  Later, the <a class="reference external" href="https://en.wikipedia.org/wiki/Spitzer_Space_Telescope">Spitzer Space Telescope</a> was placed into an Earth-trailing orbit in 2003 and was recently retired in 2020.  The mission was only planned to last 2.5 years.  The liquid helium was exhausted in 2009 and the telescope was repurposed to continue observing in its <strong>Warm Mission</strong>, which limited its observations to 3.6 and 4.5 <span class="math notranslate nohighlight">\(\mu{\rm m}\)</span>.  Spitzer had a 0.85 m (f/12) mirror constructed of beryllium and was cooled to less than 5.5 K prior to 2009.</p>
+<p align="center"> 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Andromeda_galaxy_Ssc2005-20a1.jpg/1920px-Andromeda_galaxy_Ssc2005-20a1.jpg"/>
+</p>
+<center>
+<div style='width: 700px'><b>Figure 6</b>: The Andromeda Galaxy imaged by the MIPS instrument at 24 &mu;m using the Spitzer Space Telescope. (image credit: <a href="https://en.wikipedia.org/wiki/Spitzer_Space_Telescope">Wikipedia</a>) </div>
+</center>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Cosmic_Background_Explorer">Cosmic Background Explorer</a> (COBE) was launched and operated from 1989-1993 investigating the microwave regime.  It measured the microwave background radiation as 2.7 K, which validated the previous measurements made from the ground. COBE was followed by two more advanced spacecraft: the <a class="reference external" href="https://en.wikipedia.org/wiki/Wilkinson_Microwave_Anisotropy_Probe">Wilkinson Microwave Anisotropy Probe</a> (WMAP) operated from 2001 to 2010 and the <a class="reference external" href="https://en.wikipedia.org/wiki/Planck_(spacecraft)">Planck spacecraft</a> from 2009 to 2013</p>
+<p>Shorter wavelengths require a very precise reflecting surface and it wasn’t until the Space Age could UV, X-ray, or Gamma-ray observations could be performed.  The <a class="reference external" href="https://en.wikipedia.org/wiki/International_Ultraviolet_Explorer">International Ultraviolet Explorer</a> (IUE) was operated from 1978-1996 and proved to be a remarkably productive instrument.  The most famous X-ray telescope <a class="reference external" href="https://en.wikipedia.org/wiki/Chandra_X-ray_Observatory">Chandra</a> has been in operation from 1999 and operates from 6.2 - 0.1 nm (0.2 - 10 keV) with an angular resolution of approximately <span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>.  Because X-rays cannot be focused in the same way that longer wavelengths can, grazing incidence mirrors are used to achieve the outstanding resolving power of Chandra.</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Compton_Gamma_Ray_Observatory">Compton Gamma Ray Observatory</a> (CGRO) was a space observatory designed to detect radiation with energy from 20 keV to 30 GeV.  The observatory was in operation from Earth orbit from 1991-2000 and housed four main telescopes that completed the first all sky survey for energies above 100 MeV.  Successors to CGRO include the ESA <a class="reference external" href="https://en.wikipedia.org/wiki/INTEGRAL">INTEGRAL spacecraft</a> (launched 2002), NASA’s <a class="reference external" href="https://en.wikipedia.org/wiki/Neil_Gehrels_Swift_Observatory">Swift Gamma-Ray Burst Mission</a> (launched 2004), ASI <a class="reference external" href="https://en.wikipedia.org/wiki/AGILE_(satellite)">AGILE</a> (launched 2007) and NASA’s <a class="reference external" href="https://en.wikipedia.org/wiki/Fermi_Gamma-ray_Space_Telescope">Fermi Gamma-ray Space Telescope</a> (launched 2008); all remain operational as of 2019.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Chapter_6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Chapter_5/interaction-of-light-and-matter.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>The Interaction of Matter and Light</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Chapter_8/classification-of-stellar-spectra.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>The Classification of Stellar Spectra</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Billy Quarles<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
