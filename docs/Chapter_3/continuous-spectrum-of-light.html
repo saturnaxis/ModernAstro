@@ -1036,10 +1036,6 @@ The maximum wavelength for the Sun is: 502.0 nm (visible)
 B_\lambda(T) \approx \frac{2ckT}{\lambda^4}, \tag{14}
 \]</div>
 <p>and agrees well with the blackbody curve for long <span class="math notranslate nohighlight">\(\lambda\)</span>.  However, this result explodes for short <span class="math notranslate nohighlight">\(\lambda\)</span> (i.e., <span class="math notranslate nohighlight">\( \lim_{\lambda\rightarrow 0} B_\lambda(T) = \infty\)</span>).  The theoretical results was dubbed the “ultraviolet catastrophe” and is known today ast he <strong>Rayleigh-Jeans law</strong>.</p>
-<div align="center">
-<p><img alt="Figure 8" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_9.jpg?raw=true?" /><br>
-<strong>Figure 8</strong>: Blackbody radiation from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span>. (Carroll &amp; Ostlie (2007))</p>
-</div>
 <p>At the same time, Wien worked on his own <a class="reference external" href="https://en.wikipedia.org/wiki/Wien_approximation">approximation</a> starting from the Stefan-Boltzmann law.  He developed a formula that was accurate at <em>short</em> wavelengths as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1083,12 +1079,16 @@ B_\lambda(T) = \frac{a\lambda^{-5}}{e^{\frac{b}{\lambda T}}-1}. \tag{16}
 </div>
 <div class="section" id="the-planck-function-and-astrophysics">
 <h3><span class="section-number">1.5.3. </span>The Planck Function and Astrophysics<a class="headerlink" href="#the-planck-function-and-astrophysics" title="Permalink to this headline">¶</a></h3>
-<p>In spherical coordinates (see <a class="reference external" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_9.jpg">Figure 9</a>), the radiant energy for a given wavelength per unit time can be expressed from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span> as</p>
+<p>In spherical coordinates (see <strong>Figure 8</strong>), the radiant energy for a given wavelength per unit time can be expressed from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[
 L_\lambda d\lambda = \int \int \int B_\lambda(T)d\lambda dA \cos \theta \sin \theta d\theta d\phi . \tag{17} 
 \]</div>
 <p>At times it’s more convenient to work with frequency intervals <span class="math notranslate nohighlight">\(d\nu\)</span> rather than wavelength intervals.  In which case, <span class="math notranslate nohighlight">\(\nu d\nu = -\frac{c}{\lambda^2} d\lambda\)</span> can be substituted in Equation 16 to determine <span class="math notranslate nohighlight">\(B_\nu(T)\)</span>.</p>
+<div align="center">
+<p><img alt="Figure 8" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_3/Figure_9.jpg?raw=true?" /><br>
+<strong>Figure 8</strong>: Blackbody radiation from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span>. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The Planck function relates the observed properties of a star (e.g., radiant flux, apparent magnitude) and its intrinsic properties (e.g., radius and temperature).  Consider a star as a spherical blackbody of radius <span class="math notranslate nohighlight">\(R\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span>.  Each small patch of surface <span class="math notranslate nohighlight">\(dA\)</span> emits the same amount of radiation and the energy per second (luminosity) is</p>
 <div class="math notranslate nohighlight">
 \[
