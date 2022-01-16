@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -252,6 +254,69 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-description-of-the-radiation-field">
+   5.1. The Description of the Radiation Field
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-specific-and-mean-intensities">
+     5.1.1. The Specific and Mean Intensities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-specific-energy-density">
+     5.1.2. The Specific Energy Density
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-specific-radiative-flux">
+     5.1.3. The Specific Radiative Flux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiation-pressure">
+     5.1.4. Radiation Pressure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problems">
+     5.1.5.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stellar-opacity">
+   5.2. Stellar Opacity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radiative-transfer">
+   5.3. Radiative Transfer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-transfer-equation">
+   5.4. The Transfer Equation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">
+   5.5. The Profiles of Spectral Lines
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -262,7 +327,76 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="stellar-atmospheres">
 <h1><span class="section-number">5. </span>Stellar Atmospheres<a class="headerlink" href="#stellar-atmospheres" title="Permalink to this headline">¶</a></h1>
-<p>Under Construction</p>
+<div class="section" id="the-description-of-the-radiation-field">
+<h2><span class="section-number">5.1. </span>The Description of the Radiation Field<a class="headerlink" href="#the-description-of-the-radiation-field" title="Permalink to this headline">¶</a></h2>
+<p>Astronomers receive light only from the outermost layer of the star’s atmosphere that overly an opaque interior.  The <em>temperature</em>, <em>density</em>, and <em>composition</em> of this layer determine the features of the star’s spectrum, where we must describe how light travels through the gas to interpret the observed spectral lines properly.</p>
+<div class="section" id="the-specific-and-mean-intensities">
+<h3><span class="section-number">5.1.1. </span>The Specific and Mean Intensities<a class="headerlink" href="#the-specific-and-mean-intensities" title="Permalink to this headline">¶</a></h3>
+<p>Recall the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#the-planck-function-and-astrophysics">Planck function</a> was based upon the wavelength-dependent flux of blackbody radiation <span class="math notranslate nohighlight">\(B_\lambda(T)\)</span> from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span>.  A similar procedure can be used to define the intensity of a cone of light.  The light is measured in spherical coordinates by the angle <span class="math notranslate nohighlight">\(\theta\)</span>, which is the direction perpendicular to the surface <span class="math notranslate nohighlight">\(dA\)</span> so that <span class="math notranslate nohighlight">\(dA\cos\theta\)</span> is an area projected onto a plane perpendicular to the propagation direction of the light.  The light energy is wavelength dependent (<span class="math notranslate nohighlight">\(E = hc/\lambda\)</span>) and thus can be defined as</p>
+<div class="math notranslate nohighlight">
+\[ E_\lambda \equiv \frac{\partial E}{\partial \lambda}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> is the energy carried by the rays in the light cone in a time interval <span class="math notranslate nohighlight">\(dt\)</span>.  The <strong>specific intensity</strong> of the rays is defined as</p>
+<div class="math notranslate nohighlight">
+\[ I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda dt dA \cos\theta d\Omega}, \tag{1} \]</div>
+<p>which carries the units of energy per time per Area per steradian <em>sr</em> (<a class="reference external" href="https://en.wikipedia.org/wiki/Steradian">solid angle)</a>) or more simply, energy per everything.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is a <span class="math notranslate nohighlight">\(d\lambda\)</span> factor in the numerator and denominator, which is a placeholder for the alternate definition of specific intensity in terms of frequency <span class="math notranslate nohighlight">\(I_\nu\)</span>.  Recall from the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#the-planck-function-and-astrophysics">Planck function</a> using <span class="math notranslate nohighlight">\(d\nu = -\frac{c}{\lambda^2}d\lambda\)</span> as a conversion factor.</p>
+</div>
+<p>The specific intensity is usually referred to simply as the <em>intensity</em> and in spherical coordinates,</p>
+<div class="math notranslate nohighlight">
+\[ E_\lambda d\lambda = I_\lambda d\lambda dt dA \cos\theta d\Omega = I_\lambda d\lambda dt dA \cos\theta \sin\theta d\theta d\phi, \tag{2} \]</div>
+<p>with the substitution for the solid angle <span class="math notranslate nohighlight">\(d\Omega = \sin\theta d\theta d\phi\)</span>.  The Planck function <span class="math notranslate nohighlight">\(B_\lambda\)</span> is an example of the specific intensity for the special case of blackbody radiation.  In general, the light energy is not required to vary with wavelength (e.g., monochromatic sources or lasers).</p>
+<p>The energy of a single light ray <em>does not spread out (or diverge)</em>, however the specific intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> is typically used to describe a bundle of light rays and thus varies with direction.  The <strong>mean intensity</strong> of the radiation is determined by integrating over all directions and normalizing the result by <span class="math notranslate nohighlight">\(4\pi {\rm sr}\)</span> (i.e., the solid angle enclosed by a sphere) to obtain <span class="math notranslate nohighlight">\(\langle I_\lambda \rangle\)</span>, the average value of <span class="math notranslate nohighlight">\(I_\lambda\)</span>.  In spherical coordinates, this average value is</p>
+<div class="math notranslate nohighlight">
+\[ \langle I_\lambda \rangle \equiv \frac{1}{4\pi} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_\lambda \sin\theta d\theta d\phi. \tag{3} \]</div>
+<p>For an isotropic radiation field (i.e., one with the same intensity in all directions), the mean intensity is the intensity and since blackbody radiation is isotropic, then <span class="math notranslate nohighlight">\(\langle I_\lambda \rangle = B_\lambda\)</span>.</p>
+</div>
+<div class="section" id="the-specific-energy-density">
+<h3><span class="section-number">5.1.2. </span>The Specific Energy Density<a class="headerlink" href="#the-specific-energy-density" title="Permalink to this headline">¶</a></h3>
+<p>Consider a small cylinder (open at both ends) with perfectly reflecting walls inside, where light enters the base of the cylinder and bounces until it exits through the top of the cylinder.  The radiation that enters the cylinder at an angle <span class="math notranslate nohighlight">\(\theta\)</span> travels through the cylinder in a time <span class="math notranslate nohighlight">\(dt = dL/(c\cos\theta)\)</span> and the energy inside (within a wavelength range <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>) is</p>
+<div class="math notranslate nohighlight">
+\[ E_\lambda d\lambda = I_\lambda d\lambda dt dA \cos\theta d\Omega = I_\lambda d\lambda dA d\Omega \frac{dL}{c}, \]</div>
+<p>using Eqn. 2 and the substitution of <span class="math notranslate nohighlight">\(dt\)</span>.  The quantity <span class="math notranslate nohighlight">\(dA dL\)</span> is the volume of the cylinder, where the <strong>specific energy density</strong> (<span class="math notranslate nohighlight">\(u_\lambda d\lambda\)</span>) is found by normalizing the energy <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> by the volume of the cylinder, integrating over all the solid angles, and using Eqn. 3:</p>
+<div class="math notranslate nohighlight">
+\[ u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_\lambda d\lambda \sin\theta d\theta d\phi = \frac{4\pi}{c} \langle I_\lambda \rangle d\lambda. \tag{4}\]</div>
+<p>For blackbody radiation,</p>
+<div class="math notranslate nohighlight">
+\[ u_\lambda d\lambda = \frac{4\pi}{c}B_\lambda d\lambda = \frac{8\pi hc \lambda^{-5}}{e^{hc/(\lambda kT)}-1} d\lambda. \tag{5}\]</div>
+<p>The total energy density <span class="math notranslate nohighlight">\(u\)</span> is found by integrating over <em>all</em> wavelengths,</p>
+<div class="math notranslate nohighlight">
+\[ u = \int_0^\infty u_\lambda d\lambda \]</div>
+<p>and for blackbody radiation (using Eqn. 5), then total energy density is</p>
+<div class="math notranslate nohighlight">
+\[ u = \frac{4\pi}{c} \int_0^\infty \frac{8\pi hc \lambda^{-5}}{e^{hc/(\lambda kT)}-1} d\lambda = \frac{4\sigma T^4}{c}, \tag{6} \]</div>
+<p>where <span class="math notranslate nohighlight">\(4\sigma/c = 7.565767 \times 10^{-16}\;{\rm J/m^3/K^4}\)</span> and is known as the <em>radiation constant</em>.</p>
+</div>
+<div class="section" id="the-specific-radiative-flux">
+<h3><span class="section-number">5.1.3. </span>The Specific Radiative Flux<a class="headerlink" href="#the-specific-radiative-flux" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="radiation-pressure">
+<h3><span class="section-number">5.1.4. </span>Radiation Pressure<a class="headerlink" href="#radiation-pressure" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="problems">
+<h3><span class="section-number">5.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>1. Find an expression for <span class="math notranslate nohighlight">\(n_\lambda d\lambda\)</span> (the number density of blackbody photons) with a wavelength between <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>.</p>
+<p>2. Using your expression from Problem 1, find the total number of photons inside a kitchen oven assuming a volume of 0.5 <span class="math notranslate nohighlight">\({\rm m^3}\)</span> and set at 477 K.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="stellar-opacity">
+<h2><span class="section-number">5.2. </span>Stellar Opacity<a class="headerlink" href="#stellar-opacity" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="radiative-transfer">
+<h2><span class="section-number">5.3. </span>Radiative Transfer<a class="headerlink" href="#radiative-transfer" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="the-transfer-equation">
+<h2><span class="section-number">5.4. </span>The Transfer Equation<a class="headerlink" href="#the-transfer-equation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="the-profiles-of-spectral-lines">
+<h2><span class="section-number">5.5. </span>The Profiles of Spectral Lines<a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
