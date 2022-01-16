@@ -249,6 +249,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_9/stellar-atmospheres.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_9/stellar-atmospheres.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -298,20 +320,138 @@
   <a class="reference internal nav-link" href="#stellar-opacity">
    5.2. Stellar Opacity
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature-and-local-thermodynamic-equilibrium">
+     5.2.1. Temperature and Local Thermodynamic Equilibrium
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-definition-of-opacity">
+     5.2.2. The Definition of Opacity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#optical-depth">
+     5.2.3. Optical Depth
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-sources-of-opacity">
+     5.2.4. General Sources of Opacity
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continuum-opacity-and-the-rm-h-ion">
+     5.2.5. Continuum Opacity and the ${\rm H^-} Ion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-rosseland-mean-opacity">
+     5.2.6. The Rosseland Mean Opacity
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#radiative-transfer">
    5.3. Radiative Transfer
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#photon-emission-processes">
+     5.3.1. Photon Emission Processes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-random-walk">
+     5.3.2. The Random Walk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limb-darkening">
+     5.3.3. Limb Darkening
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-radiation-pressure-gradient">
+     5.3.4. The Radiation Pressure Gradient
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-transfer-equation">
    5.4. The Transfer Equation
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-emission-coefficient">
+     5.4.1. The Emission Coefficient
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">
+     5.4.2. The Source Function and the Transfer Equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">
+     5.4.3. The Special Case of Blackbody Radiation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">
+     5.4.4. The Assumption of a Plane-Parallel Atmosphere
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-eddington-approximation">
+     5.4.5. The Eddington Approximation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limb-darkening-revisited">
+     5.4.6. Limb Darkening Revisited
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">
    5.5. The Profiles of Spectral Lines
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equivalent-widths">
+     5.5.1. Equivalent Widths
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#processes-that-broaden-spectral-lines">
+     5.5.2. Processes That Broaden Spectral Lines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-voigt-profile">
+     5.5.3. The Voigt Profile
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-curve-of-growth">
+     5.5.4. The Curve of Growth
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computer-modeling-of-stellar-atmospheres">
+     5.5.5. Computer Modeling of Stellar Atmospheres
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#supplemental-links">
+   5.6. Supplemental Links
   </a>
  </li>
 </ul>
@@ -363,7 +503,7 @@
 <p>For blackbody radiation,</p>
 <div class="math notranslate nohighlight">
 \[ u_\lambda d\lambda = \frac{4\pi}{c}B_\lambda d\lambda = \frac{8\pi hc \lambda^{-5}}{e^{hc/(\lambda kT)}-1} d\lambda. \tag{5}\]</div>
-<p>The total energy density <span class="math notranslate nohighlight">\(u\)</span> is found by integrating over <em>all</em> wavelengths,</p>
+<p>The total energy density <span class="math notranslate nohighlight">\(u\)</span> is found by <a class="reference external" href="http://people.tamu.edu/~kevinkrisciunas/planck.pdf">integrating over <em>all</em> wavelengths</a>,</p>
 <div class="math notranslate nohighlight">
 \[ u = \int_0^\infty u_\lambda d\lambda \]</div>
 <p>and for blackbody radiation (using Eqn. 5), then total energy density is</p>
@@ -373,9 +513,31 @@
 </div>
 <div class="section" id="the-specific-radiative-flux">
 <h3><span class="section-number">5.1.3. </span>The Specific Radiative Flux<a class="headerlink" href="#the-specific-radiative-flux" title="Permalink to this headline">¶</a></h3>
+<p>Astronomers are often interested in the <em>net</em> energy that passes through a <em>unit area</em> in the direction of the z-axis.  This is given by the <strong>specific radiative flux</strong> <span class="math notranslate nohighlight">\(F_\lambda\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[ F_\lambda d\lambda = \int I_\lambda d\lambda\:\cos\theta\:d\Omega = \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi I_\lambda d\lambda\:\cos\theta\sin\theta d\theta\:d\phi. \tag{7} \]</div>
+<p>The specific radiative flux considers only the <em>z</em>-component (i.e., <span class="math notranslate nohighlight">\(\cos\theta\)</span>) of a light ray, where oppositely directed rays cancel.  Both the radiative flux and the specific intensity (Eqn. 2) describe the light received from a celestial source.  When a source is resolved by the telescope as defined by Rayleigh’s criterion (<span class="math notranslate nohighlight">\(\theta &gt; \theta_{\rm min}\)</span>), the <em>specific intensity</em> is measured.  For example, the measured value of the specific intensity (at 501 nm) at the center of the Sun’s disk is <span class="math notranslate nohighlight">\(I_{501} = 4.03 \times 10^{13}\;{\rm W/m^{3}/sr}\)</span>.</p>
+<p>For an unresolved source, the <em>radiative flux</em> is measured because the energy received from the entire source will disperse through the diffraction pattern (i.e., Airy disk and rings).  Because the light arriving at the detector leaves the source at all angles, the detector is effectively integrating the specific intensity over all directions.  As the distance to the source increases, the amount of energy falling within the Airy disk decreases as <span class="math notranslate nohighlight">\(1/r^2\)</span>, as expected.</p>
 </div>
 <div class="section" id="radiation-pressure">
 <h3><span class="section-number">5.1.4. </span>Radiation Pressure<a class="headerlink" href="#radiation-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Einstein’s special theory of relativity describes photons as massless particles that nonetheless carry a momentum <span class="math notranslate nohighlight">\(p\)</span> that is related to its energy <span class="math notranslate nohighlight">\(E\)</span>.  Thus, the photon can exert a <strong>radiation pressure</strong>.  Consider the gas pressure exerted by molecules bouncing off a wall, where the radiation pressure of photons can be described through a similar process. At a given time, a photon can strike a perfectly reflecting surface of area <span class="math notranslate nohighlight">\(dA\)</span> and be reflected into a solid angle <span class="math notranslate nohighlight">\({\rm d}\Omega\)</span>  (at the same angles <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\({\rm d}\Omega\)</span> due to the law of reflection).  The change in <span class="math notranslate nohighlight">\(p_z\)</span> of photons within a range of wavelengths from the reflection is</p>
+<div class="math notranslate nohighlight">
+\[ dp_{z,\lambda} d\lambda = p_\lambda \bigg\rvert_{z_o}^{z_f} d\lambda = \frac{2E_\lambda\cos\theta}{c} d\lambda = \frac{2}{c} I_\lambda d\lambda\:dt\:dA\cos^2\theta\:d\Omega, \]</div>
+<p>using <span class="math notranslate nohighlight">\(E_\lambda\)</span> from Eqn. 2.  Recall that <span class="math notranslate nohighlight">\(F = dp/dt\)</span> and <span class="math notranslate nohighlight">\(P = F/A\)</span> so that the radiation pressure <span class="math notranslate nohighlight">\(P_{\rm rad,\lambda}d\lambda\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[ P_{\rm rad,\lambda} d\lambda = \frac{2}{c} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^{\pi/2} I_\lambda d\lambda\:\cos^2\theta\sin\theta d\theta\:d\phi. \quad {\rm (reflection)} \]</div>
+<p>Instead of a reflecting wall, replace it with a mathematical surface <span class="math notranslate nohighlight">\(dA\)</span> where the incident photons will now keep on going through and be streaming from the other side.  For an <em>isotropic radiation field</em>, the leading factor of 2 is removed because there is no longer a change in momentum upon reflection.  The radiation pressure becomes</p>
+<div class="math notranslate nohighlight">
+\[ P_{\rm rad,\lambda} d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi I_\lambda d\lambda\:\cos^2\theta\sin\theta d\theta\:d\phi = \frac{4\pi}{3c}I_\lambda d\lambda, \quad {\rm (transmission)} \tag{8} \]</div>
+<p>where the volume over all solid angles is simply a unit sphere (<span class="math notranslate nohighlight">\(4\pi/3\)</span>).  However, for a non-isotropic radiation field the equation for the radiation pressure is still valid, but the pressure depends on the orientation of the mathematical surface <span class="math notranslate nohighlight">\(dA\)</span>.</p>
+<p>In general, the total radiation pressure at all wavelengths is found by</p>
+<div class="math notranslate nohighlight">
+\[ P_{\rm rad} = \int_0^\infty P_{\rm rad,\lambda} d\lambda, \]</div>
+<p>where the substitution <span class="math notranslate nohighlight">\(B_\lambda = I_\lambda\)</span> in Eqn. 8 can be made blackbody radiation to get</p>
+<div class="math notranslate nohighlight">
+\[ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \frac{1}{3}u.  \tag{9} \]</div>
+<p>The <strong>blackbody radiation pressure</strong> is one-third of the energy density, where an ideal monatomic gas is two-thirds of its energy density.</p>
 </div>
 <div class="section" id="problems">
 <h3><span class="section-number">5.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
@@ -387,15 +549,86 @@
 </div>
 <div class="section" id="stellar-opacity">
 <h2><span class="section-number">5.2. </span>Stellar Opacity<a class="headerlink" href="#stellar-opacity" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="temperature-and-local-thermodynamic-equilibrium">
+<h3><span class="section-number">5.2.1. </span>Temperature and Local Thermodynamic Equilibrium<a class="headerlink" href="#temperature-and-local-thermodynamic-equilibrium" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-definition-of-opacity">
+<h3><span class="section-number">5.2.2. </span>The Definition of Opacity<a class="headerlink" href="#the-definition-of-opacity" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="optical-depth">
+<h3><span class="section-number">5.2.3. </span>Optical Depth<a class="headerlink" href="#optical-depth" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="general-sources-of-opacity">
+<h3><span class="section-number">5.2.4. </span>General Sources of Opacity<a class="headerlink" href="#general-sources-of-opacity" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="continuum-opacity-and-the-rm-h-ion">
+<h3><span class="section-number">5.2.5. </span>Continuum Opacity and the ${\rm H^-} Ion<a class="headerlink" href="#continuum-opacity-and-the-rm-h-ion" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-rosseland-mean-opacity">
+<h3><span class="section-number">5.2.6. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="radiative-transfer">
 <h2><span class="section-number">5.3. </span>Radiative Transfer<a class="headerlink" href="#radiative-transfer" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="photon-emission-processes">
+<h3><span class="section-number">5.3.1. </span>Photon Emission Processes<a class="headerlink" href="#photon-emission-processes" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-random-walk">
+<h3><span class="section-number">5.3.2. </span>The Random Walk<a class="headerlink" href="#the-random-walk" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="limb-darkening">
+<h3><span class="section-number">5.3.3. </span>Limb Darkening<a class="headerlink" href="#limb-darkening" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-radiation-pressure-gradient">
+<h3><span class="section-number">5.3.4. </span>The Radiation Pressure Gradient<a class="headerlink" href="#the-radiation-pressure-gradient" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="the-transfer-equation">
 <h2><span class="section-number">5.4. </span>The Transfer Equation<a class="headerlink" href="#the-transfer-equation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-emission-coefficient">
+<h3><span class="section-number">5.4.1. </span>The Emission Coefficient<a class="headerlink" href="#the-emission-coefficient" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-source-function-and-the-transfer-equation">
+<h3><span class="section-number">5.4.2. </span>The Source Function and the Transfer Equation<a class="headerlink" href="#the-source-function-and-the-transfer-equation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-special-case-of-blackbody-radiation">
+<h3><span class="section-number">5.4.3. </span>The Special Case of Blackbody Radiation<a class="headerlink" href="#the-special-case-of-blackbody-radiation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-assumption-of-a-plane-parallel-atmosphere">
+<h3><span class="section-number">5.4.4. </span>The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-eddington-approximation">
+<h3><span class="section-number">5.4.5. </span>The Eddington Approximation<a class="headerlink" href="#the-eddington-approximation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="limb-darkening-revisited">
+<h3><span class="section-number">5.4.6. </span>Limb Darkening Revisited<a class="headerlink" href="#limb-darkening-revisited" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="the-profiles-of-spectral-lines">
 <h2><span class="section-number">5.5. </span>The Profiles of Spectral Lines<a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="equivalent-widths">
+<h3><span class="section-number">5.5.1. </span>Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="processes-that-broaden-spectral-lines">
+<h3><span class="section-number">5.5.2. </span>Processes That Broaden Spectral Lines<a class="headerlink" href="#processes-that-broaden-spectral-lines" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-voigt-profile">
+<h3><span class="section-number">5.5.3. </span>The Voigt Profile<a class="headerlink" href="#the-voigt-profile" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-curve-of-growth">
+<h3><span class="section-number">5.5.4. </span>The Curve of Growth<a class="headerlink" href="#the-curve-of-growth" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="computer-modeling-of-stellar-atmospheres">
+<h3><span class="section-number">5.5.5. </span>Computer Modeling of Stellar Atmospheres<a class="headerlink" href="#computer-modeling-of-stellar-atmospheres" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="supplemental-links">
+<h2><span class="section-number">5.6. </span>Supplemental Links<a class="headerlink" href="#supplemental-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.ifa.hawaii.edu/users/kud/teaching_12/3_Radiative_transfer.pdf">Powerpoint slides</a> from Rolf Kudritzki at the University of Hawaii’s Institute for Astronomy (IfA).</p></li>
+<li><p><a class="reference external" href="http://people.tamu.edu/~kevinkrisciunas/planck.pdf">Integrating the Planck function</a> from Kevin Krisciunas at Texas A&amp;M University.</p></li>
+<li><p>Contour integral for <a class="reference external" href="https://math.stackexchange.com/questions/99843/contour-integral-for-x3-ex-1">Planck function</a>.</p></li>
+</ul>
 </div>
 </div>
 
