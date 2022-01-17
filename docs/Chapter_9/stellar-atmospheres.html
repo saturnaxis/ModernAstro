@@ -343,7 +343,11 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#continuum-opacity-and-the-rm-h-ion">
-     5.2.5. Continuum Opacity and the ${\rm H^-} Ion
+     5.2.5. Continuum Opacity and the
+     <span class="math notranslate nohighlight">
+      \({\rm H^-}\)
+     </span>
+     Ion
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -542,15 +546,58 @@
 <div class="section" id="problems">
 <h3><span class="section-number">5.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>1. Find an expression for <span class="math notranslate nohighlight">\(n_\lambda d\lambda\)</span> (the number density of blackbody photons) with a wavelength between <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>.</p>
+<div><p>1. Find an expression for <span class="math notranslate nohighlight">\(n_\lambda\:d\lambda\)</span> (the number density of blackbody photons) with a wavelength between <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>.</p>
 <p>2. Using your expression from Problem 1, find the total number of photons inside a kitchen oven assuming a volume of 0.5 <span class="math notranslate nohighlight">\({\rm m^3}\)</span> and set at 477 K.</p>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="stellar-opacity">
 <h2><span class="section-number">5.2. </span>Stellar Opacity<a class="headerlink" href="#stellar-opacity" title="Permalink to this headline">¶</a></h2>
+<p>The classification of stellar spectra is complicated by the fact that stars are not actually blackbodies.  The temperature of a star’s photosphere can be estimated by the Stefan-Boltzmann law and the spectrum shape using the Planck function.  However, the Sun’s spectrum deviates substantially from the idealized shape because solar absorption lines remove light at certain wavelengths.  A dense series of metallic absorption lines in the Solar spectrum is especially effective and called <strong>line blanketing</strong>.</p>
 <div class="section" id="temperature-and-local-thermodynamic-equilibrium">
 <h3><span class="section-number">5.2.1. </span>Temperature and Local Thermodynamic Equilibrium<a class="headerlink" href="#temperature-and-local-thermodynamic-equilibrium" title="Permalink to this headline">¶</a></h3>
+<p>There are many different measures of temperature within a star, which are defined according to a particular physical process.</p>
+<ul class="simple">
+<li><p>The temperature obtained from the Stefan-Boltzmann law (<strong>effective temperature</strong>) is <em>uniquely defined for a particular layer</em> of the stellar atmosphere.</p></li>
+<li><p>The <strong>excitation temperature</strong> is defined by the Boltzmann equation, which measures the ratio of atoms between two quantum states.</p></li>
+<li><p>The <strong>ionization temperature</strong> is defined by the Saha equation, which measures the ratio of atoms that are ionized (missing electrons).</p></li>
+<li><p>The <strong>kinetic temperature</strong> is contained in the Maxwell-Boltzmann distribution, which describes the velocity distribution of gas particles.</p></li>
+<li><p>The <strong>color temperature</strong> is obtained by fitting the Planck function to the shape of a star’s continuous spectrum.</p></li>
+</ul>
+<p>The effective temperature is the only measure that depends strictly on the location within the star, while the remaining temperatures vary according to the conditions of the gas that can be described by the simple case of a gas confined within an “ideal” box (i.e., ideal gas law).  Due to the boundary condition of the box, the energy of the gas particles and blackbody radiation will come into equilibrium and can be described by a single well-defined temperature.  As a result, there is no net flow of energy through the box, or between the matter and radiation.  The number of photons absorbed per unit time is equal to the number of photons emitted, which is called <a class="reference external" href="https://en.wikipedia.org/wiki/Thermodynamic_equilibrium">thermodynamic equilibrium</a>.</p>
+<p>Such a case cannot be true everywhere in a star (i.e., stars shine so some photons escape) and a star cannot be in perfect thermodynamic equilibrium.  A net outward flow of energy occurs through the star and the temperature varies with the stellar radius.  The ideal box approximation can be used: <em>if the distance over which the temperature changes significantly is large compared with the distances traveled by the particles and photons between collisions</em> (i.e., the ideal box is small enough).  The distances traveled by particles are called their <em>mean free paths</em>.  When the above condition is met, the particles and photons cannot escape the local environment and the temperature of the box is nearly constant (i.e., <strong>local thermodynamic equilibrium</strong> <em>LTE</em>).</p>
+<p>The photosphere is the surface layer of the Sun’s atmosphere where the photons can escape into space.  The temperature in one region varies from 5580 K to 5790 K over a distance of 25.0 km.  The <em>temperature scale height</em> <span class="math notranslate nohighlight">\(H_T\)</span> is the characteristic distance over which the temperature varies: <span class="math notranslate nohighlight">\(H_T \equiv \bar{T}/|dT/dr|\)</span>.</p>
+<ul class="simple">
+<li><p><strong>What is the temperature scale height <span class="math notranslate nohighlight">\(H_T\)</span> of the Sun’s photosphere?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">scale_height</span><span class="p">(</span><span class="n">T1</span><span class="p">,</span><span class="n">T2</span><span class="p">,</span><span class="n">r</span><span class="p">):</span>
+    <span class="c1">#T1 = low temperature</span>
+    <span class="c1">#T2 = high temperature</span>
+    <span class="c1">#r = distance traveled</span>
+    <span class="n">T_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">T1</span><span class="p">,</span><span class="n">T2</span><span class="p">])</span> <span class="c1">#average temperature</span>
+    <span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">([</span><span class="n">T1</span><span class="p">,</span><span class="n">T2</span><span class="p">]))</span> <span class="c1">#temperature range dT</span>
+    <span class="k">return</span> <span class="n">T_avg</span><span class="o">/</span><span class="p">(</span><span class="n">dT</span><span class="o">/</span><span class="n">r</span><span class="p">)</span>
+
+<span class="n">T1_Sun</span> <span class="o">=</span> <span class="mi">5580</span> <span class="c1">#K</span>
+<span class="n">T2_Sun</span> <span class="o">=</span> <span class="mi">5790</span> <span class="c1">#K </span>
+<span class="n">r_Sun</span> <span class="o">=</span> <span class="mf">25.0</span> <span class="c1">#km</span>
+<span class="n">H_T</span> <span class="o">=</span> <span class="n">scale_height</span><span class="p">(</span><span class="n">T1_Sun</span><span class="p">,</span><span class="n">T2_Sun</span><span class="p">,</span><span class="n">r_Sun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The scale height of the Sun&#39;s photosphere is </span><span class="si">%3d</span><span class="s2"> km.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">H_T</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The scale height of the Sun&#39;s photosphere is 677 km.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Is the Sun’s photosphere in LTE?</strong> To answer this question, we need to find the mean free path of the particles and photons.  The density of the Sun’s photosphere is about <span class="math notranslate nohighlight">\(\rho = 2.1 \times 10^{-4}\:{\rm kg/m^3}\)</span> and consists primarily of neutral hydrogen atoms in the ground state (see the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html#application-to-the-sun">previous chapter</a>).  The number density of hydrogen atoms (i.e., number of H atoms per cubic meter) is roughly</p>
+<div class="math notranslate nohighlight">
+\[ n = \frac{\rho}{m_H} = 1.27 \times 10^{23}\:{\rm m^{-3}} \]</div>
+<p>with the mass of hydrogen <span class="math notranslate nohighlight">\(m_H = 1.67 \times 10^{-27}\:{\rm kg}\)</span>.</p>
 </div>
 <div class="section" id="the-definition-of-opacity">
 <h3><span class="section-number">5.2.2. </span>The Definition of Opacity<a class="headerlink" href="#the-definition-of-opacity" title="Permalink to this headline">¶</a></h3>
@@ -562,7 +609,7 @@
 <h3><span class="section-number">5.2.4. </span>General Sources of Opacity<a class="headerlink" href="#general-sources-of-opacity" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="continuum-opacity-and-the-rm-h-ion">
-<h3><span class="section-number">5.2.5. </span>Continuum Opacity and the ${\rm H^-} Ion<a class="headerlink" href="#continuum-opacity-and-the-rm-h-ion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.5. </span>Continuum Opacity and the <span class="math notranslate nohighlight">\({\rm H^-}\)</span> Ion<a class="headerlink" href="#continuum-opacity-and-the-rm-h-ion" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="the-rosseland-mean-opacity">
 <h3><span class="section-number">5.2.6. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this headline">¶</a></h3>
