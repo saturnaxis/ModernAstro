@@ -597,10 +597,35 @@
 <p><strong>Is the Sun’s photosphere in LTE?</strong> To answer this question, we need to find the mean free path of the particles and photons.  The density of the Sun’s photosphere is about <span class="math notranslate nohighlight">\(\rho = 2.1 \times 10^{-4}\:{\rm kg/m^3}\)</span> and consists primarily of neutral hydrogen atoms in the ground state (see the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html#application-to-the-sun">previous chapter</a>).  The number density of hydrogen atoms (i.e., number of H atoms per cubic meter) is roughly</p>
 <div class="math notranslate nohighlight">
 \[ n = \frac{\rho}{m_H} = 1.27 \times 10^{23}\:{\rm m^{-3}} \]</div>
-<p>with the mass of hydrogen <span class="math notranslate nohighlight">\(m_H = 1.67 \times 10^{-27}\:{\rm kg}\)</span>. The collision probability for two atoms is higher if their centers pass within twice the atomic radius (i.e., Bohr radius) or <span class="math notranslate nohighlight">\(2a_o\)</span>. This region of higher collision probability defines an area or <strong>cross section</strong> <span class="math notranslate nohighlight">\(\sigma \equiv \pi(2a_o)^2\)</span>.</p>
-<p>Consider a single atom of radius <span class="math notranslate nohighlight">\(2a_o\)</span> and cross-sectional area of <span class="math notranslate nohighlight">\(4\pi a_o^2\)</span> moving with a speed <span class="math notranslate nohighlight">\(v\)</span> over a time <span class="math notranslate nohighlight">\(t\)</span>.  The atom has moved a distance <span class="math notranslate nohighlight">\(vt\)</span> and sweeps out a cylindrical volume <span class="math notranslate nohighlight">\(V=\sigma vt\)</span>.  Within the volume, there are <span class="math notranslate nohighlight">\(n\sigma vt\)</span> point atoms with which the moving atom has collided.  The <strong>mean free path</strong> <span class="math notranslate nohighlight">\(\ell\)</span> between collisions is</p>
+<p>with the mass of hydrogen <span class="math notranslate nohighlight">\(m_H = 1.67 \times 10^{-27}\:{\rm kg}\)</span>. The collision probability for two atoms is higher if their centers pass within twice the atomic radius (i.e., <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_5/interaction-of-light-and-matter.html#bohr-s-semiclassical-atom">Bohr radius</a>) or <span class="math notranslate nohighlight">\(2a_o\)</span>, where <span class="math notranslate nohighlight">\(a_o \approx 5.29 \times 10^{-11}\:{\rm m}\)</span>. This region of higher collision probability defines an area or <strong>cross section</strong> <span class="math notranslate nohighlight">\(\sigma \equiv \pi(2a_o)^2\)</span>.</p>
+<p>Consider a single atom of radius <span class="math notranslate nohighlight">\(2a_o\)</span> with a cross section of <span class="math notranslate nohighlight">\(4\pi a_o^2\)</span> moving with a speed <span class="math notranslate nohighlight">\(v\)</span> over a time <span class="math notranslate nohighlight">\(t\)</span>.  The atom has moved a distance <span class="math notranslate nohighlight">\(vt\)</span> and sweeps out a cylindrical volume <span class="math notranslate nohighlight">\(V=\sigma vt\)</span>.  Within the volume, there are <span class="math notranslate nohighlight">\(n\sigma vt\)</span> point atoms that collide with the moving atom.  The <strong>mean free path</strong> <span class="math notranslate nohighlight">\(\ell\)</span> between collisions is</p>
 <div class="math notranslate nohighlight">
 \[ \ell = \frac{\rm distance\:traveled}{\rm number\:of\:atoms} = \frac{vt}{n\sigma vt} = \frac{1}{n\sigma}. \tag{10} \]</div>
+<ul class="simple">
+<li><p><strong>What is the mean free path for the Sun’s photosphere consisting of hydrogen atoms?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mean_free_path</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">sigma</span><span class="p">):</span>
+    <span class="c1">#n = number density of atoms</span>
+    <span class="c1">#sigma = cross section</span>
+    <span class="k">return</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">sigma</span><span class="p">)</span>
+
+<span class="n">n_H</span> <span class="o">=</span> <span class="mf">2.1e-4</span><span class="o">/</span><span class="mf">1.67e-27</span> <span class="c1">#number density of H atoms in Sun&#39;s photosphere</span>
+<span class="n">a_o</span> <span class="o">=</span> <span class="mf">5.29e-11</span> <span class="c1">#m; radius of the Bohr atom</span>
+<span class="n">sigma_H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a_o</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">ell_H</span> <span class="o">=</span>  <span class="n">mean_free_path</span><span class="p">(</span><span class="n">n_H</span><span class="p">,</span><span class="n">sigma_H</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean free path between collisions in the Sun&#39;s photosphere is </span><span class="si">%1.2e</span><span class="s2"> m.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ell_H</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean free path between collisions in the Sun&#39;s photosphere is 2.26e-04 m.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The temperature scale height in the Sun’s photosphere is 677 km and the mean free path for collisions is <span class="math notranslate nohighlight">\(2.26 \times 10^{-4}\)</span> m, where <span class="math notranslate nohighlight">\(H_T/\ell \approx 3 \times 10^9\)</span>.  The criterion for LTE is satisfied for the hydrogen atoms of the photosphere (not the photons) and the gas particles see an essentially constant kinetic temperature between collisions.  In addition, they are effectively confined within a limited volume.</p>
 </div>
 <div class="section" id="the-definition-of-opacity">
 <h3><span class="section-number">5.2.2. </span>The Definition of Opacity<a class="headerlink" href="#the-definition-of-opacity" title="Permalink to this headline">¶</a></h3>
