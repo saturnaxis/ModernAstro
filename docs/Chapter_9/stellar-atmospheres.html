@@ -342,17 +342,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#continuum-opacity-and-the-rm-h-ion">
-     5.2.5. Continuum Opacity and the
-     <span class="math notranslate nohighlight">
-      \({\rm H^-}\)
-     </span>
-     Ion
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-rosseland-mean-opacity">
-     5.2.6. The Rosseland Mean Opacity
+     5.2.5. The Rosseland Mean Opacity
     </a>
    </li>
   </ul>
@@ -625,10 +616,48 @@
 </div>
 </div>
 </div>
-<p>The temperature scale height in the Sun’s photosphere is 677 km and the mean free path for collisions is <span class="math notranslate nohighlight">\(2.26 \times 10^{-4}\)</span> m, where <span class="math notranslate nohighlight">\(H_T/\ell \approx 3 \times 10^9\)</span>.  The criterion for LTE is satisfied for the hydrogen atoms of the photosphere (not the photons) and the gas particles see an essentially constant kinetic temperature between collisions.  In addition, they are effectively confined within a limited volume.</p>
+<p>The temperature scale height in the Sun’s photosphere is 677 km and the mean free path for collisions is <span class="math notranslate nohighlight">\(2.26 \times 10^{-4}\)</span> m, where <span class="math notranslate nohighlight">\(H_T/\ell \approx 3 \times 10^9\)</span>.  The criteria for LTE is satisfied for the hydrogen atoms of the photosphere (not the photons) and the gas particles see an essentially constant kinetic temperature between collisions.  In addition, they are effectively confined within a limited volume.</p>
 </div>
 <div class="section" id="the-definition-of-opacity">
 <h3><span class="section-number">5.2.2. </span>The Definition of Opacity<a class="headerlink" href="#the-definition-of-opacity" title="Permalink to this headline">¶</a></h3>
+<p>Any process that removes photons from a beam of light is collectively termed <strong>absorption</strong>, which includes the <em>scattering</em> of photons (i.e., Compton scattering), the absorption of photons by atomic electrons making upward transitions, and molecular energy-level transitions.  The change in intensity <span class="math notranslate nohighlight">\(dI_\lambda\)</span> of a photon as it travels through a gas is proportional to its intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span>, the distance traveled <span class="math notranslate nohighlight">\(ds\)</span>, and the density of the gas <span class="math notranslate nohighlight">\(\rho\)</span> through the relation,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_\lambda}{I_\lambda} = -\kappa_\lambda \rho  ds. \tag{11}\]</div>
+<p>The quantity <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> is called the wavelength-dependent <strong>absorption coefficient</strong> (or <strong>opacity</strong>).  The intensity decreases (due to the minus sign) along the path <span class="math notranslate nohighlight">\(s\)</span> traveled by the photon.  The opacity has units of area/mass (<span class="math notranslate nohighlight">\({\rm m^2/kg}\)</span>) because it is cross section of stellar gas that is removing the photons from the beam of light.  In general, the opacity of a gas is a function of its composition, density, and temperature.</p>
+<p>Consider a monochromatic beam of light with initial intensity <span class="math notranslate nohighlight">\(I_o\)</span> and wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> that travels a distance <span class="math notranslate nohighlight">\(s\)</span>.  The final intensity <span class="math notranslate nohighlight">\(I_f\)</span> can be found by integrating both sides of Eqn 11 by</p>
+<div class="math notranslate nohighlight">
+\[ \int_{I_o}^{I_\lambda} \frac{dI}{I} = -\kappa \rho \int_0^s ds,\]</div>
+<p>which has the solution,</p>
+<div class="math notranslate nohighlight">
+\[ \ln{\frac{I_f}{I_o}} = \kappa \rho s, \]</div>
+<p>and is simplified by exponentiating both sides (and dropping the subscript <span class="math notranslate nohighlight">\(f\)</span>) to get</p>
+<div class="math notranslate nohighlight">
+\[ I = I_o e^{-\kappa \rho s}, \tag{12} \]</div>
+<p>which shows that the intensity exponentially decays as the light travels a distance <span class="math notranslate nohighlight">\(s\)</span> into the medium described by the absorption coefficient <span class="math notranslate nohighlight">\(\kappa\)</span> and density <span class="math notranslate nohighlight">\(\rho\)</span>.  There is a characteristic length <span class="math notranslate nohighlight">\(\ell = (\kappa \rho)^{-1}\)</span> by which the intensity declines.</p>
+<ul class="simple">
+<li><p><strong>What is the characteristic length <span class="math notranslate nohighlight">\(\ell\)</span> for a photon near the peak wavelength (500 nm) in the Solar photosphere?</strong> (Use <span class="math notranslate nohighlight">\(\kappa_{500} = 0.03\;{\rm m^2/kg}\)</span>. )</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">opacity_length</span><span class="p">(</span><span class="n">kappa</span><span class="p">,</span><span class="n">rho</span><span class="p">):</span>
+    <span class="c1">#kappa = absorption coefficient at a given wavelength; m^2/kg</span>
+    <span class="c1">#rho = density of the gas; kg/m^3</span>
+    <span class="k">return</span> <span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="n">kappa</span><span class="o">*</span><span class="n">rho</span><span class="p">)</span>
+
+<span class="n">kappa_500</span> <span class="o">=</span> <span class="mf">0.03</span>
+<span class="n">rho_photo_Sun</span> <span class="o">=</span> <span class="mf">2.1e-4</span>
+<span class="n">ell_500</span> <span class="o">=</span> <span class="n">opacity_length</span><span class="p">(</span><span class="n">kappa_500</span><span class="p">,</span><span class="n">rho_photo_Sun</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span> <span class="c1">#convert to km</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The characteristic distance traveled by a photon in the Solar photosphere is </span><span class="si">%3d</span><span class="s2"> km.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ell_500</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The characteristic distance traveled by a photon in the Solar photosphere is 160 km.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The temperature scale height is 677 km, where for photons <span class="math notranslate nohighlight">\(H_T/\ell \approx 4.2\)</span> and the criteria for local thermodynamic equilibrium is not satisfied.  The photospheric photons do <em>not</em> see a constant temperature and LTE is not strictly valid in the photosphere.  Although LTE is a commonly invoked assumption in stellar atmospheres, it <em>must</em> be used with caution.</p>
 </div>
 <div class="section" id="optical-depth">
 <h3><span class="section-number">5.2.3. </span>Optical Depth<a class="headerlink" href="#optical-depth" title="Permalink to this headline">¶</a></h3>
@@ -636,11 +665,8 @@
 <div class="section" id="general-sources-of-opacity">
 <h3><span class="section-number">5.2.4. </span>General Sources of Opacity<a class="headerlink" href="#general-sources-of-opacity" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="continuum-opacity-and-the-rm-h-ion">
-<h3><span class="section-number">5.2.5. </span>Continuum Opacity and the <span class="math notranslate nohighlight">\({\rm H^-}\)</span> Ion<a class="headerlink" href="#continuum-opacity-and-the-rm-h-ion" title="Permalink to this headline">¶</a></h3>
-</div>
 <div class="section" id="the-rosseland-mean-opacity">
-<h3><span class="section-number">5.2.6. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.5. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="radiative-transfer">
