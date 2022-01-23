@@ -661,9 +661,92 @@
 </div>
 <div class="section" id="optical-depth">
 <h3><span class="section-number">5.2.3. </span>Optical Depth<a class="headerlink" href="#optical-depth" title="Permalink to this headline">¶</a></h3>
+<p>Scatter photons have a mean free path (given by Eqn. 10), where <span class="math notranslate nohighlight">\(\kappa_\lambda \rho\)</span> and <span class="math notranslate nohighlight">\(n\sigma_\lambda\)</span> can be though of as the <em>fraction</em> of photons scatter per meter of distance travelled.  Note that the mean free path is dependent on the photon wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  However it is convenient to define an <strong>optical depth</strong> <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[ d\tau_\lambda = -\kappa_\lambda \rho ds, \tag{13} \]</div>
+<p>where <span class="math notranslate nohighlight">\(s\)</span> is the distance measured along the photon’s direction of motion (i.e., looking back along the path traveled by the photon).  The difference in optical depth <span class="math notranslate nohighlight">\(\Delta \tau_\lambda\)</span> can be determined as the difference between the final (<span class="math notranslate nohighlight">\(\tau_{\lambda,f}\)</span>) and initial (<span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span>) optical depths, or the integral along the photon’s path as</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \tau_\lambda = \tau_{\lambda,f} - \tau_{\lambda,o} = -\int_0^s \kappa_\lambda \rho ds. \tag{14} \]</div>
+<p>As the light approaches the observer, it travels from a deeper layer (greater <span class="math notranslate nohighlight">\(\tau_\lambda\)</span>) to shallow layer (lesser <span class="math notranslate nohighlight">\(\tau_\lambda\)</span>) and <span class="math notranslate nohighlight">\(\Delta \tau_\lambda &lt; 0\)</span>.  The outermost layers of a star have <span class="math notranslate nohighlight">\(\tau_\lambda = 0\)</span> for all wavelengths since the light is leaving the star’s atmosphere.  In this case, Eqn. 16 becomes</p>
+<div class="math notranslate nohighlight">
+\[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds \tag{15}  \]</div>
+<p>and the subscript <span class="math notranslate nohighlight">\(o\)</span> is dropped.</p>
+<p>The optical depth can be related to the intensity by combining Eqn. 12 with Eqn. 15, where there is a decline in the intensity given by</p>
+<div class="math notranslate nohighlight">
+\[ I_\lambda = I_{\lambda,o} e^{-\tau_\lambda}.\]</div>
+<p>If the initial optical depth is equal to unity (<span class="math notranslate nohighlight">\(\tau_{\lambda,o} = 1), then the intensity will decline by a factor of \)</span>1/e$ before escaping into the vacuum of space.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The optical depth can be described as the number of mean free paths the photon travels starting from the original position to the surface.</p>
+</div>
+<p>The maximum optical depth is typically <span class="math notranslate nohighlight">\(\tau_\lambda \approx 1\)</span>, where deeper layers are completely obscured.  In some situations, setting <span class="math notranslate nohighlight">\(\tau_\lambda = 0\)</span> occurs inside the star instead of at the surface.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\tau_\lambda \gg 1\)</span>, then the gas is <em>optically thick</em>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\tau_\lambda \ll 1\)</span>, then the gas is <em>optically thin</em>.</p></li>
+</ul>
+<p>The optical depth varies with wavelength, where a gas could be optically thick for a specific wavelength but optically thin for a different wavelength.  For example, the Earth’s atmosphere is optically thick for X-rays, but optically thin for visible light.</p>
+<ul class="simple">
+<li><p><strong>How can the opacity of the Earth’s atmosphere be corrected for?</strong></p></li>
+</ul>
+<p>The intensity of the light before entering the atmosphere is <span class="math notranslate nohighlight">\(I_{\lambda,o} and \)</span>I_\lambda<span class="math notranslate nohighlight">\( once it reaches the telescope.  The optical depth is measured backwards along the path traveled by the light and thus, \)</span>\tau_\lambda = 0<span class="math notranslate nohighlight">\( at the telescope.  The distance traveled is the height \)</span>h<span class="math notranslate nohighlight">\( of the atmosphere.  The light enters the atmosphere at some angle \)</span>\theta<span class="math notranslate nohighlight">\(, where \)</span>ds = -dz/\cos \theta = -\sec \theta dz$.  Using Eqn. 15 we get</p>
+<div class="math notranslate nohighlight">
+\[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds = \sec \theta \int_0^h \kappa_\lambda \rho dz = \tau_{\lambda,o} \sec \theta, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> refers to the optical depth of a vertically traveling photon ($\theta = 0).  The intensity of the light at the telescope is</p>
+<div class="math notranslate nohighlight">
+\[ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.  \tag{16} \]</div>
+<p>For a single observation, both <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> are unknown.  Over a night of observation, the Earth rotates on its axis and several measurements of the received intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> as a function of <span class="math notranslate nohighlight">\(\sec \theta\)</span> can be made.  Then the best-fitting <em>slope</em> is <span class="math notranslate nohighlight">\(-\tau_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> can be determined through extrapolation</p>
+<div class="math notranslate nohighlight">
+\[ \lim_{\sec \theta \rightarrow 0} \ln I_\lambda = \ln I_{\lambda,o}. \]</div>
+<p>Measurements of the specific intensity or radiative flux can be corrected for absorption by Earth’s atmosphere.</p>
 </div>
 <div class="section" id="general-sources-of-opacity">
 <h3><span class="section-number">5.2.4. </span>General Sources of Opacity<a class="headerlink" href="#general-sources-of-opacity" title="Permalink to this headline">¶</a></h3>
+<p>The opacity of a material depends on the chemical composition and how photons interact with the particles (atoms, ions, and free electrons) within the material.  If a photon passes within <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span> (i.e., the particles’s cross-sectional area) of the particle, then the phone can be either: scattered or absorbed.</p>
+<ul class="simple">
+<li><p>In an absorption process, the photon ceases to exist and its energy is incorporated into the thermal energy of the gas.</p></li>
+<li><p>In a scattering process, the photon just continues along in a different direction.</p></li>
+</ul>
+<p>Both absorption and scattering can remove photons (of a specific wavelength) like a sieve and contribute to the opacity <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> of the stellar material.  If the opacity varies slowly with wavelength, it contributes to the star’s continuous spectrum (or <em>continuum</em>) and dark absorption lines are the result of a <em>rapid</em> variation in the opacity.</p>
+<p>There are four primary sources of opacity available for removing photons from our observations of a star.  These sources involve the quantum state of an electron, where the terms <em>bound</em> and <em>free</em> are used to describe the initial and final states of the electron within an atom.</p>
+<p>1. <strong>Bound-bound transitions</strong> are electron transitions from one orbital to another (i.e., excitation and de-excitation).  The bound-bound opacity <span class="math notranslate nohighlight">\(\kappa_{\lambda,bb}\)</span> accounts for electrons that remove photons through absorption and the re-emission of the photons are scattered into a different direction than the line-of-sight.  This opacity is small except at wavelengths capable of absorption and hence is responsible for absorption lines in stellar spectra.</p>
+<p>The de-excitation may also come from collisions with neighboring particles.  An important by-product is the degrading of the average energy of the photons.  For example, if two photons are emitted (from a cascade process) for every photon absorbed, then the average energy is cut in half.  There is not simple equation for bound-bound transitions.</p>
+<p>2. <strong>Bound-free absorption</strong>, or <em>photoionization</em>, occurs when an incoming photon has enough energy to free, or ionize, an atom.  The free electron can have any energy when removed from the atom, but the incoming photon must have a wavelength <span class="math notranslate nohighlight">\(\lambda \leq hc/\chi_n\)</span>, where <span class="math notranslate nohighlight">\(\chi_n\)</span> is the ionization energy of the <span class="math notranslate nohighlight">\(n{\rm th}\)</span> orbital.  The bound-free opacity <span class="math notranslate nohighlight">\(\kappa_{\lambda,bf}\)</span> contributes to the continuum opacity.</p>
+<p>The photoionization cross section for the hydrogen atom is</p>
+<div class="math notranslate nohighlight">
+\[ \sigma_{bf} = \frac{1.31 \times 10^{-19}}{n^2} \left(\frac{\lambda}{500\:{\rm nm}}\right)^3 \:{\rm m^2}, \]</div>
+<p>which depends on the quantum state <span class="math notranslate nohighlight">\(n\)</span> and the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  The inverse process of <em>free-bound</em> emission occurs during atomic recombination (free electron recombines with an ion, emitting a photon).  Similar to bound-bound emission, this also reduces the average energy of the photons.</p>
+<p>3. <strong>Free-free absorption</strong> is a scattering process that occurs when the speed of a free electron increases (or decreases) after a nearby ion absorbs (or emits) a photon, respectively.  This process occurs due to conservation of both energy and momentum.  The free-free opacity <span class="math notranslate nohighlight">\(\kappa_{\lambda,ff}\)</span> contributes to the continuum opacity.  The process of free-free emission is also known as <a class="reference external" href="https://en.wikipedia.org/wiki/Bremsstrahlung">bremsstrahlung</a>, when means “braking radiation” in German.</p>
+<p>4. <strong>Electron scattering</strong> is as you would expect where a photon is scatter (<em>not absorbed</em>) by a free electron through the process of <a class="reference external" href="https://en.wikipedia.org/wiki/Thomson_scattering">Thomas scattering</a>.  The electron “oscillates” (like a buoy) in the wake of a photon.  Because the electron’s cross section is tiny, it is a poor target for an incident photon.  The cross section for Thomson scattering <span class="math notranslate nohighlight">\(\sigma_T\)</span> has the same value (independent of wavelength),</p>
+<div class="math notranslate nohighlight">
+\[ \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}.  \tag{17} \]</div>
+<p>This is ~2 billion times smaller than the hydrogen cross section for photoionization from bound-free absorption, <span class="math notranslate nohighlight">\(\sigma_{bf}\)</span>.  Electron scattering is most effective when the electron density is very high (i.e., high temperatures for ionization) and other sources of opacity are eliminated due to the absence of necessary bound electrons.  For high temperatures, the electron scattering opacity <span class="math notranslate nohighlight">\(\kappa_{es}\)</span> dominates the continuum opacity.</p>
+<p>A photon can also be scattered by loosely bound electrons.  <em>Compton scattering</em> occurs when the photon’s wavelength is much smaller than the atom or <em>Rayleigh scattering</em> if the wavelength is much larger.  Compton scatter is usually lumped together with Thomson scattering due to the small change in wavelength of the scattered photon.  The cross section for Rayleigh scattering is smaller than the the Thomson cross section and can be neglected in most stellar atmospheres.  However, it is important in the UV for supergiant stars with their extended envelopes and in cool main-sequence stars.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Rayleigh scattering is important in planetary atmospheres and is responsible for Earth’s blue sky.</p>
+</div>
+<ul class="simple">
+<li><p><strong>What is the maximum wavelength photon that can ionize a hydrogen atom in the first excited state?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bound_free_H</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1">#n = the energy state of hydrogen (1 = ground, 2 = first excited, etc.)</span>
+    <span class="n">chi_n</span> <span class="o">=</span> <span class="mf">13.6</span><span class="o">/</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#eV; ionization energy</span>
+    <span class="k">return</span> <span class="n">hc_eV</span><span class="o">/</span><span class="n">chi_n</span> <span class="c1">#return max wavelength in nm</span>
+
+<span class="n">hc_eV</span> <span class="o">=</span> <span class="mf">1239.84198</span> <span class="c1">#eV*nm; https://en.wikipedia.org/wiki/Planck_constant</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The maximum wavelength photon that can ionize a H atom (first excited state) is </span><span class="si">%3.1f</span><span class="s2"> nm.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">bound_free_H</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The maximum wavelength photon that can ionize a H atom (first excited state) is 364.7 nm.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The opacity of stellar material suddenly increases at wavelengths <span class="math notranslate nohighlight">\(\lambda \leq 364.7\:{\rm nm}\)</span> and the measured radiative flux of the star suddenly decreases.  This abrupt drop in the continuous spectrum is the <strong>Balmer jump</strong> and is evident in the Sun’s spectrum.  The size of the Balmer jump in hot stars depends on the fraction of hydrogen atoms in the first excited state.  The Balmer jump appears in the middle of the <em>U</em> band in the <em>UBV</em> system, which results in a decrease in the amount of light received in the bandwidth of the <em>U</em> filter and increase the measured values for both the <em>U</em> magnitude and color index (<span class="math notranslate nohighlight">\(U-B\)</span>).</p>
 </div>
 <div class="section" id="the-rosseland-mean-opacity">
 <h3><span class="section-number">5.2.5. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this headline">¶</a></h3>
