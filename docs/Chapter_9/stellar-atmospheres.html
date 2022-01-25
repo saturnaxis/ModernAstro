@@ -788,11 +788,33 @@
 </div>
 <div class="section" id="radiative-transfer">
 <h2><span class="section-number">5.3. </span>Radiative Transfer<a class="headerlink" href="#radiative-transfer" title="Permalink to this headline">¶</a></h2>
+<p>This section describes stellar atmospheres that are in equilibrium or a steady-state.  This means that the mechanisms involved in absorbing and emitting energy must be in balance throughout the star so that no change in total energy occurs within any layer of the interior.  There are stars where this is not the case (e.g., pulsating stars) and such stars periodically absorb or “dam up” the outward flow of energy to drive stellar oscillations.</p>
 <div class="section" id="photon-emission-processes">
 <h3><span class="section-number">5.3.1. </span>Photon Emission Processes<a class="headerlink" href="#photon-emission-processes" title="Permalink to this headline">¶</a></h3>
+<p><strong>Emission</strong> is defined as any process that adds photons to a beam of light, which includes the scattering of photons into the beam and the true emission of photons through electron transitions.  Opacity described processes (bound-bound and free-bound) that absorb photons, where there is an inverse process through emission (e.g., bound-bound emission, etc.).  The processes of absorption and emission hinder the flow of photons through a star and there is not a direct flow of photons streaming towards the surface.  Instead, individual photons travel only temporarily within the beam as they are repeatedly scattered in random directions (i.e., going on side-quests) while on their journey.</p>
 </div>
 <div class="section" id="the-random-walk">
 <h3><span class="section-number">5.3.2. </span>The Random Walk<a class="headerlink" href="#the-random-walk" title="Permalink to this headline">¶</a></h3>
+<p>As the photons move through the stellar material, they follow a <strong>random walk</strong> (i.e., a haphazard path).  Between each atomic encounter, the photon travels a path <span class="math notranslate nohighlight">\({\bf \ell}\)</span> (the mean free path), which can be summed over a large number <span class="math notranslate nohighlight">\(N\)</span> directed steps to produce a net vector displacement <strong>d</strong>:</p>
+<div class="math notranslate nohighlight">
+\[ {\bf d} = {\bf \ell}_1 + {\bf \ell}_2 + \cdots + {\bf \ell}_N = \sum_{i=1}^N {\bf \ell}_i. \]</div>
+<p>The vector dot product of <strong>d</strong> determines the scalar contribution of each path by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{\bf d}\cdot{\bf d} &amp;={\bf \ell}_1 \cdot {\bf \ell}_1 + {\bf \ell}_1 \cdot {\bf \ell}_2 + \cdots {\bf \ell}_1 \cdot {\bf \ell}_N \\
+&amp;\quad+ {\bf \ell}_2 \cdot {\bf \ell}_1 +{\bf \ell}_2 \cdot {\bf \ell}_2 + \cdots + {\bf \ell}_2 \cdot {\bf \ell}_N \\
+&amp;\quad+ \cdots +{\bf \ell}_N \cdot {\bf \ell}_1 +{\bf \ell}_N \cdot {\bf \ell}_1 + \cdots + {\bf \ell}_N \cdot {\bf \ell}_N \\
+&amp;= \sum_{i=1}^N \sum_{j=1}^N {\bf \ell}_i \cdot {\bf \ell}_j.
+\end{align*}\end{split}\]</div>
+<p>Using the magnitude definition of a vector dot product (<span class="math notranslate nohighlight">\(A\cdot B = |A||B|\cos\theta\)</span>) and each vector has the same length (<span class="math notranslate nohighlight">\(|{\bf \ell_i}|^2 = |{\bf \ell_j}|^2 = \ell^2\)</span>), then we have <span class="math notranslate nohighlight">\(N\)</span> diagonal terms (<span class="math notranslate nohighlight">\(i=j\)</span>) and <span class="math notranslate nohighlight">\(N(N-1)\)</span> off-diagonal (<span class="math notranslate nohighlight">\(i\neq j\)</span>) terms.  Along the diagonal, <span class="math notranslate nohighlight">\(\cos\theta_{ii} = \cos\theta_{jj} = 1\)</span>, so that we find</p>
+<div class="math notranslate nohighlight">
+\[ d^2 = {\rm sum\:of\:diagonal\:terms} +  {\rm sum\:of\:off-diagonal\:terms}\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ d^2 = N\ell^2 + \ell^2  \sum_{i=1}^N \sum_{j=1}^N \cos \theta_{ij},\quad {\rm for\:}i\neq j. \]</div>
+<p>For a large number of randomly directed steps, the sum of all the cosine terms approaches zero.  For a random walk, the displacement <span class="math notranslate nohighlight">\(d\)</span> scales with the size of each step <span class="math notranslate nohighlight">\(\ell\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[ d = \ell \sqrt{N}. \tag{26} \]</div>
 </div>
 <div class="section" id="limb-darkening">
 <h3><span class="section-number">5.3.3. </span>Limb Darkening<a class="headerlink" href="#limb-darkening" title="Permalink to this headline">¶</a></h3>
