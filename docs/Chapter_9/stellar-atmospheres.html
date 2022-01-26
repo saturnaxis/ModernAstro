@@ -346,6 +346,14 @@
      5.2.5. The Rosseland Mean Opacity
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     5.2.6.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -474,6 +482,10 @@
 <div class="math notranslate nohighlight">
 \[ I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda\:dt\:dA \cos\theta\:d\Omega}, \tag{1} \]</div>
 <p>which carries the units of energy per time per Area per steradian <em>sr</em> (<a class="reference external" href="https://en.wikipedia.org/wiki/Steradian">solid angle)</a> or more simply, energy per everything.</p>
+<div align="center">
+<p><img alt="Figure 1" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_1.jpg?raw=true?" /><br>
+<strong>Figure 1</strong>: Schematic for the intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> that passes through a surface. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There is a <span class="math notranslate nohighlight">\(d\lambda\)</span> factor in the numerator and denominator, which is a placeholder for the alternate definition of specific intensity in terms of frequency <span class="math notranslate nohighlight">\(I_\nu\)</span>.  Recall from the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#the-planck-function-and-astrophysics">Planck function</a> using <span class="math notranslate nohighlight">\(d\nu = -\frac{c}{\lambda^2}d\lambda\)</span> as a conversion factor.</p>
@@ -495,6 +507,10 @@
 <p>using Eqn. 2 and the substitution of <span class="math notranslate nohighlight">\(dt\)</span>.  The quantity <span class="math notranslate nohighlight">\(dA dL\)</span> is the volume of the cylinder, where the <strong>specific energy density</strong> (<span class="math notranslate nohighlight">\(u_\lambda d\lambda\)</span>) is found by normalizing the energy <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> by the volume of the cylinder, integrating over all the solid angles, and using Eqn. 3:</p>
 <div class="math notranslate nohighlight">
 \[ u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_\lambda d\lambda\:\sin\theta d\theta\:d\phi = \frac{4\pi}{c} \langle I_\lambda \rangle d\lambda. \tag{4}\]</div>
+<div align="center">
+<p><img alt="Figure 2" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_2.jpg?raw=true?" /><br>
+<strong>Figure 2</strong>: Example of a cylindrical “trap” for measuring the energy density <span class="math notranslate nohighlight">\(u_\lambda\)</span>. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>For blackbody radiation,</p>
 <div class="math notranslate nohighlight">
 \[ u_\lambda d\lambda = \frac{4\pi}{c}B_\lambda d\lambda = \frac{8\pi hc \lambda^{-5}}{e^{hc/(\lambda kT)}-1} d\lambda. \tag{5}\]</div>
@@ -512,6 +528,10 @@
 <div class="math notranslate nohighlight">
 \[ F_\lambda d\lambda = \int I_\lambda d\lambda\:\cos\theta\:d\Omega = \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi I_\lambda d\lambda\:\cos\theta\sin\theta d\theta\:d\phi. \tag{7} \]</div>
 <p>The specific radiative flux considers only the <em>z</em>-component (i.e., <span class="math notranslate nohighlight">\(\cos\theta\)</span>) of a light ray, where oppositely directed rays cancel.  Both the radiative flux and the specific intensity (Eqn. 2) describe the light received from a celestial source.  When a source is resolved by the telescope as defined by Rayleigh’s criterion (<span class="math notranslate nohighlight">\(\theta &gt; \theta_{\rm min}\)</span>), the <em>specific intensity</em> is measured.  For example, the measured value of the specific intensity (at 501 nm) at the center of the Sun’s disk is <span class="math notranslate nohighlight">\(I_{501} = 4.03 \times 10^{13}\;{\rm W/m^{3}/sr}\)</span>.</p>
+<div align="center">
+<p><img alt="Figure 3" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_3.jpg?raw=true?" /><br>
+<strong>Figure 3</strong>: The measurement of (a) the specific intensity for a resolved source and (b) the radiative flux for an unresolved source.  (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>For an unresolved source, the <em>radiative flux</em> is measured because the energy received from the entire source will disperse through the diffraction pattern (i.e., Airy disk and rings).  Because the light arriving at the detector leaves the source at all angles, the detector is effectively integrating the specific intensity over all directions.  As the distance to the source increases, the amount of energy falling within the Airy disk decreases as <span class="math notranslate nohighlight">\(1/r^2\)</span>, as expected.</p>
 </div>
 <div class="section" id="radiation-pressure">
@@ -522,6 +542,10 @@
 <p>using <span class="math notranslate nohighlight">\(E_\lambda\)</span> from Eqn. 2.  Recall that <span class="math notranslate nohighlight">\(F = dp/dt\)</span> and <span class="math notranslate nohighlight">\(P = F/A\)</span> so that the radiation pressure <span class="math notranslate nohighlight">\(P_{\rm rad,\lambda}d\lambda\)</span> can be written as</p>
 <div class="math notranslate nohighlight">
 \[ P_{\rm rad,\lambda} d\lambda = \frac{2}{c} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^{\pi/2} I_\lambda d\lambda\:\cos^2\theta\sin\theta d\theta\:d\phi. \quad {\rm (reflection)} \]</div>
+<div align="center">
+<p><img alt="Figure 4" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_4.jpg?raw=true?" /><br>
+<strong>Figure 4</strong>: Radiation pressure produced by reflected photons from the solid angle <span class="math notranslate nohighlight">\(d\Omega\)</span>. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>Instead of a reflecting wall, replace it with a mathematical surface <span class="math notranslate nohighlight">\(dA\)</span> where the incident photons will now keep on going through and be streaming from the other side.  For an <em>isotropic radiation field</em>, the leading factor of 2 is removed because there is no longer a change in momentum upon reflection.  The radiation pressure becomes</p>
 <div class="math notranslate nohighlight">
 \[ P_{\rm rad,\lambda} d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi I_\lambda d\lambda\:\cos^2\theta\sin\theta d\theta\:d\phi = \frac{4\pi}{3c}I_\lambda d\lambda, \quad {\rm (transmission)} \tag{8} \]</div>
@@ -555,6 +579,10 @@
 <li><p>The <strong>kinetic temperature</strong> is contained in the Maxwell-Boltzmann distribution, which describes the velocity distribution of gas particles.</p></li>
 <li><p>The <strong>color temperature</strong> is obtained by fitting the Planck function to the shape of a star’s continuous spectrum.</p></li>
 </ul>
+<div align="center">
+<p><img alt="Figure 5" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_5.jpg?raw=true?" /><br>
+<strong>Figure 5</strong>: The spectrum of the Sun in 2 nm wavelength intervals. The dashed curve represents an ideal blackbody with the Sun’s effective temperature.  (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>; Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The effective temperature is the only measure that depends strictly on the location within the star, while the remaining temperatures vary according to the conditions of the gas that can be described by the simple case of a gas confined within an “ideal” box (i.e., ideal gas law).  Due to the boundary condition of the box, the energy of the gas particles and blackbody radiation will come into equilibrium and can be described by a single well-defined temperature.  As a result, there is no net flow of energy through the box, or between the matter and radiation.  The number of photons absorbed per unit time is equal to the number of photons emitted, which is called <a class="reference external" href="https://en.wikipedia.org/wiki/Thermodynamic_equilibrium">thermodynamic equilibrium</a>.</p>
 <p>Such a case cannot be true everywhere in a star (i.e., stars shine so some photons escape) and a star cannot be in perfect thermodynamic equilibrium.  A net outward flow of energy occurs through the star and the temperature varies with the stellar radius.  The ideal box approximation can be used: <em>if the distance over which the temperature changes significantly is large compared with the distances traveled by the particles and photons between collisions</em> (i.e., the ideal box is small enough).  The distances traveled by particles are called their <em>mean free paths</em>.  When the above condition is met, the particles and photons cannot escape the local environment and the temperature of the box is nearly constant (i.e., <strong>local thermodynamic equilibrium</strong> <em>LTE</em>).</p>
 <p>The photosphere is the surface layer of the Sun’s atmosphere where the photons can escape into space.  The temperature in one region varies from 5580 K to 5790 K over a distance of 25.0 km.  The <em>temperature scale height</em> <span class="math notranslate nohighlight">\(H_T\)</span> is the characteristic distance over which the temperature varies: <span class="math notranslate nohighlight">\(H_T \equiv T_{\rm avg}/|dT/dr|\)</span>.</p>
@@ -589,6 +617,10 @@
 <div class="math notranslate nohighlight">
 \[ n = \frac{\rho}{m_H} = 1.27 \times 10^{23}\:{\rm m^{-3}} \]</div>
 <p>with the mass of hydrogen <span class="math notranslate nohighlight">\(m_H = 1.67 \times 10^{-27}\:{\rm kg}\)</span>. The collision probability for two atoms is higher if their centers pass within twice the atomic radius (i.e., <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_5/interaction-of-light-and-matter.html#bohr-s-semiclassical-atom">Bohr radius</a>) or <span class="math notranslate nohighlight">\(2a_o\)</span>, where <span class="math notranslate nohighlight">\(a_o \approx 5.29 \times 10^{-11}\:{\rm m}\)</span>. This region of higher collision probability defines an area or <strong>cross section</strong> <span class="math notranslate nohighlight">\(\sigma \equiv \pi(2a_o)^2\)</span>.</p>
+<div align="center">
+<p><img alt="Figure 6" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_6.jpg?raw=true?" /><br>
+<strong>Figure 6</strong>: Mean free path <span class="math notranslate nohighlight">\(\ell\)</span> of a hydrogen atom. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>Consider a single atom of radius <span class="math notranslate nohighlight">\(2a_o\)</span> with a cross section of <span class="math notranslate nohighlight">\(4\pi a_o^2\)</span> moving with a speed <span class="math notranslate nohighlight">\(v\)</span> over a time <span class="math notranslate nohighlight">\(t\)</span>.  The atom has moved a distance <span class="math notranslate nohighlight">\(vt\)</span> and sweeps out a cylindrical volume <span class="math notranslate nohighlight">\(V=\sigma vt\)</span>.  Within the volume, there are <span class="math notranslate nohighlight">\(n\sigma vt\)</span> point atoms that collide with the moving atom.  The <strong>mean free path</strong> <span class="math notranslate nohighlight">\(\ell\)</span> between collisions is</p>
 <div class="math notranslate nohighlight">
 \[ \ell = \frac{\rm distance\:traveled}{\rm number\:of\:atoms} = \frac{vt}{n\sigma vt} = \frac{1}{n\sigma}. \tag{10} \]</div>
@@ -671,6 +703,10 @@
 <div class="math notranslate nohighlight">
 \[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds \tag{15}  \]</div>
 <p>and the subscript <span class="math notranslate nohighlight">\(o\)</span> is dropped.</p>
+<div align="center">
+<p><img alt="Figure 7" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_7.jpg?raw=true?" /><br>
+<strong>Figure 7</strong>: Optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> measured along a ray’s path starting from outside the material (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The optical depth can be related to the intensity by combining Eqn. 12 with Eqn. 15, where there is a decline in the intensity given by</p>
 <div class="math notranslate nohighlight">
 \[ I_\lambda = I_{\lambda,o} e^{-\tau_\lambda}.\]</div>
@@ -685,6 +721,10 @@
 <li><p>If <span class="math notranslate nohighlight">\(\tau_\lambda \ll 1\)</span>, then the gas is <em>optically thin</em>.</p></li>
 </ul>
 <p>The optical depth varies with wavelength, where a gas could be optically thick for a specific wavelength but optically thin for a different wavelength.  For example, the Earth’s atmosphere is optically thick for X-rays, but optically thin for visible light.</p>
+<div align="center">
+<p><img alt="Figure 8" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_8.jpg?raw=true?" /><br>
+<strong>Figure 8</strong>: (a) A light ray entering Earth’s atmosphere at an angle <span class="math notranslate nohighlight">\(\theta\)</span> (b) Example of the determination of <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> from a fit of <span class="math notranslate nohighlight">\(I_\lambda\)</span> vs. <span class="math notranslate nohighlight">\(\sec \theta\)</span>. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <ul class="simple">
 <li><p><strong>How can the opacity of the Earth’s atmosphere be corrected for?</strong></p></li>
 </ul>
@@ -716,6 +756,10 @@
 \[ \sigma_{bf} = \frac{1.31 \times 10^{-19}}{n^2} \left(\frac{\lambda}{500\:{\rm nm}}\right)^3 \:{\rm m^2}, \]</div>
 <p>which depends on the quantum state <span class="math notranslate nohighlight">\(n\)</span> and the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  The inverse process of <em>free-bound</em> emission occurs during atomic recombination (free electron recombines with an ion, emitting a photon).  Similar to bound-bound emission, this also reduces the average energy of the photons.</p>
 <p>3. <strong>Free-free absorption</strong> is a scattering process that occurs when the speed of a free electron increases (or decreases) after a nearby ion absorbs (or emits) a photon, respectively.  This process occurs due to conservation of both energy and momentum.  The free-free opacity <span class="math notranslate nohighlight">\(\kappa_{\lambda,ff}\)</span> contributes to the continuum opacity.  The process of free-free emission is also known as <a class="reference external" href="https://en.wikipedia.org/wiki/Bremsstrahlung">bremsstrahlung</a>, when means “braking radiation” in German.</p>
+<div align="center">
+<p><img alt="Figure 9" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_9.jpg?raw=true?" /><br>
+<strong>Figure 9</strong>: Free-free absorption when an free electron is scattered in the vicinity of an ion due to a photon. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>4. <strong>Electron scattering</strong> is as you would expect where a photon is scatter (<em>not absorbed</em>) by a free electron through the process of <a class="reference external" href="https://en.wikipedia.org/wiki/Thomson_scattering">Thomas scattering</a>.  The electron “oscillates” (like a buoy) in the wake of a photon.  Because the electron’s cross section is tiny, it is a poor target for an incident photon.  The cross section for Thomson scattering <span class="math notranslate nohighlight">\(\sigma_T\)</span> has the same value (independent of wavelength),</p>
 <div class="math notranslate nohighlight">
 \[ \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}.  \tag{17} \]</div>
@@ -768,9 +812,9 @@
 <div class="math notranslate nohighlight">
 \[ X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \tag{21} \]</div>
 <div class="math notranslate nohighlight">
-\[ X \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \tag{22} \]</div>
+\[ Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \tag{22} \]</div>
 <div class="math notranslate nohighlight">
-\[ X \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \tag{23} \]</div>
+\[ Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \tag{23} \]</div>
 <p>such that <span class="math notranslate nohighlight">\(X+Y+Z = 1\)</span>.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Gaunt_factor">Gaunt factors</a> (<span class="math notranslate nohighlight">\(g_{bf}\)</span> and <span class="math notranslate nohighlight">\(g_{ff}\)</span>) in Eqns. 19 and 20 are quantum-mechanical correction terms.  These Gaunt factors are approximately 1 for the visible and UV wavelengths of interest.  The <strong>guillotine factor</strong> <span class="math notranslate nohighlight">\(t\)</span> (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1932MNRAS..92..364E/abstract">Eddington 1932</a>) describes a cutoff to the opacity of an atom after it has been ionized, where typical values lie between 1 and 100.</p>
 <p>Equations 19 and 20 have the functional form <span class="math notranslate nohighlight">\(\bar{\kappa} \propto \kappa_o \rho/T^{3.5}\)</span>, where <span class="math notranslate nohighlight">\(\kappa_o\)</span> combines all the factors that depend on composition. H. A. Kramers derived the first forms (in 1923) using classical physics and the Rosseland mean.  As a result, any opacity having a temperature and density dependence is referred to as <strong>Kramers opacity law</strong>.</p>
 <p>The electron scattering cross section is independent of wavelength and the Rosseland mean is simply</p>
@@ -782,8 +826,28 @@
 <p>The total Rosseland mean opacity <span class="math notranslate nohighlight">\(\bar{\kappa}\)</span> is the average of the sum of the individual contributions or</p>
 <div class="math notranslate nohighlight">
 \[ \bar{\kappa} = \overline{\kappa_{bb}+\kappa_{bf}+\kappa_{ff}+\kappa_{es}+\kappa_{H^-}}. \]</div>
+<div align="center">
+<p><img alt="Figure 10" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_10.jpg?raw=true?" /><br>
+<strong>Figure 10</strong>: Rosseland mean opacity for a star with <span class="math notranslate nohighlight">\(X=0.7\)</span>, <span class="math notranslate nohighlight">\(Y=0.28\)</span>, and <span class="math notranslate nohighlight">\(Z=0.02\)</span>. The curves are labeled by the logarithmic value of the density. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1996ApJ...464..943I/abstract">Iglesias &amp; Rogers (1996)</a>; Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>From detailed computer calculations of the Rosseland mean using quantum physics, we find that the opacity increases linearly with density for a given temperature.  At a contour of constant density, the opacity rises with increasing temperature that reflects the greater number of free electrons produce by ionization of hydrogen and helium.  The hydrogen partial ionization zone and neutral helium ionization occur at about the same temperature (10,000 K).  The decline in opacity (after <span class="math notranslate nohighlight">\(\log_{10} T = 4\)</span> or 10,000 K) roughly follows a Kramers law (<span class="math notranslate nohighlight">\(\bar{\kappa} \propto T^{-3.5}\)</span>) and is primarily due to the bound-free and free-free absorption.</p>
 <p>The He II ion becomes fully ionized at 40,000 K for a wide range of stellar parameters, where there is a slight increase in the number of free electrons available.  Ionization of certain metals (most notably iron) occurs above <span class="math notranslate nohighlight">\(10^5\)</span> K, which produces another increase in the average opacity.  Electron scattering dominates at the highest temperatures when nearly all the stellar material is ionized (i.e., few electrons available for bound-bound or bound-free processes).</p>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">5.2.6. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>3. Take the radius of a nitrogen molecule <span class="math notranslate nohighlight">\({\rm N}_2\)</span> to be 0.1 nm and the density of air to be 1.2 <span class="math notranslate nohighlight">\({\rm kg/m^3}\)</span>.  A nitrogen molecule contains 28 nucleons (protons and neutrons).</p>
+<blockquote>
+<div><p><strong>(a)</strong> Use the root-mean-square speed, <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span>, estimate the mean free path of the nitrogen molecules in your classroom at room temperature (300 K).<br />
+<strong>(b)</strong> What is the average time between collisions?</p>
+</div></blockquote>
+<p>4. Calculate how far you could see through Earth’s atmosphere if it had the opacity of the solar photosphere (<span class="math notranslate nohighlight">\(\kappa_{500}=0.03\:{\rm m^2/kg}\)</span>).</p>
+<p>5. According to one model of the Sun, the central density is <span class="math notranslate nohighlight">\(1.53 \times 10^5 \:{\rm kg/m^3}\)</span> and the Rosseland mean opacity at the center is 0.217 <span class="math notranslate nohighlight">\({\rm m^2/kg}\)</span>.</p>
+<blockquote>
+<div><p><strong>(a)</strong> Calculate the mean free path of a photon at the center of the Sun.<br />
+<strong>(b)</strong> Calculate the average time it would take for the photon to escape from the Sun if this mean free path remained constant for the photon’s journey to the surface.</p>
+</div></blockquote>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="radiative-transfer">
@@ -798,6 +862,9 @@
 <p>As the photons move through the stellar material, they follow a <strong>random walk</strong> (i.e., a haphazard path).  Between each atomic encounter, the photon travels a path <span class="math notranslate nohighlight">\({\bf \ell}\)</span> (the mean free path), which can be summed over a large number <span class="math notranslate nohighlight">\(N\)</span> directed steps to produce a net vector displacement <strong>d</strong>:</p>
 <div class="math notranslate nohighlight">
 \[ {\bf d} = {\bf \ell}_1 + {\bf \ell}_2 + \cdots + {\bf \ell}_N = \sum_{i=1}^N {\bf \ell}_i. \]</div>
+<p><img alt="Figure 11" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_11.jpg?raw=true?" /><br>
+<strong>Figure 11</strong>: Displacement <strong>d</strong> of a random walking photon. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The vector dot product of <strong>d</strong> determines the scalar contribution of each path by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -828,6 +895,9 @@
 <div class="section" id="limb-darkening">
 <h3><span class="section-number">5.3.3. </span>Limb Darkening<a class="headerlink" href="#limb-darkening" title="Permalink to this headline">¶</a></h3>
 <p>An observer looking at the Sun’s disk sees the brightest (hottest) portion near the center due to optical depth (<span class="math notranslate nohighlight">\(\tau_\lambda = 2/3\)</span>), observations near the edge (or <em>limb</em>) of the Sun appear darker (cooler).  The optical depth limits how deep an observer can see into the Sun, where at the center a finite depth reaches the hotter inner layers that glow more brightly.  At the limb, the penetration depth only reaches the uppermost (cooler) layers of the atmosphere and we will see a lower temperature compared to the center of the disk.  This effect is called <strong>limb darkening</strong>, where astronomers have to account for it in transit photometry (e.g., binary stars and <a class="reference external" href="https://www.paulanthonywilson.com/exoplanets/exoplanet-detection-techniques/the-exoplanet-transit-method/">exoplanets</a>).</p>
+<p><img alt="Figure 12" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_12.jpg?raw=true?" /><br>
+<strong>Figure 12</strong>: Schematic of limb darkening, where the brightness of the stellar disk depends on the temperature of the layer that is reached within the stellar atmosphere along the line of sight. The thickness of a typical photosphere is ~0.1% of the stellar radius.  (Carroll &amp; Ostlie (2007))</p>
+</div>
 </div>
 <div class="section" id="the-radiation-pressure-gradient">
 <h3><span class="section-number">5.3.4. </span>The Radiation Pressure Gradient<a class="headerlink" href="#the-radiation-pressure-gradient" title="Permalink to this headline">¶</a></h3>
