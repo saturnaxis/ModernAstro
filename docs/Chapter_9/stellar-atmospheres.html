@@ -991,10 +991,30 @@
 <img alt="../_images/stellar-atmospheres_19_0.png" src="../_images/stellar-atmospheres_19_0.png" />
 </div>
 </div>
-<p>This solution describes the transformation from <span class="math notranslate nohighlight">\(I_\lambda = I_{\lambda,o}\)</span> to <span class="math notranslate nohighlight">\(I_\lambda = S_\lambda\)</span>, where the characteristic distance <span class="math notranslate nohighlight">\(s = 1/(\kappa_\lambda \rho)\)</span> or the mean free path.  Notice that the curve approaches the source function <span class="math notranslate nohighlight">\(S_\lambda\)</span> (red) asymptotically.</p>
+<p>This solution describes the transformation of <span class="math notranslate nohighlight">\(I_\lambda\)</span> from <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> to <span class="math notranslate nohighlight">\(S_\lambda\)</span>, where the characteristic distance <span class="math notranslate nohighlight">\(s = 1/(\kappa_\lambda \rho)\)</span> or the mean free path.  Notice that the curve approaches the source function <span class="math notranslate nohighlight">\(S_\lambda\)</span> (red) asymptotically.</p>
 </div>
 <div class="section" id="the-assumption-of-a-plane-parallel-atmosphere">
 <h3><span class="section-number">5.4.4. </span>The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this headline">¶</a></h3>
+<p>The intensity of light must depend on the path for the outward flow of energy.  The absorption and emission coefficients are the same for light traveling in all directions, but these coefficients depend on the temperature and density in a complicated way.  For astronomers to understand the stellar interior, they must know <em>at what depth</em> a spectral line is formed.  Since we are interested in the depth, let’s rewrite the transfer equation in terms of the optical depth, which is simply</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \tag{33} \]</div>
+<p>Optical depth does not provide a unique geometric depth in the atmosphere and thus, must be replaced with a more meaningful measure of position.  The atmospheres of main-sequence stars are physically thin compared with the size of the star.  The atmosphere’s radius of curvature is much larger than its thickness, where we may consider the atmosphere as a <em>plane-parallel slab</em>.  If we assume align the <em>z</em>-axis with the vertical direction, then <span class="math notranslate nohighlight">\(z=0\)</span> denotes the top of this <strong>plane-parallel</strong> atmosphere and a <strong>vertical optical depth</strong> <span class="math notranslate nohighlight">\(\tau_{\lambda,v}(z)\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[ \tau_{\lambda,v}(z) \equiv \int_z^0 \kappa_\lambda \rho dz. \tag{34}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <span class="math notranslate nohighlight">\(v\)</span> symbol is not to be confused with <span class="math notranslate nohighlight">\(\nu\)</span>, where the former signifies the <strong>v</strong> in vertical.</p>
+</div>
+<p>Recall the discussion for correcting the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/setllar-atmospheres.html#optical-depth">opacity of the Earth’s atmosphere</a>, the depth was parameterized in a similar manner.  A ray that travels upward at an angle <span class="math notranslate nohighlight">\(\theta\)</span> has farther to go through the atmosphere to reach the surface.  The optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> is <em>greater</em> than the vertical optical depth <span class="math notranslate nohighlight">\(\tau_{\lambda,v}\)</span>.  The two optical depths are related by</p>
+<div class="math notranslate nohighlight">
+\[ \tau_\lambda = \frac{\tau_{\lambda,v}}{\cos \theta} = \tau_{\lambda,v} \sec \theta  \tag{35}\]</div>
+<p>and then the transfer equation becomes</p>
+<div class="math notranslate nohighlight">
+\[ \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \tag{36} \]</div>
+<p>for the approximation of a plane-parallel atmosphere.</p>
+<p>The value of the vertical optical depth is wavelength dependent, but when considering the bulk flow of photons a <em>gray</em> atmosphere is assumed.  Gray atmospheres are used when the measured flux does not show a strong wavelength dependence.  Thus, the transfer equation for a plane-parallel gray atmosphere is</p>
+<div class="math notranslate nohighlight">
+\[ \cos \theta \dfrac{dI}{d\tau_v} = I - S. \tag{37} \]</div>
 </div>
 <div class="section" id="the-eddington-approximation">
 <h3><span class="section-number">5.4.5. </span>The Eddington Approximation<a class="headerlink" href="#the-eddington-approximation" title="Permalink to this headline">¶</a></h3>
