@@ -1018,7 +1018,7 @@
 <p><strong>1) Integrating over all solid angles</strong></p>
 <p>The source function <span class="math notranslate nohighlight">\(S\)</span> depends only on the local conditions, so we can integrate over all solid angles to get</p>
 <div class="math notranslate nohighlight">
-\[ \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \tag{37}\]</div>
+\[ \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \tag{38}\]</div>
 <p>This expression can be simplified using <span class="math notranslate nohighlight">\(\int d\Omega = 4\pi\)</span>, definition of <span class="math notranslate nohighlight">\(F_{rad}\)</span> (Eqn. 7, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>) and the mean intensity (Eqn. 3, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>).  Through substitution, we find</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d F_{rad}}{d\tau_v} = 4\pi(\langle I \rangle - S). \]</div>
@@ -1028,20 +1028,20 @@
 \[ \frac{d}{d\tau_v}\int I \cos^2 \theta d\Omega = \int I \cos\theta d\Omega - S \int \cos\theta d\Omega, \]</div>
 <p>where the left hand side is replaced with the radiation pressure (with a factor of <span class="math notranslate nohighlight">\(c\)</span>; Eqn 8), the middle integral is the radiation flux, and the right most integral is zero.  Thus</p>
 <div class="math notranslate nohighlight">
-\[ \frac{d P_{rad}}{d\tau_v} = \frac{1}{c}F_{rad} \tag{38}, \]</div>
+\[ \frac{d P_{rad}}{d\tau_v} = \frac{1}{c}F_{rad} \tag{39}, \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d P_{rad}}{dr} = -\frac{\kappa \rho}{c}F_{rad}, \]</div>
 <p>in terms of a spherical coordinate system with its origin at the center fo the star.  As mention in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-radiation-pressure-gradient">the radiation pressure gradient</a>, this result describes the net radiative flux driven by differences in radiation pressure (i.e., “photon wind”).</p>
 <p>For a plane-parallel atmosphere to be in equilibrium, the radiative flux must have the same value at every level, including its surface, or</p>
 <div class="math notranslate nohighlight">
-\[ F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \tag{39} \]</div>
+\[ F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \tag{40} \]</div>
 <p>This implies that the first of the above relations (<span class="math notranslate nohighlight">\(dF_{rad}/d\tau_v\)</span>) is zero and the mean intensity must equal the source function as</p>
 <div class="math notranslate nohighlight">
 \[ \langle I \rangle = S. \]</div>
-<p>Equation 38 can be integrated to find the radiation pressure as a function of the vertical optical depth:</p>
+<p>Equation 39 can be integrated to find the radiation pressure as a function of the vertical optical depth:</p>
 <div class="math notranslate nohighlight">
-\[ P_{rad} = \frac{\tau_v}{c}F_{rad} + C, \tag{40} \]</div>
+\[ P_{rad} = \frac{\tau_v}{c}F_{rad} + C, \tag{41} \]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is the constant of integration.</p>
 </div>
 <div class="section" id="the-eddington-approximation">
