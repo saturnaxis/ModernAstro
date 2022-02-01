@@ -939,6 +939,59 @@
 </div>
 <div class="section" id="the-special-case-of-blackbody-radiation">
 <h3><span class="section-number">5.4.3. </span>The Special Case of Blackbody Radiation<a class="headerlink" href="#the-special-case-of-blackbody-radiation" title="Permalink to this headline">¶</a></h3>
+<p>Consider a box containing an optically thick gas maintained at a constant temperature <span class="math notranslate nohighlight">\(T\)</span>. The confined particles and blackbody radiation are in thermodynamic equilibrium by definition because there isn’t a flow of energy through the box or between the gas particles.  A consequence of this equilibrium is that every process of absorption is met with an inverse process of emission.  The intensity of the radiation is described by the Planck function <span class="math notranslate nohighlight">\(I_\lambda = B_\lambda\)</span> and the variation of intensity goes to zero, <span class="math notranslate nohighlight">\(dI_\lambda/ds = 0\)</span> and <span class="math notranslate nohighlight">\(S_\lambda = I_\lambda\)</span>.  Using the transitive property (<span class="math notranslate nohighlight">\(A=B\)</span>, <span class="math notranslate nohighlight">\(B=C\)</span>, and therefore <span class="math notranslate nohighlight">\(A=C\)</span>) and <em>thermodynamic equilibrium</em>, <em>the source function is equal to the Planck function</em>, <span class="math notranslate nohighlight">\(S_\lambda = B_\lambda\)</span>.</p>
+<p>A star cannot be in perfect thermodynamic equilibrium because there is a net flow of energy from the center to the surface.  But deep the in atmosphere (or a large optical depth, <span class="math notranslate nohighlight">\(\tau_\lambda \gg 1\)</span>), a random-walking photon (with many scattering events) will take at least <span class="math notranslate nohighlight">\(\tau_\lambda^2\)</span> steps (Eqn. 27) to reach the surface.  When the photon mean free path is small compared to temperature scale height, the photons are <em>effectively</em> confined to a volume of nearly constant temperature and the conditions for local thermodynamic equilibrium (LTE) are satisfied.  Overall the statements: <strong>(a)</strong> <span class="math notranslate nohighlight">\(I_\lambda = B_\lambda\)</span> and <strong>(b)</strong> <span class="math notranslate nohighlight">\(S_\lambda = B_\lambda\)</span> indicate that the radiation field is described by the Planck function and the source function describes the physical source of the radiation (<span class="math notranslate nohighlight">\(j_\lambda/\kappa_\lambda\)</span>) as one that produces the radiation.</p>
+<p><strong>Applying the Transfer Equation</strong></p>
+<p>Imagine a beam of light of initial intensity <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> entering a volume of gas of constant density <span class="math notranslate nohighlight">\(\rho\)</span>, constant opacity <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span>, and a constant source function <span class="math notranslate nohighlight">\(S_\lambda\)</span>.  The intensity function <span class="math notranslate nohighlight">\(I_\lambda\)</span> depends on the penetration depth <span class="math notranslate nohighlight">\(s\)</span> of the volume, where Eqn 31 can be written as a 1st order ordinary differential equation:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_\lambda}{ds} = -\kappa_\lambda \rho (I_\lambda - S_\lambda). \]</div>
+<p>Using the separation of variables results in:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_\lambda}{I_\lambda - S_\lambda} = -\kappa_\lambda \rho ds, \]</div>
+<p>and integrating both sides to get,</p>
+<div class="math notranslate nohighlight">
+\[ \ln(I_\lambda - S_\lambda) - {\rm Const.} = -\kappa_\lambda \rho s. \]</div>
+<p>The beam of light enters with an initial intensity <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> when <span class="math notranslate nohighlight">\(s=0\)</span>, so that the integration constant equals <span class="math notranslate nohighlight">\(e^{(I_{\lambda,o}-S_\lambda)}\)</span>.  Then the factor due to the integration constant can be combined into the logarithm as</p>
+<div class="math notranslate nohighlight">
+\[ \ln \left(\frac{I_\lambda - S_\lambda}{I_{\lambda,o} - S_\lambda}\right) = -\kappa_\lambda \rho s, \]</div>
+<p>which simplifies to</p>
+<div class="math notranslate nohighlight">
+\[ I_\lambda(s) = I_{\lambda,o} e^{-\kappa_\lambda \rho s} + S_\lambda(1-e^{-\kappa_\lambda \rho s}). \tag{32} \]</div>
+<ul class="simple">
+<li><p><strong>Suppose the source function <span class="math notranslate nohighlight">\(S_\lambda\)</span> is twice the initial intensity <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span>, then plot the transformation of the intensity in units of <span class="math notranslate nohighlight">\(\kappa_\lambda \rho s\)</span>.</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+
+<span class="k">def</span> <span class="nf">Intensity</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">S_fact</span><span class="p">):</span>
+    <span class="c1">#x = k \rho s </span>
+    <span class="c1">#S_fact = S_\lambda/I_{\lambda,o}</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">S_fact</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
+<span class="n">x_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_rng</span><span class="p">,</span><span class="n">Intensity</span><span class="p">(</span><span class="n">x_rng</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">2.1</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">kappa_</span><span class="se">\\</span><span class="s2">lambda </span><span class="se">\\</span><span class="s2">rho s$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$I_</span><span class="se">\\</span><span class="s2">lambda/I_{</span><span class="se">\\</span><span class="s2">lambda,o}$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/stellar-atmospheres_19_0.png" src="../_images/stellar-atmospheres_19_0.png" />
+</div>
+</div>
+<p>This solution describes the transformation from <span class="math notranslate nohighlight">\(I_\lambda = I_{\lambda,o}\)</span> to <span class="math notranslate nohighlight">\(I_\lambda = S_\lambda\)</span>, where the characteristic distance <span class="math notranslate nohighlight">\(s = 1/(\kappa_\lambda \rho)\)</span> or the mean free path.  Notice that the curve approaches the source function <span class="math notranslate nohighlight">\(S_\lambda\)</span> (red) asymptotically.</p>
 </div>
 <div class="section" id="the-assumption-of-a-plane-parallel-atmosphere">
 <h3><span class="section-number">5.4.4. </span>The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this headline">¶</a></h3>
