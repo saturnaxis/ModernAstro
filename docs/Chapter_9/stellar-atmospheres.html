@@ -1046,6 +1046,33 @@
 </div>
 <div class="section" id="the-eddington-approximation">
 <h3><span class="section-number">5.4.5. </span>The Eddington Approximation<a class="headerlink" href="#the-eddington-approximation" title="Permalink to this headline">¶</a></h3>
+<p>The temperature as a function of the optical depth (i.e., temperature structure) can be determined if we knew how the radiation pressure varied with temperature in the general case.  Equation 41 could be used if we also <em>assume</em> a description of the angular distribution of intensity.  An approximation was made by Eddington, where the intensity of the radiation field is defined in the +<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm out}\)</span> and another in the -<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm in}\)</span>.  These intensities vary with depth in the atmosphere and when <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>, then <span class="math notranslate nohighlight">\(I_in = 0\)</span> (i.e., radiation doesn’t flow inward at the top of the atmosphere).  The <strong>Eddington approximation</strong> gives the mean intensity, radiative flux, and radiation pressure by:</p>
+<div class="math notranslate nohighlight">
+\[ \langle I \rangle = \frac{1}{2}(I_{\rm out} + I_{\rm in}), \tag{42} \]</div>
+<div class="math notranslate nohighlight">
+\[ F_{rad} = \pi(I_{\rm out} - I_{\rm in}), \tag{43} \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[ P_{rad}= \frac{2\pi}{3c}(I_{\rm out} + I_{\rm in}) = \frac{4\pi}{3c} \langle I \rangle . \tag{44} \]</div>
+<p>Substituting Eqn 44 into Eqn 41, we find that</p>
+<div class="math notranslate nohighlight">
+\[ \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} + C, \tag{45} \]</div>
+<p>where the constant <span class="math notranslate nohighlight">\(C\)</span> can be determined by evaluating at the top of the atmosphere (<span class="math notranslate nohighlight">\(\tau_v = 0\)</span> and <span class="math notranslate nohighlight">\(I_{\rm in}=0\)</span>).  In this case, Eqn 49 becomes</p>
+<div class="math notranslate nohighlight">
+\[ \frac{2\pi}{3c} I_{\rm out} = \frac{2}{3c} F_{rad} = C, \]</div>
+<p>and substituting back into Eqn 45, we find</p>
+<div class="math notranslate nohighlight">
+\[ \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} +  \frac{2}{3c} F_{rad} = \frac{F_{rad}}{c}\left(\tau_v + \frac{2}{3}\right).  \tag{46}\]</div>
+<p>But we already know the radiative flux is a constant (<span class="math notranslate nohighlight">\(F_{rad} = \sigma T_e^4\)</span>) and thus, the mean intensity can be determined as a function of vertical optical depth by</p>
+<div class="math notranslate nohighlight">
+\[ \langle I \rangle  = \frac{3\sigma}{4\pi}T_e^4\left(\tau_v + \frac{2}{3}\right). \tag{47}\]</div>
+<p>The final approximation of the temperature structure can be determined if the atmosphere is <em>assumed</em> to be in LTE (<span class="math notranslate nohighlight">\(S_\lambda = B_\lambda\)</span>).  Integrating the source function over all wavelengths produces</p>
+<div class="math notranslate nohighlight">
+\[ S = B = \langle I \rangle  = \frac{\sigma T^4}{\pi}. \tag{48} \]</div>
+<p>Substituting Eqn 48 back into Eqn 47 results in the variation of the temperature with vertical optical depth in a plane-parallel gray atmosphere in LTE, assuming the Eddington approximation:</p>
+<div class="math notranslate nohighlight">
+\[ T^4 = \frac{3}{4}T_e^4\left(\tau_v + \frac{2}{3}\right). \tag{49} \]</div>
+<p>This relation reveals that <span class="math notranslate nohighlight">\(T=T_e\)</span> at <span class="math notranslate nohighlight">\(\tau_v = 2/3\)</span> and <em>not</em> at <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>.  The “surface” of a star for which we measure an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> is <em>not</em> at the top of the atmosphere, but deeper down where <span class="math notranslate nohighlight">\(\tau_v=2/3\)</span>.  The average point of origin for the photons comes from within the stellar atmosphere.  <em>When looking at a star, we see down to a vertical optical depth of <span class="math notranslate nohighlight">\(\tau_v \approx 2/3\)</span>, averaged over the disk of the star.</em></p>
 </div>
 <div class="section" id="limb-darkening-revisited">
 <h3><span class="section-number">5.4.6. </span>Limb Darkening Revisited<a class="headerlink" href="#limb-darkening-revisited" title="Permalink to this headline">¶</a></h3>
@@ -1076,6 +1103,7 @@
 <li><p><a class="reference external" href="http://people.tamu.edu/~kevinkrisciunas/planck.pdf">Integrating the Planck function</a> from Kevin Krisciunas at Texas A&amp;M University.</p></li>
 <li><p>Contour integral for <a class="reference external" href="https://math.stackexchange.com/questions/99843/contour-integral-for-x3-ex-1">Planck function</a>.</p></li>
 <li><p><a class="reference external" href="http://spiff.rit.edu/classes/phys440/lectures/optd/optd.html">Notes on Optical Depth</a> from Michael Richmond at Rochester Institute of Technology.</p></li>
+<li><p><a class="reference external" href="http://www.astro.wisc.edu/~townsend/resource/teaching/astro-310-F08/13-gray-eddington.pdf">Notes on Eddington Approximation</a> from Richard Townsend at University of Wisconsin-Madison.</p></li>
 </ul>
 </div>
 </div>
