@@ -1076,6 +1076,21 @@
 </div>
 <div class="section" id="limb-darkening-revisited">
 <h3><span class="section-number">5.4.6. </span>Limb Darkening Revisited<a class="headerlink" href="#limb-darkening-revisited" title="Permalink to this headline">¶</a></h3>
+<p>The previous discussion of <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#limb-darkening">limb darkening</a> described limb darkening qualitatively.  Limb darkening is one measure of the how the source function varies with depth in a star’s atmosphere.  Now we can examine this more closely starting with the transfer equation,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \]</div>
+<p>Multiplying both sides by <span class="math notranslate nohighlight">\(e^{-\tau_\lambda}\)</span> and rearranging, we have</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_\lambda}{d\tau_\lambda} e^{-\tau_\lambda} - I_\lambda e^{-\tau_\lambda}= - S_\lambda e^{-\tau_\lambda}, \]</div>
+<p>which is equivalent to</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d}{d\tau_\lambda}(I_\lambda e^{-\tau_\lambda}) = - S_\lambda e^{-\tau_\lambda}. \]</div>
+<p>Integrating both sides with respect to <span class="math notranslate nohighlight">\(d\tau_\lambda\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[ \int_{t_{\lambda,o}}^0 \frac{d}{d\tau_\lambda}(I_\lambda e^{-\tau_\lambda}) = - \int_{t_{\lambda,o}}^0 S_\lambda e^{-\tau_\lambda} d\tau_\lambda, \]</div>
+<p>where the left hand side is simply integrating the anti-derivative from the initial position of the ray at <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> (<span class="math notranslate nohighlight">\(I_\lambda = I_{\lambda,o}\)</span>) to the top of the atmosphere <span class="math notranslate nohighlight">\(\left(I_\lambda = I_\lambda(0) \right)\)</span>.  Evaluating the limits and rearranging produces</p>
+<div class="math notranslate nohighlight">
+\[ I_\lambda(0) = I_{\lambda,o}e^{-\tau_{\lambda,o}} - \int_{t_{\lambda,o}}^0 S_\lambda e^{-\tau_\lambda} d\tau_\lambda. \tag{50}\]</div>
 </div>
 </div>
 <div class="section" id="the-profiles-of-spectral-lines">
