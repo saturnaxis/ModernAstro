@@ -1011,6 +1011,10 @@
 <div class="math notranslate nohighlight">
 \[ \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \tag{36} \]</div>
 <p>for the approximation of a plane-parallel atmosphere.</p>
+<div align="center">
+<p><img alt="Figure 13" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_14.jpg?raw=true?" /><br>
+<strong>Figure 13</strong>: Plane-parallel stellar atmosphere. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The value of the vertical optical depth is wavelength dependent, but when considering the bulk flow of photons a <em>gray</em> atmosphere is assumed.  Gray atmospheres are used when the measured flux does not show a strong wavelength dependence.  Thus, the transfer equation for a plane-parallel gray atmosphere is</p>
 <div class="math notranslate nohighlight">
 \[ \cos \theta \dfrac{dI}{d\tau_v} = I - S. \tag{37} \]</div>
@@ -1095,6 +1099,10 @@
 <p>If we relax our assumptions (gray atmosphere, LTE, and Eddington approximation) but keep the plane-parallel atmosphere, then the problem of limb darkening is not very different, where each contribution is modified as a function of <span class="math notranslate nohighlight">\(\theta\)</span>.  This easily accomplished through the substitution <span class="math notranslate nohighlight">\(\tau_{\lambda,o} = \tau_{v,o} \sec \theta\)</span> that uses the vertical optical depth <span class="math notranslate nohighlight">\(\tau_v\)</span> to get</p>
 <div class="math notranslate nohighlight">
 \[ I_\lambda(\theta) = I_{\lambda,o}e^{-\tau_{v,o} \sec \theta} - \int_{\tau_{v,o} \sec\theta}^0 S_\lambda\sec\theta\: e^{-\tau_{v\sec \theta}} d\tau_v. \]</div>
+<div align="center">
+<p><img alt="Figure 14" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_16.jpg?raw=true?" /><br>
+<strong>Figure 14</strong>: Finding <span class="math notranslate nohighlight">\(I(\theta)\)</span> for limb darkening in a plane-parallel geometry. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>Including the contributions from all layers of the atmosphere (or <span class="math notranslate nohighlight">\(\tau_{v,o}=\infty\)</span>), then the first term goes to zero leaving</p>
 <div class="math notranslate nohighlight">
 \[ I_\lambda(\theta) =  \int_0^\infty S_\lambda\sec\theta\: e^{-\tau_{v\sec \theta}} d\tau_v. \tag{51} \]</div>
@@ -1115,15 +1123,98 @@
 <p>Using Eqn 53, we have</p>
 <div class="math notranslate nohighlight">
 \[ \frac{I(\theta)}{I(0)} = \frac{a_\lambda + b_\lambda \tau_v}{a_\lambda + b_\lambda} = \frac{2}{5} + \frac{3}{5}\cos \theta. \tag{54} \]</div>
-</div>
+<div align="center">
+<p><img alt="Figure 15" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_17.jpg?raw=true?" /><br>
+<strong>Figure 15</strong>: A theoretical Eddington approximation of solar limb darkening integrated over all wavelengths (curve) compared to observational data (dots) for the Sun. (Carroll &amp; Ostlie (2007))</p>
+</div></div>
 </div>
 <div class="section" id="the-profiles-of-spectral-lines">
 <h2><span class="section-number">5.5. </span>The Profiles of Spectral Lines<a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="equivalent-widths">
 <h3><span class="section-number">5.5.1. </span>Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this headline">¶</a></h3>
+<p>Absorption spectral lines are identified on graphs of the radiant flux <span class="math notranslate nohighlight">\(F_\lambda\)</span> as a function of the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  The radiant flux can be normalized relative to the flux of the continuous spectrum <span class="math notranslate nohighlight">\(F_c\)</span> outside the spectral line (i.e., <span class="math notranslate nohighlight">\(F_\lambda/F_c\)</span>).  Near the middle of the absorption (i.e., <em>core</em> of the spectral line), there is the central wavelength <span class="math notranslate nohighlight">\(\lambda_o\)</span> and the <em>wings</em> extend outward, sweeping up to the continuum.  The depth <span class="math notranslate nohighlight">\(\delta\)</span> of the line is simply the fractional decrease in radiant flux relative to the continuum (i.e., <span class="math notranslate nohighlight">\(\delta F_\lambda = 1 - F_\lambda/F_c\)</span>).  The strength of absorption is measured by its <strong>equivalent width</strong> <span class="math notranslate nohighlight">\(W\)</span>, which is a rectangle with height equal to unity and a specific width so that the area of the rectangle is equal to the total area removed from the continuum by the absorption.  Mathematically, this is</p>
+<div class="math notranslate nohighlight">
+\[ W = \int 1- \frac{F_\lambda}{F_c} d\lambda = \int \delta F d\lambda, \tag{55}\]</div>
+<p>where the integral is taken from one side of <span class="math notranslate nohighlight">\(\lambda_o\)</span> to the other and is usually on the order of 0.01 nm.  Another measure of spectral line width uses a point at half of the depth at the core wavelength (i.e., <span class="math notranslate nohighlight">\(\delta F_{1/2} = 1/2 - F_{\lambda_o}/(2F_c)\)</span>) and moves to the left/right a <span class="math notranslate nohighlight">\(\Delta \lambda_{1/2} = \lambda_o \pm \lambda_{\delta F}\)</span> until intersecting the absorption line so that <span class="math notranslate nohighlight">\(\delta F = \delta F_{1/2}\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ 1 - \frac{F_\lambda}{F_c} = \frac{1}{2}\left(1 - \frac{F_{\lambda_o}}{F_c} \right), \]</div>
+<p>which is called the <strong>full width at half-maximum</strong> (FWHM).</p>
+<div align="center">
+<p><img alt="Figure 16" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_18.jpg?raw=true?" /><br>
+<strong>Figure 16</strong>: The profile of a typical spectral line. (Carroll &amp; Ostlie (2007))</p>
+</div>
+<p>A spectral line is called <strong>optically thin</strong> when there is no wavelength at which the radiant flux is completely blocked (i.e., <span class="math notranslate nohighlight">\(F_\lambda/F_c = 0\)</span>).  The opacity <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> is greatest at the core wavelength <span class="math notranslate nohighlight">\(\lambda_o\)</span> and decreases moving into the wings.  The core wavelength is formed at higher (and cooler regions) of the stellar atmosphere, where the wings form at progressively deeper (and hotter) layers of the atmosphere, until it merges with the continuum producing region (<span class="math notranslate nohighlight">\(\tau_v = 2/3\)</span>).</p>
 </div>
 <div class="section" id="processes-that-broaden-spectral-lines">
 <h3><span class="section-number">5.5.2. </span>Processes That Broaden Spectral Lines<a class="headerlink" href="#processes-that-broaden-spectral-lines" title="Permalink to this headline">¶</a></h3>
+<p>Three main processes are responsible for broadening spectral lines with mechanisms that produce a distinctive line shape or <em>line profile</em>.</p>
+<p>1. <strong>Natural broadening</strong> occurs because the spectral lines cannot be sharp even for motionless, isolated atoms due to Heisenberg’s uncertainty principle.  An electron occupies the orbital for the first excited state for an instant <span class="math notranslate nohighlight">\(\Delta t\)</span> and the orbital’s energy <span class="math notranslate nohighlight">\(E\)</span> cannot have a precise value (<span class="math notranslate nohighlight">\(\Delta E\: \Delta t \approx \hbar\)</span>).  Electrons can transition from nearby orbitals to these “fuzzy” energy levels, which produces an uncertainty in the absorbed/emitted photons.  Using the wavelength form for the energy of a photon (<span class="math notranslate nohighlight">\(E = hc/\lambda\)</span>), we find that the uncertainty <span class="math notranslate nohighlight">\(\Delta \lambda\)</span> is roughly</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda \approx \frac{\lambda^2}{2\pi c}\left(\frac{1}{\Delta t_o} + \frac{1}{\Delta t_f} \right),  \tag{56}\]</div>
+<p>which depends on the lifetime of the electron in its initial state <span class="math notranslate nohighlight">\(\Delta t_o\)</span> and final state <span class="math notranslate nohighlight">\(\Delta t_f\)</span>.</p>
+<ul class="simple">
+<li><p><strong>What is the wavelength uncertainty for an electron in hydrogen <span class="math notranslate nohighlight">\({\rm H}\alpha\)</span> (<span class="math notranslate nohighlight">\(\lambda = 656.28\)</span> nm), if its lifetime in the first and second excited states is about <span class="math notranslate nohighlight">\(\Delta t = 10^{-8}\)</span> s?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span>
+<span class="k">def</span> <span class="nf">delta_Natural</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">dt_o</span><span class="p">,</span><span class="n">dt_f</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength (in nm)</span>
+    <span class="c1">#dt_o = lifetime in the initial state (in sec)</span>
+    <span class="c1">#dt_f = lifetime in the final state (in sec)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">dt_o</span> <span class="o">+</span> <span class="mf">1.</span><span class="o">/</span><span class="n">dt_f</span><span class="p">)</span>
+
+<span class="n">l_Halpha</span> <span class="o">=</span> <span class="mf">656.28</span> <span class="c1">#nm</span>
+<span class="n">delta_l</span> <span class="o">=</span> <span class="n">delta_Natural</span><span class="p">(</span><span class="n">l_Halpha</span><span class="p">,</span><span class="mf">1e-8</span><span class="p">,</span><span class="mf">1e-8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The wavelength uncertainty through natural broadening is approximately </span><span class="si">%1.2e</span><span class="s2"> m or </span><span class="si">%1.2e</span><span class="s2"> nm.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta_l</span><span class="p">,</span><span class="n">delta_l</span><span class="o">/</span><span class="mf">1e-9</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The wavelength uncertainty through natural broadening is approximately 4.57e-14 m or 4.57e-05 nm.
+</pre></div>
+</div>
+</div>
+</div>
+<p>2. <strong>Doppler broadening</strong> occurs because the gas particles of the atmosphere have thermal motion that is described by the Maxwell-Boltzmann distribution function with a most probable speed of the atoms (<span class="math notranslate nohighlight">\(v_{mp} = \sqrt{2kT/m}\)</span>).  The wavelengths of the absorbed or emitted light are Doppler-shifted nonrelativistically according to <span class="math notranslate nohighlight">\(\Delta \lambda /\lambda = \pm |v_r|/c\)</span>.  The width of a Doppler broadened spectral line should be</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda \approx \frac{2\lambda}{c}\sqrt{\frac{2kT}{m}}. \]</div>
+<ul class="simple">
+<li><p><strong>What is the wavelength uncertainty due to Doppler broadening of the <span class="math notranslate nohighlight">\({\rm H}\alpha\)</span> line in the Sun’s photosphere (<span class="math notranslate nohighlight">\(T = 5777\)</span> K)?</strong></p></li>
+<li><p><strong>How many times more/less is this uncertainty compared to natural broadening?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">m_p</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">k</span>
+<span class="k">def</span> <span class="nf">delta_Doppler</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength (in nm)</span>
+    <span class="c1">#T = temperature (in K)</span>
+    <span class="k">return</span> <span class="mf">2.</span><span class="o">*</span><span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">)</span><span class="o">/</span><span class="n">c</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">m_p</span><span class="p">)</span>
+
+<span class="n">delta_l_D</span> <span class="o">=</span> <span class="n">delta_Doppler</span><span class="p">(</span><span class="n">l_Halpha</span><span class="p">,</span><span class="mi">5777</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The wavelength uncertainty through Doppler broadening is approximately </span><span class="si">%1.3e</span><span class="s2"> m or </span><span class="si">%1.5f</span><span class="s2"> nm&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta_l_D</span><span class="p">,</span><span class="n">delta_l_D</span><span class="o">/</span><span class="mf">1e-9</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Doppler broadening is </span><span class="si">%d</span><span class="s2"> times greater than natural broadening.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta_l_D</span><span class="o">/</span><span class="n">delta_l</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The wavelength uncertainty through Doppler broadening is approximately 4.276e-11 m or 0.04276 nm
+The Doppler broadening is 934 times greater than natural broadening.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The radial velocity <span class="math notranslate nohighlight">\(v_r\)</span> can be modified to include the effect of FWHM and the most probable turbulent velocity <span class="math notranslate nohighlight">\(v_{\rm turb}\)</span> within the atmosphere to get</p>
+<div class="math notranslate nohighlight">
+\[ (\delta \lambda)_{1/2} = \frac{2\lambda}{c} \sqrt{\left(\frac{2kT}{m} + v_{\rm turb}^2 \right) \ln 2}, \]</div>
+<p>where the effect of turbulence is most important in the atmospheres of giant and supergiant stars.</p>
+</div>
+<p>Other sources of Doppler broadening include stellar rotation, pulsation, and mass loss.  These phenomena can effect the shape and width of line profiles, but cannot be combined with Doppler broadening.</p>
+<p>3. <strong>Pressure (and collisional) broadening</strong> occurs when the atomic orbitals are perturbed by a collision with a neutral atom or a close encounter with the electric field of an ion.  The effect of individual collisions is called <em>collisional broadening</em>, where the statistical effect of a large number of closely passing ions (with electric fields) is called <em>pressure broadening</em>.  In both cases the outcome depends on teh average time between collisions or encounters.</p>
+<p>Precisely calculating the width and shape of a pressure-broadened line is complicated, where the atoms atoms involved can be the same or different elements.  The general shape is similar to natural broadening (<span class="math notranslate nohighlight">\(\Delta \lambda = \lambda^2/(\pi c \Delta t_o)\)</span>; natural broadening at FWHM), where the line profile resembles a radiation spectrum by an electric charge undergoing damped simple harmonic motion and thus termed as a <em>damping profile</em> (or <em>Lorentz profile</em>).</p>
 </div>
 <div class="section" id="the-voigt-profile">
 <h3><span class="section-number">5.5.3. </span>The Voigt Profile<a class="headerlink" href="#the-voigt-profile" title="Permalink to this headline">¶</a></h3>
