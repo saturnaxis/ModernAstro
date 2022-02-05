@@ -1209,18 +1209,79 @@ The Doppler broadening is 934 times greater than natural broadening.
 <p class="admonition-title">Note</p>
 <p>The radial velocity <span class="math notranslate nohighlight">\(v_r\)</span> can be modified to include the effect of FWHM and the most probable turbulent velocity <span class="math notranslate nohighlight">\(v_{\rm turb}\)</span> within the atmosphere to get</p>
 <div class="math notranslate nohighlight">
-\[ (\delta \lambda)_{1/2} = \frac{2\lambda}{c} \sqrt{\left(\frac{2kT}{m} + v_{\rm turb}^2 \right) \ln 2}, \]</div>
+\[ (\Delta \lambda)_{1/2} = \frac{2\lambda}{c} \sqrt{\left(\frac{2kT}{m} + v_{\rm turb}^2 \right) \ln 2}, \]</div>
 <p>where the effect of turbulence is most important in the atmospheres of giant and supergiant stars.</p>
 </div>
 <p>Other sources of Doppler broadening include stellar rotation, pulsation, and mass loss.  These phenomena can effect the shape and width of line profiles, but cannot be combined with Doppler broadening.</p>
 <p>3. <strong>Pressure (and collisional) broadening</strong> occurs when the atomic orbitals are perturbed by a collision with a neutral atom or a close encounter with the electric field of an ion.  The effect of individual collisions is called <em>collisional broadening</em>, where the statistical effect of a large number of closely passing ions (with electric fields) is called <em>pressure broadening</em>.  In both cases the outcome depends on teh average time between collisions or encounters.</p>
 <p>Precisely calculating the width and shape of a pressure-broadened line is complicated, where the atoms atoms involved can be the same or different elements.  The general shape is similar to natural broadening (<span class="math notranslate nohighlight">\(\Delta \lambda = \lambda^2/(\pi c \Delta t_o)\)</span>; natural broadening at FWHM), where the line profile resembles a radiation spectrum by an electric charge undergoing damped simple harmonic motion and thus termed as a <em>damping profile</em> (or <em>Lorentz profile</em>).</p>
+<p>An estimate of (collisional) pressure broadening with atoms of a single element can be made using <span class="math notranslate nohighlight">\(\Delta t_o\)</span> as the the average time between collisions.  The mean free path <span class="math notranslate nohighlight">\(\ell\)</span> is approximately the product of the most probably speed with the average time between collision.  Using Eqn 10 (from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#temperature-and-local-thermodynamic-equilibrium">Sect. 5.2.1</a>), we find that</p>
+<div class="math notranslate nohighlight">
+\[ \Delta t_o \approx \frac{\ell}{v} = \frac{1}{n\sigma} \sqrt{\frac{m}{2kT}}, \]</div>
+<p>which depends on the atom mass <span class="math notranslate nohighlight">\(m\)</span>, the collisional cross section <span class="math notranslate nohighlight">\(\sigma\)</span> and the number density $$ of the atoms.  The spectral line width due to (collisional) pressure broadening is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda = \frac{\lambda^2}{\pi c \Delta t_o} \approx \frac{\lambda^2 n \sigma}{\pi c}\sqrt{\frac{2kT}{m}}. \tag{57} \]</div>
+<p>The spectral line width is proportional to <span class="math notranslate nohighlight">\(n\)</span> and narrower lines for the more luminous giant and supergiant stars are due to the lower <span class="math notranslate nohighlight">\(n\)</span> in their extended atmospheres (i.e., the Morgan-Keenan luminosity classes).  Pressure broadening is more significant in the denser atmospheres of main-sequence stars, where collisions occur more frequently.</p>
+<ul class="simple">
+<li><p><strong>What is the wavelength uncertainty due to pressure broadening of the <span class="math notranslate nohighlight">\({\rm H}\alpha\)</span> line in the Sun’s photosphere (<span class="math notranslate nohighlight">\(T = 5777\)</span> K), where the hydrogen number density is about <span class="math notranslate nohighlight">\(1.5 \times 10^{23}\:{\rm m^{-3}}\)</span>?</strong></p></li>
+<li><p><strong>How many times more/less is this uncertainty compared to natural broadening?</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">delta_Pressure</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength (in nm)</span>
+    <span class="c1">#n = number density of atoms (in m^{-3})</span>
+    <span class="c1">#sigma = collisional cross section (in m^2)</span>
+    <span class="c1">#T = temperature (in K)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">m_p</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">delta_Natural_FWHM</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">dt_o</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength (in nm)</span>
+    <span class="c1">#dt_o = average lifetime (in sec) for FWHM</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">dt_o</span><span class="p">)</span>
+
+<span class="n">n_H</span> <span class="o">=</span> <span class="mf">1.5e23</span> <span class="c1">#number density of H atoms</span>
+<span class="c1">#from Sect 5.2.1</span>
+<span class="n">a_o</span> <span class="o">=</span> <span class="mf">5.29e-11</span> <span class="c1">#m; radius of the Bohr atom</span>
+<span class="n">sigma_H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a_o</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">l_Halpha</span> <span class="o">=</span> <span class="mf">656.28</span> <span class="c1">#nm</span>
+
+<span class="n">delta_l_P</span> <span class="o">=</span> <span class="n">delta_Pressure</span><span class="p">(</span><span class="n">l_Halpha</span><span class="p">,</span><span class="n">n_H</span><span class="p">,</span><span class="n">sigma_H</span><span class="p">,</span><span class="mi">5777</span><span class="p">)</span>
+<span class="n">delta_l_N</span> <span class="o">=</span> <span class="n">delta_Natural_FWHM</span><span class="p">(</span><span class="n">l_Halpha</span><span class="p">,</span><span class="mf">1.9e-8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The wavelength uncertainty through Pressure broadening is approximately </span><span class="si">%1.3e</span><span class="s2"> m or </span><span class="si">%1.3e</span><span class="s2"> nm&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta_l_P</span><span class="p">,</span><span class="n">delta_l_P</span><span class="o">/</span><span class="mf">1e-9</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Pressure broadening is </span><span class="si">%1.2f</span><span class="s2"> times that of natural broadening (Natural ~ Pressure).&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta_l_P</span><span class="o">/</span><span class="n">delta_l_N</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The wavelength uncertainty through Pressure broadening is approximately 2.356e-14 m or 2.356e-05 nm
+The Pressure broadening is 0.98 times that of natural broadening (Natural ~ Pressure).
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="the-voigt-profile">
 <h3><span class="section-number">5.5.3. </span>The Voigt Profile<a class="headerlink" href="#the-voigt-profile" title="Permalink to this headline">¶</a></h3>
+<p>The total line profile (<strong>Voight profile</strong>) is due to the contributions of both the Doppler and damping (pressure) profiles.  The Doppler broadening dominates near the core wavelength, where the damping profile dominates in the wings at about <span class="math notranslate nohighlight">\(1.8\times\)</span> the FWHM wavelength <span class="math notranslate nohighlight">\((\Delta \lambda)_{1/2}\)</span>.  Some line profiles tend to have <em>Doppler cores</em> and <em>damping wings.</em></p>
+<div align="center">
+<p><img alt="Figure 17" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_19.jpg?raw=true?" /><br>
+<strong>Figure 17</strong>: Schematic Doppler and damping line profiles scaled to have the same equivalent width. (Carroll &amp; Ostlie (2007))</p>
+</div>
+<p>The simplest model used (<strong>Schuster-Schwarzchild model</strong> ) for calculating a line profile assume that the star’s photosphere acts like a blackbody and atoms above the photosphere remove photons from the continuous spectrum.  This is inconsistent with the idea that photons originate at an optical depth <span class="math notranslate nohighlight">\(\tau_\lambda = 2/3\)</span>, but it is still a useful approximation.  To use the model, one must adopt values for the temperature, density, and composition for the region above the photosphere.  The temperature and density: 1) determine the importance of Doppler and pressure broadening and 2) are used in the Boltzmann and Saha equations.</p>
+<p>Let <span class="math notranslate nohighlight">\(N\)</span> be the number of atoms of a certain element per unit area lying above the photosphere, where <span class="math notranslate nohighlight">\(N\)</span> represents a <strong>column density</strong> with units of <span class="math notranslate nohighlight">\({\rm m^{-2}}\)</span>.  The temperature and density are used (in the Boltzmann and Saha equations) to calculate the excitation and ionization states that determine the number of absorbing atoms <span class="math notranslate nohighlight">\(N_a\)</span> (i.e., number of atoms that have electrons in the proper orbital for absorption).  Our goal is to determine <span class="math notranslate nohighlight">\(N_a\)</span> using the calculated and observed line profiles.  Quantum mechanics is used to determine the likelihood of transitions and the relative probabilities of an electron making a transition are given by <em>f-values</em> or <em>oscillator strengths</em>.  For hydrogen, <span class="math notranslate nohighlight">\(f=0.637\)</span> for <span class="math notranslate nohighlight">\({\rm H \alpha}\)</span> and <span class="math notranslate nohighlight">\(f=0.119\)</span> for <span class="math notranslate nohighlight">\({\rm H\beta}\)</span>.  The oscillator strength may be numerically or experimentally determined, where they are defined so that the <em>f-values</em> for transitions (from the same initial orbital) add up to the number of electrons in the atom or ion.  <em>The oscillator strength is the product of <span class="math notranslate nohighlight">\(N_a\)</span> and the f-value.</em></p>
+<div align="center">
+<p><img alt="Figure 18" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_20.jpg?raw=true?" /><br>
+<strong>Figure 18</strong>: Voigt profiles of the Ca II K line, where the shallowest line is produced by <span class="math notranslate nohighlight">\(N_a = 3.4 \times 10^{15}\:{\rm ions/m^2}\)</span>.The ions are ten times more abundant for each successively broader lines (Carroll &amp; Ostlie (2007))</p>
+</div>
 </div>
 <div class="section" id="the-curve-of-growth">
 <h3><span class="section-number">5.5.4. </span>The Curve of Growth<a class="headerlink" href="#the-curve-of-growth" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>curve of growth</strong> helps determine the value of <span class="math notranslate nohighlight">\(N_a\)</span> and the abundances of elements in stellar atmospheres.  Since the equivalent width <span class="math notranslate nohighlight">\(W\)</span> varies with <span class="math notranslate nohighlight">\(N_a\)</span>, a curve of growth represents the logarithmic change in both quantities.  When an absorbing element is introduced it produces absorption lines that are linearly proportional to <span class="math notranslate nohighlight">\(N_a\)</span>, until a saturation point is reached and the core line is optically thick.  The wings are still optically thin and can deepen, so the curve of growth increases proportional to <span class="math notranslate nohighlight">\(\sqrt{\ln N_a}\)</span>.  For large numbers of absorbing atoms, the pressure broadening contributes to deepening the wings and the absorption width grows proportionally to $\sqrt{N_a}.  Using the curve of growth and a measured equivalent width, we can obtain the number of absorbing atoms.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To reduce the errors involved in a single spectral line, it is advantageous to locate (on a single curve of growth) the positions of equivalent widths of several lines formed by transitions from the same initial orbital.  However this in not applicable valid for all broad lines (e.g., H) and may lead to inaccurate results.</p>
+</div>
 </div>
 <div class="section" id="computer-modeling-of-stellar-atmospheres">
 <h3><span class="section-number">5.5.5. </span>Computer Modeling of Stellar Atmospheres<a class="headerlink" href="#computer-modeling-of-stellar-atmospheres" title="Permalink to this headline">¶</a></h3>
