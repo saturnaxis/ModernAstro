@@ -766,7 +766,7 @@
 <div class="math notranslate nohighlight">
 \[ \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}.  \tag{17} \]</div>
 <p>This is ~2 billion times smaller than the hydrogen cross section for photoionization from bound-free absorption, <span class="math notranslate nohighlight">\(\sigma_{bf}\)</span>.  Electron scattering is most effective when the electron density is very high (i.e., high temperatures for ionization) and other sources of opacity are eliminated due to the absence of necessary bound electrons.  For high temperatures, the electron scattering opacity <span class="math notranslate nohighlight">\(\kappa_{es}\)</span> dominates the continuum opacity.</p>
-<p>A photon can also be scattered by loosely bound electrons.  <em>Compton scattering</em> occurs when the photon’s wavelength is much smaller than the atom or <em>Rayleigh scattering</em> if the wavelength is much larger.  Compton scatter is usually lumped together with Thomson scattering due to the small change in wavelength of the scattered photon.  The cross section for Rayleigh scattering is smaller than the the Thomson cross section and can be neglected in most stellar atmospheres.  However, it is important in the UV for supergiant stars with their extended envelopes and in cool main-sequence stars.</p>
+<p>A photon can also be scattered by loosely bound electrons.  <em>Compton scattering</em> occurs when the photon’s wavelength is much smaller than the atom or <em>Rayleigh scattering</em> if the wavelength is much larger.  Compton scatter is usually lumped together with Thomson scattering due to the small change in wavelength of the scattered photon.  The cross section for Rayleigh scattering is smaller than the Thomson cross section and can be neglected in most stellar atmospheres.  However, it is important in the UV for supergiant stars with their extended envelopes and in cool main-sequence stars.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Rayleigh scattering is important in planetary atmospheres and is responsible for Earth’s blue sky.</p>
@@ -1158,7 +1158,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span> <span class="c1">#https://docs.scipy.org/doc/scipy/reference/constants.html</span>
 <span class="k">def</span> <span class="nf">delta_Natural</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">dt_o</span><span class="p">,</span><span class="n">dt_f</span><span class="p">):</span>
     <span class="c1">#l = lambda; wavelength (in nm)</span>
     <span class="c1">#dt_o = lifetime in the initial state (in sec)</span>
@@ -1213,9 +1213,9 @@ The Doppler broadening is 934 times greater than natural broadening.
 <p>where the effect of turbulence is most important in the atmospheres of giant and supergiant stars.</p>
 </div>
 <p>Other sources of Doppler broadening include stellar rotation, pulsation, and mass loss.  These phenomena can effect the shape and width of line profiles, but cannot be combined with Doppler broadening.</p>
-<p>3. <strong>Pressure (and collisional) broadening</strong> occurs when the atomic orbitals are perturbed by a collision with a neutral atom or a close encounter with the electric field of an ion.  The effect of individual collisions is called <em>collisional broadening</em>, where the statistical effect of a large number of closely passing ions (with electric fields) is called <em>pressure broadening</em>.  In both cases the outcome depends on teh average time between collisions or encounters.</p>
+<p>3. <strong>Pressure (and collisional) broadening</strong> occurs when the atomic orbitals are perturbed by a collision with a neutral atom or a close encounter with the electric field of an ion.  The effect of individual collisions is called <em>collisional broadening</em>, where the statistical effect of a large number of closely passing ions (with electric fields) is called <em>pressure broadening</em>.  In both cases the outcome depends on the average time between collisions or encounters.</p>
 <p>Precisely calculating the width and shape of a pressure-broadened line is complicated, where the atoms atoms involved can be the same or different elements.  The general shape is similar to natural broadening (<span class="math notranslate nohighlight">\(\Delta \lambda = \lambda^2/(\pi c \Delta t_o)\)</span>; natural broadening at FWHM), where the line profile resembles a radiation spectrum by an electric charge undergoing damped simple harmonic motion and thus termed as a <em>damping profile</em> (or <em>Lorentz profile</em>).</p>
-<p>An estimate of (collisional) pressure broadening with atoms of a single element can be made using <span class="math notranslate nohighlight">\(\Delta t_o\)</span> as the the average time between collisions.  The mean free path <span class="math notranslate nohighlight">\(\ell\)</span> is approximately the product of the most probably speed with the average time between collision.  Using Eqn 10 (from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#temperature-and-local-thermodynamic-equilibrium">Sect. 5.2.1</a>), we find that</p>
+<p>An estimate of (collisional) pressure broadening with atoms of a single element can be made using <span class="math notranslate nohighlight">\(\Delta t_o\)</span> as the average time between collisions.  The mean free path <span class="math notranslate nohighlight">\(\ell\)</span> is approximately the product of the most probably speed with the average time between collision.  Using Eqn 10 (from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#temperature-and-local-thermodynamic-equilibrium">Sect. 5.2.1</a>), we find that</p>
 <div class="math notranslate nohighlight">
 \[ \Delta t_o \approx \frac{\ell}{v} = \frac{1}{n\sigma} \sqrt{\frac{m}{2kT}}, \]</div>
 <p>which depends on the atom mass <span class="math notranslate nohighlight">\(m\)</span>, the collisional cross section <span class="math notranslate nohighlight">\(\sigma\)</span> and the number density $$ of the atoms.  The spectral line width due to (collisional) pressure broadening is</p>
@@ -1272,19 +1272,127 @@ The Pressure broadening is 0.98 times that of natural broadening (Natural ~ Pres
 <p>Let <span class="math notranslate nohighlight">\(N\)</span> be the number of atoms of a certain element per unit area lying above the photosphere, where <span class="math notranslate nohighlight">\(N\)</span> represents a <strong>column density</strong> with units of <span class="math notranslate nohighlight">\({\rm m^{-2}}\)</span>.  The temperature and density are used (in the Boltzmann and Saha equations) to calculate the excitation and ionization states that determine the number of absorbing atoms <span class="math notranslate nohighlight">\(N_a\)</span> (i.e., number of atoms that have electrons in the proper orbital for absorption).  Our goal is to determine <span class="math notranslate nohighlight">\(N_a\)</span> using the calculated and observed line profiles.  Quantum mechanics is used to determine the likelihood of transitions and the relative probabilities of an electron making a transition are given by <em>f-values</em> or <em>oscillator strengths</em>.  For hydrogen, <span class="math notranslate nohighlight">\(f=0.637\)</span> for <span class="math notranslate nohighlight">\({\rm H \alpha}\)</span> and <span class="math notranslate nohighlight">\(f=0.119\)</span> for <span class="math notranslate nohighlight">\({\rm H\beta}\)</span>.  The oscillator strength may be numerically or experimentally determined, where they are defined so that the <em>f-values</em> for transitions (from the same initial orbital) add up to the number of electrons in the atom or ion.  <em>The oscillator strength is the product of <span class="math notranslate nohighlight">\(N_a\)</span> and the f-value.</em></p>
 <div align="center">
 <p><img alt="Figure 18" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_20.jpg?raw=true?" /><br>
-<strong>Figure 18</strong>: Voigt profiles of the Ca II K line, where the shallowest line is produced by <span class="math notranslate nohighlight">\(N_a = 3.4 \times 10^{15}\:{\rm ions/m^2}\)</span>.The ions are ten times more abundant for each successively broader lines (Carroll &amp; Ostlie (2007))</p>
+<strong>Figure 18</strong>: Voigt profiles of the Ca II K line, where the shallowest line is produced by <span class="math notranslate nohighlight">\(N_a = 3.4 \times 10^{15}\:{\rm ions/m^2}\)</span>. The ions are ten times more abundant for each successively broader lines. (Carroll &amp; Ostlie (2007))</p>
 </div>
 </div>
 <div class="section" id="the-curve-of-growth">
 <h3><span class="section-number">5.5.4. </span>The Curve of Growth<a class="headerlink" href="#the-curve-of-growth" title="Permalink to this headline">¶</a></h3>
-<p>The <strong>curve of growth</strong> helps determine the value of <span class="math notranslate nohighlight">\(N_a\)</span> and the abundances of elements in stellar atmospheres.  Since the equivalent width <span class="math notranslate nohighlight">\(W\)</span> varies with <span class="math notranslate nohighlight">\(N_a\)</span>, a curve of growth represents the logarithmic change in both quantities.  When an absorbing element is introduced it produces absorption lines that are linearly proportional to <span class="math notranslate nohighlight">\(N_a\)</span>, until a saturation point is reached and the core line is optically thick.  The wings are still optically thin and can deepen, so the curve of growth increases proportional to <span class="math notranslate nohighlight">\(\sqrt{\ln N_a}\)</span>.  For large numbers of absorbing atoms, the pressure broadening contributes to deepening the wings and the absorption width grows proportionally to $\sqrt{N_a}.  Using the curve of growth and a measured equivalent width, we can obtain the number of absorbing atoms.</p>
+<p>The <strong>curve of growth</strong> helps determine the value of <span class="math notranslate nohighlight">\(N_a\)</span> and the abundances of elements in stellar atmospheres.  Since the equivalent width <span class="math notranslate nohighlight">\(W\)</span> varies with <span class="math notranslate nohighlight">\(N_a\)</span>, a curve of growth represents the logarithmic change in both quantities.  When an absorbing element is introduced it produces absorption lines that are linearly proportional to <span class="math notranslate nohighlight">\(N_a\)</span>, until a saturation point is reached and the core line is optically thick.  The wings are still optically thin and can deepen, so the curve of growth increases proportional to <span class="math notranslate nohighlight">\(\sqrt{\ln N_a}\)</span>.  For large numbers of absorbing atoms, the pressure broadening contributes to deepening the wings and the absorption width grows proportionally to <span class="math notranslate nohighlight">\(\sqrt{N_a}\)</span>.  Using the curve of growth and a measured equivalent width, we can obtain the number of absorbing atoms.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To reduce the errors involved in a single spectral line, it is advantageous to locate (on a single curve of growth) the positions of equivalent widths of several lines formed by transitions from the same initial orbital.  However this in not applicable valid for all broad lines (e.g., H) and may lead to inaccurate results.</p>
+<p>To reduce the errors involved in a single spectral line, it is advantageous to locate (on a single curve of growth) the positions of equivalent widths of several lines formed by transitions from the same initial orbital.  However this in not applicable for all broad lines (e.g., H) and may lead to inaccurate results.  A logarithmic plot of the equivalent width per wavelength versus the <em>f</em>-value of the Number of atoms as a function of wavelength (normalized relative to 500 nm) provides this alternative view of the curve of growth (see Figure 20).</p>
 </div>
+<div align="center">
+<p><img alt="Figure 19" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_21.jpg?raw=true?" /><br>
+<strong>Figure 19</strong>: The curve of growth for the Ca II K line. (Carroll &amp; Ostlie (2007))</p>
+</div>
+<p><strong>Absorption in the Sun’s photosphere</strong></p>
+<p>The Solar spectrum contains absorption lines of sodium at 330.238 and 588.997 nm.  Carroll and Ostlie (2007) assumed a particular temperature (<span class="math notranslate nohighlight">\(T = 500\)</span> K) and electron pressure (<span class="math notranslate nohighlight">\(P_e = 1\:{\rm N/m^2}\)</span>) for this example for the curve of growth.  <strong>Table 1</strong> provides equivalent widths, <em>f</em>-values, and values from the curve of growth as a function of wavelength.  <em>Note that the final column does not include the number of absorbing atoms per unit area <span class="math notranslate nohighlight">\(N_a\)</span>.</em></p>
+<div align="center">
+<p><img alt="Table 1" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Table_1.jpg?raw=true?" /><br>
+<strong>Table 1</strong>: Data for Solar sodium lines. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>)</p>
+</div>
+<p>Sodium lines are produced during upward electron transitions from the ground state of the Na I atom and thus, these lines have the same value of <span class="math notranslate nohighlight">\(N_a\)</span> above the continuum-forming layer of the photosphere.  The value for <span class="math notranslate nohighlight">\(N_a\)</span> can be determined using the values of <span class="math notranslate nohighlight">\(\log_{10}(W/\lambda)\)</span> from Table 1 to locate the respective values of <span class="math notranslate nohighlight">\(\log_{10}(fN_a(\lambda/500\:{\rm nm}))\)</span> in Figure 20 (i.e., follow the arrows in Fig. 20).</p>
+<div align="center">
+<p><img alt="Figure 20" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Figure_22.jpg?raw=true?" /><br>
+<strong>Figure 20</strong>: The general curve of growth for the Sun. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>; Carroll &amp; Ostlie (2007))</p>
+</div>
+<p>Using Fig. 20, we find values of 17.15 and 18.83 for the 330.238 and 588.997 nm lines, respectively.  Therefore, the respective <span class="math notranslate nohighlight">\(N_a\)</span> values can be determined from the <em>difference of values</em> from the curve of growth (Fig. 20) and the tabulated values (Table 1).  It follows</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+\log_{10}\:N_a &amp;= \log_{10}\left(\frac{fN_a\lambda}{500\:{\rm nm}}\right) - \log_{10}\left(\frac{f\lambda}{500\:{\rm nm}}\right)  \\
+&amp;= 17.15 - (-1.85) = 19.00 \quad {\rm for\:the\:330.238\:nm\:line}
+\end{align*} \end{split}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+\log_{10}\:N_a &amp;= \log_{10}\left(\frac{fN_a\lambda}{500\:{\rm nm}}\right) - \log_{10}\left(\frac{f\lambda}{500\:{\rm nm}}\right)  \\
+&amp;= 18.83 - (-0.12) = 18.95 \quad {\rm for\:the\:588.997\:nm\:line.}
+\end{align*} \end{split}\]</div>
+<p>The average value of <span class="math notranslate nohighlight">\(\log_{10}\:N_a\)</span> is 18.96 and thus, there are ~<span class="math notranslate nohighlight">\(10^{19}\)</span> ground state Na I atoms per <span class="math notranslate nohighlight">\({\rm m^2}\)</span> of the photosphere.  The <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html?highlight=saha#combining-the-boltzmann-and-saha-equations">Boltzmann and Saha equations</a> are needed to find the total number of sodium atoms.  The energy of each emitted photon can be calculated using <span class="math notranslate nohighlight">\(E_\lambda = hc/\lambda\)</span> and used as the difference in energy states (<span class="math notranslate nohighlight">\(E_b - E_a\)</span>) in the Boltzmann equation, so that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+e^{-(E_b-E_a)/(kT)} &amp;= e^{-hc/(\lambda kT)} \\
+&amp;= 5.47 \times 10^{-4} \quad {\rm for\:the\:330.238\:nm\:line} \\
+&amp; = 1.48 \times 10^{-2} \quad {\rm for\:the\:588.997\:nm\:line},
+\end{align*} \end{split}\]</div>
+<p>and unsurprisingly, nearly all of the Na I atoms are in the ground state.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">h</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">k</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">Boltzmann_eq</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+    <span class="c1">#l = lambda; wavelength (in nm)</span>
+    <span class="c1">#T = temperature (in K)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">l</span><span class="o">*</span><span class="mf">1e-9</span><span class="p">)</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="p">))</span>
+
+<span class="n">e_330</span> <span class="o">=</span> <span class="n">Boltzmann_eq</span><span class="p">(</span><span class="mf">330.238</span><span class="p">,</span><span class="mi">5800</span><span class="p">)</span>
+<span class="n">e_588</span> <span class="o">=</span> <span class="n">Boltzmann_eq</span><span class="p">(</span><span class="mf">588.997</span><span class="p">,</span><span class="mi">5800</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Boltzmann exponential term for the 330.238 line is </span><span class="si">%1.2e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">e_330</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Boltzmann exponential term for the 588.997 line is </span><span class="si">%1.2e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">e_588</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Boltzmann exponential term for the 330.238 line is 5.47e-04.
+The Boltzmann exponential term for the 588.997 line is 1.48e-02.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The total number of Na atoms per unit area in all ionization stages requires the Saha equation.  Using the curve of growth, we estimated the number of Na I atoms in the ground state (<span class="math notranslate nohighlight">\(N_I = 10^{19}\)</span>), then the number of singly ionize atoms <span class="math notranslate nohighlight">\(N_{II}\)</span> is determined by</p>
+<div class="math notranslate nohighlight">
+\[ \frac{N_{II}}{N_I} = \frac{2kTZ_{II}}{P_e Z_I}\left( \frac{2\pi m_e kT}{h^2}\right)^{3/2} e^{-\chi_I/(kT)}. \]</div>
+<p>Using <span class="math notranslate nohighlight">\(Z_{II} = 1.0\)</span> and <span class="math notranslate nohighlight">\(Z_{I} = 2.4\)</span> for the partition functions and the ionization energy (<span class="math notranslate nohighlight">\(\chi_I = 5.14\)</span> eV) of Na I leads to <span class="math notranslate nohighlight">\(N_{II}/N_{I} = 2.43 \times 10^3\)</span>.  There are ~2220 Na II atoms for every Na I atom in the Sun’s photosphere and the total number of Na atoms per unit area above the photosphere is about <span class="math notranslate nohighlight">\(2.22 \times 10^{22}\:{\rm m^{-2}}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">h</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">m_e</span><span class="p">,</span><span class="n">e</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">Saha_Eq</span><span class="p">(</span><span class="n">Z_I</span><span class="p">,</span><span class="n">Z_II</span><span class="p">,</span><span class="n">T</span><span class="p">,</span><span class="n">chi_I</span><span class="p">):</span>
+    <span class="c1">#Z_I = neutral state partition function </span>
+    <span class="c1">#Z_II = singly ionized partition function</span>
+    <span class="c1">#T = temperature (in K)</span>
+    <span class="c1">#chi_I = ionization energy from the ground state (in eV)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="o">*</span><span class="n">Z_II</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">P_e</span><span class="o">*</span><span class="n">Z_I</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">m_e</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">h</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">chi_I</span><span class="o">*</span><span class="n">e</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="p">))</span>
+
+<span class="n">P_e</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1">#1 N/m^2 assumed by Carroll and Ostlie (2007)</span>
+<span class="n">NII_NI</span> <span class="o">=</span> <span class="n">Saha_Eq</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">5800</span><span class="p">,</span><span class="mf">5.14</span><span class="p">)</span>
+<span class="n">tot_Na</span> <span class="o">=</span> <span class="n">NII_NI</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="mf">18.96</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The ratio N_II/N_I for Na is </span><span class="si">%1.2e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">NII_NI</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The total number of Na atoms per unit area above the photosphere is </span><span class="si">%1.2e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">tot_Na</span><span class="p">)</span>
+
+<span class="n">m_Na</span> <span class="o">=</span> <span class="mf">3.82e-26</span> <span class="c1">#kg; mass of sodium</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The density of Na above each m^2 of the photosphere is </span><span class="si">%1.2e</span><span class="s2"> kg/m^2&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m_Na</span><span class="o">*</span><span class="n">tot_Na</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The ratio N_II/N_I for Na is 2.43e+03.
+The total number of Na atoms per unit area above the photosphere is 2.22e+22.
+The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
+</pre></div>
+</div>
+</div>
+</div>
+<p>The number of absorbing atoms can be determined by comparing the measured equivalent widths for different absorption lines with a theoretical curve of growth.  A similar analysis can be performed for lines originating from atoms (or ions) in different initial states, where the Boltzmann equation is applied to the relative numbers of atoms (or ions) to calculate the excitation temperature.  It also possible to use the Saha equation to find either the electron pressure of the ionization temperature.</p>
 </div>
 <div class="section" id="computer-modeling-of-stellar-atmospheres">
 <h3><span class="section-number">5.5.5. </span>Computer Modeling of Stellar Atmospheres<a class="headerlink" href="#computer-modeling-of-stellar-atmospheres" title="Permalink to this headline">¶</a></h3>
+<p>The ultimate refinement in analyzing stellar atmospheres comes from the construction of a <em>model atmosphere</em> on a computer.  Each of the parameters that we use (temperature, pressure, and density) depend on each other in complex ways.  Each atmospheric layer is involved in the formation of line profiles that contribute to the observed stellar spectrum.  The equations of hydrostatic equilibrium, thermodynamics, statistical and quantum mechanics, and energy transport (by radiation and convection) are combined with extensive libraries of opacities to calculate the temperature, pressure, and density as a function of depth below the surface.</p>
+<div align="center">
+<p><img alt="Table 2" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Table_2.jpg?raw=true?" /><br>
+<strong>Table 2</strong>: Elemental abundance in the Solar photosphere.  The relative abundance refers to the abundance relative to H (<span class="math notranslate nohighlight">\(\log_{10}\:N_H=12.00\)</span>) (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1998SSRv...85..161G/abstract">Grevesse &amp; Sauval (1998)</a>; Carroll &amp; Ostlie (2007))</p>
+</div>
+<p>The models provide insight into measurable fundamental properties (surface temperature and surface gravity) of a star.  After extensive minimization (or “fine-tuning”) relative to the observations, astronomers can finally claim to understand the coded information emanating as light from a star.  This basic procedure led astronomers to an understanding of the elemental abundances of the Sun and other stars.  Knowledge of the basic ingredients of the universe provides observational tests and constraints for some of the most fundamental theories in astronomy:</p>
+<ul class="simple">
+<li><p>the nucleosynthesis of light elements as a result of stellar evolution,</p></li>
+<li><p>the production of heavier elements by supernovae, and</p></li>
+<li><p>the Big Bang that produced the primordial H and He that started it all.</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="supplemental-links">
