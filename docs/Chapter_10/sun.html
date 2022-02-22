@@ -251,6 +251,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_10/sun.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_10/sun.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -510,6 +532,62 @@
 <p>X-ray emissions from the photosphere are also rare, where the blackbody continuum decreases more rapidly (i.e., <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#rayleigh-jeans-and-wien-approximation">Wien approximation</a>).  Thus, any X-ray emission from the corona overwhelms the contribution from the photosphere due to its high temperature and low opacity at X-ray wavelengths.  The corona contains a high degree of ionization for all the elements present, where the neutral atoms undergo a large number of transitions.  Each element is capable of producing ans extensive emission spectrum.</p>
 <div class="section" id="coronal-holes-and-the-solar-wind">
 <h4><span class="section-number">6.2.4.1. </span>Coronal Holes and the Solar Wind<a class="headerlink" href="#coronal-holes-and-the-solar-wind" title="Permalink to this headline">¶</a></h4>
+<p>Observations show that X-ray emission is non-uniform, where active (bright and hot) regions exist along with the <strong>coronal holes</strong> (darker and cooler regions).  Within the coronal holes, localized bright spots (in X-ray wavelengths) can occur over a timescale of several hours.  A weaker X-ray emission coming from the coronal holes is characteristic of the lower density and temperature of the region.</p>
+<p>The existence of coronal holes is tied to the Sun’s magnetic field and the generation of a <em>fast</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Solar_wind">solar wind</a>.  The solar wind consists of a continuous stream of particles escaping from the Sun at speeds of approximately <span class="math notranslate nohighlight">\(750\:{\rm km/s}\)</span>.  A gusty, <em>slow</em> solar wind (speeds of about half the fast solar wind) is produced by streamers in the corona associated with closed magnetic fields.</p>
+<p>The Sun’s magnetic field is similar to a dipole (on a global scale), although its value can differ significantly in localized regions and the field strength is typically <span class="math notranslate nohighlight">\(\sim 10^{-4}\:{\rm T}\)</span> near the surface (or a factor of few larger than Earth’s magnetic field at its surface).  Coronal holes correspond to regions where the magnetic field lines are <em>open</em>, while the X-ray bright regions are associated with <em>closed</em> field lines.  Closed field lines form loops that return to the Sun, while open field lines extend out to great distances.</p>
+<p>For charged particles moving in an external magnetic field, the Lorentz force equation applies</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B}), \tag{2} \]</div>
+<p>which describes the force <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> exerted on a charged particle <span class="math notranslate nohighlight">\(q\)</span> with a velocity <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> in an electric field <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> and magnetic field <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>.  Due to the vector cross product, the force is always mutually perpendicular to both the direction of the velocity and magnetic field (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Right-hand_rule">right-hand rule</a>).  Assuming that the electric field is negligible <span class="math notranslate nohighlight">\((E \ll vB\sin\theta\)</span>), charged particles are forced to spiral around the magnetic field lines and cannot actually ross them except by collisions.  Closed magnetic field lines tend to trap charged particles, while open field lines allow the particles to travel away from the Sun.  Thus, <em>the solar wind originates from the coronal holes</em> (or regions of open magnetic field lines).  The bright regions in X-ray observations are due to the higher densities of charged particles (electrons and ions) that are trapped in large and small magnetic field loops.  A similar mechanism of trapping charged particles in magnetic fields occurs on the Earth through the <a class="reference external" href="https://en.wikipedia.org/wiki/Aurora">auroras</a> (aurora borealis (northern lights) and aurora australis (southern lights)) and the <a class="reference external" href="https://en.wikipedia.org/wiki/Van_Allen_radiation_belt">Van Allen radiation belts</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The existence of ongoing mass loss from the Sun (i.e., solar wind) was deduced from <a class="reference external" href="https://en.wikipedia.org/wiki/Comet_tail">comet tails</a>, where a radiation pressure coming from the Sun pushes back the dust tail.</p>
+</div>
+<p>The Ulysses spacecraft was placed on an inclined, heliocentric orbit and was still able to detect the solar wind.  At 1 AU, the solar wind velocity ranges from <span class="math notranslate nohighlight">\(200-750\:{\rm km/s}\)</span> with a typical density of <span class="math notranslate nohighlight">\(7\times10^6\:{\rm ions/m^3}\)</span>, and characteristic kinetic temperatures of <span class="math notranslate nohighlight">\(10^4-10^5\)</span> K for protons and electrons.</p>
+<ul class="simple">
+<li><p><strong>What is the mass loss rate of the Sun?</strong></p></li>
+</ul>
+<p>From the information above, we know the approximate number density of particles at 1 AU and assuming that the mass loss rate is spherically symmetric, then the mass loss is simply the mass density <span class="math notranslate nohighlight">\(\rho\)</span> that can cross a spherical shell of a radius <span class="math notranslate nohighlight">\(r\)</span> in a time <span class="math notranslate nohighlight">\(t\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[ dM = \rho dV = (nm_H)(Av\:dt) = (nm_H)(4\pi r^2\:v\:dt), \]</div>
+<p>where the mass density depends on the number density <span class="math notranslate nohighlight">\(n\)</span> and particle mass <span class="math notranslate nohighlight">\(m_H\)</span> (assumed to be hydrogen).  The mass loss <em>rate</em> can be obtained by dividing both sides to get</p>
+<div class="math notranslate nohighlight">
+\[\frac{dM}{dt} = 4\pi r^2\:nm_H\:v. \tag{3}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By convention, stellar mass loss rates are given in <em>solar masses per year</em> and the rate is symbolized as <span class="math notranslate nohighlight">\(\dot{M}\equiv {dM/dt}\)</span>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">au</span><span class="p">,</span> <span class="n">m_p</span>
+
+<span class="k">def</span> <span class="nf">Mass_loss</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+    <span class="c1">#r = radius of the spherical shell; in m</span>
+    <span class="c1">#n = number density of ions; in ions/m^3</span>
+    <span class="c1">#v = speed of the ions; in m/s</span>
+    <span class="n">Mdot</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">m_p</span><span class="p">)</span><span class="o">*</span><span class="n">v</span>
+    <span class="k">return</span> <span class="n">Mdot</span><span class="o">*</span><span class="p">(</span><span class="mf">365.25</span><span class="o">*</span><span class="mi">86400</span><span class="p">)</span><span class="o">/</span><span class="n">M_sun</span> <span class="c1">#mass loss rate; converted into M_sun/yr</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#solar mass in kg</span>
+<span class="n">v_H</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="mi">750</span> <span class="o">+</span> <span class="mi">200</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span> <span class="c1">#average particle velocity; converted to m/s</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mi">1</span><span class="o">*</span><span class="n">au</span> <span class="c1">#radius of shell; converted to m</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mf">7e6</span> <span class="c1">#number density of ions; ions/cm^3</span>
+
+<span class="n">Sun_loss</span> <span class="o">=</span> <span class="n">Mass_loss</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">v_H</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mass loss rate of the Sun is approximately </span><span class="si">%1.3e</span><span class="s2"> M_sun/yr.&quot;</span> <span class="o">%</span> <span class="n">Sun_loss</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The entire Sun&#39;s mass would be depleted in </span><span class="si">%1.3e</span><span class="s2"> yr.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">Sun_loss</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mass loss rate of the Sun is approximately 2.482e-14 M_sun/yr.
+The entire Sun&#39;s mass would be depleted in 4.030e+13 yr.
+</pre></div>
+</div>
+</div>
+</div>
+<p>It would require more than <span class="math notranslate nohighlight">\(10^{13}\)</span> yr (or <span class="math notranslate nohighlight">\(10^4\)</span> Gyr) before the entire mass of the Sun is dissipated and so the effect of the present-day solar wind negligible compared to the evolution of the Sun’s interior.</p>
 </div>
 <div class="section" id="the-parker-wind-model">
 <h4><span class="section-number">6.2.4.2. </span>The Parker Wind Model<a class="headerlink" href="#the-parker-wind-model" title="Permalink to this headline">¶</a></h4>
