@@ -591,6 +591,74 @@ The entire Sun&#39;s mass would be depleted in 4.030e+13 yr.
 </div>
 <div class="section" id="the-parker-wind-model">
 <h4><span class="section-number">6.2.4.2. </span>The Parker Wind Model<a class="headerlink" href="#the-parker-wind-model" title="Permalink to this headline">¶</a></h4>
+<p>Since the corona is very hot and has a high thermal conductivity, it can referred to as a <a class="reference external" href="https://en.wikipedia.org/wiki/Plasma_(physics)">plasma</a>.  The ability of a plasma to conduct heat implies that the corona is almost isothermal.  In 1958, <a class="reference external" href="https://en.wikipedia.org/wiki/Eugene_Parker">Eugene Parker</a> developed an approximately isothermal model of the solar wind.</p>
+<p>We begin by considering the corona to be in hydrostatic equilibrium, which means that the <em>outward</em> pressure is balanced by the <em>inward</em> pull of gravity.  If the mass of the corona is insignificant compared to the total mass of the Sun, then the mass enclosed at a given radius of the corona <span class="math notranslate nohighlight">\(M_r\)</span> is approximately equal to <span class="math notranslate nohighlight">\(M_\odot\)</span> (i.e., <span class="math notranslate nohighlight">\(M_r \approx M_\odot\)</span>) and the equation for the <a class="reference external" href="https://en.wikipedia.org/wiki/Hydrostatic_equilibrium">hydrostatic equilibrium</a> becomes</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} = -\frac{G M_\odot \rho}{r^2}. \tag{4} \]</div>
+<p>For simplicity, we assume that the gas is completely ionized hydrogen so that the number density of protons is given by</p>
+<div class="math notranslate nohighlight">
+\[ n \approx \frac{\rho}{m_p}. \]</div>
+<p>Then, from the ideal gas law we can write the pressure as</p>
+<div class="math notranslate nohighlight">
+\[ P = 2nkT, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu = 1/2\)</span> for ionized hydrogen (from <a class="reference external" href="https://en.wikipedia.org/wiki/Ideal_gas_law#Statistical_mechanics">statistical mechanics</a>) and <span class="math notranslate nohighlight">\(m_H\approx m_p\)</span>.  Substituting into Eqn 4 and the hydrostatic equilibrium equation becomes</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d}{dr}(2nkT) = - \frac{GM_\odot nm_p}{r^2}. \tag{5}\]</div>
+<p>For an <em>isothermal</em> gas, Eqn 5 can be integrated directly and solved for the number density as a function of radius <span class="math notranslate nohighlight">\(n(r)\)</span> or</p>
+<div class="math notranslate nohighlight">
+\[ n(r) = n_o e^{-\lambda (1-r_o/r)}, \tag{6} \]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[ \lambda \equiv \frac{GM_\odot m_p}{2kTr_o} \]</div>
+<p>and there is some number density <span class="math notranslate nohighlight">\(n_o\)</span> at a radius <span class="math notranslate nohighlight">\(r_o\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The value of <span class="math notranslate nohighlight">\(\lambda\)</span> is approximately the rato of a proton’s gravitational potential energy <span class="math notranslate nohighlight">\((GM_\odot m_p/r_o)\)</span> and its thermal kinetic energy <span class="math notranslate nohighlight">\((2kT)\)</span>.</p>
+</div>
+<p>The pressure structure is related to the number density (via the ideal gas law) and can be written as</p>
+<div class="math notranslate nohighlight">
+\[ P(r) = P_o e^{-\lambda (1-r_o/r)}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(P_o = 2n_o kT\)</span>.</p>
+<p>An immediate consequence is that the pressure <em>does not</em> approach zero as <span class="math notranslate nohighlight">\(r\)</span> goes to infinity.  Typical values of the inner corona are: <span class="math notranslate nohighlight">\(T = 1.5 \times 10^6\)</span> K and <span class="math notranslate nohighlight">\(n_o = 3 \times 10^{13}\:{\rm m^{-3}}\)</span> at <span class="math notranslate nohighlight">\(r_o = 1.4\:R_\odot\)</span>.  Then,</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[ \lambda = \frac{(6.67 \times 10^{-11}\:{\rm m^3/kg/s^2})(1.989 \times 10^{30}\:{\rm kg})( 1.67\times 10^{-26}\:{\rm kg})}{2 (1.381 \times 10^{-23}\:{\rm m^2 kg/s^2/K})(1.5\times 10^6\:{\rm K})(9.740 \times 10^8\:{\rm m})} = \mathbf{5.5}\]</div>
+<div class="math notranslate nohighlight">
+\[ n(\infty) = (3 \times 10^{13}\:{\rm m^{-3}})/e^{\lambda} = \mathbf{1.2 \times 10^{11}\:{\rm m^{-3}}}\]</div>
+<p>and
+$<span class="math notranslate nohighlight">\( P(\infty) = 2(1.381 \times 10^{-23}\:{\rm m^2 kg/s^2/K})(1.5\times 10^6 \:{\rm K})(3 \times 10^{13}\:{\rm m^{-3}})/e^{\lambda} = \mathbf{5 \times 10^{-6}\:{\rm N/m^2}}. \)</span>$</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">k</span><span class="p">,</span> <span class="n">m_p</span><span class="p">,</span> <span class="n">G</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M_odot</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#Solar mass in kg</span>
+<span class="n">R_odot</span> <span class="o">=</span> <span class="mf">6.957e8</span> <span class="c1">#Solar radius in m</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="mf">1.5e6</span> <span class="c1">#temperature in K</span>
+<span class="n">n_o</span> <span class="o">=</span> <span class="mf">3e13</span> <span class="c1">#number density in m^{-3}</span>
+
+<span class="n">lam</span> <span class="o">=</span> <span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">M_odot</span><span class="o">*</span><span class="n">m_p</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="o">*</span><span class="p">(</span><span class="mf">1.4</span><span class="o">*</span><span class="n">R_odot</span><span class="p">))</span>
+<span class="n">n_infty</span> <span class="o">=</span> <span class="n">n_o</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">lam</span><span class="p">)</span>
+<span class="n">P_infty</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">n_o</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">lam</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of lambda is </span><span class="si">%1.1f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">lam</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number density at infinity is </span><span class="si">%1.1e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">n_infty</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The pressure at infinity is </span><span class="si">%1.0e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">P_infty</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The value of lambda is 5.5.
+The number density at infinity is 1.2e+11.
+The pressure at infinity is 5e-06.
+</pre></div>
+</div>
+</div>
+</div>
+<p>With the exception of localized clouds, the actual densities and pressures of interstellar dust and gas are much lower that those just derived.</p>
+<p>The assumption that the corona is approximately isothermal is not completely valid, but it is roughly consistent with observations.  Apparently, the assumption that the corona is in hydrostatic equilibrium is wrong.  Since <span class="math notranslate nohighlight">\(P(\infty)\)</span> greatly exceeds the pressures in interstellar space, material must be expanding outward from teh Sun, implying the existence of the solar wind.</p>
 </div>
 </div>
 <div class="section" id="the-hydrodynamic-nature-of-the-upper-solar-atmosphere">
