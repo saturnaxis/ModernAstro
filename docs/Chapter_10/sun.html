@@ -664,6 +664,33 @@ The pressure at infinity is 5e-06.
 </div>
 <div class="section" id="the-hydrodynamic-nature-of-the-upper-solar-atmosphere">
 <h3><span class="section-number">6.2.5. </span>The Hydrodynamic Nature of the Upper Solar Atmosphere<a class="headerlink" href="#the-hydrodynamic-nature-of-the-upper-solar-atmosphere" title="Permalink to this headline">¶</a></h3>
+<p>To develop a better understanding of the solar atmosphere’s structure, the approximation of hydrostatic equilibrium must be replaced by a set of <a class="reference external" href="https://en.wikipedia.org/wiki/Fluid_dynamics">hydrodynamic equations</a> that describe the flow.  In particular, we can write the acceleration as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d^2 r}{dt^2} = \frac{dv}{dt} = \frac{dv}{dr}\frac{dr}{dt} = v\frac{dv}{dr}, \]</div>
+<p>using the chain rule and add a term to Eqn 4 to get</p>
+<div class="math notranslate nohighlight">
+\[ \rho v\frac{dv}{dr} = -\frac{dP}{dr} - \frac{GM_r \rho}{r^2}, \tag{7} \]</div>
+<p>where <span class="math notranslate nohighlight">\(v\)</span> is the velocity of the flow.  From fluid dynamics, there is also a <em>conservation of mass flow</em> across a boundary and is written as</p>
+<div class="math notranslate nohighlight">
+\[ 4\pi r^2 \rho v = {\rm constant}, \]</div>
+<p>which is similar to Eqn 3 that was used to estimate the Sun’s mass loss rate.  Since the mass flow is conserved, we immediately get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d(\rho vr^2)}{dr} = 0. \]</div>
+<p>In the convection zone there is a motion of the hot gas rising and the return flow of the cool gas sinking, which sets up longitudinal (pressure) waves that propagate outward through the photosphere and into the chromosphere.  The outward <em>flux</em> of wave energy <span class="math notranslate nohighlight">\(F_E\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[ F_E = \frac{1}{2}\rho v_w^2 v_s, \tag{8}\]</div>
+<p>which depends on the local sound speed <span class="math notranslate nohighlight">\(v_s\)</span> and the velocity amplitude <span class="math notranslate nohighlight">\(v_w\)</span> of particles that oscillate relative to their equilibrium positions.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Speed_of_sound#Speed_of_sound_in_ideal_gases_and_air">sound speed</a> is given by</p>
+<div class="math notranslate nohighlight">
+\[ v_s = \sqrt{\frac{K}{\rho}} = \sqrt{\frac{\gamma P}{\rho}}, \]</div>
+<p>which depends on gas density <span class="math notranslate nohighlight">\(\rho\)</span> and the bulk modulus <span class="math notranslate nohighlight">\(K\)</span> (or the adiabatic index <span class="math notranslate nohighlight">\(\gamma\)</span> and gas pressure <span class="math notranslate nohighlight">\(P\)</span>).  From the ideal gas law, the pressure can be written as</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{\rho k T}{\mu m_H} \]</div>
+<p>and the sound speed can be written as</p>
+<div class="math notranslate nohighlight">
+\[ v_s = \sqrt{\frac{\gamma k T}{\mu m_H}}. \]</div>
+<p>For a fixed <span class="math notranslate nohighlight">\(\gamma\)</span> and <span class="math notranslate nohighlight">\(\mu\)</span>, <span class="math notranslate nohighlight">\(v_s \propto \sqrt{T}\)</span>.</p>
+<p>A wave that begins at the top of the convection zone will have a wave oscillation amplitude less than the sound speed (<span class="math notranslate nohighlight">\(v_w&lt;v_s\)</span>).  However, the gas density decreases with altitude dropping by a factor of <span class="math notranslate nohighlight">\(10^4\)</span> in approximately 1000 km.  The wave oscillation amplitude <span class="math notranslate nohighlight">\(v_w\)</span> must significantly increase, assuming that <span class="math notranslate nohighlight">\(4\pi r^2 F_E \approx {\rm constant}\)</span> (i.e., very little mechanical energy loss) and the sound speed <span class="math notranslate nohighlight">\(v_s\)</span> remains essentially unchanged.  This increase in wave oscillation amplitude makes the motion become <em>supersonic</em> (<span class="math notranslate nohighlight">\(v_w&gt;v_s\)</span>) as particles travel faster than the sound speed.  The wave develops into a <a class="reference external" href="https://en.wikipedia.org/wiki/Shock_wave">shock wave</a> much like the energy wave that triggers a tsunami.</p>
+<p>A shock wave is characterized by a steep density change over a short distance, which is called the <strong>shock front</strong>.  A shock moving through a gas produces a great deal of heat via collision, which leaves the gas in its wake highly ionized.  The heating comes at the expense of mechanical energy of the shock and thus, the shock quickly dissipates.  The gas in teh chromosphere and above is effectively heated by the mass motions created in the convection zone.</p>
 </div>
 <div class="section" id="magnetohydrodynamics-and-alfven-waves">
 <h3><span class="section-number">6.2.6. </span>Magnetohydrodynamics and Alfvén Waves<a class="headerlink" href="#magnetohydrodynamics-and-alfven-waves" title="Permalink to this headline">¶</a></h3>
