@@ -251,6 +251,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_11/interiors-of-stars.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_11/interiors-of-stars.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -618,7 +640,24 @@
 \[ \frac{dP}{dr} \sim \frac{P_s - P_c}{R_s - 0} \sim -\frac{P_c}{R_\odot}, \]</div>
 <p>which depends on the central pressure <span class="math notranslate nohighlight">\(P_c\)</span>.  Substituting into Eqn. 6 provides an estimate of the central pressure as</p>
 <div class="math notranslate nohighlight">
-\[ P_c \sim \frac{G M_\odot \bar{\rho}_\odot}{R_\odot} \sim 2.7 \times 10^{14} \:{\rm N/m^2}. \]</div>
+\[ P_c \sim \frac{G M_\odot \bar{\rho}_\odot}{R_\odot} \sim 2.69 \times 10^{14} \:{\rm N/m^2}. \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GM_sun</span> <span class="o">=</span> <span class="mf">1.3271244e20</span> <span class="c1">#GM_sun from astropy in m^3/s^2</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.957e8</span> <span class="c1">#solar radius in m</span>
+<span class="n">rho_sun</span> <span class="o">=</span> <span class="mi">1410</span> <span class="c1">#solar density in kg/m^3</span>
+
+<span class="n">P_c</span> <span class="o">=</span> <span class="n">GM_sun</span><span class="o">*</span><span class="n">rho_sun</span><span class="o">/</span><span class="n">R_sun</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The estimated central pressure is </span><span class="si">%1.2e</span><span class="s2"> N/m^2&quot;</span> <span class="o">%</span> <span class="n">P_c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated central pressure is 2.69e+14 N/m^2
+</pre></div>
+</div>
+</div>
+</div>
 <p>A more rigorous calculation requires the integration of the hydrostatic equilibrium equation, where a functional form of the mass distribution (<span class="math notranslate nohighlight">\(M_r\)</span> and <span class="math notranslate nohighlight">\(\rho\)</span>) is needed.  Unfortunately, explicit expression s are not available.  A standard solar model gives a central pressure of <span class="math notranslate nohighlight">\(2.34 \times 10^{16}\:{\rm N/m^2}\)</span>, which is <span class="math notranslate nohighlight">\(\sim 100 \times\)</span> larger than our crude estimate because there is an increased density near the center of the Sun.  Using <span class="math notranslate nohighlight">\(1.13 \times 10^5 \:{N/m^2}\)</span> for Earth’s atmospheric pressure, the more realistic model of the Sun’s interior predicts a central pressure of <span class="math notranslate nohighlight">\(2.3 \times 10^{11}\)</span> atm.</p>
 </div>
 <div class="section" id="the-equation-of-mass-conservation">
