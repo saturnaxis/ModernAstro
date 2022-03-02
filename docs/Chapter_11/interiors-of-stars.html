@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -566,9 +568,58 @@
 <h2><span class="section-number">7.1. </span>Hydrostatic Equilibrium<a class="headerlink" href="#hydrostatic-equilibrium" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="determining-the-internal-structures-of-stars">
 <h3><span class="section-number">7.1.1. </span>Determining the Internal Structures of Stars<a class="headerlink" href="#determining-the-internal-structures-of-stars" title="Permalink to this headline">¶</a></h3>
+<p>Astronomers must generate computer models to deduce the detailed internal structure of stars, where these models mus be consistent with the known physical laws and agree with observable surface features.  Much of the theoretical foundation was understood in the first half of the 20th Century, it wasn’t until the 1960s that computers were advanced enough to carry out all the calculations.  Although computer modeling and evolutions is a success, there are numerous questions that remain unanswered.</p>
+<p>The theoretical study of stellar structure shows that stars are dynamic objects that typically change over very slow timescales (compared to us mortals), but some events can be very rapid and dramatic.  Consider the observed energy output of the Sun, which is <span class="math notranslate nohighlight">\(3.839 \times 10^{26}\)</span> J of energy emitted per second.  This energy output would be sufficient to melt a column of ice with a square mile area and 1 AU thick in only 0.3 seconds (assuming 100% absorption efficiency).  Stars have a finite supply of energy, where they must eventually use up their fuel and die.  <em>Stellar evolution is the result of a constant fight against the relentless pull of gravity.</em></p>
 </div>
 <div class="section" id="the-derivation-of-the-hydrostatic-equilibrium-equation">
 <h3><span class="section-number">7.1.2. </span>The Derivation of the Hydrostatic Equilibrium Equation<a class="headerlink" href="#the-derivation-of-the-hydrostatic-equilibrium-equation" title="Permalink to this headline">¶</a></h3>
+<p>The gravitational force is always attractive (as opposed to the electrostatic force that has opposite charges).  Therefore, an opposing force (e.g., supplied by pressure) must exist in a star to avoid collapse.  Just like the ocean, the pressure within a star varies with depth.</p>
+<p><strong>Consider a cylinder of mass <span class="math notranslate nohighlight">\(dm\)</span> whose base is located a distance <span class="math notranslate nohighlight">\(r\)</span> from the center of a spherical star.</strong></p>
+<ol class="simple">
+<li><p>The top and bottom of the cylinder each have an area <span class="math notranslate nohighlight">\(A\)</span> and the cylinder’s height is <span class="math notranslate nohighlight">\(dr\)</span>.</p></li>
+<li><p>Assume that the only forces acting on the cylinder are <em>gravity</em> and the <em>force due to pressure</em>, which is always normal (radially) to the top and bottom cylinder surface.</p></li>
+<li><p>These forces also vary with the cylinder’s distance from the center of the star.</p></li>
+</ol>
+<p>Using Newton’s second law <span class="math notranslate nohighlight">\(\mathbf{F} = m\mathbf{a}\)</span>, we have the net force along the central axis of the cylinder:</p>
+<div class="math notranslate nohighlight">
+\[ dm \frac{d^2r}{dt^2} = F_g + F_{p,top} + F_{p,bot}, \]</div>
+<p>where the gravitational force <span class="math notranslate nohighlight">\(F_g\)</span> and pressure force on the top of the cylinder <span class="math notranslate nohighlight">\(F_{p,top}\)</span> are directed inward (i.e., <span class="math notranslate nohighlight">\(F&lt;0\)</span>), while the pressure force on the bottom <span class="math notranslate nohighlight">\(F_{p,bot}\)</span> of the cylinder is directed upward (i.e., <span class="math notranslate nohighlight">\(F_{p,bot}&gt;0\)</span>).  The pressure forces on the <em>curved</em> side of the cylinder will cancel due to symmetry and have been explicitly excluded from the expression.</p>
+<p>The pressure force at the top and bottom of the cylinder are at different depths, and we can write a differential pressure force <span class="math notranslate nohighlight">\(-dF_p = F_{p,bot}+F_{p,top}\)</span>.  Then the equation from Newton’s second law can be rewritten as:</p>
+<div class="math notranslate nohighlight">
+\[ dm \frac{d^2r}{dt^2} = F_g - dF_p. \tag{1}\]</div>
+<p>The gravitational force on a small mass <span class="math notranslate nohighlight">\(dm\)</span> located at a distance <span class="math notranslate nohighlight">\(r\)</span> from the center of a spherically symmetric mass is</p>
+<div class="math notranslate nohighlight">
+\[ F_g = -\frac{G M_r dm}{r^2}, \tag{2}\]</div>
+<p>which depends on the mass <span class="math notranslate nohighlight">\(M_r\)</span> inside the sphere of radius <span class="math notranslate nohighlight">\(r\)</span> (i.e., the interior mass).  The pressure is defined as teh amount of force per unit area (<span class="math notranslate nohighlight">\(P\equiv F/A\)</span>), where a pressure differential <span class="math notranslate nohighlight">\(dP\)</span> can be expressed as</p>
+<div class="math notranslate nohighlight">
+\[ dF_p = A dP. \tag{3} \]</div>
+<p>Substituting Eqns. 2 &amp; 3 into Eqn. 1 produces</p>
+<div class="math notranslate nohighlight">
+\[ dm\frac{d^2 r}{dt^2} = -\frac{G M_r dm}{r^2} - A dP. \tag{4}\]</div>
+<p>The volume of a cylinder is product of the area <span class="math notranslate nohighlight">\(A\)</span> of the base with the height <span class="math notranslate nohighlight">\(dr\)</span>, where the density of material enclosed <span class="math notranslate nohighlight">\(\rho\)</span> is the differential mass <span class="math notranslate nohighlight">\(dm\)</span> divided by the volume.  The differential mass can be given as</p>
+<div class="math notranslate nohighlight">
+\[ dm = \rho A dr, \]</div>
+<p>and a substitution into Eqn. 4 becomes</p>
+<div class="math notranslate nohighlight">
+\[ \rho A dr \frac{d^2r}{dt^2} = -\frac{G M_r \rho A dr}{r^2} - A dP. \]</div>
+<p>Normalizing by the volume of the cylinder produces</p>
+<div class="math notranslate nohighlight">
+\[ \rho \frac{d^2}{dt^2} = -\frac{G M_r \rho}{r^2} - \frac{dP}{dr}, \tag{5} \]</div>
+<p>which is the equation for the radial motion of the cylinder.  For the hydrostatic case (i.e., <span class="math notranslate nohighlight">\(\mathbf{a}=0\)</span>), the radial motion equation becomes</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} = -\frac{G M_r \rho}{r^2} = -\rho g, \tag{6}\]</div>
+<p>where the local acceleration of gravity (at a radius <span class="math notranslate nohighlight">\(r\)</span>) is <span class="math notranslate nohighlight">\(g\equiv GM_r/r^2\)</span>.</p>
+<p>The condition of <strong>hydrostatic equilibrium</strong> represents a fundamental equation of stellar structure for spherically symmetric objects with negligible accelerations.  A <strong>pressure gradient</strong> <span class="math notranslate nohighlight">\(dP/dr\)</span> must exit to counteract the gravitational force.  It is not the pressure that supports a star, but the <em>change in pressure with radius</em>.  The pressure must decrease with increasing radius so that the pressure is necessarily larger within the interior as compared to near the surface.</p>
+<ul class="simple">
+<li><p><strong>What is an estimate of the pressure at the center of the Sun?</strong></p></li>
+</ul>
+<p>A very crude estimate can be made, if we assume that <span class="math notranslate nohighlight">\(M_r = 1 M_\odot\)</span>, <span class="math notranslate nohighlight">\(r=1 R\odot\)</span>, <span class="math notranslate nohighlight">\(\rho = \bar{\rho}_\odot = 1410 \:{\rm kg/m^3}\)</span>, and the surface pressure is exactly zero.  Converting the differential equation for pressure into a difference equation yields</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} \sim \frac{P_s - P_c}{R_s - 0} \sim -\frac{P_c}{R_\odot}, \]</div>
+<p>which depends on the central pressure <span class="math notranslate nohighlight">\(P_c\)</span>.  Substituting into Eqn. 6 provides an estimate of the central pressure as</p>
+<div class="math notranslate nohighlight">
+\[ P_c \sim \frac{G M_\odot \bar{\rho}_\odot}{R_\odot} \sim 2.7 \times 10^{14} \:{\rm N/m^2}. \]</div>
+<p>A more rigorous calculation requires the integration of the hydrostatic equilibrium equation, where a functional form of the mass distribution (<span class="math notranslate nohighlight">\(M_r\)</span> and <span class="math notranslate nohighlight">\(\rho\)</span>) is needed.  Unfortunately, explicit expression s are not available.  A standard solar model gives a central pressure of <span class="math notranslate nohighlight">\(2.34 \times 10^{16}\:{\rm N/m^2}\)</span>, which is <span class="math notranslate nohighlight">\(\sim 100 \times\)</span> larger than our crude estimate because there is an increased density near the center of the Sun.  Using <span class="math notranslate nohighlight">\(1.13 \times 10^5 \:{N/m^2}\)</span> for Earth’s atmospheric pressure, the more realistic model of the Sun’s interior predicts a central pressure of <span class="math notranslate nohighlight">\(2.3 \times 10^{11}\)</span> atm.</p>
 </div>
 <div class="section" id="the-equation-of-mass-conservation">
 <h3><span class="section-number">7.1.3. </span>The Equation of Mass Conservation<a class="headerlink" href="#the-equation-of-mass-conservation" title="Permalink to this headline">¶</a></h3>
