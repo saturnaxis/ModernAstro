@@ -689,6 +689,41 @@ $$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
 <p>which relates the gas pressure <span class="math notranslate nohighlight">\(P\)</span>, volume <span class="math notranslate nohighlight">\(V\)</span>, and temperature <span class="math notranslate nohighlight">\(T\)</span> to the number of particles <span class="math notranslate nohighlight">\(N\)</span> (or <span class="math notranslate nohighlight">\(n\)</span>) and the Boltzmann constant <span class="math notranslate nohighlight">\(k\)</span> (or gas constant <span class="math notranslate nohighlight">\(R\)</span>).  The ideal gas law is limited to specific environments, where in astrophysical problems it is necessary to have a pressure equation of state that is more general.</p>
 <div class="section" id="the-derivation-of-the-pressure-integral">
 <h3><span class="section-number">7.2.1. </span>The Derivation of the Pressure Integral<a class="headerlink" href="#the-derivation-of-the-pressure-integral" title="Permalink to this headline">¶</a></h3>
+<p>The pressure of a gas is the force per area exerted on the walls of its container due to collisions.</p>
+<p><strong>Consider a gas-containing cylinder of length <span class="math notranslate nohighlight">\(\Delta x\)</span> and ends with a cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>.  The gas is composed of point particles, each of mass <span class="math notranslate nohighlight">\(m\)</span>, that interact through <em>perfectly</em> elastic collisions.</strong></p>
+<ol class="simple">
+<li><p>The gas exerts a pressure on one of the ends of the container.</p></li>
+<li><p>The impact of an individual particle on the container wall is described through a change in momentum.</p></li>
+<li><p>Newton’s 2nd (<span class="math notranslate nohighlight">\(\mathbf{F}=d\mathbf{p}/dt\)</span>) and 3rd laws can be applied.</p></li>
+</ol>
+<p>For a perfectly elastic collision, the angle of incidence equals the angle of reflection and we define a reference that is normal to the wall at the point of impact.  Then the particle approaches the wall in the positive <span class="math notranslate nohighlight">\(x\)</span>-direction and rebounds along the negative <span class="math notranslate nohighlight">\(x\)</span>-direction.  From Newton’s 3rd law, the <em>impulse</em> <span class="math notranslate nohighlight">\(\mathbf{F\Delta t}\)</span> delivered to the wall is just the negative of the change in momentum of the particle, or</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{F} \Delta t = - \Delta p = 2p_x \hat{\mathbf{i}}, \]</div>
+<p>using the <span class="math notranslate nohighlight">\(x\)</span>-component of the particle’s initial momentum <span class="math notranslate nohighlight">\(p_x\)</span>.  The average force exerted by the particle per time interval can be determined by the time interval between collision.  The (shortest) time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> is obtained when the particle traverses the length of the cylinder twice before returning for a second reflection, which is</p>
+<div class="math notranslate nohighlight">
+\[ \Delta t = \frac{2\Delta x}{v_x}, \]</div>
+<p>so the average force exerted on the wall by a single particle over that time period is given by</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac{2p_x}{\Delta t} = \frac{p_x v_x}{\Delta x}, \]</div>
+<p>where it is assumed that the force vector is normal to the surface.  The numerator is proportional to <span class="math notranslate nohighlight">\(v_x^2\)</span> because <span class="math notranslate nohighlight">\(p_x \propto v_x\)</span>.  For a sufficiently large collection of particles in random motion, the likelihood of motion in each direction is the same (i.e., <span class="math notranslate nohighlight">\(\bar{v}_x^2 = \bar{v}_y^2 = \bar{v}_z^2= v^2/3\)</span>) so that <span class="math notranslate nohighlight">\(v_x \approx v/\sqrt{3}\)</span> and <span class="math notranslate nohighlight">\(p_x v_x = pv/3\)</span>.  The average force per particle having a momentum <span class="math notranslate nohighlight">\(p\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[ F(p) = \frac{pv}{3\Delta x}. \]</div>
+<p>However, it is usually the case that the particles have a range of momenta (i.e., range of incident angles).  The number of particles with momenta between <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(p + dp\)</span> (similar to the Maxwell-Boltzmann distribution) is given by the expression <span class="math notranslate nohighlight">\(N_p\:dp\)</span> and the total number of particles in the container is</p>
+<div class="math notranslate nohighlight">
+\[ N = \int_0^\infty N_p\:dp. \]</div>
+<p>The contribution to the total force <span class="math notranslate nohighlight">\(dF(p)\)</span> by <em>all</em> the particles in a momentum range is</p>
+<div class="math notranslate nohighlight">
+\[ dF(p) = F(p)N_p\:dp = \frac{N_p}{3\Delta x}pv\:dp. \]</div>
+<p>The sum of all the forces (i.e., integrating over all the possible momenta) exerted by particle collisions is</p>
+<div class="math notranslate nohighlight">
+\[ F = \frac{1}{3} \int_0^\infty \frac{N_p}{\Delta x}pv\:dp. \]</div>
+<p>Normalizing the force exerted on the wall by the surface area <span class="math notranslate nohighlight">\(A\)</span> is the pressure on the surface.  The volume of a cylinder is <span class="math notranslate nohighlight">\(\Delta V = A \Delta x\)</span> and defining <span class="math notranslate nohighlight">\(n_p dp\)</span> as the number fo particles <em>per unit volume</em> having a momenta within the range of <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(p+dp\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[ n_p\:dp \equiv \frac{N_p}{\Delta V}dp, \]</div>
+<p>and we find the pressure exerted on teh wall is</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{F}{A} = \frac{1}{3} \int_0^\infty n_p pv\:dp. \tag{8} \]</div>
+<p>Equation 8 is sometimes called the <strong>pressure integral</strong>, which allows us to compute the pressure given some <em>distribution function</em> <span class="math notranslate nohighlight">\(n_p dp\)</span>.</p>
 </div>
 <div class="section" id="the-ideal-gas-law-in-terms-of-the-mean-molecular-weight">
 <h3><span class="section-number">7.2.2. </span>The Ideal Gas Law in Terms of the Mean Molecular Weight<a class="headerlink" href="#the-ideal-gas-law-in-terms-of-the-mean-molecular-weight" title="Permalink to this headline">¶</a></h3>
