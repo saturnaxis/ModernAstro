@@ -620,7 +620,7 @@
 \[ dm\frac{d^2 r}{dt^2} = -\frac{G M_r dm}{r^2} - A dP. \tag{4}\]</div>
 <p>The volume of a cylinder is product of the area <span class="math notranslate nohighlight">\(A\)</span> of the base with the height <span class="math notranslate nohighlight">\(dr\)</span>, where the density of material enclosed <span class="math notranslate nohighlight">\(\rho\)</span> is the differential mass <span class="math notranslate nohighlight">\(dm\)</span> divided by the volume.  The differential mass can be given as</p>
 <div class="math notranslate nohighlight">
-\[ dm = \rho A dr, \]</div>
+\[ dm = \rho A dr, \tag{4.5}\]</div>
 <p>and a substitution into Eqn. 4 becomes</p>
 <div class="math notranslate nohighlight">
 \[ \rho A dr \frac{d^2r}{dt^2} = -\frac{G M_r \rho A dr}{r^2} - A dP. \]</div>
@@ -662,13 +662,31 @@
 </div>
 <div class="section" id="the-equation-of-mass-conservation">
 <h3><span class="section-number">7.1.3. </span>The Equation of Mass Conservation<a class="headerlink" href="#the-equation-of-mass-conservation" title="Permalink to this headline">¶</a></h3>
+<p>Instead of using cylindrical symmetry, a relationship involving mass, radius, and density can be derived for <em>spherical symmetry</em> using Eqn. 4.5.</p>
+<p><strong>Consider a <em>shell</em> of mass <span class="math notranslate nohighlight">\(dM_r\)</span> and thickness <span class="math notranslate nohighlight">\(dr\)</span> located a distance <span class="math notranslate nohighlight">\(r\)</span> from the center of the shell.</strong></p>
+<ol class="simple">
+<li><p>Assume that the shell is sufficiently thin (i.e., <span class="math notranslate nohighlight">\(dr \ll r\)</span>).</p></li>
+<li><p>The volume of the shell is approximately <span class="math notranslate nohighlight">\(dV = A dr = 4\pi r^2\:dr\)</span>.</p></li>
+</ol>
+<p>Using the relation for density <span class="math notranslate nohighlight">\(\rho = M/V\)</span>, we arrive at the <strong>mass conservation equation</strong>,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dM_r}{dr} = 4\pi r^2 \rho, \tag{7} \]</div>
+<p>which describes the mass distribution (i.e., changes in mass with radius) within a star.</p>
 </div>
 <div class="section" id="problems">
 <h3><span class="section-number">7.1.4. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>1. Show that the equation for hydrostatic equilibrium (Eqn. 6) can also be written in terms of the optical depth <span class="math notranslate nohighlight">\(\tau\)</span>, as
+$$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="pressure-equation-of-state">
 <h2><span class="section-number">7.2. </span>Pressure Equation of State<a class="headerlink" href="#pressure-equation-of-state" title="Permalink to this headline">¶</a></h2>
+<p>A gas has a several physical properties (mass, density, temperature, pressure, and volume) that describe how it currently exists (i.e., state).  The state of a gas represents a macroscopic manifestation of the particle interactions and it is necessary to derive a pressure <strong>equation of state</strong> of the gas.  One well-known example of a pressure equation of state is the <strong>ideal gas law</strong>, which is often expressed as</p>
+<div class="math notranslate nohighlight">
+\[ PV = NkT = nRT, \]</div>
+<p>which relates the gas pressure <span class="math notranslate nohighlight">\(P\)</span>, volume <span class="math notranslate nohighlight">\(V\)</span>, and temperature <span class="math notranslate nohighlight">\(T\)</span> to the number of particles <span class="math notranslate nohighlight">\(N\)</span> (or <span class="math notranslate nohighlight">\(n\)</span>) and the Boltzmann constant <span class="math notranslate nohighlight">\(k\)</span> (or gas constant <span class="math notranslate nohighlight">\(R\)</span>).  The ideal gas law is limited to specific environments, where in astrophysical problems it is necessary to have a pressure equation of state that is more general.</p>
 <div class="section" id="the-derivation-of-the-pressure-integral">
 <h3><span class="section-number">7.2.1. </span>The Derivation of the Pressure Integral<a class="headerlink" href="#the-derivation-of-the-pressure-integral" title="Permalink to this headline">¶</a></h3>
 </div>
