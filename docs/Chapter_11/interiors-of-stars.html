@@ -720,13 +720,23 @@ $$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
 <p>Normalizing the force exerted on the wall by the surface area <span class="math notranslate nohighlight">\(A\)</span> is the pressure on the surface.  The volume of a cylinder is <span class="math notranslate nohighlight">\(\Delta V = A \Delta x\)</span> and defining <span class="math notranslate nohighlight">\(n_p dp\)</span> as the number fo particles <em>per unit volume</em> having a momenta within the range of <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(p+dp\)</span> can be written as</p>
 <div class="math notranslate nohighlight">
 \[ n_p\:dp \equiv \frac{N_p}{\Delta V}dp, \]</div>
-<p>and we find the pressure exerted on teh wall is</p>
+<p>and we find the pressure exerted on the wall is</p>
 <div class="math notranslate nohighlight">
 \[ P = \frac{F}{A} = \frac{1}{3} \int_0^\infty n_p pv\:dp. \tag{8} \]</div>
 <p>Equation 8 is sometimes called the <strong>pressure integral</strong>, which allows us to compute the pressure given some <em>distribution function</em> <span class="math notranslate nohighlight">\(n_p dp\)</span>.</p>
 </div>
 <div class="section" id="the-ideal-gas-law-in-terms-of-the-mean-molecular-weight">
 <h3><span class="section-number">7.2.2. </span>The Ideal Gas Law in Terms of the Mean Molecular Weight<a class="headerlink" href="#the-ideal-gas-law-in-terms-of-the-mean-molecular-weight" title="Permalink to this headline">¶</a></h3>
+<p>The pressure integral is valid for massive and <em>massless</em> particles (i.e., photons) traveling at any speed.  For massive, nonrelativistic particles, we can use <span class="math notranslate nohighlight">\(p=mv\)</span> to write the pressure integral as</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{1}{3}\int_0^\infty n_vmv^2\:dv, \tag{9} \]</div>
+<p>where <span class="math notranslate nohighlight">\(n_v\:dv\)</span> is the number of particles <em>per unit volume</em> having speeds between <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(v+dv\)</span> (i.e., <span class="math notranslate nohighlight">\(n_v\:dv = n_p\:dp\)</span>).  In the case of an ideal gas, <span class="math notranslate nohighlight">\(n_v\:dv\)</span> is the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html#the-maxwell-boltzmann-velocity-distribution">Maxwell-Boltzmann velocity distribution</a>,</p>
+<div class="math notranslate nohighlight">
+\[ n_v\:dv = n \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-(mv^2)/(2kT)}\:4\pi v^2\:dv, \]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the total particle density for all velocities.  Substituting into the pressure integral gives</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{4\pi}{3}mn\int_0^\infty \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-(mv^2)/(2kT)} v^2\:dv = nkT \tag{10}\]</div>
+<p>using a <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_definite_integrals">table of definite integrals</a>.</p>
 </div>
 <div class="section" id="the-average-kinetic-energy-per-particle">
 <h3><span class="section-number">7.2.3. </span>The Average Kinetic Energy per Particle<a class="headerlink" href="#the-average-kinetic-energy-per-particle" title="Permalink to this headline">¶</a></h3>
