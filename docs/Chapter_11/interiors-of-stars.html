@@ -737,9 +737,71 @@ $$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
 <div class="math notranslate nohighlight">
 \[ P = \frac{4\pi}{3}mn\int_0^\infty \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-(mv^2)/(2kT)} v^2\:dv = nkT \tag{10}\]</div>
 <p>using a <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_definite_integrals">table of definite integrals</a>.</p>
+<p>In astrophysical situations, the ideal gas law is more convenient in a different form because stars are measured in terms of the mass fractions (X, Y, and Z).  Starting with the particle density <span class="math notranslate nohighlight">\(n\)</span>, it can be related to the mass density of the gas as</p>
+<div class="math notranslate nohighlight">
+\[ n = \frac{\rho}{\bar{m}}, \]</div>
+<p>which now depends on the average mass <span class="math notranslate nohighlight">\(\bar{m}\)</span> of a gas particle since the particles masses can vary.  Then the ideal gas law becomes</p>
+<div class="math notranslate nohighlight">
+\[ P_g = \frac{\rho}{\bar{m}}kT. \]</div>
+<p>The <strong>mean molecular weight</strong> is defined as</p>
+<div class="math notranslate nohighlight">
+\[ \mu \equiv \frac{\bar{m}}{m_H}, \]</div>
+<p>which scales the average mass by the mass of the hydrogen atom (essentially the mass of the proton).  Then, the ideal gas law can be written in terms of the mean molecular weight <span class="math notranslate nohighlight">\(\mu\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[ P_g = \frac{\rho}{\mu m_H}kT. \tag{11} \]</div>
+<p>The mean molecular weight also depends on the ionization state of each molecular species, where the level of ionization enters because free electrons must be included in the average mass per particle <span class="math notranslate nohighlight">\(\bar{m}\)</span>.  This would require a detailed analysis using the Saha equation to calculate the relative numbers of ionization states, but it is easier when the gas is either completely neutral or completely ionized.  For a completely neutral gas,</p>
+<div class="math notranslate nohighlight">
+\[ \bar{m}_n = \frac{\sum_j N_j m_j}{\sum_j N_j}, \tag{12}\]</div>
+<p>which depends on the mass and the total number of atoms (present in the gas) of type <span class="math notranslate nohighlight">\(j\)</span> denoted by <span class="math notranslate nohighlight">\(m_j\)</span> and <span class="math notranslate nohighlight">\(N_j\)</span>, respectively.  Normalizing each mass by the mass of a hydrogen atom <span class="math notranslate nohighlight">\(m_H\)</span> (<span class="math notranslate nohighlight">\(A_j \equiv m_j/m_H\)</span>) produces</p>
+<div class="math notranslate nohighlight">
+\[ \mu_n = \frac{\sum_j N_j A_j}{\sum_j N_j}, \]</div>
+<p>and a similar expression can be derived for a completely ionized gas as</p>
+<div class="math notranslate nohighlight">
+\[  \mu_i = \frac{\sum_j N_j A_j}{\sum_j N_j (1+z_j)}, \]</div>
+<p>where the number of free electrons are accounted for using the <span class="math notranslate nohighlight">\((1+z_j)\)</span> factor.  by inverting the expression for <span class="math notranslate nohighlight">\(\bar{m}\)</span>, it is possible to derive an alternate equation for <span class="math notranslate nohighlight">\(\mu\)</span> in terms of the mass fractions.  Recall that <span class="math notranslate nohighlight">\(\bar{m} =\mu m_H\)</span> and using Eqn. 12 gives,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*} \frac{1}{\bar{m}} &amp;= \frac{1}{\mu m_H} = \frac{\sum_j N_j}{ \sum_j N_j m_j} \\
+ &amp;= \frac{\rm total\:number\:of\:particles}{\rm total\:mass\:of\:gas} \\
+ &amp;= \sum_j \frac{{\rm total\:number\:of\:particles\:from\:}j}{{\rm total\:particles\:from\:}j} \cdot \frac{{\rm mass\:of\:particles\:from\:}j}{{\rm total\:mass\:of\:gas}},
+\end{align*}\end{split}\]</div>
+<p>and using the chain rule.  The second term in the summation is simply the mass fraction <span class="math notranslate nohighlight">\(X_j\)</span> (i.e., mass of particles from <span class="math notranslate nohighlight">\(j\)</span> divided by the total mass of the gas).  Through substitution,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{\bar{m}} = \sum_j \frac{N_j}{N_j A_j m_H}X_j = \sum_j \frac{1}{A_j m_H}X_j. \]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(1/\mu_n\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{\mu_n} = \sum_j \frac{1}{A_j}X_j. \tag{13}\]</div>
+<p>For a neutral gas,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{\mu_n} \simeq X + \frac{1}{4}Y + \left\langle \frac{1}{A} \right\rangle_n Z, \tag{14} \]</div>
+<p>where the weighted average of all elements in the gas heavier than helium is <span class="math notranslate nohighlight">\(\langle 1/A\rangle_n\)</span> and for solar abundances this is approximately 1/15.5 or 0.0645.</p>
+<p>The mean molecular weight for an completely ionized gas can be determined in a similar way, where it is only necessary to include the <em>total</em> number of particles contained in the sample because the number of free electrons matches the number of protons.  For a completely ionized gas, Eqn 13 becomes</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{\mu_i} \sum_j \frac{1+z_j}{A_j}X_j, \tag{15} \]</div>
+<p>and including hydrogen and helium explicitly for Eqn. 15 produces</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{\mu_i} \simeq 2X + \frac{3}{4}Y + \left\langle \frac{1+z}{A} \right\rangle_i Z. \tag{16} \]</div>
+<p>For elements much heavier than helium, <span class="math notranslate nohighlight">\(1+z_j \simeq z_j\)</span> and <span class="math notranslate nohighlight">\(A_j \simeq 2z_j\)</span>, since the number of protons in the atom is much larger than 1 and that sufficiently massive atoms have approximately equal numbers of nucleons (i.e., protons and neutrons).  Through substitution, we find</p>
+<p>$$  \left\langle \frac{1+z}{A} \right\rangle_i \simeq \left\langle \frac{z}{2z} \right\rangle_i = \frac{1}{2}.</p>
+<p>Using a composition representative of younger stars (X = 0.70, Y = 0.28, and Z = 0.02), the mean molecular weights are <span class="math notranslate nohighlight">\(\mu_n = 1.30\)</span> and <span class="math notranslate nohighlight">\(\mu_i = 0.62\)</span>.</p>
 </div>
 <div class="section" id="the-average-kinetic-energy-per-particle">
 <h3><span class="section-number">7.2.3. </span>The Average Kinetic Energy per Particle<a class="headerlink" href="#the-average-kinetic-energy-per-particle" title="Permalink to this headline">¶</a></h3>
+<p>Combining Eqn. 10 with the pressure integral (Eqn. 9) produces the average kinetic energy per particle as</p>
+<div class="math notranslate nohighlight">
+\[ nkT = \frac[1]{3} \int_0^\infty mn_v\:v^2\:dv, \]</div>
+<p>which can be rewritten to give</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{n} \int_0^\infty n_v\:v^2\:dv = \frac{3}{m}kT. \]</div>
+<p>The left-hand side is just the integral average of <span class="math notranslate nohighlight">\(v^2\)</span> weighted by Maxwell-Boltzmann distribution function.  Thus</p>
+<div class="math notranslate nohighlight">
+\[ \bar{v^2} = = \frac{3kT}{m}, \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}m\bar{v^2} = = \frac{3}{2}kT. \tag {17}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The factor of 3 arose from averaging particle velocities over the three <em>degrees of freedom</em> (or coordinate directions).  Each degree of freedom contributes <span class="math notranslate nohighlight">\(\frac{1}{2}kT\)</span> to the average kinetic energy.</p>
+</div>
 </div>
 <div class="section" id="fermi-dirac-and-bose-einstein-statistics">
 <h3><span class="section-number">7.2.4. </span>Fermi-Dirac and Bose-Einstein Statistics<a class="headerlink" href="#fermi-dirac-and-bose-einstein-statistics" title="Permalink to this headline">¶</a></h3>
