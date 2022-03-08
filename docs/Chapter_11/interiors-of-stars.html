@@ -630,12 +630,12 @@
 <ul class="simple">
 <li><p><strong>What is an estimate of the pressure at the center of the Sun?</strong></p></li>
 </ul>
-<p>A very crude estimate can be made, if we assume that <span class="math notranslate nohighlight">\(M_r = 1 M_\odot\)</span>, <span class="math notranslate nohighlight">\(r=1 R\odot\)</span>, <span class="math notranslate nohighlight">\(\rho = \bar{\rho}_\odot = 1410 \:{\rm kg/m^3}\)</span>, and the surface pressure is exactly zero.  Converting the differential equation for pressure into a difference equation yields</p>
+<p>A very crude estimate can be made, if we assume that <span class="math notranslate nohighlight">\(M_r = 1 M_\odot\)</span>, <span class="math notranslate nohighlight">\(r=1 R\odot\)</span>, <span class="math notranslate nohighlight">\(\rho = \overline{\rho}_\odot = 1410 \:{\rm kg/m^3}\)</span>, and the surface pressure is exactly zero.  Converting the differential equation for pressure into a difference equation yields</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dP}{dr} \sim \frac{P_s - P_c}{R_s - 0} \sim -\frac{P_c}{R_\odot}, \]</div>
 <p>which depends on the central pressure <span class="math notranslate nohighlight">\(P_c\)</span>.  Substituting into Eqn. 6 provides an estimate of the central pressure as</p>
 <div class="math notranslate nohighlight">
-\[ P_c \sim \frac{G M_\odot \bar{\rho}_\odot}{R_\odot} \sim 2.69 \times 10^{14} \:{\rm N/m^2}. \]</div>
+\[ P_c \sim \frac{G M_\odot \overline{\rho}_\odot}{R_\odot} \sim 2.69 \times 10^{14} \:{\rm N/m^2}. \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GM_sun</span> <span class="o">=</span> <span class="mf">1.3271244e20</span> <span class="c1">#GM_sun from astropy in m^3/s^2</span>
@@ -672,7 +672,7 @@
 <h3><span class="section-number">7.1.4. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>1. Show that the equation for hydrostatic equilibrium (Eqn. 6) can also be written in terms of the optical depth <span class="math notranslate nohighlight">\(\tau\)</span>, as
-$$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
+$$ \frac{dP}{d\tau} = \frac{g}{\overline{\kappa}}.</p>
 </div></blockquote>
 </div>
 </div>
@@ -700,7 +700,7 @@ $$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
 <p>so the average force exerted on the wall by a single particle over that time period is given by</p>
 <div class="math notranslate nohighlight">
 \[ F = \frac{2p_x}{\Delta t} = \frac{p_x v_x}{\Delta x}, \]</div>
-<p>where it is assumed that the force vector is normal to the surface.  The numerator is proportional to <span class="math notranslate nohighlight">\(v_x^2\)</span> because <span class="math notranslate nohighlight">\(p_x \propto v_x\)</span>.  For a sufficiently large collection of particles in random motion, the likelihood of motion in each direction is the same (i.e., <span class="math notranslate nohighlight">\(\bar{v}_x^2 = \bar{v}_y^2 = \bar{v}_z^2= v^2/3\)</span>) so that <span class="math notranslate nohighlight">\(v_x \approx v/\sqrt{3}\)</span> and <span class="math notranslate nohighlight">\(p_x v_x = pv/3\)</span>.  The average force per particle having a momentum <span class="math notranslate nohighlight">\(p\)</span> is</p>
+<p>where it is assumed that the force vector is normal to the surface.  The numerator is proportional to <span class="math notranslate nohighlight">\(v_x^2\)</span> because <span class="math notranslate nohighlight">\(p_x \propto v_x\)</span>.  For a sufficiently large collection of particles in random motion, the likelihood of motion in each direction is the same (i.e., <span class="math notranslate nohighlight">\(\overline{v}_x^2 = \overline{v}_y^2 = \overline{v}_z^2= v^2/3\)</span>) so that <span class="math notranslate nohighlight">\(v_x \approx v/\sqrt{3}\)</span> and <span class="math notranslate nohighlight">\(p_x v_x = pv/3\)</span>.  The average force per particle having a momentum <span class="math notranslate nohighlight">\(p\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[ F(p) = \frac{pv}{3\Delta x}. \]</div>
 <p>However, it is usually the case that the particles have a range of momenta (i.e., range of incident angles).  The number of particles with momenta between <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(p + dp\)</span> (similar to the Maxwell-Boltzmann distribution) is given by the expression <span class="math notranslate nohighlight">\(N_p\:dp\)</span> and the total number of particles in the container is</p>
@@ -734,34 +734,34 @@ $$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
 <p>using a <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_definite_integrals">table of definite integrals</a>.</p>
 <p>In astrophysical situations, the ideal gas law is more convenient in a different form because stars are measured in terms of the mass fractions (X, Y, and Z).  Starting with the particle density <span class="math notranslate nohighlight">\(n\)</span>, it can be related to the mass density of the gas as</p>
 <div class="math notranslate nohighlight">
-\[ n = \frac{\rho}{\bar{m}}, \]</div>
-<p>which now depends on the average mass <span class="math notranslate nohighlight">\(\bar{m}\)</span> of a gas particle since the particles masses can vary.  Then the ideal gas law becomes</p>
+\[ n = \frac{\rho}{\overline{m}}, \]</div>
+<p>which now depends on the average mass <span class="math notranslate nohighlight">\(\overline{m}\)</span> of a gas particle since the particles masses can vary.  Then the ideal gas law becomes</p>
 <div class="math notranslate nohighlight">
-\[ P_g = \frac{\rho}{\bar{m}}kT. \]</div>
+\[ P_g = \frac{\rho}{\overline{m}}kT. \]</div>
 <p>The <strong>mean molecular weight</strong> is defined as</p>
 <div class="math notranslate nohighlight">
-\[ \mu \equiv \frac{\bar{m}}{m_H}, \]</div>
+\[ \mu \equiv \frac{\overline{m}}{m_H}, \]</div>
 <p>which scales the average mass by the mass of the hydrogen atom (essentially the mass of the proton).  Then, the ideal gas law can be written in terms of the mean molecular weight <span class="math notranslate nohighlight">\(\mu\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[ P_g = \frac{\rho}{\mu m_H}kT. \tag{11} \]</div>
-<p>The mean molecular weight also depends on the ionization state of each molecular species, where the level of ionization enters because free electrons must be included in the average mass per particle <span class="math notranslate nohighlight">\(\bar{m}\)</span>.  This would require a detailed analysis using the Saha equation to calculate the relative numbers of ionization states, but it is easier when the gas is either completely neutral or completely ionized.  For a completely neutral gas,</p>
+<p>The mean molecular weight also depends on the ionization state of each molecular species, where the level of ionization enters because free electrons must be included in the average mass per particle <span class="math notranslate nohighlight">\(\overline{m}\)</span>.  This would require a detailed analysis using the Saha equation to calculate the relative numbers of ionization states, but it is easier when the gas is either completely neutral or completely ionized.  For a completely neutral gas,</p>
 <div class="math notranslate nohighlight">
-\[ \bar{m}_n = \frac{\sum_j N_j m_j}{\sum_j N_j}, \tag{12}\]</div>
+\[ \overline{m}_n = \frac{\sum_j N_j m_j}{\sum_j N_j}, \tag{12}\]</div>
 <p>which depends on the mass and the total number of atoms (present in the gas) of type <span class="math notranslate nohighlight">\(j\)</span> denoted by <span class="math notranslate nohighlight">\(m_j\)</span> and <span class="math notranslate nohighlight">\(N_j\)</span>, respectively.  Normalizing each mass by the mass of a hydrogen atom <span class="math notranslate nohighlight">\(m_H\)</span> (<span class="math notranslate nohighlight">\(A_j \equiv m_j/m_H\)</span>) produces</p>
 <div class="math notranslate nohighlight">
 \[ \mu_n = \frac{\sum_j N_j A_j}{\sum_j N_j}, \]</div>
 <p>and a similar expression can be derived for a completely ionized gas as</p>
 <div class="math notranslate nohighlight">
 \[  \mu_i = \frac{\sum_j N_j A_j}{\sum_j N_j (1+z_j)}, \]</div>
-<p>where the number of free electrons are accounted for using the <span class="math notranslate nohighlight">\((1+z_j)\)</span> factor.  by inverting the expression for <span class="math notranslate nohighlight">\(\bar{m}\)</span>, it is possible to derive an alternate equation for <span class="math notranslate nohighlight">\(\mu\)</span> in terms of the mass fractions.  Recall that <span class="math notranslate nohighlight">\(\bar{m} =\mu m_H\)</span> and using Eqn. 12 gives,</p>
+<p>where the number of free electrons are accounted for using the <span class="math notranslate nohighlight">\((1+z_j)\)</span> factor.  by inverting the expression for <span class="math notranslate nohighlight">\(\overline{m}\)</span>, it is possible to derive an alternate equation for <span class="math notranslate nohighlight">\(\mu\)</span> in terms of the mass fractions.  Recall that <span class="math notranslate nohighlight">\(\overline{m} =\mu m_H\)</span> and using Eqn. 12 gives,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*} \frac{1}{\bar{m}} &amp;= \frac{1}{\mu m_H} = \frac{\sum_j N_j}{ \sum_j N_j m_j} \\
+\[\begin{split} \begin{align*} \frac{1}{\overline{m}} &amp;= \frac{1}{\mu m_H} = \frac{\sum_j N_j}{ \sum_j N_j m_j} \\
  &amp;= \frac{\rm total\:number\:of\:particles}{\rm total\:mass\:of\:gas} \\
  &amp;= \sum_j \frac{{\rm total\:number\:of\:particles\:from\:}j}{{\rm total\:particles\:from\:}j} \cdot \frac{{\rm mass\:of\:particles\:from\:}j}{{\rm total\:mass\:of\:gas}},
 \end{align*}\end{split}\]</div>
 <p>and using the chain rule.  The second term in the summation is simply the mass fraction <span class="math notranslate nohighlight">\(X_j\)</span> (i.e., mass of particles from <span class="math notranslate nohighlight">\(j\)</span> divided by the total mass of the gas).  Through substitution,</p>
 <div class="math notranslate nohighlight">
-\[ \frac{1}{\bar{m}} = \sum_j \frac{N_j}{N_j A_j m_H}X_j = \sum_j \frac{1}{A_j m_H}X_j. \]</div>
+\[ \frac{1}{\overline{m}} = \sum_j \frac{N_j}{N_j A_j m_H}X_j = \sum_j \frac{1}{A_j m_H}X_j. \]</div>
 <p>Solving for <span class="math notranslate nohighlight">\(1/\mu_n\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[ \frac{1}{\mu_n} = \sum_j \frac{1}{A_j}X_j. \tag{13}\]</div>
@@ -776,23 +776,24 @@ $$ \frac{dP}{d\tau} = \frac{g}{\bar{\kappa}}.</p>
 <div class="math notranslate nohighlight">
 \[ \frac{1}{\mu_i} \simeq 2X + \frac{3}{4}Y + \left\langle \frac{1+z}{A} \right\rangle_i Z. \tag{16} \]</div>
 <p>For elements much heavier than helium, <span class="math notranslate nohighlight">\(1+z_j \simeq z_j\)</span> and <span class="math notranslate nohighlight">\(A_j \simeq 2z_j\)</span>, since the number of protons in the atom is much larger than 1 and that sufficiently massive atoms have approximately equal numbers of nucleons (i.e., protons and neutrons).  Through substitution, we find</p>
-<p>$$  \left\langle \frac{1+z}{A} \right\rangle_i \simeq \left\langle \frac{z}{2z} \right\rangle_i = \frac{1}{2}.</p>
+<div class="math notranslate nohighlight">
+\[  \left\langle \frac{1+z}{A} \right\rangle_i \simeq \left\langle \frac{z}{2z} \right\rangle_i = \frac{1}{2}. \]</div>
 <p>Using a composition representative of younger stars (X = 0.70, Y = 0.28, and Z = 0.02), the mean molecular weights are <span class="math notranslate nohighlight">\(\mu_n = 1.30\)</span> and <span class="math notranslate nohighlight">\(\mu_i = 0.62\)</span>.</p>
 </div>
 <div class="section" id="the-average-kinetic-energy-per-particle">
 <h3><span class="section-number">7.2.3. </span>The Average Kinetic Energy per Particle<a class="headerlink" href="#the-average-kinetic-energy-per-particle" title="Permalink to this headline">¶</a></h3>
 <p>Combining Eqn. 10 with the pressure integral (Eqn. 9) produces the average kinetic energy per particle as</p>
 <div class="math notranslate nohighlight">
-\[ nkT = \frac[1]{3} \int_0^\infty mn_v\:v^2\:dv, \]</div>
+\[ nkT = \frac{1}{3} \int_0^\infty mn_v\:v^2\:dv, \]</div>
 <p>which can be rewritten to give</p>
 <div class="math notranslate nohighlight">
 \[ \frac{1}{n} \int_0^\infty n_v\:v^2\:dv = \frac{3}{m}kT. \]</div>
 <p>The left-hand side is just the integral average of <span class="math notranslate nohighlight">\(v^2\)</span> weighted by Maxwell-Boltzmann distribution function.  Thus</p>
 <div class="math notranslate nohighlight">
-\[ \bar{v^2} = = \frac{3kT}{m}, \]</div>
+\[ \overline{v^2} = \frac{3kT}{m}, \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight">
-\[ \frac{1}{2}m\bar{v^2} = = \frac{3}{2}kT. \tag {17}\]</div>
+\[ \frac{1}{2}m\overline{v^2} = \frac{3}{2}kT. \tag {17}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The factor of 3 arose from averaging particle velocities over the three <em>degrees of freedom</em> (or coordinate directions).  Each degree of freedom contributes <span class="math notranslate nohighlight">\(\frac{1}{2}kT\)</span> to the average kinetic energy.</p>
