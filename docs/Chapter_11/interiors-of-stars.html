@@ -607,7 +607,7 @@
 <p>The gravitational force on a small mass <span class="math notranslate nohighlight">\(dm\)</span> located at a distance <span class="math notranslate nohighlight">\(r\)</span> from the center of a spherically symmetric mass is</p>
 <div class="math notranslate nohighlight">
 \[ F_g = -\frac{G M_r dm}{r^2}, \tag{2}\]</div>
-<p>which depends on the mass <span class="math notranslate nohighlight">\(M_r\)</span> inside the sphere of radius <span class="math notranslate nohighlight">\(r\)</span> (i.e., the interior mass).  The pressure is defined as teh amount of force per unit area (<span class="math notranslate nohighlight">\(P\equiv F/A\)</span>), where a pressure differential <span class="math notranslate nohighlight">\(dP\)</span> can be expressed as</p>
+<p>which depends on the mass <span class="math notranslate nohighlight">\(M_r\)</span> inside the sphere of radius <span class="math notranslate nohighlight">\(r\)</span> (i.e., the interior mass).  The pressure is defined as the amount of force per unit area (<span class="math notranslate nohighlight">\(P\equiv F/A\)</span>), where a pressure differential <span class="math notranslate nohighlight">\(dP\)</span> can be expressed as</p>
 <div class="math notranslate nohighlight">
 \[ dF_p = A dP. \tag{3} \]</div>
 <p>Substituting Eqns. 2 &amp; 3 into Eqn. 1 produces</p>
@@ -833,9 +833,9 @@ our simplification in ignoring it.</p>
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">m_p</span><span class="p">,</span><span class="n">m_e</span><span class="p">,</span><span class="n">k</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">k</span>
 
-<span class="n">m_H</span> <span class="o">=</span> <span class="n">m_p</span> <span class="o">+</span> <span class="n">m_e</span>
+<span class="n">m_H</span> <span class="o">=</span> <span class="mf">1.6735575e-27</span> <span class="c1">#mass of hydrogen</span>
 <span class="n">rho_sun</span> <span class="o">=</span> <span class="mf">1410.</span> <span class="c1">#average density of the Sun in kg/m^3</span>
 <span class="n">P_c</span> <span class="o">=</span> <span class="mf">2.69e14</span> <span class="c1">#Central pressure estimated in previous example in N/m^2</span>
 <span class="n">mu_i</span> <span class="o">=</span> <span class="mf">0.62</span> <span class="c1">#mass ratio assuming complete ionization of H</span>
@@ -939,9 +939,58 @@ The timescale for releasing this much energy is 9.4e+06 yr
 <div class="math notranslate nohighlight">
 \[ t_{KH} = \frac{\Delta E}{L_\odot}. \tag{24} \]</div>
 <p>A solar luminosity is <span class="math notranslate nohighlight">\(3.828 \times 10^{26}\)</span> W, where <span class="math notranslate nohighlight">\(t_{KH} \sim 10^7\)</span> yr and is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Kelvin%E2%80%93Helmholtz_mechanism">Kelvin-Helmholtz timescale</a>.  The Kelvin-Helmholtz timescale was developed by Lord Kelvin and Hermann Ludwig Ferdinand von Helmholtz (in the late 1800s) to explain the Sun’s energy source, but geological (relative) dating techniques at the time was producing rock ages that were at least an order of magnitude older.  Today, we have radioactive dating of Earth rocks, Moon rocks, and primitive meteorites that are more than ~4.5 Gyr old.  Therefore, gravitational potential energy alone cannot account for the Sun’s luminosity through its entire lifetime.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Another possible energy source involves chemical processes, but chemical reactions are based on the orbital electrons in atoms.  The amount of energy available to be released per atom is no more than 10 eV.  Given the number of atoms present in a star, the amount of chemical energy available is far to low to account for the Sun’s luminosity over a reasonable period of time.</p>
+</div>
 </div>
 <div class="section" id="the-nuclear-timescale">
 <h3><span class="section-number">7.3.2. </span>The Nuclear Timescale<a class="headerlink" href="#the-nuclear-timescale" title="Permalink to this headline">¶</a></h3>
+<p>Since electron orbits contributes less than 10 eV, nuclear processes involve energies in the millions of electron volts (MeV) range.  The nucleus of a particular <strong>element</strong> is specified by the number of positively charged protons <span class="math notranslate nohighlight">\(Z\)</span> (not to be confused the metal mass fraction).  A neutrally charged atom would contain an equal number of orbital electrons.  <strong>Isotopes</strong> of a given element are identified by the number of (neutrally charged) neutrons <span class="math notranslate nohighlight">\(N\)</span> within the nucleus.  Collectively, protons and neutrons are referred to as <strong>nucleons</strong>, where the number of nucleons is represented by the <em>mass number</em> <span class="math notranslate nohighlight">\(A = Z + N\)</span>.  The mass number is a good heuristic to estimate the mass of an isotope because protons and neutrons have similar masses, where the mass of electrons is much smaller than either protons or neutrons.</p>
+<p>The respective masses of the proton, neutron and electron are</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m_p = 1.67262158 \times 10^{-27}\:{\rm kg} = 1.00727646688 \: {\rm u} = 938.27208816 \: {\rm MeV},\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(m_n = 1.67492716 \times 10^{-27}\:{\rm kg} = 1.00866491578 \: {\rm u} = 939.56542052 \: {\rm MeV},\)</span> and</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_e = 9.10938188 \times 10^{-31}\:{\rm kg} = 0.0005485799110 \: {\rm u} = 0.51099895000 \: {\rm MeV}.\)</span></p></li>
+</ul>
+<p>The <em>atomic mass unit</em> <span class="math notranslate nohighlight">\(u\)</span> is defines as exactly 1/12 the mass of the Carbon-12, or <span class="math notranslate nohighlight">\(1\:{\rm u} = 1.66053873 \times 10^{-27}\:{\rm kg}\)</span>.  The rest mass energies are derived using Einstein’s <span class="math notranslate nohighlight">\(E=mc^2\)</span>, where <span class="math notranslate nohighlight">\(1\:{\rm u} = 931.494013\:{\rm MeV/c^2}\)</span>.  The simplest isotope of hydrogen is composed of a single proton and electron with a mass of <span class="math notranslate nohighlight">\(m_H = 1.00782503214\:{\rm u}\)</span>.  This mass is slightly less than the combined mass of a proton and electron at rest (<span class="math notranslate nohighlight">\(m_p + m_e\)</span>) because some mass must be given up as binding energy to keep the atom together.  For a hydrogen atom in its ground state, the exact mass difference is 13.6 eV, which is just the ionization potential.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mass-energy units are <span class="math notranslate nohighlight">\({\rm MeV/c^2}\)</span> as follows from <span class="math notranslate nohighlight">\(E=mc^2\)</span>, but it is customary to leave off the <span class="math notranslate nohighlight">\({\rm /c^2}\)</span>.  When using mass-energy units in your calculations, be sure to multiply by <span class="math notranslate nohighlight">\(c^2\)</span> to get units of energy.</p>
+</div>
+<p>Similarly energy is also released for a loss in mass when nucleons combine to form atomic nuclei.  A helium nucleus is composed of two protons and two neutrons, which can be formed by a series of nuclear reactions involving four protons (hydrogen nuclei) otherwise known as <strong>fusion</strong> reactions since lighter particles are <em>fused</em> together to form a heavier particle.  The total mass of the four hydrogen atoms (protons and electrons) is 4.03130013 u, where as the mass of one helium atom is 4.002603 u.  The mass difference between these two quantities is 0.028697 u, or 0.7%.  The total amount of energy released in forming a helium nucleus is the *<em>binding energy</em> and is equivalent to the mass difference but in energy units (26.731 MeV).  The helium nucleus requires 26.731 MeV to free the nucleons into the constituent protons and neutrons.</p>
+<ul class="simple">
+<li><p><strong>Is nuclear energy sufficient to power the Sun during its lifetime?</strong> (Assume that the Sun started with 100% hydrogen and only converts 10% of that into helium.)</p></li>
+</ul>
+<blockquote>
+<div><p>The mass available is 10% of the Sun’s mass converted into energy ($M_\odot{\rm c^2}).  To form a helium nucleus, only 0.7% of the energy is released.</p>
+<div class="math notranslate nohighlight">
+\[ E_{nuclear} = 0.007 \times (0.1 \times M_\odot{\rm c^2}) = 0.007 \times (1.8 \times 10^{46}\:{\rm J}) = 1.3 \times 10^{44}\:{\rm J}.\]</div>
+<p>This gives a <strong>nuclear timescale</strong> of approximately</p>
+<div class="math notranslate nohighlight">
+\[ t_{nuclear} = \frac{E_{nuclear}}{L_\odot} \sim 10^{10}\:{\rm yr} = 10\:{\rm Gyr}, \]</div>
+<p>which is more than enough time to account for the ages of rocks on Earth and the Moon.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span>
+
+<span class="n">m_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of Sun in kg</span>
+<span class="n">E_nuc</span> <span class="o">=</span> <span class="mf">0.007</span><span class="o">*</span><span class="mf">0.1</span><span class="o">*</span><span class="n">m_sun</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">t_nuc</span> <span class="o">=</span> <span class="p">(</span><span class="n">E_nuc</span><span class="o">/</span><span class="n">L_sun</span><span class="p">)</span><span class="o">/</span><span class="mf">3600.</span><span class="o">/</span><span class="mf">24.</span><span class="o">/</span><span class="mf">365.25</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The amount of nuclear energy available is </span><span class="si">%1.2e</span><span class="s2"> J.&quot;</span> <span class="o">%</span> <span class="n">E_nuc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The nuclear timescale is </span><span class="si">%1.2e</span><span class="s2"> yr.&quot;</span> <span class="o">%</span> <span class="n">t_nuc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of nuclear energy available is 1.25e+44 J.
+The nuclear timescale is 1.04e+10 yr.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="quantum-mechanical-tunneling">
 <h3><span class="section-number">7.3.3. </span>Quantum Mechanical Tunneling<a class="headerlink" href="#quantum-mechanical-tunneling" title="Permalink to this headline">¶</a></h3>
