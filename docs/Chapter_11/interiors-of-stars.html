@@ -630,12 +630,14 @@
 <ul class="simple">
 <li><p><strong>What is an estimate of the pressure at the center of the Sun?</strong></p></li>
 </ul>
-<p>A very crude estimate can be made, if we assume that <span class="math notranslate nohighlight">\(M_r = 1 M_\odot\)</span>, <span class="math notranslate nohighlight">\(r=1 R\odot\)</span>, <span class="math notranslate nohighlight">\(\rho = \overline{\rho}_\odot = 1410 \:{\rm kg/m^3}\)</span>, and the surface pressure is exactly zero.  Converting the differential equation for pressure into a difference equation yields</p>
+<blockquote>
+<div><p>A very crude estimate can be made, if we assume that <span class="math notranslate nohighlight">\(M_r = 1 M_\odot\)</span>, <span class="math notranslate nohighlight">\(r=1 R_\odot\)</span>, <span class="math notranslate nohighlight">\(\rho = \overline{\rho}_\odot = 1410 \:{\rm kg/m^3}\)</span>, and the surface pressure is &gt;exactly zero.  Converting the differential equation for pressure into a difference equation yields</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dP}{dr} \sim \frac{P_s - P_c}{R_s - 0} \sim -\frac{P_c}{R_\odot}, \]</div>
 <p>which depends on the central pressure <span class="math notranslate nohighlight">\(P_c\)</span>.  Substituting into Eqn. 6 provides an estimate of the central pressure as</p>
 <div class="math notranslate nohighlight">
 \[ P_c \sim \frac{G M_\odot \overline{\rho}_\odot}{R_\odot} \sim 2.69 \times 10^{14} \:{\rm N/m^2}. \]</div>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GM_sun</span> <span class="o">=</span> <span class="mf">1.3271244e20</span> <span class="c1">#GM_sun from astropy in m^3/s^2</span>
@@ -801,15 +803,142 @@ $$ \frac{dP}{d\tau} = \frac{g}{\overline{\kappa}}.</p>
 </div>
 <div class="section" id="the-contribution-due-to-radiation-pressure">
 <h3><span class="section-number">7.2.4. </span>The Contribution Due to Radiation Pressure<a class="headerlink" href="#the-contribution-due-to-radiation-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Photons possess momentum <span class="math notranslate nohighlight">\((p=h\nu/c)\)</span> and are capable of delivering an impulse to other particles during absorption or reflection.  Electromagnetic radiation consists of a bundle of photons with a range of energies (and frequency \nu).  The pressure integral (Eqn. 8) is written in terms of momenta and thus, we can rederive the expression for radiation pressure using the pressure integral.  Note that the pressure integral also depends on the velocity <span class="math notranslate nohighlight">\(v\)</span>, but this dependence is removed if we substitute the speed of light for the velocity.  We also assume an identity for the distribution function, <span class="math notranslate nohighlight">\(n_p dp = n_\nu d\nu\)</span> so that the pressure integral becomes</p>
+<div class="math notranslate nohighlight">
+\[ P_{rad} = \frac{1}{3}\int_0^\infty h\nu\:n_\nu d\nu. \]</div>
+<p>The expression <span class="math notranslate nohighlight">\(n_\nu d\nu\)</span> represents a distribution function that describes the number of photons with a frequency that lies between <span class="math notranslate nohighlight">\(\nu\)</span> and <span class="math notranslate nohighlight">\(\nu + d\nu\)</span>.  Multiplying by the energy for each photon results in <span class="math notranslate nohighlight">\(h\nu n_\nu d\nu\)</span>, or the energy density <span class="math notranslate nohighlight">\(u_\nu\)</span> over the frequency integral, so that</p>
+<div class="math notranslate nohighlight">
+\[ P_{rad} = \frac{1}{3}\int_0^\infty u_\nu d\nu. \tag{18}\]</div>
+<p>Recall the Eqn. 6 from the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-specific-energy-density">specific energy density</a> section from Stellar Atmospheres provides the integral of the energy density as</p>
+<div class="math notranslate nohighlight">
+\[ u = \frac{4\sigma}{c}T^4 = a T^4, \]</div>
+<p>and the radiation pressure is</p>
+<div class="math notranslate nohighlight">
+\[ P_{rad} = \frac{1}{3}a T^4. \tag{19} \]</div>
+<p>The photon pressure can actually exceed the gas pressure by a significant amount and even surpass the gravitational force (e.g., variable stars).  The full pressure of the stellar interior can written by combining the contributions from an ideal gas (Eqn. 11) and the radiation pressure (Eqn. 19) as</p>
+<div class="math notranslate nohighlight">
+\[P_t = \frac{\rho}{\mu m_H}kT + \frac{1}{3}a T^4. \tag{20} \]</div>
+<ul class="simple">
+<li><p><strong>What is the central temperature of the Sun (neglecting the radiation pressure)?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>From <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-derivation-of-the-hydrostatic-equilibrium-equation">hydrostatic equilibrium</a>, we &gt;estimated the central pressure <span class="math notranslate nohighlight">\(P_c\)</span>.  Thus, we can rewrite the radiation pressure equation from the ideal gas law (Eqn. 11) as</p>
+<div class="math notranslate nohighlight">
+\[ T_c = \frac{\mu m_H}{\rho k}P_c. \]</div>
+<p>Using <span class="math notranslate nohighlight">\(\rho = \overline{\rho}_\odot = 1410 \:{\rm kg/m^3}\)</span>, <span class="math notranslate nohighlight">\(\mu_i =0.62\)</span> (assuming complete ionization of <span class="math notranslate nohighlight">\(H\)</span>), and <span class="math notranslate nohighlight">\(P_c = 2.69 \times 10^{14}\: {\rm N/m^2}\)</span>, we find that</p>
+<div class="math notranslate nohighlight">
+\[ T_c \approx 1.43 \times 10^7 \:{\rm K}, \]</div>
+<p>which is in reasonable agreement with more detailed calculations. One standard solar model shows the radiation pressure is only 0.065% of the gas pressure, which justifies
+our simplification in ignoring it.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">m_p</span><span class="p">,</span><span class="n">m_e</span><span class="p">,</span><span class="n">k</span>
+
+<span class="n">m_H</span> <span class="o">=</span> <span class="n">m_p</span> <span class="o">+</span> <span class="n">m_e</span>
+<span class="n">rho_sun</span> <span class="o">=</span> <span class="mf">1410.</span> <span class="c1">#average density of the Sun in kg/m^3</span>
+<span class="n">P_c</span> <span class="o">=</span> <span class="mf">2.69e14</span> <span class="c1">#Central pressure estimated in previous example in N/m^2</span>
+<span class="n">mu_i</span> <span class="o">=</span> <span class="mf">0.62</span> <span class="c1">#mass ratio assuming complete ionization of H</span>
+
+<span class="n">T_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">mu_i</span><span class="o">*</span><span class="n">m_H</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">rho_sun</span><span class="o">*</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">P_c</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The estimated central temperature of the Sun is </span><span class="si">%1.2e</span><span class="s2"> K.&quot;</span> <span class="o">%</span> <span class="n">T_c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The estimated central temperature of the Sun is 1.43e+07 K.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="id1">
 <h3><span class="section-number">7.2.5. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>2. Derive the ideal gas law in Eqn. 10 starting from the pressure integral and the Maxwell-Boltzmann distribution function.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="stellar-energy-sources">
 <h2><span class="section-number">7.3. </span>Stellar Energy Sources<a class="headerlink" href="#stellar-energy-sources" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="gravitation-and-the-kelvin-helmholtz-timescale">
 <h3><span class="section-number">7.3.1. </span>Gravitation and the Kelvin-Helmholtz Timescale<a class="headerlink" href="#gravitation-and-the-kelvin-helmholtz-timescale" title="Permalink to this headline">¶</a></h3>
+<p>In the late 1800s, many scientists were contemplating the energy source of the Sun.  One likely stellar energy source is gravitational potential energy, which is given by</p>
+<div class="math notranslate nohighlight">
+\[ U = -\frac{GMm}{r}, \]</div>
+<p>using the Universal Gravitational constant <span class="math notranslate nohighlight">\(G\)</span>, masses of two particles (<span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(m\)</span>), and the distance between them <span class="math notranslate nohighlight">\(r\)</span>.  As <span class="math notranslate nohighlight">\(r\)</span> decreases, the gravitational potential energy becomes <em>more negative</em>, implying that the energy must have been converted to other forms (e.g., kinetic energy).  If a body can decrease its size, then the gravitational potential energy can be converted into heat and then radiate into space. The star could shine for a significant period of time through this mechanism.  However, the virial theorem state that the total energy <span class="math notranslate nohighlight">\(E\)</span> for a system in equilibrium is 1/2 of a system’s potential energy <span class="math notranslate nohighlight">\(U\)</span>.  Therefore, only half of the system’s potential energy is available to be radiated away and the remaining potential energy supplies the <em>thermal</em> energy that heats the star.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Radiation derived from gravitational contraction is a source of energy for Jupiter-mass planets and brown dwarfs.</p>
+</div>
+<p>The contribution of every pair of particles to the potential energy can be calculated starting with the gravitational force and some assumptions.</p>
+<p><strong>Assume a point mass <span class="math notranslate nohighlight">\(dm_i\)</span> exists outside a <em>spherically symmetric</em> mass <span class="math notranslate nohighlight">\(M_r\)</span>.</strong></p>
+<p>The gravitational force is</p>
+<div class="math notranslate nohighlight">
+\[ dF_{g,i} = \frac{GM_r\:dm_i}{r^2}, \]</div>
+<p>where the force is directed toward the center of the sphere.  Due to the symmetry, we can replace the massive sphere with an equivalent mass located at its center, which is separated by a distance <span class="math notranslate nohighlight">\(r\)</span> from the point mass <span class="math notranslate nohighlight">\(dm_i\)</span>.  Then the gravitational potential energy is</p>
+<div class="math notranslate nohighlight">
+\[ dU_{g,i} = \int_\infty^r dF_{g,i}dr = -\frac{GM_r\:dm_i}{r}. \]</div>
+<p>Instead of using a point mass <span class="math notranslate nohighlight">\(dm_i\)</span>, we can assume that a collection of smaller point masses <em>distributed uniformly</em> within a shell of thickness <em>dr</em> with a mass <span class="math notranslate nohighlight">\(dm\)</span> (i.e., <span class="math notranslate nohighlight">\(\displaystyle dm = \sum_i dm_i\)</span>).  These quantities are related by</p>
+<div class="math notranslate nohighlight">
+\[ dm = 4\pi r^2\:\rho\:dr, \]</div>
+<p>given the mass density <span class="math notranslate nohighlight">\(\rho\)</span> of the shell and its volume, <span class="math notranslate nohighlight">\(4\pi r^2\:dr\)</span>.  The equation for differential gravitational potential energy becomes</p>
+<div class="math notranslate nohighlight">
+\[ dU_g = - \frac{GM_r(4\pi r^2\:\rho)}{r}dr \]</div>
+<p>by direct substitution and the total gravitational potential energy is</p>
+<div class="math notranslate nohighlight">
+\[ U_g = -4\pi G \int_0^R M_r \rho r\:dr, \tag{21}\]</div>
+<p>where the integral is from the center to the radius <span class="math notranslate nohighlight">\(R\)</span> of the star.  More exact calculations of <span class="math notranslate nohighlight">\(U_g\)</span> requires knowledge of the radial mass distribution (<span class="math notranslate nohighlight">\(\rho\)</span> and <span class="math notranslate nohighlight">\(M_r\)</span>) within a body.  However, we can use the average mass density of the Sun <span class="math notranslate nohighlight">\(\overline{\rho}_\odot\)</span> to produce an estimate.   The average density is the total mass contained in a volume, or</p>
+<div class="math notranslate nohighlight">
+\[ \overline{\rho} = \frac{M_r}{\frac{4}{3}\pi r^3}, \]</div>
+<p>where solving for <span class="math notranslate nohighlight">\(M_r\)</span> becomes</p>
+<div class="math notranslate nohighlight">
+\[ M_r = \frac{4}{3}\pi r^3\: \overline{\rho}.\]</div>
+<p>Substituting into Eqn. 21, the total gravitational energy becomes</p>
+<div class="math notranslate nohighlight">
+\[ U_g = -4\pi G \int_0^R \left(\frac{4}{3}\pi r^3\: \overline{\rho} \right) \overline{\rho} r\:dr = -\frac{16}{3}\pi^2 G \overline{\rho}^2 \int_0^R r^4 dr = -\frac{16}{15}\pi^2 G \overline{\rho}^2 R^5. \]</div>
+<p>Back-substituting <span class="math notranslate nohighlight">\(\overline{\rho}\)</span> to get an expression in terms of the total mass <span class="math notranslate nohighlight">\(M\)</span> and radius <span class="math notranslate nohighlight">\(R\)</span> of the star produces</p>
+<div class="math notranslate nohighlight">
+\[ U_g = -\frac{16}{15}\pi^2 G \left(\frac{M}{\frac{4}{3}\pi R^3}\right)^2 R^5 = -\frac{3}{5}\frac{GM^2}{R}. \tag{22} \]</div>
+<p>Applying the virial theorem shows that the total mechanical potential energy is</p>
+<div class="math notranslate nohighlight">
+\[ E = \frac{1}{2}U_g = -\frac{3}{10} \frac{GM^2}{R}. \tag{23} \]</div>
+<ul class="simple">
+<li><p><strong>If the Sun had an initial radius <span class="math notranslate nohighlight">\(R_i\)</span> and was originally much larger than it is today (<span class="math notranslate nohighlight">\(R_i \gg R_\odot\)</span>), how much energy would have been released due to its gravitational collapse?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>The energy released <span class="math notranslate nohighlight">\(\Delta E\)</span> is simply the difference in energy from the initial state <span class="math notranslate nohighlight">\(E_i\)</span> to the current state <span class="math notranslate nohighlight">\(E_f\)</span>, or <span class="math notranslate nohighlight">\(\Delta E = -(E_f - E_i)\)</span>.  The virial theorem &gt;shows that the energy of a very large object (<span class="math notranslate nohighlight">\(R_i \gg R_\odot\)</span>) is very small because <span class="math notranslate nohighlight">\(E \propto 1/R\)</span>.  Therefore, <span class="math notranslate nohighlight">\(E_i \approx 0\)</span> and the change in energy simplifies to</p>
+<div class="math notranslate nohighlight">
+\[ \Delta E = -(E_f -E_i) \simeq -E_f = \frac{3}{10} \frac{GM_\odot^2}{R_odot} \approx 1.14 \times 10^{41}\:{\rm J}. \]</div>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.95e8</span> <span class="c1">#radius of the Sun in m</span>
+<span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.828e26</span> <span class="c1">#luminosity of the Sun in W</span>
+
+<span class="n">delta_E</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">*</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">M_sun</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">R_sun</span><span class="p">)</span>
+<span class="n">t_KH</span> <span class="o">=</span> <span class="p">(</span><span class="n">delta_E</span><span class="o">/</span><span class="n">L_sun</span><span class="p">)</span><span class="o">/</span><span class="mf">3600.</span><span class="o">/</span><span class="mf">24.</span><span class="o">/</span><span class="mf">365.25</span> <span class="c1">#timescale in s--&gt;yr</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The energy released by the gravitational collapse of the Sun is </span><span class="si">%1.2e</span><span class="s2"> J.&quot;</span> <span class="o">%</span> <span class="n">delta_E</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The timescale for releasing this much energy is </span><span class="si">%1.1e</span><span class="s2"> yr&quot;</span> <span class="o">%</span> <span class="n">t_KH</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The energy released by the gravitational collapse of the Sun is 1.14e+41 J.
+The timescale for releasing this much energy is 9.4e+06 yr
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assuming the luminosity of the Sun has been roughly constant throughout its lifetime, it could emit energy at that rate for approximately</p>
+<div class="math notranslate nohighlight">
+\[ t_{KH} = \frac{\Delta E}{L_\odot}. \tag{24} \]</div>
+<p>A solar luminosity is <span class="math notranslate nohighlight">\(3.828 \times 10^{26}\)</span> W, where <span class="math notranslate nohighlight">\(t_{KH} \sim 10^7\)</span> yr and is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Kelvin%E2%80%93Helmholtz_mechanism">Kelvin-Helmholtz timescale</a>.  The Kelvin-Helmholtz timescale was developed by Lord Kelvin and Hermann Ludwig Ferdinand von Helmholtz (in the late 1800s) to explain the Sun’s energy source, but geological (relative) dating techniques at the time was producing rock ages that were at least an order of magnitude older.  Today, we have radioactive dating of Earth rocks, Moon rocks, and primitive meteorites that are more than ~4.5 Gyr old.  Therefore, gravitational potential energy alone cannot account for the Sun’s luminosity through its entire lifetime.</p>
 </div>
 <div class="section" id="the-nuclear-timescale">
 <h3><span class="section-number">7.3.2. </span>The Nuclear Timescale<a class="headerlink" href="#the-nuclear-timescale" title="Permalink to this headline">¶</a></h3>
