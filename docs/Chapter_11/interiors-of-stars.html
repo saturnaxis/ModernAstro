@@ -958,17 +958,17 @@ The timescale for releasing this much energy is 9.4e+06 yr
 <p class="admonition-title">Note</p>
 <p>Mass-energy units are <span class="math notranslate nohighlight">\({\rm MeV/c^2}\)</span> as follows from <span class="math notranslate nohighlight">\(E=mc^2\)</span>, but it is customary to leave off the <span class="math notranslate nohighlight">\({\rm /c^2}\)</span>.  When using mass-energy units in your calculations, be sure to multiply by <span class="math notranslate nohighlight">\(c^2\)</span> to get units of energy.</p>
 </div>
-<p>Similarly energy is also released for a loss in mass when nucleons combine to form atomic nuclei.  A helium nucleus is composed of two protons and two neutrons, which can be formed by a series of nuclear reactions involving four protons (hydrogen nuclei) otherwise known as <strong>fusion</strong> reactions since lighter particles are <em>fused</em> together to form a heavier particle.  The total mass of the four hydrogen atoms (protons and electrons) is 4.03130013 u, where as the mass of one helium atom is 4.002603 u.  The mass difference between these two quantities is 0.028697 u, or 0.7%.  The total amount of energy released in forming a helium nucleus is the *<em>binding energy</em> and is equivalent to the mass difference but in energy units (26.731 MeV).  The helium nucleus requires 26.731 MeV to free the nucleons into the constituent protons and neutrons.</p>
+<p>Similarly energy is also released for a loss in mass when nucleons combine to form atomic nuclei.  A helium nucleus is composed of two protons and two neutrons, which can be formed by a series of nuclear reactions involving four protons (hydrogen nuclei) otherwise known as <strong>fusion</strong> reactions since lighter particles are <em>fused</em> together to form a heavier particle.  The total mass of the four hydrogen atoms (protons and electrons) is 4.03130013 u, where as the mass of one helium atom is 4.002603 u.  The mass difference between these two quantities is 0.028697 u, or 0.7%.  The total amount of energy released in forming a helium nucleus is the <strong>binding energy</strong> and is equivalent to the mass difference but in energy units (26.731 MeV).  The helium nucleus requires 26.731 MeV to free the nucleons into the constituent protons and neutrons.</p>
 <ul class="simple">
 <li><p><strong>Is nuclear energy sufficient to power the Sun during its lifetime?</strong> (Assume that the Sun started with 100% hydrogen and only converts 10% of that into helium.)</p></li>
 </ul>
 <blockquote>
-<div><p>The mass available is 10% of the Sun’s mass converted into energy ($M_\odot{\rm c^2}).  To form a helium nucleus, only 0.7% of the energy is released.</p>
+<div><p>The mass available is 10% of the Sun’s mass converted into energy (<span class="math notranslate nohighlight">\(M_\odot{\rm c^2}\)</span>).  To form a helium nucleus, only 0.7% of the energy is released.</p>
 <div class="math notranslate nohighlight">
 \[ E_{nuclear} = 0.007 \times (0.1 \times M_\odot{\rm c^2}) = 0.007 \times (1.8 \times 10^{46}\:{\rm J}) = 1.3 \times 10^{44}\:{\rm J}.\]</div>
 <p>This gives a <strong>nuclear timescale</strong> of approximately</p>
 <div class="math notranslate nohighlight">
-\[ t_{nuclear} = \frac{E_{nuclear}}{L_\odot} \sim 10^{10}\:{\rm yr} = 10\:{\rm Gyr}, \]</div>
+\[ t_{nuclear} = \frac{E_{nuclear}}{L_\odot} \sim 10^{10}\:{\rm yr} = 10\:{\rm Gyr}, \tag{25} \]</div>
 <p>which is more than enough time to account for the ages of rocks on Earth and the Moon.</p>
 </div></blockquote>
 <div class="cell docutils container">
@@ -994,6 +994,71 @@ The nuclear timescale is 1.04e+10 yr.
 </div>
 <div class="section" id="quantum-mechanical-tunneling">
 <h3><span class="section-number">7.3.3. </span>Quantum Mechanical Tunneling<a class="headerlink" href="#quantum-mechanical-tunneling" title="Permalink to this headline">¶</a></h3>
+<p>Inside of stars, nuclear reactions occur through collisions, which form new nuclei in the process.  However, all nuclei are positively charged and a Coulomb potential energy barrier must be overcome so that fusion can occur.  In a proton-proton interaction, there are two main regimes:</p>
+<ol>
+<li><p>Coulomb repulsion dominates which forces the nuclei apart</p>
+<p>and</p>
+</li>
+<li><p>a potential well governed by the <strong>strong nuclear force</strong> that binds the nucleus together,</p></li>
+</ol>
+<p>where the transition between regions occurs when the nuclei are <span class="math notranslate nohighlight">\(\sim 10^{-15}\)</span> m, or 1 fm, apart.  While the Coulomb force is repulsive, the strong nuclear force is an attractive force that acts on incredibly short distances.</p>
+<p>One source of energy that nuclei could use to overcome the Coulomb barrier is provided by the thermal energy of the gas (i.e., momentum carries the particles to mergers).  In this scenario, we assume that all nuclei are moving nonrelativistically and then the required temperature can be estimated.  All of the particles in the gas are in random motion and it is then appropriate to refer to the relative velocity <span class="math notranslate nohighlight">\(v\)</span> between nuclei and their <em>reduced mass</em> <span class="math notranslate nohighlight">\(\mu_m\)</span>. <em>Note that this is not the mean molecular weight <span class="math notranslate nohighlight">\(\mu\)</span>.</em> To overcome the Coulomb repulsion, the initial kinetic energy of the reduced mass must exceed the potential energy of the barrier (i.e., the classical “turn-around point”).  Using Eqn. 17, we have</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}\mu_m \overline{v^2} = \frac{3}{2}kT_{classical} = \frac{1}{4 \pi \varepsilon_o}\frac{Z_1 Z_2 e^2}{r}, \]</div>
+<p>which depends on the temperature <span class="math notranslate nohighlight">\(T_{classical}\)</span> required to overcome the barrier, the numbers of protons in each nucleus (<span class="math notranslate nohighlight">\(Z_1\)</span> and <span class="math notranslate nohighlight">\(Z_2\)</span>), and their separation <span class="math notranslate nohighlight">\(r\)</span>.  Assuming a typical nucleus radius is 1 fm, the temperature needed to overcome the Coulomb potential energy barrier is approximately,</p>
+<div class="math notranslate nohighlight">
+\[ T_{classical} = \frac{Z_1 Z_2 e^2}{6\pi \varepsilon_o kr} \sim 10^{10}\:{\rm K}, \tag{26}\]</div>
+<p>for two protons.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">k</span><span class="p">,</span> <span class="n">epsilon_0</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">pi</span>
+
+<span class="n">Z_1</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#number of protons in particle 1</span>
+<span class="n">Z_2</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#number of protons in particle 2</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">1e-15</span> <span class="c1">#radius of nucleus in fm</span>
+<span class="n">T_classical</span> <span class="o">=</span> <span class="p">(</span><span class="n">Z_1</span><span class="o">*</span><span class="n">Z_2</span><span class="o">*</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">epsilon_0</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The classical temperature to overcome Coulomb repulsion is </span><span class="si">%1.2e</span><span class="s2"> K&quot;</span> <span class="o">%</span> <span class="n">T_classical</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The classical temperature to overcome Coulomb repulsion is 1.11e+10 K
+</pre></div>
+</div>
+</div>
+</div>
+<p>The central temperature of the Sun is only 15.7 million K (or <span class="math notranslate nohighlight">\(1.57 \times 10^7\:{\rm K}\)</span>), which is about <span class="math notranslate nohighlight">\(1000 \times\)</span> lower.  Even accounting for the velocity dispersion expected through the Maxwell-Boltzmann distribution indicates that classical physics is unable to explain how a sufficient number of particles can overcome the Coulomb barrier to produce the Sun’s luminosity.</p>
+<p>Quantum mechanics’ inherent uncertainty tells us that we can’t know both the position and momentum of a particle with unlimited accuracy (i.e., <span class="math notranslate nohighlight">\(\Delta x \Delta p \ge \hbar/2\)</span>).  In other words, the uncertainty in position of one proton is so large that in can still find itself within the potential well defined by the strong force.  This <strong>quantum mechanical tunneling</strong> effect has no classical counterpart.  A large ratio of the potential energy to the kinetic energy makes tunneling less likely.</p>
+<p>As a crude estimate of the tunneling effect, assume that a proton must be within approximately 1 de Broglie wavelength (<span class="math notranslate nohighlight">\(\lambda = h/p\)</span>) of its target to tunnel through the Coulomb barrier.  The reduced mass kinetic energy can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}\mu_m v^2 = \frac{p^2}{2\mu_m}, \]</div>
+<p>and the distance of close approach (<span class="math notranslate nohighlight">\(r=\lambda=h/p\)</span>) gives</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{4 \pi \varepsilon_o}\frac{Z_1 Z_2 e^2}{\lambda} = \frac{p^2}{2\mu_m} = \frac{h^2}{2\mu_m \lambda^2}. \]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(\lambda\)</span> produces</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = \frac{4\pi \varepsilon_o h^2}{2\mu_m Z_1 Z_2 e^2} = r, \]</div>
+<p>which can be substituted into Eqn. 26 to get</p>
+<p>$$ T_{quantum} = \frac{(Z_1 Z_2 e^2)^2 \mu_m}{12(\pi \varepsilon_o h)^2k} \tag{27}.</p>
+<p>for the temperature required for a reaction to occur.  For two protons, <span class="math notranslate nohighlight">\(\mu_m = m_p/2\)</span> and <span class="math notranslate nohighlight">\(Z_1 = Z_2 = 1\)</span>.  Then, we find that <span class="math notranslate nohighlight">\(T_{quantum} \sim 10^7\:{\rm K}\)</span>, which is consistent with the estimated central temperature of the Sun.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">k</span><span class="p">,</span> <span class="n">epsilon_0</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">m_p</span><span class="p">,</span> <span class="n">h</span>
+
+<span class="n">Z_1</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#number of protons in particle 1</span>
+<span class="n">Z_2</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#number of protons in particle 2</span>
+<span class="n">mu_m</span> <span class="o">=</span> <span class="n">m_p</span><span class="o">/</span><span class="mf">2.</span> <span class="c1">#reduced mass of two protons</span>
+<span class="n">T_quantum</span> <span class="o">=</span> <span class="p">(</span><span class="n">mu_m</span><span class="o">*</span><span class="p">(</span><span class="n">Z_1</span><span class="o">*</span><span class="n">Z_2</span><span class="o">*</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">epsilon_0</span><span class="o">*</span><span class="n">h</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The quantum temperature to overcome Coulomb repulsion is </span><span class="si">%1.2e</span><span class="s2"> K&quot;</span> <span class="o">%</span> <span class="n">T_quantum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The quantum temperature to overcome Coulomb repulsion is 9.79e+06 K
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="nuclear-reaction-rates-and-the-gamow-peak">
 <h3><span class="section-number">7.3.4. </span>Nuclear Reaction Rates and the Gamow Peak<a class="headerlink" href="#nuclear-reaction-rates-and-the-gamow-peak" title="Permalink to this headline">¶</a></h3>
