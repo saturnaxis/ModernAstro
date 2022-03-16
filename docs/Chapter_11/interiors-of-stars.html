@@ -1321,7 +1321,7 @@ n &amp;= \int_0^\infty n_E dE,
 \[ P = P_o e^{-r/H_p}. \]</div>
 <p>If <span class="math notranslate nohighlight">\(r = H_p\)</span>, then <span class="math notranslate nohighlight">\(P= P_o/e\)</span> and thus, <span class="math notranslate nohighlight">\(H_p\)</span> is the distance over which the gas pressure decreases by a factor of <span class="math notranslate nohighlight">\(e\)</span>.  From <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-derivation-of-the-hydrostatic-equilibrium-equation">hydrostatic equilibrium</a>, we can write the pressure gradient in terms of the local acceleration of gravity <span class="math notranslate nohighlight">\(g = G M_r/r^2\)</span>.  By substitution, the pressure scale height is</p>
 <div class="math notranslate nohighlight">
-\[ H_p = -P \left( \frac{dP}{dr}. \right)^{-1} = \frac{P}{\rho g}. \tag{38} \]</div>
+\[ H_p = -P \left( \frac{dP}{dr} \right)^{-1} = \frac{P}{\rho g}. \tag{38} \]</div>
 <ul class="simple">
 <li><p><strong>What is the pressure scale height in the Sun?</strong></p></li>
 </ul>
@@ -1381,12 +1381,118 @@ The estimated pressure scale height is 1.740e+08 m or 0.25 R_sun.
 </div>
 <div class="section" id="specific-heats">
 <h3><span class="section-number">7.4.5. </span>Specific Heats<a class="headerlink" href="#specific-heats" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>specific heat</strong> <span class="math notranslate nohighlight">\(C\)</span> of a gas is defined as the amount of heat <span class="math notranslate nohighlight">\(\delta Q\)</span> required to raise the temperature of a unit mass of a material by a unit temperature, or</p>
+<div class="math notranslate nohighlight">
+\[ C_p \equiv \frac{\partial Q}{\partial T}\bigg\rvert_P  \qquad \text{and} \qquad C_V \equiv \frac{\partial Q}{\partial T}\bigg\rvert_V, \]</div>
+<p>which are the specific heats at constant pressure <span class="math notranslate nohighlight">\(C_P\)</span> and volume <span class="math notranslate nohighlight">\(C_V\)</span>.</p>
+<p><strong>Consider the amount of work per unit mass <span class="math notranslate nohighlight">\(\delta W\)</span> done by the gas on its surroundings.  Suppose that a cylinder of cross-sectional area <span class="math notranslate nohighlight">\(A\)</span> is filled with a gas of mass <span class="math notranslate nohighlight">\(m\)</span> and pressure <span class="math notranslate nohighlight">\(P\)</span></strong>.  The gas exerts a force <span class="math notranslate nohighlight">\(F = PA\)</span> on an end of the cylinder.  When the piston moves through a distance <span class="math notranslate nohighlight">\(dr\)</span>, the work <em>per unit mass</em>* <span class="math notranslate nohighlight">\(\delta W\)</span> performed by the gas is</p>
+<div class="math notranslate nohighlight">
+\[ \delta W = \frac{F}{m}dr = \frac{PA}{m}dr = PdV, \]</div>
+<p>with the <strong>specific volume</strong> <span class="math notranslate nohighlight">\(V\)</span> as the volume <em>per unit mass</em> or <span class="math notranslate nohighlight">\(V=Adr/m=1/\rho\)</span>.  The first law of thermodynamics can then be expressed in the more useful form</p>
+<div class="math notranslate nohighlight">
+\[ dU = \delta Q - PdV. \tag{41} \]</div>
+<p>At constant volume <span class="math notranslate nohighlight">\(dV = 0\)</span>, which implies <span class="math notranslate nohighlight">\(dU\rvert_V = \delta Q\rvert_V\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ dU = \frac{\partial Q}{\partial T}\bigg\rvert_V dT = C_V dT. \tag{42} \]</div>
+<p>From Eqn. 40, the change in energy is</p>
+<div class="math notranslate nohighlight">
+\[ dU = \frac{d}{dT}\left(\frac{3}{2}nRT \right) = \frac{3}{2}nR\,dT, \]</div>
+<p>for a monatomic gas.  Then the heat capacity (from Eqn. 42) is</p>
+<div class="math notranslate nohighlight">
+\[ C_V = \frac{3}{2}nR. \tag{43} \]</div>
+<p><strong>To find <span class="math notranslate nohighlight">\(C_P\)</span> for a monatomic gas</strong>, the change in internal energy is</p>
+<div class="math notranslate nohighlight">
+\[ dU = \frac{\partial Q}{\partial T}\bigg\rvert_P dT - P\frac{\partial V}{\partial T}\bigg\rvert_P, \tag{44}\]</div>
+<p>and the ideal gas law is</p>
+<div class="math notranslate nohighlight">
+\[ PV = nRT. \tag{45} \]</div>
+<p>Applying the differential chain rule to Eqn. 45 produces</p>
+<div class="math notranslate nohighlight">
+\[ PdV + VdP = RTdn + nRdT. \tag{46}\]</div>
+<p>If <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are constant, then Eqn. 46 reduces to</p>
+<div class="math notranslate nohighlight">
+\[ P\frac{dV}{dT} = nR. \]</div>
+<p>Substituting this result into Eqn. 44, along with <span class="math notranslate nohighlight">\(dU = C_V dT\)</span> and the definition of <span class="math notranslate nohighlight">\(C_P\)</span>, we find</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dU}{dT} = C_V = C_P + nR, \tag{47}\]</div>
+<p>which is valid for all situations where the ideal gas law applies.  The ratio of specific heats defines a parameters <span class="math notranslate nohighlight">\(\gamma\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ \gamma \equiv \frac{C_P}{C_V}.\tag{48} \]</div>
+<p>For a monatomic gas, <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span>.  If ionization occurs, the temperature of the gas will not rise as rapidly because some of the heat goes into ionizing the atoms instead of increasing the average kinetic energy of the particles.  Larger values for the specific heats may be required in a partial ionization zone.  As both <span class="math notranslate nohighlight">\(C_P\)</span> and <span class="math notranslate nohighlight">\(C_V\)</span> increase, <span class="math notranslate nohighlight">\(\gamma \rightarrow 1\)</span>.</p>
 </div>
 <div class="section" id="the-adiabatic-gas-law">
 <h3><span class="section-number">7.4.6. </span>The Adiabatic Gas Law<a class="headerlink" href="#the-adiabatic-gas-law" title="Permalink to this headline">¶</a></h3>
+<p>Since the change in internal energy is independent of the process involved, there is a special case of an <strong>adiabatic process</strong>, or <span class="math notranslate nohighlight">\(\delta Q = 0\)</span>, where there is no heat flow into or out of a mass element.  Then the first law of thermodynamics reduces to</p>
+<div class="math notranslate nohighlight">
+\[ dU = -PdV.\]</div>
+<p>At constant <span class="math notranslate nohighlight">\(n\)</span> (Eqn. 46), we have</p>
+<div class="math notranslate nohighlight">
+\[ PdV + vdP = nRdT. \]</div>
+<p>At constant volume <span class="math notranslate nohighlight">\(dU = C_V dT\)</span> that can produce</p>
+<div class="math notranslate nohighlight">
+\[ dT = \frac{dU}{C_V} = -\frac{PdV}{C_V}, \]</div>
+<p>and by substitution, we find</p>
+<div class="math notranslate nohighlight">
+\[ PdV + vdP = - \left( \frac{nR}{C_V} \right) PdV. \]</div>
+<p>By separation of variables and substitution of Eqn. 48, we find</p>
+<div class="math notranslate nohighlight">
+\[ \gamma \frac{dV}{V} = -\frac{dP}{P}. \tag{49}\]</div>
+<p>Integration leads to the adiabatic gas law,</p>
+<div class="math notranslate nohighlight">
+\[ PV^\gamma = K, \tag{50}\]</div>
+<p>with a constant <span class="math notranslate nohighlight">\(K\)</span>.  Using the ideal gas law (Eqn. 45), a second adiabatic relation can be obtained as</p>
+<div class="math notranslate nohighlight">
+\[ P = K^\prime T^{\gamma/(\gamma -1)}, \tag{51}\]</div>
+<p>with a different constant <span class="math notranslate nohighlight">\(K^\prime\)</span>.</p>
 </div>
 <div class="section" id="the-adiabatic-sound-speed">
 <h3><span class="section-number">7.4.7. </span>The Adiabatic Sound Speed<a class="headerlink" href="#the-adiabatic-sound-speed" title="Permalink to this headline">¶</a></h3>
+<p>We can now calculate the sound speed <span class="math notranslate nohighlight">\(v_s\)</span> through the material, which is related to the compressibility of the the gas and its inertia (by density).  This is given by</p>
+<div class="math notranslate nohighlight">
+\[ v_s = \sqrt{\frac{B}{\rho}}, \]</div>
+<p>where the bulk modulus <span class="math notranslate nohighlight">\(B\)</span> of the gas is</p>
+<div class="math notranslate nohighlight">
+\[ B \equiv -V\left(\frac{\partial P}{\partial V}\right)_{\rm ad}. \]</div>
+<p>The bulk modulus describes how much the volume of the gas will change with pressure.  From Eqn. 49, the adiabatic sound speed becomes</p>
+<div class="math notranslate nohighlight">
+\[ v_s = \sqrt{\frac{\gamma P}{\rho}}, \tag{52} \]</div>
+<p>which was also used in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_10/sun.html#the-hydrodynamic-nature-of-the-upper-solar-atmosphere">Sect. 6.2.5</a>.</p>
+<ul class="simple">
+<li><p><strong>What is a typical adiabatic sound speed for a monatomic gas in the Sun?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>From hydrostatic equilibrium, we’ve estimated the central pressure of the Sun, <span class="math notranslate nohighlight">\(P_c = 2.69 \times 10^{14}\: {\rm N/m^2}\)</span>, the average stellar density is <span class="math notranslate nohighlight">\(1408\:{\rm kg/m^3}\)</span>, and the parameter <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span>.  Thus, we find</p>
+<div class="math notranslate nohighlight">
+\[ \overline{v_s} \simeq \sqrt{\frac{5 P_c}{6 \overline{\rho}_\odot}} \simeq 4 \times 10^5 \:{\rm m/s}, \]</div>
+<p>after substituting <span class="math notranslate nohighlight">\(\overline{P}\sim P_c/2\)</span>.  The time required to traverse the radius of the Sun is</p>
+<div class="math notranslate nohighlight">
+\[ t \simeq \frac{R_\odot}{\overline{v}_s} \simeq 29\:{\rm minutes}. \]</div>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">sound_speed</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="n">P</span><span class="p">,</span><span class="n">rho</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">gamma</span><span class="o">*</span><span class="n">P</span><span class="p">)</span><span class="o">/</span><span class="n">rho</span><span class="p">)</span>
+
+<span class="n">P_c</span> <span class="o">=</span> <span class="mf">2.69e14</span> <span class="c1">#central pressure of the Sun in N/m^2</span>
+<span class="n">rho_sun</span> <span class="o">=</span> <span class="mi">1408</span> <span class="c1">#density of the Sun in kg/m^3</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.955e8</span> <span class="c1">#radius of the Sun in m</span>
+
+<span class="n">v_s</span> <span class="o">=</span> <span class="n">sound_speed</span><span class="p">(</span><span class="mf">5.</span><span class="o">/</span><span class="mf">3.</span><span class="p">,</span><span class="n">P_c</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span><span class="n">rho_sun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The adiabatic sound speed is </span><span class="si">%1.1e</span><span class="s2"> m/s&quot;</span> <span class="o">%</span> <span class="n">v_s</span><span class="p">)</span>
+<span class="n">t_sun</span> <span class="o">=</span> <span class="n">R_sun</span><span class="o">/</span><span class="n">v_s</span><span class="o">/</span><span class="mf">60.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The time to traverse the radius of the Sun is </span><span class="si">%2d</span><span class="s2"> minutes&quot;</span> <span class="o">%</span> <span class="n">t_sun</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The adiabatic sound speed is 4.0e+05 m/s
+The time to traverse the radius of the Sun is 29 minutes
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="the-adiabatic-temperature-gradient">
 <h3><span class="section-number">7.4.8. </span>The Adiabatic Temperature Gradient<a class="headerlink" href="#the-adiabatic-temperature-gradient" title="Permalink to this headline">¶</a></h3>
