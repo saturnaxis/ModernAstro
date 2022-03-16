@@ -1270,7 +1270,7 @@ n &amp;= \int_0^\infty n_E dE,
 <div class="section" id="id2">
 <h3><span class="section-number">7.3.12. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>3. The <span class="math notranslate nohighlight">\(Q\)</span> value of a reaction is the amount of energy released (or absorbed) during the reaction.  Calculate the <span class="math notranslate nohighlight">\(Q\)</span> value for each step of the PP I cain.  Express your answers in MeV.  The masses of deuterium and helium-3 are 2.0141 u and 3.0160 u, respectively.</p>
+<div><p>3. The <span class="math notranslate nohighlight">\(Q\)</span> value of a reaction is the amount of energy released (or absorbed) during the reaction.  Calculate the <span class="math notranslate nohighlight">\(Q\)</span> value for each step of the PP I chain.  Express your answers in MeV.  The masses of deuterium and helium-3 are 2.0141 u and 3.0160 u, respectively.</p>
 <p>4. Complete the following reaction sequences. Be sure to include any necessary leptons.</p>
 <blockquote>
 <div><p><strong>(a)</strong> <span class="math notranslate nohighlight">\({^{27}_{14}{\rm Si}} \rightarrow {^?_{13}{\rm Al}} + e^+ + ?\)</span><br />
@@ -1298,7 +1298,7 @@ n &amp;= \int_0^\infty n_E dE,
 \[ \frac{dP_{rad}}{dr} = -\frac{\overline{\kappa}\rho}{c}F_{rad}, \]</div>
 <p>and depends on the outward radiative flux <span class="math notranslate nohighlight">\(F_{rad}\)</span>.  From Eqn. 19 (see <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-contribution-due-to-radiation-pressure">Sect. 7.2.4</a>), the radiation pressure gradient may be expressed as</p>
 <div class="math notranslate nohighlight">
-\[ \frac{dP_{rad}} = \frac{4}{3}aT^3 \frac{dT}{dr}, \]</div>
+\[ \frac{dP_{rad}}{dr} = \frac{4}{3}aT^3 \frac{dT}{dr}, \]</div>
 <p>which depends on the radiation constant <span class="math notranslate nohighlight">\(a=4\sigma/c\)</span>.  Solving for <span class="math notranslate nohighlight">\(dT/dr\)</span> in terms of <span class="math notranslate nohighlight">\(F_{rad}\)</span>, produces</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dT}{dr} = -\frac{3}{4ac}\frac{\overline{\kappa}\rho}{T^3}F_{rad}.\]</div>
@@ -1312,9 +1312,72 @@ n &amp;= \int_0^\infty n_E dE,
 </div>
 <div class="section" id="the-pressure-scale-height">
 <h3><span class="section-number">7.4.3. </span>The Pressure Scale Height<a class="headerlink" href="#the-pressure-scale-height" title="Permalink to this headline">¶</a></h3>
+<p>Once the temperature gradient becomes too steep, convection becomes the more efficient method in the transport of energy.  Convection involves mass motions: <em>hot parcels of matter move upward as cooler, denser parcels sink</em>.  Unfortunately, convection is more complex than radiation at the macroscopic level.  <em>Fluid mechanics</em> is a field of physics that describes the motion of gases and liquids through the 3D <a class="reference external" href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">Navier-Stokes equations</a>.  Solving these equations is very difficult, even for computers, and it becomes necessary to approximate the solution through a 1D model.  Additionally, the equations are non-linear, which can lead to turbulent (and chaotic) flows rather than laminar flows.  Turbulence is characterized by the amount of <em>viscosity</em> (fluid friction) and heat dissipation.  The timescale for convection is in some cases approximately equal to timescales for structural changes in the star.</p>
+<p>A characteristic length scale for convection is the <strong>pressure scale height</strong> <span class="math notranslate nohighlight">\(H_p\)</span>, defined as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{H_p} \equiv - \frac{1}{P}\frac{dP}{dr}. \tag{37} \]</div>
+<p>Assuming that <span class="math notranslate nohighlight">\(H_p\)</span> is a constant, then we can solve (by separation of variables) for the pressure with radius as</p>
+<div class="math notranslate nohighlight">
+\[ P = P_o e^{-r/H_p}. \]</div>
+<p>If <span class="math notranslate nohighlight">\(r = H_p\)</span>, then <span class="math notranslate nohighlight">\(P= P_o/e\)</span> and thus, <span class="math notranslate nohighlight">\(H_p\)</span> is the distance over which the gas pressure decreases by a factor of <span class="math notranslate nohighlight">\(e\)</span>.  From <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-derivation-of-the-hydrostatic-equilibrium-equation">hydrostatic equilibrium</a>, we can write the pressure gradient in terms of the local acceleration of gravity <span class="math notranslate nohighlight">\(g = G M_r/r^2\)</span>.  By substitution, the pressure scale height is</p>
+<div class="math notranslate nohighlight">
+\[ H_p = -P \left( \frac{dP}{dr}. \right)^{-1} = \frac{P}{\rho g}. \tag{38} \]</div>
+<ul class="simple">
+<li><p><strong>What is the pressure scale height in the Sun?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>From hydrostatic equilibrium, we’ve estimated the central pressure of the Sun, <span class="math notranslate nohighlight">\(P_c = 2.69 \times 10^{14}\: {\rm N/m^2}\)</span> and from granulation, we can estimate that convection likely occurs in the outer portions of the Sun.  Assuming that the average pressure is simply half of the central pressure (<span class="math notranslate nohighlight">\(\overline{P} = P_c/2\)</span>) and the local acceleration of gravity is</p>
+<div class="math notranslate nohighlight">
+\[ \overline{g} = 2\frac{G M_\odot}{R_\odot^2} = 550\:{\rm m/s^2}, \]</div>
+<p>when the interior mass is <span class="math notranslate nohighlight">\(M_\odot/2\)</span> at <span class="math notranslate nohighlight">\(R_\odot/2\)</span>.  Using the average solar density <span class="math notranslate nohighlight">\(\overline{\rho}_\odot\)</span>, then we have</p>
+<div class="math notranslate nohighlight">
+\[ H_p = \frac{\overline{P}}{\overline{\rho}_\odot g} = \frac{2.69 \times 10^{14}\: {\rm N/m^2}}{1440\:{\rm kg/m^3}\times 550\:{\rm m/s^2}}\simeq 1.74 \times 10^8\:{\rm m} \sim \frac{R_\odot}{4}. \]</div>
+</div></blockquote>
+<p>More detailed calculations reveal that <span class="math notranslate nohighlight">\(H_p \sim R_\odot/10\)</span> is more typical.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.955e8</span> <span class="c1">#radius of the Sun in m</span>
+<span class="n">rho_sun</span> <span class="o">=</span> <span class="mi">1408</span> <span class="c1">#density of the Sun in kg/m^3</span>
+
+<span class="n">P_c</span> <span class="o">=</span> <span class="mf">2.69e14</span> <span class="c1">#central pressure determined from hydrostatic equilibrium in N/m^2</span>
+<span class="n">g_bar</span> <span class="o">=</span> <span class="n">G</span><span class="o">*</span><span class="p">(</span><span class="n">M_sun</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">R_sun</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">H_p</span> <span class="o">=</span> <span class="p">(</span><span class="n">P_c</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">rho_sun</span><span class="o">*</span><span class="n">g_bar</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The local acceleration of gravity is </span><span class="si">%3d</span><span class="s2"> m/s^2.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">g_bar</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The estimated pressure scale height is </span><span class="si">%1.3e</span><span class="s2"> m or </span><span class="si">%1.2f</span><span class="s2"> R_sun.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">H_p</span><span class="p">,</span><span class="n">H_p</span><span class="o">/</span><span class="n">R_sun</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The local acceleration of gravity is 550 m/s^2.
+The estimated pressure scale height is 1.740e+08 m or 0.25 R_sun.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="internal-energy-and-the-first-law-of-thermodynamics">
 <h3><span class="section-number">7.4.4. </span>Internal Energy and the First Law of Thermodynamics<a class="headerlink" href="#internal-energy-and-the-first-law-of-thermodynamics" title="Permalink to this headline">¶</a></h3>
+<p>A basic understanding of convective heat transport begins with thermodynamics, which has an expression for the conservation of energy expressed as the <a class="reference external" href="https://en.wikipedia.org/wiki/First_law_of_thermodynamics">first law of thermodynamics</a>,</p>
+<div class="math notranslate nohighlight">
+\[ dU = \delta Q - \delta W, \tag{39} \]</div>
+<p>which describes how the change in internal energy of a mass element <span class="math notranslate nohighlight">\(dU\)</span> is modified by the difference of the work done <span class="math notranslate nohighlight">\(\delta W\)</span> by that element form the heat added to that element <span class="math notranslate nohighlight">\(\delta Q\)</span>.  It is typical to express the energy changes as <em>per unit mass</em>.</p>
+<p>The internal energy of a system <span class="math notranslate nohighlight">\(U\)</span> is a <strong>state function</strong>, meaning that its value represents the <em>present</em> conditions of the gas.  The change in internal energy <span class="math notranslate nohighlight">\(dU\)</span> is independent of the actual process involved in the change.  The amount of heat added <span class="math notranslate nohighlight">\(\delta Q\)</span> or the amount of work done <span class="math notranslate nohighlight">\(\delta W\)</span> by a system depends on the order of processes that are carried out, which is why they are designated with <span class="math notranslate nohighlight">\(\delta\)</span> instead of <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p><strong>Consider an ideal monatomic gas with on ionization.</strong> The total internal energy per unit mass is given by</p>
+<div class="math notranslate nohighlight">
+\[ U = \frac{\text{average energy}}{\text{particle}} \times \frac{\text{number of particles}}{\text{mass}} = \overline{K}\times \frac{1}{\overline{m}}, \]</div>
+<p>which depends on the average mass of a single gas particle <span class="math notranslate nohighlight">\(\overline{m} = \mu m_H\)</span>, the average kinetic energy is <span class="math notranslate nohighlight">\(\overline{K}=(3/2)kT\)</span>, and the internal energy is given by</p>
+<div class="math notranslate nohighlight">
+\[ U = \frac{3}{2}\left(\frac{k}{\mu m_H} \right)T = \frac{3}{2}nRT. \tag{40} \]</div>
+<p>The <em>number of moles per unit mass</em> <span class="math notranslate nohighlight">\(n\)</span> and the universal gas constant <span class="math notranslate nohighlight">\(R= 8.314472\:{\rm J/mole/K}\)</span> replace the factors in parentheses by</p>
+<div class="math notranslate nohighlight">
+\[ nR = \frac{k}{\mu m_H}. \]</div>
+<p>The internal energy <span class="math notranslate nohighlight">\(U\)</span> is a function of the gas composition and temperature.  In this case, the internal energy is just the kinetic energy per unit mass.</p>
 </div>
 <div class="section" id="specific-heats">
 <h3><span class="section-number">7.4.5. </span>Specific Heats<a class="headerlink" href="#specific-heats" title="Permalink to this headline">¶</a></h3>
