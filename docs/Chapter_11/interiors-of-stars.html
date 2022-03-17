@@ -1690,13 +1690,9 @@ The time to traverse the radius of the Sun is 29 minutes
 <span class="n">mu</span> <span class="o">=</span> <span class="mf">0.606</span> <span class="c1">#mean molecular weight</span>
 <span class="n">T</span> <span class="o">=</span> <span class="mf">2.18e6</span> <span class="c1">#temperature in K</span>
 <span class="n">P</span> <span class="o">=</span> <span class="mf">5.59e12</span> <span class="c1">#Pressure in N/m^2</span>
-
 <span class="n">gamma</span> <span class="o">=</span> <span class="mf">5.</span><span class="o">/</span><span class="mf">3.</span>
 
 <span class="n">C_p</span> <span class="o">=</span> <span class="n">gamma</span><span class="o">/</span><span class="p">(</span><span class="n">gamma</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">m_H</span><span class="p">))</span>
-
-
-
 <span class="n">dT_dr</span> <span class="o">=</span> <span class="n">g</span><span class="o">/</span><span class="n">C_p</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The adiabatic temperature gradient of the Sun is </span><span class="si">%1.3f</span><span class="s2"> K/m.&quot;</span> <span class="o">%</span> <span class="n">dT_dr</span><span class="p">)</span>
 
@@ -1705,7 +1701,6 @@ The time to traverse the radius of the Sun is 29 minutes
 <span class="n">bot_fact</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">C_p</span>
 <span class="n">delta_T</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span><span class="o">/</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">F_c</span><span class="o">*</span><span class="n">mu_mH_over_k</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">bot_fact</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The difference in temperature gradients is </span><span class="si">%1.1e</span><span class="s2"> K/m&quot;</span> <span class="o">%</span> <span class="n">delta_T</span><span class="p">)</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The relative amount by which the actual temperature is superadiabatic is </span><span class="si">%1.1e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta_T</span><span class="o">/</span><span class="n">dT_dr</span><span class="p">))</span>
 
 <span class="n">v_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">beta</span><span class="o">*</span><span class="n">T</span><span class="o">*</span><span class="n">delta_T</span><span class="o">/</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">alpha</span><span class="o">/</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">m_H</span><span class="p">))</span>
@@ -1717,30 +1712,78 @@ The time to traverse the radius of the Sun is 29 minutes
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The adiabatic temperature gradient of the Sun is 0.015 K/m.
 The difference in temperature gradients is 6.7e-09 K/m
 The relative amount by which the actual temperature is superadiabatic is 4.4e-07.
-50.92707873848684
 The convective velocity is 50 m/s
 </pre></div>
 </div>
 </div>
 </div>
+<p>The mixing length theory can solve some problems, but it is incomplete. The <em>free parameters</em> <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> must be known a priori (or a least estimated) and they may even vary throughout the star.  The time-independent mixing length theory is unsatisfactory when there are stellar pulsations, where the outer layers are oscillating on a timescale comparable to convection <span class="math notranslate nohighlight">\(t_c = \ell/\overline{v}_c\)</span>.  Rapid changes in the star directly couple to the driving of convective bubbles, which in turn alters the stellar structure.</p>
 </div>
 <div class="section" id="id3">
 <h3><span class="section-number">7.4.11. </span><strong>Problems</strong><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>5. Prove that <span class="math notranslate nohighlight">\(P = K^\prime T^{\gamma/(\gamma-1)}\)</span> follows from <span class="math notranslate nohighlight">\(PV^\gamma =K\)</span>.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="stellar-model-building">
 <h2><span class="section-number">7.5. </span>Stellar Model Building<a class="headerlink" href="#stellar-model-building" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="a-summary-of-the-equations-of-stellar-structure">
 <h3><span class="section-number">7.5.1. </span>A Summary of The Equations of Stellar Structure<a class="headerlink" href="#a-summary-of-the-equations-of-stellar-structure" title="Permalink to this headline">¶</a></h3>
+<p>For your convenience, the basic <em>time-independent</em> stellar structure equations are summarized:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \boxed{\begin{align*}
+\frac{dP}{dr} &amp;= -\frac{GM_r \rho}{r^2} &amp;\\
+\frac{dM_r}{dr} &amp;= 4\pi r^2 \, \rho &amp;\\
+\frac{dL_r}{dr} &amp;= 4\pi r^2 \, \rho\,\epsilon &amp;\\
+\frac{dT}{dr} &amp;= -\frac{3}{4ac}\frac{\overline{\kappa}\rho}{T^3}\frac{L_r}{4\pi r^2} &amp; \text{(radiation)} \\
+&amp;= -\left(1 - \frac{1}{\gamma} \right)\frac{\mu m_H}{k}\frac{GM_r}{r^2} &amp; \text{(adiabatic convection)}
+\end{align*}}\end{split}\]</div>
+<p>The temperature gradient can depend on the radiation constant <span class="math notranslate nohighlight">\(a=4\sigma/c\)</span> and the average opacity $\overline{\kappa} in radiation dominated environments.  The convective (adiabatic) temperature gradient can be applied when</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d\ln P}{d\ln T} &lt; \frac{\gamma}{\gamma-1}. \]</div>
+<p>If the star is static (i.e., no radial oscillations), then <span class="math notranslate nohighlight">\(\epsilon = \epsilon_{nuclear}\)</span>.  Otherwise the energy contribution due to gravity must be included as <span class="math notranslate nohighlight">\(\epsilon = \epsilon_{nuclear} + \epsilon_{gravity}\)</span>.  The gravitational energy term adds an explicit time dependence to the equations, which can be see through the virial theorem that requires one-half of the gravitational potential energy is lost due to heat.</p>
 </div>
 <div class="section" id="entropy">
 <h3><span class="section-number">7.5.2. </span>Entropy<a class="headerlink" href="#entropy" title="Permalink to this headline">¶</a></h3>
+<p>The gravitational energy generation rate can be expressed in terms of the change in <strong>entropy</strong> <span class="math notranslate nohighlight">\(S\)</span> per unit mass (the specific entropy) by</p>
+<div class="math notranslate nohighlight">
+\[ dS \equiv \frac{\delta Q}{T}. \tag{68} \]</div>
+<p>and <span class="math notranslate nohighlight">\(\epsilon_{gravity} = -\delta Q/dt\)</span>.  Then the energy rate is due to the change in entropy directly by</p>
+<div class="math notranslate nohighlight">
+\[ \epsilon_{gravity} = -T \frac{dS}{dt}. \]</div>
+<p>If the star is collapsing, $\epsilon_{gravity} is positive and otherwise it will be negative.  As the star contract, its entropy decreases.  A star is not a closed system, where its entropy may decrease locally while the entropy of the universe increases due to radiation and stellar wind.</p>
 </div>
 <div class="section" id="the-constitutive-relations">
 <h3><span class="section-number">7.5.3. </span>The Constitutive Relations<a class="headerlink" href="#the-constitutive-relations" title="Permalink to this headline">¶</a></h3>
+<p>The basic stellar structure equations require information regarding the physical composition of the star.  The required conditions are the equation of state and are collectively called <strong>constitutive relations</strong>.  These are defined in general as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*} 
+P &amp;= P(\rho, T, \text{composition}) \\
+\overline{\kappa} &amp;= \overline{\kappa}(\rho, T, \text{composition}) \\
+\epsilon &amp;= \epsilon(\rho, T, \text{composition}). \\
+\end{align*} \end{split}\]</div>
+<p>The pressure equation of state can be quite complex in the deep interior, where the density and temperature are extremely high.  However, the ideal gas law (combined with the expression for radiation pressure) is a good first approximation.</p>
+<p>The opacity of stellar material cannot be expressed exactly by a single formula.  Stellar-structure codes either interpolate a density-temperature grid or use a “fitting function” based on tabulated values. No accurate fitting function can be constructed to account for bound-bound opacities.</p>
+<p>The nuclear reaction generation rate can be calculated using formulas for the pp chain and the CNO cycle.  <em>Reaction networks</em> are employed to yield individual reaction rates for each step of a process and equilibrium abundances for each isotope in the mixture.</p>
 </div>
 <div class="section" id="boundary-conditions">
 <h3><span class="section-number">7.5.4. </span>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h3>
+<p>The actual solution of the stellar structure equations require appropriate <strong>boundary conditions</strong> that specify how the star should behave between the radiation and convection dominated zones.  Boundary conditions tell astronomers the appropriate limits of integration.  The central boundary conditions are that the interior mass and luminosity approach zero at the center of the star or</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \left.\begin{split}
+\lim_{r\rightarrow 0} M_r = 0 \\
+\lim_{r\rightarrow 0} L_r = 0. \\
+\end{split} \right\} \qquad {\rm Central\,Boundary\,Conditions} \end{split}\]</div>
+<p>This means that the star does not contain a hole, a core of negative luminosity, or singularities.</p>
+<p>A second set of boundary conditions are imposed at the surface of the star, where the temperature, pressure, and density must approach zero, or</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \left.\begin{split}
+\lim_{r\rightarrow R_\star} T = 0 \\
+\lim_{r\rightarrow R_\star} P = 0 \\
+\lim_{r\rightarrow R_\star} \rho = 0. \\
+\end{split} \right\} \qquad {\rm Surface\,Boundary\,Conditions} \end{split}\]</div>
+<p>The conditions for the surface boundary conditions will never be satisfied exactly for a real star (e.g, the corona).  It is often necessary to use more sophisticated surface boundary conditions, such as a star that is losing mass or has an extended atmosphere.</p>
 </div>
 <div class="section" id="the-vogt-russell-theorem">
 <h3><span class="section-number">7.5.5. </span>The Vogt-Russell Theorem<a class="headerlink" href="#the-vogt-russell-theorem" title="Permalink to this headline">¶</a></h3>
