@@ -1598,6 +1598,51 @@ The time to traverse the radius of the Sun is 29 minutes
 </div>
 <div class="section" id="the-mixing-length-theory-of-superadiabatic-convection">
 <h3><span class="section-number">7.4.10. </span>The Mixing-Length Theory of Superadiabatic Convection<a class="headerlink" href="#the-mixing-length-theory-of-superadiabatic-convection" title="Permalink to this headline">¶</a></h3>
+<p>In <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-adiabatic-temperature-gradient">Sect. 7.4.8</a>, we asserted that the temperature gradient must be only slightly superadiabatic and herein, we will justify that assertion.  The fundamental criterion for convection requires that the density of a bubble is less than the density of its surroundings.  Since the pressure of the bubble and its surroundings are always equal, the ideal gas law implies that the temperature inside the bubble must be larger than its surroundings.  The temperature of the surrounding gas mus decrease more rapidly with radius, so</p>
+<div class="math notranslate nohighlight">
+\[ \bigg\lvert\frac{dT}{dr}\bigg\rvert^{(s)} - \bigg\vert\frac{dT}{dr}\bigg\rvert^{(b)} &gt; 0 \]</div>
+<p>is required for convection (i.e., the temperature of the surroundings is dropping faster than inside the bubble).  Since the temperature gradients are negative, we have</p>
+<div class="math notranslate nohighlight">
+\[ frac{dT}{dr}\bigg\rvert^{(b)} - frac{dT}{dr}\bigg\rvert^{(s)} &gt; 0. \]</div>
+<p>Let the temperature gradient of the bubble vary adiabatically and the surrounding gas follow the actual temperature gradient of the star as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dT}{dr}\bigg\rvert^{(b)} = \frac{dT}{dr}\bigg\rvert_{\rm ad} \qquad \text{and} \qquad frac{dT}{dr}\bigg\rvert^{(s)} = frac{dT}{dr}\bigg\rvert_{\rm actual}. \]</div>
+<p>After the bubble travels a small distance <span class="math notranslate nohighlight">\(dr\)</span>, its temperature will exceed the temperature of the surrounding gas by</p>
+<div class="math notranslate nohighlight">
+\[ \delta T = \left( \frac{dT}{dr}\bigg\rvert_{\rm ad} -\frac{dT}{dr}\bigg\rvert_{\rm actual} \right)dr. \]</div>
+<p>Now assume that a hot, rising bubble travels some (characteristic) distance</p>
+<div class="math notranslate nohighlight">
+\[ \ell = \alpha H_P, \]</div>
+<p>before dissipating.  After which point, it gives up its excess heat at constant pressure.  The distance <span class="math notranslate nohighlight">\(\ell\)</span> is called the <strong>mixing length</strong> and <span class="math notranslate nohighlight">\(H_P\)</span> is the pressure scale height.  The ratio of mixing length to the pressure scale height <span class="math notranslate nohighlight">\(\alpha \equiv \ell/H_P\)</span> is an adjustable (or free) parameter generally assumed to be ~1 (values of <span class="math notranslate nohighlight">\(0.5&lt;\alpha &lt;3\)</span> are typical).  After the bubble travels one mixing length, the excess heat flow <em>per unit volume</em> from the bubble into its surroundings is</p>
+<p>$ \delta q = (C_P \delta T)\rho,</p>
+<p>where <span class="math notranslate nohighlight">\(\ell = dr\)</span>.  Multiplying by the average velocity <span class="math notranslate nohighlight">\(\overline{v}_c\)</span> of the convective bubble, we obtain the convective flux <span class="math notranslate nohighlight">\(F_c\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[ F_c = \delta q \overline{v}_c = (C_P \delta T)\rho \overline{v}_c. \tag{64} \]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\rho \overline{v}\)</span> is <em>mass flux</em>, which is a quantity often encountered in fluid mechanics.</p>
+<p>The average velocity <span class="math notranslate nohighlight">\(\overline{v}\)</span> can be obtained from the net force <em>per unit volume</em> <span class="math notranslate nohighlight">\(f_{net}\)</span> acting on the bubble.  From the ideal gas law (assuming constant <span class="math notranslate nohighlight">\(\mu\)</span>), we have</p>
+<div class="math notranslate nohighlight">
+\[ \delta P = \frac{P}{\rho}\delta \rho + \frac{P}{T}\delta T. \]</div>
+<p>Since pressure inside and outside the bubble is equal, <span class="math notranslate nohighlight">\(\delta P = 0\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[ \delta \rho = -\frac{\rho}{T} \delta T. \]</div>
+<p>From the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#a-criterion-for-stellar-convection">net force</a>,</p>
+<div class="math notranslate nohighlight">
+\[ f_{net} = \frac{\rho g}{T}\delta T. \]</div>
+<p>We assumed that the initial temperature difference inside and outside the bubble is small <span class="math notranslate nohighlight">\((\delta T_i \approx 0)\)</span> and the buoyant force mus also be small.  Since <span class="math notranslate nohighlight">\(f_{net}\)</span> increases linearly with <span class="math notranslate nohighlight">\(\delta T\)</span>, we can average over the distance <span class="math notranslate nohighlight">\(\ell\)</span> between initial and final positions, or</p>
+<div class="math notranslate nohighlight">
+\[ \langle f_{net}\rangle = \frac{1}{2} \frac{\rho g}{T} \delta T_f. \]</div>
+<p>Neglecting viscous forces, the work done <em>per unit volume</em> is the net force acting over <span class="math notranslate nohighlight">\(\ell\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{2}\rho v_f^2 = \langle f_{net} \rangle \ell, \]</div>
+<p>by the <em>work-energy theorem</em>.  Choosing an <em>average</em> kinetic energy over one mixing length leads to some average value of <span class="math notranslate nohighlight">\(\beta v^2\)</span>, where <span class="math notranslate nohighlight">\(\beta\)</span> has a value between 0 and 1.  Now the average bubble velocity is</p>
+<div class="math notranslate nohighlight">
+\[ \overline{v}_c = \sqrt{\frac{2\beta \langle f_{net}\rangle \ell}{\rho}}. \]</div>
+<p>Substituting the full expression for <span class="math notranslate nohighlight">\(\langle f_{net}\rangle\)</span> with <span class="math notranslate nohighlight">\(dr = \ell\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ \overline{v}_c = \sqrt{\frac{\beta g}{T}\delta T} \ell = \sqrt{\frac{\beta T}{g}\delta T} \frac{k \alpha}{\mu m_H}, \tag{65} \]</div>
+<p>using the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-ideal-gas-law-in-terms-of-the-mean-molecular-weight">ideal gas law</a> and definition of the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-pressure-scale-height">pressure scale height</a>.  Through some more manipulation, we can obtain the convective flux</p>
+<p>$<span class="math notranslate nohighlight">\( F_c = \rho C_P \left(\frac{k}{\mu m_H}\right)^2 \left(\frac{T}{g} \delta T\right)^{3/2} \sqrt{B} \alpha^2. \tag{66 \)</span>$}</p>
+<p>The derivation leading to the convective flux is known as <strong>mixing-length theory</strong>, which is generally quite successful in predicting the results of observations.</p>
 </div>
 <div class="section" id="id3">
 <h3><span class="section-number">7.4.11. </span><strong>Problems</strong><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
