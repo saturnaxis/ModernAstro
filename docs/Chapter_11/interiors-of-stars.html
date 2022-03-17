@@ -631,7 +631,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GM_sun</span> <span class="o">=</span> <span class="mf">1.3271244e20</span> <span class="c1">#GM_sun from astropy in m^3/s^2</span>
-<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.957e8</span> <span class="c1">#solar radius in m</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.955e8</span> <span class="c1">#solar radius in m</span>
 <span class="n">rho_sun</span> <span class="o">=</span> <span class="mi">1410</span> <span class="c1">#solar density in kg/m^3</span>
 
 <span class="n">P_c</span> <span class="o">=</span> <span class="n">GM_sun</span><span class="o">*</span><span class="n">rho_sun</span><span class="o">/</span><span class="n">R_sun</span>
@@ -907,7 +907,7 @@ our simplification in ignoring it.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span>
 
 <span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
-<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.95e8</span> <span class="c1">#radius of the Sun in m</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.955e8</span> <span class="c1">#radius of the Sun in m</span>
 <span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.828e26</span> <span class="c1">#luminosity of the Sun in W</span>
 
 <span class="n">delta_E</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">*</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">M_sun</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">R_sun</span><span class="p">)</span>
@@ -1641,8 +1641,88 @@ The time to traverse the radius of the Sun is 29 minutes
 <div class="math notranslate nohighlight">
 \[ \overline{v}_c = \sqrt{\frac{\beta g}{T}\delta T} \ell = \sqrt{\frac{\beta T}{g}\delta T} \frac{k \alpha}{\mu m_H}, \tag{65} \]</div>
 <p>using the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-ideal-gas-law-in-terms-of-the-mean-molecular-weight">ideal gas law</a> and definition of the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-pressure-scale-height">pressure scale height</a>.  Through some more manipulation, we can obtain the convective flux</p>
-<p>$<span class="math notranslate nohighlight">\( F_c = \rho C_P \left(\frac{k}{\mu m_H}\right)^2 \left(\frac{T}{g} \delta T\right)^{3/2} \sqrt{B} \alpha^2. \tag{66 \)</span>$}</p>
+<div class="math notranslate nohighlight">
+\[ F_c = \rho C_P \left(\frac{k}{\mu m_H}\right)^2 \left(\frac{T}{g} \delta T\right)^{3/2} \sqrt{B} \alpha^2. \tag{66} \]</div>
 <p>The derivation leading to the convective flux is known as <strong>mixing-length theory</strong>, which is generally quite successful in predicting the results of observations.</p>
+<p>To evaluate <span class="math notranslate nohighlight">\(F_c\)</span>, we need to know the difference between the temperature gradients inside and outside of the bubble.  Suppose that <em>all</em> of the flux is carried by convection so that,</p>
+<div class="math notranslate nohighlight">
+\[ F_c = \frac{L_r}{4\pi r^2}, \]</div>
+<p>with the luminosity <span class="math notranslate nohighlight">\(L_r\)</span> at a given radius <span class="math notranslate nohighlight">\(r\)</span>.  This will allow us to estimate the difference in temperature gradients by rearranging Eqn. 66,</p>
+<div class="math notranslate nohighlight">
+\[ \delta T = \left[ \frac{L_r}{4\pi r^2} \frac{1}{\rho C_P \alpha^2 \sqrt{\beta}} \left( \frac{\mu m_H}{k}\right)^2 \left( \frac{g}{T}\right)^{3/2} \right]^{2/3}. \tag{67} \]</div>
+<p>Dividing Eqn. 67 by the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-adiabatic-temperature-gradient">adiabatic temperature gradient</a> (Eqn. 58) gives an estimate for how superadiabatic the actual temperature gradient must be to carry all of the flux by convection alone:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\delta T}{|dT/dr|_{\rm ad}} = \frac{1}{T} \left[ \left(\frac{L_r}{4\pi r^2}\right)^2 \left( \frac{\mu m_H}{k} \right)^4 \frac{C_P}{\rho^2 \alpha^4 \beta} \right]^{1/3}. \]</div>
+<ul class="simple">
+<li><p><strong>What is the characteristic adiabatic temperature gradient of the Sun’s convection zone?  To what degree is the actual gradient superadiabatic? What is the convective bubble velocity?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>Starting with a number of assumptions: <span class="math notranslate nohighlight">\(\alpha = 1\)</span>, <span class="math notranslate nohighlight">\(\beta = 0.5\)</span>, the mass at the base of the convection zone <span class="math notranslate nohighlight">\(M_r = 0.976\,M_\odot\)</span>, <span class="math notranslate nohighlight">\(L_r = 1\,L\odot\)</span>, <span class="math notranslate nohighlight">\(r=0.714\,R_\odot\)</span>, <span class="math notranslate nohighlight">\(g=525\,{\rm m/s^2}\)</span>, <span class="math notranslate nohighlight">\(P = 5.59 \times 10^{12}\:{\rm N/m^2}\)</span>, <span class="math notranslate nohighlight">\(\rho = 187\:{\rm kg/m^3}\)</span>, <span class="math notranslate nohighlight">\(\mu = 0.606\)</span>, and <span class="math notranslate nohighlight">\(T = 2.18 \times 10^6\:{\rm K}\)</span>.  Then from Eqn. 58 (adiabatic temperature gradient)</p>
+<div class="math notranslate nohighlight">
+\[ \bigg\lvert\frac{dT}{dr}\bigg\rvert_{\rm ad} \sim \frac{g}{C_P} = 0.015\:{\rm K/m}.\]</div>
+<p>and from Eqn. 67</p>
+<div class="math notranslate nohighlight">
+\[ \delta T \sim 6.7 \times 10^{-9}\:{\rm K/m}.\]</div>
+<p>The relative amount by which the actual temperature gradient is superadiabatic is</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\delta T}{|dT/dr|_{\rm ad}} \sim 4.4 \times 10^{-7}. \]</div>
+<p>The convective velocity needed to carry all of the convective flux is</p>
+<div class="math notranslate nohighlight">
+\[ \overline{v}_c = \sqrt{\frac{\beta T}{g}\delta T} \frac{k \alpha}{\mu m_H} \sim 50\:{\rm m/s} \sim 10^{-4}\,v_s. \]</div>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">R</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span><span class="n">k</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.955e8</span> <span class="c1">#radius of the Sun in m</span>
+<span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.827e26</span> <span class="c1">#luminosity of Sun in W</span>
+<span class="n">m_H</span> <span class="o">=</span> <span class="mf">1.6735575e-27</span> <span class="c1">#mass of hydrogen in kg</span>
+
+<span class="c1">#parameters at the base of convection zone</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">M_r</span> <span class="o">=</span> <span class="mf">0.976</span><span class="o">*</span><span class="n">M_sun</span> <span class="c1">#Mass of the Sun in kg</span>
+<span class="n">r_c</span> <span class="o">=</span> <span class="mf">0.714</span><span class="o">*</span><span class="n">R_sun</span> <span class="c1">#Radius of Sun in m</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="mi">187</span> <span class="c1">#stellar density  in kg/m^3</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">G</span><span class="o">*</span><span class="n">M_r</span><span class="o">/</span><span class="n">r_c</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#local acceleration from gravity in m/s^2</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.606</span> <span class="c1">#mean molecular weight</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mf">2.18e6</span> <span class="c1">#temperature in K</span>
+<span class="n">P</span> <span class="o">=</span> <span class="mf">5.59e12</span> <span class="c1">#Pressure in N/m^2</span>
+
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">5.</span><span class="o">/</span><span class="mf">3.</span>
+
+<span class="n">C_p</span> <span class="o">=</span> <span class="n">gamma</span><span class="o">/</span><span class="p">(</span><span class="n">gamma</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">m_H</span><span class="p">))</span>
+
+
+
+<span class="n">dT_dr</span> <span class="o">=</span> <span class="n">g</span><span class="o">/</span><span class="n">C_p</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The adiabatic temperature gradient of the Sun is </span><span class="si">%1.3f</span><span class="s2"> K/m.&quot;</span> <span class="o">%</span> <span class="n">dT_dr</span><span class="p">)</span>
+
+<span class="n">F_c</span> <span class="o">=</span> <span class="n">L_sun</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r_c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">mu_mH_over_k</span> <span class="o">=</span> <span class="n">mu</span><span class="o">*</span><span class="n">m_H</span><span class="o">/</span><span class="n">k</span>
+<span class="n">bot_fact</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">C_p</span>
+<span class="n">delta_T</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span><span class="o">/</span><span class="n">T</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">F_c</span><span class="o">*</span><span class="n">mu_mH_over_k</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="n">bot_fact</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The difference in temperature gradients is </span><span class="si">%1.1e</span><span class="s2"> K/m&quot;</span> <span class="o">%</span> <span class="n">delta_T</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The relative amount by which the actual temperature is superadiabatic is </span><span class="si">%1.1e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta_T</span><span class="o">/</span><span class="n">dT_dr</span><span class="p">))</span>
+
+<span class="n">v_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">beta</span><span class="o">*</span><span class="n">T</span><span class="o">*</span><span class="n">delta_T</span><span class="o">/</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">alpha</span><span class="o">/</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">m_H</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The convective velocity is </span><span class="si">%2d</span><span class="s2"> m/s&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">v_c</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The adiabatic temperature gradient of the Sun is 0.015 K/m.
+The difference in temperature gradients is 6.7e-09 K/m
+The relative amount by which the actual temperature is superadiabatic is 4.4e-07.
+50.92707873848684
+The convective velocity is 50 m/s
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="id3">
 <h3><span class="section-number">7.4.11. </span><strong>Problems</strong><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
