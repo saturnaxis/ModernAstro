@@ -1463,7 +1463,7 @@ The estimated pressure scale height is 1.740e+08 m or 0.25 R_sun.
 <blockquote>
 <div><p>From hydrostatic equilibrium, we’ve estimated the central pressure of the Sun, <span class="math notranslate nohighlight">\(P_c = 2.69 \times 10^{14}\: {\rm N/m^2}\)</span>, the average stellar density is <span class="math notranslate nohighlight">\(1408\:{\rm kg/m^3}\)</span>, and the parameter <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span>.  Thus, we find</p>
 <div class="math notranslate nohighlight">
-\[ \overline{v_s} \simeq \sqrt{\frac{5 P_c}{6 \overline{\rho}_\odot}} \simeq 4 \times 10^5 \:{\rm m/s}, \]</div>
+\[ \overline{v}_s \simeq \sqrt{\frac{5 P_c}{6 \overline{\rho}_\odot}} \simeq 4 \times 10^5 \:{\rm m/s}, \]</div>
 <p>after substituting <span class="math notranslate nohighlight">\(\overline{P}\sim P_c/2\)</span>.  The time required to traverse the radius of the Sun is</p>
 <div class="math notranslate nohighlight">
 \[ t \simeq \frac{R_\odot}{\overline{v}_s} \simeq 29\:{\rm minutes}. \]</div>
@@ -1496,6 +1496,41 @@ The time to traverse the radius of the Sun is 29 minutes
 </div>
 <div class="section" id="the-adiabatic-temperature-gradient">
 <h3><span class="section-number">7.4.8. </span>The Adiabatic Temperature Gradient<a class="headerlink" href="#the-adiabatic-temperature-gradient" title="Permalink to this headline">¶</a></h3>
+<p>Convection bubbles are parcels of hot gas that rise (i.e., increase a distance <span class="math notranslate nohighlight">\(dr\)</span>) and expand <em>adiabatically</em> (i.e., doesn’t exchange heat with its surroundings).  After traveling some distance, it gives up any excess heat as it loses its identify and dissolves into the surrounding gas (i.e., it thermalizes).  Treating the convection bubble as an ideal gas requires knowledge of how it is modified with changing stellar radius.  This is accomplished by differentiation of the ideal gas law,</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{\rho}{\mu m_H}kT, \]</div>
+<p>to uncover the bubble’s <em>temperature gradient</em>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{split}
+\frac{dP}{dr} &amp;= \frac{d}{dr}\left(\frac{\rho}{\mu m_H}kT\right) \\ 
+&amp;= -\frac{\rho}{\mu^2 m_H}kT\frac{d\mu}{dr} + \frac{1}{\mu m_H}kT\frac{d\rho}{dr} + \frac{\rho}{\mu m_H}k\frac{dT}{dr} \\
+&amp;= -\frac{P}{\mu}\frac{d\mu}{dr} + \frac{P}{\rho}\frac{d\rho}{dr} + \frac{P}{T}\frac{dT}{dr}.
+\end{split} \tag{53} \end{split}\]</div>
+<p>Using the adiabatic gas law (Eqn. 50) and the specific volume <span class="math notranslate nohighlight">\((V\equiv 1/\rho)\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{K}{V^\gamma} = K\rho^\gamma. \tag{54}\]</div>
+<p>Upon differentiation with respect to <span class="math notranslate nohighlight">\(r\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} = \frac{\gamma P}{\rho}\frac{d\rho}{dr} = v_s^2\frac{d\rho}{dr}. \tag{55} \]</div>
+<p>If <span class="math notranslate nohighlight">\(\mu\)</span> is a constant with radius (i.e., monatomic gas), then Eqn. 53 reduces to</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} = \frac{P}{\rho}\frac{d\rho}{dr} + \frac{P}{T}\frac{dT}{dr}, \]</div>
+<p>where a substitution of from Eqn. 55 produces</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} = \frac{1}{\gamma}\frac{dP}{dr} + \frac{P}{T}\frac{dT}{dr}. \]</div>
+<p>The <em>adiabatic temperature gradient</em> is determined by solving for <span class="math notranslate nohighlight">\(\frac{dT}{dr}\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dT}{dr} \bigg\rvert_{\rm ad} = \left(1-\frac{1}{\gamma}\right)\frac{T}{P} \frac{dP}{dr}. \tag{56} \]</div>
+<p>Using the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-derivation-of-the-hydrostatic-equilibrium-equation">radial motion equation</a> and the ideal gas law, we finally obtain</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dT}{dr}\bigg\rvert_{\rm ad} = - \left(1-\frac{1}{\gamma}\right)\frac{\mu m_H}{k}\frac{GM_r}{r^2}. \tag{57} \]</div>
+<p>Equation 57 can be written in a simpler form using the definitions for the local acceleration of gravity <span class="math notranslate nohighlight">\(g\)</span>, <span class="math notranslate nohighlight">\(k/(\mu m_H) = nR\)</span>, <span class="math notranslate nohighlight">\(\gamma=C_P/C_V\)</span>, and <span class="math notranslate nohighlight">\(C_P = C_V + nR\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dT}{dr}\bigg\rvert_{\rm ad} = -\frac{g}{C_P}. \tag{58}\]</div>
+<p>This result describes how the temperature of the gas <em>inside the bubble</em> changes as the bubble rises and expands adiabatically.  If the star’s <em>actual temperature gradient</em> is <em>steeper</em> than the adiabatic temperature gradient, or</p>
+<div class="math notranslate nohighlight">
+\[ \bigg\lvert\frac{dT}{dr}\bigg\rvert_{\rm actual} &gt; \bigg\lvert\frac{dT}{dr}\bigg\rvert_{\rm ad}, \]</div>
+<p>the temperature is <strong>superadiabatic</strong>.  If the deep interior of a star is just <em>slightly</em> superadiabatic, then it may be possible to carry nearly all of the luminosity by convection.  It is often the case that either radiation or convection dominates the energy transport in the deep interior, where the other transport mechanism contributes very little to the energy flow.  However, near the surface both radiation and convection can carry significant amounts of energy simultaneously.</p>
 </div>
 <div class="section" id="a-criterion-for-stellar-convection">
 <h3><span class="section-number">7.4.9. </span>A Criterion for Stellar Convection<a class="headerlink" href="#a-criterion-for-stellar-convection" title="Permalink to this headline">¶</a></h3>
