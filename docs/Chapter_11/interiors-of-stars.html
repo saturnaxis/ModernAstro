@@ -523,14 +523,6 @@
      7.5.7. Polytropic Models and the Lane-Emden Equation
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
-     7.5.8.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -549,7 +541,7 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
+    <a class="reference internal nav-link" href="#id4">
      7.6.3.
      <strong>
       Problems
@@ -557,6 +549,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-resources">
+   7.7. Additional Resources
+  </a>
  </li>
 </ul>
 
@@ -1787,15 +1784,183 @@ P &amp;= P(\rho, T, \text{composition}) \\
 </div>
 <div class="section" id="the-vogt-russell-theorem">
 <h3><span class="section-number">7.5.5. </span>The Vogt-Russell Theorem<a class="headerlink" href="#the-vogt-russell-theorem" title="Permalink to this headline">¶</a></h3>
+<p>Given the stellar structure equations, constitutive relations (i.e., equation of state), and boundary conditions, we can specify the type of star to be modeled.  But, let’s summarize how everything is connected.</p>
+<ul class="simple">
+<li><p>The pressure gradient depends on the interior mass and density.</p></li>
+<li><p>The radiative temperature gradient depends on the local temperature, density, opacity, and interior luminosity.</p></li>
+<li><p>The luminosity gradient function depends on the density and energy generation rate (depends on density temperature and local composition).</p></li>
+</ul>
+<p>Suppose the entire stellar mass, composition, stellar radius, and luminosity are specified, then the pressure, mass, temperature, and luminosity at an infinitesimal distance <span class="math notranslate nohighlight">\(dr\)</span> (i.e., depth) below the stellar surface can be determined through <em>numerical integration</em>.  Starting from the surface and integrating radially towards the center must result in agreement with the central boundary conditions.  The values of the various gradients are <em>directly related to the stellar composition</em> and it is not possible to specify an arbitrary combination of radius and luminosity <em>after</em> the mass and composition have been selected.  This set of constraints is called the <strong>Vogt-Russell theorem</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">mass</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">composition</span> <span class="n">structure</span> <span class="n">throughout</span> <span class="n">a</span> <span class="n">star</span> <span class="o">*</span><span class="n">uniquely</span><span class="o">*</span> <span class="n">determine</span> <span class="n">its</span> <span class="n">radius</span><span class="p">,</span> <span class="n">luminosity</span><span class="p">,</span> <span class="ow">and</span> <span class="n">internal</span> <span class="n">structure</span><span class="p">,</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="n">its</span> <span class="n">subsequent</span> <span class="n">evolution</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>The dependence of a star’s mass and composition evolution is a consequence of the change in composition due to nuclear burning (i.e., fusion).  There are other factors (e.g., magnetic fields and rotation) that influence stellar interiors, but these are assumed to have little effect in most stars.</p>
 </div>
 <div class="section" id="numerical-modeling-of-the-stellar-structure-equations">
 <h3><span class="section-number">7.5.6. </span>Numerical Modeling of the Stellar Structure Equations<a class="headerlink" href="#numerical-modeling-of-the-stellar-structure-equations" title="Permalink to this headline">¶</a></h3>
+<p>A special family of approximate solutions to the stellar structure are known as <em>polytropes</em>, but the system of differential equations for the stellar structure cannot be solved analytically for all cases.  Therefore it is necessary to evaluate the differential equations numerically by approximating the equations by <em>difference equations</em> (by replacing <span class="math notranslate nohighlight">\(d\)</span> with <span class="math notranslate nohighlight">\(\Delta\)</span> in the gradients).  Then the star is modeled as a set of spherically symmetric <strong>shells</strong> and the integration is carried out starting from some initial radius (given the initial state) in finite steps by specifying an increment <span class="math notranslate nohighlight">\(\delta r\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Codes that treat the radius as an independent variable are called <strong>Eulerian</strong>, while <strong>Lagrangian</strong> codes treat the mass as an independent variable.  Codes in the Lagrangian formulation have the hydrostatic equilibrium written as <span class="math notranslate nohighlight">\(dP/dM\)</span> instead of <span class="math notranslate nohighlight">\(dP/dr\)</span>.</p>
+</div>
+<p>Each shell is solved through successive applications of the difference equations and a successive shell depends recursively on the shell that came before it.  For example, the pressure in a given zone <span class="math notranslate nohighlight">\(P_i\)</span> determines the pressure in the next deepest zone <span class="math notranslate nohighlight">\(P_{i+1}\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ P_{i+1} = P_i + \frac{\Delta P}{\delta r}\delta r, \]</div>
+<p>where the integration is progressing inward and <span class="math notranslate nohighlight">\(\delta r &lt; 0\)</span>.  The numerical integration of the stellar structure can be executed</p>
+<ul class="simple">
+<li><p>from the surface towards the center,</p></li>
+<li><p>from the center towards the surface, or</p></li>
+<li><p>in both directions simultaneously using boundary conditions.</p></li>
+</ul>
+<p>In the last case there must be some boundary (<em>fitting point</em>) where the variable must vary smoothly from one solution to the other.  This approach is frequently taken because the most important physical processes in the outer layers generally differ from the deep interior (i.e., separate radiative and convective zones).  The transfer of radiation through optically thin zones and ionization (of hydrogen and helium) occur close to the surface, while nuclear reactions occur near the center.</p>
+<p>Simultaneously matching the surface and central boundary conditions for a desired stellar model usually requires many iterations (i.e., series of attempts) before a satisfactory solution is found.  If the integrations do not agree at the fitting point, then the starting conditions must be changed.</p>
+<p>A very simple stellar structure code (called <a class="reference external" href="http://spiff.rit.edu/classes/phys370/lectures/statstar/statstar.html">StatStar</a>) integrates the stellar structure equations in their time independent form from the <em>outside to the center</em> using the appropriate constitutive relations; it also assumes a homogenous composition throughout.  Many of the sophisticated techniques and the complex formalism of the mixing length theory are omitted from StatStar in favor of the simplifying assumption of adiabatic convection.  Very reasonable models may be obtained for main sequence stars despite the approximations.</p>
 </div>
 <div class="section" id="polytropic-models-and-the-lane-emden-equation">
 <h3><span class="section-number">7.5.7. </span>Polytropic Models and the Lane-Emden Equation<a class="headerlink" href="#polytropic-models-and-the-lane-emden-equation" title="Permalink to this headline">¶</a></h3>
+<p>Under very special situations, it is possible to find analytic solutions to a subset of the stellar structure equations.  The famous equation that helps us describe analytical stellar models is the <a class="reference external" href="https://en.wikipedia.org/wiki/Lane%E2%80%93Emden_equation">Lane-Emden equation</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first work was carried out by <a class="reference external" href="https://en.wikipedia.org/wiki/Jonathan_Homer_Lane">J. Homer Lane</a> in 1869.  His work was extended significantly by <a class="reference external" href="https://en.wikipedia.org/wiki/Robert_Emden">Robert</a> Emden in 1907.</p>
 </div>
-<div class="section" id="id4">
-<h3><span class="section-number">7.5.8. </span><strong>Problems</strong><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>If only a simple relationship existed between pressure and density, then the mechanical equations of stellar structure could be solved simultaneously.  However this is not the case in general, where temperature and composition enter into the pressure equation of state.  For an adiabatic gas, the pressure can be written explicitly in terms of the density alone.  Hypothetical stellar models in which the pressure depends solely on the density are <strong>polytropes</strong> and are written as a power law, <span class="math notranslate nohighlight">\(P = K \rho^\gamma\)</span>.  The development of polytropic models provides insight into stellar structure, without the complications of full-blown numerical models.</p>
+<p>To derive the Lane-Emden equation, we start with hydrostatic equilibrium and re-write the equation through the radial derivative,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d}{dr}\left( \frac{r^2}{\rho} \frac{dP}{dr}\right) = -G\frac{dM_r}{dr}, \]</div>
+<p>where the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#a-summary-of-the-equations-of-stellar-structure">mass gradient</a> can be substituted to get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d}{dr}\left( \frac{r^2}{\rho} \frac{dP}{dr}\right) = -G(4\pi r^2\,\rho), \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{r^2}\frac{d}{dr}\left( \frac{r^2}{\rho} \frac{dP}{dr}\right) = -4\pi G \rho. \tag{69} \]</div>
+<p>The form of Eqn. 69 should look familiar as the very well-studied differential equation known as <em>Poisson’s equation</em> and then can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{r^2}\frac{d}{dr}\left( r^2 \frac{d\Phi_g}{dr}\right) = 4\pi G \rho, \tag{70} \]</div>
+<p>which depends on the gravitational potential energy per unit mass, <span class="math notranslate nohighlight">\(\Phi_g \equiv U_g/m\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Poisson’s equation shows up frequently in physics, where Gauss’ Law can be reformulated into Poisson’s equation by replacing <span class="math notranslate nohighlight">\(\vec{E}\)</span> with <span class="math notranslate nohighlight">\(-\nabla\Phi_E\)</span>.</p>
+</div>
+<p>The equation of a polytrope can now be substituted into Eqn. 69, where <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span> are constants.  Through substitution, we get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\gamma K}{r^2}\frac{d}{dr}\left( r^2\rho^{\gamma-2} \frac{d\rho}{dr}\right) = -4\pi G \rho. \]</div>
+<p>Letting <span class="math notranslate nohighlight">\(\gamma = (n + 1)/n\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Polytropic_process">polytropic index</a>.  Then</p>
+<div class="math notranslate nohighlight">
+\[ \left(\frac{n+1}{n}\right) \frac{K}{r^2}\frac{d}{dr}\left( r^2\rho^{(1-n)/n} \frac{d\rho}{dr}\right) = -4\pi G \rho. \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Different <a class="reference external" href="https://en.wikipedia.org/wiki/Polytrope">values of the polytropic index</a> are assumed to model rocky planets, giant planets, hot Jupiters, and stars in reference to the dissipation of tides.</p>
+</div>
+<p>The density can be rewritten in a dimensionless form through the use of a scaling factor and <a class="reference external" href="http://www.ucolick.org/~woosley/ay112-14/lectures/lecture7.14.pdf">dimensionless function</a> <span class="math notranslate nohighlight">\(D(r)\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[ \rho(r) \equiv \rho_c\left[ D_n(r)\right]^n, \qquad {\rm where}\, 0\le D_n \le 1 \]</div>
+<p>and the critical central density <span class="math notranslate nohighlight">\(\rho_c\)</span> of the polytropic stellar model.  Through additional substitution,</p>
+<div class="math notranslate nohighlight">
+\[ \left[ (n+1) \left( \frac{K\rho_c^{(1-n)/n)}}{4\pi G}\right) \right] \frac{1}{r^2} \frac{d}{dr} \left( r^2 \frac{dD_n}{dr} \right) = -D_n^n. \]</div>
+<p>This equation can be simplified if we define</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_n \equiv \left[ (n+1) \left( \frac{K\rho_c^{(1-n)/n)}}{4\pi G}\right) \right]^{1/2} \]</div>
+<p>and introduce the dimensionless independent variable <span class="math notranslate nohighlight">\(\xi\)</span> through <span class="math notranslate nohighlight">\(r\equiv \lambda_n \xi\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{\xi^2}\frac{d}{d\xi}\left[ \xi^2 \frac{dD_n}{d\xi}\right] = -D_n^n, \tag{71}\]</div>
+<p>the famous Lane-Emden equation.  The dimensionless function is transformed to <span class="math notranslate nohighlight">\(D_n(\xi)\)</span> for a specific polytropic index <span class="math notranslate nohighlight">\(n\)</span> and leads directly to a density profile <span class="math notranslate nohighlight">\(\rho_n(r)\)</span>.  The polytropic pressure equation of state is given as <span class="math notranslate nohighlight">\(P_n(r) = K\rho_n^{(n+1)/n}\)</span>. The temperature profile can be obtained if the ideal gas law and a constant composition for the radiation pressure are assumed.</p>
+<p>To solve the second-order differential equation, two boundary conditions are needed.</p>
+<ol class="simple">
+<li><p>Assume that the stellar surface is where the pressure (and gas density) goes to zero</p></li>
+</ol>
+<p>and then <span class="math notranslate nohighlight">\(D_n(\xi_1) = 0\)</span> specifies the surface at <span class="math notranslate nohighlight">\(\xi = \xi_1\)</span>, which is the first zero of the solution.</p>
+<ol class="simple">
+<li><p>Assume there is some distance <span class="math notranslate nohighlight">\(\delta\)</span> that is infinitesimally close to the center of the star, then the mass contained is given by <span class="math notranslate nohighlight">\(M_r = \frac{4}{3}\pi \overline{\rho}\delta^3\)</span>,</p></li>
+</ol>
+<p>using the average gas density <span class="math notranslate nohighlight">\(\overline{\rho}\)</span> within the radius <span class="math notranslate nohighlight">\(\delta\)</span>.  Through substitution into hydrostatic equilibrium, we have</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} = \frac{-GM_r \rho}{r^2} = -\frac{4}{3}\pi \overline{\rho}^2 \delta,\]</div>
+<p>where <span class="math notranslate nohighlight">\(dP/dr \rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(r\rightarrow 0\)</span>.  Since <span class="math notranslate nohighlight">\(P \propto \rho\)</span>, this implies that <span class="math notranslate nohighlight">\(d\rho/dr \rightarrow 0\)</span> as well and leads to the central boundary condition <span class="math notranslate nohighlight">\(D_n(0)/d\xi = 0\)</span>.  For <span class="math notranslate nohighlight">\(\rho_c\)</span> to represent the central density, the density scaling function <span class="math notranslate nohighlight">\(D_n(0) = 1\)</span> (through normalization).</p>
+<p>It is now possible to compute the total mass given a specific polytropic index as</p>
+<div class="math notranslate nohighlight">
+\[ M = 4\pi \int_0^R r^2\rho\, dr, \]</div>
+<p>using <span class="math notranslate nohighlight">\(R = \lambda_n \xi_1\)</span> as the stellar radius.  Rewriting in terms of dimensionless quantities results in</p>
+<div class="math notranslate nohighlight">
+\[M = 4\pi \lambda_n^3 \rho_c\int_0^{\xi_1} \xi^2 [D_n(\xi)]^n\,d\xi. \]</div>
+<p>With knowledge of <span class="math notranslate nohighlight">\(D_n(\xi)\)</span>, the above equation could be integrated directly, but it can also rewritten using the Lane-Emden equation as the anti-derivative with the central boundary condition, noting that</p>
+<div class="math notranslate nohighlight">
+\[ \xi^2 D_n^n = - \frac{d}{d\xi}\left[ \xi^2 \frac{dD_n}{d\xi}\right] \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[ M = -4\pi \lambda_n^3 \rho_c\left(\xi^2 \frac{dD_n}{d\xi}\right)\bigg\rvert_{\xi_1}, \]</div>
+<p>where the derivative is evaluated at the surface.</p>
+<p>There are only three analytic solutions to the Lane-Emden equation <span class="math notranslate nohighlight">\((n = 0,\,1,\,{\rm and}\,5)\)</span>.  These solutions are</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+D_0(\xi) &amp;= 1- \frac{\xi^2}{6}, &amp;{\rm with}\:\xi_1=\sqrt{6}, \\
+D_1(\xi) &amp;= \frac{\sin \xi}{\xi}, &amp;{\rm with}\:\xi_1=\pi, \\
+D_5(\xi) &amp;= \left[ 1+ \frac{\xi^2}{3}\right]^{-1/2}, &amp;{\rm with}\:\xi_1\rightarrow \infty. \\
+\end{align*} \end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\(n=1\)</span> solution is the well-known “sinc” function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">density_scaling_func</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xi</span><span class="p">):</span>
+    <span class="n">D_n</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xi</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">D_n</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">6</span>
+    <span class="k">elif</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">sinc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">/</span><span class="n">xi</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">sinc_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">xi</span><span class="o">&lt;=</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="n">xi</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">D_n</span><span class="p">[</span><span class="n">sinc_rng</span><span class="p">]</span> <span class="o">=</span> <span class="n">sinc</span><span class="p">[</span><span class="n">sinc_rng</span><span class="p">]</span>
+        <span class="n">D_n</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.</span>
+    <span class="k">elif</span> <span class="n">n</span><span class="o">==</span><span class="mi">5</span><span class="p">:</span>
+        <span class="n">D_n</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">D_n</span>
+
+<span class="n">aspect</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">width</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span>
+
+<span class="n">xi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span> <span class="c1">#range in xi</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">aspect</span><span class="o">*</span><span class="n">width</span><span class="p">,</span><span class="n">width</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span><span class="n">density_scaling_func</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">xi</span><span class="p">),</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;$D_0$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span><span class="n">density_scaling_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">xi</span><span class="p">),</span><span class="s1">&#39;k--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;$D_1$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span><span class="n">density_scaling_func</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">xi</span><span class="p">),</span><span class="s1">&#39;k:&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;$D_5$&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">xi$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$D_n(</span><span class="se">\\</span><span class="s2">xi)$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/interiors-of-stars_45_0.png" src="../_images/interiors-of-stars_45_0.png" />
+</div>
+</div>
+<p>The discussion of polytropes arose by the equation of state for an adiabatic gas.  For the case of an ideal, monatomic gas <span class="math notranslate nohighlight">\(\gamma=5/3\)</span> which implies <span class="math notranslate nohighlight">\(n=1.5\)</span>.  Certain extremely compressed stars known as white dwarfs can also be described using <span class="math notranslate nohighlight">\(n=1.5\)</span>, although these are non-relativistic, completely degenerate stars.  Note that this case must be solved numerically.</p>
+<p>The <em>Eddington standard model</em> associated with a star in radiative equilibrium uses <span class="math notranslate nohighlight">\(n=3\)</span>.  <strong>Consider a polytrope that is supported by both an ideal gas and radiation pressure</strong>.  If the total pressure at a given radius $P is supplied, the the pressure of the gas is given by</p>
+<div class="math notranslate nohighlight">
+\[ P_g = \frac{\rho kT}{\mu m_H} = \beta P, \tag{72} \]</div>
+<p>where the factor <span class="math notranslate nohighlight">\(\beta\)</span> is a number between 0-1, then the contribution due to radiation pressure is</p>
+<div class="math notranslate nohighlight">
+\[ P_r = \frac{4\sigma}{3c}T^4 = (1-\beta)P. \tag{73} \]</div>
+<p>We are looking for a polytropic equation of state independent of temperature.  Using Eqn. 72, we have</p>
+<div class="math notranslate nohighlight">
+\[ T = \frac{\mu m_H}{\rho k}\beta P, \]</div>
+<p>and by substitution we obtain</p>
+<div class="math notranslate nohighlight">
+\[ \frac{4\sigma}{3c}\left( \frac{\mu m_H}{\rho k}\beta P\right)^4 = (1-\beta) P,\]</div>
+<p>which leads to polytropic expression</p>
+<div class="math notranslate nohighlight">
+\[ P = K\rho^{4/3}. \tag{74} \]</div>
+<p>by bundling the constants into</p>
+<div class="math notranslate nohighlight">
+\[ K \equiv \left[ \frac{3c(1-\beta)}{4\sigma}\right]^{1/3} \left( \frac{k}{\beta \mu m_H}\right)^{4/3}. \]</div>
+<p>With <span class="math notranslate nohighlight">\(\gamma = 4/3\)</span>, then <span class="math notranslate nohighlight">\(n=3\)</span> and describes stars that are supported by a fully relativistic, completely degenerate gas (i.e., neutron stars).</p>
 </div>
 </div>
 <div class="section" id="the-main-sequence">
@@ -1806,9 +1971,15 @@ P &amp;= P(\rho, T, \text{composition}) \\
 <div class="section" id="variations-of-main-sequence-stellar-parameters-with-mass">
 <h3><span class="section-number">7.6.2. </span>Variations of Main-Sequence Stellar Parameters with Mass<a class="headerlink" href="#variations-of-main-sequence-stellar-parameters-with-mass" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="id5">
-<h3><span class="section-number">7.6.3. </span><strong>Problems</strong><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3><span class="section-number">7.6.3. </span><strong>Problems</strong><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 </div>
+</div>
+<div class="section" id="additional-resources">
+<h2><span class="section-number">7.7. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Another <a class="reference external" href="https://web.pa.msu.edu/people/ebrown/docs/stellar-notes.pdf">textbook for stellar astrophysics</a> is available from Edward Brown at Michigan State, which covers some material in greater depth.</p></li>
+</ul>
 </div>
 </div>
 
