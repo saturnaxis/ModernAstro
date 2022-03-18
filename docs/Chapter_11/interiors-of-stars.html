@@ -1792,7 +1792,7 @@ P &amp;= P(\rho, T, \text{composition}) \\
 </ul>
 <p>Suppose the entire stellar mass, composition, stellar radius, and luminosity are specified, then the pressure, mass, temperature, and luminosity at an infinitesimal distance <span class="math notranslate nohighlight">\(dr\)</span> (i.e., depth) below the stellar surface can be determined through <em>numerical integration</em>.  Starting from the surface and integrating radially towards the center must result in agreement with the central boundary conditions.  The values of the various gradients are <em>directly related to the stellar composition</em> and it is not possible to specify an arbitrary combination of radius and luminosity <em>after</em> the mass and composition have been selected.  This set of constraints is called the</p>
 <blockquote>
-<div><p><strong>Vogt-Russell Theorem</strong>
+<div><p><strong>Vogt-Russell Theorem</strong><br />
 The mass and the composition structure throughout a star <em>uniquely</em> determine its radius, luminosity, and internal structure, as well as its subsequent evolution.</p>
 </div></blockquote>
 <p>The dependence of a star’s mass and composition evolution is a consequence of the change in composition due to nuclear burning (i.e., fusion).  There are other factors (e.g., magnetic fields and rotation) that influence stellar interiors, but these are assumed to have little effect in most stars.</p>
@@ -1943,7 +1943,7 @@ D_5(\xi) &amp;= \left[ 1+ \frac{\xi^2}{3}\right]^{-1/2}, &amp;{\rm with}\:\xi_1\
 </div>
 </div>
 <p>The discussion of polytropes arose by the equation of state for an adiabatic gas.  For the case of an ideal, monatomic gas <span class="math notranslate nohighlight">\(\gamma=5/3\)</span> which implies <span class="math notranslate nohighlight">\(n=1.5\)</span>.  Certain extremely compressed stars known as white dwarfs can also be described using <span class="math notranslate nohighlight">\(n=1.5\)</span>, although these are non-relativistic, completely degenerate stars.  Note that this case must be solved numerically.</p>
-<p>The <em>Eddington standard model</em> associated with a star in radiative equilibrium uses <span class="math notranslate nohighlight">\(n=3\)</span>.  <strong>Consider a polytrope that is supported by both an ideal gas and radiation pressure</strong>.  If the total pressure at a given radius $P is supplied, the the pressure of the gas is given by</p>
+<p>The <em>Eddington standard model</em> associated with a star in radiative equilibrium uses <span class="math notranslate nohighlight">\(n=3\)</span>.  <strong>Consider a polytrope that is supported by both an ideal gas and radiation pressure</strong>.  If the total pressure at a given radius $P is supplied, the pressure of the gas is given by</p>
 <div class="math notranslate nohighlight">
 \[ P_g = \frac{\rho kT}{\mu m_H} = \beta P, \tag{72} \]</div>
 <p>where the factor <span class="math notranslate nohighlight">\(\beta\)</span> is a number between 0-1, then the contribution due to radiation pressure is</p>
@@ -1966,14 +1966,60 @@ D_5(\xi) &amp;= \left[ 1+ \frac{\xi^2}{3}\right]^{-1/2}, &amp;{\rm with}\:\xi_1\
 </div>
 <div class="section" id="the-main-sequence">
 <h2><span class="section-number">7.6. </span>The Main Sequence<a class="headerlink" href="#the-main-sequence" title="Permalink to this headline">¶</a></h2>
+<p>The analysis of stellar spectra shows that the atmospheres of most stars are composed primarily of hydrogen <span class="math notranslate nohighlight">\((X\sim 0.7)\)</span>, whereas the fraction of metal varies <span class="math notranslate nohighlight">\((0&lt; Z 0.03)\)</span>.  If the initial stellar composition is homogenous, then the first set of nuclear reactions should be the pp chains and/or the CNO cycle because they convert hydrogen into helium.  The core of a star is predominantly hydrogen and the stellar interior will evolve slowly due to the nuclear reactions.  Most stars have similar compositions and thus, stellar structure should smoothly vary with mass.  This is apparent when we see the central pressure and temperature increasing along with the total mass.</p>
+<p>For low mass stars the pp chain will dominate because it doesn’t have enough gravity to overcome the Coulomb barrier of heavier nuclei.  For high mass stars, the CNO cycle will likely dominate because of its strong temperature dependence. For progressively less massive stars, the central temperature will eventually fall below the critical point for fusion and are no longer able to stabilize the star against gravitational contraction.  This critical point depends on the stellar metal mass fraction, where <span class="math notranslate nohighlight">\(0.072\:M_\odot\)</span> is for solar composition and metal free stars (<span class="math notranslate nohighlight">\(Z=0\)</span>) the value climbs to <span class="math notranslate nohighlight">\(0.09\:M_\odot\)</span>.  For extremely massive stars <span class="math notranslate nohighlight">\((\ge 90\:M_\odot)\)</span> thermal oscillations in the core may produce significant variations that affect the nuclear energy generation rate.</p>
 <div class="section" id="the-eddington-luminosity-limit">
 <h3><span class="section-number">7.6.1. </span>The Eddington Luminosity Limit<a class="headerlink" href="#the-eddington-luminosity-limit" title="Permalink to this headline">¶</a></h3>
+<p>The stability of vey massive stars is directly affect by their extremely high luminosities.  If the temperature is sufficiently high and gas density is low, then it is possible for the radiation pressure to dominate over the gas pressure.  When this occurs in the outer portions of very massive (or large) stars, the outer layers can disperse due to the intense stellar wind.  Using the conditions for radiant flux and luminosity, the pressure gradient near the stellar surface is</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} \simeq -\frac{\overline{\kappa}\rho}{c}\frac{L}{4\pi r^2}. \]</div>
+<p>But the pressure gradient is related to the local gravity <span class="math notranslate nohighlight">\(dP/dr = -g\rho\)</span>.  Combining and solving for luminosity, we have</p>
+<div class="math notranslate nohighlight">
+\[ L_{\rm Ed} = \frac{4\pi r^2 c}{\overline{\kappa}}g = \frac{4\pi G c}{\overline{\kappa}}M_\star. \]</div>
+<p>The maximum radiative luminosity <span class="math notranslate nohighlight">\(L_{\rm Ed}\)</span> (or <strong>Eddington limit</strong>) is a maximum value for a star to remain in hydrostatic equilibrium.  If <span class="math notranslate nohighlight">\(L&gt;L_{\rm Ed}\)</span>, then mass loss must occur that is driven by radiation pressure.</p>
+<p>It is possible to estimate the Eddington luminosity for stars on the upper end of the main sequence (i.e., very hot and bright).  The effective temperatures of these stars are ~50,000 K, where most of the hydrogen is ionized in the photosphere.  The major contribution to the opacity is from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-rosseland-mean-opacity">electron scattering</a> <span class="math notranslate nohighlight">\(\overline{\kappa}_{es}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[ L_{\rm Ed} = \frac{4\pi G c}{\overline{\kappa}_{es}}{M_\odot} = \frac{200\pi Gc}{(1+X)}{M_\odot} = 1.5\times 10^{31}\:{\rm W},\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ \frac{L_{\rm Ed}}{L\odot} = 3.8 \times 10^4 \frac{M}{M_\odot}\:{\rm W}.\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">pi</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.846e26</span> <span class="c1">#luminosity of the Sun in W</span>
+<span class="n">X</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="n">L_ed</span> <span class="o">=</span> <span class="mi">200</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">G</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">X</span><span class="p">)</span><span class="o">*</span><span class="n">M_sun</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Eddington limit for X=0.7 is </span><span class="si">%1.1e</span><span class="s2"> W.&quot;</span> <span class="o">%</span> <span class="n">L_ed</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Eddington limit relative to a solar luminosity is </span><span class="si">%1.1e</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">L_ed</span><span class="o">/</span><span class="n">L_sun</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Eddington limit for X=0.7 is 1.5e+31 W.
+The Eddington limit relative to a solar luminosity is 3.8e+04.
+</pre></div>
+</div>
+</div>
+</div>
+<p>For a <span class="math notranslate nohighlight">\(90\:M_\odot\)</span> star, <span class="math notranslate nohighlight">\(L_{\rm ed} \simeq 3.5\times 10^6\:{L_\odot}\)</span> and is roughly three times the expected main-sequence value.</p>
 </div>
 <div class="section" id="variations-of-main-sequence-stellar-parameters-with-mass">
 <h3><span class="section-number">7.6.2. </span>Variations of Main-Sequence Stellar Parameters with Mass<a class="headerlink" href="#variations-of-main-sequence-stellar-parameters-with-mass" title="Permalink to this headline">¶</a></h3>
+<p>From theoretical models computed in the mass range of hydrogen burning, it is possible to obtain a numerical <span class="math notranslate nohighlight">\(M-L\)</span> relationship that agrees well with the observational <span class="math notranslate nohighlight">\(M-L\)</span> relationship.  Stars undergoing hydrogen burning in the cores lie along the observational main sequence.  The range in main-sequence luminosities range from <span class="math notranslate nohighlight">\(5\times 10^{-4}\:L_\odot\)</span> to <span class="math notranslate nohighlight">\(1 \times 10^6\:L_\odot\)</span>; a variation of nine orders of magnitude, while the masses change by only three orders of magnitude.  Due to the higher energy output from upper main-sequence stars, they consume their core hydrogen quicker.  Therefore, <em>main-sequence lifetimes decrease with increasing luminosity</em>.  Effective temperature are much less dependent on stellar mass because they are determined from the photosphere, not the core.  However the variation is still large enough to dramatically change the stellar spectrum.</p>
+<p>The interior structure of stars along the main sequence stars also varies with mass, primarily in the location of convection zones.  For stars that produce energy mainly through the CNO cycle, convection is dominant in the core.  Outside of the core, radiation is capable of transporting the flux and convection ceases.  At ~1.2 <span class="math notranslate nohighlight">\(M_\odot\)</span>, the pp chain begins to dominate and the core becomes radiative.  Meanwhile the stellar surface cools with decreasing mass and the opacity increases because (in part) by the location of the hydrogen ionization zone.  The increased opacity makes convection more efficient near the surface.  The bottom of the surface convection zone grows deeper until the entire star becomes convective near 0.3 <span class="math notranslate nohighlight">\(M_\odot\)</span>.</p>
 </div>
 <div class="section" id="id4">
 <h3><span class="section-number">7.6.3. </span><strong>Problems</strong><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>6.  Estimate the hydrogen burning lifetimes of stars near the lower and upper ends of the main sequence.</p>
+<blockquote>
+<div><p><strong>(a)</strong> The lower end of the main sequence occurs near 0.072 <span class="math notranslate nohighlight">\(M_\odot\)</span>, with <span class="math notranslate nohighlight">\(\log_{10}\,T_e = 3.23\)</span> and <span class="math notranslate nohighlight">\(\log_{10}(L/L_\odot)=-4.3\)</span>.  Assume that the star is entirely convective so that all of its hydrogen becomes available for burning through convective mixing.</p>
+<p><strong>(b)</strong> An 85 <span class="math notranslate nohighlight">\(M_\odot\)</span> star (with only 10% of the hydrogen available) near the upper end of the main sequence has an effective temperature and luminosity of <span class="math notranslate nohighlight">\(\log_{10}\,T_e = 4.705\)</span> and <span class="math notranslate nohighlight">\(\log_{10}(L/L_\odot)=6.006\)</span>, respectively.</p>
+</div></blockquote>
+<p>7. Using the information in problem 6, calculate the radii of each star.  What is the ratio of their radii?</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="additional-resources">
