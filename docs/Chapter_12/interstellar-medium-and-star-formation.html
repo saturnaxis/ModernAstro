@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -497,9 +499,34 @@
 <h2><span class="section-number">8.1. </span>Interstellar dust and gas<a class="headerlink" href="#interstellar-dust-and-gas" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-interstellar-medium">
 <h3><span class="section-number">8.1.1. </span>The Interstellar Medium<a class="headerlink" href="#the-interstellar-medium" title="Permalink to this headline">¶</a></h3>
+<p>The evolution of stars is a cyclic process, where a star is born out of gas and dust that exists between the stars (i.e., <strong>interstellar medium</strong> or ISM).  During a star’s lifetime, much of that material may return to the ISM through stellar winds or explosive events.  The next generation of stars can then form from the ashes, which are processed by the nuclear fusion within the deep interiors of stars.  Thus it’s important to study the nature of the ISM so that we can better understand stellar evolution.</p>
+<p>The ISM is an enormous and complex environment that provides a laboratory for testing our basic understanding of astrophysics (i.e., its the testbed to develop sensible initial conditions for stellar models).  The ISM interacts with the stellar environment through shocks and galactic magnetic fields that extend into interstellar space.  As a result, modeling the ISM requires detailed modeling of the magnetohydrodynamics (MHD) equations.</p>
 </div>
 <div class="section" id="interstellar-extinction">
 <h3><span class="section-number">8.1.2. </span>Interstellar Extinction<a class="headerlink" href="#interstellar-extinction" title="Permalink to this headline">¶</a></h3>
+<p>On a dark night (far from city lights), some of the dust clouds within the Milky Way Galaxy can be found because they obscure regions of sky that would otherwise be populated with stars.  These dark regions are not devoid of stars, but the intervening dust blocks the background starlight.  Dust that blocks starlight is due to the combined effet of scattering and absorption, which is called <strong>interstellar extinction</strong>.  The apparent magnitude is a measure of how bright a star appears and if it is dimmed by intervening dust, the distance modulus equation must be modified appropriately.  In a given wavelength band centered on <span class="math notranslate nohighlight">\(\lambda\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ m_\lambda = M_\lambda + 5\log_{10}\,d-5 + A_\lambda, \tag{1}\]</div>
+<p>which is a modified version of the distance modulus equation with a correction factor <span class="math notranslate nohighlight">\(A_\lambda&gt;0\)</span> that adjusts for the interstellar extinction along the line of sight.  The extinction coefficient <span class="math notranslate nohighlight">\(A_\lambda\)</span> is positive because it always acts to dim objects along the magnitude scale.  If <span class="math notranslate nohighlight">\(A_\lambda\)</span> is large enough, a star can fall behind the limiting magnitude of the background sky for the naked eye or a telescope.  This is the cause for the dark bands running through the Milky Way.</p>
+<p>The extinction coefficient <span class="math notranslate nohighlight">\(A_\lambda\)</span> is related to optical depth (recall that the gas below the photosphere is also invisible) measured back along the line of sight.  The fractional change in the intensity of light decreases exponentially by,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{I_\lambda}{I_{\lambda,o}} = e^{-\tau_\lambda}, \]</div>
+<p>which is normalized by the expected light intensity without interstellar extinction.  The optical depth correlates with the change in magnitude through the fractional change in light intensity (see Chapter 1), or</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{split}
+m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
+&amp; = 2.5\tau_\lambda\:\log_{10}\,e \approx 1.086\tau_\lambda.
+\end{split} \end{split}\]</div>
+<p>The change in apparent magnitude is simply the extinction coefficient <span class="math notranslate nohighlight">\(A_\lambda\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ A_\lambda = 1.086 \tau\lambda, \tag{2}\]</div>
+<p>which restates that <em>the change in magnitude due to extinction is approximately equal to the optical depth along the line of sight</em>.  The optical depth through the cloud is</p>
+<div class="math notranslate nohighlight">
+\[ \tau_\lambda = \int_0^s n_d(s^\prime)\sigma_\lambda\,ds^\prime, \tag{3} \]</div>
+<p>which depends on the number density of scattering dust grains <span class="math notranslate nohighlight">\(n_d(s^\prime)\)</span> and the scattering cross section <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span>.  If the scattering cross section is constant along the line of sight, then</p>
+<div class="math notranslate nohighlight">
+\[ \tau_\lambda = \sigma_\lambda \int_0^sn_d(s^\prime),ds^\prime = \sigma_\lambda N_d, \tag{4}\]</div>
+<p>and the dust grain <em>column density</em> <span class="math notranslate nohighlight">\(N_d\)</span> represents the number of scattering dust particles in a thin cylinder with a cross section of 1 <span class="math notranslate nohighlight">\({\rm m^2}\)</span> stretching from the observer to the star.  The magnitude of extinction depends on the amount of interstellar dust that the light passes through.</p>
 </div>
 <div class="section" id="the-mie-theory">
 <h3><span class="section-number">8.1.3. </span>The Mie Theory<a class="headerlink" href="#the-mie-theory" title="Permalink to this headline">¶</a></h3>
