@@ -572,7 +572,7 @@
 <h2><span class="section-number">7.1. </span>Hydrostatic Equilibrium<a class="headerlink" href="#hydrostatic-equilibrium" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="determining-the-internal-structures-of-stars">
 <h3><span class="section-number">7.1.1. </span>Determining the Internal Structures of Stars<a class="headerlink" href="#determining-the-internal-structures-of-stars" title="Permalink to this headline">¶</a></h3>
-<p>Astronomers must generate computer models to deduce the detailed internal structure of stars, where these models mus be consistent with the known physical laws and agree with observable surface features.  Much of the theoretical foundation was understood in the first half of the 20th Century, it wasn’t until the 1960s that computers were advanced enough to carry out all the calculations.  Although computer modeling and evolutions is a success, there are numerous questions that remain unanswered.</p>
+<p>Astronomers must generate computer models to deduce the detailed internal structure of stars, where these models mus be consistent with the known physical laws and agree with observable surface features.  Much of the theoretical foundation was understood in the first half of the 20th Century, it wasn’t until the 1960s that computers were advanced enough to carry out all the calculations.  Although computer modeling is a success, there are numerous questions that remain unanswered.</p>
 <p>The theoretical study of stellar structure shows that stars are dynamic objects that typically change over very slow timescales (compared to us mortals), but some events can be very rapid and dramatic.  Consider the observed energy output of the Sun, which is <span class="math notranslate nohighlight">\(3.839 \times 10^{26}\)</span> J of energy emitted per second.  This energy output would be sufficient to melt a column of ice with a square mile area and 1 AU thick in only 0.3 seconds (assuming 100% absorption efficiency).  Stars have a finite supply of energy, where they must eventually use up their fuel and die.  <em>Stellar evolution is the result of a constant fight against the relentless pull of gravity.</em></p>
 </div>
 <div class="section" id="the-derivation-of-the-hydrostatic-equilibrium-equation">
@@ -668,8 +668,9 @@
 <div class="section" id="problems">
 <h3><span class="section-number">7.1.4. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>1. Show that the equation for hydrostatic equilibrium (Eqn. 6) can also be written in terms of the optical depth <span class="math notranslate nohighlight">\(\tau\)</span>, as
-$<span class="math notranslate nohighlight">\( \frac{dP}{d\tau} = \frac{g}{\overline{\kappa}}. \)</span>$</p>
+<div><p>1. Show that the equation for hydrostatic equilibrium (Eqn. 6) can also be written in terms of the optical depth <span class="math notranslate nohighlight">\(\tau\)</span>, as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{d\tau} = \frac{g}{\overline{\kappa}}. \]</div>
 </div></blockquote>
 </div>
 </div>
@@ -1634,10 +1635,10 @@ The time to traverse the radius of the Sun is 29 minutes
 \[ \bigg\lvert\frac{dT}{dr}\bigg\rvert^{(s)} - \bigg\vert\frac{dT}{dr}\bigg\rvert^{(b)} &gt; 0 \]</div>
 <p>is required for convection (i.e., the temperature of the surroundings is dropping faster than inside the bubble).  Since the temperature gradients are negative, we have</p>
 <div class="math notranslate nohighlight">
-\[ frac{dT}{dr}\bigg\rvert^{(b)} - frac{dT}{dr}\bigg\rvert^{(s)} &gt; 0. \]</div>
+\[ \frac{dT}{dr}\bigg\rvert^{(b)} - \frac{dT}{dr}\bigg\rvert^{(s)} &gt; 0. \]</div>
 <p>Let the temperature gradient of the bubble vary adiabatically and the surrounding gas follow the actual temperature gradient of the star as</p>
 <div class="math notranslate nohighlight">
-\[ \frac{dT}{dr}\bigg\rvert^{(b)} = \frac{dT}{dr}\bigg\rvert_{\rm ad} \qquad \text{and} \qquad frac{dT}{dr}\bigg\rvert^{(s)} = frac{dT}{dr}\bigg\rvert_{\rm actual}. \]</div>
+\[ \frac{dT}{dr}\bigg\rvert^{(b)} = \frac{dT}{dr}\bigg\rvert_{\rm ad} \qquad \text{and} \qquad \frac{dT}{dr}\bigg\rvert^{(s)} = \frac{dT}{dr}\bigg\rvert_{\rm actual}. \]</div>
 <p>After the bubble travels a small distance <span class="math notranslate nohighlight">\(dr\)</span>, its temperature will exceed the temperature of the surrounding gas by</p>
 <div class="math notranslate nohighlight">
 \[ \delta T = \left( \frac{dT}{dr}\bigg\rvert_{\rm ad} -\frac{dT}{dr}\bigg\rvert_{\rm actual} \right)dr. \]</div>
@@ -1645,7 +1646,8 @@ The time to traverse the radius of the Sun is 29 minutes
 <div class="math notranslate nohighlight">
 \[ \ell = \alpha H_P, \]</div>
 <p>before dissipating.  After which point, it gives up its excess heat at constant pressure.  The distance <span class="math notranslate nohighlight">\(\ell\)</span> is called the <strong>mixing length</strong> and <span class="math notranslate nohighlight">\(H_P\)</span> is the pressure scale height.  The ratio of mixing length to the pressure scale height <span class="math notranslate nohighlight">\(\alpha \equiv \ell/H_P\)</span> is an adjustable (or free) parameter generally assumed to be ~1 (values of <span class="math notranslate nohighlight">\(0.5&lt;\alpha &lt;3\)</span> are typical).  After the bubble travels one mixing length, the excess heat flow <em>per unit volume</em> from the bubble into its surroundings is</p>
-<p>$ \delta q = (C_P \delta T)\rho,</p>
+<div class="math notranslate nohighlight">
+\[ \delta q = (C_P \delta T)\rho, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\ell = dr\)</span>.  Multiplying by the average velocity <span class="math notranslate nohighlight">\(\overline{v}_c\)</span> of the convective bubble, we obtain the convective flux <span class="math notranslate nohighlight">\(F_c\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[ F_c = \delta q \overline{v}_c = (C_P \delta T)\rho \overline{v}_c. \tag{64} \]</div>
@@ -1770,7 +1772,7 @@ The convective velocity is 50 m/s
 \frac{dT}{dr} &amp;= -\frac{3}{4ac}\frac{\overline{\kappa}\rho}{T^3}\frac{L_r}{4\pi r^2} &amp; \text{(radiation)} \\
 &amp;= -\left(1 - \frac{1}{\gamma} \right)\frac{\mu m_H}{k}\frac{GM_r}{r^2} &amp; \text{(adiabatic convection)}
 \end{align*}}\end{split}\]</div>
-<p>The temperature gradient can depend on the radiation constant <span class="math notranslate nohighlight">\(a=4\sigma/c\)</span> and the average opacity $\overline{\kappa} in radiation dominated environments.  The convective (adiabatic) temperature gradient can be applied when</p>
+<p>The temperature gradient can depend on the radiation constant <span class="math notranslate nohighlight">\(a=4\sigma/c\)</span> and the average opacity <span class="math notranslate nohighlight">\(\overline{\kappa}\)</span> in radiation dominated environments.  The convective (adiabatic) temperature gradient can be applied when</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d\ln P}{d\ln T} &lt; \frac{\gamma}{\gamma-1}. \]</div>
 <p>If the star is static (i.e., no radial oscillations), then <span class="math notranslate nohighlight">\(\epsilon = \epsilon_{nuclear}\)</span>.  Otherwise the energy contribution due to gravity must be included as <span class="math notranslate nohighlight">\(\epsilon = \epsilon_{nuclear} + \epsilon_{gravity}\)</span>.  The gravitational energy term adds an explicit time dependence to the equations, which can be see through the virial theorem that requires one-half of the gravitational potential energy is lost due to heat.</p>
@@ -1783,7 +1785,7 @@ The convective velocity is 50 m/s
 <p>and <span class="math notranslate nohighlight">\(\epsilon_{gravity} = -\delta Q/dt\)</span>.  Then the energy rate is due to the change in entropy directly by</p>
 <div class="math notranslate nohighlight">
 \[ \epsilon_{gravity} = -T \frac{dS}{dt}. \]</div>
-<p>If the star is collapsing, $\epsilon_{gravity} is positive and otherwise it will be negative.  As the star contract, its entropy decreases.  A star is not a closed system, where its entropy may decrease locally while the entropy of the universe increases due to radiation and stellar wind.</p>
+<p>If the star is collapsing, <span class="math notranslate nohighlight">\(\epsilon_{gravity}\)</span> is positive and otherwise it will be negative.  As the star contract, its entropy decreases.  A star is not a closed system, where its entropy may decrease locally while the entropy of the universe increases due to radiation and stellar wind.</p>
 </div>
 <div class="section" id="the-constitutive-relations">
 <h3><span class="section-number">7.5.3. </span>The Constitutive Relations<a class="headerlink" href="#the-constitutive-relations" title="Permalink to this headline">¶</a></h3>
@@ -1981,7 +1983,7 @@ D_5(\xi) &amp;= \left[ 1+ \frac{\xi^2}{3}\right]^{-1/2}, &amp;{\rm with}\:\xi_1\
 </div>
 </div>
 <p>The discussion of polytropes arose by the equation of state for an adiabatic gas.  For the case of an ideal, monatomic gas <span class="math notranslate nohighlight">\(\gamma=5/3\)</span> which implies <span class="math notranslate nohighlight">\(n=1.5\)</span>.  Certain extremely compressed stars known as white dwarfs can also be described using <span class="math notranslate nohighlight">\(n=1.5\)</span>, although these are non-relativistic, completely degenerate stars.  Note that this case must be solved numerically.</p>
-<p>The <em>Eddington standard model</em> associated with a star in radiative equilibrium uses <span class="math notranslate nohighlight">\(n=3\)</span>.  <strong>Consider a polytrope that is supported by both an ideal gas and radiation pressure</strong>.  If the total pressure at a given radius $P is supplied, the pressure of the gas is given by</p>
+<p>The <em>Eddington standard model</em> associated with a star in radiative equilibrium uses <span class="math notranslate nohighlight">\(n=3\)</span>.  <strong>Consider a polytrope that is supported by both an ideal gas and radiation pressure</strong>.  If the total pressure at a given radius <span class="math notranslate nohighlight">\(P\)</span> is supplied, the pressure of the gas is given by</p>
 <div class="math notranslate nohighlight">
 \[ P_g = \frac{\rho kT}{\mu m_H} = \beta P, \tag{72} \]</div>
 <p>where the factor <span class="math notranslate nohighlight">\(\beta\)</span> is a number between 0-1, then the contribution due to radiation pressure is</p>
