@@ -251,6 +251,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_12/interstellar-medium-and-star-formation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_12/interstellar-medium-and-star-formation.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -507,8 +529,8 @@
 <p>On a dark night (far from city lights), some of the dust clouds within the Milky Way Galaxy can be found because they obscure regions of sky that would otherwise be populated with stars.  These dark regions are not devoid of stars, but the intervening dust blocks the background starlight.  Dust that blocks starlight is due to the combined effet of scattering and absorption, which is called <strong>interstellar extinction</strong>.  The apparent magnitude is a measure of how bright a star appears and if it is dimmed by intervening dust, the distance modulus equation must be modified appropriately.  In a given wavelength band centered on <span class="math notranslate nohighlight">\(\lambda\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[ m_\lambda = M_\lambda + 5\log_{10}\,d-5 + A_\lambda, \tag{1}\]</div>
-<p>which is a modified version of the distance modulus equation with a correction factor <span class="math notranslate nohighlight">\(A_\lambda&gt;0\)</span> that adjusts for the interstellar extinction along the line of sight.  The extinction coefficient <span class="math notranslate nohighlight">\(A_\lambda\)</span> is positive because it always acts to dim objects along the magnitude scale.  If <span class="math notranslate nohighlight">\(A_\lambda\)</span> is large enough, a star can fall behind the limiting magnitude of the background sky for the naked eye or a telescope.  This is the cause for the dark bands running through the Milky Way.</p>
-<p>The extinction coefficient <span class="math notranslate nohighlight">\(A_\lambda\)</span> is related to optical depth (recall that the gas below the photosphere is also invisible) measured back along the line of sight.  The fractional change in the intensity of light decreases exponentially by,</p>
+<p>which is a modified version of the distance modulus equation with a correction factor <span class="math notranslate nohighlight">\(A_\lambda&gt;0\)</span> that adjusts for the interstellar extinction along the line of sight.  The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is positive because it always acts to dim objects along the magnitude scale.  If <span class="math notranslate nohighlight">\(A_\lambda\)</span> is large enough, a star can fall behind the limiting magnitude of the background sky for the naked eye or a telescope.  This is the cause for the dark bands running through the Milky Way.</p>
+<p>The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is related to optical depth (recall that the gas below the photosphere is also invisible) measured back along the line of sight.  The fractional change in the intensity of light decreases exponentially by,</p>
 <div class="math notranslate nohighlight">
 \[ \frac{I_\lambda}{I_{\lambda,o}} = e^{-\tau_\lambda}, \]</div>
 <p>which is normalized by the expected light intensity without interstellar extinction.  The optical depth correlates with the change in magnitude through the fractional change in light intensity (see Chapter 1), or</p>
@@ -517,7 +539,7 @@
 m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
 &amp; = 2.5\tau_\lambda\:\log_{10}\,e \approx 1.086\tau_\lambda.
 \end{split} \end{split}\]</div>
-<p>The change in apparent magnitude is simply the extinction coefficient <span class="math notranslate nohighlight">\(A_\lambda\)</span>, or</p>
+<p>The change in apparent magnitude is simply the extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span>, or</p>
 <div class="math notranslate nohighlight">
 \[ A_\lambda = 1.086 \tau\lambda, \tag{2}\]</div>
 <p>which restates that <em>the change in magnitude due to extinction is approximately equal to the optical depth along the line of sight</em>.  The optical depth through the cloud is</p>
@@ -530,6 +552,65 @@ m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
 </div>
 <div class="section" id="the-mie-theory">
 <h3><span class="section-number">8.1.3. </span>The Mie Theory<a class="headerlink" href="#the-mie-theory" title="Permalink to this headline">¶</a></h3>
+<p>Assuming that the dust particles are <em>spherical</em> with a radius <span class="math notranslate nohighlight">\(a\)</span>, the geometrical cross-section of the dust particle is <span class="math notranslate nohighlight">\(\sigma_g = \pi a^2\)</span>.  The dimensionless <strong>extinction coefficient</strong> <span class="math notranslate nohighlight">\(Q_\lambda\)</span> is then defined as</p>
+<div class="math notranslate nohighlight">
+\[ Q_\lambda \equiv \frac{\sigma_\lambda}{\sigma_g}, \]</div>
+<p>where the extinction coefficient <span class="math notranslate nohighlight">\(Q_\lambda\)</span> depends on the composition of the dust grains.  When the wavelength of the light is similar to the size of the dust grains, then <span class="math notranslate nohighlight">\(Q_\lambda \sim a/\lambda\)</span>, implying that</p>
+<div class="math notranslate nohighlight">
+\[ \sigma_\lambda \propto \frac{a^3}{\lambda} \qquad (\lambda \gtrsim a). \tag{5}\]</div>
+<p>The extinction coefficient <span class="math notranslate nohighlight">\(Q_\lambda\)</span> goes to zero when the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is large compared to <span class="math notranslate nohighlight">\(a\)</span>.  Conversely, the extinction coefficient <span class="math notranslate nohighlight">\(Q_\lambda\)</span> approaches a constant (independent of <span class="math notranslate nohighlight">\(\lambda\)</span>) when the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is very small compared to <span class="math notranslate nohighlight">\(a\)</span> or</p>
+<div class="math notranslate nohighlight">
+\[ \sigma_\lambda \propto a^2 \qquad (\lambda \ll a). \tag{6} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Gustav Mie made similar assumptions concerning dust particles in 1908 and showed that the relationship between the scattering cross section <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span> and the radius of a dust grain.</p>
+</div>
+<p>These limiting cases can be understood by analogy with the waves on the surface of a lake.  If the size of the surface waves (i.e., wavelength) is much larger than an object in their way, then the waves pass by almost completely unaffected <span class="math notranslate nohighlight">\((\sigma_\lambda \sim 0)\)</span>.  However, if the object (e.g., an island) is large compared to the waves, then they are simply blocked.  The only waves that pass by the large object are those that miss it altogether.  The light we detect from a dust cloud is the light that passes between the dust particles.</p>
+<p>The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is clearly wavelength-dependent, where longer wavelengths (redder light) are not scattered as strongly as shorter wavelengths (bluer light).  The starlight that passes through is preferentially red, or <em>reddened</em>, as the blue light is removed.  This <strong>interstellar reddening</strong> causes stars to appear redder, where we might infer them to be cooler through Wien’s law.  Fortunately, we can carefully analyze the star’s spectrum (i.e., absorption and emission lines) to detect the change.</p>
+<p>Strongly scattered blue light can leave the cloud in any direction, where a bright star behind a cloud casts a blue <strong>reflection nebula</strong> for observers that are not along the line of sight (e.g., the Pleiades).  This process is analogous to Rayleigh scattering, which produces a blue sky on Earth.  The difference between Mie scattering and Rayleigh scattering is that the scattering particles are much smaller than the wavelength of visible light in Rayleigh scattering and leads to <span class="math notranslate nohighlight">\(\sigma_\lambda \propto \lambda^{-4}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>A star is found to be dimmer than expected at 550 nm by 1.1 magnitudes in the visual (i.e., <span class="math notranslate nohighlight">\(A_V = 1.1\)</span>).  If <span class="math notranslate nohighlight">\(Q_{550}=1.5\)</span> and the radius of the dust grains are 0.2 <span class="math notranslate nohighlight">\({\rm \mu m}\)</span>, estimate the average density <span class="math notranslate nohighlight">\(\overline{n}\)</span> of the material between the star and Earth.  The star is 0.8 kpc from Earth.</strong></p></li>
+</ul>
+<blockquote>
+<div><p>The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is related to the optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> by a faction of 1.086, where <span class="math notranslate nohighlight">\(\tau_{550} = 1.1/1.086 \simeq 1\)</span>.  Given the radius of the dust grains <span class="math notranslate nohighlight">\((a = 0.2\,{\rm \mu m})\)</span> and the extinction coefficient <span class="math notranslate nohighlight">\(Q_{550} = 1.5\)</span> we have,</p>
+<div class="math notranslate nohighlight">
+\[ \sigma_{550} = 1.5\pi (2\times 10^{-7}\,{\rm m})^2 \simeq 2 \times 10^{-13}\,{\rm m^2}. \]</div>
+<p>The column density of the dust along the line of sight is</p>
+<div class="math notranslate nohighlight">
+\[ N_d = \frac{\tau_{550}}{\sigma_{550}} \simeq 5 \times 10^{12}\,{\rm m^{-2}}, \]</div>
+<p>and the column density is the integrated particle density across the distance to the star.  Then we have,</p>
+<div class="math notranslate nohighlight">
+\[ \overline{n} = \frac{N_d}{0.8\, {\rm kpc}} = 2 \times 10^{-7} \,{\rm m^{-3}}. \]</div>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">pc</span> <span class="o">=</span> <span class="mf">3.0857e16</span> <span class="c1">#1 pc in meters</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">0.2e-6</span> <span class="c1">#radius of the dust grains converted to meters</span>
+<span class="n">A_lambda</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="n">Q_lambda</span> <span class="o">=</span> <span class="mf">1.5</span>
+
+<span class="n">tau_550</span> <span class="o">=</span> <span class="n">A_lambda</span><span class="o">/</span><span class="mf">1.086</span>
+<span class="n">sigma_550</span> <span class="o">=</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The scattering cross section for the grain is </span><span class="si">%1.1e</span><span class="s2"> m^2.&quot;</span> <span class="o">%</span> <span class="n">sigma_550</span><span class="p">)</span>
+
+<span class="n">N_d</span> <span class="o">=</span> <span class="n">tau_550</span><span class="o">/</span><span class="n">sigma_550</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The column density of the dust along the line of sight is </span><span class="si">%1.1e</span><span class="s2"> m^{-3}.&quot;</span> <span class="o">%</span> <span class="n">N_d</span><span class="p">)</span>
+
+<span class="n">average_n</span> <span class="o">=</span> <span class="n">N_d</span><span class="o">/</span><span class="p">(</span><span class="mf">0.8</span><span class="o">*</span><span class="mi">1000</span><span class="o">*</span><span class="n">pc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average density is </span><span class="si">%1.1e</span><span class="s2"> m^{-3}.&quot;</span> <span class="o">%</span> <span class="n">average_n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The scattering cross section for the grain is 1.9e-13 m^2.
+The column density of the dust along the line of sight is 5.4e+12 m^{-3}.
+The average density is 2.2e-07 m^{-3}.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="molecular-contributions-to-interstellar-extinction-curves">
 <h3><span class="section-number">8.1.4. </span>Molecular Contributions to Interstellar Extinction Curves<a class="headerlink" href="#molecular-contributions-to-interstellar-extinction-curves" title="Permalink to this headline">¶</a></h3>
