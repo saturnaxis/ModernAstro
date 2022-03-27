@@ -877,7 +877,7 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <p>The equation of motion for the gravitational collapse of the cloud (in parameterized form) is</p>
 <div class="math notranslate nohighlight">
 \[ \xi + \frac{1}{2}\sin 2\xi = \chi t. \tag{20} \]</div>
-<p>The <strong>free-fall timescale</strong> <span class="math notranslate nohighlight">\(t_{\rm ff}\)</span> for a cloud is the time when the radius of the collapsing sphere reaches zero <span class="math notranslate nohighlight">\((\theta = 0\,{\rm or} \xi = \pi/2)\)</span> or at least becomes very small.  Then</p>
+<p>The <strong>free-fall timescale</strong> <span class="math notranslate nohighlight">\(t_{\rm ff}\)</span> for a cloud is the time when the radius of the collapsing sphere reaches zero <span class="math notranslate nohighlight">\((\theta = 0\,{\rm or}\, \xi = \pi/2)\)</span> or at least becomes very small.  Then</p>
 <div class="math notranslate nohighlight">
 \[ t_{\rm ff} = \frac{\pi}{2\chi}. \]</div>
 <p>Back-substituting our value for <span class="math notranslate nohighlight">\(\chi\)</span>, we have</p>
@@ -1001,6 +1001,26 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div>
 <div class="section" id="additional-physical-processes-in-protostellar-star-formation">
 <h3><span class="section-number">8.2.4. </span>Additional Physical Processes in Protostellar Star Formation<a class="headerlink" href="#additional-physical-processes-in-protostellar-star-formation" title="Permalink to this headline">¶</a></h3>
+<p>We have freely used the Jeans criterion during each point in the collapse of the cloud to discuss the process of fragmentation.  This cannot be correct because our estimate of the Jeans criterions was based on a perturbation to a static cloud (i.e., the initial velocity of the cloud’s outer layers was ignored).  The details of radiation transport was also neglected, as well as the vaporization of the dust grains, dissociation of molecules and ionization of the atoms.  It is worth noting that the previous analysis produced a result that is reasonable.  More sophisticated estimates of the process of fragmentation place the limit at about 0.01 <span class="math notranslate nohighlight">\(M_\odot\)</span>, or <span class="math notranslate nohighlight">\(\sim 10 M_{Jup}\)</span>.</p>
+<p>Other important processes in the collapse process are the effects of rotation (angular momentum), the deviation from spherical symmetry, turbulent motions of the gas, and the presence of magnetic fields.  The angular momentum present in the original cloud can result in a disk that leads to the formation of planets.</p>
+<p>Careful investigations show that magnetic fields play a crucial role and are likely to control the onset of collapse.  From the discussion of the free-fall timescale, the collapse of a dense core should occur after <span class="math notranslate nohighlight">\(10^5\)</span> yr and would imply that as soon as a dense core forms, then it begins producing stars.  As a result, the occurrence of dense cores should be quite rare (i.e., we should be privileged to view an event that is so fleeting); however, many dense cores are observable throughout our Galaxy.</p>
+<p>Zeeman measurements of various molecular clouds indicate the presence of magnetic fields with strengths from <span class="math notranslate nohighlight">\(1-100\,{\rm nT}\)</span>.  If the magnetic field of cloud is “frozen-in” and the cloud is compressed, then the magnetic field strength will increase.  An increased field strength leads to an increase in the magnetic pressure (as seen in the Sun’s outer atmosphere) and resistance to the compression.  The magnetic pressure could be strong enough to prevent the collapse as long as teh magnetic field does not decay.</p>
+<p>The virial theorem was invoked during the derivation of the Jean’s criterion as a balance between the gravitational potential energy and the cloud’s internal (thermal) kinetic energy.  The magnetic field energy was ignored, where including the effects of the magnetic field produces a critical mass of</p>
+<div class="math notranslate nohighlight">
+\[ M_B = c_B \frac{\pi R^2 B}{G^{1/2}}, \tag{24}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c_B = 380\,{\rm N^{1/2}/m/T}\)</span> for a magnetic field permeating a spherical, uniform cloud.  If the magnetic field strength <span class="math notranslate nohighlight">\(B\)</span> is expressed in <span class="math notranslate nohighlight">\({\rm nT}\)</span> and the cloud radius <span class="math notranslate nohighlight">\(R\)</span> in units of <span class="math notranslate nohighlight">\({\rm pc}\)</span>, then <span class="math notranslate nohighlight">\(M_B\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[ M_B \simeq 70\,M_\odot \left(\frac{B}{1\,{\rm nT}} \right) \left(\frac{R}{1\,{\rm pc}} \right)^2. \tag{25} \]</div>
+<p>If the mass of the cloud <span class="math notranslate nohighlight">\(M_c\)</span> is less than <span class="math notranslate nohighlight">\(M_B\)</span>, the cloud is said to be <strong>magnetically subcritical</strong> and stable against collapse.  Otherwise, the cloud is <strong>magnetically supercritical</strong> and the force due to gravity will overwhelm the ability of the magnetic field to resist collapse.</p>
+<ul class="simple">
+<li><p><strong>What is the critical mass if the dense core has a magnetic field strength of <span class="math notranslate nohighlight">\(100\,{\rm nT}\)</span> and a radius of <span class="math notranslate nohighlight">\(0.1\,{\rm pc}\)</span>?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>The critical mass after including the magnetic field can be calculated as,</p>
+<div class="math notranslate nohighlight">
+\[ M_B \simeq 70\,M_\odot \left(\frac{100}{1\,{\rm nT}} \right) \left(\frac{0.1}{1\,{\rm pc}} \right)^2 = 70\,M_\odot, \]</div>
+<p>implying that a dense core of <span class="math notranslate nohighlight">\(10\,M_\odot\)</span> would be stable against collapse <span class="math notranslate nohighlight">\((M_c &lt; M_B)\)</span>.  However, if the magnetic field was weaker <span class="math notranslate nohighlight">\((B=1\,{\rm nT})\)</span>, then <span class="math notranslate nohighlight">\(M_B \simeq 0.7\,M_\odot\)</span> and collapse would occur.</p>
+</div></blockquote>
 </div>
 <div class="section" id="ambipolar-diffusion">
 <h3><span class="section-number">8.2.5. </span>Ambipolar Diffusion<a class="headerlink" href="#ambipolar-diffusion" title="Permalink to this headline">¶</a></h3>
@@ -1010,6 +1030,12 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div>
 <div class="section" id="id1">
 <h3><span class="section-number">8.2.7. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>4. Show that the Jeans mass can also be written in the form</p>
+<div class="math notranslate nohighlight">
+\[ M_J \simeq \frac{c_J v_T^4}{P_o^{1/2} G^{3/2}}, \]</div>
+<p>where the isothermal sound speed <span class="math notranslate nohighlight">\(v_T \equiv \sqrt{kT/(\mu m_H)}\)</span>, the pressure <span class="math notranslate nohighlight">\(P_o\)</span> associated with the density <span class="math notranslate nohighlight">\(\rho_o\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span>, and there is a dimensionless constant <span class="math notranslate nohighlight">\(c_J \simeq 5.46\)</span>.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="pre-main-sequence-evolution">
