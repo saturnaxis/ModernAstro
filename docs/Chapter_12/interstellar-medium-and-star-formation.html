@@ -1004,7 +1004,11 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <p>We have freely used the Jeans criterion during each point in the collapse of the cloud to discuss the process of fragmentation.  This cannot be correct because our estimate of the Jeans criterions was based on a perturbation to a static cloud (i.e., the initial velocity of the cloud’s outer layers was ignored).  The details of radiation transport was also neglected, as well as the vaporization of the dust grains, dissociation of molecules and ionization of the atoms.  It is worth noting that the previous analysis produced a result that is reasonable.  More sophisticated estimates of the process of fragmentation place the limit at about 0.01 <span class="math notranslate nohighlight">\(M_\odot\)</span>, or <span class="math notranslate nohighlight">\(\sim 10 M_{Jup}\)</span>.</p>
 <p>Other important processes in the collapse process are the effects of rotation (angular momentum), the deviation from spherical symmetry, turbulent motions of the gas, and the presence of magnetic fields.  The angular momentum present in the original cloud can result in a disk that leads to the formation of planets.</p>
 <p>Careful investigations show that magnetic fields play a crucial role and are likely to control the onset of collapse.  From the discussion of the free-fall timescale, the collapse of a dense core should occur after <span class="math notranslate nohighlight">\(10^5\)</span> yr and would imply that as soon as a dense core forms, then it begins producing stars.  As a result, the occurrence of dense cores should be quite rare (i.e., we should be privileged to view an event that is so fleeting); however, many dense cores are observable throughout our Galaxy.</p>
-<p>Zeeman measurements of various molecular clouds indicate the presence of magnetic fields with strengths from <span class="math notranslate nohighlight">\(1-100\,{\rm nT}\)</span>.  If the magnetic field of cloud is “frozen-in” and the cloud is compressed, then the magnetic field strength will increase.  An increased field strength leads to an increase in the magnetic pressure (as seen in the Sun’s outer atmosphere) and resistance to the compression.  The magnetic pressure could be strong enough to prevent the collapse as long as teh magnetic field does not decay.</p>
+<p>Zeeman measurements of various molecular clouds indicate the presence of magnetic fields with strengths from <span class="math notranslate nohighlight">\(1-100\,{\rm nT}\)</span>.  If the magnetic field of cloud is “frozen-in” and the cloud is compressed, then the magnetic field strength will increase.  An increased field strength leads to an increase in the magnetic pressure (as seen in the Sun’s outer atmosphere) and resistance to the compression.  The magnetic pressure could be strong enough to prevent the collapse as long as the magnetic field does not decay.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The term “frozen-in” refers to <a class="reference external" href="https://en.wikipedia.org/wiki/Alfv%C3%A9n%27s_theorem">Alfvén’s theorem</a>, which states that “in a fluid with infinite electric conductivity, the magnetic field is frozen into the fluid and has to move along with it.”</p>
+</div>
 <p>The virial theorem was invoked during the derivation of the Jean’s criterion as a balance between the gravitational potential energy and the cloud’s internal (thermal) kinetic energy.  The magnetic field energy was ignored, where including the effects of the magnetic field produces a critical mass of</p>
 <div class="math notranslate nohighlight">
 \[ M_B = c_B \frac{\pi R^2 B}{G^{1/2}}, \tag{24}\]</div>
@@ -1024,6 +1028,25 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div>
 <div class="section" id="ambipolar-diffusion">
 <h3><span class="section-number">8.2.5. </span>Ambipolar Diffusion<a class="headerlink" href="#ambipolar-diffusion" title="Permalink to this headline">¶</a></h3>
+<p>Another possibility for triggering the collapse of a dense core is through change of state.  If a core that was originally subcritical became supercritical , then collapse could ensue.  This could have in a couple of ways:</p>
+<ol class="simple">
+<li><p>A group of subcritical clouds could combine to form a supercritical cloud, or</p></li>
+<li><p>the magnetic field could be rearranged so that the field strength is lessened in a portion of the cloud.</p></li>
+</ol>
+<p>It appears that both processes may occur, although the latter process appears to dominate.</p>
+<p>Only charge particles (e.g., electrons, protons, or ions) are tied to magnetic field lines and given that dense molecular cores are dominated by neutral particles, <em>how can magnetic fields have any substantial effect on the collapse?</em> As neutrals try to drift across magnetic field lines, they <em>collide</em> with the “frozen-in” ions and the motions of the neutrals are slowed.  If there is a net defined motion of the neutrals due to gravitational forces, then they will still tend to migrate slowly in that direction.  This slow migration process is called <strong>ambipolar diffusion</strong>.</p>
+<p>To determine the relative impact of ambipolar diffusion, we need to estimate the characteristic timescale.  If we know the drift velocity of the neutrals and the distance across the molecular cloud, then it can be shown that</p>
+<div class="math notranslate nohighlight">
+\[ t_{\rm AD} \simeq \frac{2R}{v_{\rm drift}} \simeq 10\,{\rm Gyr} \left( \frac{n_{\rm H_2}}{10^{10}\,{\rm m^{-3}}}\right) \left( \frac{B}{1\,{\rm nT}}\right)^{-2}  \left( \frac{R}{1\,{\rm pc}}\right)^{2}. \tag{26} \]</div>
+<ul class="simple">
+<li><p><strong>What is the timescale for ambipolar diffusion within a dense core of a GMC, if <span class="math notranslate nohighlight">\(B = 1\,{\rm nT}\)</span> and <span class="math notranslate nohighlight">\(R = 0.1\,{\rm pc}\)</span>?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>The characteristic number density for molecular hydrogen in a dense core is <span class="math notranslate nohighlight">\(n_{\rm H_2} = 10^{10}\,{\rm m^{-3}}\)</span>.  The timescale for ambipolar diffusion (AD) is then determined as</p>
+<div class="math notranslate nohighlight">
+\[ t_{\rm AD} \simeq 10\,{\rm Gyr} \left( \frac{0.1\,{\rm pc}}{1\,{\rm pc}}\right)^{2} \simeq 100\,{\rm Myr}. \]</div>
+<p>This is ~<span class="math notranslate nohighlight">\(1000\times\)</span> longer than the free-fall timescale determined for <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_12/interstellar-medium-and-star-formation.html#homologous-collapse">homologous collapse</a>.  Clearly the ambipolar diffusion process can control the evolution of a dense core for a long time before free-fall collapse begins.</p>
+</div></blockquote>
 </div>
 <div class="section" id="numerical-simulations-of-protostellar-evolution">
 <h3><span class="section-number">8.2.6. </span>Numerical Simulations of Protostellar Evolution<a class="headerlink" href="#numerical-simulations-of-protostellar-evolution" title="Permalink to this headline">¶</a></h3>
