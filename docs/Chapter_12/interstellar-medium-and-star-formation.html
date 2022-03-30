@@ -439,8 +439,12 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#h-ii-regions">
-     8.3.8. H II Regions
+    <a class="reference internal nav-link" href="#rm-h-ii-regions">
+     8.3.8.
+     <span class="math notranslate nohighlight">
+      \({\rm H\,II}\)
+     </span>
+     Regions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1167,8 +1171,76 @@ in Table 1. (Carroll &amp; Ostlie (2007))</p>
 <img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?" width="600">
 <p><strong>Figure 10</strong>: The initial mass function, <span class="math notranslate nohighlight">\(\xi\)</span>, shows the number of stars per unit area of the Milky Way’s disk per unit interval of logarithmic mass that is produced in different mass intervals. The individual points represent observational data and the solid line is a theoretical estimate. Masses are in solar units. (Carroll &amp; Ostlie (2007))</p>
 </div></div>
-<div class="section" id="h-ii-regions">
-<h3><span class="section-number">8.3.8. </span>H II Regions<a class="headerlink" href="#h-ii-regions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rm-h-ii-regions">
+<h3><span class="section-number">8.3.8. </span><span class="math notranslate nohighlight">\({\rm H\,II}\)</span> Regions<a class="headerlink" href="#rm-h-ii-regions" title="Permalink to this headline">¶</a></h3>
+<p>Hot, massive stars (O and B spectral types) are shrouded in a cloak of gas and dust when they reach the ZAMS.  The bulk of their radiation is emitted in the UV, which can ionize the ground-state hydrogen gas <span class="math notranslate nohighlight">\(({\rm H\,I})\)</span> in the ISM to produce <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions.  The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions are in equilibrium if they have equal rates of ionization and recombination.  During recombination, the electron cascades downward and produces a number of lower-energy photons (many will be in the visible).  The dominant visible wavelength comes from the <span class="math notranslate nohighlight">\(n=3\)</span> to <span class="math notranslate nohighlight">\(n=2\)</span> transition, or the <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> line of the Balmer series.  Therefore, <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions appear to fluoresce in red light.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?" width="400">
+<p><strong>Figure 11</strong>: The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region in Orion A is associated with a young OB association, the Trapezium cluster, and a giant molecular cloud. The Orion complex is 450 pc away. (Carroll &amp; Ostlie (2007))</p>
+</div>
+<p><strong>Emission nebulae</strong> are considered to be the most beautiful objects in the night sky, where one particularly famous <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region is the Orion Nebula (M42).  The Orion A complex contains M42, a giant molecular cloud (OMC 1), and a very your star cluster (the Trapezium cluster).  The first protostar candidates were discovered in this region as well.</p>
+<p>The size of an <span class="math notranslate nohighlight">\({\rm H\,II}\)</span>  region can be estimated by considering the equilibrium requirement.  Let <span class="math notranslate nohighlight">\(N\)</span> be the number of photons <em>per second</em> produced by a massive O or B star that is producing the ionizing radiation and <span class="math notranslate nohighlight">\(\alpha n_e n_H\)</span> is the number of recombinations <em>per unit volume per second</em>.  The latter quantity depends on a quantum-mechanical recombination coefficient that describes the likelihood that a hydrogen atom will recombine given their number densities.  At about 8000 K (a temperature characteristic of an <span class="math notranslate nohighlight">\({\rm H\,II}\)</span>  region), <span class="math notranslate nohighlight">\(\alpha = 3.1 \times 10^{-19}\,{\rm m^3/s}\)</span>.  If we assume that the gas is entirely hydrogen and electrically neutral, then the numbers of electrons liberated must equal the number of hydrogen ions (protons), or <span class="math notranslate nohighlight">\(n_e = n_H\)</span>.  Then the recombination rate can be multiplied by the volume of the <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region (assumed to be a sphere) and then set equal to the number of ionized photons produced per second.  This is expressed as</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned} N \simeq \alpha n_H^2\left(\frac{4}{3}\pi r^3\right)$,\\which solving for the radius produces\\$$ r \simeq \left( \frac{3N}{4\pi \alpha n_H^2} \right) \tag{27} \end{aligned}\end{align} \]</div>
+<p>and is called the <strong>Strömgren radius</strong> <span class="math notranslate nohighlight">\(r_S\)</span>.</p>
+<ul class="simple">
+<li><p><strong>What is the Strömgren radius due to an O6 star in a typical <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region?</strong>  (Assume that <span class="math notranslate nohighlight">\(T_e\simeq 45,000\,{\rm K}\)</span> and <span class="math notranslate nohighlight">\(L\simeq 1.3\times10^5\,L_\odot\)</span>)</p></li>
+</ul>
+<blockquote>
+<div><p>From Wien’s law, the peak wavelength is given as</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_{\rm max} = \frac{0.0029\,{\rm m\,K}}{T_e} \approx 64\,{\rm nm}.\]</div>
+<p>This is significantly shorter (or higher energy) than the 91.2-nm limit (<a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_5/interaction-of-light-and-matter.html#the-wavelength-of-hydrogen"><span class="math notranslate nohighlight">\({\rm Ly_{\rm limit}}\)</span> from the wavelength of hydrogen</a>) and it can be assumed that most of the photons created by an O6 star are capable of causing ionization.  The energy of one 64-nm photon can be calculated giving</p>
+<div class="math notranslate nohighlight">
+\[E_\gamma = \frac{hc}{\lambda} = 19\,{\rm eV}.\]</div>
+<p>Assuming that all of the emitted photons have the same (peak wavelength), then the total number of photons produced <em>per second</em> is just</p>
+<div class="math notranslate nohighlight">
+\[ N \simeq \frac{L}{E_\gamma} \simeq 1.6 \times 10^{49}\,{\rm photons/s}.\]</div>
+<p>Lastly, a typical the number density within a GMC is <span class="math notranslate nohighlight">\(n_H \sim 10^8\,{\rm m^{-3}}\)</span>, we find</p>
+<div class="math notranslate nohighlight">
+\[ r_S \simeq \left( \frac{3N}{4\pi \alpha n_H^2} \right) \simeq 3.48\,{\rm pc}\]</div>
+<p>Values of <span class="math notranslate nohighlight">\(r_S\)</span> range from less than 0.1 pc to greater than 100 pc.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">h</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">Wien</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span><span class="n">parsec</span>
+
+<span class="k">def</span> <span class="nf">Wien_law</span><span class="p">(</span><span class="n">T_e</span><span class="p">):</span>
+    <span class="c1">#T_e = effective temperature in K</span>
+    <span class="k">return</span> <span class="n">Wien</span><span class="o">/</span><span class="n">T_e</span> <span class="c1">#returns value in m</span>
+
+<span class="k">def</span> <span class="nf">photon_energy</span><span class="p">(</span><span class="n">lam</span><span class="p">):</span>
+    <span class="c1">#lam = wavelength in m</span>
+    <span class="k">return</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">lam</span> <span class="c1">#return value in J</span>
+
+<span class="k">def</span> <span class="nf">Stromgren_radius</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">n_H</span><span class="p">):</span>
+    <span class="c1">#N = total number of photons produced by the star</span>
+    <span class="c1">#n_H = number density of hydrogen</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">N</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">alpha</span><span class="o">*</span><span class="n">n_H</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span><span class="o">/</span><span class="n">parsec</span> <span class="c1">#returns the Stromgren radius in pc</span>
+
+<span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.827e26</span> <span class="c1">#Solar luminosity in W</span>
+<span class="n">T_e</span> <span class="o">=</span> <span class="mi">45000</span> <span class="c1">#effective temperature of an O6 star</span>
+<span class="n">L_star</span> <span class="o">=</span> <span class="mf">1.3e5</span><span class="o">*</span><span class="n">L_sun</span> <span class="c1">#luminosity of an O6 star in W</span>
+<span class="n">n_H</span> <span class="o">=</span> <span class="mf">1e8</span> <span class="c1">#number density of hydrogen atoms in a GMC</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">3.1e-19</span> <span class="c1">#recombination coefficient for a typical H II region</span>
+
+<span class="n">E_peak</span> <span class="o">=</span> <span class="n">photon_energy</span><span class="p">(</span><span class="n">Wien_law</span><span class="p">(</span><span class="n">T_e</span><span class="p">))</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">L_star</span><span class="o">/</span><span class="n">E_peak</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The total number of photons produced per second is approximately </span><span class="si">%1.2e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="n">r_S</span> <span class="o">=</span> <span class="n">Stromgren_radius</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">n_H</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Stromgren radius due to an O6 star is </span><span class="si">%1.2f</span><span class="s2"> pc.&quot;</span> <span class="o">%</span> <span class="n">r_S</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The total number of photons produced per second is approximately 1.61e+49
+The Stromgren radius due to an O6 star is 3.48 pc.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="the-effects-of-massive-stars-on-gas-clouds">
 <h3><span class="section-number">8.3.9. </span>The Effects of Massive Stars on Gas Clouds<a class="headerlink" href="#the-effects-of-massive-stars-on-gas-clouds" title="Permalink to this headline">¶</a></h3>
