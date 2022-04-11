@@ -439,8 +439,12 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#h-ii-regions">
-     8.3.8. H II Regions
+    <a class="reference internal nav-link" href="#rm-h-ii-regions">
+     8.3.8.
+     <span class="math notranslate nohighlight">
+      \({\rm H\,II}\)
+     </span>
+     Regions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -481,8 +485,8 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#porplyds">
-       8.3.10.1. Porplyds
+      <a class="reference internal nav-link" href="#proplyds">
+       8.3.10.1. Proplyds
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
@@ -528,10 +532,19 @@
 <div class="math notranslate nohighlight">
 \[ m_\lambda = M_\lambda + 5\log_{10}\,d-5 + A_\lambda, \tag{1}\]</div>
 <p>which is a modified version of the distance modulus equation with a correction factor <span class="math notranslate nohighlight">\(A_\lambda&gt;0\)</span> that adjusts for the interstellar extinction along the line of sight.  The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is positive because it always acts to dim objects along the magnitude scale.  If <span class="math notranslate nohighlight">\(A_\lambda\)</span> is large enough, a star can fall behind the limiting magnitude of the background sky for the naked eye or a telescope.  This is the cause for the dark bands running through the Milky Way.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_1.jpg?raw=true?" width="400">
+<p><strong>Figure 1</strong>: Dust clouds obscuring the light in the center of NGC 281. (Image Credit: NASA, ESA, and the Hubble Heritage TEam (STScI/AURA); P. McCullough (STScI))</p>
+</div>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_2.jpg?raw=true?" width="400">
+<p><strong>Figure 2</strong>: An interstellar cloud containing significant amounts of dust along with the gas (a dust
+cloud) can both scatter and absorb light that passes through it. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is related to optical depth (recall that the gas below the photosphere is also invisible) measured back along the line of sight.  The fractional change in the intensity of light decreases exponentially by,</p>
 <div class="math notranslate nohighlight">
 \[ \frac{I_\lambda}{I_{\lambda,o}} = e^{-\tau_\lambda}, \]</div>
-<p>which is normalized by the expected light intensity without interstellar extinction.  The optical depth correlates with the change in magnitude through the fractional change in light intensity (see Chapter 1), or</p>
+<p>which is normalized by the expected light intensity without interstellar extinction.  The optical depth correlates with the change in magnitude through the fractional change in light intensity (see <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#the-magnitude-scale">the magnitude scale</a>), or</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{split}
 m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
@@ -613,6 +626,11 @@ The average density is 2.2e-07 m^{-3}.
 <div class="section" id="molecular-contributions-to-interstellar-extinction-curves">
 <h3><span class="section-number">8.1.4. </span>Molecular Contributions to Interstellar Extinction Curves<a class="headerlink" href="#molecular-contributions-to-interstellar-extinction-curves" title="Permalink to this headline">¶</a></h3>
 <p>Mie theory works well for longer wavelengths (visible-IR), but deviations appear in the UV when we consider the ratio of <span class="math notranslate nohighlight">\(A_\lambda\)</span> between different wavelength regimes, such as <span class="math notranslate nohighlight">\(A_V\)</span> centered in the visual.  The ratio <span class="math notranslate nohighlight">\(A_\lambda/A_V\)</span> is often plotted in terms of the reciprocal wavelength <span class="math notranslate nohighlight">\(\lambda^{-1}\)</span>.  Although <strong>color excesses</strong> are sometimes plotted instead, such as <span class="math notranslate nohighlight">\((A_\lambda -A_V)/(A_B-A_V)\)</span> or <span class="math notranslate nohighlight">\(E(B-V) \equiv (B-V)_{\rm intrinsic} - (B-V)_{\rm observed}\)</span>.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?" width="400">
+<p><strong>Figure 3</strong>: Interstellar extinction curves along the lines of sight to three stars. The dashed lines
+represent the observational data, and the solid lines are theoretical fits. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>Plots of this type demonstrate that the Mie theory agrees well at longer wavelength, while the curves begin to diverge significantly for wavelengths shorter than the blue wavelength band (B).  A “bump” occurs in the UV at 217.5 nm (or 4.6 <span class="math notranslate nohighlight">\({\rm \mu m^{-1}}\)</span>).  At even shorter wavelengths the extinction curve <span class="math notranslate nohighlight">\((A_\lambda/A_V\)</span> vs. <span class="math notranslate nohighlight">\(\lambda^{-1})\)</span> tends to rise sharply as the wavelength decreases.  The existence of the “bump” hints at the composition of the dust.</p>
 <p>Graphite interacts strongly with light near 217.5 nm, which correlates with the extinction curves.  It is uncertain how carbon can organize into large, well-structured particles in the ISM, but</p>
 <ul class="simple">
@@ -621,24 +639,35 @@ The average density is 2.2e-07 m^{-3}.
 <li><p><strong>c)</strong> the existence of the 217.5 nm resonance</p></li>
 </ul>
 <p>have led most researchers to suggest that interstellar dust has a major  component in the form of graphite.</p>
-<p>Another possible source of the 217.5 nm feature could be <strong>polycyclic aromatic hydrocarbons</strong> (PAHs).  These molecules have multiple carbon ring structures (like graphite) that could be responsible for a series of molecular bands that are observed in the emission from diffuse dust clouds.  There are <em>unidentified IR emission bands</em> between <span class="math notranslate nohighlight">\(3.3-12\,{\rm \mu m}\)</span> and appear to arise from vibrations in the C-C and C-H bonds common in PAHs.  The energies associated with molecular bonds are quantized like atomic energy levels.  However, the energy levels tend to group in closely space bands, which produces the characteristic broad features in the continuum.  The vibration, rotation, and bending of molecular bonds are all quantized, which yields complex spectra that may be difficult to identify in large molecules.</p>
+<p>Another possible source of the 217.5 nm feature could be <strong>polycyclic aromatic hydrocarbons</strong> (PAHs).  These molecules have multiple carbon ring structures (like graphite) that could be responsible for a series of molecular bands that are observed in the emission from diffuse dust clouds.  There are <em>unidentified IR emission bands</em> between <span class="math notranslate nohighlight">\(3.3-12\,{\rm \mu m}\)</span> and appear to arise from vibrations in the C-C and C-H bonds common in PAHs.  The energies associated with molecular bonds are quantized like atomic energy levels.  However, the energy levels tend to group in closely spaced bands, which produces the characteristic broad features in the continuum.  The vibration, rotation, and bending of molecular bonds are all quantized, which yields complex spectra that may be difficult to identify in large molecules.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_4.jpg?raw=true?" width="400">
+<p><strong>Figure 4</strong>: The structures of several polycyclic aromatic hydrocarbons: <span class="math notranslate nohighlight">\({\rm C_{14}H_{10}}\)</span> (anthracene),
+<span class="math notranslate nohighlight">\({\rm C_{24}H_{12}}\)</span> (coronene), <span class="math notranslate nohighlight">\({\rm C_{42}H_{18}}\)</span> (hexabenzocoronene). The hexagonal structures are shorthand for indicating
+the presence of a carbon atom at each corner of the hexagon. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>Interstellar dust is composed of other particles as well, as shown by the dark absorption bands at 9.7 <span class="math notranslate nohighlight">\({\rm \mu m}\)</span> and 18 <span class="math notranslate nohighlight">\({\rm \mu m}\)</span> in the near-IR.  The Si-O molecular bond and the bending of Si-O-Si bonds in silicates could be the cause of these bands.  The existence of these absorption bands suggests that silicate grains are also present in the dust clouds and the diffuse dust of the ISM.</p>
 <p>In addition to the absorption from molecular bonds, scattered light from interstellar dust tends to be slightly polarized.  The amount of polarization is typically a few percent and wavelength-dependent, which implies that the dust grains cannot be perfectly spherical.  They must be some alignment of the dust grains along a unique direction, which is inferred from the polarization.</p>
 <p>Apparently, the dust in the ISM is composed of graphite and silicate grains that can range in size (fractions of nm to several microns).  It also appears that many of the features of the interstellar extinction curve can be reproduced by combining the contributions from all of the components.</p>
 </div>
 <div class="section" id="hydrogen-as-the-dominant-component-of-the-ism">
 <h3><span class="section-number">8.1.5. </span>Hydrogen as the Dominant Component of the ISM<a class="headerlink" href="#hydrogen-as-the-dominant-component-of-the-ism" title="Permalink to this headline">¶</a></h3>
-<p>The dominant component of the ISM is hydrogen gas in its various forms: neutral hydrogen (H I), ionized hydrogen (H II), and molecular hydrogen <span class="math notranslate nohighlight">\(({\rm H_2})\)</span>.  The hydrogen mass fraction of the ISM is approximately 70%, while the helium mass fraction makes up most of the remainder.  The metal mass fraction typically accounts for only a few percent, where carbon and silicon are major components.</p>
-<p>In <em>diffuse</em> interstellar hydrogen clouds, neutral hydrogen in the ground state dominates the composition.  As a result, ionized hydrogen (H I) cannot produce emission lines, where it is also difficult to absorb H I in absorption because UV photons are required to lift the electrons out of the ground state.  In certain <em>unique</em> circumstances, space-based observatories have detected UV absorption in cold clouds of neutral hydrogen when there are strong UV sources in the background.</p>
+<p>The dominant component of the ISM is hydrogen gas in its various forms: neutral hydrogen (<span class="math notranslate nohighlight">\({\rm H\,I}\)</span>), ionized hydrogen (<span class="math notranslate nohighlight">\({\rm H\,II}\)</span>), and molecular hydrogen <span class="math notranslate nohighlight">\(({\rm H_2})\)</span>.  The hydrogen mass fraction of the ISM is approximately 70%, while the helium mass fraction makes up most of the remainder.  The metal mass fraction typically accounts for only a few percent, where carbon and silicon are major components.</p>
+<p>In <em>diffuse</em> interstellar hydrogen clouds, neutral hydrogen in the ground state dominates the composition.  As a result, neutral hydrogen (<span class="math notranslate nohighlight">\({\rm H\,I}\)</span>) cannot produce emission lines, where it is also difficult to absorb <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> in absorption because UV photons are required to lift the electrons out of the ground state.  In certain <em>unique</em> circumstances, space-based observatories have detected UV absorption in cold clouds of neutral hydrogen when there are strong UV sources in the background.</p>
 </div>
 <div class="section" id="cm-radiation-of-hydrogen">
 <h3><span class="section-number">8.1.6. </span>21-cm Radiation of Hydrogen<a class="headerlink" href="#cm-radiation-of-hydrogen" title="Permalink to this headline">¶</a></h3>
 <p>Neutral hydrogen can be detected in the diffuse ISM by using the unique radio wavelength, the <strong>21-cm line</strong>.  This particular absorption in the spectrum is produced by the spin reversal of the electron relative to the proton’s spin.  Both electrons and protons possess an inherent spin angular momentum with the <span class="math notranslate nohighlight">\(z\)</span>-component of the spin angular momentum have two possible orientations (<span class="math notranslate nohighlight">\(m_s = \pm 1/2)\)</span>.  Each particle is charged and thus the intrinsic spins endow them with dipole magnetic fields (i.e., bar magnets).</p>
-<p>The spins of the proton and electron are aligned (i.e., both spin in the same direction) and have slightly more energy than if they are anti-aligned.  If the electron’s spin “flips” to an anti-aligned state, then energy must be lost from the atom.  Spin flips that are not due to collision with other atoms produce photons to conserve energy.  A photon can also be absorbed, which excites a hydrogen atom into aligning the spins.  The spin flip occurs at 12.1 cm, which corresponds to a frequency of 1420 MHZ.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?" width="400">
+<p><strong>Figure 5</strong>: When the spins of the electron and proton in a hydrogen atom go from being aligned
+to being anti-aligned, a 21-cm-wavelength photon is emitted. (Carroll &amp; Ostlie (2007))</p>
+</div>
+<p>The spins of the proton and electron are aligned (i.e., both spin in the same direction) and have slightly more energy than if they are anti-aligned.  If the electron’s spin “flips” to an anti-aligned state, then energy must be lost from the atom.  Spin flips that are not due to collision with other atoms produce photons to conserve energy.  A photon can also be absorbed, which excites a hydrogen atom into aligning the spins.  The spin flip occurs at 21.1 cm, which corresponds to a frequency of 1420 MHZ.</p>
 <p>The emission of a 21 cm photon from an individual hydrogen atom is extremely rare, where several million years can pass before the atom will emit a photon.  Collisions are competing with this process of spontaneous emission that can also result in either excitation or de-excitation.  Collisions occur on timescales of 100s of years.  This is far shorter than the spontaneous emission timescale and statistically some atoms are still able to make the spontaneous transition.</p>
 <p>The existence of 21 cm radiation was predicted in the early 1940s and first detected in 1951.  It has become an important tool in</p>
 <ul class="simple">
-<li><p>mapping the location and density of H I,</p></li>
+<li><p>mapping the location and density of <span class="math notranslate nohighlight">\({\rm H\,I}\)</span>,</p></li>
 <li><p>measuring the radial velocities through the Doppler effect, and</p></li>
 <li><p>estimating magnetic fields using the Zeeman effect.</p></li>
 </ul>
@@ -646,13 +675,13 @@ The average density is 2.2e-07 m^{-3}.
 <div class="math notranslate nohighlight">
 \[ \tau_H = 5.2 \times 10^{-15} \frac{N_H}{T\,\Delta v}, \tag{7} \]</div>
 <p>which depends on the column density of neutral hydrogen <span class="math notranslate nohighlight">\(N_H\)</span>, the temperature <span class="math notranslate nohighlight">\(T\)</span> (in K) of the gas, and the full width of the line at half maximum <span class="math notranslate nohighlight">\(\Delta v\)</span> (in <span class="math notranslate nohighlight">\({\rm km/s}\)</span>).</p>
-<p>As long as the 21 cm hydrogen line is optically thin (i.e., on the linear part of the curve of growth), the optical depth is proportional to the neutral hydrogen column density.  Studies of <strong>diffuse H I clouds</strong> show temperatures of <span class="math notranslate nohighlight">\(30-80\,{\rm K}\)</span>, number densities ranging from <span class="math notranslate nohighlight">\(1-8 \times 10^8\,{\rm m^{-3}}\)</span>, and masses between <span class="math notranslate nohighlight">\(1-100\,M_\odot\)</span>.  When <span class="math notranslate nohighlight">\(A_V&lt;1\)</span>, the gas and dust are distributed together throughout the ISM.  This correlation breaks down for $A_V &gt; 1, where the column density of H I no longer increases rapidly with the column density of the dust and other physical processes are involved as the dust becomes optically thick.</p>
+<p>As long as the 21 cm hydrogen line is optically thin (i.e., on the linear part of the curve of growth), the optical depth is proportional to the neutral hydrogen column density.  Studies of <strong>diffuse <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> clouds</strong> show temperatures of <span class="math notranslate nohighlight">\(30-80\,{\rm K}\)</span>, number densities ranging from <span class="math notranslate nohighlight">\(1-8 \times 10^8\,{\rm m^{-3}}\)</span>, and masses between <span class="math notranslate nohighlight">\(1-100\,M_\odot\)</span>.  When <span class="math notranslate nohighlight">\(A_V&lt;1\)</span>, the gas and dust are distributed together throughout the ISM.  This correlation breaks down for <span class="math notranslate nohighlight">\(A_V &gt; 1\)</span>, where the column density of <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> no longer increases rapidly with the column density of the dust and other physical processes are involved as the dust becomes optically thick.</p>
 <p>Optically thick dust clouds shield hydrogen from sources of UV and a consequence is that molecular hydrogen can exist without the threat of dissociation by UV photons.  Dust can also enhance <span class="math notranslate nohighlight">\({\rm H_2}\)</span> formation rate beyond what would be expected through the collision of hydrogen atoms.  The enhancement occurs because:</p>
 <ol class="simple">
 <li><p>a dust grain can provide a <em>site</em> on its surface for the hydrogen atoms to meet, rather than requiring chance encounters in the ISM</p></li>
 <li><p>the dust provides a <em>sink</em> for the binding energy that must be liberated if a stable molecule is to form, where the liberated energy goes into heating the grain and ejecting the <span class="math notranslate nohighlight">\({\rm H_2}\)</span> molecule from the formation site.</p></li>
 </ol>
-<p>Consequently, <strong>molecular clouds</strong> are surrounded by shells of H I.</p>
+<p>Consequently, <strong>molecular clouds</strong> are surrounded by shells of <span class="math notranslate nohighlight">\({\rm H\,I}\)</span>.</p>
 </div>
 <div class="section" id="molecular-traces-of-hydrogen">
 <h3><span class="section-number">8.1.7. </span>Molecular Traces of Hydrogen<a class="headerlink" href="#molecular-traces-of-hydrogen" title="Permalink to this headline">¶</a></h3>
@@ -664,7 +693,14 @@ The average density is 2.2e-07 m^{-3}.
 <h3><span class="section-number">8.1.8. </span>The Classification of Interstellar Clouds<a class="headerlink" href="#the-classification-of-interstellar-clouds" title="Permalink to this headline">¶</a></h3>
 <p>Discrete classification schemes are destined to fail because the delineation between types is blurry.  However, a broad classification scheme is still useful.</p>
 <ul class="simple">
-<li><p><strong>Diffuse (or translucent) molecular clouds</strong> have primarily atomic hydrogen gas and the interstellar extinction is roughly <span class="math notranslate nohighlight">\(1 &lt; A_V &lt; 5\)</span>, where molecular hydrogen may be found in regions of higher column density.  Conditions in these clouds are similar to diffuse H I clouds, but with somewhat higher masses; temperatures range from <span class="math notranslate nohighlight">\(15-50\,{\rm K}\)</span>, number densities range from <span class="math notranslate nohighlight">\(5-50 \times 10^8\,{\rm m^{-3}}\)</span>, and the cloud masses are from around <span class="math notranslate nohighlight">\(3-100\,M_\odot\)</span>.  The clouds extend several parsecs across, where both H I and diffuse molecular clouds tend to be irregularly shaped.</p></li>
+<li><p><strong>Diffuse (or translucent) molecular clouds</strong> have primarily atomic hydrogen gas and the interstellar extinction is roughly <span class="math notranslate nohighlight">\(1 &lt; A_V &lt; 5\)</span>, where molecular hydrogen may be found in regions of higher column density.  Conditions in these clouds are similar to diffuse <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> clouds, but with somewhat higher masses; temperatures range from <span class="math notranslate nohighlight">\(15-50\,{\rm K}\)</span>, number densities range from <span class="math notranslate nohighlight">\(5-50 \times 10^8\,{\rm m^{-3}}\)</span>, and the cloud masses are from around <span class="math notranslate nohighlight">\(3-100\,M_\odot\)</span>.  The clouds extend several parsecs across, where both <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> and diffuse molecular clouds tend to be irregularly shaped.</p></li>
+</ul>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_6.jpg?raw=true?" width="600">
+<p><strong>Figure 6</strong>: The Horsehead Nebula is part of the Orion giant molecular cloud complex. The
+“horsehead” appearance is due to dust protruding into an <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> (ionized hydrogen) environment. (Image Credit: NASA, CFHT, Coelum, MegaCam; J. C Cuillandre &amp; G. A. Anselmi)</p>
+</div>
+<ul class="simple">
 <li><p><strong>Giant molecular clouds</strong> (GMCs) are enormous complexes of dust and gas where temperatures are typically around 15 K, number densities range from <span class="math notranslate nohighlight">\(1-3 \times 10^8\,{\rm m^{-3}}\)</span>, masses are typically <span class="math notranslate nohighlight">\(10^5\,M_\odot\)</span> (but may reach <span class="math notranslate nohighlight">\(10^6\,M_\odot\)</span>), and typical sizes are on the order of 50 pc across.  The most famous Horsehead Nebula is a portion of the Orion GMC complex.  Thousands of GMCs exist in our Galaxy, mostly in its spiral arms.  The structure of GMCs tend to be clumpy with local regions of significant density.</p>
 <ul>
 <li><p><strong>Dark cloud complexes</strong> have interstellar extinction <span class="math notranslate nohighlight">\(A_V \sim 5\)</span>, number densities <span class="math notranslate nohighlight">\(\sim 5 \times 10^8\,{\rm m^{-3}}\)</span>, diameters around 10 pc, and temperatures around 10 K.</p></li>
@@ -679,7 +715,11 @@ The average density is 2.2e-07 m^{-3}.
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Bok_globule">Bok globules</a> are named after Bart Bok, who first studied these objects in the 1940s.</p>
 </div>
-</div>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_7.jpg?raw=true?" width="600">
+<p><strong>Figure 7</strong>: The Bok globule, Barnard 68 (B68), observed in visible light [(a) composite of BVI
+bands] and in infrared light [(b) composite of BIK bands]. (Image Credit: ESO)</p>
+</div></div>
 <div class="section" id="interstellar-chemistry">
 <h3><span class="section-number">8.1.9. </span>Interstellar Chemistry<a class="headerlink" href="#interstellar-chemistry" title="Permalink to this headline">¶</a></h3>
 <p>The ISM is rich in many molecules, where radio observations (as of June 2005) have positive identifications of 125 molecules (not including isotopmers), ranging in complexity from diatomic molecules, triatomic molecules, and fairly long organic strings, e.g., <span class="math notranslate nohighlight">\({\rm HC_{11}N}\)</span>.  Given the complex nature of the molecules present in the ISM, the chemistry of the ISM is also quite complex.</p>
@@ -702,7 +742,7 @@ The average density is 2.2e-07 m^{-3}.
 <div class="section" id="the-heating-and-cooling-of-the-ism">
 <h3><span class="section-number">8.1.10. </span>The Heating and Cooling of the ISM<a class="headerlink" href="#the-heating-and-cooling-of-the-ism" title="Permalink to this headline">¶</a></h3>
 <p>Molecules and dust grains play important roles in the <em>heating</em> and <em>cooling</em> of the ISM.  Diffuse molecular clouds have higher gas temperatures than GMCs and the dense cores of GMCs are even cooler yet.  The hot cores of GMCs have significantly greater temperatures.  <em>What are the physical causes of these observational trends?</em></p>
-<p>Much of the heating of the ISM comes from <strong>cosmic rays</strong>, or charged particles that travel through space with astonishing amounts of energy.  A single proton can have a kinetic energy ranging from <span class="math notranslate nohighlight">\(10^1-10^{14}\,{\rm MeV}\)</span>.  The highest energy cosmic rays are extremely rare, but energies from<span class="math notranslate nohighlight">\(10^3-10^8\,{\rm MeV}\)</span> are common.  The sources of cosmic rays include stellar flares and supernova explosions.</p>
+<p>Much of the heating of the ISM comes from <strong>cosmic rays</strong>, or charged particles that travel through space with astonishing amounts of energy.  A single proton can have a kinetic energy ranging from <span class="math notranslate nohighlight">\(10^1-10^{14}\,{\rm MeV}\)</span>.  The highest energy cosmic rays are extremely rare, but energies from <span class="math notranslate nohighlight">\(10^3-10^8\,{\rm MeV}\)</span> are common.  The sources of cosmic rays include stellar flares and supernova explosions.</p>
 <p>Heating by cosmic rays comes (primarily) through the ionization of hydrogen atoms and molecules as a result of collisions with cosmic ray protons:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -747,13 +787,13 @@ p^+ + {\rm H_2} &amp;\rightarrow {\rm H_2^+} + e^- + p^+. \\
 <h2><span class="section-number">8.2. </span>The Formation of Protostars<a class="headerlink" href="#the-formation-of-protostars" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-jeans-criterion">
 <h3><span class="section-number">8.2.1. </span>The Jeans Criterion<a class="headerlink" href="#the-jeans-criterion" title="Permalink to this headline">¶</a></h3>
-<p>Important questions remain concerning how stars change (or evolve) during their lifetimes, where one area considers the formation of pre-nuclear burning objects known as *<em>protostars</em> from interstellar molecular clouds.  If globules and cores in molecular clouds are the sites of star formation, <em>what conditions must exist for collapse to occur?</em></p>
+<p>Important questions remain concerning how stars change (or evolve) during their lifetimes, where one area considers the formation of pre-nuclear burning objects known as <strong>protostars</strong> from interstellar molecular clouds.  If globules and cores in molecular clouds are the sites of star formation, <em>what conditions must exist for collapse to occur?</em></p>
 <p>An analysis of this problem can be made considering the effects of small deviations from hydrostatic equilibrium and several simplifying assumptions (e.g., neglecting the effects due to rotation, turbulence and galactic magnetic fields), which provides important insights into the development of protostars.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/James_Jeans">Sir James Jeans</a> first investigated the problem of molecular cloud collapse.  He also contributed to the discovery of the Rayleigh-Jeans law for radiation.</p>
 </div>
-<p>The virial theorem <span class="math notranslate nohighlight">\((2K + U = 0)\)</span> describes the equilibrium condition for a stable, gravitationally bound system.  But, the virial theorem may also be used to estimate the necessary conditions for protostellar collapse, which are</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Virial_theorem">virial theorem</a> <span class="math notranslate nohighlight">\((2K + U = 0)\)</span> describes the equilibrium condition for a stable, gravitationally bound system.  But, the virial theorem may also be used to estimate the necessary conditions for protostellar collapse, which are</p>
 <ol class="simple">
 <li><p>twice the total internal kinetic energy <span class="math notranslate nohighlight">\((2K)\)</span> (i.e., the gas and radiation pressure) exceeds the absolute value of the gravitational potential energy <span class="math notranslate nohighlight">\((|U|)\)</span>.  The force due to the gas pressure will dominate the force of gravity and the cloud will expand.</p></li>
 <li><p>Conversely, too little kinetic energy <span class="math notranslate nohighlight">\((2K&lt;|U|)\)</span> allows for gravity to dominate and the cloud will collapse.</p></li>
@@ -1055,6 +1095,12 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <p>An observable consequence of the cloud becoming optically thick is that the gravitational potential energy released during the collapse is converted into heat and then radiated away in the IR.  By computing the luminosity (i.e., energy release rate) and the cloud radius (for an optical depth <span class="math notranslate nohighlight">\(\tau = 2/3\)</span>), then the effective temperature can be determined via the Stefan-Boltzmann law, <span class="math notranslate nohighlight">\(L = 4\pi R^2 \sigma T^4\)</span>, and treating the dust as the photosphere.  After which, it becomes possible to plot the location of the simulated cloud on the H-R diagram as a function of time.  The curves on the H-R diagram depict the life histories of the simulated clouds are known as <strong>evolutionary tracks</strong>.  As the collapse continues to accelerate, the luminosity of the protostar increases along with its effective temperature.</p>
 <p>Above the developing protostellar core, material is still in free-fall.  Once that material meets the nearly hydrostatic core, a shock wave develops and the material is supersonic.  At this shock front, the infalling material loses a significant fraction of its kinetic energy in the form of heat and produces much of its luminosity.  When the temperature reaches ~1000 K, the dust begins to vaporize and the opacity drops.  This means the radius corresponding to an optical depth <span class="math notranslate nohighlight">\(\tau = 2/3\)</span> is reduced.  Since the luminosity remains high, a corresponding increase in the effective temperature must occur.</p>
 <p>The hydrostatic core slowly increases as more overlying material continues to fall onto it.  Eventually, the temperatures becomes large enough to cause the molecular hydrogen to dissociate into atomic hydrogen.  This process absorbs energy that would otherwise provide a pressure gradient to maintain hydrostatic equilibrium.  The core becomes dynamically unstable and a second collapse begins.  After the core radius decreases to ~<span class="math notranslate nohighlight">\(1.3\,R_\odot\)</span>, hydrostatic equilibrium is re-established.  The core mass is still <strong>accreting</strong> gas, where the final mass will be larger.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_9.jpg?raw=true?" width="600">
+<p><strong>Figure 8</strong>: Theoretical evolutionary tracks of the gravitational collapse of 0.05, 0.1, 0.5, 1, 2,
+and 10 <span class="math notranslate nohighlight">\(M_\odot\)</span> clouds through the protostar phase (solid lines). The dashed lines show the times since
+collapse began. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>After the core collapse, a second shock front is established that continues to heat the infalling material.  The main accretion phase when the temperature can increase by several orders of magnitude, while the luminosity remains roughly flat.  In this period, the deep interior of the protostar increases enough to start deuterium burning and produces up to 60% of the luminosity of a <span class="math notranslate nohighlight">\(1\,M_\odot\)</span> protostar.  The deuterium burning reaction has a fairly large cross section <span class="math notranslate nohighlight">\(\sigma(E)\)</span> at low temperatures and is favored over the PP I chain.  Eventually the luminosity must decrease due to a limited amount of initial resources from the original cloud.  After the deuterium is exhausted, the evolutionary track bends downward and the effective temperature decreases slightly.  The evolution has reached a quasi-static pre-main-sequence phase.</p>
 </div>
 <div class="section" id="id1">
@@ -1081,6 +1127,21 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <p><strong>Consider the pre-main-sequence evolution of a 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> star, beginning on the Hayashi track.</strong> With the high <span class="math notranslate nohighlight">\({\rm H^-}\)</span> opacity near the surface, the star is completely convective for the first 1 Myr, where deuterium burning also occurs during this early period of the collapse.  Since deuterium is not very abundant, the nuclear reactions have little effect on the overall collapse, where they simply slow the collapse rate slightly.</p>
 <p>As the central temperature continues to rise, the levels of ionization increase but the opacity decreases.  As the radiative core develops, more and more of the star’s mass is encompassed by the core.  Following the descent along the Hayashi track, the luminosity reaches a minimum and the radiative core allows energy to escape into the convective envelope more readily.  This causes the luminosity to increase again and the effective temperature increases since the star is still shrinking.</p>
 <p>After the luminosity begins to increase, the temperature near the center has become high enough for nuclear reactions to begin, although not yet at their equilibrium rates.  The first two steps of the PP I chain and the CNO reactions dominate the nuclear energy production.  Over time, these reactions provide an increasingly larger fraction of the luminosity, while the energy due to the gravitational collapse begins to wane.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_11.jpg?raw=true?" width="600">
+<p><strong>Figure 9</strong>: Classical pre-main-sequence evolutionary tracks computed for stars of various
+masses with the composition <span class="math notranslate nohighlight">\(X = 0.68\)</span>, <span class="math notranslate nohighlight">\(Y = 0.30\)</span>, and <span class="math notranslate nohighlight">\(Z = 0.02\)</span>. The direction of evolution on each
+track is generally from low effective temperature to high effective temperature (right to left). The
+mass of each model is indicated beside its evolutionary track. The square on each track indicates the
+onset of deuterium burning in these calculations. The long-dash line represents the point on each track
+where convection in the envelope stops and the envelope becomes purely radiative. The short-dash
+line marks the onset of convection in the core of the star. Contraction times for each track are given
+in Table 1. (Carroll &amp; Ostlie (2007))</p>
+</div>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Table_1.jpg?raw=true?" width="600">
+<p><strong>Table 1</strong>: Pre-main-sequence contraction times for the classical models presented in Figure 9. (Carroll &amp; Ostlie (2007))</p>
+</div>
 <p>The CNO reactions have a high temperature dependence and a temperature gradient is established in the core so that some convection begins to develop there.  At the local maximum in the luminosity on the H-R diagram (near the end of the track), the nuclear energy production rate is so great that the central core is forced to expand (i.e., <span class="math notranslate nohighlight">\(\epsilon = \epsilon_{nuclear} + \epsilon_{\rm gravity}\)</span>).  The expansion causes the total luminosity and temperature to decrease at the surface.</p>
 <p>When the carbon-12 is exhausted (for the CNO cycle), the core completes its readjustment to nuclear burning, where the remainder of the PP I chain becomes important.  With the establishment of a stable energy source, the gravitational energy term becomes insignificant and the star finally settles onto the main sequence.  For stars that are less massive than our Sun, the evolution is somewhat different. These stars never get hot enough in their centers to burn carbon-12 efficiently.</p>
 <p>If the protostar mass is <span class="math notranslate nohighlight">\(\lesssim 0.072\,M_\odot\)</span>, the core never gets hot enough to generate sufficient energy by nuclear reactions to stabilize the star against gravitational collapse.  The stable hydrogen-burning main sequence is never obtained, which explains the lower end of the main sequence.  For low mass stars, the temperatures remain cool and opacity stays high such that a radiative core never develops and thus remain fully convective all the way to the main sequence.</p>
@@ -1101,42 +1162,162 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div>
 <div class="section" id="the-zero-age-main-sequence-zams">
 <h3><span class="section-number">8.3.6. </span>The Zero-Age Main Sequence (ZAMS)<a class="headerlink" href="#the-zero-age-main-sequence-zams" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>zero-age main sequence</strong> (ZAMS) is known as a diagonal line in the H-R diagram that indicates when stars of various masses reach the main sequence and begin equilibrium hydrogen burning.  The amount of time required for stars to collapse onto the ZAMS is inversely related to mas, where a star a little less massive than the Sun <span class="math notranslate nohighlight">\((0.8\,M_\odot)\)</span> takes over 68 Myr to reach the ZAMS and a much more massive star <span class="math notranslate nohighlight">\((60\,M_\odot)\)</span> takes only 28,000 years.  This inverse relationship may also signal a problem with classical pre-main-sequence evolutionary models.  If the most massive stars form first in clusters, then the intense radiation that they produce would likely disperse the clouds before their low-mass siblings would ever have a chance to develop.</p>
 </div>
 <div class="section" id="the-initial-mass-function-imf">
 <h3><span class="section-number">8.3.7. </span>The Initial Mass Function (IMF)<a class="headerlink" href="#the-initial-mass-function-imf" title="Permalink to this headline">¶</a></h3>
+<p>From observational studies, it appears that more low-mass stars (than high-mass stars) from when an interstellar cloud fragments.  The number of stars that form <em>per mass interval per unit volume</em> is strongly mass-dependent, where this functional dependence is known as the <strong>initial mass function</strong> (IMF).  A particular IMF depends on a variety of factors, including the local environment in which a cluster of stars forms.  One observational bias arises from the very different evolution rates for star in different mass ranges (i.e., the more massive stars have shorter lifetimes) and thus, it is not surprising that massive stars are extremely rare compared to low-mass stars.  Observations also suggest that the curve below <span class="math notranslate nohighlight">\(0.1\,M_\odot\)</span> (or <span class="math notranslate nohighlight">\(\log_{10}\,m = -1\)</span>) may be fairly flat indicating a large number of low-mass stars and brown dwarfs.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?" width="600">
+<p><strong>Figure 10</strong>: The initial mass function, <span class="math notranslate nohighlight">\(\xi\)</span>, shows the number of stars per unit area of the Milky Way’s disk per unit interval of logarithmic mass that is produced in different mass intervals. The individual points represent observational data and the solid line is a theoretical estimate. Masses are in solar units. (Carroll &amp; Ostlie (2007))</p>
+</div></div>
+<div class="section" id="rm-h-ii-regions">
+<h3><span class="section-number">8.3.8. </span><span class="math notranslate nohighlight">\({\rm H\,II}\)</span> Regions<a class="headerlink" href="#rm-h-ii-regions" title="Permalink to this headline">¶</a></h3>
+<p>Hot, massive stars (O and B spectral types) are shrouded in a cloak of gas and dust when they reach the ZAMS.  The bulk of their radiation is emitted in the UV, which can ionize the ground-state hydrogen gas <span class="math notranslate nohighlight">\(({\rm H\,I})\)</span> in the ISM to produce <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions.  The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions are in equilibrium if they have equal rates of ionization and recombination.  During recombination, the electron cascades downward and produces a number of lower-energy photons (many will be in the visible).  The dominant visible wavelength comes from the <span class="math notranslate nohighlight">\(n=3\)</span> to <span class="math notranslate nohighlight">\(n=2\)</span> transition, or the <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> line of the Balmer series.  Therefore, <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions appear to fluoresce in red light.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?" width="400">
+<p><strong>Figure 11</strong>: The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region in Orion A is associated with a young OB association, the Trapezium cluster, and a giant molecular cloud. The Orion complex is 450 pc away. (Carroll &amp; Ostlie (2007))</p>
 </div>
-<div class="section" id="h-ii-regions">
-<h3><span class="section-number">8.3.8. </span>H II Regions<a class="headerlink" href="#h-ii-regions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Emission nebulae</strong> are considered to be the most beautiful objects in the night sky, where one particularly famous <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region is the Orion Nebula (M42).  The Orion A complex contains M42, a giant molecular cloud (OMC 1), and a very your star cluster (the Trapezium cluster).  The first protostar candidates were discovered in this region as well.</p>
+<p>The size of an <span class="math notranslate nohighlight">\({\rm H\,II}\)</span>  region can be estimated by considering the equilibrium requirement.  Let <span class="math notranslate nohighlight">\(N\)</span> be the number of photons <em>per second</em> produced by a massive O or B star that is producing the ionizing radiation and <span class="math notranslate nohighlight">\(\alpha n_e n_H\)</span> is the number of recombinations <em>per unit volume per second</em>.  The latter quantity depends on a quantum-mechanical recombination coefficient that describes the likelihood that a hydrogen atom will recombine given their number densities.  At about 8000 K (a temperature characteristic of an <span class="math notranslate nohighlight">\({\rm H\,II}\)</span>  region), <span class="math notranslate nohighlight">\(\alpha = 3.1 \times 10^{-19}\,{\rm m^3/s}\)</span>.  If we assume that the gas is entirely hydrogen and electrically neutral, then the numbers of electrons liberated must equal the number of hydrogen ions (protons), or <span class="math notranslate nohighlight">\(n_e = n_H\)</span>.  Then the recombination rate can be multiplied by the volume of the <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region (assumed to be a sphere) and then set equal to the number of ionized photons produced per second.  This is expressed as</p>
+<div class="math notranslate nohighlight">
+\[ N \simeq \alpha n_H^2 \left(\frac{4}{3} \pi r^3 \right),\]</div>
+<p>which solving for the radius produces</p>
+<div class="math notranslate nohighlight">
+\[ r \simeq \left( \frac{3N}{4\pi \alpha n_H^2} \right)^{1/3} \tag{27} \]</div>
+<p>and is called the <strong>Strömgren radius</strong> <span class="math notranslate nohighlight">\(r_S\)</span>.</p>
+<ul class="simple">
+<li><p><strong>What is the Strömgren radius due to an O6 star in a typical <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region?</strong>  (Assume that <span class="math notranslate nohighlight">\(T_e\simeq 45,000\,{\rm K}\)</span> and <span class="math notranslate nohighlight">\(L\simeq 1.3\times10^5\,L_\odot\)</span>)</p></li>
+</ul>
+<blockquote>
+<div><p>From Wien’s law, the peak wavelength is given as</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_{\rm max} = \frac{0.0029\,{\rm m\,K}}{T_e} \approx 64\,{\rm nm}.\]</div>
+<p>This is significantly shorter (or higher energy) than the 91.2-nm limit (<a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_5/interaction-of-light-and-matter.html#the-wavelength-of-hydrogen"><span class="math notranslate nohighlight">\({\rm Ly_{\rm limit}}\)</span> from the wavelength of hydrogen</a>) and it can be assumed that most of the photons created by an O6 star are capable of causing ionization.  The energy of one 64-nm photon can be calculated giving</p>
+<div class="math notranslate nohighlight">
+\[E_\gamma = \frac{hc}{\lambda} = 19\,{\rm eV}.\]</div>
+<p>Assuming that all of the emitted photons have the same (peak wavelength), then the total number of photons produced <em>per second</em> is just</p>
+<div class="math notranslate nohighlight">
+\[ N \simeq \frac{L}{E_\gamma} \simeq 1.6 \times 10^{49}\,{\rm photons/s}.\]</div>
+<p>Lastly, a typical the number density within a GMC is <span class="math notranslate nohighlight">\(n_H \sim 10^8\,{\rm m^{-3}}\)</span>, we find</p>
+<div class="math notranslate nohighlight">
+\[ r_S \simeq \left( \frac{3N}{4\pi \alpha n_H^2} \right)^{1/3} \simeq 3.48\,{\rm pc}\]</div>
+<p>Values of <span class="math notranslate nohighlight">\(r_S\)</span> range from less than 0.1 pc to greater than 100 pc.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">h</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">Wien</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span><span class="n">parsec</span>
+
+<span class="k">def</span> <span class="nf">Wien_law</span><span class="p">(</span><span class="n">T_e</span><span class="p">):</span>
+    <span class="c1">#T_e = effective temperature in K</span>
+    <span class="k">return</span> <span class="n">Wien</span><span class="o">/</span><span class="n">T_e</span> <span class="c1">#returns value in m</span>
+
+<span class="k">def</span> <span class="nf">photon_energy</span><span class="p">(</span><span class="n">lam</span><span class="p">):</span>
+    <span class="c1">#lam = wavelength in m</span>
+    <span class="k">return</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">lam</span> <span class="c1">#return value in J</span>
+
+<span class="k">def</span> <span class="nf">Stromgren_radius</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">n_H</span><span class="p">):</span>
+    <span class="c1">#N = total number of photons produced by the star</span>
+    <span class="c1">#n_H = number density of hydrogen</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">N</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">alpha</span><span class="o">*</span><span class="n">n_H</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span><span class="o">/</span><span class="n">parsec</span> <span class="c1">#returns the Stromgren radius in pc</span>
+
+<span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.827e26</span> <span class="c1">#Solar luminosity in W</span>
+<span class="n">T_e</span> <span class="o">=</span> <span class="mi">45000</span> <span class="c1">#effective temperature of an O6 star</span>
+<span class="n">L_star</span> <span class="o">=</span> <span class="mf">1.3e5</span><span class="o">*</span><span class="n">L_sun</span> <span class="c1">#luminosity of an O6 star in W</span>
+<span class="n">n_H</span> <span class="o">=</span> <span class="mf">1e8</span> <span class="c1">#number density of hydrogen atoms in a GMC</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">3.1e-19</span> <span class="c1">#recombination coefficient for a typical H II region</span>
+
+<span class="n">E_peak</span> <span class="o">=</span> <span class="n">photon_energy</span><span class="p">(</span><span class="n">Wien_law</span><span class="p">(</span><span class="n">T_e</span><span class="p">))</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">L_star</span><span class="o">/</span><span class="n">E_peak</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The total number of photons produced per second is approximately </span><span class="si">%1.2e</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">N</span><span class="p">)</span>
+
+<span class="n">r_S</span> <span class="o">=</span> <span class="n">Stromgren_radius</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">n_H</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Stromgren radius due to an O6 star is </span><span class="si">%1.2f</span><span class="s2"> pc.&quot;</span> <span class="o">%</span> <span class="n">r_S</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The total number of photons produced per second is approximately 1.61e+49
+The Stromgren radius due to an O6 star is 3.48 pc.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="the-effects-of-massive-stars-on-gas-clouds">
 <h3><span class="section-number">8.3.9. </span>The Effects of Massive Stars on Gas Clouds<a class="headerlink" href="#the-effects-of-massive-stars-on-gas-clouds" title="Permalink to this headline">¶</a></h3>
+<p>Through the formation of massive protostars, the temperature will begin to rise in the molecular cloud, where the dust will vaporize and molecules will dissociated before the star reaches the main sequence.  After reaching the main sequence, the surrounding gas will ionize, resulting tin the creation of a <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region inside of a <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> region.  Due to the star’s high luminosity, radiation pressure will begin to drive significant mass loss that can disperse the remainder of the cloud.  If several O and B stars form at the same time, then star formation can be halted around other protostars as they are starved for resources.  If the cloud was only marginally bound, the mass loss will result in the newly formed stars drifting apart from the initial cluster.  Some famous examples of this occurring are in the Carina Nebula (about 3000 pc from Earth) and in the <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/m16L.html">Eagle Nebula (M16)</a>.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?" width="400">
+<p><strong>Figure 12</strong>: A Visible image of a portion of the Carina Nebula (top).
+The same region observed in IR (bottom). Much less detail is observable because of the obscuration
+due to dust in the cloud. (Carroll &amp; Ostlie (2007); HST/ESA)</p>
+</div>
 <div class="section" id="ob-associations">
 <h4><span class="section-number">8.3.9.1. </span>OB Associations<a class="headerlink" href="#ob-associations" title="Permalink to this headline">¶</a></h4>
+<p>Groups of stars that are dominated by O and B main-sequence stars are called <strong>OB associations</strong>, where studies show that they cannot remain gravitationally bound to on another due to their individual kinematic velocities and masses.  An example is in the Trapezium cluster in the Orion A complex, which is believed to be less than 10 million years old.  It is currently densely populated with stars <span class="math notranslate nohighlight">\((&gt;2000\,{\rm pc^{-3}})\)</span> that are in the range of <span class="math notranslate nohighlight">\(0.5-2.0\,M_\odot\)</span>.  Radial velocity measurements (in <span class="math notranslate nohighlight">\(^{13}CO\)</span>) show that the gas in the vicinity is very turbulent, where the nearby O and B stars are dispersing the gas and causing the cluster to become unbound.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?" width="400">
+<p><strong>Figure 13</strong>: The giant gas pillars of the Eagle Nebula (M16). The left most pillar is more than
+1 pc long from base to top. Ionizing radiation from massive newborn stars off the top edge of the
+image are causing the gas in the cloud to photoevaporate. [Courtesy of NASA, ESA, STScI, J. Hester
+and P. Scowen (Arizona State University).]</p>
+</div>
 </div>
 <div class="section" id="t-tauri-stars">
 <h4><span class="section-number">8.3.9.2. </span>T Tauri Stars<a class="headerlink" href="#t-tauri-stars" title="Permalink to this headline">¶</a></h4>
+<p>There is a low-mass pre-main-sequence object that represents a transition from protostars still shrouded in dust and main-sequence stars, which is called a <strong>T Tauri</strong> star.  These objects are named after the first star of their class located in the constellation Taurus.  T Tauri stars are characterized by unusual spectral features and by large irregular luminosity variations (with timescales on the order of days).  The masses of T Tauri stars range from <span class="math notranslate nohighlight">\(0.2-2.0\,M_\odot\)</span>.  Many T Tauri stars also exhibit strong emission from hydrogen (i.e., the Balmer series) <span class="math notranslate nohighlight">\({\rm Ca\,II}\)</span> (H and K), iron, and lithium.  The forbidden lines <span class="math notranslate nohighlight">\(({\rm O\,I\,and\,S\,II})\)</span> are also present.  The existence of forbidden lines is an indication of extremely low gas densities.</p>
+<p>Information can be gleaned from spectra using the shapes of the lines as a function of wavelength.  In T Tauri stars, the <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> line often exhibits a characteristic shape, where an absorption trough (at the short-wavelength edge of the line) is superimposed on a rather broad emission peak.  This unique line shape is called a <strong>P Cygni</strong> profile, which is named after the first star observed to have emission lines with a blueshifted absorption trough.  The existing of a P Cygni profiles indicates that the star is losing mass significantly.  <em>From Kirchhoff’s law, emission lines are produced by a hot, diffuse gas with little intervening material.</em>  In this case, the emission source is an expanding shell moving perpendicular to our line of sight.  <em>Absorption lines are the result of light passing through a cooler, diffuse gas.</em>  the mass loss rates of T Tauri stars average about <span class="math notranslate nohighlight">\(\dot{M}= 10^{-8}\,M_\odot/{\rm yr}\)</span>.  In some extreme cases, T Tauri stars appear to accrete mass rather than lose it, where the P Cygni profile is inverted (redshifted absorption).  Mass accretion rates appear the similar to mass loss rates.</p>
 </div>
 <div class="section" id="fu-orionis-stars">
 <h4><span class="section-number">8.3.9.3. </span>FU Orionis Stars<a class="headerlink" href="#fu-orionis-stars" title="Permalink to this headline">¶</a></h4>
+<p>A T Tauri star star can go through a significant increase in its mass accretion rate <span class="math notranslate nohighlight">\((\dot{M} = 10^{-4}\,M_\odot/{\rm yr})\)</span> and luminosity (by four orders of magnitudes or more) that lasts for decades.  The firs star to undergo these abrupt changes was FU Orionis, where similar behaving stars are called <strong>FU Orionis stars</strong>.  Instabilities in a circumstellar accretion disk can result in <span class="math notranslate nohighlight">\(\sim 0.01\,M_\odot\)</span> being dumped onto the central star to cause the outburst.  The inner disk can outshine the central star by a factor of <span class="math notranslate nohighlight">\(100-1000\)</span>, while high-velocity winds <span class="math notranslate nohighlight">\((&gt;300\,{\rm km/s})\)</span> occur.</p>
 </div>
 <div class="section" id="herbig-ae-be-stars">
 <h4><span class="section-number">8.3.9.4. </span>Herbig Ae/Be Stars<a class="headerlink" href="#herbig-ae-be-stars" title="Permalink to this headline">¶</a></h4>
+<p>Closely related to the T Tauri stars are <strong>Herbig Ae/Be stars</strong>, named for George Herbig.  These pre-main-sequence A or B stars have strong emission lines (and hence the <em>e</em> designation).  Their masses range from <span class="math notranslate nohighlight">\(2-10\,M_\odot\)</span> and tend to be shrouded in some remaining gas and dust.</p>
 </div>
 <div class="section" id="herbig-haro-objects">
 <h4><span class="section-number">8.3.9.5. </span>Herbig-Haro Objects<a class="headerlink" href="#herbig-haro-objects" title="Permalink to this headline">¶</a></h4>
+<p>Mass loss during pre-main-sequence evolution can also occur from <strong>jets</strong> of gas that are ejected in narrow beams in opposite directions.  <strong>Herbig-Haro objects</strong> (HH objects) were discovered in the early 1950s by George Herbig and Guillermo Haro in the vicinity of the Orion nebula and are associated with the jets produced by young protostars (e.g., T Tauri stars).  Jets can excite gas within the ISM, which results in objects with bright emission line spectra.  Herbig-Haro objects HH 1 and HH 2 were created by material ejected at speeds of several 100 <span class="math notranslate nohighlight">\({\rm km/s}\)</span> from a star shrouded in a coon of dust.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?" width="400">
+<p><strong>Figure 14</strong>: (a) A jet associated with HH 47. The scale at the lower left is 1000 AU. (Courtesy of J. Morse/STScI, and NASA.) (b) The Herbig–Haro objects HH 1 and HH 2 are located just south of the Orion nebula and are moving away from a young protostar hidden inside a dust cloud near the center of the image. [Courtesy of J. Hester (Arizona State University), the WF/PC 2 Investigation Definition
+Team, and NASA.]</p>
 </div>
+<p>Continuous emission is also observed in some protostellar (circumstellar) objects and is from the reflection of light from the parent star (e.g., HH 30).  The surfaces of a circumstellar disk are illuminated by the central star, which is hidden from view behind the dusty disk.  Jets are originating from deep within the accretion disk, possibly from the star.  These accretion disks appear responsible for emission lines, mass loss, jets and even some of the luminosity variations.  Unfortunately, the details are not fully understood, but early models can be developed.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_20.jpg?raw=true?" width="400">
+<p><strong>Figure 15</strong>: An early model of a T Tauri star with an accretion disk. The disk powers and collimates jets that expand into the interstellar medium, producing Herbig–Haro objects. (Carroll and Ostlie (2007); Figure adapted from Snell, Loren, and Plambeck, Ap. J. Lett., 239, L17, 1980.)</p>
+</div></div>
 </div>
 <div class="section" id="young-stars-with-circumstellar-disks">
 <h3><span class="section-number">8.3.10. </span>Young Stars with Circumstellar Disks<a class="headerlink" href="#young-stars-with-circumstellar-disks" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="porplyds">
-<h4><span class="section-number">8.3.10.1. </span>Porplyds<a class="headerlink" href="#porplyds" title="Permalink to this headline">¶</a></h4>
+<p>Observations have revealed that other young stars also possess circumstellar disks of material, where two well-known examples are Vega and <a class="reference external" href="https://en.wikipedia.org/wiki/Beta_Pictoris"><span class="math notranslate nohighlight">\(\beta\)</span> Pictoris</a>.  An IR image of <span class="math notranslate nohighlight">\(\beta\)</span> Pic shows its disk, where observations of <span class="math notranslate nohighlight">\(\beta\)</span> Pic in the UV suggest that clumps of material are falling from the disk into the star at a rate of 2-3 per week.  There are indications of two substellar objects (planets or brown dwarfs) interacting with a <strong>debris disk</strong> to form resonance gaps.</p>
+<div class="section" id="proplyds">
+<h4><span class="section-number">8.3.10.1. </span>Proplyds<a class="headerlink" href="#proplyds" title="Permalink to this headline">¶</a></h4>
+<p>he Orion Nebula was observed in 1993 by HST, where the observations used the emission lines of <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> and the two forbidden lines <span class="math notranslate nohighlight">\(({\rm N\, II\, and\, O\,III})\)</span>.  Analysis of the data revealed 56 (out of 110 stars) brighter than <span class="math notranslate nohighlight">\(V= 21\)</span> are surrounded by disks of circumstellar dust and gas.  <strong>Proplyds</strong>, or protoplanetary disks associated with young stars are less than 1 Myr old.  Based on observations of the ionized material in the proplyds, the disks seem to have masses much greater than <span class="math notranslate nohighlight">\(\sim 4\,M_\oplus\)</span>.</p>
+<div align="center">
+<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?" width="400">
+<p><strong>Figure 16</strong>: Images of the Orion Nebula (M42) obtained by the Hubble Space Telescope. Numerous proplyds are visible in the field of view of the camera. (Courtesy of C. Robert O’Dell/Vanderbilt University, NASA, and ESA.)</p>
+</div>
 </div>
 <div class="section" id="circumstellar-disk-formation">
 <h4><span class="section-number">8.3.10.2. </span>Circumstellar Disk Formation<a class="headerlink" href="#circumstellar-disk-formation" title="Permalink to this headline">¶</a></h4>
+<p>Disk formation is fairly common during the collapse of protostellar clouds due to the spin-up of the cloud as required by the conservation of angular momentum.  As teh radius of the protostar decreases does its moment of inertia.  In the absence of external torques, the protostar’s angular velocity must increase.</p>
+<p>A problem immediately arises when the effect of angular momentum is included in the collapse.  Conservation of angular momentum arguments suggest that all main sequence stars should be rotating very rapidly (at rates close to breakup).  However, this is generally not seen in observations, where the angular momentum must be transferred away from the collapsing star.  One suggestion is that magnetic fields slow the rotation by applying torques (i.e., magnetic braking).  Additionally, star-disk or star-planet interactions are likely to play a role in distributing the angular momentum.</p>
 </div>
 </div>
 <div class="section" id="id2">
 <h3><span class="section-number">8.3.11. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>6. Assuming a mass loss rate of <span class="math notranslate nohighlight">\(10^{-7}\, M_\odot/{\rm yr}\)</span> and a stellar wind velocity of <span class="math notranslate nohighlight">\(80\,{\rm km/s}\)</span> from a T Tauri star,</p>
+<blockquote>
+<div><p><strong>(a)</strong> estimate the mass density of the wind at a distance of 100 AU from the star, and</p>
+<p><strong>(b)</strong> compare your answer in (a) with the density of the giant molecular cloud <span class="math notranslate nohighlight">\((\rho_o=3\times 10^{-17}\,{\rm kg/m^{-3}})\)</span>.</p>
+</div></blockquote>
+</div></blockquote>
 </div>
 </div>
 </div>
