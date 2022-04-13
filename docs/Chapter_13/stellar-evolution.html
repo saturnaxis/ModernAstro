@@ -546,11 +546,95 @@
 </div>
 <div class="section" id="a-derivation-of-the-schonberg-chandrasekhar-limit">
 <h3><span class="section-number">9.1.6. </span>A Derivation of the Schönberg-Chandrasekhar Limit<a class="headerlink" href="#a-derivation-of-the-schonberg-chandrasekhar-limit" title="Permalink to this headline">¶</a></h3>
+<p>To estimate the Schönberg-Chandrasekhar limit, we begin by dividing the equations of hydrostatic equilibrium <span class="math notranslate nohighlight">\(dP/dr\)</span> and mass conservation <span class="math notranslate nohighlight">\(dM_r/dr\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dM_r} = -\frac{GM_r}{4\pi r^4}, \tag{3}\]</div>
+<p>which is called the <em>Lagrangian form</em> of the condition for hydrostatic equilibrium.  The left-hand side of Eqn. 3 can be rewritten in terms of a derivative as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+4\pi r^3 \frac{dP}{dM_r} &amp;= \frac{d}{dM_r}\left(4\pi r^3 P\right) -12\pi r^2 P\frac{dr}{dM_r}\\
+&amp;= \frac{d}{dM_r}\left(4\pi r^3 P\right) - \frac{3 P}{\rho}, 
+\end{align*}\end{split}\]</div>
+<p>which makes use of Eqn. 7 from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-equation-of-mass-conservation">The Equation of Mass Conservation</a>.  Multiplying the <span class="math notranslate nohighlight">\(4\pi r^3\)</span> factor through Eqn. 3 and substituting, we get</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dM_r}\left(4\pi r^3 P\right) - \frac{3 P}{\rho} = - \frac{GM_r}{r} \tag{4}. \]</div>
+<p>Integrating over the isothermal core mass <span class="math notranslate nohighlight">\(M_{ic}\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ \int_0^{M_{ic}} \frac{d}{dM_r}\left(4\pi r^3 P\right)dM_r -  \int_0^{M_{ic}} \frac{3 P}{\rho}dM_r= -  \int_0^{M_{ic}} \frac{GM_r}{r} dM_r. \tag{5}\]</div>
+<p>Each term will be considered separately.  Starting with the first term on the left-hand side, we can integrate directly to get</p>
+<div class="math notranslate nohighlight">
+\[ \int_0^{M_{ic}} \frac{d}{dM_r}\left(4\pi r^3 P\right)dM_r = 4\pi R^3_{ic} P_{ic}, \]</div>
+<p>and add subscripts to denote the conditions at the <em>surface</em> of the isothermal core.  The second term on the left-hand side (Eqn. 5) can be evaluated quickly using the ideal gas law,</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{\rho}{\mu_{ic}m_H}kT_{ic}. \]</div>
+<p>By direct integration, we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+\int_0^{M_{ic}} \frac{3 P}{\rho}dM_r &amp;= \frac{3M_{ic}kT_{ic}}{\mu_{ic}m_H} \\
+&amp;= 3 N_{ic}kT_{ic} \\
+&amp;= 2 K_{ic},
+\end{align*} \end{split}\]</div>
+<p>using substitutions for the number of gas particles in the isothermal core <span class="math notranslate nohighlight">\((N_{ic} \equiv M_{ic}/(\mu_{ic}m_H))\)</span> and the total thermal energy of the core <span class="math notranslate nohighlight">\(K_{ic} = \frac{3}{2}N_{ic}kT_{ic}\)</span>, assuming an ideal monatomic gas.  The right-hand side of Eqn. 5 is simply the gravitational potential energy of the core or</p>
+<div class="math notranslate nohighlight">
+\[ -\int_0^{M_{ic}} \frac{GM_r}{r} dM_r = U_{ic}. \]</div>
+<p>Substituting each term into Eqn. 5, we find</p>
+<div class="math notranslate nohighlight">
+\[ 4\pi R^3_{ic} P_{ic} - 2 K_{ic} = U_{ic}. \tag{6} \]</div>
+<p>If we had integrated to the surface of the star <span class="math notranslate nohighlight">\(R_s\)</span> instead of the radius of the core <span class="math notranslate nohighlight">\(R_{ic}\)</span>, then the first term on the left-hand side of Eqn. 6 would be zero (i.e., <span class="math notranslate nohighlight">\(P\simeq 0\)</span>).  Thus Eqn. 6 is a generalized form of the virial theorem for stellar interiors in hydrostatic equilibrium.  Equation 6 can be solved for the isothermal core pressure in terms either fundamental constants or observable quantities as</p>
+<div class="math notranslate nohighlight">
+\[ P_{ic} = \frac{3}{4\pi R_{ic}^3} \left( \frac{M_{ic}kT_{ic}}{2\mu_{ic} m_H} - \frac{GM_{ic}^2}{5R_{ic}} \right). \tag{7} \]</div>
+<p>The two competing terms in Eqn. 7 are due to the thermal energy and the gravitational effects.</p>
+<ul class="simple">
+<li><p>For specific values of <span class="math notranslate nohighlight">\(T_{ic}\)</span> and <span class="math notranslate nohighlight">\(R_{ic}\)</span>, the thermal energy tends to increase the pressure at the core surface while the gravitational term tends to decrease it, as the core mass increases.</p></li>
+<li><p>For some value of <span class="math notranslate nohighlight">\(M_{ic}\)</span>, there exists an upper limit on how much pressure the isothermal core can exert to support the overlying envelope because P_{ic} is maximized.</p></li>
+</ul>
+<p>To determine the maximum <span class="math notranslate nohighlight">\(P_{ic}\)</span>, we <em>differentiate with respect to <span class="math notranslate nohighlight">\(M_{ic}\)</span> and set the result equal to zero</em>.  After which, the maximum <span class="math notranslate nohighlight">\(P_{ic}\)</span> occurs at</p>
+<div class="math notranslate nohighlight">
+\[ R_{ic} = \frac{2}{5} \frac{GM_{ic}\mu_{ic}m_H}{kT_{ic}} \tag{8} \]</div>
+<p>and the maximum <span class="math notranslate nohighlight">\(P_{ic}\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[ P_{ic,max} = \frac{375}{64 \pi}\frac{1}{G^3M_{ic}^2}\left( \frac{kT_{ic}}{\mu_{ic}m_H}\right)^4.  \tag{9} \]</div>
+<p>Equation 9 shows the maximum cores surface pressure <em>decreases</em> as the mass <em>increases</em>.  There is a critical condition where the mass is too great for the isothermal core to support the overlying layers of the stellar envelope.</p>
+<p>To estimate the critical mass, we need to determine the pressure exerted on the core by the overlying envelope.  We will start with Eqn. 3, this time integrating from the stellar surface down to the core radius.  Assuming that the pressure at the stellar surface is zero,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+P_{ic,env} &amp;= \int_0^{P_{ic,env}} dP \\
+&amp;= -\int_M^{M_{ic}} \frac{GM_r}{4\pi r^4} dM_r \\
+&amp;\simeq -\frac{G}{8\pi \rangle r^4 \langle}\left( M_{ic}^2 - M^2\right), 
+\end{align*} \end{split}\]</div>
+<p>which depends on the total mass <span class="math notranslate nohighlight">\(M\)</span>, and an average value <span class="math notranslate nohighlight">\(\rangle r^4 \langle\)</span> between the radius of the core and surface.  Assuming that the core mass is small compared to the total mass (i.e., $<span class="math notranslate nohighlight">\(M_{ic}\ll M\)</span>) and <span class="math notranslate nohighlight">\(\rangle r^4 \langle \sim R^4/2\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ P_{ic,env} \sim \frac{GM^2}{4\pi R^4}, \tag{10} \]</div>
+<p>for the core surface pressure <em>due to the weight of the envelope</em>.  The quantity <span class="math notranslate nohighlight">\(R^4\)</span> can be written in terms of the stellar mass and isothermal core temperature using the ideal gas law,</p>
+<div class="math notranslate nohighlight">
+\[ T_{ic} = \frac{P_{ic,env} \mu_{env}m_H}{\rho_{ic,env}k}, \tag{11}\]</div>
+<p>using the subscript <span class="math notranslate nohighlight">\(env\)</span> to designate the variables dependence on the envelope.  Through the bulk density,</p>
+<div class="math notranslate nohighlight">
+\[ \rho_{ic,env} \sim \frac{3M}{4\pi R^3},\]</div>
+<p>Equation 10, and solving for <span class="math notranslate nohighlight">\(R\)</span> in Eqn. 11 gives,</p>
+<div class="math notranslate nohighlight">
+\[ R\sim \frac{GM\mu_{env}m_H}{3kT_{ic}}. \]</div>
+<p>Substituting the estimate of the envelope radius <span class="math notranslate nohighlight">\(R\)</span> back into Eqn. 10, we find</p>
+<div class="math notranslate nohighlight">
+\[ P_{ic,env} \sim \frac{81}{4\pi}\frac{1}{G^3M^2} \left( \frac{kT_{ic}}{\mu_{ic}m_H} \right)^4, \tag{12} \]</div>
+<p>which is similar to Eqn. 9.  Finally, to estimate the Schönberg-Chandrasekhar limit, we set Eqn. 12 equal to Eqn 9.  This immediately simplifies to give</p>
+<div class="math notranslate nohighlight">
+\[ \frac{M_{ic}}{M} \sim 0.54 \left(\frac{\mu_{env}}{\mu_{ic}} \right)^2, \]</div>
+<p>where the our coefficient is only slightly larger than the value determined by Schönberg-Chandrasekhar (Eqn. 1).</p>
 </div>
 <div class="section" id="problems">
 <h3><span class="section-number">9.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
 <blockquote>
-<div><p>1.</p>
+<div><p>1. <strong>Construct a table</strong> that expresses the evolutionary times between points 2 and 3, points 3 and 4, and so on,
+as a percentage of the lifetime of the star on the main sequence between points 1 and 2. Use the Table associated with Fig. 1 for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star.</p>
+<blockquote>
+<div><p><strong>(a)</strong> How long does it take a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star to cross the points 3 and 5 relative to its main-sequence lifetime?</p>
+<p><strong>(b)</strong> How long does a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star spend on between points 7 and 8 relative to its main-sequence lifetime?</p>
+<p><strong>(c)</strong> How long does a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star spend on between points 8 and 9 relative to its main-sequence lifetime?</p>
+</div></blockquote>
+<p>2. Show that the radius of the isothermal core for which the gas pressure is a maximum is given by Equation 8. Recall that this solution assumes that the
+gas in the core is ideal and monatomic.</p>
+<p>3. The age of the universe is 13.7 Gyr. Compare this value to the main-sequence lifetime of a 0.8 <span class="math notranslate nohighlight">\(M_\odot\)</span> star. Why isn’t it useful to compute the detailed post-main-sequence evolution of stars with masses much lower than the mass of the Sun?</p>
 </div></blockquote>
 </div>
 </div>
@@ -682,6 +766,9 @@
 </div></div>
 <div class="section" id="id1">
 <h3><span class="section-number">9.2.13. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>4. Estimate the Kelvin–Helmholtz timescale for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star on the subgiant branch and compare your result with the amount of time the star spends between points 4 and 5 in Figure 1.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="stellar-clusters">
@@ -751,6 +838,14 @@
 </div>
 <div class="section" id="id2">
 <h3><span class="section-number">9.3.8. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>5. The Helix nebula is a planetary nebula with an angular diameter of 16’ that is located approximately 213 pc from Earth.</p>
+<blockquote>
+<div><p><strong>(a)</strong> Calculate the diameter of the nebula.</p>
+<p><strong>(b)</strong> Assuming that the nebula is expanding away from the central star at a constant velocity of <span class="math notranslate nohighlight">\(20\,{\rm km/s}\)</span>, estimate its age.</p>
+</div></blockquote>
+<p>6. Using the technique of main-sequence fitting, estimate the distance to M3; refer to Figs. 16 and 18.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="additional-resources">
