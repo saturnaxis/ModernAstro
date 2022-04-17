@@ -251,6 +251,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_15/fate-of-massive-stars.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_15/fate-of-massive-stars.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -304,6 +326,14 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classes-of-supernovae">
      11.2.1. Classes of Supernovae
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     11.2.2.
+     <strong>
+      Problems
+     </strong>
     </a>
    </li>
   </ul>
@@ -450,10 +480,10 @@ M &gt; 85\ M_\odot &amp;: {\rm O} \rightarrow {\rm Of} \rightarrow {\rm LBV} \ri
 </div>
 <div class="section" id="the-classification-of-supernovae">
 <h2><span class="section-number">11.2. </span>The Classification of Supernovae<a class="headerlink" href="#the-classification-of-supernovae" title="Permalink to this headline">¶</a></h2>
-<p>In 1006, an extremely bright star suddenly appeared in the constellation <a class="reference external" href="https://en.wikipedia.org/wiki/Lupus_(constellation)">Lupus</a>, which reached an estimated visual magnitude of <span class="math notranslate nohighlight">\(m_V = -9\)</span> and it was reportedly bright enough to read by at night (compared to a full Moon, <span class="math notranslate nohighlight">\(m=-12.5\)</span>, which is <span class="math notranslate nohighlight">\(\sim 25\times\)</span> brighter).  The event was recorded by astrologers across Europe, China, Japan, Egypt, and Iraq.  Based on their writings, the bright star appeared bout April 30, 1006 and faded from view roughly one year later.  Today, this event is called <strong>Supernova 1006</strong> (SN 1006).</p>
+<p>In 1006, an extremely bright star suddenly appeared in the constellation <a class="reference external" href="https://en.wikipedia.org/wiki/Lupus_(constellation)">Lupus</a>, which reached an estimated visual magnitude of <span class="math notranslate nohighlight">\(m_V = -9\)</span> and it was reportedly bright enough to read by at night (compared to a full Moon, <span class="math notranslate nohighlight">\(m_V = -12.5\)</span>, which is <span class="math notranslate nohighlight">\(\sim 25\times\)</span> brighter).  The event was recorded by astrologers across Europe, China, Japan, Egypt, and Iraq.  Based on their writings, the bright star appeared bout April 30, 1006 and faded from view roughly one year later.  Today, this event is called <strong>Supernova 1006</strong> (SN 1006).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>A very small number of supernovae have been <a class="reference external" href="https://en.wikipedia.org/wiki/History_of_supernova_observation">recorded from historical writings</a> more than 2000 years ago.  When a supernova date or year is given, it is most likely referring to A.D. or CE for the year.</p>
+<p>A very small number of supernovae have been <a class="reference external" href="https://en.wikipedia.org/wiki/History_of_supernova_observation">recorded from historical writings</a> more than 2000 years ago.  When a supernova date or year is given, it is most likely referring to A.D. or CE.</p>
 </div>
 <p>Other similar events have been recorded through human history, although they are rare.  Only 48 years after the 1006 event, a “guest star” appeared in the constellation Taurus.  Yang Wei-T’e, a court astrologer during China’s Sung dynasty, recorded the event and noted that <em>after more than a year it gradually became invisible.</em>  The star was also noted by the Japanese, Koreans, and Arabs (appearing in an Arabic medical textbook).  The Europeans may have witnessed the event as well, but the evidence is unclear.  Like the previous event, the amazing star was visible during daylight (like the Moon is at times).  Modern astronomers have identified a rapidly expanding cloud, which is the reported location of the ancient “guest star” and is known as the <strong>Crab supernova remnant</strong>.</p>
 <p>Another star suddenly appeared in the heavens about 500 years later that was witnessed by Tycho Brahe in 1572.  The strange occurrence was clearly in contrast to the Western belief that the heavens were unchanging.  Johannes Kepler also witnessed a supernova explosion in 1604, where these two events are now known as <strong>Tycho’s supernova</strong> and <strong>Kepler’s supernova</strong>.</p>
@@ -468,17 +498,142 @@ M &gt; 85\ M_\odot &amp;: {\rm O} \rightarrow {\rm Of} \rightarrow {\rm LBV} \ri
 <li><p><strong>Type Ib</strong> or <strong>Ic</strong> are classified by the respective presence or absence of strong helium lines.</p></li>
 </ul>
 </li>
-<li><p><strong>Type II</strong> supernovae contain strong hydrogen lines, in contrast to the Type I supernovae.</p></li>
+<li><p><strong>Type II</strong> supernovae contain strong hydrogen lines, in contrast to the Type I supernovae.</p>
+<ul>
+<li><p><strong>Type II-L</strong> show a <em>linear</em> decrease in the apparent magnitude <span class="math notranslate nohighlight">\(m_B\)</span> after the maximum.</p></li>
+<li><p><strong>Type II-P</strong> show a <em>plateau</em> between 30-80 days in the apparent magnitude <span class="math notranslate nohighlight">\(m_B\)</span> after the maximum.  Type II-P supernovae occur approximately 10 times more often than Type II-L supernovae.</p></li>
+</ul>
+</li>
 </ul>
 <p>The lack of hydrogen lines in Type I supernovae indicates that the progenitor stars were stripped of their hydrogen envelopes.  The differences in the spectral signatures between each Type I (a, b, or c) indicate that different physical mechanisms are at work.  Type Ia are found in all types of galaxies, including ellipticals that show very little evidence of recent star formation (e.g., <span class="math notranslate nohighlight">\({\rm H\ II}\)</span> regions).  Short-lived, massive stars are probably involved with Types Ib and Ic (to expose or get rid of the excess helium), but not with Type Ia.</p>
 <p>The typical peak brightness of a Type Ia is <span class="math notranslate nohighlight">\(M_B = -18.4\)</span>, while the light curves of Types Ib and Ic are fainter by 1.5-2 magnitudes (in blue light).  All Type I supernovae show similar rates of decline of their brightness after the maximum with a decline of <span class="math notranslate nohighlight">\(0.065 \pm 0.007\)</span> magnitude per day at 20 days.  After about 50 days the dimming slows and becomes constant, where a Type Ia declines 50% faster <span class="math notranslate nohighlight">\((0.015\ {\rm mag/day})\)</span> than the other Type Is <span class="math notranslate nohighlight">\((0.010\ {\rm mag/day})\)</span>.  It is believed that SN 1006, Tycho (SN 1572), and Kepler (Sn 1604) were all Type I.</p>
 <p>Observationally, Type II supernovae are characterized by a rapid rise in luminosity and reach a maximum brightness that is typically 1.5 magnitudes dimmer than a Type Ia.  The peak light output is followed by a steady decrease, which drops 6-8 magnitudes in a year.  Their spectra also exhibit lines associate with hydrogen and heavier elements.  P Cygni profiles are common in many lines, which indicates rapid expansion.  The Crab supernova (SN 1054) and SN 1987A were Type II.</p>
+<p>Nature loves to confound our clean classification schemes, where SN 1993J (in M81) initially displayed strong hydrogen emission lines and follows the Type II scheme.  Within a month the hydrogen lines were replaced by helium and its appearance changed to a Type Ib.  This suggests that Type Ib and Type II supernovae are related in some way.</p>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">11.2.2. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="core-collapse-supernovae">
 <h2><span class="section-number">11.3. </span>Core-Collapse Supernovae<a class="headerlink" href="#core-collapse-supernovae" title="Permalink to this headline">¶</a></h2>
+<p>The sheer amount of energy released in a supernova event is staggering, where a typical Type II releases <span class="math notranslate nohighlight">\(10^{46}\ {\rm J}\)</span>, with about 1% of that appearing as kinetic energy of the ejected material and less than 0.01% being released as the photons that produce the spectacular visual display.  The remainder of the energy is radiated in the form of neutrinos.</p>
+<ul class="simple">
+<li><p><strong>How much iron could ultimately be produced through a typical Type II supernova explosion?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>A typical Type II supernova releases <span class="math notranslate nohighlight">\(10^{46}\ {\rm J}\)</span>.  Converting this energy into a rest mass through <span class="math notranslate nohighlight">\(E= mc^2\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[ m = \frac{E}{c^2} = 10^{46}\ \frac{\rm J}{c^2} = 1 \times 10^{29}\ {\rm kg} = 0.06 M_\odot. \]</div>
+<p>The binding energy of an iron-56 nucleus <span class="math notranslate nohighlight">\(({\rm ^{56}_{26} Fe})\)</span> is 492.26 MeV and the mass of the nucleus is <span class="math notranslate nohighlight">\(55.934939\ {\rm u}\)</span>.  If all the energy of a Type II went into the formation of iron nuclei, it would be necessary to form</p>
+<div class="math notranslate nohighlight">
+\[ N = \left( \frac{10^{46}\ {\rm J}}{492.26\ {\rm MeV/nucleus}} \right) \left( \frac{1\ {\rm MeV}}{1.6 \times 10^{-13}\ {\rm J}} \right) = 1.3 \times 10^{56}\ {\rm nuclei}, \]</div>
+<p>which corresponds to a mass of iron of</p>
+<div class="math notranslate nohighlight">
+\[ m = \left(1.3 \times 10^{56}\ {\rm nuclei}\right)\left(55.934939\ {\rm u} \right) \left(1.66 \times 10^{-27}\ {\rm kg/u} \right) = 1.2 \times 10^{31}\ {\rm kg} = 5.9\ M_\odot. \]</div>
+</div></blockquote>
+<p>Actually, <em>iron is not formed</em> as a result of releasing the energy involved in a supernova explosion, where the energy source is not nuclear.  However, iron is critically involved in the process.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span><span class="p">,</span> <span class="n">e</span>
+
+<span class="n">M_Sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#solar mass in kg</span>
+<span class="n">MeV</span> <span class="o">=</span> <span class="mf">1e6</span><span class="o">*</span><span class="n">e</span> <span class="c1">#MeV in Joules</span>
+
+<span class="n">Type_II_Energy</span> <span class="o">=</span> <span class="mf">1e46</span> <span class="c1">#energy released in a Type II in J</span>
+<span class="n">rest_mass</span> <span class="o">=</span> <span class="n">Type_II_Energy</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The rest mass of a Type II is </span><span class="si">%1.0e</span><span class="s2"> or </span><span class="si">%1.2f</span><span class="s2"> M_Sun.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">rest_mass</span><span class="p">,</span><span class="n">rest_mass</span><span class="o">/</span><span class="n">M_Sun</span><span class="p">))</span>
+
+<span class="n">N_Fe</span> <span class="o">=</span> <span class="n">Type_II_Energy</span><span class="o">/</span><span class="mf">492.26</span><span class="o">/</span><span class="n">MeV</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of iron nuclei produced from 10^46 J of energy is </span><span class="si">%1.1e</span><span class="s2"> nuclei&quot;</span> <span class="o">%</span> <span class="n">N_Fe</span><span class="p">)</span>
+
+<span class="n">m_Fe</span> <span class="o">=</span> <span class="n">N_Fe</span><span class="o">*</span><span class="mf">55.934939</span><span class="o">*</span><span class="mf">1.66e-27</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The total mass of iron produced from 10^46 J of energy is </span><span class="si">%1.1e</span><span class="s2"> kg or </span><span class="si">%1.1f</span><span class="s2"> M_Sun.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m_Fe</span><span class="p">,</span><span class="n">m_Fe</span><span class="o">/</span><span class="n">M_Sun</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The rest mass of a Type II is 1e+29 or 0.06 M_Sun.
+The number of iron nuclei produced from 10^46 J of energy is 1.3e+56 nuclei
+The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Sun.
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="core-collapse-supernova-mechanism">
 <h3><span class="section-number">11.3.1. </span>Core-Collapse Supernova Mechanism<a class="headerlink" href="#core-collapse-supernova-mechanism" title="Permalink to this headline">¶</a></h3>
+<p>The post-main-sequence evolution of stars more massive than about <span class="math notranslate nohighlight">\(8\ M_\odot\)</span> is different.  Hydrogen is converted into helium on the main sequence and is followed by helium burning that leads to a carbon-oxygen core.  The very high temperature in the core of a massive star means that carbon and oxygen can burn as well.  The end result is that rather than the star ending its life through the formation of a planetary nebula, a catastrophic supernova explosion occurs instead.</p>
+<p>The details of supernovae are continually being worked out, but the story of how they are produced is becoming clearer.  The three types (Type Ib, Ic, and II) are closely related and involve the collapse of a massive, evolved stellar core.  Collectively, these supernovae are known as <strong>core-collapse supernovae</strong>.</p>
+<p>As the helium-burning shell continues to add ash to the carbon-oxygen core (and as the core contracts), it eventually ignites in carbon burning and generates a variety of by-products (e.g., <span class="math notranslate nohighlight">\({\rm ^{16}_8 O}\)</span>, <span class="math notranslate nohighlight">\({\rm ^{23}_{11} Na}\)</span>, <span class="math notranslate nohighlight">\({\rm ^{23}_{12} Mg}\)</span>, and <span class="math notranslate nohighlight">\({\rm ^{24}_{12} Mg}\)</span>).  This leads to a succession of nuclear reaction sequences that depend sensitively on the stellar mass.</p>
+<p>Assuming that reach reaction sequence develops an equilibrium, an “onion-like” shell structure develops in the stellar interior.  Following carbon burning, the oxygen in the <span class="math notranslate nohighlight">\({\rm Ne-O}\)</span> core will ignite, which produces a new core composition dominated by silicon-28.  Finally at temperatures near <span class="math notranslate nohighlight">\(3 \times 10^9\ {\rm K}\)</span>, silicon burning can commence through a series of reactions, such as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+{\rm ^{28}_{14} Si} + {\rm ^4_2 He} &amp;\rightleftharpoons {\rm ^{32}_{16} S} + \gamma \\
+{\rm ^{32}_{16} S} + {\rm ^4_2 He} &amp;\rightleftharpoons {\rm ^{36}_{18} Ar} + \gamma \\
+&amp; \vdots \\
+{\rm ^{52}_{24} Cr} + {\rm ^4_2 He} &amp;\rightleftharpoons {\rm ^{56}_{28} Ni} + \gamma.
+\end{align*} \end{split}\]</div>
+<p>Silicon burning produces a host of nuclei centered near the iron-56 peak of the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-binding-energy-per-nucleon">binding energy per nucleon curve</a>.  The most abundant end products are probably iron-54, iron-56, and nickel-56.  Any further reactions that produce more massive nuclei (than iron-56) are endothermic and cannot contribute to the luminosity of the star.  Grouping all the products together, silicon burning produces an <em>iron core</em>.</p>
+<p>Carbon, oxygen, and silicon burning produce nuclei with masses progressively nearer the <em>iron peak</em> of the binding energy curve, which means that less and less energy is generated per unit mass of fuel.  The timescale for each succeeding reaction sequence becomes <em>shorter</em>.  For a <span class="math notranslate nohighlight">\(20\ M_\odot\)</span> star</p>
+<ul class="simple">
+<li><p>the main-sequence lifetime (core hydrogen burning) is roughly <span class="math notranslate nohighlight">\(10^7\)</span> years , where</p></li>
+<li><p>helium burning requires <span class="math notranslate nohighlight">\(10^6\ {\rm yr}\)</span>,</p></li>
+<li><p>carbon burning lasts <span class="math notranslate nohighlight">\(300\ {\rm yr}\)</span>,</p></li>
+<li><p>oxygen burning takes around <span class="math notranslate nohighlight">\(200\ {\rm days}\)</span>, and</p></li>
+<li><p>silicon burning is complete in only <span class="math notranslate nohighlight">\(2\ {\rm days}\)</span>.</p></li>
+</ul>
+<p>At the very high temperature now present in the core, the photons possess enough energy to destroy heavy nuclei, which is known as <strong>photodisintegration</strong> (note the reverse arrows in the silicon burning sequence).  Particularly important are the reactions that photodisintegrate iron-56 and helium-4:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+{\rm ^{56}_{26} Fe} + \gamma &amp;\rightarrow 13\ {\rm ^4_2 He} + 4n \\
+{\rm ^4_2 He} + \gamma &amp;\rightarrow 2 p^+ + 4n.
+\end{align*} \end{split}\]</div>
+<p>When the mass of the contracting iron core has become large enough (and the temperature sufficiently high), photodisintegration can undo what the star has been trying to do for its entire life in a very short period of time, namely produce elements more massive than hydrogen and helium.  This process of stripping iron down to individual protons and neutrons is highly endothermic (i.e., thermal energy is removed from the gas that otherwise would be supporting the core of the star).  The core masses for which this process occurs vary from <span class="math notranslate nohighlight">\(1.3\ M_\odot\)</span> for a <span class="math notranslate nohighlight">\(10\ M_\odot\)</span> ZAMS star to <span class="math notranslate nohighlight">\(2.5\ M_\odot\)</span> for a <span class="math notranslate nohighlight">\(50\ M_\odot\)</span> star.</p>
+<p>Under the extreme conditions (e.g., <span class="math notranslate nohighlight">\(T_c \sim 8\times 10^9\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(\rho_c \sim 10^{13}\ {\rm kg/m^3}\)</span> for a <span class="math notranslate nohighlight">\(15\ M_\odot\)</span> star), the free electrons that supported the star through degeneracy pressure are captured by heavy nuclei and the protons produced by photodisintegration; for instance,</p>
+<div class="math notranslate nohighlight">
+\[ p^+ + e^- \rightarrow n + \nu_e. \]</div>
+<p>The amount of energy that escapes the star in the form of neutrinos becomes enormous.  The photon luminosity of a <span class="math notranslate nohighlight">\(20\ M_\odot\)</span> stellar model is <span class="math notranslate nohighlight">\(4.4 \times 10^{31}\ {\rm W}\)</span>, while the neutrino luminosity is <span class="math notranslate nohighlight">\(3.1 \times 10^{38}\ {\rm W}\)</span>.</p>
+<p>Through the photodisintegration of iron (combined with the electron capture by protons and heavy nuclei) most of the core’s support is suddenly gone (i.e., no electron degeneracy pressure) and the core begins to collapse extremely rapidly.  The collapse is <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_12/interstellar-medium-and-star-formation.html#homologous-collapse">homologous</a> in the inner portion of the core and collapse velocity scales with the distance away from the stellar center.</p>
+<p>At the radius where the velocity exceeds the local sound speed, the collapse can no longer remain homologous and the inner core decouples from the now supersonic outer core, which is left behind and nearly in free-fall.  During the collapse, speeds in the outer core can reach almost <span class="math notranslate nohighlight">\(70,000\ {\rm km/s}\)</span> and within about on second an Earth-sized volume can be compressed down to a radius of <span class="math notranslate nohighlight">\(50\ {\rm km}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>If an Earth-sized mass collapses to a radius of <span class="math notranslate nohighlight">\(50\ {\rm km}\)</span>, a tremendous amount of gravitational potential energy would be released. Can this energy be responsible for the energy of a core-collapse supernova?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>From the virial theorem, the potential energy of a spherically symmetric star of constant density is
+$<span class="math notranslate nohighlight">\( U = - \frac{3}{5} \frac{GM^2}{R}. \)</span>$</p>
+<p>Equating the potential energy U released during the collapse to the energy from a Type II supernova, <span class="math notranslate nohighlight">\(E_{II} = 10^{46}\ {\rm J}\)</span>, and given that the final radius <span class="math notranslate nohighlight">\(R_f\)</span> is 50 km, the amount of mass required to produce the supernova would be</p>
+<div class="math notranslate nohighlight">
+\[ M \simeq \sqrt{\frac{5}{3}\frac{E_{II}R_f}{G}} \simeq 4 \times 10^{30}\ {\rm kg} \simeq 1.8\ M_\odot. \]</div>
+<p>This value is within the range <span class="math notranslate nohighlight">\(1.3-2.5\ M_\odot\)</span> given earlier.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M_Sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#Solar mass in kg</span>
+<span class="n">E_II</span> <span class="o">=</span> <span class="mf">1e46</span> <span class="c1">#energy released from a Type II supernova in J</span>
+<span class="n">R_f</span> <span class="o">=</span> <span class="mf">50e3</span> <span class="c1">#final radius in km--&gt;m</span>
+
+<span class="n">M_req</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">E_II</span><span class="o">*</span><span class="n">R_f</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">G</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The amount of mass required is </span><span class="si">%1.0e</span><span class="s2"> kg or </span><span class="si">%1.1f</span><span class="s2"> M_Sun.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">M_req</span><span class="p">,</span><span class="n">M_req</span><span class="o">/</span><span class="n">M_Sun</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The amount of mass required is 4e+30 kg or 1.8 M_E.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mechanical information will propagate through the star only at the sound speed and the core collapse proceeds so quickly, which means there is not enough time for the outer layers to react about what has happened inside.  The outer layers (including the oxygen, carbon, and helium shells) and outer envelope are left in the precarious position of begin almost suspended above the catastrophically collapsing core.</p>
+<p>The homologous collapse of the inner core continues until the density reaches about <span class="math notranslate nohighlight">\(8\times 10^{17}\ {\rm kg/m^3}\)</span> (i.e., roughly $3\times# the density of an atomic nucleus).  Then, the nuclear material in the inner core stiffens because the strong force (usually attractive) suddenly becomes repulsive.  <em>This is a consequence of the Pauli exclusion principle applied to neutrons.</em>  The result is that the inner core rebounds, which sends pressure waves outward into the infalling material from the outer core.  When the pressure waves reach the sound speed, they build into a shock wave that begins to move outward.</p>
+<p>The shock wave encounters the infalling outer iron core and the high temperatures rob the shock of much of its energy through photodisintegration.  For every <span class="math notranslate nohighlight">\(0.1\ M_\odot\)</span> of iron that is photodisintegrated (i.e., broken into protons and neutrons), the shock loses <span class="math notranslate nohighlight">\(1.7 \times 10^{44}\ {\rm J}\)</span>.</p>
+<p>Computer simulations indicate that the shock stalls due to this energy loss and becomes nearly stationary, with infalling material accreting onto it (i.e., an <strong>accretion shock</strong>, somewhat akin to protostellar collapse).  Below the shock a <strong>neutrinosphere</strong> develops from the photodisintegration and electron capture.  The overlying material is now so dense that even neutrinos cannot easily penetrate it, where some of the neutrino energy <span class="math notranslate nohighlight">\((\sim 5\%)\)</span> will be deposited in the matter just behind the shock.  This additional energy heats the material and allows the shock to resume its march to the surface.  <em>If this does not happen quickly enough, the initially outflowing material will fall back onto the core and the explosion does not occur.</em></p>
+<p>The success of the core-collapse supernova models seems to hinge very sensitively on the details of 3D simulations, which allow for hot, rising plumes of gas to mix with colder, infalling gas.  Additional challenges arise in the details of convection, the need to treat neutrino physics properly, and the very high resolution required for the calculations.  It may also be necessary to include a proper treatment of sound waves, differential rotation, and magnetic fields to describe all of the observed details of a supernova explosion.</p>
+<p>Assuming the our scenario is essentially correct and that the shock can continue it march to the surface, the shock will drive the envelope and the remainder of the nuclear-processed matter in front of it.  The total kinetic energy in the expanding material is <span class="math notranslate nohighlight">\(\sim 10^{44}\ {\rm J}\)</span>, or roughly 1% of the energy liberated in neutrinos.  When the material becomes optically thin at a radius of about 100 AU, or roughly <span class="math notranslate nohighlight">\(10^{13}\ {\rm m}\)</span>, a tremendous optical display results in the release of <span class="math notranslate nohighlight">\(\sim 10^{42}\ {\rm J}\)</span> of photon energy with a peak luminosity of nearly <span class="math notranslate nohighlight">\(10^9\ L_\odot\)</span>, or <span class="math notranslate nohighlight">\(10^{36}\ {\rm W}\)</span>, which is capable of competing with the brightness of an entire galaxy.</p>
+<p>The catastrophic collapse of an iron core, the generation of a shock wave, and the ensuing ejection of the star’s envelope are believed to be the general mechanism that creates a core-collapse supernova.  The details that result in a Type II, Type Ib, or Type Ic supernova have to do with the composition and mass of the envelope at the time of the core collapse and the amount of radioactive material synthesized in the ejecta.</p>
+<p>Type II supernovae are more common and are usually red supergiant (RSG) stars in the extreme upper-right-hand corner of the H-R diagram at the time they undergo the catastrophic core collapse.  Type Ib and Type Ic have lost various amounts of their envelopes prior to detonation and could be the products of exploded Wolf-Rayet stars.  Type Ib and Type Ic may correspond to the detonation of WN and WC Wolf-Rayets.</p>
 </div>
 <div class="section" id="stellar-remnants-of-a-core-collapse-supernova">
 <h3><span class="section-number">11.3.2. </span>Stellar Remnants of a Core-Collapse Supernova<a class="headerlink" href="#stellar-remnants-of-a-core-collapse-supernova" title="Permalink to this headline">¶</a></h3>
