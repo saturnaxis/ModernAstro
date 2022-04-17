@@ -637,9 +637,38 @@ $<span class="math notranslate nohighlight">\( U = - \frac{3}{5} \frac{GM^2}{R}.
 </div>
 <div class="section" id="stellar-remnants-of-a-core-collapse-supernova">
 <h3><span class="section-number">11.3.2. </span>Stellar Remnants of a Core-Collapse Supernova<a class="headerlink" href="#stellar-remnants-of-a-core-collapse-supernova" title="Permalink to this headline">¶</a></h3>
+<p>If the initial stellar mass (on the main sequence) was not too large (<span class="math notranslate nohighlight">\(M_{\rm ZAMS}&lt; 25\ M_\odot\)</span>), the remnant of a core-collapse supernova will stabilize and become a <strong>neutron star</strong>, or essentially a gigantic atomic nucleus, that is supported by degenerate neutron pressure.  If the initial stellar mass is much larger, then the pressure of neutron degeneracy cannot support the remnant against the pull of gravity and the final collapse will produce a <strong>black hole</strong>, which is an object whose mass has collapsed to a <em>singularity</em> of infinite density.</p>
+<p>The creation of these exotic objects is accompanied by a tremendous production of neutrinos, where the majority escape into space with a total energy of approximately <span class="math notranslate nohighlight">\(3\times 10^{46}\ {\rm J}\)</span> (i.e., the binding energy of a neutron star).  This represents roughly <span class="math notranslate nohighlight">\(100\times\)</span> more energy than the Sun produces over its entire main-sequence lifetime.</p>
 </div>
 <div class="section" id="the-light-curves-and-the-radioactive-decay-of-the-ejecta">
 <h3><span class="section-number">11.3.3. </span>The Light Curves and the Radioactive Decay of the Ejecta<a class="headerlink" href="#the-light-curves-and-the-radioactive-decay-of-the-ejecta" title="Permalink to this headline">¶</a></h3>
+<p>A Type II-P supernova is the most common typ of core-collapse supernova.  The source of the plateau in its light curves is due to the energy deposited by the shock into the hydrogen-rich envelope.  The shock ionizes the gas, where it enters a stage of prolonged recombination and releases the energy at a nearly constant temperature of about <span class="math notranslate nohighlight">\(5000\ {\rm K}\)</span>.</p>
+<p>The plateau may also be supported by the energy deposited in the envelope by the <strong>radioactive decay</strong> of nickel-56 that was produced by the shock front during its march through the star; the half-live <span class="math notranslate nohighlight">\(\tau_{1/2}\)</span> of nickel-56 is 6.1 days.  The explosive nucleosynthesis of the supernova shock should have produced a significant amounts of other radioactive isotopes as well, such as cobalt-57 (<span class="math notranslate nohighlight">\(\tau_{1/2} = 271\ {\rm days}\)</span>), sodium-22 (<span class="math notranslate nohighlight">\(\tau_{1/2} = 2.6\ {\rm yr}\)</span>), and titanium-44 (<span class="math notranslate nohighlight">\(\tau_{1/2} \simeq 47\ {\rm yr}\)</span>).  Each of the isotopes may contribute to the overall light curve, causing the slope of the curve to change.</p>
+<p>The nickel-56 decays into cobalt-56 through the weak interaction of <em>beta-decay</em></p>
+<div class="math notranslate nohighlight">
+\[ {\rm ^{56}_{28}Ni} \rightarrow {\rm ^{56}_{27}Co} + e^+ + \nu_e + \gamma. \]</div>
+<p>The energy released by the decay is deposited into the optically thick expanding shell, which is then radiated away from the supernova remnant’s photosphere.  This “props up” the light curve for a time, extending the observed plateau.  Eventually the expanding gas cloud will become optically thin and expose the central product of the explosion (i.e., the neutron star or black hole).</p>
+<p>The product of the nickel-56 decay, cobalt-56, is itself radioactive with a longer half-life of 77.7 days</p>
+<div class="math notranslate nohighlight">
+\[ {\rm ^{56}_{27}Co} \rightarrow {\rm ^{56}_{26}Fe} + e^+ + \nu_e + \gamma. \]</div>
+<p>As the luminosity of the supernova diminishes over time, it should be possible to detect the contribution to the light from cobalt-56.  Type II-L supernovae had progenitor stars with significantly reduced hydrogen envelopes, which implies that the signature of radioactive decay becomes evident almost immediately after the supernova explosion.</p>
+<p>Radioactive decay is a statistical process, where the rate of decay must be proportional to the number of atoms remaining in the sample, or</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dN}{dt} = -\lambda N, \tag{1} \]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the decay constant.  Through separation of variables, Eqn. 1 can be integrated to give</p>
+<div class="math notranslate nohighlight">
+\[ N(t) = N_o e^{-\lambda t}, \tag{2} \]</div>
+<p>which depends on the original number of radioactive atoms <span class="math notranslate nohighlight">\(N_o\)</span> and the half-life <span class="math notranslate nohighlight">\(\tau_{1/2}\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = \frac{\ln\ 2}{\tau_{1/2}}. \]</div>
+<p>The deposition rate of the decay energy in to the supernova remnant must be proportional to <span class="math notranslate nohighlight">\(dN/dt\)</span>, the slope of the bolometric light curve is given by</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d\ \log_{10}\ L}{dt} = -0.434 \lambda, \tag{3} \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dM_{\rm bol}}{dt} = 1.086 \lambda. \tag{4} \]</div>
+<p>Recall the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_12/interstellar-medium-and-star-formation.html#interstellar-extinction">extinction magnitude for the ISM</a>.  By measuring the slope of the light curve, we can determine <span class="math notranslate nohighlight">\(\lambda\)</span> and verify the presence of large quantities of a specific radioactive isotope, like cobalt-56.</p>
+<p>The most carefully studied supernova to date has been SN 1987A.  As soon as it was discovered, astronomers realized that SN 1987A was unusual when compared with more distant Type II supernovae observations.  It had a rather slow rise to the maximum light (taking 80 days), which peaked only at an absolute bolometric magnitude of <span class="math notranslate nohighlight">\(-15.5\)</span>, whereas a typical Type II peaks at <span class="math notranslate nohighlight">\(M_{\rm bol} = -18\)</span>.</p>
 </div>
 <div class="section" id="the-subluminous-nature-of-sn-1987a">
 <h3><span class="section-number">11.3.4. </span>The Subluminous Nature of SN 1987A<a class="headerlink" href="#the-subluminous-nature-of-sn-1987a" title="Permalink to this headline">¶</a></h3>
