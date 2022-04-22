@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -247,6 +249,28 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_16/degenerate-remnants-of-stars.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_16/degenerate-remnants-of-stars.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -500,9 +524,61 @@
 <h1><span class="section-number">12. </span>The Degenerate Remnants of Stars<a class="headerlink" href="#the-degenerate-remnants-of-stars" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="the-discovery-of-sirius-b">
 <h2><span class="section-number">12.1. </span>The Discovery of Sirius B<a class="headerlink" href="#the-discovery-of-sirius-b" title="Permalink to this headline">¶</a></h2>
+<p>In 1838, <a class="reference external" href="https://en.wikipedia.org/wiki/Friedrich_Bessel">Friedrich Wilhelm Bessel</a> used the technique of stellar parallax to find the distance to the star 61 Cygni.  The next candidate Bessel tried was <a class="reference external" href="https://en.wikipedia.org/wiki/Sirius">Sirus</a>, the brightest star in the sky.  It’s parallax angle is <span class="math notranslate nohighlight">\(p = 0.379^{\prime\prime}\)</span>, which corresponds to a distance of only 2.64 pc, or 8.61 ly. Sirius’ brilliance is due (in part) to its proximy to Earth.  Bessel tracked Sirius’ path across the sky and found that it deviated slightly from a straight line.  Using 10 years of precise observation, Bessel concluded (in 1844) that Sirius was actually a binary star system.  He deduced that the binary orbital period was 50 years, where the modern value is <span class="math notranslate nohighlight">\(50.1284 \pm 0.0043\)</span> years (<a class="reference external" href="https://iopscience.iop.org/article/10.3847/1538-4357/aa6af8">Bond et al 2017</a>) and the position of the secondary star.</p>
+<p>Bessel’s telecopses were incapable of finding the “Pup” (i.e., the unseen companion of the luminous “Dog Star”) due to the glare of Sirius.  After Bessel’s death in 1846, the search for the Pup waned.  In 1862, <a class="reference external" href="https://en.wikipedia.org/wiki/Alvan_Graham_Clark">Alvan Graham Clark</a> tested his father’s new 18-inch refractor (3 inches longer than any previous instrument) on Sirius, and he discovered the Pup at its predicted position.  The dominant Sirius A was measured to be nearly <span class="math notranslate nohighlight">\(1000\times\)</span> brighter than the Pup (now called Sirius B).  The orbits of the stars about their center of mass revealed that Sirius A and Sirius B are about <span class="math notranslate nohighlight">\(2.3\ M_\odot\)</span> and <span class="math notranslate nohighlight">\(1.0\ M_\odot\)</span>, respectively.  The modern values are <span class="math notranslate nohighlight">\(2.063 \pm 0.023\ M_\odot\)</span> and <span class="math notranslate nohighlight">\(1.018 \pm 0.011\ M_\odot\)</span> (<a class="reference external" href="https://iopscience.iop.org/article/10.3847/1538-4357/aa6af8">Bond et al 2017</a>).</p>
+<p>Clark’s discovery of Sirius B was made when the stars were most widely separated (by just <span class="math notranslate nohighlight">\(10^{\prime\prime}\)</span>) at apastron.  The great difference in their luminosities: <span class="math notranslate nohighlight">\(L_A = 25.4\ L_\odot\)</span> and <span class="math notranslate nohighlight">\(L_B=0.056\ L_\odot\)</span> makes observations difficult when the stars are closer together on the sky.  The next apastron comes 50 years later, where spectroscopists developed the tools to measure each star’s surface temperature.  From the Pup’s faint appearance, astronomers expected it to be cool and red, but they discovered that it is a hot, blue-white star that emits much of its energy in the UV.  Modern observations measure the surface temperature of Sirius B (the Pup) at <span class="math notranslate nohighlight">\(25,000 \pm 200\ {\rm K}\)</span>, which is much hotter than Sirius A at <span class="math notranslate nohighlight">\(9940\ {\rm K}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Given the modern measurements, what are the size and density of Sirius B?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>The size of Sirius B can be estimated using the Stefan-Boltzman law,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{L}{L_\odot} = \left(\frac{R}{R_\odot}\right)^2 \left(\frac{T}{T_\odot}\right)^4, \]</div>
+<p>where the Sun’s surface temperature is <span class="math notranslate nohighlight">\(5777\ {\rm K}\)</span>.  Rearranging the above equation in terms of the stellar radius <span class="math notranslate nohighlight">\(R\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{R}{R_\odot} = \sqrt{\frac{L}{L_\odot}} \left(\frac{T}{T_\odot}\right)^{-2}. \]</div>
+<p>The size of Sirius B is 0.0126 <span class="math notranslate nohighlight">\(R_\odot\)</span> or 1.38 <span class="math notranslate nohighlight">\(R_\oplus\)</span>, while the density is <span class="math notranslate nohighlight">\(7.11 \times 10^8\ {\rm kg/m^3}\)</span>.  Sirius B is a Solar mass star compressed into a roughly Earth-sized volume and the acceleration due to gravity is about <span class="math notranslate nohighlight">\(1.8 \times 10^6\ {\rm m/s^2}\)</span>.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span>
+
+<span class="n">L_SiriusB</span> <span class="o">=</span> <span class="mf">0.056</span> <span class="c1">#luminosity in solar units</span>
+<span class="n">T_SiriusB</span> <span class="o">=</span> <span class="mi">25000</span> <span class="c1">#surface temperature of Sirius B in K</span>
+<span class="n">T_sun</span> <span class="o">=</span> <span class="mi">5777</span> <span class="c1">#surface temperature of the Sun in K</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.957e8</span> <span class="c1">#radius of the Sun in m</span>
+<span class="n">R_Earth</span> <span class="o">=</span> <span class="mf">6371e3</span> <span class="c1">#radius of the Earth in m</span>
+
+<span class="n">R_SiriusB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">L_SiriusB</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_sun</span><span class="o">/</span><span class="n">T_SiriusB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The radius of Sirius B is </span><span class="si">%1.4f</span><span class="s2"> R_Sun, </span><span class="si">%1.2f</span><span class="s2"> R_Earth, or </span><span class="si">%1.2e</span><span class="s2"> m.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">R_SiriusB</span><span class="p">,</span><span class="n">R_SiriusB</span><span class="o">*</span><span class="n">R_sun</span><span class="o">/</span><span class="n">R_Earth</span><span class="p">,</span><span class="n">R_SiriusB</span><span class="o">*</span><span class="n">R_sun</span><span class="p">))</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">M_SiriusB</span> <span class="o">=</span> <span class="mf">1.018</span> <span class="c1">#mass of Sirius B in solar units</span>
+
+<span class="n">rho_SiriusB</span> <span class="o">=</span> <span class="p">(</span><span class="n">M_SiriusB</span><span class="o">*</span><span class="n">M_sun</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="n">R_SiriusB</span><span class="o">*</span><span class="n">R_sun</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The density of Sirius B is </span><span class="si">%1.2e</span><span class="s2"> kg/m^3&quot;</span> <span class="o">%</span> <span class="n">rho_SiriusB</span><span class="p">)</span>
+
+<span class="n">g_SiriusB</span> <span class="o">=</span> <span class="n">G</span><span class="o">*</span><span class="n">M_SiriusB</span><span class="o">*</span><span class="n">M_sun</span><span class="o">/</span><span class="p">(</span><span class="n">R_SiriusB</span><span class="o">*</span><span class="n">R_sun</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The acceleration due to gravity at the surface of Sirius B is </span><span class="si">%1.2e</span><span class="s2"> m/s^2.&quot;</span> <span class="o">%</span> <span class="n">g_SiriusB</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The radius of Sirius B is 0.0126 R_Sun, 1.38 R_Earth, or 8.79e+06 m.
+The density of Sirius B is 7.11e+08 kg/m^3
+The acceleration due to gravity at the surface of Sirius B is 1.75e+06 m/s^2.
+</pre></div>
+</div>
+</div>
+</div>
+<p>On Earth, the pull of gravity on a teaspoon of white dwarf material would be approximately <span class="math notranslate nohighlight">\(34,300\ {\rm N}\)</span>. This fierce gravity veals itself in the spectrum of Sirius B, where it produces an immense pressure near the surface that results in very broad hydrogen absorption lines.  Apart from these lines, its spectrum is a featureless continuum.</p>
+<p>Astronomers initially dismissed the results, calling them “absurd”.  However, the calculations are so simple and straightforward that this attitude changed.  In 1922, Eddington said, “<em>Strange objects, which persist in showing a type of spectrum entirely out of keeping with their luminosity, may ultimately teach us more than a host which radiate according to rule.</em>”  Like all sciences, astronomy advances most rapidly when confronted with exceptions to its theories.</p>
 </div>
 <div class="section" id="white-dwarfs">
 <h2><span class="section-number">12.2. </span>White Dwarfs<a class="headerlink" href="#white-dwarfs" title="Permalink to this headline">¶</a></h2>
+<p>Obviously Sirius B is not a <em>normal</em> star, where it is in a class of stars that have approximately the mass of the Sun and the size of Earth called <strong>white dwarfs</strong>.  As many as 1/4 of the stars in the Solar neighborhood may be white dwarfs.  The average characteristics of these faint stars have been difficult to determine because a complete sample has only been obtained within 10 pc of the Sun.</p>
 <div class="section" id="classes-of-white-dwarf-stars">
 <h3><span class="section-number">12.2.1. </span>Classes of White Dwarf Stars<a class="headerlink" href="#classes-of-white-dwarf-stars" title="Permalink to this headline">¶</a></h3>
 </div>
