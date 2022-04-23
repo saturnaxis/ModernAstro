@@ -331,7 +331,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-condition-for-degeneracy">
-     12.3.3. The condition for Degeneracy
+     12.3.3. The Condition for Degeneracy
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -621,7 +621,8 @@ The acceleration due to gravity at the surface of Sirius B is 1.75e+06 m/s^2.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The central pressure in Sirius B is 5.47e+21 N/m^2.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The central density of Sirius B is 7.11e+08 kg/m^3.
+The central pressure in Sirius B is 5.47e+21 N/m^2.
 The central pressure in Sirius B is 2e+05 times greater than the Sun.
 </pre></div>
 </div>
@@ -682,15 +683,135 @@ The central pressure in Sirius B is 2e+05 times greater than the Sun.
 <h2><span class="section-number">12.3. </span>The Physics of Degenerate Matter<a class="headerlink" href="#the-physics-of-degenerate-matter" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="the-pauli-exclusion-principle-and-electron-degeneracy">
 <h3><span class="section-number">12.3.1. </span>The Pauli Exclusion Principle and Electron Degeneracy<a class="headerlink" href="#the-pauli-exclusion-principle-and-electron-degeneracy" title="Permalink to this headline">¶</a></h3>
+<p>Any system consists of quantum states that are identified by a set of quantum numbers.  A box of gas particles is filled with standing de Broglie waves that are described by three quantum numbers specifying a particle’s momentum in each of three directions.  If the gas particles are fermions (e.g., electrons or neutrons), then the Pauli exclusion principle allows at most one fermion in each quantum state because no two fermions can have the same set of quantum numbers.</p>
+<p>At standard temperature and pressure (<span class="math notranslate nohighlight">\(20\ {\rm ^\circ C}\)</span> and 101,325 <span class="math notranslate nohighlight">\({\rm N/m^2}\)</span>), only one of every <span class="math notranslate nohighlight">\(10^7\)</span> quantum states is occupied by a gas particle, and the limitations imposed by the Pauli exclusion principle become insignificant.  Ordinary gas has a <em>thermal</em> pressure that is related to it temperature by the ideal gas law (i.e., <span class="math notranslate nohighlight">\(PV = NkT\)</span>).  As energy (<span class="math notranslate nohighlight">\(PV\)</span>) is removed from the gas and its temperature falls, an increasingly large fraction of the particles are forced into <em>lower</em> energy states.  If the particles are fermions, only one particle is allowed in each state and thus, all the particles cannot crowd into the ground state.</p>
+<p>As the temperature of the gas is lowered, the fermions will fill up the lowest available unoccupied state first and successively occupy the excited states with the lowest energy.  Even in as the temperature approaches absolute zero (<span class="math notranslate nohighlight">\(T\rightarrow 0\ {\rm K}\)</span>), the motion of the fermions in excited states produces a gas pressure.  At absolute zero, <em>all</em>* the lower energy states and <em>none</em> of the higher energy states are occupied.  In this case, the fermion gas is completely <strong>degenerate</strong>.</p>
 </div>
 <div class="section" id="the-fermi-energy">
 <h3><span class="section-number">12.3.2. </span>The Fermi Energy<a class="headerlink" href="#the-fermi-energy" title="Permalink to this headline">¶</a></h3>
+<p>The maximum energy of any electron in a completely degenerate gas (at absolute zero) is known as the <strong>Fermi energy</strong> <span class="math notranslate nohighlight">\(\varepsilon_F\)</span>.  To determine this limiting energy, <strong>consider a 3D box of length L on each side.</strong> Treating the electrons as standing waves in the box, their wavelengths in each dimension are,</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_x = \frac{2L}{N_x}, \qquad \lambda_y = \frac{2L}{N_y}, \qquad \lambda_z = \frac{2L}{N_z}, \]</div>
+<p>where there are integer quantum numbers (<span class="math notranslate nohighlight">\(N_x\)</span>, <span class="math notranslate nohighlight">\(N_y\)</span>, and <span class="math notranslate nohighlight">\(N_z\)</span>) associated with each dimension.  Recalling that the de Broglie wavelength is related to the components of momentum by,</p>
+<div class="math notranslate nohighlight">
+\[ p_x = \frac{hN_x}{2L}, \qquad p_y = \frac{hN_y}{2L}, \qquad p_z = \frac{hN_z}{2L}. \]</div>
+<p>The total kinetic energy of a particle is the sum of the squares of each component of the momentum, or</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = \frac{p^2}{2m} = \frac{1}{2m}\left(p_x^2 + p_y^2 + p_z^2 \right). \]</div>
+<p>In terms of all the fundamental constants, the energy is</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = \frac{h^2}{8mL^2}\left(N_x^2 + N_y^2 + N_z^2 \right) = \frac{h^2N^2}{8mL^2}. \tag{2}\]</div>
+<p>The total number of electrons in the gas corresponds to the total number of unique quantum numbers <span class="math notranslate nohighlight">\((N_x,\ N_y,\ \text{and}\ N_z)\)</span> times two.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The factor two arises due to the electrons being spin <span class="math notranslate nohighlight">\(1/2\)</span> particles, so <span class="math notranslate nohighlight">\(m_s \pm 1/2\)</span> implies that two electron can have the same combination of <span class="math notranslate nohighlight">\(N_x,\ N_y,\ \text{and}\ N_z\)</span>, while still maintaining a unique set of <em>four</em> quantum numbers.</p>
+</div>
+<p>Each integer in a coordinate <em>N</em>-space corresponds to the quantum state of two electrons.  With a large enough sample of electrons, the electrons will fill out up to a radius <span class="math notranslate nohighlight">\(N\)</span> but only for the positive octant of <em>N</em>-space (i.e., <span class="math notranslate nohighlight">\(N_x&gt;0\)</span>, <span class="math notranslate nohighlight">\(N_y&gt;0\)</span>, and <span class="math notranslate nohighlight">\(N_z&gt;0\)</span>).  this means that the total number of electrons will be</p>
+<div class="math notranslate nohighlight">
+\[ N_e = 2 \times \left(\text{volume of a positive octant of a sphere of radius N}\right) = \left(\frac{1}{8}\right)\left( \frac{4}{3}\pi N^3\right). \]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(N\)</span> and substituting into Eq. 2, we find that the Fermi energy is given by</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon_F = \frac{\hbar^2}{2m_e} \left( 3\pi^2 n\right)^{2/3}, \tag{3} \]</div>
+<p>which depends on the mass of the electron <span class="math notranslate nohighlight">\(m_e\)</span> and the number of electrons per unit volume <span class="math notranslate nohighlight">\((n \equiv N_e/L^3)\)</span>.  The average energy per electron at absolute zero is <span class="math notranslate nohighlight">\(\frac{3}{5}\varepsilon_F\)</span>.  The above derivation applies to any fermion, not just electrons.</p>
 </div>
 <div class="section" id="the-condition-for-degeneracy">
-<h3><span class="section-number">12.3.3. </span>The condition for Degeneracy<a class="headerlink" href="#the-condition-for-degeneracy" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.3.3. </span>The Condition for Degeneracy<a class="headerlink" href="#the-condition-for-degeneracy" title="Permalink to this headline">¶</a></h3>
+<p>Some of the states with an energy less than <span class="math notranslate nohighlight">\(\varepsilon_F\)</span> will become vacant as fermions use their thermal energy to occupy more energetic states.  Although the degeneracy will not be precisely complete when <span class="math notranslate nohighlight">\(T&gt;0\ {\rm K}\)</span>, the assumption of complete degeneracy is a good approximation at the densities encountered in the interior of a white dwarf.  All but the most energetic particles will have an energy less than the Fermi energy</p>
+<p>To understand the dependency of degeneracy on both temperature and density, we express the Fermi energy in terms of the density of the electron gas.  For full ionization, the number of electrons per unit volume is</p>
+<div class="math notranslate nohighlight">
+\[ n_e = \left(\frac{\text{\# electrons}}{\text{nucleon}}\right) \left(\frac{\text{\# nucleons}}{\text{volume}} \right) = \left( \frac{Z}{A}\right) \frac{\rho}{m_H}, \tag{4} \]</div>
+<p>which depends on the number of protons <span class="math notranslate nohighlight">\(Z\)</span>, nucleons <span class="math notranslate nohighlight">\(A\)</span>, and the mass of the hydrogen atom <span class="math notranslate nohighlight">\(m_H\)</span>.  The Fermi energy is proportional to the <span class="math notranslate nohighlight">\(2/3\)</span> power of the density,</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon_F = \frac{\hbar^2}{2m_e} \left[ 3\pi^2 \left( \frac{Z}{A}\right) \frac{\rho}{m_H}\right]^{2/3}. \tag{5} \]</div>
+<p>Compare the Fermi energy with the average thermal energy of an electron (<span class="math notranslate nohighlight">\(\frac{3}{2}kT\)</span>).  In rough terms, if <span class="math notranslate nohighlight">\(\frac{3}{2}kT &lt; \varepsilon_F\)</span>, then an average electron wil be unable to make a transition to an unoccupied state, and the electron will be degenerate.  For a degenerate gas,</p>
+<div class="math notranslate nohighlight">
+\[ \frac{3}{2}kT &lt; \frac{\hbar^2}{2m_e} \left[ 3\pi^2 \left( \frac{Z}{A}\right) \frac{\rho}{m_H}\right]^{2/3}, \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[\frac{T}{\rho^{2/3}} &lt; \frac{\hbar^2}{3m_e k}\left[ \frac{3\pi^2}{m_H}\left(\frac{Z}{A}\right) \right]^{2/3}. \]</div>
+<p>For <span class="math notranslate nohighlight">\(Z/A = 0.5\)</span>, the right-hand side is <span class="math notranslate nohighlight">\(\mathcal{D} \equiv 1261\ {\rm K\ m^2/kg^{2/3}}\)</span>, so that the condition for degeneracy can be written as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{T}{\rho^{2/3}} &lt; \mathcal{D}. \tag{6}\]</div>
+<p>The smaller the value of <span class="math notranslate nohighlight">\(T/\rho^{2/3}\)</span>, the more degenerate the gas.</p>
+<ul class="simple">
+<li><p><strong>How important is electron degeneracy at the centers of the Sun and Sirius B?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>At the center of the standard solar model, <span class="math notranslate nohighlight">\(T_c = 1.57 \times 10^7\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(\rho_c = 1.527 \times 10^5\ {\rm kg/m^3}\)</span>.  Then</p>
+<div class="math notranslate nohighlight">
+\[ \frac{T_c}{\rho^{2/3}} = 5500\ {\rm K\ m^2/kg^{2/3}} &gt; \mathcal{D}. \]</div>
+<p>In the Sun, electron degeneracy is quite weak and plays a very minor role supplying only <span class="math notranslate nohighlight">\(\sim 0.1\%\)</span> of the central pressure.  However, as the Sun continues to evolve, electron degeneracy will become increasingly important.</p>
+<p>For Sirius B, the values of the density and central temperature estimated above lead to</p>
+<div class="math notranslate nohighlight">
+\[ \frac{T_c}{\rho^{2/3}} = 69\ {\rm K\ m^2/kg^{2/3}} \ll \mathcal{D}, \]</div>
+<p>which validates the assumption of complete degeneracy for Sirius B</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">c</span>
+
+<span class="n">rho_sun_c</span> <span class="o">=</span> <span class="mf">1.527e5</span> <span class="c1">#central density of the Sun in kg/m^3</span>
+<span class="n">T_sun_c</span> <span class="o">=</span> <span class="mf">1.57e7</span> <span class="c1">#central temperature fo the Sun in K</span>
+<span class="n">degen_sun</span> <span class="o">=</span> <span class="n">T_sun_c</span><span class="o">/</span><span class="n">rho_sun_c</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">rho_SiriusB_c</span> <span class="o">=</span> <span class="mf">7.11e8</span> <span class="c1">#central density of Sirius B in kg/m^3</span>
+<span class="n">T_SiriusB_c</span> <span class="o">=</span> <span class="mf">5.50e7</span> <span class="c1"># central temperature for Sirius B in K </span>
+<span class="n">degen_SiriusB</span> <span class="o">=</span> <span class="n">T_SiriusB_c</span><span class="o">/</span><span class="n">rho_SiriusB_c</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The condition for degeneracy is </span><span class="si">%d</span><span class="s2"> K m^2/kg^{2/3} for the Sun.&quot;</span> <span class="o">%</span> <span class="n">degen_sun</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The condition for degeneracy is </span><span class="si">%d</span><span class="s2"> K m^2/kg^{2/3} for Sirius B.&quot;</span> <span class="o">%</span> <span class="n">degen_SiriusB</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The condition for degeneracy is 5495 K m^2/kg^{2/3} for the Sun.
+The condition for degeneracy is 69 K m^2/kg^{2/3} for Sirius B.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="electron-degeneracy-pressure">
 <h3><span class="section-number">12.3.4. </span>Electron Degeneracy Pressure<a class="headerlink" href="#electron-degeneracy-pressure" title="Permalink to this headline">¶</a></h3>
+<p>We can estimate the electron degeneracy pressure by combining two key ideas of quantum mechanics:</p>
+<ol class="simple">
+<li><p>The Pauli exclusion principle, which allows at most one electron in each quantum state, and</p></li>
+<li><p>Heisenberg’s uncertainty principle in the form of, <span class="math notranslate nohighlight">\(\Delta x\ \Delta p_x \approx \hbar\)</span>, which requires that an electron confined to small volume of space have a correspondingly high uncertainty in its momentum.</p></li>
+</ol>
+<p>When we make the <em>unrealistic assumption</em> that all of the electrons have the same momentum <span class="math notranslate nohighlight">\(p\)</span>, the pressure integral becomes</p>
+<div class="math notranslate nohighlight">
+\[ P \approx \frac{1}{3}n_e\ p\ v, \tag{7}\]</div>
+<p>which depends on the total electron number density <span class="math notranslate nohighlight">\(n_e\)</span> and average speed <span class="math notranslate nohighlight">\(v\)</span> of the electrons.</p>
+<p>In a completely degenerate electron gas and for a uniform number density of <span class="math notranslate nohighlight">\(n_e\)</span>, the separation between neighboring electrons is about <span class="math notranslate nohighlight">\(n_e^{-1/3}\)</span>.  However, the electron must maintain their identities as different particles to satisfy the Pauli exclusion principle (i.e., the uncertainty in their positions cannot be larger than their physical separation).  Identifying <span class="math notranslate nohighlight">\(\Delta x \approx n_e^{-1/3}\)</span> for the limiting case of complete degeneracy, we can use Heisenberg’s uncertainty relation to estimate the momentum of an electron.  In on coordinate direction,</p>
+<div class="math notranslate nohighlight">
+\[ p_x \approx \Delta p_x \approx \frac{\hbar}{\Delta x} \approx \hbar n_e^{1/3}. \tag{8} \]</div>
+<p>In a 3D gas each of the directions is equally likely, which implies that</p>
+<div class="math notranslate nohighlight">
+\[ p_x^2 = p_y^2 = p_z^2, \]</div>
+<p>and is just a statement of the equipartition of energy among all the coordinate directions.  Therefore,</p>
+<div class="math notranslate nohighlight">
+\[ p^2 = p_x^2 = p_y^2 = p_z^2 = 3 p_x^2, \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ p = \sqrt{3}p_x. \]</div>
+<p>Using Eqn. 4 for the electron number density with full ionization gives</p>
+<div class="math notranslate nohighlight">
+\[ p \approx \sqrt{3}\hbar \left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{1/3}. \]</div>
+<p>For <em>nonrelativistic</em> electrons, the speed is</p>
+<div class="math notranslate nohighlight">
+\[ v = \frac{p}{m_e} \approx \frac{\sqrt{3}\hbar}{m_e}\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{1/3}. \tag{9} \]</div>
+<p>Inserting Eqns. 4 and 8 into Eqn. 9 for for the electron degeneracy pressure results in</p>
+<div class="math notranslate nohighlight">
+\[ P \approx \frac{\hbar^2}{m_e}\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{5/3}. \tag{10} \]</div>
+<p>This is roughly a factor of tow smaller than the exact expression for the pressure due to a completely degenerate, nonrelativistic electron gas <span class="math notranslate nohighlight">\(P\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[ P = \frac{\left(3\pi^2\right)^{2/3}}{5} \frac{\hbar^2}{m_e}\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{5/3}. \tag{11} \]</div>
+<p>Using <span class="math notranslate nohighlight">\(Z/A = 0.5\)</span> for a carbon-oxygen white dwarf, Eqn. 11 shows that the electron degeneracy pressure available to support Sirius B is about <span class="math notranslate nohighlight">\(1.9 \times 10^{22}\ {\rm N/m^2}\)</span>, which is within a factor of two from the central pressure estimated in Eqn. 1. <em>Electron degeneracy pressure is responsible for maintaining the hydrostatic equilibrium in a white dwarf</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may have noticed that Eqn. 11 is the polytropic equation of state, <span class="math notranslate nohighlight">\(P=K\rho^{5/3}\)</span> with the polytropic index <span class="math notranslate nohighlight">\(n = 3/2\)</span>.  This implies that the Lane-Emden equation can be used to study these objects.</p>
+</div>
 </div>
 </div>
 <div class="section" id="the-chandrasekhar-limit">
