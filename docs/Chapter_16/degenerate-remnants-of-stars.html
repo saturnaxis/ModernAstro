@@ -591,12 +591,91 @@ The acceleration due to gravity at the surface of Sirius B is 1.75e+06 m/s^2.
 </div>
 <div class="section" id="central-conditions-in-white-dwarfs">
 <h3><span class="section-number">12.2.2. </span>Central Conditions in White Dwarfs<a class="headerlink" href="#central-conditions-in-white-dwarfs" title="Permalink to this headline">¶</a></h3>
+<p>White dwarfs are very massive for their size, where we can not estimate the central pressure and temperature using our derived values.  Assuming that Sirius B represents a typical white dwarf (at least 2/3 of them) and recalling the estimate for the central pressure from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-derivation-of-the-hydrostatic-equilibrium-equation">hydrostatic equilibrium</a>, we have</p>
+<div class="math notranslate nohighlight">
+\[ P_c = \int_{P_c}^0 dP = \int_0^{R_{wd}} G\left(\frac{4}{3}\pi r^3 \rho \right)\rho rdr = \frac{2}{3}\pi G \rho_{wd}^2 R_{wd}^2,  \tag{1}\]</div>
+<p>which is roughly <span class="math notranslate nohighlight">\(5.5 \times 10^{21}\ {\rm N/m^2}\)</span> or 200,000 times greater than the pressure in the Sun <span class="math notranslate nohighlight">\((P_{c,\odot} = 2.477 \times 10^{16}\ {\rm N/m^2})\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">T_sun</span> <span class="o">=</span> <span class="mi">5777</span> <span class="c1">#surface temperature of the Sun in K</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.957e8</span> <span class="c1">#radius of the Sun in m</span>
+
+<span class="n">M_SiriusB</span> <span class="o">=</span> <span class="mf">1.018</span><span class="o">*</span><span class="n">M_sun</span> <span class="c1">#mass of Sirius B in kg</span>
+<span class="n">L_SiriusB</span> <span class="o">=</span> <span class="mf">0.056</span> <span class="c1">#luminosity in solar units</span>
+<span class="n">T_SiriusB</span> <span class="o">=</span> <span class="mi">25000</span> <span class="c1">#surface temperature of Sirius B in K</span>
+
+<span class="n">R_SiriusB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">L_SiriusB</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_sun</span><span class="o">/</span><span class="n">T_SiriusB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">R_sun</span> <span class="c1">#radius of Sirius B in m</span>
+
+<span class="n">rho_SiriusB</span> <span class="o">=</span> <span class="n">M_SiriusB</span><span class="o">/</span><span class="p">(</span><span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R_SiriusB</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">P_c</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span><span class="o">*</span><span class="n">G</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">rho_SiriusB</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">R_SiriusB</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The central pressure in Sirius B is </span><span class="si">%1.2e</span><span class="s2"> N/m^2.&quot;</span> <span class="o">%</span> <span class="n">P_c</span><span class="p">)</span>
+
+<span class="n">P_sun</span> <span class="o">=</span> <span class="mf">2.477e+16</span> <span class="c1">#central pressure in Sun in N/m^2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The central pressure in Sirius B is </span><span class="si">%1.0e</span><span class="s2"> times greater than the Sun.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">P_c</span><span class="o">/</span><span class="n">P_sun</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The central pressure in Sirius B is 5.47e+21 N/m^2.
+The central pressure in Sirius B is 2e+05 times greater than the Sun.
+</pre></div>
+</div>
+</div>
+</div>
+<p>A crude estimate of the central temperature can be obtained for the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-radiative-temperature-gradient">radiative temperature gradient</a> as</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dT}{dr} = \frac{T_{wd}-T_c}{R_{wd}-0} = - \frac{3}{4ac}\frac{\overline{\kappa}\rho}{T_c^3}\frac{L_{wd}}{4\pi R_{wd}^2},  \]</div>
+<p>assuming that the surface temperature <span class="math notranslate nohighlight">\(T_{wd} \ll T_c\)</span>.  We can also assume that <span class="math notranslate nohighlight">\(\overline{\kappa} = 0.02\ {\rm m^2/kg}\)</span> (from the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-rosseland-mean-opacity">Rosseland mean</a> opacity for electron scattering with <span class="math notranslate nohighlight">\(X=0\)</span>), which gives</p>
+<div class="math notranslate nohighlight">
+\[ T_c \approx \left[\frac{3\overline{\kappa}\rho}{4ac} \frac{L_{wd}}{4\pi R_{wd}} \right]^{1/4} \approx 5.5 \times 10^7\ {\rm K}.\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">c</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#mass of the Sun in kg</span>
+<span class="n">T_sun</span> <span class="o">=</span> <span class="mi">5777</span> <span class="c1">#surface temperature of the Sun in K</span>
+<span class="n">R_sun</span> <span class="o">=</span> <span class="mf">6.957e8</span> <span class="c1">#radius of the Sun in m</span>
+<span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.827e26</span> <span class="c1">#luminosity of the Sun in W</span>
+
+<span class="n">M_SiriusB</span> <span class="o">=</span> <span class="mf">1.018</span><span class="o">*</span><span class="n">M_sun</span> <span class="c1">#mass of Sirius B in kg</span>
+<span class="n">L_SiriusB</span> <span class="o">=</span> <span class="mf">0.056</span><span class="o">*</span><span class="n">L_sun</span> <span class="c1">#luminosity in solar units</span>
+<span class="n">T_SiriusB</span> <span class="o">=</span> <span class="mi">25000</span> <span class="c1">#surface temperature of Sirius B in K</span>
+
+<span class="n">R_SiriusB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">L_SiriusB</span><span class="o">/</span><span class="n">L_sun</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T_sun</span><span class="o">/</span><span class="n">T_SiriusB</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">R_sun</span> <span class="c1">#radius of Sirius B in m</span>
+<span class="n">rho_SiriusB</span> <span class="o">=</span> <span class="n">M_SiriusB</span><span class="o">/</span><span class="p">(</span><span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R_SiriusB</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">kappa_es</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">a_rad</span> <span class="o">=</span> <span class="mf">4.</span><span class="o">*</span><span class="n">sigma</span><span class="o">/</span><span class="n">c</span>
+
+<span class="n">T_c</span> <span class="o">=</span> <span class="p">((</span><span class="mi">3</span><span class="o">*</span><span class="n">kappa_es</span><span class="o">*</span><span class="n">rho_SiriusB</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">a_rad</span><span class="o">*</span><span class="n">c</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">L_SiriusB</span><span class="o">/</span><span class="p">(</span><span class="mf">4.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">R_SiriusB</span><span class="p">)))</span><span class="o">**</span><span class="mf">0.25</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The central temperature in Sirius B is </span><span class="si">%1.2e</span><span class="s2"> K.&quot;</span> <span class="o">%</span> <span class="n">T_c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The central temperature in Sirius B is 5.50e+07 K.
+</pre></div>
+</div>
+</div>
+</div>
+<p>These estimated values for a white dwarf show that hydrogen must be absent from the subsurface layers because they are high enough to start fusion and the white dwarf luminosities would be several orders of magnitude larger than observed.  As a result, the interiors of white dwarfs must contain particles that are incapable of fusion at these densities and temperatures (e.g., constituents of the PP I chain).</p>
+<p>White dwarfs are born from the cores of low- and intermediate-mass stars (i.e., those with a ZAMS mass <span class="math notranslate nohighlight">\(\lesssim 8-9\ M_\odot\)</span>) near the end of their lives on the AGB of the H-R diagram.  Any star with a helium core mass <span class="math notranslate nohighlight">\(\gtrsim 0.5\ M_\odot\)</span> will undergo fusion and thus, most white dwarfs consist primarily of completely ionized carbon and oxygen nuclei (i.e., the left over <span class="math notranslate nohighlight">\({\rm CO}\)</span> core).  As an AGB star ages, it expels its surface layers as planetary nebula, which exposes the core as a white dwarf.  The distribution of DA white dwarf masses is sharply peaked at <span class="math notranslate nohighlight">\(0.56\ M_\odot\)</span>, with some 80% lying between <span class="math notranslate nohighlight">\(0.42-0.70\ M_\odot\)</span>.  The much larger main-sequence masses must be lost on the AGB through thermal pulses and a superwind.</p>
 </div>
 <div class="section" id="spectra-and-surface-composition">
 <h3><span class="section-number">12.2.3. </span>Spectra and Surface Composition<a class="headerlink" href="#spectra-and-surface-composition" title="Permalink to this headline">¶</a></h3>
+<p>The exceptionally strong pull of a white dwarf’s gravity is responsible for the characteristic spectrum of DA white dwarfs.  In this process, heavier nuclei are pulled below the surface while the lighter hydrogen rises to the top and results in a thin outer layer of hydrogen covering a helium layer on top of the <span class="math notranslate nohighlight">\({\rm CO}\)</span> core.  This vertical stratification takes only <span class="math notranslate nohighlight">\(\sim100\)</span> years in the hot stellar atmosphere.</p>
+<p>The origin of the non-DA (e.g., DB and DC) white dwarfs is not yet clear.  Efficient mass-loss may occur on the AGB associated with the thermal pulse or superwind phases, which strip the white dwarf of nearly all of its hydrogen.  Alternatively, a single white dwarf may be transformed between the DA and non-DA spectral types through convective mixing.  For example, the helium convection zone’s penetration into a thin hydrogen layer could change a DA into a DB white dwarf by diluting the hydrogen with additional helium.</p>
 </div>
 <div class="section" id="pulsating-white-dwarfs">
 <h3><span class="section-number">12.2.4. </span>Pulsating White Dwarfs<a class="headerlink" href="#pulsating-white-dwarfs" title="Permalink to this headline">¶</a></h3>
+<p>White dwarfs with surface temperatures of <span class="math notranslate nohighlight">\(T_e \approx 12,000\ {\rm K}\)</span> lie within the instability strip of the H-R diagram and pulsate with periods between <span class="math notranslate nohighlight">\(100-1000\ {\rm s}\)</span>.  In 1968, Arlo Landolt discovered a class of variable white dwarf stars, which are known as <strong>ZZ Ceti</strong> variables or <strong>DAV</strong> stars.  The pulsation periods correspond to the nonradial <em>g</em>-modes that resonate within the white dwarf’s surface layers of hydrogen and helium.  These <em>g</em>-modes involve almost perfectly horizontal displacement and thus, the radii of these compact pulsators hardly change.  Their brightness variations (<span class="math notranslate nohighlight">\(\sim 0.1\ {\rm mag}\)</span>) are due to temperature variations on the stellar surface.</p>
+<p>Successful numerical calculations of pulsating white dwarf models were carried out by <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2008ARA%26A..46..157W/abstract">Don Winget (and others)</a>, where they demonstrated that the <em>hydrogen</em> partial ionization zone is responsible for driving oscillations in the ZZ Ceti stars.  These computations also confirmed the elemental stratification of white dwarf envelopes.  These numerical models predict that hotter DB white dwarfs should also exhibit <em>g</em>-mode oscillations driven by the <em>helium</em> partial ionization zone.  Within a year’s time from the initial prediction, it was confirmed when the first <strong>DBV</strong> star was discovered.  Some stars are described by their transition to the white dwarf stage as: DOV and PNNVs stars that have an effective temperature <span class="math notranslate nohighlight">\(T_e \approx 10^5\ {\rm K}\)</span>.  The DO spectral type marks the initial stage of the white dwarf and the PNNV stands for planetary nebula nuclei.</p>
 </div>
 </div>
 <div class="section" id="the-physics-of-degenerate-matter">
