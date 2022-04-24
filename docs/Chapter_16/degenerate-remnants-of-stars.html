@@ -826,7 +826,7 @@ The condition for degeneracy is 69 K m^2/kg^{2/3} for Sirius B.
 \[ R_{wd} \approx \frac{\left(18\pi \right)^{2/3}}{10} \frac{\hbar^2}{GM_{wd}^{1/3}m_e} \left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{5/3}. \tag{12} \]</div>
 <p>For a Solar-mass carbon-oxygen white dwarf, <span class="math notranslate nohighlight">\(R_{wd} \approx 2.9 \times 10^6\ {\rm m}\)</span>, which is too small by roughly a factor of 2 but an acceptable estimate.  A surprising implication is that <span class="math notranslate nohighlight">\(M_{wd}R_{wd}^3 = \text{constant}\)</span>, or</p>
 <div class="math notranslate nohighlight">
-\[ M_{wd}V_{wd} = \text{constant}. \tag{14} \]</div>
+\[ M_{wd}V_{wd} = \text{constant}. \tag{13} \]</div>
 <p>The volume of a white dwarf is inversely proportional to its mass, where <em>more massive white dwarfs are actually smaller</em>.  This <strong>mass-volume relation</strong> is a result of the electron degeneracy pressure supporting the star.  The electrons must be more closely confined to generate the larger degeneracy pressure required to support a more massive star (i.e., <span class="math notranslate nohighlight">\(\rho \propto M_{wd}^2\)</span>).</p>
 <p>According to the mass-volume relation, a white dwarf would eventually shrink down to zero volume in the limit of continually adding mass.  However, if the density exceeds about <span class="math notranslate nohighlight">\(10^9\ {\rm kg/m^3}\)</span>, then there is a departure from this relation.  Using Eqn. 9 to estimate the speed of electrons in Sirius B results in</p>
 <div class="math notranslate nohighlight">
@@ -840,7 +840,6 @@ The condition for degeneracy is 69 K m^2/kg^{2/3} for Sirius B.
 <span class="n">A</span> <span class="o">=</span> <span class="mf">2.</span>
 <span class="n">m_H</span> <span class="o">=</span> <span class="mf">1.6735575e-27</span> <span class="c1">#mass of hydrogen in kg</span>
 <span class="n">rho_SiriusB</span> <span class="o">=</span> <span class="mf">7.11e8</span> <span class="c1">#central density of Sirius B in kg/m^3</span>
-
 
 <span class="n">v_e</span> <span class="o">=</span><span class="p">(</span><span class="n">hbar</span><span class="o">/</span><span class="n">m_e</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">Z</span><span class="o">/</span><span class="n">A</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">rho_SiriusB</span><span class="o">/</span><span class="n">m_H</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average speed of electrons in Sirius B is </span><span class="si">%1.2e</span><span class="s2"> m/s or </span><span class="si">%1.3f</span><span class="s2"> c.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">v_e</span><span class="p">,</span><span class="n">v_e</span><span class="o">/</span><span class="n">c</span><span class="p">))</span>
@@ -859,29 +858,127 @@ The condition for degeneracy is 69 K m^2/kg^{2/3} for Sirius B.
 <h3><span class="section-number">12.4.2. </span>Dynamical Instability<a class="headerlink" href="#dynamical-instability" title="Permalink to this headline">¶</a></h3>
 <p>To appreciate the effect of relativity on the stability of a white dwarf, recall that Eqn. 11 is a polytropic equation (<span class="math notranslate nohighlight">\(P = K\rho^{5/3}\)</span>).  The ratio of the specific heats <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span> in the nonrelativistic limit.  This means that the white dwarf is dynamically stable.  If it suffers a small perturbation, then it will return to its equilibrium structure instead of collapsing.  In the extreme relativistic limit, the electron speed <span class="math notranslate nohighlight">\(v=c\)</span> must be used to find the degeneracy pressure, which results in</p>
 <div class="math notranslate nohighlight">
-\[ \frac{\left(3\pi^2\right)^{1/3}}{4} \hbar c\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{4/3}. \]</div>
+\[ P = \frac{\left(3\pi^2\right)^{1/3}}{4} \hbar c\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{4/3}. \tag{14}\]</div>
 <p>In this limit, <span class="math notranslate nohighlight">\(\gamma = 4/3\)</span> corresponds to dynamical instability and introduces a polytropic equation with an index <span class="math notranslate nohighlight">\(n=3\)</span>.  The smallest departure from equilibrium will cause the white dwarf to collapse as the electron degeneracy pressure fails.  Approaching this limiting case leads to the collapse of the degenerate core in an aging supergiant and results in a core-collapse supernova.</p>
 </div>
 <div class="section" id="estimating-the-chandrasekhar-limit">
 <h3><span class="section-number">12.4.3. </span>Estimating the Chandrasekhar Limit<a class="headerlink" href="#estimating-the-chandrasekhar-limit" title="Permalink to this headline">¶</a></h3>
+<p>An approximate value for the maximum white dwarf mass can be obtained by setting Eqn. 14 equal to the estimate of the central pressure (Eqn. 1) to get</p>
+<div class="math notranslate nohighlight">
+\[ \frac{2}{3} \pi G \rho_{wd}^2 R_{wd}^2  = \frac{\left(3\pi^2\right)^{1/3}}{4} \hbar c\left[\left(\frac{Z}{A}\right)\frac{\rho_{wd}}{m_H}\right]^{4/3}, \]</div>
+<p>and solving for <span class="math notranslate nohighlight">\(\rho\)</span> to get,</p>
+<div class="math notranslate nohighlight">
+\[ \rho_{wd}^{2/3} = \frac{\hbar c}{8\pi^{1/3} G R_{wd}^2  } \left[\left(\frac{Z}{A}\right)\frac{3}{m_H}\right]^{4/3}. \]</div>
+<p>Using <span class="math notranslate nohighlight">\(\rho = M_{wd}/\frac{4}{3}\pi R_{wd}^3\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[ M_{wd}^{2/3} = \left(\frac{4\pi}{3}\right)^{2/3} \frac{\hbar c}{8\pi^{1/3} G } \left[\left(\frac{Z}{A}\right)\frac{3}{m_H}\right]^{4/3}, \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[ M_{Ch} = \left(\frac{3\sqrt{2\pi}}{8}\right) \left(\frac{\hbar c}{ G } \right)^{3/2} \left[\left(\frac{Z}{A}\right)\frac{1}{m_H}\right]^2. \tag{15} \]</div>
+<p>Using <span class="math notranslate nohighlight">\(Z/A = 0.5\)</span> results in <span class="math notranslate nohighlight">\(0.44\ M_\odot\)</span> for the greatest possible mass.  Note that Eqn. 15 contains the fundamental constants <span class="math notranslate nohighlight">\(\hbar\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(G\)</span>, which represent  the combined effects of quantum mechanics relativity, and Newtonian gravitation on the structure of a white dwarf. A <a class="reference external" href="https://scholar.harvard.edu/files/schwartz/files/15-stars.pdf">precise derivation with the Lane-Emden equation</a> results in a value of <span class="math notranslate nohighlight">\(M_{ch} \approx 1.4\ M_\odot\)</span>, which is the <strong>Chandrasekhar limit</strong>.</p>
+<p>It is important to emphasize that the gas pressure of the ideal gas law and the expression for radiation pressure depend explicitly on temperature, where the pressure of a completely degenerate electron gas is independent of its temperature.  This has the effect of decoupling the mechanical structure of the star from its thermal properties.</p>
 </div>
 </div>
 <div class="section" id="the-cooling-of-white-dwarfs">
 <h2><span class="section-number">12.5. </span>The Cooling of White Dwarfs<a class="headerlink" href="#the-cooling-of-white-dwarfs" title="Permalink to this headline">¶</a></h2>
+<p>Most stars end their lives as white dwarfs, where no fusion occurs in their interiors.  White dwarfs simply cool off at an essentially constant radius as they slowly deplete their supply of thermal energy.  Just as paleontologists can read the history of Earth’s life in the fossil record, astronomers try to recover the history of star formation by studying the statistics of white-dwarf temperatures.</p>
 <div class="section" id="energy-transport">
 <h3><span class="section-number">12.5.1. </span>Energy Transport<a class="headerlink" href="#energy-transport" title="Permalink to this headline">¶</a></h3>
+<p>“How is energy transported outward from the interior of a white dwarf?” In an ordinary star, photons travel much farther than atoms do before a collision that robs them of energy.  As a result, photons are normally more efficient carriers of energy to the stellar surface.  In a white dwarf, the degenerate electrons can travel long distances before losing energy in a collision with a nucleus because the vast majority of the lower-energy electron states are already occupied.  Thus, energy is carried by <strong>electron conduction</strong> rather than by radiation.</p>
+<p>This process is so efficient that hte interior of a white dwarf is nearly isothermal, with the temperature dropping significantly only in the nondegenerate surface layers.  The steep temperature gradient near the surface creates convection zones that may alter the appearance of the white dwarf’s spectrum as it cools.</p>
+<p>At the surface, a white dwarf has a luminosity <span class="math notranslate nohighlight">\(L_{wd}\)</span> and mass <span class="math notranslate nohighlight">\(M_{wd}\)</span> that contribute to a surface pressure <span class="math notranslate nohighlight">\(P\)</span> as a function of the temperature because the envelope is nondegenerate.  The equation for this surface pressure is</p>
+<div class="math notranslate nohighlight">
+\[ P = \left( \frac{4}{17} \frac{16\pi ac}{3} \frac{GM_{wd}}{L_{wd}} \frac{k}{\kappa_o \mu m_H} \right)^{1/2} T^{17/4}, \tag{16} \]</div>
+<p>which depends on the coefficient of the bound-free Kramers opacity law</p>
+<div class="math notranslate nohighlight">
+\[ \kappa_o = 4.34 \times 10^{21}\ Z(1+X)\ {\rm m^2/kg}. \]</div>
+<p>Using the ideal gas law to replace the pressure results in a relation between the density and temperature,</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \left( \frac{4}{17} \frac{16\pi ac}{3} \frac{GM_{wd}}{L_{wd}} \frac{\mu m_H}{\kappa_o k} \right)^{1/2} T^{13/4}. \tag{17}\]</div>
+<p>The transition between the nondegenerate surface layers of the star and its <em>isothermal degenerate interior</em> of temperature <span class="math notranslate nohighlight">\(T_c\)</span> is described by using Eqn. 17 in Eqn. 6 by finding</p>
+<div class="math notranslate nohighlight">
+\[ \rho^{2/3} = \left( \frac{4}{17} \frac{16\pi ac}{3} \frac{GM_{wd}}{L_{wd}} \frac{\mu m_H}{\kappa_o k} \right)^{1/3} T^{13/6} \]</div>
+<p>and substituting into <span class="math notranslate nohighlight">\(\mathcal{D} = T/\rho^{2/3}\)</span> and solving <span class="math notranslate nohighlight">\(L_{wd}\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[ L_{wd} = \frac{4}{17} \frac{16\pi ac}{3} \frac{GM_{wd}}{L_{wd}} \frac{\mu m_H}{\kappa_o k} T_c^{7/2} = C T_c^{7/2}, \tag{18} \]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[ C \equiv 6.65 \times 10^{-3} \left(\frac{M_{wd}}{M_\odot} \right)\frac{\mu}{Z(1+X)}. \]</div>
+<p>Note that the luminosity is proportional to the <em>interior</em> temperature <span class="math notranslate nohighlight">\(T_c^{7/2}\)</span> and that is varies to the fourth power of the <em>effective</em> temperature according to the Stefan-Boltzmann law.  Thus, the surface of a white dwarf cools more slowly than its isothermal interior as the the star’s thermal energy leaks into space (i.e., <span class="math notranslate nohighlight">\(\frac{7}{2} &lt; 4\)</span>).</p>
+<ul class="simple">
+<li><p><strong>What is the interior temperature of a Solar-mass white dwarf with <span class="math notranslate nohighlight">\(L_{wd} =0.03 L_\odot\)</span>?</strong>  Assume that <span class="math notranslate nohighlight">\(X = 0,\ Y=0.9,\ \text{and}\ Z=0.1\)</span> for the nondegenerate envelop so <span class="math notranslate nohighlight">\(\mu \simeq 1.4\)</span>.</p></li>
+</ul>
+<blockquote>
+<div><p>Using Eqn. 18 and solving for <span class="math notranslate nohighlight">\(T_c\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[ T_c = \left[ \frac{L_{wd}}{6.65 \times 10^{-3}} \left(\frac{M_{wd}}{M_\odot}\right)^{-1} \frac{Z(1+X)}{\mu} \right]^{2/7} = 2.85 \times 10^8\ {\rm K}.\]</div>
+<p>Substituting into the equation for the degeneracy condition shows that the density at the base of the nondegenerate envelope is about</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \left(\frac{T_c}{\mathcal{D}} \right)^{3/2} = 3.4 \times 10^6\ {\rm kg/m^3}. \]</div>
+<p>This result is several orders of magnitude less than the average density of a Solar-mass white dwarf (e.g., Sirius B).  It also confirms that the envelope is indeed thin and contributes very little to the star’s total mass.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L_sun</span> <span class="o">=</span> <span class="mf">3.827e26</span> <span class="c1">#luminosity of the Sun in W</span>
+<span class="n">L_wd</span> <span class="o">=</span> <span class="mf">0.03</span><span class="o">*</span><span class="n">L_sun</span> <span class="c1">#Luminosity of the white dwarf in W</span>
+<span class="n">M_wd</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1">#Solar-mass white dwarf</span>
+
+<span class="n">Z</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">X</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">1.4</span>
+
+<span class="n">T_c</span> <span class="o">=</span> <span class="p">((</span><span class="n">L_wd</span><span class="o">/</span><span class="mf">6.65e-3</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="n">M_wd</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">Z</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">X</span><span class="p">)</span><span class="o">/</span><span class="n">mu</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The interior temperature of the white dwarf is </span><span class="si">%1.2e</span><span class="s2"> K.&quot;</span> <span class="o">%</span> <span class="n">T_c</span><span class="p">)</span>
+
+<span class="n">D</span> <span class="o">=</span> <span class="mi">1261</span> <span class="c1"># degeneracy condition in K m^2/kg^(2/3)</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="p">(</span><span class="n">T_c</span><span class="o">/</span><span class="n">D</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The density at the base of the nondegenerate envelope is </span><span class="si">%1.2e</span><span class="s2"> kg/m^3.&quot;</span> <span class="o">%</span> <span class="n">rho</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The interior temperature of the white dwarf is 2.85e+07 K.
+The density at the base of the nondegenerate envelope is 3.39e+06 kg/m^3.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="the-cooling-timescale">
 <h3><span class="section-number">12.5.2. </span>The Cooling Timescale<a class="headerlink" href="#the-cooling-timescale" title="Permalink to this headline">¶</a></h3>
+<p>A white dwarf’s thermal energy primarily resides in this kinetic energy of its nuclei, where the degenerate electrons cannot give up a significant amount of energy nearly all the lower energy state are already occupied.  If we assume for simplicity that the composition is uniform, then the total number of nuclei in the white dwarf is equal to the star’s mass <span class="math notranslate nohighlight">\(M_{wd}\)</span> divided by the mass of a nucleus <span class="math notranslate nohighlight">\(Am_H\)</span>.  Since the average thermal energy of a nucleus is <span class="math notranslate nohighlight">\(\frac{3}{2}kT\)</span>, the thermal energy available for radiation is</p>
+<div class="math notranslate nohighlight">
+\[ U = \frac{M_{wd}}{Am_H}\frac{3}{2}kT_c \tag{19}. \]</div>
+<p>If use <span class="math notranslate nohighlight">\(T_c = 2.8\times 10^7\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(A = 12\)</span> for carbon, then Eqn. 19 gives approximately <span class="math notranslate nohighlight">\(6 \times 10^{40}\ {\rm J}\)</span>.  A crude estimate of the characteristic timescale for cooling <span class="math notranslate nohighlight">\(\tau_{cool}\)</span> can be made simply by dividing the thermal energy by the luminosity.  Thus</p>
+<div class="math notranslate nohighlight">
+\[ \tau_{cool} = \frac{U}{L_{wd}} = \frac{3M_{wd}k}{2Am_H C T_c^{5/2}}, \tag{20}\]</div>
+<p>which is about <span class="math notranslate nohighlight">\(5.2 \times 10^{15}\ {\rm s} \approx 170\ {\rm Myr}\)</span>.  This is an underestimate, because the cooling timescale increases as <span class="math notranslate nohighlight">\(T_c\)</span> decreases.</p>
 </div>
 <div class="section" id="the-change-in-luminosity-with-time">
 <h3><span class="section-number">12.5.3. </span>The Change in Luminosity with Time<a class="headerlink" href="#the-change-in-luminosity-with-time" title="Permalink to this headline">¶</a></h3>
+<p>The depletion of the internal energy provides the luminosity, so Eqns. 18 and 19 give</p>
+<div class="math notranslate nohighlight">
+\[ \frac{-dU}{dt} = L_{wd} \]</div>
+<p>or</p>
+<p><span class="math notranslate nohighlight">\(4 -\frac{d}{dt}\left( \frac{M_{wd}}{Am_H}\frac{3}{2}kT_c \right) = CT^{7/2}.\)</span>$</p>
+<p>If the initial temperature of the interior is <span class="math notranslate nohighlight">\(T_o\)</span>, then this expression may be integrated to obtain the core temperature as a function of time:</p>
+<div class="math notranslate nohighlight">
+\[ T_c(t) = T_o \left(1 + \frac{5}{3}\frac{Am_H C T_o^{5/2}}{M_{wd}k}t \right)^{-2/5} = T_o\left(1 + \frac{5t}{2\tau_o} \right)^{-2/5}, \tag{21}\]</div>
+<p>where the timescale for cooling at the initial temperature is <span class="math notranslate nohighlight">\(\tau_o \equiv \frac{3M_{wd}k}{2Am_H C T_o^{5/2}}\)</span>.  Using the same logic for Eqn. 18 shows that the luminosity of the white dwarf declines sharply from its initial value <span class="math notranslate nohighlight">\((L_o = C T_o^{7/2})\)</span> and then dims much more gradually as time passes:</p>
+<div class="math notranslate nohighlight">
+\[ L_{wd} = L_o \left(1 + \frac{5}{3}\frac{Am_H C L_o^{5/2}}{M_{wd}k}t \right)^{-2/5} = L_o\left(1 + \frac{5t}{2\tau_o} \right)^{-2/5}. \tag{22} \]</div>
 </div>
 <div class="section" id="crystallization">
 <h3><span class="section-number">12.5.4. </span>Crystallization<a class="headerlink" href="#crystallization" title="Permalink to this headline">¶</a></h3>
+<p>As a white dwarf cools, it <em>crystallizes</em> in a gradual inside-out process.  An upturned “knee” occurs in theoretical cooling curves at about <span class="math notranslate nohighlight">\(L_{wd}/L_\odot \approx 10^{-4}\)</span> when the cooling nuclei begin settling into a crystalline lattice.  The regular crystal structure is maintained by the mutual electrostatic repulsion of the nuclei, where it minimizes their energy as they vibrate about their average position in the lattice.</p>
+<p>As the nuclei undergo this phase change, they release their latent heat (about <span class="math notranslate nohighlight">\(kT\)</span> per nucleus), which slows the star’s cooling and produces the knee in the cooling curve.  Later as the white dwarf’s temperature continues to drop, the crystalline lattice actually accelerates the cooling as the coherent vibration of the regularly spaced nuclei promotes further energy loss.  This is reflected in the subsequent downturn in the cooling curve.  The ultimate monument to the lives of most stars will be a <em>diamond in the sky</em>.  Less poetically, it is a cold, dark, Earth-sized sphere of crystallized carbon and oxygen floating through the depths of space.  Note that the body-centered cubic lattice of the white dwarf’s nuclei is more similar to metallic sodium than terrestrial diamond.</p>
 </div>
 <div class="section" id="comparing-theory-with-observations">
 <h3><span class="section-number">12.5.5. </span>Comparing Theory with Observations<a class="headerlink" href="#comparing-theory-with-observations" title="Permalink to this headline">¶</a></h3>
+<p>It is possible to observe the cooling of a pulsating white dwarf despite the large uncertainties in the measurement of its surface temperature that result from high surface gravity and broad spectral features.  As the star’s temperature declines, its period <span class="math notranslate nohighlight">\(P\)</span> slowly changes (approximately) according to <span class="math notranslate nohighlight">\(dP/dt \propto T^{-1}\)</span>.  Extremely precise measurements of a rapidly cooling <span class="math notranslate nohighlight">\({\rm DOV}\)</span> star yield <span class="math notranslate nohighlight">\(P/|dP/dt| = 1.4 \times 10^6\ {\rm years}\)</span>, in excellent agreement with the theoretical value.  Measuring period changes for the more slowly cooling <span class="math notranslate nohighlight">\({\rm DBV}\)</span> and <span class="math notranslate nohighlight">\({\rm DAV}\)</span> stars are even more difficult.</p>
+<p>This interest in an accurate calculation of the decline in a white dwarf’s temperature reflects the motivation for using these “fossil” stars as a tool for uncovering the history of star formation in our Galaxy.  <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1987ApJ...315L..77W/abstract">Winget et al (1987)</a> illustrate how this might be accomplished by plotting the number of observed white dwarfs per cubic parsec as a function of their brightness (either luminosity or absolute magnitude).</p>
+<p>There is a dramatically sudden drop in the number of white dwarfs with <span class="math notranslate nohighlight">\(L_{wd}/L_\odot &lt; -4.5\)</span> (or <span class="math notranslate nohighlight">\(M_V \gtrsim 16\)</span>) that is inconsistent with the assumption that stars have been forming in our Galaxy throughout the infinite past.  Instead, this decline is best explained if the first white dwarfs were formed and began cooling <span class="math notranslate nohighlight">\(9.0 \pm 1.8\ {\rm Gyr}\)</span> ago.  Combining the theoretical models with observations and adding the time spent in the pre-white dwarf stages of stellar evolution implies that star formation in the disk of our Galaxy began about <span class="math notranslate nohighlight">\(9.3 \pm 2.0\ {\rm Gyr}\)</span> ago.  This time is about 3 Gyr shorter than the age determined for the Milky Way’s globular clusters, which formed at an earlier epoch.</p>
 </div>
 </div>
 <div class="section" id="neutron-stars">
