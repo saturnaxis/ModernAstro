@@ -904,7 +904,7 @@ The condition for degeneracy is 69 K m^2/kg^{2/3} for Sirius B.
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[ C \equiv 6.65 \times 10^{-3} \left(\frac{M_{wd}}{M_\odot} \right)\frac{\mu}{Z(1+X)}. \]</div>
-<p>Note that the luminosity is proportional to the <em>interior</em> temperature <span class="math notranslate nohighlight">\(T_c^{7/2}\)</span> and that is varies to the fourth power of the <em>effective</em> temperature according to the Stefan-Boltzmann law.  Thus, the surface of a white dwarf cools more slowly than its isothermal interior as the the star’s thermal energy leaks into space (i.e., <span class="math notranslate nohighlight">\(\frac{7}{2} &lt; 4\)</span>).</p>
+<p>Note that the luminosity is proportional to the <em>interior</em> temperature <span class="math notranslate nohighlight">\(T_c^{7/2}\)</span> and that is varies to the fourth power of the <em>effective</em> temperature according to the Stefan-Boltzmann law.  Thus, the surface of a white dwarf cools more slowly than its isothermal interior as the star’s thermal energy leaks into space (i.e., <span class="math notranslate nohighlight">\(\frac{7}{2} &lt; 4\)</span>).</p>
 <ul class="simple">
 <li><p><strong>What is the interior temperature of a Solar-mass white dwarf with <span class="math notranslate nohighlight">\(L_{wd} =0.03 L_\odot\)</span>?</strong>  Assume that <span class="math notranslate nohighlight">\(X = 0,\ Y=0.9,\ \text{and}\ Z=0.1\)</span> for the nondegenerate envelop so <span class="math notranslate nohighlight">\(\mu \simeq 1.4\)</span>.</p></li>
 </ul>
@@ -984,14 +984,105 @@ The density at the base of the nondegenerate envelope is 3.39e+06 kg/m^3.
 </div>
 <div class="section" id="neutron-stars">
 <h2><span class="section-number">12.6. </span>Neutron Stars<a class="headerlink" href="#neutron-stars" title="Permalink to this headline">¶</a></h2>
+<p>Two years after <a class="reference external" href="https://en.wikipedia.org/wiki/James_Chadwick">James Chadwick</a> discovered the neutron, <a class="reference external" href="https://en.wikipedia.org/wiki/Walter_Baade">Walter Baade</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Fritz_Zwicky">Fritz Zwicky</a> at Mount Wilson Observatory proposed the existence of <strong>neutron stars</strong>.  These two astronomers went on to suggest that “supernovae represent the transitions from ordinary stars into neutron stars, which in their final stages consist of extremely packed neutrons”.  They also coined the term <em>supernova</em>.</p>
 <div class="section" id="neutron-degeneracy">
 <h3><span class="section-number">12.6.1. </span>Neutron Degeneracy<a class="headerlink" href="#neutron-degeneracy" title="Permalink to this headline">¶</a></h3>
+<p>Neutron stars are formed when the degenerate core of an aging supergiant star nears the Chandrasekhar limit and collapses.  A <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star would consist of <span class="math notranslate nohighlight">\(\sim 10^{57}\)</span> neutrons, which is (in effect) a huge nucleus with a mass number of <span class="math notranslate nohighlight">\(A \approx 10^{57}\)</span> that is held together by gravity and supported by <strong>neutron degeneracy pressure</strong> because neutrons are fermions that obey the Pauli exclusion principle.</p>
+<p>Starting from hydrostatic equilibrium and the pressure of a degenerate gas, the estimated neutron star radius (analogous to Eqn. 13 for a white dwarf) is</p>
+<div class="math notranslate nohighlight">
+\[ R_{ns} \approx \frac{\left(18\pi \right)^{2/3}}{10}\frac{\hbar^2}{GM_{ns}^{1/3}} m_H^{-8/3}. \tag{23} \]</div>
+<p>For the minimum mass <span class="math notranslate nohighlight">\(M_{ns} = 1.4\ M_\odot\)</span>, this yields a value of 4.4 km.  This estimate is too small by a factor of about 3, where the actual radius lies roughly between 10-15 km.  There are many uncertainties involved in the construction of a model neutron star, and we will adopt a radius of 10 km for simplicity.</p>
 </div>
 <div class="section" id="the-density-of-a-neutron-star">
 <h3><span class="section-number">12.6.2. </span>The Density of a Neutron Star<a class="headerlink" href="#the-density-of-a-neutron-star" title="Permalink to this headline">¶</a></h3>
+<p>A neutron star would have an average density of <span class="math notranslate nohighlight">\(6.65 \times 10^{17}\ {\rm kg/m^3}\)</span>, greater than the typical density of an atomic nucleus, <span class="math notranslate nohighlight">\(\rho_{nuc} \approx 2.3 \times 10^{17}\ {\rm kg/m^3}\)</span>.  At the density of a neutron star, all of Earth’s inhabitants could be crowded into a cube measuring 1.5 cm on a side.</p>
+<p>The pull of gravity of a neutron star is fierce, where a <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star with a radius of <span class="math notranslate nohighlight">\(10\ {\rm km}\)</span> has a surface gravity <span class="math notranslate nohighlight">\(g = 1.86 \times 10^{27}\ {\rm m/s^2}\)</span>, or 190 billion times stronger than Earth’s surface gravity.  An object dropped from a height of meter would arrive at the star’s surface with a speed of <span class="math notranslate nohighlight">\(1.93 \times 10^6\ {\rm m/s}\)</span>, or about 4.3 million mph.</p>
+<ul class="simple">
+<li><p><strong>What is the escape velocity of a neutron star using Newtonian mechanics?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>The escape velocity from Newtonian mechanics depends on the neutron star’s mass <span class="math notranslate nohighlight">\(M_{ns}\)</span> and radius <span class="math notranslate nohighlight">\(R_{ns}\)</span> through</p>
+<div class="math notranslate nohighlight">
+\[ v_{esc} = \sqrt{\frac{2GM_{ns}}{R_{ns}}} = 1.93 \times 10^8\ {\rm m/s} = 0.643c.\]</div>
+<p>This can also be seen by considering the ratio of the Newtonian gravitational potential energy to the rest energy of an object (with mass <span class="math notranslate nohighlight">\(m\)</span>) at the star’s surface:</p>
+<div class="math notranslate nohighlight">
+\[\frac{GM_{ns}m}{R_{ns}mc^2} = \frac{GM_{ns}}{R_{ns}c^2} = 0.207. \]</div>
+<p>Clearly, the effects of relativity (i.e., special and general theory of relativity) must be included for an accurate description of a neutron star.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">G</span><span class="p">,</span> <span class="n">c</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#Mass of the Sun in kg</span>
+<span class="n">M_ns</span> <span class="o">=</span> <span class="mf">1.4</span><span class="o">*</span><span class="n">M_sun</span> <span class="c1">#Mass of a neutron star in kg</span>
+<span class="n">R_ns</span> <span class="o">=</span> <span class="mf">10e3</span> <span class="c1">#radius of a neutron star in m</span>
+
+<span class="n">v_esc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">G</span><span class="o">*</span><span class="n">M_ns</span><span class="o">/</span><span class="n">R_ns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The escape velocity from a neutron star is </span><span class="si">%1.2e</span><span class="s2"> m/s or </span><span class="si">%1.3f</span><span class="s2"> c.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">v_esc</span><span class="p">,</span><span class="n">v_esc</span><span class="o">/</span><span class="n">c</span><span class="p">))</span>
+
+<span class="n">E_ratio</span> <span class="o">=</span> <span class="n">G</span><span class="o">*</span><span class="n">M_ns</span><span class="o">/</span><span class="n">R_ns</span><span class="o">/</span><span class="n">c</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The ratio of the Newtonian gravitational potential energy to the rest energy is </span><span class="si">%1.3f</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">E_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The escape velocity from a neutron star is 1.93e+08 m/s or 0.643 c.
+The ratio of the Newtonian gravitational potential energy to the rest energy is 0.207.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="the-equation-of-state">
 <h3><span class="section-number">12.6.3. </span>The Equation of State<a class="headerlink" href="#the-equation-of-state" title="Permalink to this headline">¶</a></h3>
+<p>To appreciate the exotic nature of a neutron star and the difficulties in calculating the equation of state, <strong>imagine compressing the mixture of iron nuclei and degenerate electrons that comprise an iron white dwarf.</strong>  We are interested in the equilibrium configuration of <span class="math notranslate nohighlight">\(10^{57}\)</span> nucleons, together with enough free electrons to provide zero net charge and the equilibrium arrangement is the one that involves the <em>least</em> energy.</p>
+<p>At low densities the most stable nucleons are found in iron nuclei because of the minimum-energy compromise between the Coulomb force between protons and the attractive nuclear force between all of the nucleons.  When <span class="math notranslate nohighlight">\(\rho \approx 10^9\ {\rm kg/m^3}\)</span>, the electrons become relativistic.  Soon thereafter, the minimum-energy arrangement of protons and neutrons changes because the energetic electrons can convert protons in the iron nuclei into neutrons by the process of electron capture,</p>
+<div class="math notranslate nohighlight">
+\[ p^+ + e^- \rightarrow n + \nu_e. \]</div>
+<p>Because the neutron mass is slightly greater than the sum of the proton and electron masses (the neutrino’s rest mass energy is negligible), the electron must supply the kinetic energy to make up the difference in energy, or <span class="math notranslate nohighlight">\(m_nc^2 - m_pc^2 - m_ec^2 = 0.78\ {\rm MeV}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>What is the density required for the process of electron capture for a simple mixture of protons and relativistic degenerate electrons?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>In the limiting case when the neutrino carries away no energy, we can equate the relativistic expression for the electron kinetic energy to the difference between the neutron rest energy and the combined rest energies through</p>
+<div class="math notranslate nohighlight">
+\[ m_ec^2\left( \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} -1 \right) = \left(m_n - m_p - m_e \right)c^2, \]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[ \left( \frac{m_e}{m_n-m_p} \right)^2 = 1 - \frac{v^2}{c^2}. \]</div>
+<p>Although Eqn. 9 for the electron speed is strictly valid for nonrelativistic electrons, it is accurate enough to be used in this estimate.  Inserting the expression for <span class="math notranslate nohighlight">\(v\)</span> leads to</p>
+<div class="math notranslate nohighlight">
+\[ \left( \frac{m_e}{m_n-m_p}\right)^2 \approx 1 - \frac{\hbar^2}{m_e^2 c^2}\left[ \left(\frac{Z}{A}\right) \frac{\rho}{m_H} \right]^{2/3}. \]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(\rho\)</span> shows that the density for which electron capture begins is approximately</p>
+<div class="math notranslate nohighlight">
+\[ \rho \approx \frac{Am_H}{Z}\left(\frac{m_ec}{\hbar}\right)^3 \left[1 - \left(\frac{m_e}{m_n-m_p}\right)^2 \right]^{3/2} \approx 2.3 \times 10^{10}\ {\rm kg/m^3},\]</div>
+<p>using <span class="math notranslate nohighlight">\(A/Z = 1\)</span> for hydrogen. This is in reasonable agreement with the actual value of <span class="math notranslate nohighlight">\(\rho = 1.2 \times 10^{10}\ {\rm kg/m^3}\)</span>.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">m_n</span><span class="p">,</span> <span class="n">m_p</span><span class="p">,</span> <span class="n">m_e</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">hbar</span>
+
+<span class="n">m_H</span> <span class="o">=</span> <span class="mf">1.6735575e-27</span> <span class="c1">#mass of hydrogen in kg</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">Z</span> <span class="o">=</span> <span class="mf">1.</span>
+
+<span class="n">rho</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">m_H</span><span class="p">)</span><span class="o">/</span><span class="n">Z</span><span class="o">*</span><span class="p">(</span><span class="n">m_e</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="n">hbar</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="n">m_e</span><span class="o">/</span><span class="p">(</span><span class="n">m_n</span><span class="o">-</span><span class="n">m_p</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The critical density for electron capture is </span><span class="si">%1.2e</span><span class="s2"> kg/m^3.&quot;</span> <span class="o">%</span> <span class="n">rho</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The critical density for electron capture is 2.25e+10 kg/m^3.
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above example, we considered free protons to avoid the complications that arise when they are bound in heavy nuclei.  A careful calculation should take into account the surround nuclei and relativistic degenerate electrons, as well as the complexities of nuclear physics.  Such a calculation reveals that the density must exceed <span class="math notranslate nohighlight">\(10^{12}\ {\rm kg/m^3}\)</span> for the protons in iron-56 nuclei to capture electrons.</p>
+<p>At still higher densities, the most stable arrangement of nucleons is one where the neutrons and protons are found in a lattice of increasingly neutron-rich nuclei so as to decrease the energy due to the Coulomb repulsion between protons.  This process is called <strong>neutronization</strong> and produces sequences of nuclei, such as iron-56, nickel-62, nickel-64, nickel-66, krypton-86, <span class="math notranslate nohighlight">\(\ldots\)</span>, krypton-118. Ordinarily, the extra neutrons would revert to protons via the standard <span class="math notranslate nohighlight">\(\beta\)</span>-decay process,</p>
+<div class="math notranslate nohighlight">
+\[ n \rightarrow p^+ + e^- + \overline{\nu}_e. \]</div>
+<p>However, there are no vacant states available for an emitted electron to occupy, so neutrons cannot decay back into protons.  When the density reaches <span class="math notranslate nohighlight">\(4\times 10^{14}\ {\rm kg/m^3}\)</span>, the minimum-energy arrangement forces some of the neutrons to be found <em>outside</em> the nucleus.  The appearance of these free neutrons is called <strong>neutron drip</strong> and marks the start of a three-component mixture of a lattice of neutron-rich nuclei, nonrelativistic degenerate free neutrons, and relativistic degenerate electrons.</p>
+<p>The fluid of free neutrons has the striking property that is has no <em>viscosity</em>.  This occurs because a spontaneous pairing of the degenerate neutrons has taken place.  The resulting combination of two fermions (i.e., the neutrons) is a boson and so is not subject to the Pauli exclusion principle.  Because degenerate neutrons can all crowd into the lowest energy state, the fluid of paired neutrons can lose no energy and becomes a <strong>superfluid</strong> that flows without resistance.</p>
+<p>As the density increases further, the number of neutrons increases as the number of electrons declines.  The neutron degeneracy pressure exceeds the electron degeneracy, when the density reaches roughly <span class="math notranslate nohighlight">\(4\times 10^{15}\ {\rm kg/m^3}\)</span>.  As the density approaches <span class="math notranslate nohighlight">\(\rho_{nuc}\)</span>, the nuclei effectively dissolve as the distinction between neutrons becomes meaningless.  This results in a fluid mixture of free neutrons, protons, and electrons dominated by neutron degeneracy pressure, with both neutrons and protons paired to form superfluids.  The fluid of pairs of positively charged particles is also <strong>superconducting</strong> (i.e., zero electrical resistance).  As the density increases further, the ratio of neutrons to protons to electrons approaches a limiting value of 8:1:1 as determined by the balance between competing processes of electron capture and <span class="math notranslate nohighlight">\(\beta\)</span>-decay inhibited by the presence of degenerate electrons.</p>
 </div>
 <div class="section" id="neutron-star-models">
 <h3><span class="section-number">12.6.4. </span>Neutron Star Models<a class="headerlink" href="#neutron-star-models" title="Permalink to this headline">¶</a></h3>
