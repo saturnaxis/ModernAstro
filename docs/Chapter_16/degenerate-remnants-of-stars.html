@@ -431,13 +431,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#freezing-in-magnetic-field-lines">
-     12.6.7. “Freezing In” Magnetic Field Lines
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#neutron-star-temperatures">
-     12.6.8. Neutron Star Temperatures
+     12.6.7. Neutron Star Temperatures
     </a>
    </li>
   </ul>
@@ -1086,18 +1081,74 @@ The ratio of the Newtonian gravitational potential energy to the rest energy is 
 </div>
 <div class="section" id="neutron-star-models">
 <h3><span class="section-number">12.6.4. </span>Neutron Star Models<a class="headerlink" href="#neutron-star-models" title="Permalink to this headline">¶</a></h3>
+<p>After an equation of state that relates the density and pressure has been determined, a model of the star can be calculated by <em>numerically</em> integrating general-relativistic versions of the stellar structure equations.  The first quantitative model of a neutron star was calculated by <a class="reference external" href="https://en.wikipedia.org/wiki/J._Robert_Oppenheimer">J. Robert Oppenheimer</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/George_Volkoff">George Volkoff</a>.  Modern calculations of a <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star displays some typical features (although the details are sensitive to the equation of state).</p>
+<ol class="simple">
+<li><p>The outer crust consists of heavy nuclei, in the form of either a fluid “ocean” or a solid lattice, and relativistic degenerate electrons.  Nearest the surface, the nuclei are probably iron-56.  At greater depth and density, increasingly neutron-rich nuclei are encountered until neutron drip begins at the bottom of the outer crust (where $\rho \approx 4 \times 10^{14}\ {\rm kg/m^3}).</p></li>
+<li><p>The inner crust consists of a three-part mixture of a lattice of nuclei (e.g., krypton-118), a superfluid of free neutrons, and relativistic degenerate electrons.  The bottom of the inner crust occurs when <span class="math notranslate nohighlight">\(\rho \approx \rho_{nuc}\)</span>, and the nuclei dissolve.</p></li>
+<li><p>The interior of the neutron star consists primarily of superfluid neutrons, with a small number of superfluid, superconducting protons and relativistic degenerate electrons.</p></li>
+<li><p>There may or may not be a solid core consisting of pions or other sub-nuclear particles.  The density at the center of a <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star is about <span class="math notranslate nohighlight">\(10^{18}\ {\rm kg/m^3}\)</span>.</p></li>
+</ol>
 </div>
 <div class="section" id="the-chandrasekhar-limit-for-neutron-stars">
 <h3><span class="section-number">12.6.5. </span>The Chandrasekhar Limit for Neutron Stars<a class="headerlink" href="#the-chandrasekhar-limit-for-neutron-stars" title="Permalink to this headline">¶</a></h3>
+<p>Like white dwarfs, neutron stars obey a mass-volume relation,</p>
+<div class="math notranslate nohighlight">
+\[ M_{ns} V_{ns} = \text{constant}, \tag{24}\]</div>
+<p>so neutron stars become smaller and more dense with increasing mass.  However this mass-volume relation fails for more massive neutron stars because there is a point beyond which the neutron degeneracy pressure can no longer support the star.</p>
+<p>There is a maximum mass for neutrons stars, analogous to the Chandrasekhar limit for white dwarfs.  The value of this maximum mass is different depending on the equation of state.  Detailed computer modeling of neutron stars shows that the maximum possible mass for a neutron star cannot exceed about <span class="math notranslate nohighlight">\(2.2\ M_\odot\)</span> if it is static, and <span class="math notranslate nohighlight">\(2.9\ M_\odot\)</span> if it is rotating rapidly.</p>
+<p>If a neutron star is to remain dynamically stable and resist collapsing, it must respond to a small disturbance in its structure by rapidly adjusting its pressure to compensate.  There is a limit to how quickly such an adjustment can be made because these changes are conveyed by <em>sound waves</em> that must move more slowly than light.  If a neutron star’s mass exceeds <span class="math notranslate nohighlight">\(2.2\ M_\odot\)</span> or <span class="math notranslate nohighlight">\(2.9\ M_\odot\)</span>, it cannot generate pressure quickly enough to avoid collapsing. The result is a black hole.</p>
 </div>
 <div class="section" id="rapid-rotation-and-conservation-of-angular-momentum">
 <h3><span class="section-number">12.6.6. </span>Rapid Rotation and Conservation of Angular Momentum<a class="headerlink" href="#rapid-rotation-and-conservation-of-angular-momentum" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="freezing-in-magnetic-field-lines">
-<h3><span class="section-number">12.6.7. </span>“Freezing In” Magnetic Field Lines<a class="headerlink" href="#freezing-in-magnetic-field-lines" title="Permalink to this headline">¶</a></h3>
+<p>Before they were observed, it was anticipated that neutron stars must rotate very rapidly.  If the iron core of the pre-supernova supergiant star were rotating even slowly, then the decrease in radius would be so great that the conservation of angular momentum would guarantee the formation of a rapidly rotating neutron star.</p>
+<p>The scale of the collapse can be determined if we assume that the progenitor core is characteristic of a white dwarf composed entirely of iron.  Although the leading constants in the estimated radii for a white dwarf or neutron star are spurious (due to our approximations), the ratio of the radii is more accurate:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{R_{core}}{R_ns} \approx \frac{m_n}{m_e}\left( \frac{Z}{A}\right)^{5/3} = 512, \]</div>
+<p>using <span class="math notranslate nohighlight">\(Z/A = 26/56\)</span> for iron-56.  Applying the conservation of angular momentum to the collapsing core (assuming that <span class="math notranslate nohighlight">\(M_{core}=M_{wd}=M_{ns}\)</span>, or no mass loss).  Treating each star as a sphere with a moment of inertia <span class="math notranslate nohighlight">\(I = CMR^2\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[ I_i \omega_i = I_f\omega_f\]</div>
+<div class="math notranslate nohighlight">
+\[ CM_i R_i^2 \omega_i = CM_f R_f^2 \omega_f \]</div>
+<div class="math notranslate nohighlight">
+\[ \omega_f = \omega_i \left(\frac{R_i}{R_f}\right)^2. \]</div>
+<p>In terms of the rotation period <span class="math notranslate nohighlight">\(P\)</span>, this is <span class="math notranslate nohighlight">\(P_f = P_i \left(\frac{R_i}{R_f}\right)^2. \tag{24}\)</span>$</p>
+<p>For the specific case of an iron core collapsing to form a neutron star, Eqn. 6 shows that</p>
+<div class="math notranslate nohighlight">
+\[ P_{ns} \approx 3.8 \times 10^{-6}\ P_{core}. \tag{25} \]</div>
+<p>The question of how fast the progenitor core may be rotating is difficult to answer.  As a star evolves, its contracting core is not completely isolated from the surrounding envelope, where one cannot use the simple approach to conservation of angular momentum described above.</p>
+<p>For purposes of estimation, we will take <span class="math notranslate nohighlight">\(P_{core} = 1350\ {\rm s}\)</span>, the rotation period observed for the white dwarf 40 Eridani B.  Inserting this into Eqn. 25. results in a rotation period of about 0.005 s, or 5 ms.  Neutrons stars will be rotating very rapidly when they are formed with rotation periods on the order of a few milliseconds.</p>
 </div>
 <div class="section" id="neutron-star-temperatures">
-<h3><span class="section-number">12.6.8. </span>Neutron Star Temperatures<a class="headerlink" href="#neutron-star-temperatures" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.6.7. </span>Neutron Star Temperatures<a class="headerlink" href="#neutron-star-temperatures" title="Permalink to this headline">¶</a></h3>
+<p>Neutron stars were extremely hot when they wer forged in the “fires” of a supernova, with <span class="math notranslate nohighlight">\(T \sim 10^{11}\ {\rm K}\)</span>.  During the first day, the neutron star cools by emitting neutrinos via the <strong>URCA process</strong>,</p>
+<div class="math notranslate nohighlight">
+\[ n \rightarrow p^+ + e^- + \overline{\nu}_e\]</div>
+<div class="math notranslate nohighlight">
+\[ p^+ + e^- \rightarrow n + \nu_e. \]</div>
+<p>As the nucleons shuttle between being neutrons and protons, large number of neutrinos and antineutrinos are produced that fly unhindered into space and carry away energy to cool the neutron star.  This process can continue only as long as the nucleons are not degenerate.  It is suppressed after the protons and neutrons settle into the lowest unoccupied energy states.  This degeneracy occurs about one day after the formation of the neutron star, when its internal temperature has dropped to about <span class="math notranslate nohighlight">\(10^9\ {\rm K}\)</span>.</p>
+<p>Other neutrino emitting processes continue to dominate the cooling for approximately the first 1000 years, after which photon emission from the stellar surface take over.  The neutron star is a few hundred years old when its internal temperature has declined to <span class="math notranslate nohighlight">\(10^8\ {\rm K }\)</span>, with a surface temperature of several million <span class="math notranslate nohighlight">\({\rm K}\)</span>.  By no the cooling has slowed considerably, and the surface temperature will hover around 1 million <span class="math notranslate nohighlight">\({\rm K}\)</span> for the next 10,000 years as the neutron star cools at an essentially constant radius.</p>
+<p>It is interesting to calculate the blackbody luminosity of a <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star with a surface temperature of <span class="math notranslate nohighlight">\(T = 10^6\ {\rm K}\)</span>.  From the Stefan-Boltzmann law,</p>
+<div class="math notranslate nohighlight">
+\[ L = 4\pi R^2 \sigma T_e^4 = 7.13 \times 10^{25}\ {\rm W}. \]</div>
+<p>Although this is comparable to the luminosity of the Sun, the radiation is primarily in the form of X-rays since according to Wien’s law</p>
+<div class="math notranslate nohighlight">
+\[ \lambda_{max} = \frac{2.898e-3\ {\rm m\ K}}{T} = 2.9\ {\rm nm}. \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">Wien</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mf">1e6</span> <span class="c1">#surface temperature of a neutron star</span>
+
+<span class="n">l_max</span> <span class="o">=</span> <span class="n">Wien</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="mf">1e-9</span> <span class="c1">#Wien&#39;s law in nm</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The maximum wavelength for a neutron star is </span><span class="si">%1.2f</span><span class="s2"> nm. &quot;</span> <span class="o">%</span> <span class="n">l_max</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The maximum wavelength for a neutron star is 2.90 nm. 
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="pulsars">
