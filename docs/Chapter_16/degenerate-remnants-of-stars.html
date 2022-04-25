@@ -526,6 +526,56 @@
      12.7.12. Magnetars and Soft Gamma Repeaters
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     12.7.13. Pulsars as Rapidly Rotating Neutron Stars
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     12.7.14. Geminga
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     12.7.15. Evidence for a Core-Collapse Supernova Origin
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     12.7.16. Synchrotron and Curvature Radiation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     12.7.17. The Energy Source for the Crab’s Synchrotron Radiation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     12.7.18. The Structure of the Pulses
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     12.7.19. The Basic Pulsar Model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     12.7.20. Correlation Between Period Derivatives and Pulsar Classes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     12.7.21. Toward a Model of Pulsar Emission
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     12.7.22. Magnetars and Soft Gamma Repeaters
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -1204,11 +1254,49 @@ The ratio of the Newtonian gravitational potential energy to the rest energy is 
 </div>
 <div class="section" id="pulsars">
 <h2><span class="section-number">12.7. </span>Pulsars<a class="headerlink" href="#pulsars" title="Permalink to this headline">¶</a></h2>
+<p>Anthony Hewish and Jocelyn Bell were using an array of 2048 radio dipole antennae into a forest that covered 4.5 acres of the English countryside to study the scintillation (“flickering”) at 81.5 MHz that is observed in radio waves from distant sources known as quasars.  In July 1969, Bell found a bit of “scruff” that reappeared every ~400 feet on the rolls of her strip chart recorder.  Careful measurements showed that the signal reappeared every 23 hours and 56 minutes, which indicates that the source passed over her <em>fixed</em> antennae array every sidereal day at the same time.  Bell concluded that the source was among the stars rather than within the Solar System.</p>
+<p>To better resolve the signal, she used a faster recorder and discovered that the scruff consisted of a series of regularly spaced radio pulses with a spacing between pulses of 1.337 s (i.e., the pulse <strong>period</strong>, P).  Bell and Hewish considered the possibility that the signals originated from an extraterrestrial civilization since such a precise celestial clock had never before been observed.  Bell found another bit of scruff coming from another part of the sky and determined that “It was highly unlikely that two lots of Little Green Men could choose the same unusual frequency and unlikely technique to signal to the same inconspicuous planet Earth!”</p>
+<p>Hewish, Bell, and their colleagues announced the discovery of these mysterious <a class="reference external" href="https://en.wikipedia.org/wiki/Pulsar">pulsars</a>, and several more were quickly found by other radio observatories.  The <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2005AJ....129.1993M/abstract">Australia Telescope National Facility Catalog</a> contains the properties of over 1500 pulsars and each is designated by a “PSR” prefix (for <strong>P</strong>ulsating <strong>S</strong>ource of <strong>R</strong>adio) followed by its right ascension (<span class="math notranslate nohighlight">\(\alpha\)</span>) and declination (<span class="math notranslate nohighlight">\(\delta\)</span>).  For example, Bell’s first pulsar is PSR 1919+21, which identifies its position as <span class="math notranslate nohighlight">\(\alpha = 19{\rm h}\ 19{\rm m}\)</span> and <span class="math notranslate nohighlight">\(\delta = +21^\circ\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The term <em>pulsar</em> was coined by the science correspondent for the London Daily Telegraph.  See <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1968Natur.217..709H/abstract">Hewish et al. (1968)</a> for details of the discovery of pulsars.</p>
+</div>
 <div class="section" id="general-characteristics">
 <h3><span class="section-number">12.7.1. </span>General Characteristics<a class="headerlink" href="#general-characteristics" title="Permalink to this headline">¶</a></h3>
+<p>Pulsars share the following characteristics:</p>
+<ul class="simple">
+<li><p>Most pulsars have periods between <span class="math notranslate nohighlight">\(0.25-2\ {\rm s}\)</span> with an average period of about <span class="math notranslate nohighlight">\(0.795\ {\rm s}\)</span>.  The pulsar with the longest known period is PSR 1841-0456 (<span class="math notranslate nohighlight">\(P = 11.8\ {\rm s}\)</span>).  The fastest known pulsar period is <span class="math notranslate nohighlight">\(1.39\ {\rm ms}\)</span>, which is measured for PSR J1748-2446ad, or Terzan 5ad.</p></li>
+<li><p>Pulsars have extremely well-defined pulse periods and would make exceptionally accurate clocks.  The period of PSR1937+214 has been determined to be <span class="math notranslate nohighlight">\(P = 0.00155780644887275\ {\rm s}\)</span>, which is a measurement that challenges the accuracy of the best atomic clocks.</p></li>
+<li><p>The periods of all pulsars increase very gradually as the pulses slow down, where the rate of increase is given by the period derivative <span class="math notranslate nohighlight">\(\dot{P} \equiv dP/dt\)</span>.  Typicaly, <span class="math notranslate nohighlight">\(\dot{P} \approx 10^{-15}\)</span> and the <em>characteristic lifetime</em> (i.e., the time it would take for the pulses to cease if <span class="math notranslate nohighlight">\(\dot{P}\)</span> were constant) is <span class="math notranslate nohighlight">\(P/\dot{P} \sim 10^7\ {\rm yr}\)</span>.  The change in period for PSR 1937+214 is unusually small, <span class="math notranslate nohighlight">\(\dot{P} = 1.0151054 \times 10^{-19}\)</span>, which corresponds to a characteristic lifetime of <span class="math notranslate nohighlight">\(1.48 \times 10^{16}\ {\rm s}\)</span> or about 470 Myr.</p></li>
+</ul>
 </div>
 <div class="section" id="possible-pulsar-models">
 <h3><span class="section-number">12.7.2. </span>Possible Pulsar Models<a class="headerlink" href="#possible-pulsar-models" title="Permalink to this headline">¶</a></h3>
+<p>These characteristics enable astronomers to deduce the basic components of pulsars.  Hewish et al. (1968) suggested that an oscillating neutron star might be involved by <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1968Natur.218..731G/abstract">Gold (1968)</a> quickly and convincingly argued instead that pulsars are rapidly rotating neutron stars.</p>
+<p>These are three ways of obtaining rapid regular pulses in astronomy:</p>
+<blockquote>
+<div><p>1. <strong>Binary stars</strong>.  If the orbital periods of a binary star system are to fall in the range of the observed pulsar periods, then extremely compact stars must be involved (e.g., white dwarfs or neutron stars).</p>
+<ul class="simple">
+<li><p>If two Solar-mass stars were to orbit each other every 0.79 s, then their separation would be only <span class="math notranslate nohighlight">\(1.6 \times 10^6\ {\rm m}\)</span> from Newton’s version of Kepler’s third law.  This is much less than the <span class="math notranslate nohighlight">\(8.8 \times 10^6\ {\rm m}\)</span> radius of Sirius B, and the separation would be even smaller for more rapid pulsars.  This eliminates even the smallest, most massive white dwarfs from consideration</p></li>
+<li><p>Neutron stars are so small that two of them could orbit each other with a period that agrees with the pulse period.  However, this possibility is ruled out by Einstein’s general theory of relativity.  As the two neutron stars rapidly move through space-time, gravitational waves are generated that carry energy away from the binary system.  The neutron stars slowly spiral closer together (i.e., decreasing the orbital period) according to Kepler’s third law, but there is an observed <em>increase</em> in the pulsar periods.  This eliminates binary neutron stars as a source of the radio pulses.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>2. <strong>Pulsating stars</strong>.</p>
+<ul class="simple">
+<li><p>White dwarfs oscillate with periods between <span class="math notranslate nohighlight">\(100-1000\ {\rm s}\)</span>.  The periods of the nonradial <em>g</em>-modes are much longer than the observed pulsar periods.  The period for the radial fundamental mode is a few seconds, which is too long to explain the faster pulses.</p></li>
+<li><p>Neutron stars are about <span class="math notranslate nohighlight">\(10^8\times\)</span> denser than white dwarfs and according to the period-mean density relationship for stellar pulsation, the period of oscillation is proportional to <span class="math notranslate nohighlight">\(\rho^{-1/2}\)</span>.  This implies that neutron stars should vibrate approximately <span class="math notranslate nohighlight">\(10^4\times\)</span> more rapidly than white dwarfs.  The radial fundamental mode period would be around <span class="math notranslate nohighlight">\(10^{-4}\ {\rm s}\)</span>, where the nonradial <em>g</em>-modes would lie between <span class="math notranslate nohighlight">\(10^{-2}-10^{-1}\ {\rm s}\)</span>.  These periods are much too short for the slower pulsars, and this eliminates neutron star oscillations.</p></li>
+</ul>
+</div></blockquote>
+<blockquote>
+<div><p>3. <strong>Rotating stars</strong>.  The enormous angular momentum of a rapidly rotating compact star would guarantee its precise clock-lik behavior.  To estimate how fast such objects must be spinning, we calculate its angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> from the balance of gravity against the centripetal force.  This constraint is most severe at the star’s equator, where the stellar material moves most rapidly, which causes an equatorial bulge.  Ignoring this effect, the maximum angular velocity can be found bye equating the centripetal and gravitational accelerations at the equator,</p>
+<div class="math notranslate nohighlight">
+\[ \omega_{\rm max}^2 R = \frac{GM}{R^2}, \]</div>
+<p>so that the minimum rotation period is <span class="math notranslate nohighlight">\(P_{\rm min} = \frac{2\pi}{\omega_{\rm max}}\)</span>, or</p>
+<div class="math notranslate nohighlight">
+\[ P_{\rm min} = 2\pi \sqrt{\frac{R^3}{GM}}. \tag{26} \]</div>
+<p>For white dwarf like Sirius B, <span class="math notranslate nohighlight">\(P_{\rm min} \approx 7\ {\rm s}\)</span>, which is much too long.  However, for a <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star, <span class="math notranslate nohighlight">\(P_{\rm min} \approx 5 \times 10^{-4}\ {\rm s}\)</span>.  Because this is a <em>minimum</em> rotation period, it can accommodate the complete range of periods observed for pulsars.</p>
+</div></blockquote>
 </div>
 <div class="section" id="pulsars-as-rapidly-rotating-neutron-stars">
 <h3><span class="section-number">12.7.3. </span>Pulsars as Rapidly Rotating Neutron Stars<a class="headerlink" href="#pulsars-as-rapidly-rotating-neutron-stars" title="Permalink to this headline">¶</a></h3>
@@ -1239,6 +1327,36 @@ The ratio of the Newtonian gravitational potential energy to the rest energy is 
 </div>
 <div class="section" id="magnetars-and-soft-gamma-repeaters">
 <h3><span class="section-number">12.7.12. </span>Magnetars and Soft Gamma Repeaters<a class="headerlink" href="#magnetars-and-soft-gamma-repeaters" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">12.7.13. </span>Pulsars as Rapidly Rotating Neutron Stars<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">12.7.14. </span>Geminga<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">12.7.15. </span>Evidence for a Core-Collapse Supernova Origin<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">12.7.16. </span>Synchrotron and Curvature Radiation<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">12.7.17. </span>The Energy Source for the Crab’s Synchrotron Radiation<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id8">
+<h3><span class="section-number">12.7.18. </span>The Structure of the Pulses<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id9">
+<h3><span class="section-number">12.7.19. </span>The Basic Pulsar Model<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id10">
+<h3><span class="section-number">12.7.20. </span>Correlation Between Period Derivatives and Pulsar Classes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">12.7.21. </span>Toward a Model of Pulsar Emission<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id12">
+<h3><span class="section-number">12.7.22. </span>Magnetars and Soft Gamma Repeaters<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
