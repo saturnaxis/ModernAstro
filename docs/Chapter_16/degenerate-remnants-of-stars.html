@@ -1300,7 +1300,7 @@ The ratio of the Newtonian gravitational potential energy to the rest energy is 
 </div></blockquote>
 <div class="section" id="pulsars-as-rapidly-rotating-neutron-stars">
 <h4><span class="section-number">12.7.2.1. </span>Pulsars as Rapidly Rotating Neutron Stars<a class="headerlink" href="#pulsars-as-rapidly-rotating-neutron-stars" title="Permalink to this headline">¶</a></h4>
-<p>Only one alternative has emerged from the process of elimination that pulsars are rapidly rotating neutron stars.  This conclusion was strengthened by the discovery of pulsars associated with the Vela and Crab SNRs in 1968. The Crab pulsar (PSR 0531-21) has a very short pulse period of only <span class="math notranslate nohighlight">\(0.0333\ {\rm s}\)</span>, where no white dwarf could rotate 30 times per second without disintegrating.  <strong>Millisecond pulsars</strong> (<span class="math notranslate nohighlight">\(P \lesssim 10\ {\rm ms}\)</span>) hold the title for the fastest known pulsars.  The Vela and Crab pulsars not only produce radio bursts, but alsop pulse in other regions of the EM spectrum ranging from radio to gamma rays.  Young pulsars also display <strong>glitches</strong> when their periods abruptly decrease by a tiny amount, <span class="math notranslate nohighlight">\(|\Delta P|/P \approx 10^{-6}-10^{-8}\)</span>, and these sudden spinups are separated by uneven intervals of several years.</p>
+<p>Only one alternative has emerged from the process of elimination that pulsars are rapidly rotating neutron stars.  This conclusion was strengthened by the discovery of pulsars associated with the Vela and Crab SNRs in 1968. The <a class="reference external" href="https://en.wikipedia.org/wiki/Crab_Pulsar">Crab pulsar</a> (PSR 0531-21) has a very short pulse period of only <span class="math notranslate nohighlight">\(0.033392412\ {\rm s}\)</span> (latest measurement from <a class="reference external" href="https://academic.oup.com/mnras/article/446/1/857/1331802">Lyne et al. (2014)</a>), where no white dwarf could rotate 30 times per second without disintegrating.  <strong>Millisecond pulsars</strong> (<span class="math notranslate nohighlight">\(P \lesssim 10\ {\rm ms}\)</span>) hold the title for the fastest known pulsars.  The Vela and Crab pulsars not only produce radio bursts, but alsop pulse in other regions of the EM spectrum ranging from radio to gamma rays.  Young pulsars also display <strong>glitches</strong> when their periods abruptly decrease by a tiny amount, <span class="math notranslate nohighlight">\(|\Delta P|/P \approx 10^{-6}-10^{-8}\)</span>, and these sudden spinups are separated by uneven intervals of several years.</p>
 <div align="center">
 <img src="https://noirlab.edu/public/media/archives/images/thumb700x/noao-03036.jpg" width="500">
 <p><strong>Figure 12</strong>: A sequence of images showing the flashes at visible wavelengths from the Crab pulsar in the SNR. (Carroll &amp; Ostlie (2007); Image Credit: N.A.Sharp/NOIRLab/NSF/AURA ).</p>
@@ -1329,6 +1329,51 @@ The ratio of the Newtonian gravitational potential energy to the rest energy is 
 <p>In both cases, the energy distribution of the emitting electrons modulates the shape of the continuous spectrum, which easily distinguishes it from a spectrum of a normal blackbody.  The radiation is strongly linearly polarized along the direction of the electron’s motion.  Shklovsky predicted that the white light from the Crab Nebula would be strongly linearly polarized.  His prediction was confirmed as the light from some emitting regions of the nebula was measured as 60% linearly polarized.</p>
 <div class="section" id="the-energy-source-for-the-crab-s-synchrotron-radiation">
 <h4><span class="section-number">12.7.3.1. </span>The Energy Source for the Crab’s Synchrotron Radiation<a class="headerlink" href="#the-energy-source-for-the-crab-s-synchrotron-radiation" title="Permalink to this headline">¶</a></h4>
+<p>The explanation of the white glow as synchrotron radiation raised questions because it implied that magnetic fields must permeate the Crab Nebula.  According to theoretical estimates, this was a puzzle as the expansion of the nebula should have weakened the magnetic field far below <span class="math notranslate nohighlight">\(\sim 10^{-7}\ {\rm T}\)</span>.  The electrons should have radiated away all of their energy after 100 years.  Continuous injection of new energetic electrons and a replenishment of the magnetic fields are necessary to produce the observed synchrotron radiation of today.  The total power needed for these effects is calculated to be <span class="math notranslate nohighlight">\(\sim 5 \times 10^{31}\ {\rm W}\)</span>, or <span class="math notranslate nohighlight">\(&gt;10^5\ L_\odot\)</span>.</p>
+<p>The energy source is the rotating neutron star at the heart of the Crab Nebula that acts like a huge flywheel and stores an immense amount of rotational kinetic energy.  As the star slows down, its energy supply decreases.  To calculate the rate of energy loss, we write the rotational kinetic energy in terms of the period and moment of inertia of the neutron star as:</p>
+<div class="math notranslate nohighlight">
+\[ K = \frac{1}{2}I \omega^2 = I\frac{2\pi^2}{P^2}. \]</div>
+<p>Then the rate of energy loss is</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dK}{dt} = -I\frac{4\pi^2 \dot{P}}{P^3}. \tag{27} \]</div>
+<ul class="simple">
+<li><p><strong>What is the moment of inertia for the Crab pulsar assuming mass <span class="math notranslate nohighlight">\(M = 1.4\ M_\odot\)</span>, and a radius <span class="math notranslate nohighlight">\(R = 10\ {\rm km}\)</span>?  What is the energy loss?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>Assuming that the neutron star is a uniform sphere, we have</p>
+<div class="math notranslate nohighlight">
+\[ I = \frac{2}{5}MR^2 = 1.1 \times 10^{38}\ {\rm kg\ m^2}. \]</div>
+<p>Using the values of the rotation period and its derivative from <a class="reference external" href="https://academic.oup.com/mnras/article/446/1/857/1331802">Lyne et al. (2014)</a>, we have the pulsar period <span class="math notranslate nohighlight">\(P = 0.033392412\ {\rm s}\)</span> and the period’s rate of change <span class="math notranslate nohighlight">\(\dot{P} = 4.2097160 \times 10^{-13}\)</span>.  The energy loss is</p>
+<div class="math notranslate nohighlight">
+\[ |\dot{K}| = I\frac{4\pi^2 \dot{P}}{P^3} = 5 \times 10^{31}\ {\rm W}. \]</div>
+<p>This is exactly the energy needed to power the Crab Nebula.  The slowing down of the neutron star flywheel has allowed the nebula to continue shining and expanding for nearly 1000 years.</p>
+<p>The energy is not transported to the nebula by the pulse itself, where the radio luminosity of the Crab’s pulse is <span class="math notranslate nohighlight">\(\sim 10^{24}\ {\rm W}\)</span>, or 200 million time smaller than the energy rate delivered to the nebula.  The pulse process is a minor component of the total energy-loss mechanism.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">M_sun</span> <span class="o">=</span> <span class="mf">1.989e30</span> <span class="c1">#Mass of the Sun in kg</span>
+<span class="n">M_ns</span> <span class="o">=</span> <span class="mf">1.4</span><span class="o">*</span><span class="n">M_sun</span> <span class="c1">#Mass of neutron star in kg</span>
+<span class="n">R_ns</span> <span class="o">=</span> <span class="mf">1e4</span> <span class="c1">#Radius of neutron star in m</span>
+<span class="n">P_ns</span> <span class="o">=</span> <span class="mf">0.033392412</span> <span class="c1">#period of the Crab pulsar in sec</span>
+<span class="n">Pdot_ns</span> <span class="o">=</span> <span class="mf">4.2097160e-13</span> <span class="c1">#period change from Lyne et al. 2014</span>
+
+<span class="n">I_ns</span> <span class="o">=</span> <span class="mf">0.4</span><span class="o">*</span><span class="n">M_ns</span><span class="o">*</span><span class="n">R_ns</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The moment of inertia for the neutron star is </span><span class="si">%1.1e</span><span class="s2"> kg m^2.&quot;</span> <span class="o">%</span> <span class="n">I_ns</span><span class="p">)</span>
+
+<span class="n">Kdot_ns</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">I_ns</span><span class="o">*</span><span class="n">Pdot_ns</span><span class="o">/</span><span class="n">P_ns</span><span class="o">**</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The energy loss of the pulsar is </span><span class="si">%1.1e</span><span class="s2"> W.&quot;</span> <span class="o">%</span> <span class="n">Kdot_ns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The moment of inertia for the neutron star is 1.1e+38 kg m^2.
+The energy loss of the pulsar is 5.0e+31 W.
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="the-structure-of-the-pulses">
 <h4><span class="section-number">12.7.3.2. </span>The Structure of the Pulses<a class="headerlink" href="#the-structure-of-the-pulses" title="Permalink to this headline">¶</a></h4>
