@@ -11,13 +11,16 @@ parts:
   - file: Chapter_5/interaction-of-light-and-matter
   - file: Chapter_6/telescopes
   - file: Chapter_8/classification-of-stellar-spectra
+- caption: Stellar Interiors & Star Formation
+  numbered: true
+  chapters: 
   - file: Chapter_9/stellar-atmospheres
   - file: Chapter_10/sun
-- caption: Stars
-  numbered: true
-  chapters:
   - file: Chapter_11/interiors-of-stars
   - file: Chapter_12/interstellar-medium-and-star-formation
+- caption: Stellar Evolution & Death
+  numbered: true
+  chapters:
   - file: Chapter_13/stellar-evolution
   - file: Chapter_14/stellar-pulsation
   - file: Chapter_15/fate-of-massive-stars
