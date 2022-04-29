@@ -9,31 +9,13 @@ and
 
 where both presentations will be assessed by both the instructor and fellow students.  The presentation using the astropy tutorials must explain to the class: how to use the relevant tools and connect to the material in the associated chapters of the textbook (as indicated below).
 
-## Introduction
-- Chapter 3: The Continuous Spectrum of Light
-- Chapter 5: The Interaction of Light and Matter
-- Chapter 6: Telescopes
-- Chapter 8: The Classification of Stellar Spectra
-
-## Stellar Interiors & Star Formation
-- Chapter 9: Stellar Atmospheres
-- Chapter 10: The Sun
-- Chapter 11: The Interiors of Stars
-- Chapter 12: The Interstellar Medium and Star Formation
-
-## Stellar Evolution & Death
-- Chapter 13: Main-Sequence and Post-Main-Sequence Stellar Evolution
-- Chapter 14: Stellar Pulsation
-- Chapter 15: The Fate of Massive Stars
-- Chapter 16: The Degenerate Remnants of Stars
-
 ## [Astropy](https://learn.astropy.org/) 
-- Modeling 2: Create a User Defined Model using astropy.modeling (Chapter 8)
-- Analyzing UVES Spectroscopy with Astropy (Chapter 9)
-- Analyzing interstellar reddening and calculating synthetic photometry (Chapter 12)
-- Astronomical Coordinates 4: Cross-matching Catalogs Using astropy.coordinates and astroquery (Chapter 13)
-- Modeling 1: Make a quick fit using astropy.modeling (Chapter 14)
-- Using Astropy Quantities and Units for astrophysical calculations (Chapter 25)
+- Modeling 2: Create a User Defined Model using astropy.modeling (The Classification of Stellar Spectra)
+- Analyzing UVES Spectroscopy with Astropy (Stellar Atmospheres)
+- Analyzing interstellar reddening and calculating synthetic photometry (The Interstellar Medium and Star Formation)
+- Astronomical Coordinates 4: Cross-matching Catalogs Using astropy.coordinates and astroquery (Main-Sequence and Post-Main-Sequence Stellar Evolution)
+- Modeling 1: Make a quick fit using astropy.modeling (Stellar Pulsation)
+
 
 ## Annual Review of Astronomy and Astrophysics (AARA)
 - Chemical Composition of the Sun (Asplund et al. 2009)
