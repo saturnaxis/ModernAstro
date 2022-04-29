@@ -4,6 +4,11 @@
 format: jb-book
 root: home
 parts:
+- caption: Preamble
+  chapters:
+  - file: Preamble/who-for
+  - file: Preamble/Python-basics
+  - file: Preamble/Markdown-basics
 - caption: Introduction
   numbered: true
   chapters:
