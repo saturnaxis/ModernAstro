@@ -1377,12 +1377,80 @@ The energy loss of the pulsar is 5.0e+31 W.
 </div>
 <div class="section" id="the-structure-of-the-pulses">
 <h4><span class="section-number">12.7.3.2. </span>The Structure of the Pulses<a class="headerlink" href="#the-structure-of-the-pulses" title="Permalink to this headline">¶</a></h4>
+<p>The pulses are brief and are received over a small fraction of the pulse period (<span class="math notranslate nohighlight">\(\sim\)</span> 1-5%).  Generally, they are received between 20 MHz and 10 GHz in the radio.  AS the pulses travel through interstellar space, they are modified by electrons that they encounter along the way through their time-varying electric fields.  This process slows the radio waves so that their speed is less than the speed of light in a vacuum and a greater retardation (i.e., slowing) occurs at lower frequencies.  The sharp pulse emitted at the neutron star (with all the frequencies peaking at the same time) is gradually dispersed as it travels to Earth.  More distant pulsars exhibit a greater pulse dispersion and these time delays can be used to measure the distances to pulsars.  From these distance measurements, we find that pulsars are concentrated within the plane of our Milky Way Galaxy at distances of 100-1000s of parsecs.</p>
+<p>An integrated <em>pulse profile</em> is an average built up by adding together a train of 100 or more pulses, which shows to be remarkably stable.  Some pulsars have more than one average pulse profile and abruptly switch back-and-forth between them.  The subpulses may appear at random dimes in the “window” of the main pulse, or they may march across as <em>drifting subpulses</em>.  For about 30% of all known pulsars, the individual pulses may simply disappear (or <em>null</em>), only to reappear up to 100 periods later.  Drifting subpulses may even emerge from a nulling event in step with those that entered the null.  The radio waves of many pulsars are strongly linearly polarized (up 100%), which indicates the presence of a strong magnetic field.</p>
 </div>
 </div>
 <div class="section" id="the-basic-pulsar-model">
 <h3><span class="section-number">12.7.4. </span>The Basic Pulsar Model<a class="headerlink" href="#the-basic-pulsar-model" title="Permalink to this headline">¶</a></h3>
+<p>The basic pulsar model consists of a rapidly rotating neutron star with a strong dipole magnetic field (i.e., north and south poles) that is incline to the rotation axis at an angle <span class="math notranslate nohighlight">\(\theta\)</span>.  To begin constructing the model, we need to obtain a measure of the pulsar’s magnetic field strength.  As the pulsar rotates, the magnetic field at any point in space will change rapidly.  According to Faraday’s law, this will induce an electric field at that point.</p>
+<p>Far from the star (near the <strong>light cylinder</strong>) the time-varying electric and magnetic fields form an EM wave tha carries energy away from the star, which is called the <strong>magnetic dipole radiation</strong>.  The energy per second emitted by the rotating magnetic dipole is</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d\text{Energy}}{dt} = -\frac{32\pi^5 B^2 R^6 \sin^2 \theta}{3\mu_o c^3 P^4}, \tag{28} \]</div>
+<p>which depends on the magnetic field strength <span class="math notranslate nohighlight">\(B\)</span> at the pole of the star, with a radius <span class="math notranslate nohighlight">\(R\)</span>.  The negative sign indicates that the neutron star is drained of energy, which causes its rotation period <span class="math notranslate nohighlight">\(P\)</span> to increase.  The dependence on the pulsar period by <span class="math notranslate nohighlight">\(1/P^4\)</span> means that the neutron star will lose energy more quickly at shorter periods.  The average pulsar period is 0.79 s and most pulsar are born spinning considerably faster than their current rates with typical initial periods of a few milliseconds.</p>
+<p>Assuming that all of the rotational kinetic energy lost by the star is carried away by magnetic dipole radiation, we have</p>
+<div class="math notranslate nohighlight">
+\[ \frac{32\pi^5 B^2 R^6 \sin^2 \theta}{3\mu_o c^3 P^4} = I\frac{4\pi^2 \dot{P}}{P^3}, \]</div>
+<p>which can be solved for the magnetic field at the pole of the neutron star as</p>
+<div class="math notranslate nohighlight">
+\[ B = \frac{\sqrt{3\mu_o c^3 I P \dot{P}}}{\left(2\pi \right)^{3/2} R^3 \sin \theta}. \tag{29}\]</div>
+<ul class="simple">
+<li><p><strong>What is an estimate of the magnetic field strength (at the poles) of the Crab pulsar?</strong></p></li>
+</ul>
+<blockquote>
+<div><p>For the Crab pulsar, we have measurements (<a class="reference external" href="https://academic.oup.com/mnras/article/446/1/857/1331802">Lyne et al. (2014)</a>) of the period <span class="math notranslate nohighlight">\(P = 0.033392412\ {\rm s}\)</span> and its derivative <span class="math notranslate nohighlight">\(\dot{P} = 4.209716 \times 10^{-13}\)</span>.  Assuming that <span class="math notranslate nohighlight">\(\theta = 90^\circ\)</span> and from previous problems, we have that the radius of the pulsar <span class="math notranslate nohighlight">\(R = 10\ {\rm km}\)</span> and the moment of inertia <span class="math notranslate nohighlight">\(I = 1.1 \times 10^{38}\ {\rm kg m^2}\)</span>.  Then we can use these values to solve for <span class="math notranslate nohighlight">\(B\)</span> in</p>
+<div class="math notranslate nohighlight">
+\[B = \frac{\sqrt{3\mu_o c^3 (1.1 \times 10^{38}) (0.033392412) (4.209716 \times 10^{-13})}}{\left(2\pi \right)^{3/2} (10^7) \sin 90^\circ}  = 8 \times 10^8\ {\rm T}.\]</div>
+<p>The pulsar is interacting with gas and dust in the surrounding nebula, which contributes to the slowing down the pulsar’s spin.  The above value is an overestimate, where the accepted value is half as much (<span class="math notranslate nohighlight">\(B = 4 \times 10^8\ {\rm T}\)</span>).</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>What is an estimate of the magnetic field strength (at the poles) of PSR 1937+214?</strong></p></li>
+</ul>
+<blockquote>
+<div><p><a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1994ApJ...428..713K/abstract">Kaspi, Taylor, &amp; Ryba (1994)</a> have measured the period <span class="math notranslate nohighlight">\(P = 0.00155780646889794\ {\rm s}\)</span> and its derivative <span class="math notranslate nohighlight">\(\dot{P} = 1.051193 \times 10^{-19}\)</span>.  Assuming a similar radius as the Crab pulsar (and moment of inertia), the magnetic field strength is</p>
+<div class="math notranslate nohighlight">
+\[B = \frac{\sqrt{3\mu_o c^3 (1.1 \times 10^{38}) (0.00155780646889794) (1.051193 \times 10^{-19})}}{\left(2\pi \right)^{3/2} (10^7) \sin 90^\circ}  = 8.6 \times 10^4\ {\rm T}.\]</div>
+<p>This much smaller value distinguishes the millisecond pulsars and provides another hint that these fastest pulsars may have a different origin or environment.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">c</span><span class="p">,</span> <span class="n">mu_0</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">I_ns</span> <span class="o">=</span> <span class="mf">1.1e38</span> <span class="c1">#moment of inertia of Crab pulsar in kg m^2</span>
+<span class="n">P_ns</span> <span class="o">=</span> <span class="mf">0.033392412</span> <span class="c1">#pulse period in sec from Lyne et al. (2014)</span>
+<span class="n">dP_ns</span> <span class="o">=</span> <span class="mf">4.209716e-13</span> <span class="c1">#derivative of the pulse period</span>
+<span class="n">R_ns</span> <span class="o">=</span> <span class="mf">1e4</span> <span class="c1">#radius of the Crab pulsar</span>
+
+<span class="k">def</span> <span class="nf">B_ns</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">Pdot</span><span class="p">):</span>
+    <span class="c1">#P = Period of the pulsar in sec</span>
+    <span class="c1">#Pdot = time derivative of the pulse period</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">mu_0</span><span class="o">*</span><span class="n">c</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">I_ns</span><span class="o">*</span><span class="n">P</span><span class="o">*</span><span class="n">Pdot</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span> <span class="o">*</span> <span class="n">R_ns</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The magetic field strength of the Crab Pulsar is approximately </span><span class="si">%1.1e</span><span class="s2"> T.&quot;</span>  <span class="o">%</span> <span class="n">B_ns</span><span class="p">(</span><span class="n">P_ns</span><span class="p">,</span><span class="n">dP_ns</span><span class="p">))</span>
+
+<span class="n">P_ns</span> <span class="o">=</span> <span class="mf">0.00155780646889794</span> <span class="c1">#pulse period in sec from Kaspi, Taylor, &amp; Ryba (1994)</span>
+<span class="n">dP_ns</span> <span class="o">=</span> <span class="mf">1.051193e-19</span> <span class="c1">#derivative of the pulse period</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The magetic field strength of PSR 1937+214 is approximately </span><span class="si">%1.1e</span><span class="s2"> T.&quot;</span>  <span class="o">%</span> <span class="n">B_ns</span><span class="p">(</span><span class="n">P_ns</span><span class="p">,</span><span class="n">dP_ns</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The magetic field strength of the Crab Pulsar is approximately 8.0e+08 T.
+The magetic field strength of PSR 1937+214 is approximately 8.6e+04 T.
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="correlation-between-period-derivatives-and-pulsar-classes">
 <h4><span class="section-number">12.7.4.1. </span>Correlation Between Period Derivatives and Pulsar Classes<a class="headerlink" href="#correlation-between-period-derivatives-and-pulsar-classes" title="Permalink to this headline">¶</a></h4>
+<p>The distribution of period derivatives for pulsars as a function of pulsar period shows that the vas majority of pulsars fall into a large grouping near <span class="math notranslate nohighlight">\(\log_{10}\ P = -0.25\)</span> or <span class="math notranslate nohighlight">\(\sim 0.5\ {\rm s}\)</span>.  The millisecond pulsars show a clear correlation with pulsars known to exist in binary systems.  Other evident features are:</p>
+<ul class="simple">
+<li><p>Pulsars known to emit energy at X-ray wavelengths have the longest periods and the largest period derivatives.</p></li>
+<li><p>High-energy pulsars that emit energies from the radio to the IR (or higher frequencies) tend to have larger values of <span class="math notranslate nohighlight">\(\dot{P}\)</span>, but otherwise typical periods.</p></li>
+<li><p>Nearly all of the pulsars represented have <span class="math notranslate nohighlight">\(\dot{P}&gt;0\)</span> (i.e., slowing down), where some of them have <span class="math notranslate nohighlight">\(\dot{P} &lt; 0\)</span> (i.e., speeding up!).</p></li>
+</ul>
 </div>
 <div class="section" id="toward-a-model-of-pulsar-emission">
 <h4><span class="section-number">12.7.4.2. </span>Toward a Model of Pulsar Emission<a class="headerlink" href="#toward-a-model-of-pulsar-emission" title="Permalink to this headline">¶</a></h4>
