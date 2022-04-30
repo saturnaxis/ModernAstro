@@ -647,7 +647,22 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The scale height of the Sun&#39;s photosphere is 677 km.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_441</span><span class="o">/</span><span class="mf">1809616061.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">T2_Sun</span> <span class="o">=</span> <span class="mi">5790</span> <span class="c1">#K</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">r_Sun</span> <span class="o">=</span> <span class="mf">25.0</span> <span class="c1">#km</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">H_T</span> <span class="o">=</span> <span class="n">scale_height</span><span class="p">(</span><span class="n">T1_Sun</span><span class="p">,</span><span class="n">T2_Sun</span><span class="p">,</span><span class="n">r_Sun</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The scale height of the Sun&#39;s photosphere is </span><span class="si">%3d</span><span class="s2"> km.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">H_T</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="nn">/tmp/ipykernel_441/1809616061.py</span> in <span class="ni">scale_height</span><span class="nt">(T1, T2, r)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="c1">#T2 = high temperature</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="c1">#r = distance traveled</span>
+<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">T_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">T1</span><span class="p">,</span><span class="n">T2</span><span class="p">])</span> <span class="c1">#average temperature</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">dT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">([</span><span class="n">T1</span><span class="p">,</span><span class="n">T2</span><span class="p">]))</span> <span class="c1">#temperature range dT</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="k">return</span> <span class="n">T_avg</span><span class="o">/</span><span class="p">(</span><span class="n">dT</span><span class="o">/</span><span class="n">r</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -682,7 +697,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean free path between collisions in the Sun&#39;s photosphere is 2.26e-04 m.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_441</span><span class="o">/</span><span class="mf">2269972501.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">n_H</span> <span class="o">=</span> <span class="mf">2.1e-4</span><span class="o">/</span><span class="mf">1.67e-27</span> <span class="c1">#number density of H atoms in Sun&#39;s photosphere</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">a_o</span> <span class="o">=</span> <span class="mf">5.29e-11</span> <span class="c1">#m; radius of the Bohr atom</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">sigma_H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a_o</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">ell_H</span> <span class="o">=</span>  <span class="n">mean_free_path</span><span class="p">(</span><span class="n">n_H</span><span class="p">,</span><span class="n">sigma_H</span><span class="p">)</span>
+<span class="nn">     10 print(&quot;The mean free path between collisions</span> in <span class="ni">the Sun&#39;s photosphere is %1.2e m.&quot; % np.round</span><span class="nt">(ell_H,6))</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -723,7 +747,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The characteristic distance traveled by a photon in the Solar photosphere is 160 km.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_441</span><span class="o">/</span><span class="mf">2501838282.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">rho_photo_Sun</span> <span class="o">=</span> <span class="mf">2.1e-4</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">ell_500</span> <span class="o">=</span> <span class="n">opacity_length</span><span class="p">(</span><span class="n">kappa_500</span><span class="p">,</span><span class="n">rho_photo_Sun</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span> <span class="c1">#convert to km</span>
+<span class="nn">----&gt; 9 print(&quot;The characteristic distance traveled by a photon</span> in <span class="ni">the Solar photosphere is %3d km.&quot; % np.round</span><span class="nt">(ell_500,-1))</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -824,7 +855,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The maximum wavelength photon that can ionize a H atom (first excited state) is 364.7 nm.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_441</span><span class="o">/</span><span class="mf">1807629362.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">hc_eV</span> <span class="o">=</span> <span class="mf">1239.84198</span> <span class="c1">#eV*nm; https://en.wikipedia.org/wiki/Planck_constant</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The maximum wavelength photon that can ionize a H atom (first excited state) is </span><span class="si">%3.1f</span><span class="s2"> nm.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">bound_free_H</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
