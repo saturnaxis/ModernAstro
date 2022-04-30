@@ -472,92 +472,33 @@
 <li><p>You and <em>future you</em> need to communicate; It is not uncommon to write some code and comeback to it more than 6 months later.  After which, some unkind words maybe directed at <em>past you</em> from yourself for not leaving comments.</p></li>
 <li><p>The <em>future person</em> to read the code may not be <em>future you</em> and they will not know what you were thinking.</p></li>
 </ul>
-<p>Comments can be designated with the # (hashtag) symbol, where the text that follows it is ignored by the interpreter until the next line.  However this can be impractical if you are providing a description of a function that takes many lines.  In this case, three ‘ (apostrophe) symbols are used to begin a <em>block comment</em>, where another three ‘ symbols are needed to end the block comment.  Otherwise, the interpeter will either return an error or not do anything at all.</p>
+<p>Comments can be designated with the # (hashtag) symbol, where the text that follows it is ignored by the interpreter until the next line.  However this can be impractical if you are providing a description of a function that takes many lines.  In this case, three ‘ (apostrophe) symbols are used to begin a <em>block comment</em>, where another three ‘ symbols are needed to end the block comment.  Otherwise, the interpreter will either return an error or not do anything at all.</p>
 </div>
 <div class="section" id="simple-input-output">
 <h2>Simple Input &amp; Output<a class="headerlink" href="#simple-input-output" title="Permalink to this headline">¶</a></h2>
-<p>In the previous chapter, we read from a file using the <em>genfromtxt</em> function from Numpy, but you may want to take in some user input “on the fly”.  This can be accomplished using the <em>input</em> function, where you will need to designate a variable to store the user input.  For example:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_997</span><span class="o">/</span><span class="mf">3375148907.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1001</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1002</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">-&gt; </span><span class="mi">1003</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1004</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1005</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">quest</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your quest?&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">quest</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_997</span><span class="o">/</span><span class="mf">2406176640.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">quest</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your quest?&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">quest</span><span class="p">)</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1001</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1002</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">-&gt; </span><span class="mi">1003</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1004</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1005</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">airspeed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the airspeed of a laden swallow?&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">airspeed</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">airspeed</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_997</span><span class="o">/</span><span class="mf">1647399081.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">airspeed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the airspeed of a laden swallow?&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">airspeed</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">airspeed</span><span class="p">))</span>
-
-<span class="nn">~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1001</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1002</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">-&gt; </span><span class="mi">1003</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1004</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1005</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
+<p>we could read from a file using the <em>genfromtxt</em> function from Numpy, but you may want to take in some user input “on the fly”.  This can be accomplished using the <em>input</em> function, where you will need to designate a variable to store the user input.  You could try the following in a python interpreter (like Google Colab):</p>
+<blockquote>
+<div><p>name = input(“What is your name?”)
+print(name)</p>
+<p>Arthur, King of the Britains</p>
+</div></blockquote>
+<blockquote>
+<div><p>quest = input(“What is your quest?”)
+print(quest)</p>
+<p>To search for the holy grail</p>
+</div></blockquote>
+<blockquote>
+<div><p>airspeed = input(“What is the airspeed of a laden swallow?”)
+print(airspeed, type(airspeed))</p>
+<p>African or European? &lt;class ‘str’&gt;</p>
+</div></blockquote>
 <p>Notice in the above examples that <em>input</em> stored the user input as a string of characters (<em>string</em> or <em>str</em>).</p>
-<p>Output can be directed to a file or the command prompt.  For the command prompt, you can print stored variables using the <em>print</em> function.  To determine the data type of a stored variable, use the <em>type</em> function. <em>Note: that type can return datatypes like ndarray for numpy array as well as string, int, or float.</em></p>
-<p>Printing variables isn’t limited to strings, but can be useful for probing numerical variables when debugging your code.  For example, you might think your code is doing one thing, when in fact it is doing something else entirely.  Python borrows a print syntax that is simlar to the one used in C/C++ programs.  Let’s look at the value of <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<p>Output can be directed to a file or the command prompt.  For the command prompt, you can print stored variables using the <em>print</em> function.  To determine the data type of a stored variable, use the <em>type</em> function.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">type</span></code> function can return datatypes like ndarray for numpy array as well as string, int, or float.</p>
+</div>
+<p>Printing variables isn’t limited to strings, but can be useful for probing numerical variables when debugging your code.  For example, you might think your code is doing one thing, when in fact it is doing something else entirely.  Python borrows a print syntax that is similar to the one used in C/C++ programs.  Let’s look at the value of <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -671,7 +612,7 @@
 <ul>
 <li><p><strong>Integer</strong>: The integer is the simplest numeric type in Python.  They are useful for counting items or tracking indices in an array. The maximum 32 bit integer is <span class="math notranslate nohighlight">\(2^{31}\)</span> - 1 = 2,147,483,647</p></li>
 <li><p><strong>Long Integer</strong>: Integers larger than <span class="math notranslate nohighlight">\(2^{31}\)</span> - 1 are stored automatically as long integers.  When you use the <em>type</em> function on them, there is a trailing “L” to indicate it is a long integer.</p></li>
-<li><p><strong>Float</strong>: The <em>floating point</em> type is a number containing a decimal point.  Floats require more memory to store and are slower in calculations.  Python upconverts variable types (recall the 1/2 = 0 vs 1./2 = 0.5 distinction).</p></li>
+<li><p><strong>Float</strong>: The <em>floating point</em> type is a number containing a decimal point.  Floats require more memory to store and are slower in calculations.  Python up-converts variable types (recall the 1/2 = 0 vs 1./2 = 0.5 distinction).</p></li>
 <li><p><strong>Complex</strong>: Complex numbers are naturally included in Python, but uses <span class="math notranslate nohighlight">\(j\equiv\sqrt{-1}\)</span>. For example, <span class="math notranslate nohighlight">\(x=0.5+1.2j\)</span> is a valid complex number.</p></li>
 </ul>
 </li>
@@ -713,7 +654,7 @@
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_997</span><span class="o">/</span><span class="mf">3044001841.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1019</span><span class="o">/</span><span class="mf">3044001841.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> 
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1">#Let&#39;s see what happens if we try to replace an element of a tuple</span>
 <span class="ne">---&gt; </span><span class="mi">11</span> <span class="n">Pythons</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Atkinson&quot;</span>
@@ -1043,6 +984,9 @@ this line is multiple     physical lines but is     just one logical line
 [&#39;this&#39;, &#39;line&#39;, &#39;is&#39;, &#39;multiple&#39;, &#39;physical&#39;, &#39;lines&#39;, &#39;but&#39;, &#39;is&#39;, &#39;just&#39;, &#39;one&#39;, &#39;logical&#39;, &#39;line&#39;]
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1087,7 +1031,7 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_997</span><span class="o">/</span><span class="mf">2332645062.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1019</span><span class="o">/</span><span class="mf">2332645062.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">Name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">Cast</span> <span class="o">=</span> <span class="n">Pythons</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">if</span> <span class="n">Name</span> <span class="ow">in</span> <span class="n">Cast</span><span class="p">:</span>
@@ -1169,7 +1113,7 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_997</span><span class="o">/</span><span class="mf">1525305114.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1019</span><span class="o">/</span><span class="mf">1525305114.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># DISCLAIMER: This is not the most efficient way</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">Number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What integer do you want to check?&quot;</span><span class="p">))</span> <span class="c1">#need to make sure input is an integer</span>
@@ -1317,7 +1261,7 @@ values after function call  4 5 9
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_997</span><span class="o">/</span><span class="mf">3051014369.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1019</span><span class="o">/</span><span class="mf">3051014369.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> 
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1">#Can we print d here?</span>
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
@@ -1366,7 +1310,7 @@ function value at pi/6 is:  0.8660254037844387
 function value at pi/6 is:  0.5773502691896257
 </pre></div>
 </div>
-<img alt="../_images/Python-basics_69_1.png" src="../_images/Python-basics_69_1.png" />
+<img alt="../_images/Python-basics_66_1.png" src="../_images/Python-basics_66_1.png" />
 </div>
 </div>
 <p>The functions in this example are stored in a list, referred to as elements in lists, and passed to other functions.</p>
