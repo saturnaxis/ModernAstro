@@ -28,9 +28,11 @@ execute:
 # Parse and render settings
 parse:
   myst_url_schemes          : [mailto, http, https]  # URI schemes that will be recognised as external URLs in Markdown links
-  #myst_enable_extensions:
-  #  - html_image
-  #  - amsmath
+  myst_enable_extensions:
+    - amsmath  # needed for LaTeX-style math blocks like \begin{align*} \end{align*} with $$ delimitations
+    - dollarmath
+    - html_image
+    - html_admonition
   #   # don't forget to list any other extensions you want enabled,
   #   # including those that are enabled by default!
   #  - amsmath  # needed for LaTeX-style math blocks like \begin{align*} \end{align*} with $$ delimitations
@@ -73,3 +75,5 @@ html:
 sphinx:
   config:
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  extra_extensions:
+    - sphinx_exercise

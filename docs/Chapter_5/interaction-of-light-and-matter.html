@@ -28,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -41,16 +44,15 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_5/interaction-of-light-and-matter.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -252,7 +254,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -299,7 +301,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -326,14 +328,6 @@
      2.1.3. Spectrographs
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problems">
-     2.1.4.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -349,14 +343,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-compton-effect">
      2.2.2. The Compton Effect
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     2.2.3.
-     <strong>
-      Problems
-     </strong>
     </a>
    </li>
   </ul>
@@ -379,14 +365,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bohr-s-semiclassical-atom">
      2.3.3. Bohr’s Semiclassical Atom
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     2.3.4.
-     <strong>
-      Problems
-     </strong>
     </a>
    </li>
   </ul>
@@ -426,15 +404,15 @@
      2.4.6. The Complex Spectra of Atoms
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     2.4.7.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework">
+   2.5.
+   <strong>
+    Homework
+   </strong>
+  </a>
  </li>
 </ul>
 
@@ -444,7 +422,131 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The Interaction of Matter and Light</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectral-lines">
+   2.1. Spectral Lines
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kirchoff-s-laws">
+     2.1.1. Kirchoff’s Laws
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applications-of-stellar-spectral-data">
+     2.1.2. Applications of Stellar Spectral Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spectrographs">
+     2.1.3. Spectrographs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#photons">
+   2.2. Photons
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-photoelectric-effect">
+     2.2.1. The Photoelectric Effect
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-compton-effect">
+     2.2.2. The Compton Effect
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-bohr-model-of-the-atom">
+   2.3. The Bohr Model of the Atom
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-structure-of-the-atom">
+     2.3.1. The Structure of the Atom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-wavelength-of-hydrogen">
+     2.3.2. The Wavelength of Hydrogen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bohr-s-semiclassical-atom">
+     2.3.3. Bohr’s Semiclassical Atom
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-mechanics-and-wave-particle-duality">
+   2.4. Quantum Mechanics and Wave-Particle Duality
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#de-broglie-s-wavelength-and-frequency">
+     2.4.1. de Broglie’s Wavelength and Frequency
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heisenberg-s-uncertainty-principle">
+     2.4.2. Heisenberg’s Uncertainty Principle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantum-mechanical-tunneling">
+     2.4.3. Quantum Mechanical Tunneling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schrodinger-s-equation-and-the-quantum-mechanical-atom">
+     2.4.4. Schrödinger’s Equation and the Quantum Mechanical Atom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spin-and-the-pauli-exclusion-principle">
+     2.4.5. Spin and the Pauli Exclusion Principle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-complex-spectra-of-atoms">
+     2.4.6. The Complex Spectra of Atoms
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homework">
+   2.5.
+   <strong>
+    Homework
+   </strong>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-interaction-of-matter-and-light">
@@ -452,16 +554,14 @@
 <div class="section" id="spectral-lines">
 <h2><span class="section-number">2.1. </span>Spectral Lines<a class="headerlink" href="#spectral-lines" title="Permalink to this headline">¶</a></h2>
 <p>Some philosophers during the Renaissance considered strict limits to human knowledge, while other natural philosophers used experimentation to probe reality.  in 1800, William Wollaston showed that a number of <strong>dark spectral lines</strong> were present within the a rainbow-like spectrum using sunlight.  By 1814, Joseph von Fraunhofer cataloged 475 of the dark lines (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Fraunhofer_lines">Fraunhofer lines</a>) in the solar spectrum. Fraunhofer determined that the wavelength of one prominent dark line in the Sun’s spectrum corresponds to the yellow light emitted by salt in a flame.  The new science of <em>spectroscopy</em> was born with the discovery of the sodium line.</p>
-<p align="center"> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg"/> <br>
-<b>Figure 1</b>: Solar spectrum with Fraunhofer lines as it appears visually (wikipedia:<a href="https://www.scientificamerican.com/article/ancient-stars-how-does-spectrograph-work/">Fraunhofer_lines</a>)
-</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_1.jpg?raw=true?"/>
-</p>
-<center>
-<div style='width: 450px'><b>Table 1</b>: Wavelengths of some of the stronger Fraunhofer lines measured in air near sea level. (Carroll & Ostlie, 2007) </div>
-</center>
+<div class="figure align-default" id="fraunhofer-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg"><img alt="Solar spectrum" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg" width="600px" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Solar spectrum with Fraunhofer lines as it appears visually. Image Credit: Wikipedia:<a class="reference external" href="https://www.scientificamerican.com/article/ancient-stars-how-does-spectrograph-work/">Fraunhofer lines</a>.</span><a class="headerlink" href="#fraunhofer-fig" title="Permalink to this image">¶</a></p>
+</div>
+<div align="center">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_1.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_1.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_1.jpg?raw=true?" style="width: 500px;" /></a>
+<p><strong>Table 1</strong>:  Wavelengths of some of the stronger Fraunhofer lines measured in air near sea level. (Carroll &amp; Ostlie, 2007)</p>
+</div>
 <div class="section" id="kirchoff-s-laws">
 <h3><span class="section-number">2.1.1. </span>Kirchoff’s Laws<a class="headerlink" href="#kirchoff-s-laws" title="Permalink to this headline">¶</a></h3>
 <p>The foundations of spectroscopy (and modern chemistry) were established in the 1800s with Robert Bunsen and Gustav Kirchoff.  Bunsen’s burner produced a colorless flame that was ideal for studying the colors produced by burning a range of substances.  Bunsen and Kirchoff designed a <em>spectroscope</em> that passed the light of a flame spectrum through a prism.  They determined that the wavelengths of light absorbed and emitted by an element fit together like a lock and key.  Kirchoff determined that 70 of the Fraunhofer lines were due to iron vapor.  In 1860, Kirchoff and Bunsen developed the idea that every element produces its own pattern of spectral lines and thus the elements had “fingerprints”.  Kirchoff summarized the production of spectral lines in three laws (i.e., <strong>Kirchoff’s Laws</strong>):</p>
@@ -474,10 +574,10 @@
 <div class="section" id="applications-of-stellar-spectral-data">
 <h3><span class="section-number">2.1.2. </span>Applications of Stellar Spectral Data<a class="headerlink" href="#applications-of-stellar-spectral-data" title="Permalink to this headline">¶</a></h3>
 <p>Using the development of spectral fingerprints, a new element <em>helium</em> was discovered spectroscopically in the Sun (in 1868) and found on Earth in 1895.  Another line of investigation was measuring the Doppler shifts of the spectral lines.  For most cases at the time, the <em>low-speed approximation</em> (<span class="math notranslate nohighlight">\(v_r \ll c\)</span>) was adequate to determine the radial velocities <span class="math notranslate nohighlight">\(v_r\)</span> by the following equation,</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{\lambda_{\rm obs}-\lambda_{\rm rest}}{\lambda_{\rm rest}} = \frac{\Delta \lambda}{\lambda_{\rm rest}}=\frac{v_r}{c}. \tag{1}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-62ab564e-cdeb-4cd7-93bb-b671a22d4a5b">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-62ab564e-cdeb-4cd7-93bb-b671a22d4a5b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\frac{\lambda_{\rm obs}-\lambda_{\rm rest}}{\lambda_{\rm rest}} = \frac{\Delta \lambda}{\lambda_{\rm rest}}=\frac{v_r}{c}.
+\end{align}\]</div>
 <p>By 1887, the radial velocities of Sirius, Procyon, Rigel, and Arcturus were measured with and accuracy of a few km/s.  The rest wavelength <span class="math notranslate nohighlight">\(\lambda_{\rm rest}\)</span> for the hydrogen spectral line (H<span class="math notranslate nohighlight">\(\alpha\)</span>) is 656.281 nm (in air).  Given the simplicity of hydrogen and its spectral lines, they are commonly used to measure the radial velocities of stars.</p>
 <ul class="simple">
 <li><p><strong>What is the radial velocity of the star Vega, if its H<span class="math notranslate nohighlight">\(\alpha\)</span> line is observed at 656.21 nm from a ground-based telescope?</strong> (<em>There is a typographical error in the textbook.</em>)</p></li>
@@ -552,31 +652,15 @@ Vega&#39;s velocity through space is 18.7 km/s
 d\sin \theta = n\lambda,
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(d\)</span> is the slit spacing of the grating, <span class="math notranslate nohighlight">\(n\)</span> is the order of the spectrum, and <span class="math notranslate nohighlight">\(\theta\)</span> is measured relative the line perpendicular to the grating.  The smallest measurable difference in wavelength <span class="math notranslate nohighlight">\(\Delta \lambda\)</span> depends on the order <span class="math notranslate nohighlight">\(n\)</span> and the total number of lines <span class="math notranslate nohighlight">\(N\)</span> through</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta \lambda = \frac{\lambda}{nN}, \tag{2}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-46c47baf-ae6b-44d5-b495-1d70388f57d8">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-46c47baf-ae6b-44d5-b495-1d70388f57d8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\Delta \lambda = \frac{\lambda}{nN},
+\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is either of the closely spaced wavelengths.  The ratio <span class="math notranslate nohighlight">\(\lambda/\Delta \lambda\)</span> is one way to express the <strong>resolving power</strong> of the grating.</p>
-<p align="center"> 
-<img src="https://www.scientificamerican.com/media/inline/ancient-stars-how-does-spectrograph-work_2.jpg?raw=true?"/> <br>
-<b>Figure 2</b>: Schematic of a spectrograph. (image credit: <a href="https://www.scientificamerican.com/article/ancient-stars-how-does-spectrograph-work/">Scientific American) </a>
-</p>
+<div class="figure align-default" id="spectrograph-fig">
+<a class="reference internal image-reference" href="https://www.scientificamerican.com/media/inline/ancient-stars-how-does-spectrograph-work_2.jpg"><img alt="spectrograph" src="https://www.scientificamerican.com/media/inline/ancient-stars-how-does-spectrograph-work_2.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Schematic of a spectrograph. Image Credit: <a class="reference external" href="https://www.scientificamerican.com/article/ancient-stars-how-does-spectrograph-work/">Scientific American</a>.</span><a class="headerlink" href="#spectrograph-fig" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="problems">
-<h3><span class="section-number">2.1.4. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>1. Barnard’s star is an orange star in the constellation Ophiuchus.  It has the largest known proper motion <span class="math notranslate nohighlight">\(\mu = 10.3934^{\prime\prime}\)</span>/yr and the fourth-largest parallax angle <span class="math notranslate nohighlight">\(p = 0.5469759^{\prime\prime}\)</span> (<a class="reference external" href="https://arxiv.org/abs/1804.09365">Gaia Collaboration</a>).  The H<span class="math notranslate nohighlight">\(\alpha\)</span> absorption line is observed at 656.034 nm when measured from the ground.</p>
-<blockquote>
-<div><p><strong>(a)</strong> Determine the radial velocity of Barnard’s star.</p>
-<p><strong>(b)</strong> Determine the transverse velocity of Barnard’s star.</p>
-<p><strong>(c)</strong> Calculate the speed of Barnard’s star through space.</p>
-</div></blockquote>
-<p>2. The Sun’s spectrum contains two spectral lines (<em>Sodium D lines</em>) 588.997 nm and 589.594 nm.</p>
-<blockquote>
-<div><p><strong>(a)</strong> If a diffraction grating with 300 lines per millimeter is used to measure the Sodium D lines, what is the angle between the second-order spectra for each of the wavelengths?</p>
-<p><strong>(b)</strong> How many lines must the grating have to resolve the sodium D lines?</p>
-</div></blockquote>
-</div></blockquote>
 </div>
 </div>
 <div class="section" id="photons">
@@ -586,10 +670,10 @@ d\sin \theta = n\lambda,
 <h3><span class="section-number">2.2.1. </span>The Photoelectric Effect<a class="headerlink" href="#the-photoelectric-effect" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>photoelectric effect</strong> describes the light energy necessary to eject electrons from a metal surface.  The electrons with the highest kinetic energy <span class="math notranslate nohighlight">\(K_{max}\)</span> originate from the surface of the metal and surprisingly, <span class="math notranslate nohighlight">\(K_{max}\)</span> does not depend on the light intensity.  A higher intensity of light increases the number of electrons ejected, but not their maximum kinetic energy.  The value of <span class="math notranslate nohighlight">\(K_{max}\)</span> varies with the <em>frequency</em> of the light and each metal has a characteristic cutoff frequency <span class="math notranslate nohighlight">\(\nu_c\)</span> and wavelength <span class="math notranslate nohighlight">\((\lambda_c = c/\nu_c\)</span>).</p>
 <p>Einstein’s solution describes the light striking the metal surface as a stream of massless particles (i.e., photons).  The energy of a single photon of frequency <span class="math notranslate nohighlight">\(\nu\)</span> and wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is just Planck’s quantum of energy</p>
-<div class="math notranslate nohighlight">
-\[
-E_{\rm photon} = h\nu = \frac{hc}{\lambda}. \tag{3}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-15c0f1b1-860a-4e8f-b32d-b80098fa172e">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-15c0f1b1-860a-4e8f-b32d-b80098fa172e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+E_{\rm photon} = h\nu = \frac{hc}{\lambda}.
+\end{align}\]</div>
 <ul class="simple">
 <li><p><strong>What is the energy of a single blue photon of wavelength <span class="math notranslate nohighlight">\(\lambda = 450\)</span> nm?</strong></p></li>
 </ul>
@@ -619,40 +703,29 @@ The energy of a single blue photon (450 nm) is 2.76 eV or 4.41e-19 J
 </div>
 </div>
 <p>Einstein deduced that when a photon strikes the metal surface, its energy may be absorbed by a single electron.  The photon supplies the energy required to free the electron from the metal (i.e., overcome the binding energy).  The work function <span class="math notranslate nohighlight">\(\phi\)</span> defines the minimum binding energy of electrons in a metal and the maximum kinetic energy of the ejected electrons is</p>
-<div class="math notranslate nohighlight">
-\[
-K_{\rm max} = E_{\rm photon} - \phi = h\nu - \phi, \tag{4}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8a65a30e-6ea7-4c1e-99b5-2ab6f4f55f48">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-8a65a30e-6ea7-4c1e-99b5-2ab6f4f55f48" title="Permalink to this equation">¶</a></span>\[\begin{align}
+K_{\rm max} = E_{\rm photon} - \phi = h\nu - \phi,
+\end{align}\]</div>
 <p>where the cutoff frequency and wavelength are <span class="math notranslate nohighlight">\(\nu_c = \phi/h\)</span> and <span class="math notranslate nohighlight">\(\lambda_c = hc/\phi\)</span>, respectively.  Albert Einstein was awarded the 1921 Nobel Prize for “his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect”.  Astronomers take advantage of the photoelectric effect through detectors that count photons by the work they do on a metal (e.g., charge-coupled devices or CCDs).</p>
 </div>
 <div class="section" id="the-compton-effect">
 <h3><span class="section-number">2.2.2. </span>The Compton Effect<a class="headerlink" href="#the-compton-effect" title="Permalink to this headline">¶</a></h3>
 <p>Another test of light’s particle-like nature was performed by Arthur Compton.  He measured the change in the wavelength of X-ray photons as they were scattered by free electrons.  Through special relativity, the energy of a photon is related to its momentum <span class="math notranslate nohighlight">\(p\)</span> by</p>
-<div class="math notranslate nohighlight">
-\[
-E_{\rm photon} = h\nu = pc. \tag{5}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b0728ff2-9961-431e-8139-6d1b57e3b20f">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-b0728ff2-9961-431e-8139-6d1b57e3b20f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+E_{\rm photon} = h\nu = pc.
+\end{align}\]</div>
 <p>compton considered the interaction (or “collision”) between a photon and a free electron (initially at rest).  The electron is scattered by an angle <span class="math notranslate nohighlight">\(\varphi\)</span>, while the photon is scattered by an angle <span class="math notranslate nohighlight">\(\theta\)</span>.  Due to the energy exchange during the interaction (i.e., electron gains kinetic energy) the photon’s energy is reduced and the wavelength has increased.  The change in wavelength is the difference between the final and initial wavelength and can be expressed as</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta \lambda =\lambda_f - \lambda_i = \frac{h}{m_e c}(1-\cos \theta), \tag{6}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-51d760f1-b48a-40fd-bc81-ff6b9e9cb54d">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-51d760f1-b48a-40fd-bc81-ff6b9e9cb54d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\Delta \lambda =\lambda_f - \lambda_i = \frac{h}{m_e c}(1-\cos \theta), 
+\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(m_e\)</span> is the mass of the electron.  The prefactor <span class="math notranslate nohighlight">\(h/m_e c\)</span> is called the <strong>Compton wavelength</strong> <span class="math notranslate nohighlight">\(\lambda_C\)</span>.  Compton’s experiment provided evidence that photons carry momentum (although massless) and this is the physical basis for the force exerted by radiation upon matter.</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_3.jpg?raw=true?"/> <br>
-<b>Figure 3</b>: The Compton effect: the scattering of a photon by a free electron. (Carroll & Ostlie (2007))
-</p>
+<div class="figure align-default" id="compton-fig">
+<a class="reference internal image-reference" href="../_images/Figure_31.jpg"><img alt="Compton effect" src="../_images/Figure_31.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">The Compton effect: the scattering of a photon by a free electron. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#compton-fig" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id1">
-<h3><span class="section-number">2.2.3. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>3. The ejection of an electron leaves a grain of dust with a positive charge, which leads to heating within an interstellar cloud.  If the average energy of the ejected electron is about 5 eV and the process is particularly effective for UV photons (<span class="math notranslate nohighlight">\(\lambda \approx 100\)</span> nm), estimate the work function <span class="math notranslate nohighlight">\(\phi\)</span> of a typical dust grain.</p>
-<p>4. Consider the case of a “collision” between a photon and a free proton (initially at rest) given a scattering angle <span class="math notranslate nohighlight">\(\theta=90^\circ\)</span>.</p>
-<blockquote>
-<div><p><strong>(a)</strong> What is the characteristic change in the wavelength of the scattered photon (in nm)?</p>
-<p><strong>(b)</strong> How does this compare with the Compton wavelength, <span class="math notranslate nohighlight">\(\lambda_C\)</span>.</p>
-</div></blockquote>
-</div></blockquote>
 </div>
 </div>
 <div class="section" id="the-bohr-model-of-the-atom">
@@ -664,22 +737,18 @@ E_{\rm photon} = h\nu = pc. \tag{5}
 <div class="section" id="the-wavelength-of-hydrogen">
 <h3><span class="section-number">2.3.2. </span>The Wavelength of Hydrogen<a class="headerlink" href="#the-wavelength-of-hydrogen" title="Permalink to this headline">¶</a></h3>
 <p>Many natural philosophers (now known as chemists) produced a wealth of experimental data.  Fourteen spectral lines of hydrogen had been precisely measured before the 20th century.  The spectral lines were described by their wavelengths and categorized using greek letters (<span class="math notranslate nohighlight">\({\rm H}\alpha\)</span>, <span class="math notranslate nohighlight">\({\rm H}\beta\)</span>, etc.).  In 1885 Johann Balmer found (by trial and error) a formula to reproduce the series of wavelengths for hydrogen’s spectral lines (or <strong>Balmer lines</strong>) given as</p>
-<div class="math notranslate nohighlight">
-\[
-\lambda = \frac{1}{R_H}\left( \frac{4n^2}{n^2-4}\right), \tag{7}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(n\)</span> is an integer greater than 2 (<span class="math notranslate nohighlight">\(n=3,4,5,\ldots\)</span>) and <span class="math notranslate nohighlight">\(R_H = 1.09677583 \times 10^7 \pm 1.3 \;{\rm m}^{-1}\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Rydberg_constant">Rydberg constant</a>) for hydrogen.  Equation 7 is accurate to a fraction of a percent, where values of <span class="math notranslate nohighlight">\(n\)</span> produce the wavelength for the spectral lines (<span class="math notranslate nohighlight">\({\rm H}\alpha\)</span>, <span class="math notranslate nohighlight">\({\rm H}\beta\)</span>, <span class="math notranslate nohighlight">\({\rm H}\gamma\)</span>, etc. ).  Balmer realized that the formula could be generalized (since <span class="math notranslate nohighlight">\(2^2 = 4\)</span>) producing the general form as</p>
-<div class="math notranslate nohighlight">
-\[
-\lambda = \frac{1}{R_H}\left( \frac{m^2n^2}{n^2-m^2}\right), \tag{8}
-\]</div>
+<div class="math notranslate nohighlight" id="equation-balmer-lambda">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-balmer-lambda" title="Permalink to this equation">¶</a></span>\[\lambda = \frac{1}{R_H}\left( \frac{4n^2}{n^2-4}\right), \]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is an integer greater than 2 (<span class="math notranslate nohighlight">\(n=3,4,5,\ldots\)</span>) and <span class="math notranslate nohighlight">\(R_H = 1.09677583 \times 10^7 \pm 1.3 \;{\rm m}^{-1}\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Rydberg_constant">Rydberg constant</a>) for hydrogen.  Equation <a class="reference internal" href="#equation-balmer-lambda">(2.7)</a> is accurate to a fraction of a percent, where values of <span class="math notranslate nohighlight">\(n\)</span> produce the wavelength for the spectral lines (<span class="math notranslate nohighlight">\({\rm H}\alpha\)</span>, <span class="math notranslate nohighlight">\({\rm H}\beta\)</span>, <span class="math notranslate nohighlight">\({\rm H}\gamma\)</span>, etc. ).  Balmer realized that the formula could be generalized (since <span class="math notranslate nohighlight">\(2^2 = 4\)</span>) producing the general form as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7c2adff4-3de4-4cda-8bbe-5febbde592d1">
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-7c2adff4-3de4-4cda-8bbe-5febbde592d1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\lambda = \frac{1}{R_H}\left( \frac{m^2n^2}{n^2-m^2}\right),
+\end{align}\]</div>
 <p>with <span class="math notranslate nohighlight">\(m&lt;n\)</span> (both integers).  There are only a few spectral lines that lie in the visible range for hydrogen, where the <em>Lyman lines</em> (<span class="math notranslate nohighlight">\(m=1\)</span>) are found in the ultraviolet and the <em>Paschen lines</em> (<span class="math notranslate nohighlight">\(m=3\)</span>) lie entirely in the infrared.</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_2.jpg?raw=true?"/>
-</p>
-<center>
-<div style='width: 450px'><b>Table 2</b>: Wavelengths of selected hydrogen spectral lines in air. (Carroll & Ostlie, 2007) </div>
-</center>
+<div align="center">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_2.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_2.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Table_2.jpg?raw=true?" style="width: 450px;" /></a>
+<p><strong>Table 2</strong>:  Wavelengths of selected hydrogen spectral lines in air. (Carroll &amp; Ostlie, 2007)</p>
+</div>
 <ul class="simple">
 <li><p><strong>What are the first 3 wavelengths for the Balmer, Lyman, and Paschen lines?</strong> (Compare to Table 2 in Ch 5 of the textbook)</p></li>
 </ul>
@@ -730,15 +799,15 @@ Pa$\gamma$ is 1094.116 nm.
 <div class="section" id="bohr-s-semiclassical-atom">
 <h3><span class="section-number">2.3.3. </span>Bohr’s Semiclassical Atom<a class="headerlink" href="#bohr-s-semiclassical-atom" title="Permalink to this headline">¶</a></h3>
 <p>In 1913, Niels Bohr noted that the dimensions of Planck’s constant are equivalent to angular momentum and perhaps the angular momentum of the orbiting electron was quantized.  Bohr hypothesized that orbits with integral multiples of Planck’s constant (i.e., a specific angular momentum), the electron would be stable and would not radiate <em>in spite of its centripetal acceleration</em>.</p>
-<p align="center"> 
-<img src="https://chem.libretexts.org/@api/deki/files/344390/1.8.3.svg"/> <br>
-<b>Figure 4</b>: Bohr atom with an electron revolving around a fixed nucleus. (CC BY-NC; Ümit Kaya via <a href="https://chem.libretexts.org/Courses/Solano_Community_College/Chem_160/Chapter_07%3A_Atomic_Structure_and_Periodicity/7.04_The_Bohr_Model">Libretexts</a>)
-</p>
+<div class="figure align-default" id="bohr-fig">
+<a class="reference internal image-reference" href="https://chem.libretexts.org/&#64;api/deki/files/344390/1.8.3.svg"><img alt="Bohr_atom" src="https://chem.libretexts.org/&#64;api/deki/files/344390/1.8.3.svg" width="400px" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Bohr atom with an electron revolving around a fixed nucleus. Image Credit: <a class="reference external" href="https://chem.libretexts.org/Courses/Solano_Community_College/Chem_160/Chapter_07%3A_Atomic_Structure_and_Periodicity/7.04_The_Bohr_Model">Ümit Kaya</a>; Libretexts.</span><a class="headerlink" href="#bohr-fig" title="Permalink to this image">¶</a></p>
+</div>
 <p>To analyze the interactions between a proton and electron, we start with the mathematical description given by <strong>Coulomb’s law</strong>.  The electric force between two charges (<span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span>) separated by a distance <span class="math notranslate nohighlight">\(r\)</span> has the familiar form</p>
-<div class="math notranslate nohighlight">
-\[
-{\bf F} = \frac{1}{4\pi\epsilon_o}\frac{q_1q_2}{r^2}\hat{{\bf r}}, \tag{9}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3bf99bb8-89b9-4707-bf94-0a0127013221">
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-3bf99bb8-89b9-4707-bf94-0a0127013221" title="Permalink to this equation">¶</a></span>\[\begin{align}
+{\bf F} = \frac{1}{4\pi\epsilon_o}\frac{q_1q_2}{r^2}\hat{{\bf r}}, 
+\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon_o = 8.854187817\ldots \times 10^{-12}\)</span> F <span class="math notranslate nohighlight">\({\rm m}^{-1}\)</span> is the <em>permittivity of free space</em> and <span class="math notranslate nohighlight">\(\hat{{\bf r}}\)</span> is a unit vector that points from <span class="math notranslate nohighlight">\(q_1\)</span> to <span class="math notranslate nohighlight">\(q_2\)</span>.  In the hydrogen atom, the electron has a negative charge <span class="math notranslate nohighlight">\(e^-\)</span> and the proton a positive charge <span class="math notranslate nohighlight">\(e^+\)</span>.  The Coulomb force pulls opposite charges toward on another, which is definitely not a good description of the system.  In the case of two masses orbiting each other, we set the gravitational force equal the centripetal force.  Thus, it follows that we could try the same procedure for a proton of mass <span class="math notranslate nohighlight">\(m_p\)</span> and an electron of mass <span class="math notranslate nohighlight">\(m_e\)</span>.  Simplifying further, we can convert the two-body problem to an equivalent one-body problem using the reduced mass</p>
 <div class="math notranslate nohighlight">
 \[
@@ -750,26 +819,26 @@ Pa$\gamma$ is 1094.116 nm.
 -\frac{1}{4\pi\epsilon_o}\frac{e^2}{r^2}\hat{{\bf r}} = -\mu\frac{v^2}{r}\hat{{\bf r}},
 \]</div>
 <p>which can be solved for the kinetic energy <span class="math notranslate nohighlight">\(K\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-K = \frac{1}{2}\mu v^2 = \frac{1}{8\pi\epsilon_o}\frac{e^2}{r}. \tag{10}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8c907d8b-49ac-4d8d-ac61-18903a17f89d">
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-8c907d8b-49ac-4d8d-ac61-18903a17f89d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+K = \frac{1}{2}\mu v^2 = \frac{1}{8\pi\epsilon_o}\frac{e^2}{r}.
+\end{align}\]</div>
 <p>The electrical potential energy <span class="math notranslate nohighlight">\(U\)</span> of the Bohr atom is:</p>
 <div class="math notranslate nohighlight">
 \[
 U = -\frac{1}{4\pi\epsilon_o}\frac{e^2}{r} = -2K.
 \]</div>
 <p>The total energy <span class="math notranslate nohighlight">\(E = K + U\)</span> of the atom is:</p>
-<div class="math notranslate nohighlight">
-\[
-E = K + U = -K = -\frac{1}{8\pi\epsilon_o}\frac{e^2}{r}. \tag{11}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-5a914c96-8f82-495e-97ca-3330aaf1913b">
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-5a914c96-8f82-495e-97ca-3330aaf1913b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+E = K + U = -K = -\frac{1}{8\pi\epsilon_o}\frac{e^2}{r}. 
+\end{align}\]</div>
 <p>The kinetic energy is a positive quantity, which implies that the total energy is negative and indicates that the electron and proton are <em>bound</em>.  To <strong>ionize</strong> or free the electron, it must receive at least an amount of energy equal to <span class="math notranslate nohighlight">\(|E|\)</span>.</p>
 <p>Getting back to Bohr’s contribution, he suggested that the angular momentum <span class="math notranslate nohighlight">\(L = \mu vr\)</span> was quantized and could be expressed in terms of Planck’s constant <span class="math notranslate nohighlight">\(h\)</span> distributed over a unit circle as <span class="math notranslate nohighlight">\(\hbar = h/2\pi\)</span>.  The full condition is</p>
-<div class="math notranslate nohighlight">
-\[
-L = \mu vr = n\hbar, \tag{12}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d4d0d078-4853-4af0-b0a6-7c47ea5ba0fd">
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-d4d0d078-4853-4af0-b0a6-7c47ea5ba0fd" title="Permalink to this equation">¶</a></span>\[\begin{align}
+L = \mu vr = n\hbar, 
+\end{align}\]</div>
 <p>which can be rewritten using the kinetic energy as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -777,21 +846,21 @@ K &amp;= \frac{1}{2} \mu v^2 = \frac{L^2}{2\mu r^2} \\ &amp;= \frac{(n\hbar)^2}{
 \end{align*}
 \end{split}\]</div>
 <p>Solving the second line of the equation above for the radius <span class="math notranslate nohighlight">\(r\)</span> shows that the specific values are allowed by Bohr’s quantization condition as</p>
-<div class="math notranslate nohighlight">
-\[
-r_n = \frac{4\pi\epsilon_o \hbar^2}{\mu e^2}n^2 = a_on^2, \tag{13}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(a_o = 5.291772083 \times 10^{-11}\)</span> m is known as the <strong>Bohr radius</strong>.  Now that we know the scale of the atom (i.e., appropriate values of <span class="math notranslate nohighlight">\(r\)</span>), Eqn. 11 describes the energy in terms of fundamental constants as</p>
-<div class="math notranslate nohighlight">
-\[
-E_n = -\frac{\mu e^4}{32\pi^2\epsilon_o^2 \hbar^2}\frac{1}{n^2} = \frac{-13.6\;{\rm eV}}{n^2}. \tag{14}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ddc616d5-cc84-40a4-987f-43ce36cf5c0f">
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-ddc616d5-cc84-40a4-987f-43ce36cf5c0f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+r_n = \frac{4\pi\epsilon_o \hbar^2}{\mu e^2}n^2 = a_on^2, 
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a_o = 5.291772083 \times 10^{-11}\)</span> m is known as the <strong>Bohr radius</strong>.  Now that we know the scale of the atom (i.e., appropriate values of <span class="math notranslate nohighlight">\(r\)</span>), the energy in terms of fundamental constants are given as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6b8bf8b5-45d0-4fd3-93fa-028b760d0f6e">
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-6b8bf8b5-45d0-4fd3-93fa-028b760d0f6e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+E_n = -\frac{\mu e^4}{32\pi^2\epsilon_o^2 \hbar^2}\frac{1}{n^2} = \frac{-13.6\;{\rm eV}}{n^2}. 
+\end{align}\]</div>
 <p>The <strong>principal quantum number</strong> <span class="math notranslate nohighlight">\(n\)</span> completely determines the characteristics of the Bohr atom, where <span class="math notranslate nohighlight">\(n\geq 1\)</span>.</p>
 <p>The spectral lines are produced by electron transitions within the atom (i.e., moving between energy levels).  Balmer tried to produce a formula that would predict the wavelength that resulted from a transition from <span class="math notranslate nohighlight">\(n_{high}\rightarrow n_{low}\)</span>.  Now consider the required energy to move between levels as the energy of a photon <span class="math notranslate nohighlight">\(E_{photon} = hc/\lambda = E_{high} - E_{low}\)</span>, which gives</p>
-<div class="math notranslate nohighlight">
-\[
-\lambda = \frac{h c}{13.6\;{\rm eV}}\frac{n_{high}^2n_{low}^2}{n_{high}^2-n_{low}^2}, \tag{15}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-41b66926-78ae-43ce-b64d-90b823955ad3">
+<span class="eqno">(2.15)<a class="headerlink" href="#equation-41b66926-78ae-43ce-b64d-90b823955ad3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\lambda = \frac{h c}{13.6\;{\rm eV}}\frac{n_{high}^2n_{low}^2}{n_{high}^2-n_{low}^2}, 
+\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(hc = 1240\)</span> eV nm.</p>
 <ul class="simple">
 <li><p><strong>What are the first 3 wavelengths in the Balmer lines using this method?</strong></p></li>
@@ -830,21 +899,14 @@ H$\gamma$ is 434.174 nm.
 <li><p>A cool, diffuse gas in front of a source of a continuous spectrum produces dark absorption lines in the continuous spectrum.  The lines are produced when an electron absorbs a photon of the required energy to jump from a lower to higher energy orbit.</p></li>
 </ul>
 <p>Despite the success of Bohr’s model, it describes only the simplest arrangement of particles.  In reality, the electron is not really in a circular orbit nor is its position well-defined.  There is more structure to the atom than Bohr realized, where the fine structure can come into play during and after a star’s main-sequence.</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_5.jpg?raw=true?"/> <br>
-<b>Figure 5</b>: Balmer lines produced by the hydrogen atom. (a) Emission. (b) Absorption. (Carroll & Ostlie 2007)
-</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_6.jpg?raw=true?"/> <br>
-<b>Figure 6</b>: Energy level diagram for the hydrogen atom showing Lyman, Balmer, and Paschen lines. (Carroll & Ostlie 2007)
-</p>
+<div class="figure align-default" id="balmer-h-fig">
+<a class="reference internal image-reference" href="../_images/Figure_51.jpg"><img alt="Balmer Hydrogen" src="../_images/Figure_51.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Balmer lines produced by the hydrogen atom. (a) Emission. (b) Absorption. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#balmer-h-fig" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="id2">
-<h3><span class="section-number">2.3.4. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>5. To demonstrate the relative strengths of the electrical and gravitational forces between the electron and proton in the Bohr atom, suppose the hydrogen atom were held together solely by gravity.  Determine the radius of the ground-state orbit (in nm and AU) and the energy of the ground state (in EV).</p>
-<p>6. Calculate the energies and vacuum wavelengths of all possible photons that are emitted when the electron cascades from the <span class="math notranslate nohighlight">\(n=3\)</span> to the ground state of the hydrogen atom.</p>
-</div></blockquote>
+<div class="figure align-default" id="balmer-lines-fig">
+<a class="reference internal image-reference" href="../_images/Figure_61.jpg"><img alt="Balmer Lines" src="../_images/Figure_61.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Energy level diagram for the hydrogen atom showing Lyman, Balmer, and Paschen lines. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#balmer-lines-fig" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="quantum-mechanics-and-wave-particle-duality">
@@ -852,10 +914,10 @@ H$\gamma$ is 434.174 nm.
 <div class="section" id="de-broglie-s-wavelength-and-frequency">
 <h3><span class="section-number">2.4.1. </span>de Broglie’s Wavelength and Frequency<a class="headerlink" href="#de-broglie-s-wavelength-and-frequency" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Louis_de_Broglie">Louis de Broglie</a> (a French prince) posed the following question: If light could exhibit the characteristics of particles, might not particles sometimes manifest the properties of waves?  In his PhD thesis, de Broglie extended thw wave-particle duality of light to all other particles.  Einstein’s theory of special relativity showed that photons carry both energy <span class="math notranslate nohighlight">\(E\)</span> and momentum <span class="math notranslate nohighlight">\(p\)</span>, which can be related to a frequency <span class="math notranslate nohighlight">\(\nu\)</span> and wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> by</p>
-<div class="math notranslate nohighlight">
-\[
-\nu = \frac{E}{h} \quad {\rm and} \quad \lambda = \frac{h}{p}.\tag{16}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ca446f78-7165-4ead-b091-3be1b078eb3d">
+<span class="eqno">(2.16)<a class="headerlink" href="#equation-ca446f78-7165-4ead-b091-3be1b078eb3d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\nu = \frac{E}{h} \quad {\rm and} \quad \lambda = \frac{h}{p}.
+\end{align}\]</div>
 <p>The de Broglie wavelength and frequency describe massless photons, as well as, massive electrons, protons, neutrons, etc.  This seemed outrageous at the time, but the hypothesis was confirmed by many experiments including the interference pattern produced by <em>electrons</em> in a double slit experiment.  The wave-particle duality lies at the heart of the physical world, where wave properties describe the <em>propagation</em> and the particle nature manifests in <em>interactions</em>.</p>
 <ul class="simple">
 <li><p><strong>Compare the wavelengths of a free electron moving at 0.01<em>c</em> and the <a class="reference external" href="https://en.wikipedia.org/wiki/Footspeed">fastest human sprinter</a> moving at 12.42 m/s.</strong></p></li>
@@ -894,15 +956,15 @@ The wavelength of Usain Bolt moving at 12.42 m/s is 5.676e-37 m.
 <div class="section" id="heisenberg-s-uncertainty-principle">
 <h3><span class="section-number">2.4.2. </span>Heisenberg’s Uncertainty Principle<a class="headerlink" href="#heisenberg-s-uncertainty-principle" title="Permalink to this headline">¶</a></h3>
 <p>A probability wave <span class="math notranslate nohighlight">\(\Psi\)</span> for a particle can have a precise description as a sine wave with a wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  Through de Broglie’s wavelength, the particle’s momentum can also be defined exactly (<span class="math notranslate nohighlight">\(p = h/\lambda\)</span>), but the particle is not localized and means the particle’s position is perfectly uncertain.  The particle’s position can be constrained when several sine waves with a range of wavelengths are added so they destructively interfere almost everywhere.  The result is <span class="math notranslate nohighlight">\(\Psi\)</span> (the probability) is approximately zero almost everywhere, except for a narrow range of <span class="math notranslate nohighlight">\(x\)</span>.  By adding more waves, and there wavelengths, the particle’s momentum is now a range of values (i.e., more uncertain).</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_7.jpg?raw=true?"/> <br>
-<b>Figure 7</b>: Two examples of a probability wave: (a) a single sine wave and (b) a pulse composed of many sine waves. (Carroll & Ostlie 2007)
-</p>
+<div class="figure align-default" id="probability-wave-fig">
+<a class="reference internal image-reference" href="../_images/Figure_7.jpg"><img alt="Probability wave" src="../_images/Figure_7.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Two examples of a probability wave: (a) a single sine wave and (b) a pulse composed of many sine waves. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#probability-wave-fig" title="Permalink to this image">¶</a></p>
+</div>
 <p>Werner Heisenberg developed a theoretical framework for this inherent “fuzziness” of the physical world.  The product of the uncertainty in the position and momentum must be equal to or larger than <span class="math notranslate nohighlight">\(\hbar/2\)</span> and is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Uncertainty_principle">Heisenberg’s uncertainty principle</a>.  A similar statement relates the uncertainty of energy and time measurements.  Together they are described by</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta x \Delta p \approx \hbar \quad {\rm and} \quad \Delta E \Delta t \approx \hbar.\tag{17}
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ffafcb62-ba56-40b3-bd00-e8e5528722a6">
+<span class="eqno">(2.17)<a class="headerlink" href="#equation-ffafcb62-ba56-40b3-bd00-e8e5528722a6" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\Delta x \Delta p \approx \hbar \quad {\rm and} \quad \Delta E \Delta t \approx \hbar.
+\end{align}\]</div>
 <ul class="simple">
 <li><p><strong>What is the minimum speed and kinetic energy of an electron in a hydrogen atom?</strong></p></li>
 </ul>
@@ -935,30 +997,34 @@ The minimum KE of the electron is 2.18e-18 J or 13.6 eV
 <div class="math notranslate nohighlight">
 \[ \sin \theta_c = \frac{n_{\rm air}}{n_{\rm glass}}. \]</div>
 <p>The electromagnetic wave does enter the air, but it dies away exponentially (i.e., becomes <em>evanescent</em>).  When another prism is placed next to the first, then the evanescent wave can begin propagating into the second prism without passing through the air gap between them.  Photons have <strong>tunneled</strong> from one prism to another.  The limitation to this effect is through Heisenberg’s uncertainty principle, where the location of a particle (i.e., photon) cannot be determined with an uncertainty less than its wavelength.  For barriers that are only a few wavelengths wide, a particle can suddenly appear on the other side.  <strong>Barrier penetration</strong> is important for radioactive decay and inside stars, where nuclear fusion rates depend upon tunneling.</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_8.jpg?raw=true?"/> <br>
-<b>Figure 8</b>: mechanical tunneling (barrier penetration) of a particle traveling to the right. (Carroll & Ostlie 2007)
-</p></div>
+<div class="figure align-default" id="tunneling-fig">
+<a class="reference internal image-reference" href="../_images/Figure_8.jpg"><img alt="mechanical tunneling" src="../_images/Figure_8.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Mechanical tunneling (barrier penetration) of a particle traveling to the right. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#tunneling-fig" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 <div class="section" id="schrodinger-s-equation-and-the-quantum-mechanical-atom">
 <h3><span class="section-number">2.4.4. </span>Schrödinger’s Equation and the Quantum Mechanical Atom<a class="headerlink" href="#schrodinger-s-equation-and-the-quantum-mechanical-atom" title="Permalink to this headline">¶</a></h3>
 <p>Heisenberg’s uncertainty principle prevents the use of classical models to treat the electron-proton like a planetary system.  Instead, the electron orbits within a cloud of probability (i.e., <em>orbital</em>) where the more “dense” regions corresponding to where the electron is most likely to be found.  In 1926, Erwin Schrödinger developed a wave equation that can be solved for the probability waves that describe the allowed values of a particle state (e.g., energy, momentum, etc.) and its propagation through space.</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_9.jpg?raw=true?"/> <br>
-<b>Figure 9</b>: Electron orbitals of the hydrogen atom. (Carroll & Ostlie 2007)
-</p>
+<div class="figure align-default" id="orbitals-fig">
+<a class="reference internal image-reference" href="../_images/Figure_91.jpg"><img alt="electron orbitals" src="../_images/Figure_91.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Electron orbitals of the hydrogen atom. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#orbitals-fig" title="Permalink to this image">¶</a></p>
+</div>
 <p>The Schrödinger equation can be solved analytically for the hydrogen atom and it produces the same set of allowed energies obtained by Bohr.  However, Schrödinger found that two additional quantum numbers <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(m_\ell\)</span> are required for a complete description of the electron orbitals.  The principal quantum number <span class="math notranslate nohighlight">\(n\)</span> determines the energy level, where these quantum numbers describe the angular momentum vector <strong>L</strong> of the atom.  The magnitude of the angular momentum <span class="math notranslate nohighlight">\(L\)</span> are</p>
-<div class="math notranslate nohighlight">
-\[ L = \sqrt{\ell(\ell+1)}\hbar, \tag{18}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-35a1765a-f12f-49da-abf1-e84e09e88896">
+<span class="eqno">(2.18)<a class="headerlink" href="#equation-35a1765a-f12f-49da-abf1-e84e09e88896" title="Permalink to this equation">¶</a></span>\[\begin{align}
+ L = \sqrt{\ell(\ell+1)}\hbar,
+\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\ell = \{0,\ldots,n-1 \}\)</span>.  Early spectroscopists categorized some elements based on their alkali metal spectroscopic lines described as <strong>s</strong>harp, <strong>p</strong>rincipal, <strong>d</strong>iffuse, and <strong>f</strong>undamental and this historical <a class="reference external" href="https://en.wikipedia.org/wiki/Atomic_orbital">nomenclature</a> corresponded with <span class="math notranslate nohighlight">\(\ell = 0,1,2,3\)</span>.  The letters continues alphabetically where <span class="math notranslate nohighlight">\(\ell = 4\rightarrow g\)</span>, <span class="math notranslate nohighlight">\(\ell = 5\rightarrow h\)</span>, and so on (omitting <span class="math notranslate nohighlight">\(j\)</span>).  Chemists now use a nomenclature that includes both the principal and angular momentum quantum numbers together (e.g., <span class="math notranslate nohighlight">\(n\ell\)</span>).  For example, (<span class="math notranslate nohighlight">\(n=2\)</span>, <span class="math notranslate nohighlight">\(\ell=1\)</span>) corresponds to <span class="math notranslate nohighlight">\(2p\)</span>.</p>
 <p>The <span class="math notranslate nohighlight">\(z\)</span>-component of the angular momentum vector <span class="math notranslate nohighlight">\(L_z\)</span> can assume only particular values designated by the quantum number <span class="math notranslate nohighlight">\(m_\ell\)</span> (i.e., <span class="math notranslate nohighlight">\(L=m_\ell\hbar\)</span>), which ranges from <span class="math notranslate nohighlight">\(-\ell\)</span> to <span class="math notranslate nohighlight">\(+\ell\)</span> resulting in <span class="math notranslate nohighlight">\(2\ell +1\)</span> possible integers.  For <em>isolated</em> hydrogen atoms, there is not a preferred direction for the angular momentum vector to point and thus, a <strong>degeneracy</strong> exists with respect to the energy (i.e., the electron has the same energy independent of <span class="math notranslate nohighlight">\(\ell\)</span> and <span class="math notranslate nohighlight">\(m_\ell\)</span>) and will produce the <em>same</em> spectral line.</p>
 <p>However, hydrogen gas in a star is not isolated and the electrons will feel the effect of the stellar magnetic field.  Due to the external magnetic field the energy levels are no longer degenerate and the spectral lines are observed to split.  The simplest case is described by the <a class="reference external" href="https://en.wikipedia.org/wiki/Zeeman_effect">Zeeman effect</a>, where the <span class="math notranslate nohighlight">\(2p\)</span> orbital is split into three lines; <span class="math notranslate nohighlight">\(p=1\)</span> and <span class="math notranslate nohighlight">\(m_\ell = \{-1,0,+1\}\)</span>.  The <span class="math notranslate nohighlight">\(m_\ell = 0\)</span> line appears at a frequency <span class="math notranslate nohighlight">\(\nu_o\)</span> that corresponds to the spectral line in the absence of the magnetic field. The other two lines are produced depending on the magnetic field strength <span class="math notranslate nohighlight">\(B\)</span> and reduced mass <span class="math notranslate nohighlight">\(\mu\)</span> to produce the frequencies</p>
-<div class="math notranslate nohighlight">
-\[ \nu_{m_\ell} = \nu_o + m_\ell\frac{eB}{4\pi \mu}. \tag{19}\]</div>
+<p>\begin{align}
+\nu_{m_\ell} = \nu_o + m_\ell\frac{eB}{4\pi \mu}.
+\begin{align}</p>
 <p>Today, the Zeeman effect is used to monitor the magnetic field of the Sun by taking spectra near sunspots.  Interstellar clouds may contain very weak magnetic fields (<span class="math notranslate nohighlight">\(B\approx 2\times 10^{-10}\;{\rm T}\)</span>), where astronomers have been able to measure this magnetic field.</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_10.jpg?raw=true?"/> <br>
-<b>Figure 10</b>: Splitting of absorption lines by the Zeeman effect. (Carroll & Ostlie 2007)
-</p>
+<div class="figure align-default" id="zeeman-fig">
+<a class="reference internal image-reference" href="../_images/Figure_101.jpg"><img alt="zeeman splitting" src="../_images/Figure_101.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Splitting of absorption lines by the Zeeman effect. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#zeeman-fig" title="Permalink to this image">¶</a></p>
+</div>
 <ul class="simple">
 <li><p><strong>Calculate the change in frequency under the magnetic field of an interstellar cloud using the mass of the electron for the reduced mass (<span class="math notranslate nohighlight">\(\mu = m_e\)</span>).</strong></p></li>
 </ul>
@@ -999,23 +1065,59 @@ The minimum KE of the electron is 2.18e-18 J or 13.6 eV
 <div class="section" id="the-complex-spectra-of-atoms">
 <h3><span class="section-number">2.4.6. </span>The Complex Spectra of Atoms<a class="headerlink" href="#the-complex-spectra-of-atoms" title="Permalink to this headline">¶</a></h3>
 <p>Four quantum numbers (<span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\ell\)</span>, <span class="math notranslate nohighlight">\(m_\ell\)</span>, and <span class="math notranslate nohighlight">\(m_s\)</span>) describe a quantum state for each electron in an atom, where external magnetic fields (and other electromagnetic interactions) increase the number of possible energy levels.  Even though there are a large number of possible states to make a transition, some transitions are restricted, where Nature imposes a set of <a class="reference external" href="https://en.wikipedia.org/wiki/Selection_rule">selection rules</a> that determines the <strong>allowed</strong> and <strong>forbidden</strong> transitions.  The allowed transitions can happen spontaneously on timescales of <span class="math notranslate nohighlight">\(10^{-8}\)</span> s, while the requirement of <span class="math notranslate nohighlight">\(\Delta \ell = \pm 1\)</span> prevents transition from <span class="math notranslate nohighlight">\(F\)</span> to <span class="math notranslate nohighlight">\(P\)</span>.</p>
-<p align="center"> 
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_5/Figure_11.jpg?raw=true?"/> <br>
-<b>Figure 11</b>: Some of the electronic energy levels of the helium atom. (Carroll & Ostlie 2007)
-</p>
+<div class="figure align-default" id="helium-levels-fig">
+<a class="reference internal image-reference" href="../_images/Figure_111.jpg"><img alt="Helium levels" src="../_images/Figure_111.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Some of the electronic energy levels of the helium atom. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#helium-levels-fig" title="Permalink to this image">¶</a></p>
+</div>
 <p>The Zeeman effect shows only three transitions occur between <span class="math notranslate nohighlight">\(1s\)</span> and <span class="math notranslate nohighlight">\(2p\)</span> energy levels because of selection rules requiring <span class="math notranslate nohighlight">\(\Delta m_\ell = 0\)</span> or <span class="math notranslate nohighlight">\(\pm 1\)</span> and forbidding transitions if <em>both</em> orbitals have <span class="math notranslate nohighlight">\(m_\ell = 0\)</span>.  Similar to quantum tunneling, there remains a small but finite probability for forbidden transitions to occur and they require much longer timescales.  Collisions between atoms trigger transitions and can compete with spontaneous transitions.  Thus, very low gas densities are required to obtain a sufficient signal to measure the forbidden transitions.  In the diffuse interstellar medium or the outer atmospheres of stars, this condition is met.</p>
 </div>
-<div class="section" id="id3">
-<h3><span class="section-number">2.4.7. </span><strong>Problems</strong><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>7. An electron in an old TV set reaches a speed of about <span class="math notranslate nohighlight">\(5\times 10^7\)</span> m/s before it hits the screen.  What is the wavelength of this electron?</p>
-<p>8. A White dwarf is a very dense object, with its ions and electrons packed extremely close together.  Each electron may be considered to be located within a region of size <span class="math notranslate nohighlight">\(\Delta x \approx 1.5 \times 10^{-12}\)</span> m. Estimate the minimum speed of the electron using Heisenberg’s uncertainty principle. <em>Do you think that the effects of relativity will be important?</em></p>
-<p>9. An electron spends roughly <span class="math notranslate nohighlight">\(10^{-8}\)</span> s in the first excited state of the hydrogen atom before spontaneously decaying back to the ground state.</p>
-<blockquote>
-<div><p><strong>(a)</strong> Determine the uncertainty <span class="math notranslate nohighlight">\(\Delta E\)</span> in the energy of the first excited state.</p>
+</div>
+<div class="section" id="homework">
+<h2><span class="section-number">2.5. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p>Barnard’s star is an orange star in the constellation Ophiuchus.  It has the largest known proper motion <span class="math notranslate nohighlight">\(\mu = 10.3934^{\prime\prime}\)</span>/yr and the fourth-largest parallax angle <span class="math notranslate nohighlight">\(p = 0.5469759^{\prime\prime}\)</span> (<a class="reference external" href="https://arxiv.org/abs/1804.09365">Gaia Collaboration</a>).  The H<span class="math notranslate nohighlight">\(\alpha\)</span> absorption line is observed at 656.034 nm when measured from the ground.</p>
+<p><strong>(a)</strong> Determine the radial velocity of Barnard’s star.</p>
+<p><strong>(b)</strong> Determine the transverse velocity of Barnard’s star.</p>
+<p><strong>(c)</strong> Calculate the speed of Barnard’s star through space.</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<p>The Sun’s spectrum contains two spectral lines (<em>Sodium D lines</em>) 588.997 nm and 589.594 nm.</p>
+<p><strong>(a)</strong> If a diffraction grating with 300 lines per millimeter is used to measure the Sodium D lines, what is the angle between the second-order spectra for each of the wavelengths?</p>
+<p><strong>(b)</strong> How many lines must the grating have to resolve the sodium D lines?</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>The ejection of an electron leaves a grain of dust with a positive charge, which leads to heating within an interstellar cloud.  If the average energy of the ejected electron is about 5 eV and the process is particularly effective for UV photons (<span class="math notranslate nohighlight">\(\lambda \approx 100\)</span> nm), estimate the work function <span class="math notranslate nohighlight">\(\phi\)</span> of a typical dust grain.</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p>Consider the case of a “collision” between a photon and a free proton (initially at rest) given a scattering angle <span class="math notranslate nohighlight">\(\theta=90^\circ\)</span>.</p>
+<p><strong>(a)</strong> What is the characteristic change in the wavelength of the scattered photon (in nm)?</p>
+<p><strong>(b)</strong> How does this compare with the Compton wavelength, <span class="math notranslate nohighlight">\(\lambda_C\)</span>.</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p>To demonstrate the relative strengths of the electrical and gravitational forces between the electron and proton in the Bohr atom, suppose the hydrogen atom were held together solely by gravity.  Determine the radius of the ground-state orbit (in nm and AU) and the energy of the ground state (in EV).</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<p>Calculate the energies and vacuum wavelengths of all possible photons that are emitted when the electron cascades from the <span class="math notranslate nohighlight">\(n=3\)</span> to the ground state of the hydrogen atom.</p>
+</div>
+<div class="admonition-problem-7 admonition">
+<p class="admonition-title">Problem 7</p>
+<p>An electron in an old TV set reaches a speed of about <span class="math notranslate nohighlight">\(5\times 10^7\)</span> m/s before it hits the screen.  What is the wavelength of this electron?</p>
+</div>
+<div class="admonition-problem-8 admonition">
+<p class="admonition-title">Problem 8</p>
+<p>A White dwarf is a very dense object, with its ions and electrons packed extremely close together.  Each electron may be considered to be located within a region of size <span class="math notranslate nohighlight">\(\Delta x \approx 1.5 \times 10^{-12}\)</span> m. Estimate the minimum speed of the electron using Heisenberg’s uncertainty principle. <em>Do you think that the effects of relativity will be important?</em></p>
+</div>
+<div class="admonition-problem-9 admonition">
+<p class="admonition-title">Problem 9</p>
+<p>An electron spends roughly <span class="math notranslate nohighlight">\(10^{-8}\)</span> s in the first excited state of the hydrogen atom before spontaneously decaying back to the ground state.
+<strong>(a)</strong> Determine the uncertainty <span class="math notranslate nohighlight">\(\Delta E\)</span> in the energy of the first excited state.</p>
 <p><strong>(b)</strong> Calculate the uncertainty <span class="math notranslate nohighlight">\(\Delta \lambda\)</span> in the wavelength of the photon for this transition. <em>Why can you assume that <span class="math notranslate nohighlight">\(\Delta E = 0\)</span> for the ground state?</em></p>
-</div></blockquote>
-</div></blockquote>
 </div>
 </div>
 </div>
@@ -1042,8 +1144,8 @@ The minimum KE of the electron is 2.18e-18 J or 13.6 eV
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Chapter_3/continuous-spectrum-of-light.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1060,19 +1162,17 @@ The minimum KE of the electron is 2.18e-18 J or 13.6 eV
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Billy Quarles<br/>
-        
-            &copy; Copyright 2022.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Billy Quarles<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
 </main>
 
 

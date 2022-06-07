@@ -28,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -41,16 +44,15 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_12/interstellar-medium-and-star-formation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -252,7 +254,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -299,7 +301,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -537,7 +539,248 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The Interstellar Medium and Star Formation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interstellar-dust-and-gas">
+   8.1. Interstellar dust and gas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-interstellar-medium">
+     8.1.1. The Interstellar Medium
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interstellar-extinction">
+     8.1.2. Interstellar Extinction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mie-theory">
+     8.1.3. The Mie Theory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#molecular-contributions-to-interstellar-extinction-curves">
+     8.1.4. Molecular Contributions to Interstellar Extinction Curves
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hydrogen-as-the-dominant-component-of-the-ism">
+     8.1.5. Hydrogen as the Dominant Component of the ISM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cm-radiation-of-hydrogen">
+     8.1.6. 21-cm Radiation of Hydrogen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#molecular-traces-of-hydrogen">
+     8.1.7. Molecular Traces of Hydrogen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-classification-of-interstellar-clouds">
+     8.1.8. The Classification of Interstellar Clouds
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interstellar-chemistry">
+     8.1.9. Interstellar Chemistry
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-heating-and-cooling-of-the-ism">
+     8.1.10. The Heating and Cooling of the ISM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-sources-of-dust-grains">
+     8.1.11. The Sources of Dust Grains
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problems">
+     8.1.12.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-formation-of-protostars">
+   8.2. The Formation of Protostars
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-jeans-criterion">
+     8.2.1. The Jeans Criterion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#homologous-collapse">
+     8.2.2. Homologous Collapse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-fragmentation-of-collapsing-clouds">
+     8.2.3. The Fragmentation of Collapsing Clouds
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-physical-processes-in-protostellar-star-formation">
+     8.2.4. Additional Physical Processes in Protostellar Star Formation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ambipolar-diffusion">
+     8.2.5. Ambipolar Diffusion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical-simulations-of-protostellar-evolution">
+     8.2.6. Numerical Simulations of Protostellar Evolution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     8.2.7.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-main-sequence-evolution">
+   8.3. Pre-Main-Sequence Evolution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-hayashi-track">
+     8.3.1. The Hayashi Track
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classical-calculations-of-pre-main-sequence-evolution">
+     8.3.2. Classical Calculations of Pre-Main-Sequence Evolution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-formation-of-brown-dwarfs">
+     8.3.3. The Formation of Brown Dwarfs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#massive-star-formation">
+     8.3.4. Massive Star Formation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#possible-modifications-to-the-classical-models">
+     8.3.5. Possible Modifications to the Classical Models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-zero-age-main-sequence-zams">
+     8.3.6. The Zero-Age Main Sequence (ZAMS)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-initial-mass-function-imf">
+     8.3.7. The Initial Mass Function (IMF)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rm-h-ii-regions">
+     8.3.8.
+     <span class="math notranslate nohighlight">
+      \({\rm H\,II}\)
+     </span>
+     Regions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-effects-of-massive-stars-on-gas-clouds">
+     8.3.9. The Effects of Massive Stars on Gas Clouds
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ob-associations">
+       8.3.9.1. OB Associations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#t-tauri-stars">
+       8.3.9.2. T Tauri Stars
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fu-orionis-stars">
+       8.3.9.3. FU Orionis Stars
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#herbig-ae-be-stars">
+       8.3.9.4. Herbig Ae/Be Stars
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#herbig-haro-objects">
+       8.3.9.5. Herbig-Haro Objects
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#young-stars-with-circumstellar-disks">
+     8.3.10. Young Stars with Circumstellar Disks
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#proplyds">
+       8.3.10.1. Proplyds
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#circumstellar-disk-formation">
+       8.3.10.2. Circumstellar Disk Formation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     8.3.11.
+     <strong>
+      Problems
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-interstellar-medium-and-star-formation">
@@ -556,11 +799,11 @@
 \[ m_\lambda = M_\lambda + 5\log_{10}\,d-5 + A_\lambda, \tag{1}\]</div>
 <p>which is a modified version of the distance modulus equation with a correction factor <span class="math notranslate nohighlight">\(A_\lambda&gt;0\)</span> that adjusts for the interstellar extinction along the line of sight.  The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is positive because it always acts to dim objects along the magnitude scale.  If <span class="math notranslate nohighlight">\(A_\lambda\)</span> is large enough, a star can fall behind the limiting magnitude of the background sky for the naked eye or a telescope.  This is the cause for the dark bands running through the Milky Way.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_1.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_1.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_1.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_1.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 1</strong>: Dust clouds obscuring the light in the center of NGC 281. (Image Credit: NASA, ESA, and the Hubble Heritage TEam (STScI/AURA); P. McCullough (STScI))</p>
 </div>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_2.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_2.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_2.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_2.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 2</strong>: An interstellar cloud containing significant amounts of dust along with the gas (a dust
 cloud) can both scatter and absorb light that passes through it. (Carroll &amp; Ostlie (2007))</p>
 </div>
@@ -650,7 +893,7 @@ The average density is 2.2e-07 m^{-3}.
 <h3><span class="section-number">8.1.4. </span>Molecular Contributions to Interstellar Extinction Curves<a class="headerlink" href="#molecular-contributions-to-interstellar-extinction-curves" title="Permalink to this headline">¶</a></h3>
 <p>Mie theory works well for longer wavelengths (visible-IR), but deviations appear in the UV when we consider the ratio of <span class="math notranslate nohighlight">\(A_\lambda\)</span> between different wavelength regimes, such as <span class="math notranslate nohighlight">\(A_V\)</span> centered in the visual.  The ratio <span class="math notranslate nohighlight">\(A_\lambda/A_V\)</span> is often plotted in terms of the reciprocal wavelength <span class="math notranslate nohighlight">\(\lambda^{-1}\)</span>.  Although <strong>color excesses</strong> are sometimes plotted instead, such as <span class="math notranslate nohighlight">\((A_\lambda -A_V)/(A_B-A_V)\)</span> or <span class="math notranslate nohighlight">\(E(B-V) \equiv (B-V)_{\rm intrinsic} - (B-V)_{\rm observed}\)</span>.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 3</strong>: Interstellar extinction curves along the lines of sight to three stars. The dashed lines
 represent the observational data, and the solid lines are theoretical fits. (Carroll &amp; Ostlie (2007))</p>
 </div>
@@ -664,7 +907,7 @@ represent the observational data, and the solid lines are theoretical fits. (Car
 <p>have led most researchers to suggest that interstellar dust has a major  component in the form of graphite.</p>
 <p>Another possible source of the 217.5 nm feature could be <strong>polycyclic aromatic hydrocarbons</strong> (PAHs).  These molecules have multiple carbon ring structures (like graphite) that could be responsible for a series of molecular bands that are observed in the emission from diffuse dust clouds.  There are <em>unidentified IR emission bands</em> between <span class="math notranslate nohighlight">\(3.3-12\,{\rm \mu m}\)</span> and appear to arise from vibrations in the C-C and C-H bonds common in PAHs.  The energies associated with molecular bonds are quantized like atomic energy levels.  However, the energy levels tend to group in closely spaced bands, which produces the characteristic broad features in the continuum.  The vibration, rotation, and bending of molecular bonds are all quantized, which yields complex spectra that may be difficult to identify in large molecules.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_4.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_4.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_4.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_4.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 4</strong>: The structures of several polycyclic aromatic hydrocarbons: <span class="math notranslate nohighlight">\({\rm C_{14}H_{10}}\)</span> (anthracene),
 <span class="math notranslate nohighlight">\({\rm C_{24}H_{12}}\)</span> (coronene), <span class="math notranslate nohighlight">\({\rm C_{42}H_{18}}\)</span> (hexabenzocoronene). The hexagonal structures are shorthand for indicating
 the presence of a carbon atom at each corner of the hexagon. (Carroll &amp; Ostlie (2007))</p>
@@ -682,7 +925,7 @@ the presence of a carbon atom at each corner of the hexagon. (Carroll &amp; Ostl
 <h3><span class="section-number">8.1.6. </span>21-cm Radiation of Hydrogen<a class="headerlink" href="#cm-radiation-of-hydrogen" title="Permalink to this headline">¶</a></h3>
 <p>Neutral hydrogen can be detected in the diffuse ISM by using the unique radio wavelength, the <strong>21-cm line</strong>.  This particular absorption in the spectrum is produced by the spin reversal of the electron relative to the proton’s spin.  Both electrons and protons possess an inherent spin angular momentum with the <span class="math notranslate nohighlight">\(z\)</span>-component of the spin angular momentum have two possible orientations (<span class="math notranslate nohighlight">\(m_s = \pm 1/2)\)</span>.  Each particle is charged and thus the intrinsic spins endow them with dipole magnetic fields (i.e., bar magnets).</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 5</strong>: When the spins of the electron and proton in a hydrogen atom go from being aligned
 to being anti-aligned, a 21-cm-wavelength photon is emitted. (Carroll &amp; Ostlie (2007))</p>
 </div>
@@ -723,7 +966,7 @@ to being anti-aligned, a 21-cm-wavelength photon is emitted. (Carroll &amp; Ostl
 <li><p><strong>Diffuse (or translucent) molecular clouds</strong> have primarily atomic hydrogen gas and the interstellar extinction is roughly <span class="math notranslate nohighlight">\(1 &lt; A_V &lt; 5\)</span>, where molecular hydrogen may be found in regions of higher column density.  Conditions in these clouds are similar to diffuse <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> clouds, but with somewhat higher masses; temperatures range from <span class="math notranslate nohighlight">\(15-50\,{\rm K}\)</span>, number densities range from <span class="math notranslate nohighlight">\(5-50 \times 10^8\,{\rm m^{-3}}\)</span>, and the cloud masses are from around <span class="math notranslate nohighlight">\(3-100\,M_\odot\)</span>.  The clouds extend several parsecs across, where both <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> and diffuse molecular clouds tend to be irregularly shaped.</p></li>
 </ul>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_6.jpg?raw=true?" width="500">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_6.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_6.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_6.jpg?raw=true?" style="width: 500px;" /></a>
 <p><strong>Figure 6</strong>: The Horsehead Nebula is part of the Orion giant molecular cloud complex. The
 “horsehead” appearance is due to dust protruding into an <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> (ionized hydrogen) environment. (Image Credit: NASA, CFHT, Coelum, MegaCam; J. C Cuillandre &amp; G. A. Anselmi)</p>
 </div>
@@ -743,7 +986,7 @@ to being anti-aligned, a 21-cm-wavelength photon is emitted. (Carroll &amp; Ostl
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Bok_globule">Bok globules</a> are named after Bart Bok, who first studied these objects in the 1940s.</p>
 </div>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_7.jpg?raw=true?" width="600">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_7.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_7.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_7.jpg?raw=true?" style="width: 600px;" /></a>
 <p><strong>Figure 7</strong>: The Bok globule, Barnard 68 (B68), observed in visible light [(a) composite of BVI
 bands] and in infrared light [(b) composite of BIK bands]. (Image Credit: ESO)</p>
 </div></div>
@@ -1123,7 +1366,7 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <p>Above the developing protostellar core, material is still in free-fall.  Once that material meets the nearly hydrostatic core, a shock wave develops and the material is supersonic.  At this shock front, the infalling material loses a significant fraction of its kinetic energy in the form of heat and produces much of its luminosity.  When the temperature reaches ~1000 K, the dust begins to vaporize and the opacity drops.  This means the radius corresponding to an optical depth <span class="math notranslate nohighlight">\(\tau = 2/3\)</span> is reduced.  Since the luminosity remains high, a corresponding increase in the effective temperature must occur.</p>
 <p>The hydrostatic core slowly increases as more overlying material continues to fall onto it.  Eventually, the temperatures becomes large enough to cause the molecular hydrogen to dissociate into atomic hydrogen.  This process absorbs energy that would otherwise provide a pressure gradient to maintain hydrostatic equilibrium.  The core becomes dynamically unstable and a second collapse begins.  After the core radius decreases to ~<span class="math notranslate nohighlight">\(1.3\,R_\odot\)</span>, hydrostatic equilibrium is re-established.  The core mass is still <strong>accreting</strong> gas, where the final mass will be larger.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_9.jpg?raw=true?" width="600">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_9.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_9.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_9.jpg?raw=true?" style="width: 600px;" /></a>
 <p><strong>Figure 8</strong>: Theoretical evolutionary tracks of the gravitational collapse of 0.05, 0.1, 0.5, 1, 2,
 and 10 <span class="math notranslate nohighlight">\(M_\odot\)</span> clouds through the protostar phase (solid lines). The dashed lines show the times since
 collapse began. (Carroll &amp; Ostlie (2007))</p>
@@ -1155,7 +1398,7 @@ collapse began. (Carroll &amp; Ostlie (2007))</p>
 <p>As the central temperature continues to rise, the levels of ionization increase but the opacity decreases.  As the radiative core develops, more and more of the star’s mass is encompassed by the core.  Following the descent along the Hayashi track, the luminosity reaches a minimum and the radiative core allows energy to escape into the convective envelope more readily.  This causes the luminosity to increase again and the effective temperature increases since the star is still shrinking.</p>
 <p>After the luminosity begins to increase, the temperature near the center has become high enough for nuclear reactions to begin, although not yet at their equilibrium rates.  The first two steps of the PP I chain and the CNO reactions dominate the nuclear energy production.  Over time, these reactions provide an increasingly larger fraction of the luminosity, while the energy due to the gravitational collapse begins to wane.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_11.jpg?raw=true?" width="600">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_11.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_11.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_11.jpg?raw=true?" style="width: 600px;" /></a>
 <p><strong>Figure 9</strong>: Classical pre-main-sequence evolutionary tracks computed for stars of various
 masses with the composition <span class="math notranslate nohighlight">\(X = 0.68\)</span>, <span class="math notranslate nohighlight">\(Y = 0.30\)</span>, and <span class="math notranslate nohighlight">\(Z = 0.02\)</span>. The direction of evolution on each
 track is generally from low effective temperature to high effective temperature (right to left). The
@@ -1166,7 +1409,7 @@ line marks the onset of convection in the core of the star. Contraction times fo
 in Table 1. (Carroll &amp; Ostlie (2007))</p>
 </div>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Table_1.jpg?raw=true?" width="600">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Table_1.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Table_1.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Table_1.jpg?raw=true?" style="width: 600px;" /></a>
 <p><strong>Table 1</strong>: Pre-main-sequence contraction times for the classical models presented in Figure 9. (Carroll &amp; Ostlie (2007))</p>
 </div>
 <p>The CNO reactions have a high temperature dependence and a temperature gradient is established in the core so that some convection begins to develop there.  At the local maximum in the luminosity on the H-R diagram (near the end of the track), the nuclear energy production rate is so great that the central core is forced to expand (i.e., <span class="math notranslate nohighlight">\(\epsilon = \epsilon_{nuclear} + \epsilon_{\rm gravity}\)</span>).  The expansion causes the total luminosity and temperature to decrease at the surface.</p>
@@ -1195,14 +1438,14 @@ in Table 1. (Carroll &amp; Ostlie (2007))</p>
 <h3><span class="section-number">8.3.7. </span>The Initial Mass Function (IMF)<a class="headerlink" href="#the-initial-mass-function-imf" title="Permalink to this headline">¶</a></h3>
 <p>From observational studies, it appears that more low-mass stars (than high-mass stars) from when an interstellar cloud fragments.  The number of stars that form <em>per mass interval per unit volume</em> is strongly mass-dependent, where this functional dependence is known as the <strong>initial mass function</strong> (IMF).  A particular IMF depends on a variety of factors, including the local environment in which a cluster of stars forms.  One observational bias arises from the very different evolution rates for star in different mass ranges (i.e., the more massive stars have shorter lifetimes) and thus, it is not surprising that massive stars are extremely rare compared to low-mass stars.  Observations also suggest that the curve below <span class="math notranslate nohighlight">\(0.1\,M_\odot\)</span> (or <span class="math notranslate nohighlight">\(\log_{10}\,m = -1\)</span>) may be fairly flat indicating a large number of low-mass stars and brown dwarfs.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?" width="600">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?" style="width: 600px;" /></a>
 <p><strong>Figure 10</strong>: The initial mass function, <span class="math notranslate nohighlight">\(\xi\)</span>, shows the number of stars per unit area of the Milky Way’s disk per unit interval of logarithmic mass that is produced in different mass intervals. The individual points represent observational data and the solid line is a theoretical estimate. Masses are in solar units. (Carroll &amp; Ostlie (2007))</p>
 </div></div>
 <div class="section" id="rm-h-ii-regions">
 <h3><span class="section-number">8.3.8. </span><span class="math notranslate nohighlight">\({\rm H\,II}\)</span> Regions<a class="headerlink" href="#rm-h-ii-regions" title="Permalink to this headline">¶</a></h3>
 <p>Hot, massive stars (O and B spectral types) are shrouded in a cloak of gas and dust when they reach the ZAMS.  The bulk of their radiation is emitted in the UV, which can ionize the ground-state hydrogen gas <span class="math notranslate nohighlight">\(({\rm H\,I})\)</span> in the ISM to produce <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions.  The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions are in equilibrium if they have equal rates of ionization and recombination.  During recombination, the electron cascades downward and produces a number of lower-energy photons (many will be in the visible).  The dominant visible wavelength comes from the <span class="math notranslate nohighlight">\(n=3\)</span> to <span class="math notranslate nohighlight">\(n=2\)</span> transition, or the <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> line of the Balmer series.  Therefore, <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions appear to fluoresce in red light.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 11</strong>: The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region in Orion A is associated with a young OB association, the Trapezium cluster, and a giant molecular cloud. The Orion complex is 450 pc away. (Carroll &amp; Ostlie (2007))</p>
 </div>
 <p><strong>Emission nebulae</strong> are considered to be the most beautiful objects in the night sky, where one particularly famous <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region is the Orion Nebula (M42).  The Orion A complex contains M42, a giant molecular cloud (OMC 1), and a very your star cluster (the Trapezium cluster).  The first protostar candidates were discovered in this region as well.</p>
@@ -1276,7 +1519,7 @@ The Stromgren radius due to an O6 star is 3.48 pc.
 <h3><span class="section-number">8.3.9. </span>The Effects of Massive Stars on Gas Clouds<a class="headerlink" href="#the-effects-of-massive-stars-on-gas-clouds" title="Permalink to this headline">¶</a></h3>
 <p>Through the formation of massive protostars, the temperature will begin to rise in the molecular cloud, where the dust will vaporize and molecules will dissociated before the star reaches the main sequence.  After reaching the main sequence, the surrounding gas will ionize, resulting tin the creation of a <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region inside of a <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> region.  Due to the star’s high luminosity, radiation pressure will begin to drive significant mass loss that can disperse the remainder of the cloud.  If several O and B stars form at the same time, then star formation can be halted around other protostars as they are starved for resources.  If the cloud was only marginally bound, the mass loss will result in the newly formed stars drifting apart from the initial cluster.  Some famous examples of this occurring are in the Carina Nebula (about 3000 pc from Earth) and in the <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/m16L.html">Eagle Nebula (M16)</a>.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 12</strong>: A Visible image of a portion of the Carina Nebula (top).
 The same region observed in IR (bottom). Much less detail is observable because of the obscuration
 due to dust in the cloud. (Carroll &amp; Ostlie (2007); HST/ESA)</p>
@@ -1285,7 +1528,7 @@ due to dust in the cloud. (Carroll &amp; Ostlie (2007); HST/ESA)</p>
 <h4><span class="section-number">8.3.9.1. </span>OB Associations<a class="headerlink" href="#ob-associations" title="Permalink to this headline">¶</a></h4>
 <p>Groups of stars that are dominated by O and B main-sequence stars are called <strong>OB associations</strong>, where studies show that they cannot remain gravitationally bound to on another due to their individual kinematic velocities and masses.  An example is in the Trapezium cluster in the Orion A complex, which is believed to be less than 10 million years old.  It is currently densely populated with stars <span class="math notranslate nohighlight">\((&gt;2000\,{\rm pc^{-3}})\)</span> that are in the range of <span class="math notranslate nohighlight">\(0.5-2.0\,M_\odot\)</span>.  Radial velocity measurements (in <span class="math notranslate nohighlight">\(^{13}CO\)</span>) show that the gas in the vicinity is very turbulent, where the nearby O and B stars are dispersing the gas and causing the cluster to become unbound.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 13</strong>: The giant gas pillars of the Eagle Nebula (M16). The left most pillar is more than
 1 pc long from base to top. Ionizing radiation from massive newborn stars off the top edge of the
 image are causing the gas in the cloud to photoevaporate. [Courtesy of NASA, ESA, STScI, J. Hester
@@ -1309,13 +1552,13 @@ and P. Scowen (Arizona State University).]</p>
 <h4><span class="section-number">8.3.9.5. </span>Herbig-Haro Objects<a class="headerlink" href="#herbig-haro-objects" title="Permalink to this headline">¶</a></h4>
 <p>Mass loss during pre-main-sequence evolution can also occur from <strong>jets</strong> of gas that are ejected in narrow beams in opposite directions.  <strong>Herbig-Haro objects</strong> (HH objects) were discovered in the early 1950s by George Herbig and Guillermo Haro in the vicinity of the Orion nebula and are associated with the jets produced by young protostars (e.g., T Tauri stars).  Jets can excite gas within the ISM, which results in objects with bright emission line spectra.  Herbig-Haro objects HH 1 and HH 2 were created by material ejected at speeds of several 100 <span class="math notranslate nohighlight">\({\rm km/s}\)</span> from a star shrouded in a cocoon of dust.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 14</strong>: (a) A jet associated with HH 47. The scale at the lower left is 1000 AU. (Courtesy of J. Morse/STScI, and NASA.) (b) The Herbig–Haro objects HH 1 and HH 2 are located just south of the Orion nebula and are moving away from a young protostar hidden inside a dust cloud near the center of the image. [Courtesy of J. Hester (Arizona State University), the WF/PC 2 Investigation Definition
 Team, and NASA.]</p>
 </div>
 <p>Continuous emission is also observed in some protostellar (circumstellar) objects and is from the reflection of light from the parent star (e.g., HH 30).  The surfaces of a circumstellar disk are illuminated by the central star, which is hidden from view behind the dusty disk.  Jets are originating from deep within the accretion disk, possibly from the star.  These accretion disks appear responsible for emission lines, mass loss, jets and even some of the luminosity variations.  Unfortunately, the details are not fully understood, but early models can be developed.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_20.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_20.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_20.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_20.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 15</strong>: An early model of a T Tauri star with an accretion disk. The disk powers and collimates jets that expand into the interstellar medium, producing Herbig–Haro objects. (Carroll and Ostlie (2007); Figure adapted from Snell, Loren, and Plambeck, Ap. J. Lett., 239, L17, 1980.)</p>
 </div></div>
 </div>
@@ -1326,7 +1569,7 @@ Team, and NASA.]</p>
 <h4><span class="section-number">8.3.10.1. </span>Proplyds<a class="headerlink" href="#proplyds" title="Permalink to this headline">¶</a></h4>
 <p>he Orion Nebula was observed in 1993 by HST, where the observations used the emission lines of <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> and the two forbidden lines <span class="math notranslate nohighlight">\(({\rm N\, II\; and\, O\,III})\)</span>.  Analysis of the data revealed 56 (out of 110 stars) brighter than <span class="math notranslate nohighlight">\(V= 21\)</span> are surrounded by disks of circumstellar dust and gas.  <strong>Proplyds</strong>, or protoplanetary disks associated with young stars are less than 1 Myr old.  Based on observations of the ionized material in the proplyds, the disks seem to have masses much greater than <span class="math notranslate nohighlight">\(\sim 4\,M_\oplus\)</span>.</p>
 <div align="center">
-<img src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?" width="400">
+<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?" style="width: 400px;" /></a>
 <p><strong>Figure 16</strong>: Images of the Orion Nebula (M42) obtained by the Hubble Space Telescope. Numerous proplyds are visible in the field of view of the camera. (Courtesy of C. Robert O’Dell/Vanderbilt University, NASA, and ESA.)</p>
 </div>
 </div>
@@ -1371,8 +1614,8 @@ Team, and NASA.]</p>
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../Chapter_11/interiors-of-stars.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1389,19 +1632,17 @@ Team, and NASA.]</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Billy Quarles<br/>
-        
-            &copy; Copyright 2022.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Billy Quarles<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
 </main>
 
 
