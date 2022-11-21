@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4. The Classification of Stellar Spectra &#8212; ASTR4410 Modern Astrophysics</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,28 +28,32 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,18 +65,30 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-103786588-2', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-CP3EW7BJEH');
+                </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -84,9 +97,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -99,14 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR4410: Modern Astrophysics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR4410: Modern Astrophysics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -211,103 +226,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_8/classification-of-stellar-spectra.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/ModernAstro"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_8/classification-of-stellar-spectra.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_8/classification-of-stellar-spectra.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/ModernAstro"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_8/classification-of-stellar-spectra.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-formation-of-spectral-lines">
    4.1. The Formation of Spectral Lines
@@ -380,12 +469,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>The Classification of Stellar Spectra</h1>
@@ -474,16 +562,17 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-classification-of-stellar-spectra">
-<h1><span class="section-number">4. </span>The Classification of Stellar Spectra<a class="headerlink" href="#the-classification-of-stellar-spectra" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">4. </span>The Classification of Stellar Spectra<a class="headerlink" href="#the-classification-of-stellar-spectra" title="Permalink to this headline">#</a></h1>
 <p>The science of astronomy progressed from a purely observational science of classification (prior to the 1800s) to a science interested in the fundamental inner workings of the stars (after the 1800s).  As early as 1817, stars were known to be chemically different through their spectra.</p>
 <div class="section" id="the-formation-of-spectral-lines">
-<h2><span class="section-number">4.1. </span>The Formation of Spectral Lines<a class="headerlink" href="#the-formation-of-spectral-lines" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.1. </span>The Formation of Spectral Lines<a class="headerlink" href="#the-formation-of-spectral-lines" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-spectral-types-of-stars">
-<h3><span class="section-number">4.1.1. </span>The Spectral Types of Stars<a class="headerlink" href="#the-spectral-types-of-stars" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.1. </span>The Spectral Types of Stars<a class="headerlink" href="#the-spectral-types-of-stars" title="Permalink to this headline">#</a></h3>
 <p>The initial spectral taxonomy used capital letters (from A…Z) that denoted the strength (or broadness) of the hydrogen absorption lines in a star and was developed by Edward Pickering and Williamina Fleming (Pickering’s assistant) in the 1890s at Harvard.  Pickering had many assistants working with him at the time, where several of them developed different classification schemes.  Antonia Maury’s scheme used the width of the spectral lines, which would have rearranged the Pickering’s B stars to come before the A stars.  Building on Maury’s work, Annie Jump Cannon rearranged the sequence of spectra so that O stars came before B and A stars, added subdivisions (e.g., A0-A9), and consolidated many of the classes.  As a result, the Harvard classification scheme became a <em>temperature</em> sequence with seven <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Harvard_spectral_classification">spectral types</a> (OBAFGKM) with O stars being the hottest.  Due to the reordering of letters, astronomy students developed mnemonics to remember the string of spectral types.  The traditional mnemonic and some other memorable versions are:</p>
 <ul class="simple">
 <li><p><strong>O</strong>h <strong>B</strong>e <strong>A</strong> <strong>F</strong>ine <strong>G</strong>irl/uy, <strong>K</strong>iss <strong>M</strong>e.</p></li>
@@ -564,15 +653,15 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In Cannon’s classification scheme, the Balmer lines (hydrogen absorption) reach their maximum intensity when the effective surface temperature of the star reaches 10,000 K.  The visible neutral Helium (He I) lines occur at 22,000 K (B2 stars) and singly ionized calcium (Ca II) are most intense at 5250 K (K0 stars).  In astronomy, spectral lines of Ca II H and K are quoted, which are 396.8 nm and 393.3 nm, respectively.  Also, astronomers use the term <strong>metal</strong> to refer to a chemical element heavier than helium because hydrogen and helium are the most abundant elements in the universe. Table 1 includes the traditional Harvard classification scheme and the spectral types of very cool stars (L-Type) and <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Class_T:_methane_dwarfs">brown dwarfs</a> (T-Type).  Brown dwarfs are objects with too lite mass for nuclear fusion (of hydrogen) to occur in their interiors and are not considered stars.  Figure <a class="reference internal" href="#ms-spectra-fig"><span class="std std-numref">4.1</span></a> illustrates how the spectra appear for a range of spectral classes (falsely colored).  Figure <a class="reference internal" href="#spectra-fig"><span class="std std-numref">4.2</span></a> demonstrates the resultant spectra after analysis and digitization.</p>
 <div class="figure align-default" id="ms-spectra-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/0/0b/Dwarf_star_spectra_%28luminosity_class_V%29_from_Pickles_1998.png"><img alt="MS star spectra" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Dwarf_star_spectra_%28luminosity_class_V%29_from_Pickles_1998.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Montage of false color spectra for main-sequence stars. Image credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification">Wikipedia</a></span><a class="headerlink" href="#ms-spectra-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Montage of false color spectra for main-sequence stars. Image credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification">Wikipedia</a></span><a class="headerlink" href="#ms-spectra-fig" title="Permalink to this image">#</a></p>
 </div>
 <div class="figure align-default" id="spectra-fig">
 <a class="reference internal image-reference" href="https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit1/SpTypes/dwarfs.gif"><img alt="MS star spectra" src="https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit1/SpTypes/dwarfs.gif" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">A stack of all of the spectral images showing how the spectral features change systematically from types O5 through M5. Image credit: <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1984ApJS...56..257J/abstract">Jacoby, Hunter, &amp; Christian (1984)</a>; adapted by <a class="reference external" href="https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit1/SpTypes/index.html">Richard Pogge</a></span><a class="headerlink" href="#spectra-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">A stack of all of the spectral images showing how the spectral features change systematically from types O5 through M5. Image credit: <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1984ApJS...56..257J/abstract">Jacoby, Hunter, &amp; Christian (1984)</a>; adapted by <a class="reference external" href="https://www.astronomy.ohio-state.edu/pogge.1/Ast162/Unit1/SpTypes/index.html">Richard Pogge</a></span><a class="headerlink" href="#spectra-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="the-maxwell-boltzmann-velocity-distribution">
-<h3><span class="section-number">4.1.2. </span>The Maxwell-Boltzmann Velocity Distribution<a class="headerlink" href="#the-maxwell-boltzmann-velocity-distribution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.2. </span>The Maxwell-Boltzmann Velocity Distribution<a class="headerlink" href="#the-maxwell-boltzmann-velocity-distribution" title="Permalink to this headline">#</a></h3>
 <p>Electronic transitions explained the <em>existence</em> of absorption or emission spectral lines, but there must be some underlying physical foundation for the relative strength of spectral lines.  If the probability of transition was equal (independent of the orbital), then the absorption line strength of the Balmer lines should be equal.  This is clearly not the case as demonstrated by Figs. 1 and 2.  Then, two basic questions arise:</p>
 <ol class="simple">
 <li><p>In what orbitals are electrons most likely to be found?</p></li>
@@ -581,7 +670,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Answering the first question will provide insight into which spectral lines we expect to be stronger than the other spectral lines.  While the second question will probe the relative strengths of the spectral lines.  The answers to both question are found in <strong>statistical mechanics</strong>, which is a branch of physics that studies the statistical properties of many body systems.  For example, a gas contains a huge number of particles and it would be impossible to calculate the detailed behavior of <em>all</em> the particles.  Information about how the behavior of the system can be determined using well-defined properties, such as its internal energy (temperature), pressure, and density.</p>
 <p>For a gas in thermal equilibrium (i.e., the gas in not rapidly changing in temperature), the <strong>Maxwell-Boltzmann velocity distribution function</strong> describes the number density of gas particles <span class="math notranslate nohighlight">\(n\)</span> within a given range of speed <span class="math notranslate nohighlight">\(v\)</span>.  The number of gas particles per unit volume having speeds between <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(v+dv\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-number-density">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-number-density" title="Permalink to this equation">¶</a></span>\[n_v dv = n \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-mv^2/(2kT)}4\pi v^2 dv,\]</div>
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-number-density" title="Permalink to this equation">#</a></span>\[n_v dv = n \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-mv^2/(2kT)}4\pi v^2 dv,\]</div>
 <p>which depends on the total number density <span class="math notranslate nohighlight">\(n\)</span>, the particle’s mass <span class="math notranslate nohighlight">\(m\)</span>, the Boltzmann constant <span class="math notranslate nohighlight">\(k\)</span>, and the temperature of the gas <span class="math notranslate nohighlight">\(T\)</span> (in K).</p>
 <ul class="simple">
 <li><p><strong>What is the most probable speed for hydrogen atoms in an A0 spectral-type star?</strong></p></li>
@@ -634,8 +723,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>The exponent of the Maxwell-Boltzmann distribution function is the ratio of a gas particle’s kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span>) to the characteristic thermal energy (<span class="math notranslate nohighlight">\(kT\)</span>).  Particles above the thermal energy tend to either can escape so the overall distribution remains the same.  This is analogous as to why the temperature of a pot of boiling water doesn’t keep increasing.  The distribution peaks when the particle energies are equal at a <strong>most probable speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a13e047-1b20-4648-8a1a-80f5ae28a94a">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-3a13e047-1b20-4648-8a1a-80f5ae28a94a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ca423a45-1212-46f8-a1eb-0d22d5bb9324">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-ca423a45-1212-46f8-a1eb-0d22d5bb9324" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{mp} = \sqrt{\frac{2kT}{m}}. 
 \end{align}\]</div>
 <ul class="simple">
@@ -644,13 +733,13 @@ v_{mp} = \sqrt{\frac{2kT}{m}}.
 <div class="math notranslate nohighlight">
 \[ v_{mp} = \sqrt{\frac{2(1.38\times 10^{-23})(10^4)}{1.67 \times 10^{-27}}} = 1.29 \times 10^4\;{\rm m/s} \]</div>
 <p>The high-speed exponential “tail” of the distribution function results in a somewhat higher <strong>root-mean-square speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8623f556-8613-40a5-bf52-f9b67ae03481">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-8623f556-8613-40a5-bf52-f9b67ae03481" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bbf55bda-276d-4454-a448-97b015be7a1d">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-bbf55bda-276d-4454-a448-97b015be7a1d" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{rms} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 <p>The area under the curve of the Maxwell-Boltzmann distribution <em>fraction</em> of gas particles within a range of speeds or,</p>
 <div class="math notranslate nohighlight" id="equation-mb-dist">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-mb-dist" title="Permalink to this equation">¶</a></span>\[\begin{split}N/N_{total} &amp;= \frac{1}{n}\int_{v_1}^{v_2} n_v dv, \\ 
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-mb-dist" title="Permalink to this equation">#</a></span>\[\begin{split}N/N_{total} &amp;= \frac{1}{n}\int_{v_1}^{v_2} n_v dv, \\ 
 &amp;= \left(\frac{m}{2\pi kT}\right)^{3/2} \int_{v_1}^{v_2} e^{-mv^2/(2kT)} 4\pi v^2 dv.\end{split}\]</div>
 <p>Equation <a class="reference internal" href="#equation-mb-dist">(4.4)</a> has a closed-form solution when <span class="math notranslate nohighlight">\(v_1 = 0\)</span> and <span class="math notranslate nohighlight">\(v_2\rightarrow \infty\)</span>, it must be evaluated numerically in other cases.</p>
 <ul class="simple">
@@ -709,7 +798,7 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <p>The Maxwell-Boltzmann distribution function describes the kinetic energy of gas particles within a star’s atmosphere at an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> and allows us to derive the most probable speed <span class="math notranslate nohighlight">\(v_{mp}\)</span> of the particles.  Recall our first question was to determine the most likely orbitals for the electrons.  While this cannot be answered fully yet, the next step will estimate the relative likelihood of a possible energy level through the Boltzmann equation.</p>
 </div>
 <div class="section" id="the-boltzmann-equation">
-<h3><span class="section-number">4.1.3. </span>The Boltzmann Equation<a class="headerlink" href="#the-boltzmann-equation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.3. </span>The Boltzmann Equation<a class="headerlink" href="#the-boltzmann-equation" title="Permalink to this headline">#</a></h3>
 <p>Collisions between gas particles cause some particles to gain and lose energy and thus, produce a definite distribution in the speeds of gas particles.  Statistical mechanics shows that orbitals of higher energy are less likely to be occupied by electrons.  Suppose there are two states of Energy <span class="math notranslate nohighlight">\(E_a\)</span> and <span class="math notranslate nohighlight">\(E_b\)</span> that are represented by a set of quantum numbers <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, respectively.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -780,8 +869,8 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </table>
 </div>
 <p>There exists some probability <span class="math notranslate nohighlight">\(P(s_x)\)</span> that the system is in a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Then the ratio of the probability between orbital states represents the likelihood for which electrons may be found.  Using the states <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, the ratio of probability is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7730b81-eb8d-49a6-be14-5797dbd689d7">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-d7730b81-eb8d-49a6-be14-5797dbd689d7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0943a3bd-6e1e-40d9-a73a-edeb635bfa9b">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-0943a3bd-6e1e-40d9-a73a-edeb635bfa9b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{P(s_b)}{P(s_a)} = \frac{e^{-E_b/(kT)}}{e^{-E_a/(kT)}} = e^{-(E_b-E_a)/(kT)}, 
 \end{align}\]</div>
 <div class="admonition note">
@@ -791,7 +880,7 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <p>where <span class="math notranslate nohighlight">\(T\)</span> is the common temperature of the two systems and <span class="math notranslate nohighlight">\(e^{-E_x/(kT)}\)</span> represents the <em>Boltzmann factor</em> for a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Suppose that <span class="math notranslate nohighlight">\(E_b &gt; E_a\)</span> and the temperature is decreasing (<span class="math notranslate nohighlight">\(T\rightarrow 0\)</span>), then the factor in the exponential <span class="math notranslate nohighlight">\(-(E_b-E_a)/(kT) \rightarrow -\infty\)</span> and so the ratio of probability <span class="math notranslate nohighlight">\(P(s_b)/P(s_a) \rightarrow 0\)</span>.  This means that there isn’t any thermal energy available to excite the electron to a higher energy level.  Conversely, if there is an infinite amount of energy (i.e., <span class="math notranslate nohighlight">\(T\rightarrow \infty\)</span>), then it is certain that an excitation will occur because <span class="math notranslate nohighlight">\(P(s_b)/P(s_a) \rightarrow 1\)</span>.</p>
 <p>It is often the case that then energy levels of the system may be <strong>degenerate</strong>, where more than one quantum state can have the same energy.  For example, two electrons in the ground state of hydrogen with opposite spins will have the same energy because <span class="math notranslate nohighlight">\(E_n\)</span> doesn’t depend on the quantum number <span class="math notranslate nohighlight">\(m_s\)</span>.  <em>Table 2 shows two states for the ground (<span class="math notranslate nohighlight">\(n=1\)</span>) state and eight states for the 1st excited (<span class="math notranslate nohighlight">\(n=2\)</span>) state so that the number of degenerate states <span class="math notranslate nohighlight">\(g_n = 2n^2\)</span>.</em> When taking averages, we must account for the degenerate states using a separate factor <span class="math notranslate nohighlight">\(g_x\)</span>, which is the statistical weight of the energy level.  The ratio of the probability between two degenerate states is given by</p>
 <div class="math notranslate nohighlight" id="equation-prob-ratio">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-prob-ratio" title="Permalink to this equation">¶</a></span>\[\frac{P(s_b)}{P(s_a)} = \frac{g_b e^{-E_b/(kT)}}{g_a e^{-E_a/(kT)}} = \frac{g_b}{g_a} e^{-(E_b-E_a)/(kT)} = \frac{N_b}{N_a},\]</div>
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-prob-ratio" title="Permalink to this equation">#</a></span>\[\frac{P(s_b)}{P(s_a)} = \frac{g_b e^{-E_b/(kT)}}{g_a e^{-E_a/(kT)}} = \frac{g_b}{g_a} e^{-(E_b-E_a)/(kT)} = \frac{N_b}{N_a},\]</div>
 <p>which is typically indistinguishable from the ratio of the number of atoms <span class="math notranslate nohighlight">\(N_b/N_a\)</span> because stellar atmospheres contain a vast number of atoms.  Equation <a class="reference internal" href="#equation-prob-ratio">(4.6)</a> is also called the <a class="reference external" href="https://phys.libretexts.org/Bookshelves/Astronomy__Cosmology/Book%3A_Stellar_Atmospheres_(Tatum)/08%3A_Boltzmann%27s_and_Saha%27s_Equations/8.04%3A_Boltzmann%27s_Equation">Boltzmann equation</a>.</p>
 <ul class="simple">
 <li><p><strong>At what temperature will equal numbers of atoms have electrons in the ground and 1st excited states?</strong></p></li>
@@ -844,15 +933,15 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </div>
 </div>
 <div class="section" id="the-saha-equation">
-<h3><span class="section-number">4.1.4. </span>The Saha Equation<a class="headerlink" href="#the-saha-equation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.4. </span>The Saha Equation<a class="headerlink" href="#the-saha-equation" title="Permalink to this headline">#</a></h3>
 <p>The Maxwell-Boltzmann equation does not provide a complete picture, which lies in also considering the relative number of atoms <em>in different stages of ionization</em>.  Ionization energy is the requisite energy to remove an electron from an atom and thus, increasing its ionization stage by one (i.e., stage <em>i</em> to stage <em>i+1</em>).  The ionization energy of hydrogen is 13.6 eV or the energy needed to convert it from H I to H II.  However, not all electron transitions start from the ground state.  An average must be taken over the orbital energies to allow for the possible partitioning of the atom’s electrons among its orbitals.  The average is obtained using the <strong>partition function</strong> <em>Z</em>, which is the weighted sum of <em>the number of ways</em> the atom can arrange its electrons with the same energy.  More energetic configurations receive less weight from the Boltzmann factor when the sum is taken.  Let <span class="math notranslate nohighlight">\(E_j\)</span> be the energy of the <em>j</em>th energy level and <span class="math notranslate nohighlight">\(g_j\)</span> is the degeneracy of that level, then the partition function <span class="math notranslate nohighlight">\(Z\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-59473f47-f539-4f7b-b071-27d08d0b5210">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-59473f47-f539-4f7b-b071-27d08d0b5210" title="Permalink to this equation">¶</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-9f9dc925-4cd5-4a18-aea5-b2d76d9e1494">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-9f9dc925-4cd5-4a18-aea5-b2d76d9e1494" title="Permalink to this equation">#</a></span>\[\begin{align} 
 Z = \sum_{j=1}^\infty g_j e^{-(E_j-E_1)/(kT)},
 \end{align}\]</div>
 <p>and is measured relative to the ground state energy <span class="math notranslate nohighlight">\(E_1\)</span>.  If we use the partition functions of two ionization stages (<span class="math notranslate nohighlight">\(Z_i\)</span> and <span class="math notranslate nohighlight">\(Z_{i+1}\)</span>), then the ratio of atoms in each stage is</p>
 <div class="math notranslate nohighlight" id="equation-saha-eq">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-saha-eq" title="Permalink to this equation">¶</a></span>\[\frac{N_{i+1}}{N_i} = \frac{2Z_{i+1}}{n_eZ_i}\left(\frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-\chi_i/(kT)}, \]</div>
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-saha-eq" title="Permalink to this equation">#</a></span>\[\frac{N_{i+1}}{N_i} = \frac{2Z_{i+1}}{n_eZ_i}\left(\frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-\chi_i/(kT)}, \]</div>
 <p>where <span class="math notranslate nohighlight">\(m_e\)</span> is the mass of the electron, <span class="math notranslate nohighlight">\(n_e\)</span> is the number of free electrons <em>per unit volume</em>, and <span class="math notranslate nohighlight">\(\chi_i\)</span> is the ionization energy.  The factor of 2 in front of the partition function <span class="math notranslate nohighlight">\(Z_{i+1}\)</span> reflects the two possible spins of the free electron, <span class="math notranslate nohighlight">\(m_s = \pm 1/2\)</span>.  Sometimes the pressure of the free electrons <span class="math notranslate nohighlight">\(P_e\)</span> is used in place of the electron number density using the ideal gas law (<span class="math notranslate nohighlight">\(P_e = n_e kT\)</span>).  The electron pressure ranges from <span class="math notranslate nohighlight">\(0.1-100 \;{\rm N/m^2}\)</span> in the atmospheres of cooler and hotter stars, respectively.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -860,20 +949,20 @@ Z = \sum_{j=1}^\infty g_j e^{-(E_j-E_1)/(kT)},
 </div>
 </div>
 <div class="section" id="combining-the-boltzmann-and-saha-equations">
-<h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this headline">#</a></h3>
 <p>The Boltzmann equation describes what is <em>possible</em>, where the Saha equation describes what is <em>probable</em>.  Therefore, what we observe should be a combination of effects from both equations.  Consider the degree of ionization in a stellar atmosphere consisting of pure hydrogen and that the electron pressure is a constant <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span>.  Hydrogen has only two states: neutral hydrogen (H I) and ionized hydrogen (H II).  The fraction of atoms that are ionized depends on the ratio of the number ionized atoms <span class="math notranslate nohighlight">\(N_{\rm II}\)</span> and the total number of atoms <span class="math notranslate nohighlight">\(N_{\rm tot}=N_{\rm I} + N_{\rm II}\)</span>.  Ionized hydrogen is just a proton and thus, has no degeneracy and the partition function <span class="math notranslate nohighlight">\(Z_{\rm II} = 1\)</span>.  The partition function for the remaining neutral hydrogen (H I) is simply <span class="math notranslate nohighlight">\(Z_{\rm I} \approx g_1 = 2(1)^2 = 2\)</span>.  The temperatures of stellar atmospheres range from 5000 K - 25,000 K and the previous example (using the Boltzmann equation) showed that most electrons for the hydrogen atoms are in the ground state (<span class="math notranslate nohighlight">\(n=1\)</span>).  For neutral hydrogen, equation 7 becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fc2a8e4e-a32d-49c7-9cff-50e8b61ba5c7">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-fc2a8e4e-a32d-49c7-9cff-50e8b61ba5c7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fb548cd6-afb1-4405-9b28-84fef5bd42d2">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-fb548cd6-afb1-4405-9b28-84fef5bd42d2" title="Permalink to this equation">#</a></span>\[\begin{align}
 Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E_2-E_1)/(kT)} ,
 \end{align}\]</div>
 <p>where the second term <span class="math notranslate nohighlight">\(g_2 e^{-(E_2-E_1)/(kT)} \rightarrow 0\)</span> because <span class="math notranslate nohighlight">\(kT = 0.4-2.2\)</span> eV for the appropriate temperature range and <span class="math notranslate nohighlight">\(e^{-(E_2-E_1)/(kT)} \ll 1\)</span>.  The ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm tot}\)</span> can be rewritten as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-06899bc4-3ddb-4156-b359-f5fde36031cb">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-06899bc4-3ddb-4156-b359-f5fde36031cb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-807b4440-a4c7-4a33-b5dc-2db9cef6f660">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-807b4440-a4c7-4a33-b5dc-2db9cef6f660" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{N_{\rm II}}{N_{\rm tot}} = \frac{N_{\rm II}/N_{\rm I}}{1 + N_{\rm II}/N_{\rm I}}. 
 \end{align}\]</div>
 <p>Then the Saha equation can be used to determine the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span>.  Using the ionization energy <span class="math notranslate nohighlight">\(\chi_{\rm I} = 13.6\)</span> eV for hydrogen, the ideal gas law, and substituting the values for <span class="math notranslate nohighlight">\(Z_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(Z_{\rm II}\)</span> into Equation <a class="reference internal" href="#equation-prob-ratio">(4.6)</a>, the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> is given as</p>
 <div class="math notranslate nohighlight" id="equation-ion-ratio">
-<span class="eqno">(4.11)<a class="headerlink" href="#equation-ion-ratio" title="Permalink to this equation">¶</a></span>\[N_{\rm II}/N_{\rm I} = \frac{kT}{P_e}\left(\frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-13.6\;{\rm eV}/(kT)}.\]</div>
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-ion-ratio" title="Permalink to this equation">#</a></span>\[N_{\rm II}/N_{\rm I} = \frac{kT}{P_e}\left(\frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-13.6\;{\rm eV}/(kT)}.\]</div>
 <p>In the end, we want to know the fraction of ionized hydrogen atoms <span class="math notranslate nohighlight">\(N_2/N_{\rm tot}\)</span> present for a given temperature.  The Boltzmann equation (Eqn. <a class="reference internal" href="#equation-prob-ratio">(4.6)</a>) provides the fraction of atoms in a higher energy state and the Saha equation (Eqn. <a class="reference internal" href="#equation-ion-ratio">(4.11)</a>) can be used to determine the fraction of atoms that are not ionized.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -881,7 +970,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </div>
 <p>Assuming that nearly all the atoms are in either the ground state or the first excited state, we can employ the approximation for ratio in the number of non-ionized (neutral) particles to the total number of particles, <span class="math notranslate nohighlight">\(N_{\rm I}/(N_1 + N_2) \approx 1\)</span>, and write</p>
 <div class="math notranslate nohighlight" id="equation-bs-combine">
-<span class="eqno">(4.12)<a class="headerlink" href="#equation-bs-combine" title="Permalink to this equation">¶</a></span>\[\frac{N_2}{N_{\rm total}} = \frac{N_2}{N_1+N_2} \frac{N_{\rm I}}{N_{\rm I}+N_{\rm II}} = \frac{N_2/N_1}{1 + N_2/N_1} \frac{1}{1+N_{\rm II}/N_{\rm I}}\]</div>
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-bs-combine" title="Permalink to this equation">#</a></span>\[\frac{N_2}{N_{\rm total}} = \frac{N_2}{N_1+N_2} \frac{N_{\rm I}}{N_{\rm I}+N_{\rm II}} = \frac{N_2/N_1}{1 + N_2/N_1} \frac{1}{1+N_{\rm II}/N_{\rm I}}\]</div>
 <ul class="simple">
 <li><p><strong>Plot the fraction of ionized hydrogen as a function of temperature.</strong></p></li>
 <li><p><strong>Plot the fraction of hydrogen in the first excited state as a function of temperature.</strong></p></li>
@@ -968,13 +1057,13 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </div>
 <p>The peak at 9900 K is in good agreement with the observations.  The diminishing strength of the Balmer lines at higher temperatures is due to the rapid ionization of hydrogen above 10,000 K.</p>
 <div class="figure align-default" id="electron-transition-fig">
-<a class="reference internal image-reference" href="../_images/Figure_102.jpg"><img alt="electron transition" src="../_images/Figure_102.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">The electron’s position in the hydrogen atom at different temperatures.  (a) The electron is in the ground state. (b) The is excited from <span class="math notranslate nohighlight">\(n=2\)</span> to a higher energy level (i.e., Balmer lines). (c) The atom is ionized. Image credit: Carroll &amp; Ostlie (2007)</span><a class="headerlink" href="#electron-transition-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_103.jpg"><img alt="electron transition" src="../_images/Figure_103.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">The electron’s position in the hydrogen atom at different temperatures.  (a) The electron is in the ground state. (b) The is excited from <span class="math notranslate nohighlight">\(n=2\)</span> to a higher energy level (i.e., Balmer lines). (c) The atom is ionized. Image credit: Carroll &amp; Ostlie (2007)</span><a class="headerlink" href="#electron-transition-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>Stellar atmospheres contain other elements (although predominantly composed of hydrogen) and the peak can range from about 7500 - 10,500 K depending on the electron pressure.  There is typically 1 helium atom for every 10 hydrogen atoms and the presence of helium (with its extra electrons) provides more opportunities for hydrogen to recombine.  A higher temperature is needed to obtain the same level of ionization once helium is added.  The Saha equation can be applied only to a gas in <em>thermodynamic equilibrium</em>, where the Maxwell-Boltzmann velocity distribution is an accurate representation of the system.  The gas density must be low (~1 <span class="math notranslate nohighlight">\({\rm kg/m^3}\)</span>) or the presence of neighboring ions will distort an atom’s orbitals and lower its ionization energy.</p>
 </div>
 <div class="section" id="application-to-the-sun">
-<h3><span class="section-number">4.1.6. </span>Application to the Sun<a class="headerlink" href="#application-to-the-sun" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.6. </span>Application to the Sun<a class="headerlink" href="#application-to-the-sun" title="Permalink to this headline">#</a></h3>
 <p>The Sun’s surface is a thin layer of its atmosphere called the <a class="reference external" href="https://en.wikipedia.org/wiki/Photosphere">photosphere</a>, which a characteristic temperature <span class="math notranslate nohighlight">\(T_e = 5777\)</span> K, an electron pressure of about <span class="math notranslate nohighlight">\(1.5\;{\rm N/m^2}\)</span>, and about 500,000 hydrogen atoms for each calcium atom.  The Boltzmann and Saha equations provide the relative strengths of absorption due to the Balmer lines and the calcium (Ca II H and K) lines.  Starting with the Balmer lines, we can use the Saha equation (Eqn. <a class="reference internal" href="#equation-ion-ratio">(4.11)</a>) to determine the ratio of ionized to neutral hydrogen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1084,13 +1173,13 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 \[ \frac{500,000\;{\rm H}}{1\;{\rm Ca}} \times (5.06 \times 10^{-9}) \approx 0.00253\;\frac{{\rm H}}{\rm Ca} = \frac{1\;{\rm H}}{395\;{\rm Ca}}, \]</div>
 <p>which shows that there are ~400 times more Ca II ions (with electrons in the <em>ground</em> state) than neutral hydrogen atoms (with electrons in the <em>1st excited</em> state).  The strength of the H and K lines is <em>not</em> due to a greater abundance of calcium in the Sun, rather the strength reflects the sensitivity for the excitation and ionization of atomic states.  Figure <a class="reference internal" href="#line-strength-fig"><span class="std std-numref">4.4</span></a> shows how the spectral line strength varies with stellar spectral type.</p>
 <div class="figure align-default" id="line-strength-fig">
-<a class="reference internal image-reference" href="../_images/Figure_112.jpg"><img alt="line strength" src="../_images/Figure_112.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The dependance of spectral line strengths on stellar spectral type (or surface temperature). Image credit: Carroll &amp; Ostlie (2007)</span><a class="headerlink" href="#line-strength-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_114.jpg"><img alt="line strength" src="../_images/Figure_114.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The dependance of spectral line strengths on stellar spectral type (or surface temperature). Image credit: Carroll &amp; Ostlie (2007)</span><a class="headerlink" href="#line-strength-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>In the early 20th century, it was the scientific consensus that if the Earth’s crust should be raised to the temperature of the Sun’s atmosphere, then it would give a very similar absorption spectrum.  The observations of the time had only uncovered that many of the same elements of Earth’s crust were also in the Sun.  <a class="reference external" href="https://en.wikipedia.org/wiki/Cecilia_Payne-Gaposchkin">Cecilia Payne-Gaposchkin</a> showed in her 1925 <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1925PhDT.........1P/abstract">PhD thesis</a> the connection between the spectral types and ionization states.  It was unclear at the time whether her interpretation would prove correct. But after a few years, others confirmed her results and then the importance of her work was realized.</p>
 </div>
 <div class="section" id="problems">
-<h3><span class="section-number">4.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>1. For a gas of neutral hydrogen atoms, at what temperature is the number of atoms in the 1st excited state only 1% of the number of atoms in the ground state?  What is the temperature for 10%?</p>
 <p>2. Equation 7 for the partition function actually diverges for <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>.  Why can we ignore these large <span class="math notranslate nohighlight">\(n\)</span> terms?</p>
@@ -1105,17 +1194,17 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </div>
 </div>
 <div class="section" id="the-hertzsprung-russell-diagram">
-<h2><span class="section-number">4.2. </span>The Hertzsprung-Russell Diagram<a class="headerlink" href="#the-hertzsprung-russell-diagram" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>The Hertzsprung-Russell Diagram<a class="headerlink" href="#the-hertzsprung-russell-diagram" title="Permalink to this headline">#</a></h2>
 <p>Early in the 20th century, the bigger picture of how to categorize began to come into focus, where the O stars tended to be brighter and hotter than the M stars.  The study of binary stars uncovered an empirical mass-luminosity relationship, which showed that O stars are more massive than M stars.  Astronomers proposed a theory of stellar evolution supposing that stars begin their lives as bright O stars and cool off/lose mass over time to become the fainter M stars. This idea remains in the terms <em>early</em> and <em>late</em> when discussing the range of stars between spectral types, but has otherwise been superseded by modern theories.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Stellar evolution describes the change in the structure and composition of an <em>individual</em> star as it ages.  This usage of the term differs from that in biology, which describes the changes that occur <em>over generations</em>.</p>
 </div>
 <div class="section" id="an-enormous-range-in-stellar-radii">
-<h3><span class="section-number">4.2.1. </span>An Enormous Range in Stellar Radii<a class="headerlink" href="#an-enormous-range-in-stellar-radii" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.1. </span>An Enormous Range in Stellar Radii<a class="headerlink" href="#an-enormous-range-in-stellar-radii" title="Permalink to this headline">#</a></h3>
 <p>One prediction of the idea of stellar cooling is there should be a relation between a star’s absolute magnitude and its spectral type.  <a class="reference external" href="https://en.wikipedia.org/wiki/Ejnar_Hertzsprung">Ejnar Hertzsprung</a> searched catalogs of stars and <em>tabulated</em> stars whose absolute magnitude and spectral types had been accurately determined.  He confirmed the expected correlation between stellar luminosity and spectral type, but he also uncovered an anomaly within types G or later.  These stars showed a range of magnitudes within the same spectral classification.  Using the Stefan-Boltzmann law (<span class="math notranslate nohighlight">\(L\propto R^2 T_e^4\)</span>), the radii of stars (compared to the Sun) could be determined as</p>
 <div class="math notranslate nohighlight" id="equation-radius-ratio">
-<span class="eqno">(4.13)<a class="headerlink" href="#equation-radius-ratio" title="Permalink to this equation">¶</a></span>\[\frac{R}{R_\odot} = \left(\frac{T_\odot}{T_e}\right)^2 \sqrt{\frac{L}{L\odot}},\]</div>
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-radius-ratio" title="Permalink to this equation">#</a></span>\[\frac{R}{R_\odot} = \left(\frac{T_\odot}{T_e}\right)^2 \sqrt{\frac{L}{L\odot}},\]</div>
 <p>where the subscript <span class="math notranslate nohighlight">\(\odot\)</span> refers to Solar values of the effective temperature <span class="math notranslate nohighlight">\(T_e\)</span>, luminosity <span class="math notranslate nohighlight">\(L\)</span>, and radius <span class="math notranslate nohighlight">\(R\)</span>. If two stars have the same temperature (or spectral type), then the more luminous star must be larger.  Hertzsprung termed the brighter stars: <strong>giants</strong>.</p>
 <p>During the same time, Henry Norris Russell identified the same relationship (independently) using the term giants for brighter stars and <strong>dwarf</strong> for their dim counterparts.  In 1913, Russell published a diagram that illustrates the relationship between the absolute brightness (on the vertical axis with the brightest stars on the top) and the spectral type (on the horizontal axis with the hottest stars on the left).  The successor to this diagram is the <strong>Hertzsprung-Russell (H-R) diagram</strong>.  After 200+ stars were plotted, a pattern emerged where the stars star from the upper-left (bright O stars) and stretch as a band down to the lower right (dim M stars).  This band of stars contains 80%-90% of all stars in the H-R diagram and is called the <strong>main sequence</strong>.  A few stars would sit at the lower left that were white-hot (like the A stars), but dim (like the smaller M dwarfs) and are called <strong>white dwarfs</strong>.  Figure 5 shows a modern version of the H-R diagram comprised of ~23,000 stars.</p>
 <div class="admonition note">
@@ -1124,7 +1213,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </div>
 <div class="figure align-default" id="hr-diagram-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/6/6b/HRDiagram.png"><img alt="H-R Diagram" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/HRDiagram.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">An observational Hertzsprung–Russell diagram with 22,000 stars plotted from the Hipparcos Catalogue and 1,000 from the Gliese Catalogue of nearby stars. Image credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram">Wikipedia</a> by Richard Powell.</span><a class="headerlink" href="#hr-diagram-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 4.5 </span><span class="caption-text">An observational Hertzsprung–Russell diagram with 22,000 stars plotted from the Hipparcos Catalogue and 1,000 from the Gliese Catalogue of nearby stars. Image credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram">Wikipedia</a> by Richard Powell.</span><a class="headerlink" href="#hr-diagram-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The Sun (G2) is found on the main sequence of the H-R diagram, which has both axes scaled logarithmically to accommodate the huge span of stellar luminosities and temperatures.  The main sequence is not a straight line, but a curve with a finite width due to changes in the star’s temperature and luminosity that occur over its main sequence lifetime.  The giants occupy the region above the main sequence, where the brightest stars are <strong>supergiants</strong> and can occupy a range in spectral type (e.g., blue or red supergiants).  After converting spectral type to surface temperature and absolute magnitude to luminosity, Eqn. <a class="reference internal" href="#equation-radius-ratio">(4.13)</a> can be used to determine the radius of a star.  If two stars have the same surface temperature, but one stars is 100 times brighter than the other, then the radius of the brighter star is <span class="math notranslate nohighlight">\(\sqrt{100}=10\)</span> times larger.  A logarithmically scaled H-R diagram allows for lines of constant radius since the Stefan-Boltzmann law is represented as a power law.</p>
 <p>The existence of a simple relation between the luminosity and temperature for main=sequence stars is a valuable clue that the star’s <em>mass</em> plays an important role in determining when a star lies on the main sequence.  The H-R diagram spans from the most massive O stars (<span class="math notranslate nohighlight">\(60\; M_\odot\)</span>) to the least massive M stars (<span class="math notranslate nohighlight">\(0.08\;M_\odot\)</span>).  Knowing both the mass and radius of stars allows for the calculation of the <em>average density</em> of the stars.  Surprisingly, main-sequence stars have roughly the same density as water and moving up the main sequence, the more massive, larger, early type stars have a <em>lower</em> average density.</p>
@@ -1198,7 +1287,7 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 </table>
 </div></div>
 <div class="section" id="morgan-keenan-luminosity-classes">
-<h3><span class="section-number">4.2.2. </span>Morgan-Keenan Luminosity Classes<a class="headerlink" href="#morgan-keenan-luminosity-classes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.2. </span>Morgan-Keenan Luminosity Classes<a class="headerlink" href="#morgan-keenan-luminosity-classes" title="Permalink to this headline">#</a></h3>
 <p>Using the spectra cataloged by Antonia Maury, Hertzsprung found a difference in the spectra of giant and main-sequence stars of the same spectral type.  There are subtle differences in the relative strengths of spectral lines for stars of similar effective temperatures and different luminosities.  In 1943, <a class="reference external" href="https://en.wikipedia.org/wiki/William_Wilson_Morgan">William W. Morgan</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Philip_Childs_Keenan">Phillip C. Keenan</a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Edith_Kellman">Edith Kellman</a> published the <em>Atlas of Stellar Spectra</em>, which consists of 55 prints of spectra that clearly display the effect of temperature and luminosity.  The <em>MKK Atlas</em> established the 2D Morgan-Keenan (M-K) system of spectral classification.</p>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Luminosity_class">luminosity class</a> is appended to a star’s Harvard spectral type and designated by a Roman numeral (see Table 4).  The supergiant stars use the Roman numeral “I” (also divided into subclasses Ia and Ib), where main-sequence stars use the Roman numeral “V”.  The strengths of two closely spaced lines are measured and their ratio is often used to place a star in the appropriate luminosity class.  In general, narrower lines are usually produced by more luminous stars with the same spectral type.  The series of Roman numerals extends below the main sequence, where the subdwarfs (VI or “sd”) are slightly to the left of the main sequence because they are deficient in metals.  The M-K system is not applied to white dwarfs, which are instead classified by the letter D.</p>
 <p>The 2D M-K classification scheme enables astronomers to locate a star’s position on the H-R diagram based <em>entirely</em> on the appearance of its spectrum.  Using a star’s absolute magnitude <em>M</em> (see the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#absolute-magnitude-and-the-distance-modulus">magnitude scale</a>) from the vertical axis of the H-R diagram, the *distance tot he star can be calculated from its apparent magnitude <em>m</em>.  This method of distance determination is called the <strong>spectroscopic parallax</strong> and is responsible for many of the measured stellar distances.  The accuracy of spectroscopic parallax is limited because there is not a perfect correlation between the absolute magnitude and luminosity class.  A specific luminosity class has an intrinsic scatter of about <span class="math notranslate nohighlight">\(\pm 1\)</span> magnitude, which corresponds to a brightness difference of <span class="math notranslate nohighlight">\(10^{1/5}\)</span> or 1.6.</p>
@@ -1246,7 +1335,7 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 </table>
 </div></div>
 <div class="section" id="id1">
-<h3><span class="section-number">4.2.3. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.3. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>5. A white dwarf star typically has a radius that is only 1% of the Sun’s.  Determine the average density of a Solar-mass white dwarf.</p>
 <p>6. <a class="reference external" href="https://en.wikipedia.org/wiki/Fomalhaut">Fomalhaut A</a> has an <em>apparent</em> visual magnitude of <span class="math notranslate nohighlight">\(V = 1.16\)</span> and has a surface temperature of 8590 K (or <span class="math notranslate nohighlight">\(B-V = 0.09\)</span>).  Use the H-R diagram to determine the distance to this star.</p>
@@ -1277,9 +1366,11 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_6/telescopes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1295,24 +1386,28 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

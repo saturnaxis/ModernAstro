@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>9. Main-Sequence and Post-Main-Sequence Stellar Evolution &#8212; ASTR4410 Modern Astrophysics</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,28 +28,32 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_13/stellar-evolution.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,18 +65,30 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-103786588-2', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-CP3EW7BJEH');
+                </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -84,9 +97,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -99,14 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR4410: Modern Astrophysics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR4410: Modern Astrophysics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -211,103 +226,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_13/stellar-evolution.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/ModernAstro"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_13/stellar-evolution.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_13/stellar-evolution.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/ModernAstro"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_13/stellar-evolution.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#evolution-on-the-main-sequence">
    9.1. Evolution on the Main Sequence
@@ -485,12 +574,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Main-Sequence and Post-Main-Sequence Stellar Evolution</h1>
@@ -684,19 +772,20 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="main-sequence-and-post-main-sequence-stellar-evolution">
-<h1><span class="section-number">9. </span>Main-Sequence and Post-Main-Sequence Stellar Evolution<a class="headerlink" href="#main-sequence-and-post-main-sequence-stellar-evolution" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>Main-Sequence and Post-Main-Sequence Stellar Evolution<a class="headerlink" href="#main-sequence-and-post-main-sequence-stellar-evolution" title="Permalink to this headline">#</a></h1>
 <div class="section" id="evolution-on-the-main-sequence">
-<h2><span class="section-number">9.1. </span>Evolution on the Main Sequence<a class="headerlink" href="#evolution-on-the-main-sequence" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Evolution on the Main Sequence<a class="headerlink" href="#evolution-on-the-main-sequence" title="Permalink to this headline">#</a></h2>
 <div class="section" id="stellar-evolution-timescales">
-<h3><span class="section-number">9.1.1. </span>Stellar Evolution Timescales<a class="headerlink" href="#stellar-evolution-timescales" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.1. </span>Stellar Evolution Timescales<a class="headerlink" href="#stellar-evolution-timescales" title="Permalink to this headline">#</a></h3>
 <p>To maintain their luminosities, stars must use either gravitational or nuclear energy, where chemical energy cannot play a significant role.  Pre-main-sequence evolution is guided by two timescales: 1) the free-fall timescale and 2) the thermal Kelvin-Helmholtz timescale.  Main sequence and post-main-sequence stellar evolution are governed by the timescale of <em>nuclear reactions</em>, which is <span class="math notranslate nohighlight">\(\sim 10^{10}\,{\rm yr}\)</span> for the Sun and is much longer than the Kelvin-Helmholtz timescale <span class="math notranslate nohighlight">\((\sim 10^7\,{\rm yr})\)</span>.  The difference in timescales in stellar evolution (at different phases) accounts for why approximately <span class="math notranslate nohighlight">\(80-90\%\)</span> of stars in the Solar neighborhood are main-sequence stars (i.e., we are more likely to find stars during the longest phase of their lifetime).  Both the pre- and post-main-sequence evolutionary timescales occur rapidly compared to the main-sequence evolution.  During the transition between phases of stellar evolution, gravitational energy and the Kelvin-Helmholtz timescale will again become important.</p>
 </div>
 <div class="section" id="low-mass-main-sequence-evolution">
-<h3><span class="section-number">9.1.2. </span>Low-Mass Main Sequence Evolution<a class="headerlink" href="#low-mass-main-sequence-evolution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.2. </span>Low-Mass Main Sequence Evolution<a class="headerlink" href="#low-mass-main-sequence-evolution" title="Permalink to this headline">#</a></h3>
 <p>Although all stars on the main sequence are converting hydrogen into helium, the stellar mass dictates that higher mass stars do so through different processes (leading to shorter lifetimes).  Zero-age main-sequence (ZAMS) stars with mass greater than 1.2 <span class="math notranslate nohighlight">\(M_\odot\)</span> have convective cores to to the highly temperature dependent CNO cycle, while lower mass stars are dominated by the less temperature-dependent pp chain.  As a result, low-mass ZAMS stars <span class="math notranslate nohighlight">\((0.3-1.2\,M_\odot)\)</span> possess radiative cores.  Below <span class="math notranslate nohighlight">\(0.3\,M_\odot\)</span>, ZAMS stars have convective cores because their high surface opacities drive surface convection deep into the star’s interior.</p>
 <p><strong>Consider a typical low-mass main-sequence star like the Sun.</strong>  The Sun’s luminosity, radius, and temperature have all increased steadily since it reach the ZAMS (~4.57 Gyr ago).  As the pp chain converts the hydrogen into helium, the mean molecular weight <span class="math notranslate nohighlight">\(\mu\)</span> of the core increases.  <em>According to the ideal gas law</em>, the density and/or temperature of the core must also increase to maintain a sufficient gas pressure to support the outer layers of the star.  While the density of the core increases, gravitational potential energy is released as the core is compressed.  <em>As required by the virial theorem</em>, half of the energy is radiated away and the remainder goes into increasing the thermal energy (i.e., thermal temperature of the gas).  The volume of the star that is capable (i.e., hot enough) to undergo nuclear reactions increases slightly during the main-sequence phase.  The pp chain nuclear reaction rate is proportional to <span class="math notranslate nohighlight">\(\rho T^4\)</span>, where the luminosity, radius, and effective temperature slowly increase over time.</p>
 <div class="admonition note">
@@ -718,7 +807,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Figure 3</strong>: The interior structure of a 1 M⊙ star near point 3 in Fig. 1, as described by the pioneering calculations of Icko Iben. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</p>
 </div></div>
 <div class="section" id="the-schonberg-chandrasekhar-limit">
-<h3><span class="section-number">9.1.3. </span>The Schönberg-Chandrasekhar Limit<a class="headerlink" href="#the-schonberg-chandrasekhar-limit" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.3. </span>The Schönberg-Chandrasekhar Limit<a class="headerlink" href="#the-schonberg-chandrasekhar-limit" title="Permalink to this headline">#</a></h3>
 <p>The hydrogen shell burning phase of evolution ends when the isothermal core mass is too great and the core pressure can no longer support the material above it.  Schönberg and Chandrasekhar (in 1942) showed the maximum star mass fraction that can exist in an isothermal core and still support the overlying layers is</p>
 <div class="math notranslate nohighlight">
 \[ \left(\frac{M_{ic}}{M} \right)_{\rm SC} \simeq 0.37 \left( \frac{\mu_{\rm env}}{\mu_{ic}}\right)^2, \tag{1} \]</div>
@@ -750,7 +839,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="the-degenerate-electron-gas">
-<h3><span class="section-number">9.1.4. </span>The Degenerate Electron Gas<a class="headerlink" href="#the-degenerate-electron-gas" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.4. </span>The Degenerate Electron Gas<a class="headerlink" href="#the-degenerate-electron-gas" title="Permalink to this headline">#</a></h3>
 <p>The isothermal core mass can exceed the Schönberg-Chandrasekhar limit if an <em>additional source of pressure</em> can supplement the ideal gas pressure.  A <strong>degenerate</strong> gas pressure if the gas density becomes sufficiently high and the electrons are forced to occupy the lowest available energy levels.  Electrons cannot all occupy the same quantum state because they are fermions and obey the Pauli exclusion principle.  The electrons are stacked starting with the ground state into progressively higher energy states.  For <em>complete degeneracy</em>, the gas pressure is due to the nonthermal motion of the electrons and becomes independent of the gas temperature.</p>
 <p>If the electrons are nonrelativistic, the pressure of a completely degenerate electron gas is given by a <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#polytropic-models-and-the-lane-emden-equation">polytropic equation of state</a>:</p>
 <div class="math notranslate nohighlight">
@@ -758,12 +847,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>which has an index <span class="math notranslate nohighlight">\(n = 3/2\)</span> and a constant <span class="math notranslate nohighlight">\(K\)</span>.  For a <em>partial degeneracy</em>, some temperature dependence remains.  The isothermal core of a Solar-mass star is partially degenerate, where the isothermal core mass fraction can reach 0.13 before it begins to collapse.  Less massive stars exhibit even higher levels of degeneracy and many not exceed the Schönberg-Chandrasekhar limit at all before the next stage of burning starts.</p>
 </div>
 <div class="section" id="main-sequence-evolution-of-massive-stars">
-<h3><span class="section-number">9.1.5. </span>Main-Sequence Evolution of Massive Stars<a class="headerlink" href="#main-sequence-evolution-of-massive-stars" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.5. </span>Main-Sequence Evolution of Massive Stars<a class="headerlink" href="#main-sequence-evolution-of-massive-stars" title="Permalink to this headline">#</a></h3>
 <p>The evolution of more massive stars on the main sequence is similar to lower mass stars, but with a convective core (an important difference).  The convection zone continually mixes the material keeping the core composition nearly homogenous.  The convection timescale (as determined by the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-mixing-length-theory-of-superadiabatic-convection">mixing length and convective velocity</a>) is much shorter than the nuclear timescale.  For a <span class="math notranslate nohighlight">\(5\,M_\odot\)</span> star, the central convection zone decreases in mass during (core) hydrogen burning and leaves behind a slight compositional gradient.  As a star evolves the convection zone, the core retreats more rapidly with increasing stellar mass and can disappear entirely before the hydrogen is exhausted for <span class="math notranslate nohighlight">\(M \gtrsim 10\,M_\odot\)</span>.</p>
 <p>When the hydrogen mass fraction reaches about <span class="math notranslate nohighlight">\(X=0.05\)</span> (in the core of a <span class="math notranslate nohighlight">\(5\, M_\odot\)</span> star), the entire star begins to contract.  The release of some gravitational potential energy increases the luminosity slightly, where th effective temperature must increase.  For stellar masses greater than <span class="math notranslate nohighlight">\(1.2\,M_\odot\)</span> the contraction defines the end of the main sequence.</p>
 </div>
 <div class="section" id="a-derivation-of-the-schonberg-chandrasekhar-limit">
-<h3><span class="section-number">9.1.6. </span>A Derivation of the Schönberg-Chandrasekhar Limit<a class="headerlink" href="#a-derivation-of-the-schonberg-chandrasekhar-limit" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.6. </span>A Derivation of the Schönberg-Chandrasekhar Limit<a class="headerlink" href="#a-derivation-of-the-schonberg-chandrasekhar-limit" title="Permalink to this headline">#</a></h3>
 <p>To estimate the Schönberg-Chandrasekhar limit, we begin by dividing the equations of hydrostatic equilibrium <span class="math notranslate nohighlight">\(dP/dr\)</span> and mass conservation <span class="math notranslate nohighlight">\(dM_r/dr\)</span> to get</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dP}{dM_r} = -\frac{GM_r}{4\pi r^4}, \tag{3}\]</div>
@@ -841,7 +930,7 @@ P_{ic,env} &amp;= \int_0^{P_{ic,env}} dP \\
 <p>where the our coefficient is only slightly larger than the value determined by Schönberg-Chandrasekhar (Eqn. 1).</p>
 </div>
 <div class="section" id="problems">
-<h3><span class="section-number">9.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>1. <strong>Construct a table</strong> that expresses the evolutionary times between points 2 and 3, points 3 and 4, and so on,
 as a percentage of the lifetime of the star on the main sequence between points 1 and 2. Use the Table associated with Fig. 1 for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star.</p>
@@ -857,14 +946,14 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="late-stages-of-stellar-evolution">
-<h2><span class="section-number">9.2. </span>Late Stages of Stellar Evolution<a class="headerlink" href="#late-stages-of-stellar-evolution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Late Stages of Stellar Evolution<a class="headerlink" href="#late-stages-of-stellar-evolution" title="Permalink to this headline">#</a></h2>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_4.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_4.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_4.jpg?raw=true?" style="width: 500px;" /></a>
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_5.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_5.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_5.jpg?raw=true?" style="width: 700px;" /></a>
 <p><strong>Figure 4</strong>: A schematic diagram of the evolution of a (a) low-mass star of 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> and (b) intermediate-mass star of 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> from the zero-age main sequence to the formation of a white dwarf star. (Carroll &amp; Ostlie (2007))</p>
 </div>
 <div class="section" id="evolution-off-the-main-sequence">
-<h3><span class="section-number">9.2.1. </span>Evolution Off the Main Sequence<a class="headerlink" href="#evolution-off-the-main-sequence" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.1. </span>Evolution Off the Main Sequence<a class="headerlink" href="#evolution-off-the-main-sequence" title="Permalink to this headline">#</a></h3>
 <p>The end of the main-sequence phase occurs when hydrogen burning ceases in the stellar core.  In the case of a Solar-mass (<em>low mass</em>) star, the core begins to contract while a thick hydrogen burning shell continues to consume the available fuel.  Under core contraction, the temperature rises and the shell actually produces more energy than the core did on the main sequence, which causes the luminosity to increase, the envelope to expand slightly, and the effective temperature to rise.</p>
 <p>For a <span class="math notranslate nohighlight">\(5\,M_\odot\)</span> star, the entire star participates in an overall contraction on a Kelvin-Helmholtz timescale rather than just the hydrogen-burning shell.  This contraction phase releases gravitational potential energy with results similar to the low mass star case (i.e., slight increase in luminosity, decrease in the stellar radius, and the effective temperature).  Eventually, the temperature outside the helium core increases sufficiently to cause a thick shell of hydrogen-burning. The overlying envelope is forced to expand slightly due to the ignition of the shell, where it absorbs some of the energy released by the shell.  Since energy is absorbed, the luminosity decreases momentarily (compared to the evolution timescale) and the effective temperature drops.</p>
 <div align="center">
@@ -881,34 +970,34 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="the-subgiant-branch">
-<h3><span class="section-number">9.2.2. </span>The Subgiant Branch<a class="headerlink" href="#the-subgiant-branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.2. </span>The Subgiant Branch<a class="headerlink" href="#the-subgiant-branch" title="Permalink to this headline">#</a></h3>
 <p>For both low- and intermediate-mass stars, the helium core steadily increases in mass and becomes nearly isothermal as the hydrogen burning shell evolves.  When the Schönberg-Chandrasekhar limit is reached, the core begins to contract rapidly, which causes the evolution to proceed on the much faster Kelvin-Helmholtz timescale.  The gravitational energy released by the contraction again causes the stellar envelope to expand and the effective temperature cools resulting in a <em>redward</em> evolution on the H-R diagram.  The redward evolution is known as the <strong>subgiant branch</strong> (SGB) of the H-R diagram.</p>
 <p>As the core contracts, a <em>nonzero</em> temperature gradient is re-established due to the release of the gravitational potential energy.  The temperature and density of the hydrogen-burning shell increases.  Although the shell begins to narrow (i.e., thin) significantly, the energy generation rate of the shell increases rapidly.  Once again the stellar envelope expands and some of the energy produced by the shell is absorbed before reaching the surface.  For the <span class="math notranslate nohighlight">\(5\,M_\odot\)</span> star, the expanding envelope absorbs enough energy for a time to cause the luminosity to decrease slightly before recovering.</p>
 </div>
 <div class="section" id="the-red-giant-branch">
-<h3><span class="section-number">9.2.3. </span>The Red Giant Branch<a class="headerlink" href="#the-red-giant-branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.3. </span>The Red Giant Branch<a class="headerlink" href="#the-red-giant-branch" title="Permalink to this headline">#</a></h3>
 <p>The photospheric opacity increases due to the additional contribution of the <span class="math notranslate nohighlight">\({\rm H^-}\)</span> ion (see <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#general-sources-of-opacity">Sect. 5.2.4</a>) with the expansion of the stellar envelope and the decrease in effective temperature.  As a result, the convection zone develops near the surface for both low- and intermediate-mass stars.  The base of the convection zone extends deep into the stellar interior.  The star begins to rise rapidly upward along the <strong>red giant branch</strong> (RGB) of the H-R diagram due to the nearly adiabatic temperature gradient associated with convection and the efficiency of the energy transport.  This path is similar (but in the opposite direction) to the path of a pre-main-sequence star moving along the Hayashi track.</p>
 <p>As a star climbs the RGB, its convection zone deepens until the base reaches into regions where nuclear processes have modified the chemical composition.  Lithium burns via collisions with protons (because of its rather large nuclear reaction cross section) at relatively cool temperatures that are greater than <span class="math notranslate nohighlight">\(\sim2.7 \times 10^6\,{\rm K}\)</span>.  As a result, lithium becomes nearly depleted over most of the stellar interior (e.g., the inner 98% of the mass for a <span class="math notranslate nohighlight">\(5\,{\rm M_\odot}\)</span> star).  At the same time, nuclear processing increases the mass fraction of helium-3 <span class="math notranslate nohighlight">\(({\rm ^3_2He})\)</span> over the middle third of the star and altered the abundance ratios of various species in the CNO cycle.</p>
 <p>When the surface convection zone enters the chemically modified region, mixing occurs between the regions, which produces observable changes in the photosphere composition.  For instance, the amount of surface lithium will decrease and the amount of helium-3 increases.  Convection also transports carbon-12 inward and nitrogen-14 outward, which decreases the observable ratio of their mass fractions <span class="math notranslate nohighlight">\(X_{12}/X_{14}\)</span>.  The transport of materials from the deep stellar interior is known as the <strong>first dredge-up</strong> phase.  <em>Nature has provided us with an opportunity to directly observe the products of nuclear reactions deep within stellar interiors.</em> These observable changes in surface composition provide an important test of the predictions of stellar evolution theory.</p>
 </div>
 <div class="section" id="the-red-giant-tip">
-<h3><span class="section-number">9.2.4. </span>The Red Giant Tip<a class="headerlink" href="#the-red-giant-tip" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.4. </span>The Red Giant Tip<a class="headerlink" href="#the-red-giant-tip" title="Permalink to this headline">#</a></h3>
 <p>Ath the tip of the RGB, the central temperature and density (<span class="math notranslate nohighlight">\(1.3 \times 10^8\,{\rm K}\)</span> and <span class="math notranslate nohighlight">\(7.7 \times 10^6\,{\rm kg/m^3}\)</span> for a <span class="math notranslate nohighlight">\(5\,M_\odot\)</span>) have finally become high enough that quantum-mechanical tunneling becomes effective through the coulomb barrier acting between helium-4 nuclei, which allows the triple alpha process to begin.  Note that some of the carbon-12 is processed into oxygen-16 as well.  The core expands due to the onset of a new (and strongly temperature-dependent) energy source.  The hydrogen-burning shell remains the dominant source of the stars’s luminosity, but the expansion of the core pushes the hydrogen-burning shell <em>outward</em>, which cools it and causes the output energy rate to decrease.  The result is an abrupt decrease in the stellar luminosity.  At the same time, the envelope contracts and the effective temperature begins to increase again.</p>
 </div>
 <div class="section" id="the-helium-core-flash">
-<h3><span class="section-number">9.2.5. </span>The Helium Core Flash<a class="headerlink" href="#the-helium-core-flash" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.5. </span>The Helium Core Flash<a class="headerlink" href="#the-helium-core-flash" title="Permalink to this headline">#</a></h3>
 <p>For stars less than <span class="math notranslate nohighlight">\(1.8\,M_\odot\)</span>, the core becomes strongly electron-degenerate as the helium core continues to collapse during evolution up to the tip of the RGB.  Significant neutrino losses from the stellar core (prior to reaching the tip of the RGB) result in a negative temperature gradient near the center (i.e., a temperature inversion develops), where the core is actually refrigerated because energy is carried away by the escaping neutrinos.  When the temperature and density become high enough to initiate the triple alpha process (<span class="math notranslate nohighlight">\(\sim 10^8\,{\rm K}\)</span> and <span class="math notranslate nohighlight">\(10^7\,{\rm kg/m^3}\)</span>, respectively), the energy release is almost explosive.  The ignition of helium burning occurs initially in a shell, but the entire core becomes involved and the temperature inversion is lifted.  <em>The luminosity generated by the helium-burning core reaches <span class="math notranslate nohighlight">\(10^{11}\,L_\odot\)</span>, which is comparable to the luminosity of an entire galaxy!</em></p>
 <p>However, the energy release lasts for only a few seconds and most of the energy never even reaches the surface.  Instead, the energy is absorbed by the overlying layers and possibly causes some stellar mass loss.  The short-lived energy release is called the <strong>helium <em>core</em> flash</strong>.  The origin of the energy release lies in the <em>very weak temperature dependence</em> of the electron degeneracy pressure and the <em>strong temperature dependence</em> of the triple alpha process.  The energy must first “lift” the degeneracy and then, the energy can go into the thermal (kinetic) energy required to expand the core.  Expansion of the core decreases the density, lowers the temperature, and slows the reaction rate.</p>
 </div>
 <div class="section" id="the-horizontal-branch">
-<h3><span class="section-number">9.2.6. </span>The Horizontal Branch<a class="headerlink" href="#the-horizontal-branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.6. </span>The Horizontal Branch<a class="headerlink" href="#the-horizontal-branch" title="Permalink to this headline">#</a></h3>
 <p>For low- and intermediate mass stars, the increasing compression of the hydrogen-burning shell eventually causes the energy output of the shell and overall energy output of the star to rise again.  The deep convection zone in the envelope rises toward the surface and a convective core develops at the same time.  The appearance of a convective core is dut to the high temperature sensitivity of the triple alpha process.  This (generally) horizontal evolution blueward on the H-R diagram is called the <strong>horizontal branch</strong> (HB) loop.  The blueward portion of the HB is the helium-burning analog to the hydrogen-burning main sequence, but with a much shorter timescale.</p>
 <p>At the end of the blueward evolution (i.e., reaching the most blueward point), the core’s mean molecular weight increases and the core begins to contract, which is accompanied by the expansion and cooling of the star’s envelope.  The star then evolves into the redward portion of the HB loop, where the core helium is quickly exhausted after being converted into carbon and oxygen.  Further along the redward evolution, the inert <span class="math notranslate nohighlight">\({\rm CO}\)</span> core contracts much like the rapid evolution across the SGB following the extinction of core hydrogen burning.</p>
 <p>Many stars develop instabilities in their outer envelopes during their passage along the HB, which leads to periodic pulsations that are readily observable in the measured luminosity, temperature, radius, and surface velocity.  The oscillations depend sensitively on the internal structure of the star, where stellar pulsations provide an invaluable test of stellar structure theory.</p>
 <p>An increase in the core temperature due ot its contraction is accompanied by a thick helium-burning shell outside the <span class="math notranslate nohighlight">\({\rm CO}\)</span> core.  AS the core continues to contract, the helium-burning shell narrows and strengthens, which forces teh material above the shell to expand and cool.  This results in a temporary turn-off of the hydrogen-burning shell.  Neutrino production increases along with the contraction of the helium-exhausted core, which causes the core to cool.  The carbon-oxygen core is stabilized by the electron degeneracy pressure that is a consequence of the increasing central density and decreasing temperature.</p>
 </div>
 <div class="section" id="the-early-asymptotic-giant-branch">
-<h3><span class="section-number">9.2.7. </span>The Early Asymptotic Giant Branch<a class="headerlink" href="#the-early-asymptotic-giant-branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.7. </span>The Early Asymptotic Giant Branch<a class="headerlink" href="#the-early-asymptotic-giant-branch" title="Permalink to this headline">#</a></h3>
 <p>When the redward evolution reaches the Hayashi track, the evolutionary track bends upward along a path called the <strong>asymptotic giant branch</strong> (AGB), where the AGB is analogous to the hydrogen-burning shell RGB, but with a helium-burning shell. The core temperature of a <span class="math notranslate nohighlight">\(5\,M_\odot\)</span> star is approximately <span class="math notranslate nohighlight">\(2\times10^8\,{\rm K}\)</span> and it density is <span class="math notranslate nohighlight">\(\sim 10^9\,{\rm kg/m^3}\)</span>.  During the early AGB, two shells are typically depicted but the helium-burning shell dominates the energy output and the hydrogen-burning shell becomes nearly inactive.</p>
 <p>The expanding envelope initially absorbs much of the energy produced by the helium-burning shell, which causes the effective temperature to decrease.  The convective envelope deepens and extends downward to the chemical discontinuity between the hydrogen-rich outer layer and the helium-rich region above the helium-burning shell.  The mixing that results is called the <strong>second dredge-up</strong> (where the first occurred in the RGB) and increases the helium and nitrogen content of the envelope.</p>
 <div align="center">
@@ -917,7 +1006,7 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="the-thermal-pulse-asymptotic-giant-branch">
-<h3><span class="section-number">9.2.8. </span>The Thermal-Pulse Asymptotic Giant Branch<a class="headerlink" href="#the-thermal-pulse-asymptotic-giant-branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.8. </span>The Thermal-Pulse Asymptotic Giant Branch<a class="headerlink" href="#the-thermal-pulse-asymptotic-giant-branch" title="Permalink to this headline">#</a></h3>
 <p>Near the upper portion of the AGB is the <em>thermal-pulse AGB</em> (TP-AGB), which describes the evolution of the dormant hydrogen burning-shell that reignites and dominates the energy output of the star.  However, the narrowing helium-burning shell begins to turn on-and-off quasi-periodically.  This causes intermittent <strong>helium <em>shell</em> flashes</strong> because the hydrogen-burning shell is dumping helium ash onto the helium layer below.  As the mass of the helium layer increases, its base becomes slightly degenerate.  When the temperature at the base of the helium shell increases sufficiently, a helium <em>shell</em> flash occurs and is analogous to the earlier helium <em>core</em> flashes of low-mass stars (although less energetic).  The flashes drive the hydrogen-burning shell outward, where the shell cools and turns off for a time.</p>
 <p>Eventually, the helium shell burning diminishes, the hydrogen burning shell recovers, and the process repeats.  The period between pulses depends on the stellar mass and can range from 1000s of years <span class="math notranslate nohighlight">\((M\sim5\,M_\odot)\)</span> to 100s of years for low-mass stars <span class="math notranslate nohighlight">\((\sim 0.6\,M_\odot)\)</span>, with the pulse amplitude growing with each successive event.  The periodic activity from the deep stellar interior is observed in the luminosity changes at the surface.</p>
 <div align="center">
@@ -928,14 +1017,14 @@ gas in the core is ideal and monatomic.</p>
 <p>A class of pulsating variable stars is called <strong>long-period variables</strong> (LPVs) are AGB stars, which have pulsation periods of <span class="math notranslate nohighlight">\(100-700\)</span> days and include the subclass of <strong>Mira variables</strong>.  Structural changes arising from shell flashes could cause observable changes in teh periods of some of these stars, where several Miras (e.g., W Dra, R Aql, and R Hya) are observed to undergo relatively rapid period changes.</p>
 </div>
 <div class="section" id="third-dredge-up-and-carbon-stars">
-<h3><span class="section-number">9.2.9. </span>Third Dredge-Up and Carbon Stars<a class="headerlink" href="#third-dredge-up-and-carbon-stars" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.9. </span>Third Dredge-Up and Carbon Stars<a class="headerlink" href="#third-dredge-up-and-carbon-stars" title="Permalink to this headline">#</a></h3>
 <p>The sudden increase in energy flux from the helium-burning shell during a flash episode can establish a convection zone between the helium-burning shell and the hydrogen-burning shell.  Concurrently, the depth of the convection zone envelope increases with the pulse strength of the flashes.  For sufficiently massive stars <span class="math notranslate nohighlight">\((M&gt;2\,M_\odot)\)</span>, the convection zones will merge and eventually extend down into regions where carbon has been synthesized.  Between the hydrogen- and helium-burning shells, the carbon abundance can exceed the oxygen abundance by a factor of <span class="math notranslate nohighlight">\(5-10\)</span> (this is in sharp contrast to the excess of oxygen over carbon in most stellar atmospheres).</p>
 <p>During a <strong>third dredge-up</strong> phase, the carbon-rich material is brought to the surface.  Multiple <em>third</em> dredge-up events can occur from repeated helium <em>shell</em> flashes, where the oxygen rich stellar spectrum will transform (over time) to a carbon-rich stellar spectrum.  This appears to explain the differences between oxygen-rich <span class="math notranslate nohighlight">\((N_{O} &gt; N_{\rm C})\)</span> giants and carbon rich giants <span class="math notranslate nohighlight">\((N_{\rm C} &gt; N_{\rm O})\)</span> called <strong>carbon stars</strong>.  Carbon stars are designated with a special <strong>C spectral type</strong> that overlaps with the traditional K and M types.</p>
 <p>Carbon stars are distinguished by the abundance of carbon-rich molecules in their atmospheres (e.g., <span class="math notranslate nohighlight">\({\rm SiC}\)</span> rather than <span class="math notranslate nohighlight">\({\rm SiO}\)</span> of typical M stars).  If the atmosphere of the star contains more oxygen than carbon, the carbon is almost completely tied up in <span class="math notranslate nohighlight">\({\rm CO}\)</span>, leaving the oxygen to form additional molecules.  Conversely, the oxygen is tied up in <span class="math notranslate nohighlight">\({\rm CO}\)</span>, which allows the carbon to form in molecules.  Intermediate between M and C spectral types are <strong>S spectral type</strong> stars, which have almost identical abundances fo carbon and oxygen in their atmospheres.  For example, S type stars show <span class="math notranslate nohighlight">\({\rm ZrO}\)</span> lines having replaced the <span class="math notranslate nohighlight">\({\rm TiO}\)</span> lines of M stars.</p>
 <p>In the atmospheres of evolved TP-AGB stars, there is technetium <span class="math notranslate nohighlight">\(({\rm Tc};\, A=43)\)</span> that has no stable isotopes.  Technetium-99 is the most abundant isotope in the atmospheres of TP-AGB stars, although it has a half-life of only 200,000 yr.  This suggests that the isotope must have formed recently in the star’s history and was dredged up to the surface from the deep interior.  Technetium-99 is formed by the slow capture of neutrons by existing nuclei.  Neutrons have no charge and can easily collide with nuclei (i.e., no Coulomb barrier).  Isotopes that form through the absorption of stray neutrons are a product of <em>slow</em> <strong>s-process nucleosynthesis</strong>, which requires that a radioactive nuclei decay into other nuclei after absorbing a neutron and before absorb another neutron.</p>
 </div>
 <div class="section" id="mass-loss-and-agb-evolution">
-<h3><span class="section-number">9.2.10. </span>Mass Loss and AGB Evolution<a class="headerlink" href="#mass-loss-and-agb-evolution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.10. </span>Mass Loss and AGB Evolution<a class="headerlink" href="#mass-loss-and-agb-evolution" title="Permalink to this headline">#</a></h3>
 <p>AGB stars are known to lose mass at a rapid rate <span class="math notranslate nohighlight">\((\dot{M}\sim 10^{-4}\,M_\odot/{\rm yr})\)</span> and the effective temperatures are also quite cool (around <span class="math notranslate nohighlight">\({\rm 3000\,K}\)</span>).  Silicate grains tend to form in an oxygen-rich environment and graphite grains form in a carbon-rich environment.  Dust grains can form in the expelled matter of AGB star, where the composition of the ISM may be related to the relative numbers of carbon- and oxygen-rich stars.  Observations of UV extinction curves in the Milky Way and Large &amp; Small Magellanic Clouds (LMC &amp; SMC) support the idea of mass loss from AGB stars helps enrich the ISM.</p>
 <p>After the evolution in the AGB phase, the final evolutionary behavior depends on the initial star mass and can be separated into two basic groups: <strong>1)</strong> ZAMS mass <span class="math notranslate nohighlight">\(\gtrsim 8 \,M_\odot\)</span> and <strong>2)</strong> ZAMS mass <span class="math notranslate nohighlight">\(\lesssim 8\, M_\odot\)</span>.  The distinction is based on whether the core can undergo further nuclear burning.  This section focuses on the latter and saves the former for another chapter.</p>
 <p>As stars with a ZAMS mass below <span class="math notranslate nohighlight">\(8\,M_\odot\)</span> continue to evolve up the AGB, the helium-burning shell coverts more helium into carbon/oxygen and increasing the mass of the carbon-oxygen core.  Concurrently, the core continues to contract slowly, where its central density increases.  Depending on the star’s mass, neutrino production can take away energy and decrease the central temperature slightly.  The core density becomes large enough that electron degeneracy pressure begins to dominate, which is similar to the development of an electron-degenerate helium core in a low-mass star during its rise up the RGB.</p>
@@ -956,7 +1045,7 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="post-asymptotic-giant-branch">
-<h3><span class="section-number">9.2.11. </span>Post-Asymptotic Giant Branch<a class="headerlink" href="#post-asymptotic-giant-branch" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.11. </span>Post-Asymptotic Giant Branch<a class="headerlink" href="#post-asymptotic-giant-branch" title="Permalink to this headline">#</a></h3>
 <p>AS the clout around the OH/IR source expands, it eventually becomes optically thin and exposes the central star, which exhibits a spectrum of an F or G supergiant.  The <span class="math notranslate nohighlight">\(1-5\,M_\odot\)</span> stars evolve blueward, where they leave the TP-AGB and move nearly horizontally across the H-R diagram as <strong>post-AGB</strong> stars.  During the final phase of mass loss, the remainder of the star’s envelope is expelled.  With only a very thin layer of material remaining, the hydrogen- and helium-burning shells are extinguished causing the luminosity of the star to drop rapidly.  The hot central object will cool to become a <strong>white dwarf star</strong>, which is essentially the red giant’s degenerate <span class="math notranslate nohighlight">\({\rm CO}\)</span> core (or <span class="math notranslate nohighlight">\({\rm ONeMg}\)</span> cores for more massive stars) and surrounded by a thin layer of residual hydrogen and helium.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_12.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_12.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_12.jpg?raw=true?" style="width: 600px;" /></a>
@@ -964,7 +1053,7 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="planetary-nebulae">
-<h3><span class="section-number">9.2.12. </span>Planetary Nebulae<a class="headerlink" href="#planetary-nebulae" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.12. </span>Planetary Nebulae<a class="headerlink" href="#planetary-nebulae" title="Permalink to this headline">#</a></h3>
 <p>The expanding shell of gas around a white dwarf progenitor is called a <strong>planetary nebula</strong>.  These glowing gas clouds were given this name in the 19th century because they looked somewhat like giant gaseous planets when viewing through a small telescope.  A planetary nebular owes its appearance to the UV light emitted by the hot, condensed central star.  The UV photons are absorbed bye the surrounding gas in the nebula, which causes the atoms to become excited or ionized.  When the electrons cascade back down to lower energy levels, photons are emitted whose wavelengths are in the visible.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://cdn.spacetelescope.org/archives/images/screen/opo0432b.jpg"><img alt="https://cdn.spacetelescope.org/archives/images/screen/opo0432b.jpg" src="https://cdn.spacetelescope.org/archives/images/screen/opo0432b.jpg" style="width: 800px;" /></a>
@@ -983,16 +1072,16 @@ gas in the core is ideal and monatomic.</p>
 <p><strong>Figure 14</strong>: (a) The Twin Jet Nebula, or PN M2-9, is a striking example of a bipolar planetary nebula. (Credit: <a class="reference external" href="https://science.nasa.gov/m2-9-wings-butterfly-nebula">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA); processing Judy Schmidt</a>); (b) From Earth, Menzel 3 resembles the head and thorax of a common garden ant, hence its name. (Credit: [<a class="reference external" href="https://www.esa.int/Science_Exploration/Space_Science/Exploring_space/The_Ant_Nebula_Menzel_3_Mz_3">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA)</a>)</p>
 </div></div>
 <div class="section" id="id1">
-<h3><span class="section-number">9.2.13. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.2.13. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>4. Estimate the Kelvin–Helmholtz timescale for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star on the subgiant branch and compare your result with the amount of time the star spends between points 4 and 5 in Figure 1.</p>
 </div></blockquote>
 </div>
 </div>
 <div class="section" id="stellar-clusters">
-<h2><span class="section-number">9.3. </span>Stellar Clusters<a class="headerlink" href="#stellar-clusters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Stellar Clusters<a class="headerlink" href="#stellar-clusters" title="Permalink to this headline">#</a></h2>
 <div class="section" id="population-i-ii-and-iii-stars">
-<h3><span class="section-number">9.3.1. </span>Population I, II, and III Stars<a class="headerlink" href="#population-i-ii-and-iii-stars" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.1. </span>Population I, II, and III Stars<a class="headerlink" href="#population-i-ii-and-iii-stars" title="Permalink to this headline">#</a></h3>
 <p>The universe began with the <a class="reference external" href="https://en.wikipedia.org/wiki/Big_Bang">Big Bang</a> about 13.7 Gyr ago.  In the beginning, almost all the elements in the universe were either the hydrogen or helium produce through nucleosynthesis of the Big Bang itself.  The first stars to form had no metal content <span class="math notranslate nohighlight">\((Z=0)\)</span>, where the next generation of stars were extremely <strong>metal-poor</strong> have very small, but non-zero values of <span class="math notranslate nohighlight">\(Z\)</span>.  Successive generations of stars resulted in higher proportions of heavy elements available during their own formation, which leads to more metal-rich stars <span class="math notranslate nohighlight">\((Z=0.03)\)</span>.  Stars are classified as <em>populations</em> using their metal content, which is also a proxy for how long after the Big Bang they likely formed.  These populations are:</p>
 <ul class="simple">
 <li><p><strong>Population III</strong> stars are the original stars that formed immediately after the Big Bang; <span class="math notranslate nohighlight">\(Z=0\)</span>.</p></li>
@@ -1002,7 +1091,7 @@ gas in the core is ideal and monatomic.</p>
 <p>The classifications of Population II and I are originally due to their kinematically distinct groups of stars within our Galaxy. It was only later that astronomers realized that these two groups differed chemically as well.</p>
 </div>
 <div class="section" id="globular-clusters-and-galactic-open-clusters">
-<h3><span class="section-number">9.3.2. </span>Globular Clusters and Galactic (Open) Clusters<a class="headerlink" href="#globular-clusters-and-galactic-open-clusters" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.2. </span>Globular Clusters and Galactic (Open) Clusters<a class="headerlink" href="#globular-clusters-and-galactic-open-clusters" title="Permalink to this headline">#</a></h3>
 <p>During the collapse of a molecular cloud, <strong>stellar cluster</strong> can form that range in size from <span class="math notranslate nohighlight">\(10-10^5\)</span> stars.  Every member of a given cluster formed</p>
 <ul class="simple">
 <li><p>from the same cloud,</p></li>
@@ -1018,11 +1107,11 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="spectroscopic-parallax">
-<h3><span class="section-number">9.3.3. </span>Spectroscopic Parallax<a class="headerlink" href="#spectroscopic-parallax" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.3. </span>Spectroscopic Parallax<a class="headerlink" href="#spectroscopic-parallax" title="Permalink to this headline">#</a></h3>
 <p>The H-R diagrams of cluster can be constructed in a self-consistent way without knowledge of the exact distances to them.  The interstellar distances within a cluster are small relative to the cluster’s distance from Earth and thus, little error is introduced by assuming that each member has essentially the same <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#absolute-magnitude-and-the-distance-modulus">distance modulus</a>.  Plotting the <em>apparent magnitude</em> instead of the absolute magnitude only amounts to a vertical shift of each star in the diagram.  By matching the main-sequence stars to a main-sequence calibrated in absolute magnitude allows one to determine the distance modulus (i.e., the vertical shift between the two curves).  this method of distance determination is known as <strong>spectroscopic parallax</strong>, or <strong>main-sequence fitting</strong>.</p>
 </div>
 <div class="section" id="color-magnitude-diagrams">
-<h3><span class="section-number">9.3.4. </span>Color-Magnitude Diagrams<a class="headerlink" href="#color-magnitude-diagrams" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.4. </span>Color-Magnitude Diagrams<a class="headerlink" href="#color-magnitude-diagrams" title="Permalink to this headline">#</a></h3>
 <p>Rather than attempting to determine the effective temperature of <em>every member</em> of a cluster, it is much faster to determine their color indices <span class="math notranslate nohighlight">\(B-V\)</span>.  With the knowledge of apparent magnitude and the color index of each star, a <strong>color-magnitude diagram</strong> can be constructed with the apparent magnitude <span class="math notranslate nohighlight">\(V\)</span> along the y-axis and the color index <span class="math notranslate nohighlight">\(B-V\)</span> along the x-axis.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_17.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_17.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_17.jpg?raw=true?" style="width: 600px;" /></a>
@@ -1034,19 +1123,19 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="isochrones-and-cluster-ages">
-<h3><span class="section-number">9.3.5. </span>Isochrones and Cluster Ages<a class="headerlink" href="#isochrones-and-cluster-ages" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.5. </span>Isochrones and Cluster Ages<a class="headerlink" href="#isochrones-and-cluster-ages" title="Permalink to this headline">#</a></h3>
 <p>Clusters offer near ideal tests of many aspects of stellar evolution theory due to their color-magnitude diagrams that are correlated with a H-R diagram.  By computing the evolutionary tracks of many stars (with a range of mass) that all have the same composition, it is possible to plot the position of each evolving model on the H-R diagram when the model reaches the age of the cluster. <em>The curve connecting these positions is known as an <strong>isochrone</strong>.</em>  The relative number of stars at each location depends on the number of star in each mass range with the cluster (i.e., the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_12/interstellar-medium-and-star-formation.html#the-initial-mass-function-imf">initial mass function</a>), combined with the different evolutionary rates during each phase.</p>
 <p>As the cluster ages, the most massive and least abundant stars will arrive on the main sequence first and evolve rapidly.  Before the lowest-mass stars reach the main sequence, the most massive ones have already evolved off the main sequence into the red giant region (perhaps even undergoing supernova explosions).  Core hydrogen-burning lifetimes are inversely related to mass, which means the remaining main-sequence stars mark a <strong>turn-off point</strong>.  The cluster becomes redder and less luminous with time.  It is also possible to estimate the age of a cluster by the location of the turn-off point or the uppermost point of its main sequence.</p>
 </div>
 <div class="section" id="the-hertzsprung-gap">
-<h3><span class="section-number">9.3.6. </span>The Hertzsprung Gap<a class="headerlink" href="#the-hertzsprung-gap" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.6. </span>The Hertzsprung Gap<a class="headerlink" href="#the-hertzsprung-gap" title="Permalink to this headline">#</a></h3>
 <p>Another consequence of varying timescales can be seen in the color-magnitude diagrams of <a class="reference external" href="https://www.messier.seds.org/xtra/ngc/n0869.html"><span class="math notranslate nohighlight">\(h+\chi\)</span> Persei</a>.  Apparent are red giants, low-mass main sequence stars, and a population of very red <span class="math notranslate nohighlight">\((B-V\sim 1.75)\)</span> giants.  It is unlikely that this represents an incomplete survey, since the stars are the brightest members of the cluster.  It points out the very rapid evolution that occurs just after leaving the main sequence and is known as the <strong>Hertzsprung gap</strong>.  The existence of the Hertzsprung gap is due to the evolution on a Kelvin-Helmholtz timescale across the SGB following the core contraction at the Schöberg-Chandrasekhar limit.  The clusters M67 and M3 do not show the existence of the Hertzsprung gap because the rapid contraction phase (below <span class="math notranslate nohighlight">\(1.25\,M_\odot\)</span>) related to the Schöberg-Chandrasekhar limit is less pronounced.  Color-magnitude diagrams of old globular clusters with turn-off points near or less than a Solar-mass have continuous star distributions leading to the red giant region.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_19.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_19.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_19.jpg?raw=true?" style="width: 600px;" /></a>
 <p><strong>Figure 18</strong>: A composite color–magnitude diagram for a set of Population I galactic clusters. (Carroll &amp; Ostlie (2007))</p>
 </div></div>
 <div class="section" id="blue-stragglers">
-<h3><span class="section-number">9.3.7. </span>Blue Stragglers<a class="headerlink" href="#blue-stragglers" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.7. </span>Blue Stragglers<a class="headerlink" href="#blue-stragglers" title="Permalink to this headline">#</a></h3>
 <p>A group of stars, known as <strong>blue stragglers</strong>, can be found above the turn-off point of M3.  It appears that their tardiness (in leaving the main sequence) is due to an unusual aspect of their evolution, where the most likely scenarios appear to be:</p>
 <ul class="simple">
 <li><p>mass exchange with a binary star companion, or</p></li>
@@ -1055,7 +1144,7 @@ gas in the core is ideal and monatomic.</p>
 <p>which extends the star’s main-sequence lifetime.</p>
 </div>
 <div class="section" id="id2">
-<h3><span class="section-number">9.3.8. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">9.3.8. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>5. The Helix nebula is a planetary nebula with an angular diameter of 16’ that is located approximately 213 pc from Earth.</p>
 <blockquote>
@@ -1067,7 +1156,7 @@ gas in the core is ideal and monatomic.</p>
 </div>
 </div>
 <div class="section" id="additional-resources">
-<h2><span class="section-number">9.4. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><strong>T</strong>ool for <strong>U</strong>nderstanding the <strong>L</strong>ives, <strong>I</strong>nteriors, and <strong>P</strong>hyscis of <strong>S</strong>tars (<a class="reference external" href="https://astro-tulips.readthedocs.io/en/latest/index.html">TULIPS</a>) is a code package to visualize stellar evolution following output from the <a class="reference external" href="https://docs.mesastar.org/">MESA</a> stellar evolution code.</p></li>
 <li><p><strong>M</strong>odules for <strong>E</strong>xperiments in <strong>S</strong>tellar <strong>A</strong>strophysics (<a class="reference external" href="https://docs.mesastar.org/">MESA</a>) is an open-source 1D stellar evolution code.</p></li>
@@ -1097,9 +1186,11 @@ gas in the core is ideal and monatomic.</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_12/interstellar-medium-and-star-formation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1115,24 +1206,28 @@ gas in the core is ideal and monatomic.</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

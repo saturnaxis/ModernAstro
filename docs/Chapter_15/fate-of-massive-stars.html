@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>11. The Fate of Massive Stars &#8212; ASTR4410 Modern Astrophysics</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,28 +28,32 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_15/fate-of-massive-stars.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,18 +65,30 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-103786588-2', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-CP3EW7BJEH');
+                </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -84,9 +97,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -99,14 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR4410: Modern Astrophysics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR4410: Modern Astrophysics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -211,103 +226,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_15/fate-of-massive-stars.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/ModernAstro"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_15/fate-of-massive-stars.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_15/fate-of-massive-stars.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/ModernAstro"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_15/fate-of-massive-stars.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#post-main-sequence-evolution-of-massive-stars">
    11.1. Post-Main-Sequence Evolution of Massive Stars
@@ -417,12 +506,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>The Fate of Massive Stars</h1>
@@ -548,17 +636,18 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-fate-of-massive-stars">
-<h1><span class="section-number">11. </span>The Fate of Massive Stars<a class="headerlink" href="#the-fate-of-massive-stars" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>The Fate of Massive Stars<a class="headerlink" href="#the-fate-of-massive-stars" title="Permalink to this headline">#</a></h1>
 <div class="section" id="post-main-sequence-evolution-of-massive-stars">
-<h2><span class="section-number">11.1. </span>Post-Main-Sequence Evolution of Massive Stars<a class="headerlink" href="#post-main-sequence-evolution-of-massive-stars" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Post-Main-Sequence Evolution of Massive Stars<a class="headerlink" href="#post-main-sequence-evolution-of-massive-stars" title="Permalink to this headline">#</a></h2>
 <p>Since at least 1600, astronomers have observed <a class="reference external" href="https://en.wikipedia.org/wiki/Eta_Carinae"><span class="math notranslate nohighlight">\(\eta\)</span> Carinae</a>, where its apparent magnitude was reported to be either 2 or 4.  In the early 1800s, it may have become significantly more active.  In 1837, <span class="math notranslate nohighlight">\(\eta\)</span> Car suddenly brightened, fluctuating in magnitude between <span class="math notranslate nohighlight">\(0-1\)</span> and made it the second brightest object in the sky (only Sirius was brighter).  This brightening event is remarkable because the star is approximately 2300 pc from Earth, where Sirius is only 2.64 pc away.</p>
 <p>After 1856, <span class="math notranslate nohighlight">\(\eta\)</span> Car began to fade and dropped in magnitude to 8 by 1870.  Since 1895, <span class="math notranslate nohighlight">\(\eta\)</span> Car has been relatively quiet and it has brightened slightly to a magnitude 6 over the past ~150 years.  In a similar fashion, P Cygni was too faint to see with the naked eye before 1600, but suddenly brightened to a magnitude 3.  Following this event, P Cyg faded for a time and reappeared in 1655 becoming nearly as bright as it was in 1600.  Since 1700, P Cyg has been a magnitude 5 star, although it may have brighten slightly over the past several centuries.</p>
 <div class="section" id="luminous-blue-variables">
-<h3><span class="section-number">11.1.1. </span>Luminous Blue Variables<a class="headerlink" href="#luminous-blue-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.1. </span>Luminous Blue Variables<a class="headerlink" href="#luminous-blue-variables" title="Permalink to this headline">#</a></h3>
 <p>A small number of other stars in our own galaxy (some farther away) behave like <span class="math notranslate nohighlight">\(\eta\)</span> Car and P Cyg.  For example S Doradus (located in the Large Magellanic Cloud) is the best known extragalactic example.  Similar stars were discovered by Edwin Hubble and Allan Sandage, where this class of star are referred to as <strong>S Doradus variables</strong>, <strong>Hubble-Sandage variables</strong>, and <strong>luminous blue variables</strong> (LBVs).</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Eta_Carinae.jpg/1024px-Eta_Carinae.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Eta_Carinae.jpg/1024px-Eta_Carinae.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Eta_Carinae.jpg/1024px-Eta_Carinae.jpg" style="width: 500px;" /></a>
@@ -575,7 +664,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>LBVs could also be members of binary star systems as similar behaviors can be induced by the binary companion.  Interestingly, <span class="math notranslate nohighlight">\(\eta\)</span> Car exhibits a 5.54 yr periodicity in the equivalent widths (of some) of its spectral lines, which hints at the presence of a binary companion.  Although it is unclear how a binary companion can cause all of the effects observed.  It may turn out that more than one of the discussed mechanisms could influence the behavior of the LBVs or the principal mechanism has yet to be identified.</p>
 </div>
 <div class="section" id="wolf-rayet-stars">
-<h3><span class="section-number">11.1.2. </span>Wolf-Rayet Stars<a class="headerlink" href="#wolf-rayet-stars" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.2. </span>Wolf-Rayet Stars<a class="headerlink" href="#wolf-rayet-stars" title="Permalink to this headline">#</a></h3>
 <p>Closely related to LBVs are the <a class="reference external" href="https://en.wikipedia.org/wiki/Wolf%E2%80%93Rayet_star">Wolf-Rayet</a> (WR) stars, which were first discovered by <a class="reference external" href="https://en.wikipedia.org/wiki/Charles_Wolf_(astronomer)">Charles Wolf</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Georges_Rayet">Georges Rayet</a> while working at the Paris Observatory in 1867.  Using a visual-wavelength spectrometer to conduct a survey of stars in Cygnus, they observed three stars (within one degree of each other) that exhibited strong, very broad emission lines rather than the typical absorption lines observed in other stars.  Today 220+ WR stars have been identified in the Milky Way, although the total number of WRs is estimated to be 1000-2000 on the basis of sampling statistics.</p>
 <p>Along with strong emission lines, WR stars are very hot, with effective temperatures of <span class="math notranslate nohighlight">\(25,000-100,000\ {\rm K}\)</span>.  WRs are also losing mass (<span class="math notranslate nohighlight">\(&gt;10^{-5}\ M_\odot/{\rm yr}\)</span>) with wind speeds from <span class="math notranslate nohighlight">\(800-3000\ {\rm km/s}\)</span>. There is strong evidence that many (perhaps all) WR stars are rapid rotators with equatorial speeds of <span class="math notranslate nohighlight">\(\sim 300\ {\rm km/s}\)</span>.  LBVs are all very massive stars (<span class="math notranslate nohighlight">\(85\ M_\odot\)</span>), but WRs can have progenitor masses as low as <span class="math notranslate nohighlight">\(20\ M_\odot\)</span>.  Also, WRs do not demonstrate the dramatic variability that is characteristic of LBVs.</p>
 <div align="center">
@@ -606,7 +695,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In addition to LBVs and WRs, the upper portion of the H-R diagram also contains <strong>blue supergiants</strong> (BSG), <strong>red supergiants</strong>, and <strong>Of</strong> stars (O supergiants with pronounced emission lines).</p>
 </div>
 <div class="section" id="a-general-evolutionary-scheme-for-massive-stars">
-<h3><span class="section-number">11.1.3. </span>A General Evolutionary Scheme for Massive Stars<a class="headerlink" href="#a-general-evolutionary-scheme-for-massive-stars" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.3. </span>A General Evolutionary Scheme for Massive Stars<a class="headerlink" href="#a-general-evolutionary-scheme-for-massive-stars" title="Permalink to this headline">#</a></h3>
 <p>A general evolution path for massive stars has been outline, where the scheme was originally suggested by <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1975MSRSL...9..193C/abstract">Peter Conti</a> and subsequently modified.  In each case the star ends its life in a <strong>supernova</strong> (SN) explosion.  Note that the masses listed below oar only approximate (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2003ARA%26A..41...15M/abstract">Massey (2003)</a>).</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -619,7 +708,7 @@ M &gt; 85\ M_\odot &amp;: {\rm O} \rightarrow {\rm Of} \rightarrow {\rm LBV} \ri
 <p>This qualitative evolutionary scheme is supported by detailed numerical evolutionary models of massive star formation.  Evolutionary tracks for stars of solar composition are calculated for the range from <span class="math notranslate nohighlight">\(9-120\ M_\odot\)</span>.  The models can be modified if the include the effects of the equatorial rotation, which have appreciable effects on driving internal mixing and enhancing mass loss as part of the stellar evolution.</p>
 </div>
 <div class="section" id="the-humphreys-davidson-luminosity-limit">
-<h3><span class="section-number">11.1.4. </span>The Humphreys-Davidson Luminosity Limit<a class="headerlink" href="#the-humphreys-davidson-luminosity-limit" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.4. </span>The Humphreys-Davidson Luminosity Limit<a class="headerlink" href="#the-humphreys-davidson-luminosity-limit" title="Permalink to this headline">#</a></h3>
 <p>The massive-star evolutionary tracks indicate that the most massive stars never evolve to the red supergiant (RSG) portion of the H-R diagram.  This is consistent with observations.  Humphreys and Davidson first pointed out the there is an upper-luminosity cut-off in the H-R diagram that includes a diagonal component running from highest luminosities and effective temperatures to lower values in both parameters.  When full redward evolutionary tracks develop for stars below <span class="math notranslate nohighlight">\(\sim 40\ M_\odot\)</span>, the <strong>Humphreys-Davidson luminosity limit</strong> continues at constant luminosity.</p>
 <p>Very massive stars are extremely rare (only one <span class="math notranslate nohighlight">\(100\ M_\odot\)</span> star exists for every one million solar mass stars), but they play a major role in the dynamics and chemical evolution of the ISM.  The tremendous amount of kinetic energy deposited in the ISM through the stellar winds of massive stars has an impact on the kinematics of the ISM.  When very massive stars form, they have the ability to quench (stop) star formation in neighboring regions.  The UV light from massive stars can also ionize gas clouds around them.  The highly enriched gases of massive stellar winds increase the metal content of the ISM, resulting in the formation of increasingly metal-rich stars.</p>
 <div align="center">
@@ -627,7 +716,7 @@ M &gt; 85\ M_\odot &amp;: {\rm O} \rightarrow {\rm Of} \rightarrow {\rm LBV} \ri
 <p><strong>Figure 3</strong>: The evolution of massive stars with <span class="math notranslate nohighlight">\(Z=0.02\)</span>.  The solid lines are evolutionary tracks with initial rotation velocities of <span class="math notranslate nohighlight">\(300\ {\rm km/s}\)</span> and the dotted lines are tracks for stars without rotation.  (Carroll &amp; Ostlie (2007); Figure from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2003A%26A...404..975M/abstract">Meynet &amp; Maeder, Astron. Astrophys., 404, 975, 2003.</a>)</p>
 </div></div>
 <div class="section" id="problems">
-<h3><span class="section-number">11.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>1. During the Great Eruption of <span class="math notranslate nohighlight">\(\eta\)</span> Car, the apparent visual magnitude reached a characteristic value of <span class="math notranslate nohighlight">\(m_V \sim 0\)</span>. Assume that the interstellar extinction to <span class="math notranslate nohighlight">\(\eta\)</span> Car is 1.7 magnitudes and that the bolometric correction is essentially zero.</p>
 <blockquote>
@@ -640,7 +729,7 @@ M &gt; 85\ M_\odot &amp;: {\rm O} \rightarrow {\rm Of} \rightarrow {\rm LBV} \ri
 </div>
 </div>
 <div class="section" id="the-classification-of-supernovae">
-<h2><span class="section-number">11.2. </span>The Classification of Supernovae<a class="headerlink" href="#the-classification-of-supernovae" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>The Classification of Supernovae<a class="headerlink" href="#the-classification-of-supernovae" title="Permalink to this headline">#</a></h2>
 <p>In 1006, an extremely bright star suddenly appeared in the constellation <a class="reference external" href="https://en.wikipedia.org/wiki/Lupus_(constellation)">Lupus</a>, which reached an estimated visual magnitude of <span class="math notranslate nohighlight">\(m_V = -9\)</span> and it was reportedly bright enough to read by at night (compared to a full Moon, <span class="math notranslate nohighlight">\(m_V = -12.5\)</span>, which is <span class="math notranslate nohighlight">\(\sim 25\times\)</span> brighter).  The event was recorded by astrologers across Europe, China, Japan, Egypt, and Iraq.  Based on their writings, the bright star appeared bout April 30, 1006 and faded from view roughly one year later.  Today, this event is called <strong>Supernova 1006</strong> (SN 1006).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -658,7 +747,7 @@ M &gt; 85\ M_\odot &amp;: {\rm O} \rightarrow {\rm Of} \rightarrow {\rm LBV} \ri
 <p><strong>Figure 5</strong>: A portion of the Large Magellanic Cloud showing SN 1987A.  (Carroll &amp; Ostlie (2007); Image Credit: ESO)</p>
 </div>
 <div class="section" id="classes-of-supernovae">
-<h3><span class="section-number">11.2.1. </span>Classes of Supernovae<a class="headerlink" href="#classes-of-supernovae" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.1. </span>Classes of Supernovae<a class="headerlink" href="#classes-of-supernovae" title="Permalink to this headline">#</a></h3>
 <p>Today, astronomers routinely observe supernovae in other galaxies, where the “A” in SN 1987A represents the first supernova reported that year.  However, supernovae are exceedingly rare events, which typically occur about <em>once very 100 years in any one galaxy</em>.  There are many galaxies to study and over time, it has been realized that there are several distinct classes of supernovae with different classes of underlying progenitors and mechanisms.</p>
 <ul class="simple">
 <li><p><strong>Type I</strong> supernovae were identified as those without any hydrogen lines in their spectra.  Given that hydrogen is the most abundant element, this was an indication of something unusual.  These supernovae are further subdivided according to their spectra.</p>
@@ -696,7 +785,7 @@ M &gt; 85\ M_\odot &amp;: {\rm O} \rightarrow {\rm Of} \rightarrow {\rm LBV} \ri
 </div></div>
 </div>
 <div class="section" id="core-collapse-supernovae">
-<h2><span class="section-number">11.3. </span>Core-Collapse Supernovae<a class="headerlink" href="#core-collapse-supernovae" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Core-Collapse Supernovae<a class="headerlink" href="#core-collapse-supernovae" title="Permalink to this headline">#</a></h2>
 <p>The sheer amount of energy released in a supernova event is staggering, where a typical Type II releases <span class="math notranslate nohighlight">\(10^{46}\ {\rm J}\)</span>, with about 1% of that appearing as kinetic energy of the ejected material and less than 0.01% being released as the photons that produce the spectacular visual display.  The remainder of the energy is radiated in the form of neutrinos.</p>
 <ul class="simple">
 <li><p><strong>How much iron could ultimately be produced through a typical Type II supernova explosion?</strong></p></li>
@@ -742,7 +831,7 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
 </div>
 </div>
 <div class="section" id="core-collapse-supernova-mechanism">
-<h3><span class="section-number">11.3.1. </span>Core-Collapse Supernova Mechanism<a class="headerlink" href="#core-collapse-supernova-mechanism" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.1. </span>Core-Collapse Supernova Mechanism<a class="headerlink" href="#core-collapse-supernova-mechanism" title="Permalink to this headline">#</a></h3>
 <p>The post-main-sequence evolution of stars more massive than about <span class="math notranslate nohighlight">\(8\ M_\odot\)</span> is different.  Hydrogen is converted into helium on the main sequence and is followed by helium burning that leads to a carbon-oxygen core.  The very high temperature in the core of a massive star means that carbon and oxygen can burn as well.  The end result is that rather than the star ending its life through the formation of a planetary nebula, a catastrophic supernova explosion occurs instead.</p>
 <p>The details of supernovae are continually being worked out, but the story of how they are produced is becoming clearer.  The three types (Type Ib, Ic, and II) are closely related and involve the collapse of a massive, evolved stellar core.  Collectively, these supernovae are known as <strong>core-collapse supernovae</strong>.</p>
 <p>As the helium-burning shell continues to add ash to the carbon-oxygen core (and as the core contracts), it eventually ignites in carbon burning and generates a variety of by-products (e.g., <span class="math notranslate nohighlight">\({\rm ^{16}_8 O}\)</span>, <span class="math notranslate nohighlight">\({\rm ^{23}_{11} Na}\)</span>, <span class="math notranslate nohighlight">\({\rm ^{23}_{12} Mg}\)</span>, and <span class="math notranslate nohighlight">\({\rm ^{24}_{12} Mg}\)</span>).  This leads to a succession of nuclear reaction sequences that depend sensitively on the stellar mass.</p>
@@ -822,12 +911,12 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
 <p>Type II supernovae are more common and are usually red supergiant (RSG) stars in the extreme upper-right-hand corner of the H-R diagram at the time they undergo the catastrophic core collapse.  Type Ib and Type Ic have lost various amounts of their envelopes prior to detonation and could be the products of exploded Wolf-Rayet stars.  Type Ib and Type Ic may correspond to the detonation of WN and WC Wolf-Rayets.</p>
 </div>
 <div class="section" id="stellar-remnants-of-a-core-collapse-supernova">
-<h3><span class="section-number">11.3.2. </span>Stellar Remnants of a Core-Collapse Supernova<a class="headerlink" href="#stellar-remnants-of-a-core-collapse-supernova" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.2. </span>Stellar Remnants of a Core-Collapse Supernova<a class="headerlink" href="#stellar-remnants-of-a-core-collapse-supernova" title="Permalink to this headline">#</a></h3>
 <p>If the initial stellar mass (on the main sequence) was not too large (<span class="math notranslate nohighlight">\(M_{\rm ZAMS}&lt; 25\ M_\odot\)</span>), the remnant of a core-collapse supernova will stabilize and become a <strong>neutron star</strong>, or essentially a gigantic atomic nucleus, that is supported by degenerate neutron pressure.  If the initial stellar mass is much larger, then the pressure of neutron degeneracy cannot support the remnant against the pull of gravity and the final collapse will produce a <strong>black hole</strong>, which is an object whose mass has collapsed to a <em>singularity</em> of infinite density.</p>
 <p>The creation of these exotic objects is accompanied by a tremendous production of neutrinos, where the majority escape into space with a total energy of approximately <span class="math notranslate nohighlight">\(3\times 10^{46}\ {\rm J}\)</span> (i.e., the binding energy of a neutron star).  This represents roughly <span class="math notranslate nohighlight">\(100\times\)</span> more energy than the Sun produces over its entire main-sequence lifetime.</p>
 </div>
 <div class="section" id="the-light-curves-and-the-radioactive-decay-of-the-ejecta">
-<h3><span class="section-number">11.3.3. </span>The Light Curves and the Radioactive Decay of the Ejecta<a class="headerlink" href="#the-light-curves-and-the-radioactive-decay-of-the-ejecta" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.3. </span>The Light Curves and the Radioactive Decay of the Ejecta<a class="headerlink" href="#the-light-curves-and-the-radioactive-decay-of-the-ejecta" title="Permalink to this headline">#</a></h3>
 <p>A Type II-P supernova is the most common typ of core-collapse supernova.  The source of the plateau in its light curves is due to the energy deposited by the shock into the hydrogen-rich envelope.  The shock ionizes the gas, where it enters a stage of prolonged recombination and releases the energy at a nearly constant temperature of about <span class="math notranslate nohighlight">\(5000\ {\rm K}\)</span>.</p>
 <p>The plateau may also be supported by the energy deposited in the envelope by the <strong>radioactive decay</strong> of nickel-56 that was produced by the shock front during its march through the star; the half-live <span class="math notranslate nohighlight">\(\tau_{1/2}\)</span> of nickel-56 is 6.1 days.  The explosive nucleosynthesis of the supernova shock should have produced a significant amounts of other radioactive isotopes as well, such as cobalt-57 (<span class="math notranslate nohighlight">\(\tau_{1/2} = 271\ {\rm days}\)</span>), sodium-22 (<span class="math notranslate nohighlight">\(\tau_{1/2} = 2.6\ {\rm yr}\)</span>), and titanium-44 (<span class="math notranslate nohighlight">\(\tau_{1/2} \simeq 47\ {\rm yr}\)</span>).  Each of the isotopes may contribute to the overall light curve, causing the slope of the curve to change.</p>
 <p>The nickel-56 decays into cobalt-56 through the weak interaction of <em>beta-decay</em></p>
@@ -890,12 +979,12 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
 <p>SN 1987A allowed astronomers to directly measure the X-ray and gamma-ray emission lines produced by radioactive decay for the first time.  In particular, the 847 keV and 1238 keV lines of cobalt-56 were detected by a number of experiments, which confirmed the presence of the isotope.</p>
 </div>
 <div class="section" id="the-subluminous-nature-of-sn-1987a">
-<h3><span class="section-number">11.3.4. </span>The Subluminous Nature of SN 1987A<a class="headerlink" href="#the-subluminous-nature-of-sn-1987a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.4. </span>The Subluminous Nature of SN 1987A<a class="headerlink" href="#the-subluminous-nature-of-sn-1987a" title="Permalink to this headline">#</a></h3>
 <p>The mystery of the subluminous nature of SN 1987a was solved after identifying its progenitor star, which was a spectral class B3 I <em>blue</em> supergiant, <a class="reference external" href="https://en.wikipedia.org/wiki/Sanduleak_-69_202">Sk -69 202</a>.  Since the progenitor was a BSG instead of a RSG (as is usually assumed), the star was more dense.  Before the thermal energy produced by the shock could diffuse out and escape, it was converted into the mechanical energy required to lift the envelope of the star out of the deeper potential well of the blue supergiant.  Measurements of <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> lines indicate that some of the outer hydrogen envelope was ejected at speeds of nearly <span class="math notranslate nohighlight">\(30,000\ {\rm km/s}\)</span>, or <span class="math notranslate nohighlight">\(0.1c\)</span>.</p>
 <p>The available observations of Sk -69 202 tied with the theoretical evolutionary models suggest that the progenitor of SN 1987A had a mass of roughly <span class="math notranslate nohighlight">\(20\ M_\odot\)</span> when it was on the main sequence and it lost a few solar masses (<span class="math notranslate nohighlight">\(\sim 1.4-1.6\ M_\odot\)</span>) before its iron core collapsed.  Although it was apparently a RSG for <span class="math notranslate nohighlight">\(\sim 10^5-10^6\ {\rm yr}\)</span>, where it evolved to the BSG just 40,000 years before the explosion.  Supporting this hypothesis is the observation that hydrogen was more abundant in the stellar envelope than helium, which suggests that the star had not suffered an extensive amount of mass loss.</p>
 </div>
 <div class="section" id="supernova-remnants">
-<h3><span class="section-number">11.3.5. </span>Supernova Remnants<a class="headerlink" href="#supernova-remnants" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.5. </span>Supernova Remnants<a class="headerlink" href="#supernova-remnants" title="Permalink to this headline">#</a></h3>
 <p>There are now many examples of <strong>supernova remnants</strong> (SNR), such as the Crab Nebula that is located in Taurus.  Nearly 1000 years since the SN 154 explosion, the Crab is still expanding a <span class="math notranslate nohighlight">\(\sim 1450\ {\rm km/s}\)</span> and it has a luminosity of 80,000 <span class="math notranslate nohighlight">\(L_\odot\)</span>.  Much of the emitted radiation is in the form of highly polarized synchrotron radiation, which indicates the presence of relativistic electrons that are spiraling around magnetic field lines.  The ongoing source of the electrons and the continued high luminosity so long after the explosion were major puzzles until the discovery of a <strong>pulsar</strong> (i.e., a rapidly spinning neutron star) at the center of the Crab SNR.  The Cygnus Loop nebula is another example of a SNR, where it is located 800 pc away and is 15,000 years old.  The remnant shows shock fronts several AU wide as the debris from the supernova explosion encounters material in the ISM.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://stsci-opo.org/STScI-01EVTAVVP6E5KE1VWK9FTDY9QV.jpg"><img alt="https://stsci-opo.org/STScI-01EVTAVVP6E5KE1VWK9FTDY9QV.jpg" src="https://stsci-opo.org/STScI-01EVTAVVP6E5KE1VWK9FTDY9QV.jpg" style="width: 600px;" /></a>
@@ -915,16 +1004,16 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
 </div>
 </div>
 <div class="section" id="the-detection-of-neutrinos-from-sn-1987a">
-<h3><span class="section-number">11.3.6. </span>The Detection of Neutrinos from SN 1987A<a class="headerlink" href="#the-detection-of-neutrinos-from-sn-1987a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.6. </span>The Detection of Neutrinos from SN 1987A<a class="headerlink" href="#the-detection-of-neutrinos-from-sn-1987a" title="Permalink to this headline">#</a></h3>
 <p>One of the most exciting early observations of SN 1987A waw based on its nuetrinos, which represented the first time the neutrinos were detected from an astronomical source <em>other than the Sun.</em>  The measurement confirmed the basic theory of core-collapse supernovae and provided near direct evidence for the formation of a neutron star out of the collapsed iron core.</p>
 <p>The arrival of the neutrino burst wes recored over a duration of 12.5 seconds that was three hours <em>before</em> the arrival of the photons.  Twelve events were recorded at Japan’s Kamiokande II Cerenkov detector and contemporaneously, eight events were detected by the IMB Cenrenkov detector near Fairport, OH.  The neutrions began their trip ahead of the photons assuming the the exploding star became optically thin to neutrions before the shock wave reached the surface and the neutrionos traveled faster than the shock while still inside the star.  Also the neutrinos must have been very near the speed of light to not be overtaken by the photons.  There was not a significant dispersion in the neutrino energy, which suggests that the rest mass of the electron neutrions must be quite small.  Based on data from SN 1987A, the electron neutrino mass was less than 16 eV, which is consistent with lab experiments that place the upper limit at 2.2 eV.</p>
 </div>
 <div class="section" id="the-search-for-a-compact-remnant-of-sn-1987a">
-<h3><span class="section-number">11.3.7. </span>The Search for a Compact Remnant of SN 1987A<a class="headerlink" href="#the-search-for-a-compact-remnant-of-sn-1987a" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.7. </span>The Search for a Compact Remnant of SN 1987A<a class="headerlink" href="#the-search-for-a-compact-remnant-of-sn-1987a" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://iopscience.iop.org/article/10.3847/1538-4357/ab93c2">Page et al. (2020)</a> report a suspected detection of a compact in the remnant of SN 1987A.  The purported detection comes from an IR excess due to the decay <span class="math notranslate nohighlight">\({\rm ^{44}Ti}\)</span>, accretion luminosity from a neutron star or black hole, magnetospheric emission or a wind originating from the spin down of a pulsar, or to thermal emission from an embedded, cooling neutron star.  The upper limit on the luminosity in the visible is less than <span class="math notranslate nohighlight">\(8\times 10^{26}\ {\rm W}\)</span>, which is equivalent to the optical energy output of an F6 main-sequence star.  UV spectra lead to an upper limit of <span class="math notranslate nohighlight">\(L_{\rm UV} \leq 1.7 \times 10^{27}\ {\rm W}\)</span>, and Chandra has set an upper limit on the X-ray luminosity of <span class="math notranslate nohighlight">\(L_{\rm X} \leq 5.5 \times 10^{26}\ {\rm W}\)</span> between 2-10 keV.</p>
 </div>
 <div class="section" id="chemical-abundance-ratios-in-the-universe">
-<h3><span class="section-number">11.3.8. </span>Chemical Abundance Ratios in the Universe<a class="headerlink" href="#chemical-abundance-ratios-in-the-universe" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.8. </span>Chemical Abundance Ratios in the Universe<a class="headerlink" href="#chemical-abundance-ratios-in-the-universe" title="Permalink to this headline">#</a></h3>
 <p>A critical component in the evaluating the success of stellar evolution theory is the ability ot explain the observed elemental abundance ratios.  The abundant element in the universe is hydrogen, followed by helium (reduced by a factor of 10).  Current cosmological models produce all the hydrogen in the Big Bang that started the universe, which makes hydrogen primordial.  Much of the present-day helium was also produced in the Big Bang, while the remainder of the elements are produced from fusion processes in stellar interiors.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_15/Figure_16.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_15/Figure_16.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_15/Figure_16.jpg?raw=true?" style="width: 600px;" /></a>
@@ -941,7 +1030,7 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
 <p>There are larger abundances for carbon, nitrogen, oxygen, neon, and so on because they are the end products of nuclear reaction chains at various stages of the star’s evolution.  Core-collapse supernovae are responsible for significant quantities of oxygen, while Type Ia supernovae are responsible for most of the iron observed in the cosmos.</p>
 </div>
 <div class="section" id="s-process-and-r-process-nucleosynthesis">
-<h3><span class="section-number">11.3.9. </span>s-Process and r-Process Nucleosynthesis<a class="headerlink" href="#s-process-and-r-process-nucleosynthesis" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.9. </span>s-Process and r-Process Nucleosynthesis<a class="headerlink" href="#s-process-and-r-process-nucleosynthesis" title="Permalink to this headline">#</a></h3>
 <p>When nuclei with progressively higher values of <span class="math notranslate nohighlight">\(Z\)</span> form via stellar nucleosynthesis, it becomes difficult for other charged particles (e.g., protons, alpha particles, etc.) to react with them.  As <span class="math notranslate nohighlight">\(Z\)</span> increases, so does the height of the Coulomb potential barrier.  The same limitation does not exist for neutrons that collide with these nuclei.  Nuclear reactions involving neutrons can occur even at relatively low temperatures.  The reactions with neutrons have the form,</p>
 <div class="math notranslate nohighlight">
 \[ {\rm ^A_ZX} + n \rightarrow {\rm ^{A+1}_ZX} + \gamma, \]</div>
@@ -956,7 +1045,7 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
 <p>These reactions appear at different times, where the s-process reactions occur during the normal phases of stellar evolution and the r-process reactions occur during a supernova (when a large flux of neutrinos exists).  Neither process plays a significant role in energy production, but they do account for the abundance ratios of nuclei with <span class="math notranslate nohighlight">\(A&gt;60\)</span>.</p>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">11.3.10. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.3.10. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>3. Taking the distance to the Crab to be 2000 pc, and assuming that the absolute bolometric magnitude at maximum brightness was characteristic of a Type II supernova, estimate its peak apparent magnitude. Compare this to the maximum brightness of the planet Venus (<span class="math notranslate nohighlight">\(m\simeq -4\)</span>), which is sometimes visible in the daytime.</p>
 <p>4. If the linear decline of a supernova light curve is powered by the radioactive decay of the ejecta, find the rate of decline (in <span class="math notranslate nohighlight">\({\rm mag/day}\)</span>) produced by the decay of cobalt-56 into iron-56, with a half-life of 77.7 days.</p>
@@ -988,9 +1077,11 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_14/stellar-pulsation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1006,24 +1097,28 @@ The total mass of iron produced from 10^46 J of energy is 1.2e+31 kg or 5.9 M_Su
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

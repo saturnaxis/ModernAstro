@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>8. The Interstellar Medium and Star Formation &#8212; ASTR4410 Modern Astrophysics</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,28 +28,32 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_12/interstellar-medium-and-star-formation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,18 +65,30 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-103786588-2', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-CP3EW7BJEH');
+                </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -84,9 +97,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -99,14 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR4410: Modern Astrophysics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR4410: Modern Astrophysics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -211,103 +226,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_12/interstellar-medium-and-star-formation.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/ModernAstro"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_12/interstellar-medium-and-star-formation.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_12/interstellar-medium-and-star-formation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/ModernAstro"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_12/interstellar-medium-and-star-formation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interstellar-dust-and-gas">
    8.1. Interstellar dust and gas
@@ -533,12 +622,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>The Interstellar Medium and Star Formation</h1>
@@ -780,20 +868,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-interstellar-medium-and-star-formation">
-<h1><span class="section-number">8. </span>The Interstellar Medium and Star Formation<a class="headerlink" href="#the-interstellar-medium-and-star-formation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">8. </span>The Interstellar Medium and Star Formation<a class="headerlink" href="#the-interstellar-medium-and-star-formation" title="Permalink to this headline">#</a></h1>
 <div class="section" id="interstellar-dust-and-gas">
-<h2><span class="section-number">8.1. </span>Interstellar dust and gas<a class="headerlink" href="#interstellar-dust-and-gas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Interstellar dust and gas<a class="headerlink" href="#interstellar-dust-and-gas" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-interstellar-medium">
-<h3><span class="section-number">8.1.1. </span>The Interstellar Medium<a class="headerlink" href="#the-interstellar-medium" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.1. </span>The Interstellar Medium<a class="headerlink" href="#the-interstellar-medium" title="Permalink to this headline">#</a></h3>
 <p>The evolution of stars is a cyclic process, where a star is born out of gas and dust that exists between the stars (i.e., <strong>interstellar medium</strong> or ISM).  During a star’s lifetime, much of that material may return to the ISM through stellar winds or explosive events.  The next generation of stars can then form from the ashes, which are processed by the nuclear fusion within the deep interiors of stars.  Thus it’s important to study the nature of the ISM so that we can better understand stellar evolution.</p>
 <p>The ISM is an enormous and complex environment that provides a laboratory for testing our basic understanding of astrophysics (i.e., its the testbed to develop sensible initial conditions for stellar models).  The ISM interacts with the stellar environment through shocks and galactic magnetic fields that extend into interstellar space.  As a result, modeling the ISM requires detailed modeling of the magnetohydrodynamics (MHD) equations.</p>
 </div>
 <div class="section" id="interstellar-extinction">
-<h3><span class="section-number">8.1.2. </span>Interstellar Extinction<a class="headerlink" href="#interstellar-extinction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.2. </span>Interstellar Extinction<a class="headerlink" href="#interstellar-extinction" title="Permalink to this headline">#</a></h3>
 <p>On a dark night (far from city lights), some of the dust clouds within the Milky Way Galaxy can be found because they obscure regions of sky that would otherwise be populated with stars.  These dark regions are not devoid of stars, but the intervening dust blocks the background starlight.  Dust that blocks starlight is due to the combined effet of scattering and absorption, which is called <strong>interstellar extinction</strong>.  The apparent magnitude is a measure of how bright a star appears and if it is dimmed by intervening dust, the distance modulus equation must be modified appropriately.  In a given wavelength band centered on <span class="math notranslate nohighlight">\(\lambda\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[ m_\lambda = M_\lambda + 5\log_{10}\,d-5 + A_\lambda, \tag{1}\]</div>
@@ -828,7 +917,7 @@ m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
 <p>and the dust grain <em>column density</em> <span class="math notranslate nohighlight">\(N_d\)</span> represents the number of scattering dust particles in a thin cylinder with a cross section of 1 <span class="math notranslate nohighlight">\({\rm m^2}\)</span> stretching from the observer to the star.  The magnitude of extinction depends on the amount of interstellar dust that the light passes through.</p>
 </div>
 <div class="section" id="the-mie-theory">
-<h3><span class="section-number">8.1.3. </span>The Mie Theory<a class="headerlink" href="#the-mie-theory" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.3. </span>The Mie Theory<a class="headerlink" href="#the-mie-theory" title="Permalink to this headline">#</a></h3>
 <p>Assuming that the dust particles are <em>spherical</em> with a radius <span class="math notranslate nohighlight">\(a\)</span>, the geometrical cross-section of the dust particle is <span class="math notranslate nohighlight">\(\sigma_g = \pi a^2\)</span>.  The dimensionless <strong>extinction coefficient</strong> <span class="math notranslate nohighlight">\(Q_\lambda\)</span> is then defined as</p>
 <div class="math notranslate nohighlight">
 \[ Q_\lambda \equiv \frac{\sigma_\lambda}{\sigma_g}, \]</div>
@@ -890,7 +979,7 @@ The average density is 2.2e-07 m^{-3}.
 </div>
 </div>
 <div class="section" id="molecular-contributions-to-interstellar-extinction-curves">
-<h3><span class="section-number">8.1.4. </span>Molecular Contributions to Interstellar Extinction Curves<a class="headerlink" href="#molecular-contributions-to-interstellar-extinction-curves" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.4. </span>Molecular Contributions to Interstellar Extinction Curves<a class="headerlink" href="#molecular-contributions-to-interstellar-extinction-curves" title="Permalink to this headline">#</a></h3>
 <p>Mie theory works well for longer wavelengths (visible-IR), but deviations appear in the UV when we consider the ratio of <span class="math notranslate nohighlight">\(A_\lambda\)</span> between different wavelength regimes, such as <span class="math notranslate nohighlight">\(A_V\)</span> centered in the visual.  The ratio <span class="math notranslate nohighlight">\(A_\lambda/A_V\)</span> is often plotted in terms of the reciprocal wavelength <span class="math notranslate nohighlight">\(\lambda^{-1}\)</span>.  Although <strong>color excesses</strong> are sometimes plotted instead, such as <span class="math notranslate nohighlight">\((A_\lambda -A_V)/(A_B-A_V)\)</span> or <span class="math notranslate nohighlight">\(E(B-V) \equiv (B-V)_{\rm intrinsic} - (B-V)_{\rm observed}\)</span>.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_3.jpg?raw=true?" style="width: 400px;" /></a>
@@ -917,12 +1006,12 @@ the presence of a carbon atom at each corner of the hexagon. (Carroll &amp; Ostl
 <p>Apparently, the dust in the ISM is composed of graphite and silicate grains that can range in size (fractions of nm to several microns).  It also appears that many of the features of the interstellar extinction curve can be reproduced by combining the contributions from all of the components.</p>
 </div>
 <div class="section" id="hydrogen-as-the-dominant-component-of-the-ism">
-<h3><span class="section-number">8.1.5. </span>Hydrogen as the Dominant Component of the ISM<a class="headerlink" href="#hydrogen-as-the-dominant-component-of-the-ism" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.5. </span>Hydrogen as the Dominant Component of the ISM<a class="headerlink" href="#hydrogen-as-the-dominant-component-of-the-ism" title="Permalink to this headline">#</a></h3>
 <p>The dominant component of the ISM is hydrogen gas in its various forms: neutral hydrogen (<span class="math notranslate nohighlight">\({\rm H\,I}\)</span>), ionized hydrogen (<span class="math notranslate nohighlight">\({\rm H\,II}\)</span>), and molecular hydrogen <span class="math notranslate nohighlight">\(({\rm H_2})\)</span>.  The hydrogen mass fraction of the ISM is approximately 70%, while the helium mass fraction makes up most of the remainder.  The metal mass fraction typically accounts for only a few percent, where carbon and silicon are major components.</p>
 <p>In <em>diffuse</em> interstellar hydrogen clouds, neutral hydrogen in the ground state dominates the composition.  As a result, neutral hydrogen (<span class="math notranslate nohighlight">\({\rm H\,I}\)</span>) cannot produce emission lines, where it is also difficult to absorb <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> in absorption because UV photons are required to lift the electrons out of the ground state.  In certain <em>unique</em> circumstances, space-based observatories have detected UV absorption in cold clouds of neutral hydrogen when there are strong UV sources in the background.</p>
 </div>
 <div class="section" id="cm-radiation-of-hydrogen">
-<h3><span class="section-number">8.1.6. </span>21-cm Radiation of Hydrogen<a class="headerlink" href="#cm-radiation-of-hydrogen" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.6. </span>21-cm Radiation of Hydrogen<a class="headerlink" href="#cm-radiation-of-hydrogen" title="Permalink to this headline">#</a></h3>
 <p>Neutral hydrogen can be detected in the diffuse ISM by using the unique radio wavelength, the <strong>21-cm line</strong>.  This particular absorption in the spectrum is produced by the spin reversal of the electron relative to the proton’s spin.  Both electrons and protons possess an inherent spin angular momentum with the <span class="math notranslate nohighlight">\(z\)</span>-component of the spin angular momentum have two possible orientations (<span class="math notranslate nohighlight">\(m_s = \pm 1/2)\)</span>.  Each particle is charged and thus the intrinsic spins endow them with dipole magnetic fields (i.e., bar magnets).</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_5.jpg?raw=true?" style="width: 400px;" /></a>
@@ -954,13 +1043,13 @@ to being anti-aligned, a 21-cm-wavelength photon is emitted. (Carroll &amp; Ostl
 <p>Consequently, <strong>molecular clouds</strong> are surrounded by shells of <span class="math notranslate nohighlight">\({\rm H\,I}\)</span>.</p>
 </div>
 <div class="section" id="molecular-traces-of-hydrogen">
-<h3><span class="section-number">8.1.7. </span>Molecular Traces of Hydrogen<a class="headerlink" href="#molecular-traces-of-hydrogen" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.7. </span>Molecular Traces of Hydrogen<a class="headerlink" href="#molecular-traces-of-hydrogen" title="Permalink to this headline">#</a></h3>
 <p>The structure of <span class="math notranslate nohighlight">\({\rm H_2}\)</span> differs from atomic hydrogen (H I), where the <span class="math notranslate nohighlight">\({\rm H_2}\)</span> molecule does not emit 21 cm radiation.  This explains why the column density <span class="math notranslate nohighlight">\(N_H\)</span> and extinction magnitude <span class="math notranslate nohighlight">\(A_V\)</span> are poorly correlated in molecular clouds with high extinction.  The number density of atomic hydrogen decreases significantly as the hydrogen becomes locked up in its molecular form.</p>
 <p>Molecular hydrogen is very difficult to observe directly because it lacks any emission or absorption lines in the visible or radio at the cool temperatures typical of the ISM.  In special circumstances (<span class="math notranslate nohighlight">\(T&gt;2000\,{\rm K}\)</span>), it is possible to detect the rotational and vibrational bands associated with the molecular bond.  In most instances it becomes necessary to use other molecules as <em>tracers</em> of <span class="math notranslate nohighlight">\({\rm H_2}\)</span> by assuming that their abundances are proportional to the abundance of <span class="math notranslate nohighlight">\({\rm H_2}\)</span>.  The most commonly investigated tracer is carbon monoxide (CO), where other molecules have also been used (e.g., CH, OH, CS, <span class="math notranslate nohighlight">\({\rm C_3H_2}\)</span>, <span class="math notranslate nohighlight">\({\rm HCO^+}\)</span>, and <span class="math notranslate nohighlight">\({\rm N_2H^+}\)</span>).  It is also possible to use <strong>isotopomers</strong> (i.e., molecules that with less common isotopes), such as carbon monoxide with carbon-13 <span class="math notranslate nohighlight">\(({\rm ^{13}CO})\)</span> or oxygen-18 <span class="math notranslate nohighlight">\(({\rm C^{18}O})\)</span>.  Different isotopes in molecules result in different wavelengths due to their moments of inertia.</p>
 <p>During collisions the tracer molecules become excited (or de-excited), where the spontaneous transitions from excited state result in photon emission within more easily observed wavelength regions that those associated with <span class="math notranslate nohighlight">\({\rm H_2}\)</span> (e.g., the 2.6 mm transition in CO).  Collision rates depend on both the gas temperature (or thermal kinetic energy) and the number densities of the species, molecular tracers can prove information about the environment within a molecular cloud.</p>
 </div>
 <div class="section" id="the-classification-of-interstellar-clouds">
-<h3><span class="section-number">8.1.8. </span>The Classification of Interstellar Clouds<a class="headerlink" href="#the-classification-of-interstellar-clouds" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.8. </span>The Classification of Interstellar Clouds<a class="headerlink" href="#the-classification-of-interstellar-clouds" title="Permalink to this headline">#</a></h3>
 <p>Discrete classification schemes are destined to fail because the delineation between types is blurry.  However, a broad classification scheme is still useful.</p>
 <ul class="simple">
 <li><p><strong>Diffuse (or translucent) molecular clouds</strong> have primarily atomic hydrogen gas and the interstellar extinction is roughly <span class="math notranslate nohighlight">\(1 &lt; A_V &lt; 5\)</span>, where molecular hydrogen may be found in regions of higher column density.  Conditions in these clouds are similar to diffuse <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> clouds, but with somewhat higher masses; temperatures range from <span class="math notranslate nohighlight">\(15-50\,{\rm K}\)</span>, number densities range from <span class="math notranslate nohighlight">\(5-50 \times 10^8\,{\rm m^{-3}}\)</span>, and the cloud masses are from around <span class="math notranslate nohighlight">\(3-100\,M_\odot\)</span>.  The clouds extend several parsecs across, where both <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> and diffuse molecular clouds tend to be irregularly shaped.</p></li>
@@ -991,7 +1080,7 @@ to being anti-aligned, a 21-cm-wavelength photon is emitted. (Carroll &amp; Ostl
 bands] and in infrared light [(b) composite of BIK bands]. (Image Credit: ESO)</p>
 </div></div>
 <div class="section" id="interstellar-chemistry">
-<h3><span class="section-number">8.1.9. </span>Interstellar Chemistry<a class="headerlink" href="#interstellar-chemistry" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.9. </span>Interstellar Chemistry<a class="headerlink" href="#interstellar-chemistry" title="Permalink to this headline">#</a></h3>
 <p>The ISM is rich in many molecules, where radio observations (as of June 2005) have positive identifications of 125 molecules (not including isotopmers), ranging in complexity from diatomic molecules, triatomic molecules, and fairly long organic strings, e.g., <span class="math notranslate nohighlight">\({\rm HC_{11}N}\)</span>.  Given the complex nature of the molecules present in the ISM, the chemistry of the ISM is also quite complex.</p>
 <p>The specific processes in operation depend on the <em>density</em>, <em>temperature</em>, and <em>composition</em> of the gas, as well as the <em>presence</em> and <em>composition</em> of dust grains.  Dust grains can help facilitate the formation of numerous molecules including <span class="math notranslate nohighlight">\({\rm CH}\)</span>, <span class="math notranslate nohighlight">\({\rm NH}\)</span>, <span class="math notranslate nohighlight">\({\rm OH}\)</span>, <span class="math notranslate nohighlight">\({\rm CH_2}\)</span>, <span class="math notranslate nohighlight">\({\rm CO}\)</span>, <span class="math notranslate nohighlight">\({\rm CO_2}\)</span>, and <span class="math notranslate nohighlight">\({\rm H_2O}\)</span>.  In sufficiently dense clouds, the formation of molecules on the surfaces of grains can actually lead to the development of icy mantles on the grains.  Absorption signatures of solid <span class="math notranslate nohighlight">\({\rm CO}\)</span>, <span class="math notranslate nohighlight">\({\rm CO_2}\)</span>, <span class="math notranslate nohighlight">\({\rm H_2O}\)</span>, <span class="math notranslate nohighlight">\({\rm CH_4}\)</span>, <span class="math notranslate nohighlight">\({\rm CH_3OH}\)</span>, <span class="math notranslate nohighlight">\({\rm NH_3}\)</span>, and other ices have been measured with the IR spectra of silicate dust grains.</p>
 <p>It is also possible for molecules to form in the gas phase.  For example, hydroxyl <span class="math notranslate nohighlight">\({\rm OH}\)</span> can form through a series of reactions involving atomic and molecular ions, including ionic water <span class="math notranslate nohighlight">\({\rm H_2O^+}\)</span>:</p>
@@ -1010,7 +1099,7 @@ bands] and in infrared light [(b) composite of BIK bands]. (Image Credit: ESO)</
 \[\begin{split} {\rm H_3O^+} + e^- \rightarrow \begin{cases} {\rm OH} + {\rm H_2} \\ {\rm H_2O} + {\rm H}. \end{cases} \end{split}\]</div>
 </div>
 <div class="section" id="the-heating-and-cooling-of-the-ism">
-<h3><span class="section-number">8.1.10. </span>The Heating and Cooling of the ISM<a class="headerlink" href="#the-heating-and-cooling-of-the-ism" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.10. </span>The Heating and Cooling of the ISM<a class="headerlink" href="#the-heating-and-cooling-of-the-ism" title="Permalink to this headline">#</a></h3>
 <p>Molecules and dust grains play important roles in the <em>heating</em> and <em>cooling</em> of the ISM.  Diffuse molecular clouds have higher gas temperatures than GMCs and the dense cores of GMCs are even cooler yet.  The hot cores of GMCs have significantly greater temperatures.  <em>What are the physical causes of these observational trends?</em></p>
 <p>Much of the heating of the ISM comes from <strong>cosmic rays</strong>, or charged particles that travel through space with astonishing amounts of energy.  A single proton can have a kinetic energy ranging from <span class="math notranslate nohighlight">\(10^1-10^{14}\,{\rm MeV}\)</span>.  The highest energy cosmic rays are extremely rare, but energies from <span class="math notranslate nohighlight">\(10^3-10^8\,{\rm MeV}\)</span> are common.  The sources of cosmic rays include stellar flares and supernova explosions.</p>
 <p>Heating by cosmic rays comes (primarily) through the ionization of hydrogen atoms and molecules as a result of collisions with cosmic ray protons:</p>
@@ -1031,7 +1120,7 @@ p^+ + {\rm H_2} &amp;\rightarrow {\rm H_2^+} + e^- + p^+. \\
 <p>Collisions involving dust grains can also cool molecular clouds. This process is similar to ionic, atomic, and molecular collisions, where the lattice of the dust grain gains the excess thermal energy after the collision.  The grain then emits an IR photon that is able to escape from the cloud.</p>
 </div>
 <div class="section" id="the-sources-of-dust-grains">
-<h3><span class="section-number">8.1.11. </span>The Sources of Dust Grains<a class="headerlink" href="#the-sources-of-dust-grains" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.11. </span>The Sources of Dust Grains<a class="headerlink" href="#the-sources-of-dust-grains" title="Permalink to this headline">#</a></h3>
 <p>Although dust grains make up about 1% of the molecular cloud by mass, they are important constituents that help determine its chemistry and physics.  Observations indicate that dust grains can form:</p>
 <ul class="simple">
 <li><p>in the envelopes of very cool stars aided by the enhanced density in those environments relative to molecular clouds.  On the other hand, grains can also be easily destroyed by UV and X-ray photons.</p></li>
@@ -1040,7 +1129,7 @@ p^+ + {\rm H_2} &amp;\rightarrow {\rm H_2^+} + e^- + p^+. \\
 <p>None of these sources appear able to provide the abundance of massive grains found in molecular clouds.  It appears that grains probably grow by a process of coagulation within the molecular clouds themselves.</p>
 </div>
 <div class="section" id="problems">
-<h3><span class="section-number">8.1.12. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.12. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>1. In a certain part of the North American Nebula, the amount of interstellar extinction in the visual wavelength band is 1.1 magnitudes,  the thickness of the nebula is estimated to be 20 pc, and it is located 700 pc away from Earth.  Suppose that a B spectral class main-sequence star is observed in the direction of the nebula and that the absolute visual magnitude of the star is known to be <span class="math notranslate nohighlight">\(M_V = -1.1\)</span>.  Neglect any other sources of extinction between the observer and the nebula.</p>
 <blockquote>
@@ -1054,9 +1143,9 @@ p^+ + {\rm H_2} &amp;\rightarrow {\rm H_2^+} + e^- + p^+. \\
 </div>
 </div>
 <div class="section" id="the-formation-of-protostars">
-<h2><span class="section-number">8.2. </span>The Formation of Protostars<a class="headerlink" href="#the-formation-of-protostars" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>The Formation of Protostars<a class="headerlink" href="#the-formation-of-protostars" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-jeans-criterion">
-<h3><span class="section-number">8.2.1. </span>The Jeans Criterion<a class="headerlink" href="#the-jeans-criterion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.2.1. </span>The Jeans Criterion<a class="headerlink" href="#the-jeans-criterion" title="Permalink to this headline">#</a></h3>
 <p>Important questions remain concerning how stars change (or evolve) during their lifetimes, where one area considers the formation of pre-nuclear burning objects known as <strong>protostars</strong> from interstellar molecular clouds.  If globules and cores in molecular clouds are the sites of star formation, <em>what conditions must exist for collapse to occur?</em></p>
 <p>An analysis of this problem can be made considering the effects of small deviations from hydrostatic equilibrium and several simplifying assumptions (e.g., neglecting the effects due to rotation, turbulence and galactic magnetic fields), which provides important insights into the development of protostars.</p>
 <div class="admonition note">
@@ -1150,7 +1239,7 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div>
 </div>
 <div class="section" id="homologous-collapse">
-<h3><span class="section-number">8.2.2. </span>Homologous Collapse<a class="headerlink" href="#homologous-collapse" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.2.2. </span>Homologous Collapse<a class="headerlink" href="#homologous-collapse" title="Permalink to this headline">#</a></h3>
 <p>Following Jean’s derivation, the criterion for gravitational collapse of a molecular cloud can be satisfied in the absence of rotation, turbulence, or magnetic fields.  If we make another simplifying assumption that <em>any existing pressure gradients are small</em>, then the cloud is essentially in free-fall.  Throughout the free-fall phase, the temperature of the gas remains nearly constant (or <em>isothermal</em>).  This is true as long as the collapse remains optically thin and the gravitational potential energy released during collapse can be efficiently radiated away (i.e., the gas can remain cold).  In this case the spherically symmetric hydrodynamic equation can be used to describe the contraction.  From Eqn. 5 of <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-derivation-of-the-hydrostatic-equilibrium-equation">Sect. 7.1.2</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d^2r}{dt^2} = -\frac{GM_r}{r^2}. \tag{14} \]</div>
@@ -1281,7 +1370,7 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div>
 </div>
 <div class="section" id="the-fragmentation-of-collapsing-clouds">
-<h3><span class="section-number">8.2.3. </span>The Fragmentation of Collapsing Clouds<a class="headerlink" href="#the-fragmentation-of-collapsing-clouds" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.2.3. </span>The Fragmentation of Collapsing Clouds<a class="headerlink" href="#the-fragmentation-of-collapsing-clouds" title="Permalink to this headline">#</a></h3>
 <p>The masses of large molecular clouds could exceed the Jeans limit, which seems to imply that stars can form with very large masses (possibly up to the initial mass of the cloud).  However, observations show that this does not happen.  It appears that stars frequently tend to form in groups, ranging from binary star systems to clusters that contain hundreds of thousands of members.  Some clouds break into segments through a process called <strong>fragmentation</strong>.</p>
 <p>An important consequence of the collapse is that the density of the cloud increases by many orders of magnitude during free-fall.  Since the temperature <span class="math notranslate nohighlight">\(T\)</span> remains nearly constant throughout the collapse, it appears that the Jeans mass must decrease.  After the collapse begins, any initial inhomogeneities in density will cause individual sections of the cloud to satisfy the Jeans mass limit independently and begin to collapse locally.  This cascading collapse could lead to the formation of smaller objects.  However, it is likely that only about 1% of the cloud actually forms stars.</p>
 <p><em>What stops the fragmentation process?</em> The answer to this question lies in our implicit assumption that the collapse is isothermal, which in turn implies that the only that changes in the Jeans mass is the density.  Clearly this cannot be the case since stars have temperatures much larger than <span class="math notranslate nohighlight">\(10-100\,{\rm K}\)</span>. The other extreme is an <em>adiabatic</em> collapse, where the temperature must rise.  The real situation lies somewhere between these two limits.</p>
@@ -1310,7 +1399,7 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <p>which depends on the temperature <span class="math notranslate nohighlight">\(T\)</span> (in K), mean molecular weight <span class="math notranslate nohighlight">\(\mu\)</span>, and the efficiency factor <span class="math notranslate nohighlight">\(e\)</span>.  If we take <span class="math notranslate nohighlight">\(\mu \sim 1\)</span>, <span class="math notranslate nohighlight">\(e\sim 0.1\)</span>, and <span class="math notranslate nohighlight">\(T \sim 1000\,{\rm K}\)</span> to be representative when adiabatic effects become significant, then <span class="math notranslate nohighlight">\(M_J \sim 0.5 M_\odot\)</span>.  Fragmentation ceases when the segments of the original cloud begin to reach the range of solar mass objects.  The estimate is relatively insensitive to other reasonable choices, where if <span class="math notranslate nohighlight">\(e\sim 1\)</span>, then <span class="math notranslate nohighlight">\(M_J \sim 0.2 M_\odot\)</span>.</p>
 </div>
 <div class="section" id="additional-physical-processes-in-protostellar-star-formation">
-<h3><span class="section-number">8.2.4. </span>Additional Physical Processes in Protostellar Star Formation<a class="headerlink" href="#additional-physical-processes-in-protostellar-star-formation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.2.4. </span>Additional Physical Processes in Protostellar Star Formation<a class="headerlink" href="#additional-physical-processes-in-protostellar-star-formation" title="Permalink to this headline">#</a></h3>
 <p>We have freely used the Jeans criterion during each point in the collapse of the cloud to discuss the process of fragmentation.  This cannot be correct because our estimate of the Jeans criterions was based on a perturbation to a static cloud (i.e., the initial velocity of the cloud’s outer layers was ignored).  The details of radiation transport was also neglected, as well as the vaporization of the dust grains, dissociation of molecules and ionization of the atoms.  It is worth noting that the previous analysis produced a result that is reasonable.  More sophisticated estimates of the process of fragmentation place the limit at about 0.01 <span class="math notranslate nohighlight">\(M_\odot\)</span>, or <span class="math notranslate nohighlight">\(\sim 10 M_{Jup}\)</span>.</p>
 <p>Other important processes in the collapse process are the effects of rotation (angular momentum), the deviation from spherical symmetry, turbulent motions of the gas, and the presence of magnetic fields.  The angular momentum present in the original cloud can result in a disk that leads to the formation of planets.</p>
 <p>Careful investigations show that magnetic fields play a crucial role and are likely to control the onset of collapse.  From the discussion of the free-fall timescale, the collapse of a dense core should occur after <span class="math notranslate nohighlight">\(10^5\)</span> yr and would imply that as soon as a dense core forms, then it begins producing stars.  As a result, the occurrence of dense cores should be quite rare (i.e., we should be privileged to view an event that is so fleeting); however, many dense cores are observable throughout our Galaxy.</p>
@@ -1337,7 +1426,7 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div></blockquote>
 </div>
 <div class="section" id="ambipolar-diffusion">
-<h3><span class="section-number">8.2.5. </span>Ambipolar Diffusion<a class="headerlink" href="#ambipolar-diffusion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.2.5. </span>Ambipolar Diffusion<a class="headerlink" href="#ambipolar-diffusion" title="Permalink to this headline">#</a></h3>
 <p>Another possibility for triggering the collapse of a dense core is through change of state.  If a core that was originally subcritical became supercritical , then collapse could ensue.  This could have in a couple of ways:</p>
 <ol class="simple">
 <li><p>A group of subcritical clouds could combine to form a supercritical cloud, or</p></li>
@@ -1359,7 +1448,7 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 </div></blockquote>
 </div>
 <div class="section" id="numerical-simulations-of-protostellar-evolution">
-<h3><span class="section-number">8.2.6. </span>Numerical Simulations of Protostellar Evolution<a class="headerlink" href="#numerical-simulations-of-protostellar-evolution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.2.6. </span>Numerical Simulations of Protostellar Evolution<a class="headerlink" href="#numerical-simulations-of-protostellar-evolution" title="Permalink to this headline">#</a></h3>
 <p>To investigate the nature of gravitational collapse in detail, we must solve the magnetohydrodynamics (MHD) equations numerically.  Although computing power has greatly increased, numerical models also make some simplifying assumptions to lessen the computational load and complexity of the output.  However, important aspects of the collapse still arise from the numerical solutions.</p>
 <p><strong>Consider a spherical cloud of approximately <span class="math notranslate nohighlight">\(1\,M_\odot\)</span> and solar compositions that is supercritical.</strong>  Initially, the early stages of free-fall collapse are nearly isothermal because the absorption by the dust is relatively inefficient (i.e., photons have a significant mean free path).  An initial slight increase in density toward the center of the cloud produces a free-fall time that is shorter near the center and an inside-out collapse can begin.  When the density near the center reaches approximately <span class="math notranslate nohighlight">\(10^{-10}\,{\rm kg/m^3}\)</span> (or <span class="math notranslate nohighlight">\(n \sim \times 10^{16}\,{\rm m^{-3}}\)</span>), the region becomes optically thick and the collapse becomes more adiabatic (i.e., heat becomes trapped).  The opacity at this point is primarily due to the dust.  After the cloud becomes more adiabatic, the gas pressure increases and slows the rate of collapse near the core.  The central region (radius of ~<span class="math notranslate nohighlight">\(5\,{AU}\)</span>) is nearly in hydrostatic equilibrium and this central object is then referred to as a <strong>protostar</strong>.</p>
 <p>An observable consequence of the cloud becoming optically thick is that the gravitational potential energy released during the collapse is converted into heat and then radiated away in the IR.  By computing the luminosity (i.e., energy release rate) and the cloud radius (for an optical depth <span class="math notranslate nohighlight">\(\tau = 2/3\)</span>), then the effective temperature can be determined via the Stefan-Boltzmann law, <span class="math notranslate nohighlight">\(L = 4\pi R^2 \sigma T^4\)</span>, and treating the dust as the photosphere.  After which, it becomes possible to plot the location of the simulated cloud on the H-R diagram as a function of time.  The curves on the H-R diagram depict the life histories of the simulated clouds are known as <strong>evolutionary tracks</strong>.  As the collapse continues to accelerate, the luminosity of the protostar increases along with its effective temperature.</p>
@@ -1374,7 +1463,7 @@ collapse began. (Carroll &amp; Ostlie (2007))</p>
 <p>After the core collapse, a second shock front is established that continues to heat the infalling material.  The main accretion phase when the temperature can increase by several orders of magnitude, while the luminosity remains roughly flat.  In this period, the deep interior of the protostar increases enough to start deuterium burning and produces up to 60% of the luminosity of a <span class="math notranslate nohighlight">\(1\,M_\odot\)</span> protostar.  The deuterium burning reaction has a fairly large cross section <span class="math notranslate nohighlight">\(\sigma(E)\)</span> at low temperatures and is favored over the PP I chain.  Eventually the luminosity must decrease due to a limited amount of initial resources from the original cloud.  After the deuterium is exhausted, the evolutionary track bends downward and the effective temperature decreases slightly.  The evolution has reached a quasi-static pre-main-sequence phase.</p>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">8.2.7. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.2.7. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>4. Show that the Jeans mass can also be written in the form</p>
 <div class="math notranslate nohighlight">
@@ -1385,14 +1474,14 @@ collapse began. (Carroll &amp; Ostlie (2007))</p>
 </div>
 </div>
 <div class="section" id="pre-main-sequence-evolution">
-<h2><span class="section-number">8.3. </span>Pre-Main-Sequence Evolution<a class="headerlink" href="#pre-main-sequence-evolution" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Pre-Main-Sequence Evolution<a class="headerlink" href="#pre-main-sequence-evolution" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-hayashi-track">
-<h3><span class="section-number">8.3.1. </span>The Hayashi Track<a class="headerlink" href="#the-hayashi-track" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.1. </span>The Hayashi Track<a class="headerlink" href="#the-hayashi-track" title="Permalink to this headline">#</a></h3>
 <p>With the steadily increasing temperature fo the protostar, the opacity of the outer layers becomes dominated with <span class="math notranslate nohighlight">\({\rm H^-}\)</span> ions.  The large opacity contributes to starting convection within the contracting protostar.  In some cases, the convection zone extends all the way to the center of the star.  Chushiro Hayashi demonstrated that a deep convective envelope limits the quasi-static evolutionary path of the protostar to a nearly vertical line in the H-R diagram.  As the protostar collapse slows, its luminosity decreases while its effective temperature increases slightly and is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Hayashi_track">Hayashi track</a> (i.e. a downward turn at the end of the evolutionary tracks).</p>
 <p>The Hayashi track represents a boundary between “allowed” and “forbidden” hydrostatic stellar models.  To the right of the Hayashi track, there is no mechanism to efficiently transport the luminosity out of the star at those low effective temperatures; hence no stable stars exist there.  To the left of the Hayashi track, convection and/or radiation is responsible for the energy transport.</p>
 </div>
 <div class="section" id="classical-calculations-of-pre-main-sequence-evolution">
-<h3><span class="section-number">8.3.2. </span>Classical Calculations of Pre-Main-Sequence Evolution<a class="headerlink" href="#classical-calculations-of-pre-main-sequence-evolution" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.2. </span>Classical Calculations of Pre-Main-Sequence Evolution<a class="headerlink" href="#classical-calculations-of-pre-main-sequence-evolution" title="Permalink to this headline">#</a></h3>
 <p>Early models of the final states of collapse neglected the effects of rotation, magnetic fields, and mass loss. Our understanding of the physical processes involved in stellar structure and evolution has improved, which now include nuclear reaction rates, new opacities, mass loss &amp; accretion, and the effects of rotation.</p>
 <p><strong>Consider the pre-main-sequence evolution of a 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> star, beginning on the Hayashi track.</strong> With the high <span class="math notranslate nohighlight">\({\rm H^-}\)</span> opacity near the surface, the star is completely convective for the first 1 Myr, where deuterium burning also occurs during this early period of the collapse.  Since deuterium is not very abundant, the nuclear reactions have little effect on the overall collapse, where they simply slow the collapse rate slightly.</p>
 <p>As the central temperature continues to rise, the levels of ionization increase but the opacity decreases.  As the radiative core develops, more and more of the star’s mass is encompassed by the core.  Following the descent along the Hayashi track, the luminosity reaches a minimum and the radiative core allows energy to escape into the convective envelope more readily.  This causes the luminosity to increase again and the effective temperature increases since the star is still shrinking.</p>
@@ -1417,32 +1506,32 @@ in Table 1. (Carroll &amp; Ostlie (2007))</p>
 <p>If the protostar mass is <span class="math notranslate nohighlight">\(\lesssim 0.072\,M_\odot\)</span>, the core never gets hot enough to generate sufficient energy by nuclear reactions to stabilize the star against gravitational collapse.  The stable hydrogen-burning main sequence is never obtained, which explains the lower end of the main sequence.  For low mass stars, the temperatures remain cool and opacity stays high such that a radiative core never develops and thus remain fully convective all the way to the main sequence.</p>
 </div>
 <div class="section" id="the-formation-of-brown-dwarfs">
-<h3><span class="section-number">8.3.3. </span>The Formation of Brown Dwarfs<a class="headerlink" href="#the-formation-of-brown-dwarfs" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.3. </span>The Formation of Brown Dwarfs<a class="headerlink" href="#the-formation-of-brown-dwarfs" title="Permalink to this headline">#</a></h3>
 <p>Below about <span class="math notranslate nohighlight">\(0.072\,M_\odot\)</span>, some nuclear burning will still occur but not at the rate necessary to form a main-sequence star.  Above ~0.06 <span class="math notranslate nohighlight">\(M_\odot\)</span>, the core temperature of the star is great enough to burn lithium and above about 0.013 <span class="math notranslate nohighlight">\(M_\odot\)</span> (roughly <span class="math notranslate nohighlight">\(13\,M_{Jup}\)</span>) deuterium burning occurs.  The objects between <span class="math notranslate nohighlight">\(0.013-0.072\,M_\odot\)</span> are known as <strong>brown dwarfs</strong> and have spectral types L and T.  The first confirmed discovery of a brown dwarf (Gliese 229B) was announced in 1995.  Hundreds of brown dwarfs have been detected in near-IR all-sky surveys, such as <a class="reference external" href="https://en.wikipedia.org/wiki/2MASS">2MASS</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Sloan_Digital_Sky_Survey">SDSS</a>.</p>
 </div>
 <div class="section" id="massive-star-formation">
-<h3><span class="section-number">8.3.4. </span>Massive Star Formation<a class="headerlink" href="#massive-star-formation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.4. </span>Massive Star Formation<a class="headerlink" href="#massive-star-formation" title="Permalink to this headline">#</a></h3>
 <p>For massive stars, the central temperature quickly becomes high enough to burn carbon-12 and convert hydrogen into helium-3.  This means that these stars leave the Hayashi track at higher luminosities and evolve nearly horizontally across the H-R diagram.  The full CNO cycle becomes the dominant mechanism for hydrogen burning in these main-sequence stars.  The core remains convective even after the main sequence is reached.</p>
 </div>
 <div class="section" id="possible-modifications-to-the-classical-models">
-<h3><span class="section-number">8.3.5. </span>Possible Modifications to the Classical Models<a class="headerlink" href="#possible-modifications-to-the-classical-models" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.5. </span>Possible Modifications to the Classical Models<a class="headerlink" href="#possible-modifications-to-the-classical-models" title="Permalink to this headline">#</a></h3>
 <p>The general pre-main-sequence evolutionary track calculations contain numerous approximations and it is likely that rotation plays an important role, among other factors.  These classical models also assume initial structures that are very large.  Given that dense cores have dimensions of ~<span class="math notranslate nohighlight">\(0.1\,{\rm pc}\)</span>, the initial radii of clouds undergoing protostellar collapse must be much smaller than traditionally assumed.  Also, the assumption of pressure-free protostellar collapse may also be incorrect, where more realistic calculations probably require an initial contraction that is quasi-static.</p>
 <p>To complicate matters, the more massive stars also interact with infalling material, where a feedback loop may develop that limits the mass accretion via a classical process.  Theoretical evolutionary sequences beginning with smaller initial radii lead to a <strong>birth line</strong> where protostars become visible, which places an upper limit on the observed luminosities of protostars.</p>
 <p>Stars with masses greater than 10 <span class="math notranslate nohighlight">\(M_\odot\)</span>, may form by a different process, which could be due to limiting feedback mechanisms, such as the high luminosity of ionizing radiation associated with high effective temperatures.  Instead of the collapse of single protostellar clouds, the more massive stars may form through mergers of smaller stars in dense protostellar environments (a similar mechanism is proposed for the growth of supermassive black holes, SMBHs).  The ionizing radiation problem could be moderated by an <strong>accretion disk</strong> that feeds the growing massive star through its infalling gas and dust.</p>
 </div>
 <div class="section" id="the-zero-age-main-sequence-zams">
-<h3><span class="section-number">8.3.6. </span>The Zero-Age Main Sequence (ZAMS)<a class="headerlink" href="#the-zero-age-main-sequence-zams" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.6. </span>The Zero-Age Main Sequence (ZAMS)<a class="headerlink" href="#the-zero-age-main-sequence-zams" title="Permalink to this headline">#</a></h3>
 <p>The <strong>zero-age main sequence</strong> (ZAMS) is known as a diagonal line in the H-R diagram that indicates when stars of various masses reach the main sequence and begin equilibrium hydrogen burning.  The amount of time required for stars to collapse onto the ZAMS is inversely related to mas, where a star a little less massive than the Sun <span class="math notranslate nohighlight">\((0.8\,M_\odot)\)</span> takes over 68 Myr to reach the ZAMS and a much more massive star <span class="math notranslate nohighlight">\((60\,M_\odot)\)</span> takes only 28,000 years.  This inverse relationship may also signal a problem with classical pre-main-sequence evolutionary models.  If the most massive stars form first in clusters, then the intense radiation that they produce would likely disperse the clouds before their low-mass siblings would ever have a chance to develop.</p>
 </div>
 <div class="section" id="the-initial-mass-function-imf">
-<h3><span class="section-number">8.3.7. </span>The Initial Mass Function (IMF)<a class="headerlink" href="#the-initial-mass-function-imf" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.7. </span>The Initial Mass Function (IMF)<a class="headerlink" href="#the-initial-mass-function-imf" title="Permalink to this headline">#</a></h3>
 <p>From observational studies, it appears that more low-mass stars (than high-mass stars) from when an interstellar cloud fragments.  The number of stars that form <em>per mass interval per unit volume</em> is strongly mass-dependent, where this functional dependence is known as the <strong>initial mass function</strong> (IMF).  A particular IMF depends on a variety of factors, including the local environment in which a cluster of stars forms.  One observational bias arises from the very different evolution rates for star in different mass ranges (i.e., the more massive stars have shorter lifetimes) and thus, it is not surprising that massive stars are extremely rare compared to low-mass stars.  Observations also suggest that the curve below <span class="math notranslate nohighlight">\(0.1\,M_\odot\)</span> (or <span class="math notranslate nohighlight">\(\log_{10}\,m = -1\)</span>) may be fairly flat indicating a large number of low-mass stars and brown dwarfs.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_12.jpg?raw=true?" style="width: 600px;" /></a>
 <p><strong>Figure 10</strong>: The initial mass function, <span class="math notranslate nohighlight">\(\xi\)</span>, shows the number of stars per unit area of the Milky Way’s disk per unit interval of logarithmic mass that is produced in different mass intervals. The individual points represent observational data and the solid line is a theoretical estimate. Masses are in solar units. (Carroll &amp; Ostlie (2007))</p>
 </div></div>
 <div class="section" id="rm-h-ii-regions">
-<h3><span class="section-number">8.3.8. </span><span class="math notranslate nohighlight">\({\rm H\,II}\)</span> Regions<a class="headerlink" href="#rm-h-ii-regions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.8. </span><span class="math notranslate nohighlight">\({\rm H\,II}\)</span> Regions<a class="headerlink" href="#rm-h-ii-regions" title="Permalink to this headline">#</a></h3>
 <p>Hot, massive stars (O and B spectral types) are shrouded in a cloak of gas and dust when they reach the ZAMS.  The bulk of their radiation is emitted in the UV, which can ionize the ground-state hydrogen gas <span class="math notranslate nohighlight">\(({\rm H\,I})\)</span> in the ISM to produce <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions.  The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions are in equilibrium if they have equal rates of ionization and recombination.  During recombination, the electron cascades downward and produces a number of lower-energy photons (many will be in the visible).  The dominant visible wavelength comes from the <span class="math notranslate nohighlight">\(n=3\)</span> to <span class="math notranslate nohighlight">\(n=2\)</span> transition, or the <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> line of the Balmer series.  Therefore, <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions appear to fluoresce in red light.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_13.jpg?raw=true?" style="width: 400px;" /></a>
@@ -1516,7 +1605,7 @@ The Stromgren radius due to an O6 star is 3.48 pc.
 </div>
 </div>
 <div class="section" id="the-effects-of-massive-stars-on-gas-clouds">
-<h3><span class="section-number">8.3.9. </span>The Effects of Massive Stars on Gas Clouds<a class="headerlink" href="#the-effects-of-massive-stars-on-gas-clouds" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.9. </span>The Effects of Massive Stars on Gas Clouds<a class="headerlink" href="#the-effects-of-massive-stars-on-gas-clouds" title="Permalink to this headline">#</a></h3>
 <p>Through the formation of massive protostars, the temperature will begin to rise in the molecular cloud, where the dust will vaporize and molecules will dissociated before the star reaches the main sequence.  After reaching the main sequence, the surrounding gas will ionize, resulting tin the creation of a <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region inside of a <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> region.  Due to the star’s high luminosity, radiation pressure will begin to drive significant mass loss that can disperse the remainder of the cloud.  If several O and B stars form at the same time, then star formation can be halted around other protostars as they are starved for resources.  If the cloud was only marginally bound, the mass loss will result in the newly formed stars drifting apart from the initial cluster.  Some famous examples of this occurring are in the Carina Nebula (about 3000 pc from Earth) and in the <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/m16L.html">Eagle Nebula (M16)</a>.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_14.jpg?raw=true?" style="width: 400px;" /></a>
@@ -1525,7 +1614,7 @@ The same region observed in IR (bottom). Much less detail is observable because 
 due to dust in the cloud. (Carroll &amp; Ostlie (2007); HST/ESA)</p>
 </div>
 <div class="section" id="ob-associations">
-<h4><span class="section-number">8.3.9.1. </span>OB Associations<a class="headerlink" href="#ob-associations" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.9.1. </span>OB Associations<a class="headerlink" href="#ob-associations" title="Permalink to this headline">#</a></h4>
 <p>Groups of stars that are dominated by O and B main-sequence stars are called <strong>OB associations</strong>, where studies show that they cannot remain gravitationally bound to on another due to their individual kinematic velocities and masses.  An example is in the Trapezium cluster in the Orion A complex, which is believed to be less than 10 million years old.  It is currently densely populated with stars <span class="math notranslate nohighlight">\((&gt;2000\,{\rm pc^{-3}})\)</span> that are in the range of <span class="math notranslate nohighlight">\(0.5-2.0\,M_\odot\)</span>.  Radial velocity measurements (in <span class="math notranslate nohighlight">\(^{13}CO\)</span>) show that the gas in the vicinity is very turbulent, where the nearby O and B stars are dispersing the gas and causing the cluster to become unbound.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_15.jpg?raw=true?" style="width: 400px;" /></a>
@@ -1536,20 +1625,20 @@ and P. Scowen (Arizona State University).]</p>
 </div>
 </div>
 <div class="section" id="t-tauri-stars">
-<h4><span class="section-number">8.3.9.2. </span>T Tauri Stars<a class="headerlink" href="#t-tauri-stars" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.9.2. </span>T Tauri Stars<a class="headerlink" href="#t-tauri-stars" title="Permalink to this headline">#</a></h4>
 <p>There is a low-mass pre-main-sequence object that represents a transition from protostars still shrouded in dust and main-sequence stars, which is called a <strong>T Tauri</strong> star.  These objects are named after the first star of their class located in the constellation Taurus.  T Tauri stars are characterized by unusual spectral features and by large irregular luminosity variations (with timescales on the order of days).  The masses of T Tauri stars range from <span class="math notranslate nohighlight">\(0.2-2.0\,M_\odot\)</span>.  Many T Tauri stars also exhibit strong emission from hydrogen (i.e., the Balmer series) <span class="math notranslate nohighlight">\({\rm Ca\,II}\)</span> (H and K), iron, and lithium.  The forbidden lines <span class="math notranslate nohighlight">\(({\rm O\,I\,and\,S\,II})\)</span> are also present.  The existence of forbidden lines is an indication of extremely low gas densities.</p>
 <p>Information can be gleaned from spectra using the shapes of the lines as a function of wavelength.  In T Tauri stars, the <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> line often exhibits a characteristic shape, where an absorption trough (at the short-wavelength edge of the line) is superimposed on a rather broad emission peak.  This unique line shape is called a <a class="reference external" href="https://en.wikipedia.org/wiki/P_Cygni">P Cygni</a> profile, which is named after the first star observed to have emission lines with a blueshifted absorption trough.  The existing of a P Cygni profile indicates that the star is losing mass significantly.  <em>From Kirchhoff’s law, emission lines are produced by a hot, diffuse gas with little intervening material.</em>  In this case, the emission source is an expanding shell moving perpendicular to our line of sight.  <em>Absorption lines are the result of light passing through a cooler, diffuse gas.</em>  the mass loss rates of T Tauri stars average about <span class="math notranslate nohighlight">\(\dot{M}= 10^{-8}\,M_\odot/{\rm yr}\)</span>.  In some extreme cases, T Tauri stars appear to accrete mass rather than lose it, where the P Cygni profile is inverted (redshifted absorption).  Mass accretion rates appear similar to mass loss rates.</p>
 </div>
 <div class="section" id="fu-orionis-stars">
-<h4><span class="section-number">8.3.9.3. </span>FU Orionis Stars<a class="headerlink" href="#fu-orionis-stars" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.9.3. </span>FU Orionis Stars<a class="headerlink" href="#fu-orionis-stars" title="Permalink to this headline">#</a></h4>
 <p>A T Tauri star star can go through a significant increase in its mass accretion rate <span class="math notranslate nohighlight">\((\dot{M} = 10^{-4}\,M_\odot/{\rm yr})\)</span> and luminosity (by four orders of magnitudes or more) that lasts for decades.  The firs star to undergo these abrupt changes was FU Orionis, where similar behaving stars are called <a class="reference external" href="https://en.wikipedia.org/wiki/FU_Orionis_star">FU Orionis</a> stars.  Instabilities in a circumstellar accretion disk can result in <span class="math notranslate nohighlight">\(\sim 0.01\,M_\odot\)</span> being dumped onto the central star to cause the outburst.  The inner disk can outshine the central star by a factor of <span class="math notranslate nohighlight">\(100-1000\)</span>, while high-velocity winds <span class="math notranslate nohighlight">\((&gt;300\,{\rm km/s})\)</span> occur.</p>
 </div>
 <div class="section" id="herbig-ae-be-stars">
-<h4><span class="section-number">8.3.9.4. </span>Herbig Ae/Be Stars<a class="headerlink" href="#herbig-ae-be-stars" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.9.4. </span>Herbig Ae/Be Stars<a class="headerlink" href="#herbig-ae-be-stars" title="Permalink to this headline">#</a></h4>
 <p>Closely related to the T Tauri stars are <strong>Herbig Ae/Be stars</strong>, named for George Herbig.  These pre-main-sequence A or B stars have strong emission lines (and hence the <em>e</em> designation).  Their masses range from <span class="math notranslate nohighlight">\(2-10\,M_\odot\)</span> and tend to be shrouded in some remaining gas and dust.</p>
 </div>
 <div class="section" id="herbig-haro-objects">
-<h4><span class="section-number">8.3.9.5. </span>Herbig-Haro Objects<a class="headerlink" href="#herbig-haro-objects" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.9.5. </span>Herbig-Haro Objects<a class="headerlink" href="#herbig-haro-objects" title="Permalink to this headline">#</a></h4>
 <p>Mass loss during pre-main-sequence evolution can also occur from <strong>jets</strong> of gas that are ejected in narrow beams in opposite directions.  <strong>Herbig-Haro objects</strong> (HH objects) were discovered in the early 1950s by George Herbig and Guillermo Haro in the vicinity of the Orion nebula and are associated with the jets produced by young protostars (e.g., T Tauri stars).  Jets can excite gas within the ISM, which results in objects with bright emission line spectra.  Herbig-Haro objects HH 1 and HH 2 were created by material ejected at speeds of several 100 <span class="math notranslate nohighlight">\({\rm km/s}\)</span> from a star shrouded in a cocoon of dust.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_18.jpg?raw=true?" style="width: 400px;" /></a>
@@ -1563,10 +1652,10 @@ Team, and NASA.]</p>
 </div></div>
 </div>
 <div class="section" id="young-stars-with-circumstellar-disks">
-<h3><span class="section-number">8.3.10. </span>Young Stars with Circumstellar Disks<a class="headerlink" href="#young-stars-with-circumstellar-disks" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.10. </span>Young Stars with Circumstellar Disks<a class="headerlink" href="#young-stars-with-circumstellar-disks" title="Permalink to this headline">#</a></h3>
 <p>Observations have revealed that other young stars also possess circumstellar disks of material, where two well-known examples are Vega and <a class="reference external" href="https://en.wikipedia.org/wiki/Beta_Pictoris"><span class="math notranslate nohighlight">\(\beta\)</span> Pictoris</a>.  An IR image of <span class="math notranslate nohighlight">\(\beta\)</span> Pic shows its disk, where observations of <span class="math notranslate nohighlight">\(\beta\)</span> Pic in the UV suggest that clumps of material are falling from the disk into the star at a rate of 2-3 per week.  There are indications of two substellar objects (planets or brown dwarfs) interacting with a <strong>debris disk</strong> to form resonance gaps.</p>
 <div class="section" id="proplyds">
-<h4><span class="section-number">8.3.10.1. </span>Proplyds<a class="headerlink" href="#proplyds" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.10.1. </span>Proplyds<a class="headerlink" href="#proplyds" title="Permalink to this headline">#</a></h4>
 <p>he Orion Nebula was observed in 1993 by HST, where the observations used the emission lines of <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> and the two forbidden lines <span class="math notranslate nohighlight">\(({\rm N\, II\; and\, O\,III})\)</span>.  Analysis of the data revealed 56 (out of 110 stars) brighter than <span class="math notranslate nohighlight">\(V= 21\)</span> are surrounded by disks of circumstellar dust and gas.  <strong>Proplyds</strong>, or protoplanetary disks associated with young stars are less than 1 Myr old.  Based on observations of the ionized material in the proplyds, the disks seem to have masses much greater than <span class="math notranslate nohighlight">\(\sim 4\,M_\oplus\)</span>.</p>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_12/Figure_23.jpg?raw=true?" style="width: 400px;" /></a>
@@ -1574,13 +1663,13 @@ Team, and NASA.]</p>
 </div>
 </div>
 <div class="section" id="circumstellar-disk-formation">
-<h4><span class="section-number">8.3.10.2. </span>Circumstellar Disk Formation<a class="headerlink" href="#circumstellar-disk-formation" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.10.2. </span>Circumstellar Disk Formation<a class="headerlink" href="#circumstellar-disk-formation" title="Permalink to this headline">#</a></h4>
 <p>Disk formation is fairly common during the collapse of protostellar clouds due to the spin-up of the cloud as required by the conservation of angular momentum.  As the radius of the protostar decreases does its moment of inertia.  In the absence of external torques, the protostar’s angular velocity must increase.</p>
 <p>A problem immediately arises when the effect of angular momentum is included in the collapse.  Conservation of angular momentum arguments suggest that all main sequence stars should be rotating very rapidly (at rates close to breakup).  However, this is generally not seen in observations, where the angular momentum must be transferred away from the collapsing star.  One suggestion is that magnetic fields slow the rotation by applying torques (i.e., magnetic braking).  Additionally, star-disk or star-planet interactions are likely to play a role in distributing the angular momentum.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h3><span class="section-number">8.3.11. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.11. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>6. Assuming a mass loss rate of <span class="math notranslate nohighlight">\(10^{-7}\, M_\odot/{\rm yr}\)</span> and a stellar wind velocity of <span class="math notranslate nohighlight">\(80\,{\rm km/s}\)</span> from a T Tauri star,</p>
 <blockquote>
@@ -1614,9 +1703,11 @@ Team, and NASA.]</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_11/interiors-of-stars.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1632,24 +1723,28 @@ Team, and NASA.]</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

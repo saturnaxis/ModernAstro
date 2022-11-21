@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6. The Sun &#8212; ASTR4410 Modern Astrophysics</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,28 +28,32 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_10/sun.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,18 +65,30 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-103786588-2', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-CP3EW7BJEH');
+                </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -84,9 +97,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -99,14 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR4410: Modern Astrophysics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR4410: Modern Astrophysics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -211,103 +226,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_10/sun.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/ModernAstro"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_10/sun.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_10/sun.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/ModernAstro"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_10/sun.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-solar-interior">
    6.1. The Solar Interior
@@ -431,12 +520,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>The Sun</h1>
@@ -576,15 +664,16 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-sun">
-<h1><span class="section-number">6. </span>The Sun<a class="headerlink" href="#the-sun" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>The Sun<a class="headerlink" href="#the-sun" title="Permalink to this headline">#</a></h1>
 <div class="section" id="the-solar-interior">
-<h2><span class="section-number">6.1. </span>The Solar Interior<a class="headerlink" href="#the-solar-interior" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>The Solar Interior<a class="headerlink" href="#the-solar-interior" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-evolutionary-history-of-the-sun">
-<h3><span class="section-number">6.1.1. </span>The Evolutionary History of the Sun<a class="headerlink" href="#the-evolutionary-history-of-the-sun" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.1. </span>The Evolutionary History of the Sun<a class="headerlink" href="#the-evolutionary-history-of-the-sun" title="Permalink to this headline">#</a></h3>
 <p>Our Sun is classified as a typical main-sequence star of spectral class G2, which contains mostly hydrogen <span class="math notranslate nohighlight">\((X=0.74)\)</span>, some helium <span class="math notranslate nohighlight">\((Y=0.24)\)</span>, and a little metal (<span class="math notranslate nohighlight">\(Z=0.02)\)</span> by mass.  The composition has changed (evolved) over time because it has been converting hydrogen into helium through the proton-proton chain for most of its lifetime.  Even though the Sun is changing over time, we can still estimate its age using other bodies of the Solar System.  For example, radioactive dating of Moon rocks and meteorites indicate that they are ~4.57 Gyr old and the Sun would be <em>at least</em> as old as these rocks.  Since becoming a main-sequence star, the Sun’s luminosity has increased by nearly 48% and its radius has increased by 15%, which lead to an increase a 2.7% increase in its effective temperature.  The effect of this luminosity increase on the Earth is unclear due to the Earth’s time-varying ability to reflect light through its albedo (caused by surface water and ice).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -592,28 +681,28 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="the-present-day-interior-structure-of-the-sun">
-<h3><span class="section-number">6.1.2. </span>The Present-Day Interior Structure of the Sun<a class="headerlink" href="#the-present-day-interior-structure-of-the-sun" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.2. </span>The Present-Day Interior Structure of the Sun<a class="headerlink" href="#the-present-day-interior-structure-of-the-sun" title="Permalink to this headline">#</a></h3>
 <p>Using the current age of the Sun, a <strong>solar model</strong> must reproduce the current values of the central temperature, pressure, density, and composition.  A schematic of the Sun can be constructed, where an inner core produces the radiation through nuclear reactions, a middle layer transports the energy through radiation, and an outer atmosphere brings energy to the surface through convection cells of rising and sinking gas.  Using such a model, the hydrogen mass fraction <span class="math notranslate nohighlight">\((X)\)</span> <em>in the core</em> has decreased from 0.71 to 0.34 and the helium mass fraction increased from 0.27 to 0.64 over the Sun’s lifetime.  <em>At the surface</em> the hydrogen mass fraction increased by 0.03, while the helium mass fraction decreased by 0.03.</p>
 <div class="figure align-default" id="solar-evol-fig">
-<a class="reference internal image-reference" href="../_images/Figure_13.jpg"><img alt="solar evolution" src="../_images/Figure_13.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The evolution of the Sun on the main sequence. As a result of changes in its internal composition, the Sun has become larger and brighter. The solid line indicates its luminosity, the dashed line its radius, and the dash-dot line its effective temperature. The luminosity and radius curves are relative to present-day values. Image credit: Carroll &amp; Ostlie (2007); data are from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract">Bahcall, Pinsonneault, and Basu (2001)</a>.</span><a class="headerlink" href="#solar-evol-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_1.jpg"><img alt="solar evolution" src="../_images/Figure_1.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The evolution of the Sun on the main sequence. As a result of changes in its internal composition, the Sun has become larger and brighter. The solid line indicates its luminosity, the dashed line its radius, and the dash-dot line its effective temperature. The luminosity and radius curves are relative to present-day values. Image credit: Carroll &amp; Ostlie (2007); data are from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract">Bahcall, Pinsonneault, and Basu (2001)</a>.</span><a class="headerlink" href="#solar-evol-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>Evolution of the Sun’s interior includes ongoing nucleosynthesis, surface convection, and elemental diffusion (settling of heavier elements).  The Sun’s primary energy production comes from the <a class="reference external" href="https://en.wikipedia.org/wiki/Proton%E2%80%93proton_chain">proton-proton (pp)</a> chain, where <span class="math notranslate nohighlight">\(^3{\rm He}\)</span>, or <a class="reference external" href="https://en.wikipedia.org/wiki/Tritium">tritium</a> is an intermediate species in the reaction sequence.  Tritium can be produced and destroyed as part of the conversion of hydrogen into helium.  However, tritium is relatively more abundant at the top of the hydrogen-burning region where the temperature is lower.  At greater depths, the higher temperatures the destroy the tritium more often than it is created, resulting in a overall decrease in abundance.  The production of <span class="math notranslate nohighlight">\(^4{\rm He}\)</span> (stable helium) decreases and hydrogen increases slightly near 0.7 <span class="math notranslate nohighlight">\({\rm R_\odot}\)</span> due to the surface convection zone and elemental diffusion.</p>
 <div class="figure align-default" id="solar-schematic-fig">
-<a class="reference internal image-reference" href="../_images/Figure_23.jpg"><img alt="solar interior" src="../_images/Figure_23.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">A schematic diagram of the Sun’s interior. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-schematic-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_2.jpg"><img alt="solar interior" src="../_images/Figure_2.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">A schematic diagram of the Sun’s interior. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-schematic-fig" title="Permalink to this image">#</a></p>
 </div>
 <div align="center">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_10/Table01.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_10/Table01.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_10/Table01.jpg?raw=true?" style="width: 500px;" /></a>
 <p><strong>Table 1</strong>: Central Conditions in the Sun. (Carroll &amp; Ostlie (2007); data are from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract">Bahcall, Pinsonneault, and Basu (2001)</a>)</p>
 </div>
 <p>The largest contribution to the energy production occurs at approximately 0.1 <span class="math notranslate nohighlight">\({\rm R_\odot}\)</span>, as seen in the radial derivative of the luminosity profile as a function of radius.  Consider the mass conservation equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-adbfeab7-d007-4581-bbe3-4384fc8e0b6a">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-adbfeab7-d007-4581-bbe3-4384fc8e0b6a" title="Permalink to this equation">¶</a></span>\[\begin{align} \frac{dM_r}{dr} = 4\pi r^2 \rho \; \rightarrow \; dM_r = 4\pi r^2 \rho\:dr = \rho\:dV, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a08a69ad-a148-4ba6-b9c0-49dc7e8416b9">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-a08a69ad-a148-4ba6-b9c0-49dc7e8416b9" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{dM_r}{dr} = 4\pi r^2 \rho \; \rightarrow \; dM_r = 4\pi r^2 \rho\:dr = \rho\:dV, \end{align}\]</div>
 <p>which indicates how the mass within a certain radius interval increases because the volume of a spherical shell increases with a fixed choice of <span class="math notranslate nohighlight">\(dr\)</span>.  Even if the total energy liberated per kilogram of material <span class="math notranslate nohighlight">\((\epsilon)\)</span> decreases steadily from the inside-out, then the largest contribution to the total luminosity will occur in a shell that contains a significant mass rather than at the center.  In the case of the current (middle-aged) Sun, the decrease in available hydrogen fuel at the center will also influence the location of the peak energy production.  The pressure and density can change rapidly with radius, which produces variations on the solar structure through conditions of hydrostatic equilibrium, ideal gas law, and the composition structure.</p>
 <div class="figure align-default" id="solar-abundance-fig">
-<a class="reference internal image-reference" href="../_images/Figure_33.jpg"><img alt="solar abundance" src="../_images/Figure_33.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">The abundances of <span class="math notranslate nohighlight">\(^1_1{\rm H}\)</span>, <span class="math notranslate nohighlight">\(^3_2{\rm He}\)</span>, and <span class="math notranslate nohighlight">\(^4_2{\rm He}\)</span> as a function of radius for the Sun. Note that the abundance of <span class="math notranslate nohighlight">\(^3_2{\rm He}\)</span> is multiplied by a factor of 100. Image credit: Carroll &amp; Ostlie (2007); data are from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract">Bahcall, Pinsonneault, and Basu (2001)</a>.</span><a class="headerlink" href="#solar-abundance-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_3.jpg"><img alt="solar abundance" src="../_images/Figure_3.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">The abundances of <span class="math notranslate nohighlight">\(^1_1{\rm H}\)</span>, <span class="math notranslate nohighlight">\(^3_2{\rm He}\)</span>, and <span class="math notranslate nohighlight">\(^4_2{\rm He}\)</span> as a function of radius for the Sun. Note that the abundance of <span class="math notranslate nohighlight">\(^3_2{\rm He}\)</span> is multiplied by a factor of 100. Image credit: Carroll &amp; Ostlie (2007); data are from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract">Bahcall, Pinsonneault, and Basu (2001)</a>.</span><a class="headerlink" href="#solar-abundance-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The interior mass as a function of radius <span class="math notranslate nohighlight">\((M_r)\)</span> shows that 90% of the Sun’s mass lies within roughly 0.5 <span class="math notranslate nohighlight">\({\rm R_\odot}\)</span>.  The interior mass function can be determined through the integration of the density function over the Sun’s volume (i.e., <span class="math notranslate nohighlight">\(M_r = \int \rho\:dV\)</span>).  The energy generated in the interior has to be transported outwards, where a criterion for the onset of convection is that the temperature gradient becomes <a class="reference external" href="https://sites.northwestern.edu/sethstein/files/2017/06/convection-2c1sura.pdf">superadiabatic</a>,</p>
 <div class="math notranslate nohighlight">
@@ -627,13 +716,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Stars need only be slightly more massive than the Sun in order to be convective at their centers because of the strong temperature dependence of the CNO cycle as compared to the pp chain.</p>
 </div>
 <div class="figure align-default" id="convection-condition-fig">
-<a class="reference internal image-reference" href="../_images/Figure_72.jpg"><img alt="convection condition" src="../_images/Figure_72.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">The convection condition <span class="math notranslate nohighlight">\(d \ln P/d \ln T\)</span> plotted versus <span class="math notranslate nohighlight">\(r/R_\odot\)</span>. Image credit: Carroll &amp; Ostlie (2007); data are from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract">Bahcall, Pinsonneault, and Basu (2001)</a> and <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2000asqu.book.....C/abstract">Cox (2000)</a>.</span><a class="headerlink" href="#convection-condition-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_7.jpg"><img alt="convection condition" src="../_images/Figure_7.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">The convection condition <span class="math notranslate nohighlight">\(d \ln P/d \ln T\)</span> plotted versus <span class="math notranslate nohighlight">\(r/R_\odot\)</span>. Image credit: Carroll &amp; Ostlie (2007); data are from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract">Bahcall, Pinsonneault, and Basu (2001)</a> and <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2000asqu.book.....C/abstract">Cox (2000)</a>.</span><a class="headerlink" href="#convection-condition-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>Models of stellar structure and the derivation of fundamental physical principles have uncovered an enormous amount of information regarding the Sun’s interior.  A complete and reasonable model needs to be consistent with evolutionary timescales and the global characteristics (e.g., mass, luminosity, radius, effective temperature, surface composition, and oscillation frequencies).  However there is one aspect of the Sun where the observations don’t match the theoretical model, which is the abundance of lithium.  The observed lithium abundance is somewhat less than expected, which may imply that some adjustments (e.g., through convection, rotation, and/or mass loss) to the model are necessary.</p>
 </div>
 <div class="section" id="the-solar-neutrino-problem-a-detective-story-solved">
-<h3><span class="section-number">6.1.3. </span>The Solar Neutrino Problem: A Detective Story Solved<a class="headerlink" href="#the-solar-neutrino-problem-a-detective-story-solved" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.3. </span>The Solar Neutrino Problem: A Detective Story Solved<a class="headerlink" href="#the-solar-neutrino-problem-a-detective-story-solved" title="Permalink to this headline">#</a></h3>
 <p>For decades, there was an inconsistency between the observations of the Sun and the model, where the solution resulting in an important new understanding of fundamental physics.  In 1970, Raymond  Davis began measuring the neutrino flux from the Sun.  His detector was located almost 1 mile below ground within a gold mine in Lead, South Dakota.  The neutrino has a very low cross section for interaction with other matter, which makes it difficult to detect.  <em>Like the eye of Sauron</em>, neutrinos penetrate where other particles cannot.  The detector was placed underground to lower the background noise and ensure that it was only measuring neutrinos.</p>
 <p>The neutrino detector contained ~100,000 gallons of cleaning fluid, <span class="math notranslate nohighlight">\({\rm C_2Cl_4}\)</span> (tetrachloroethylene), because chlorine interacts with <span class="math notranslate nohighlight">\({\rm ^{37}_{17}Cl}\)</span> to produce <span class="math notranslate nohighlight">\({\rm ^{37}_{18}Ar}\)</span> that has a half-life of 35 days,</p>
 <div class="math notranslate nohighlight">
@@ -651,9 +740,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="the-solar-atmosphere">
-<h2><span class="section-number">6.2. </span>The Solar Atmosphere<a class="headerlink" href="#the-solar-atmosphere" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>The Solar Atmosphere<a class="headerlink" href="#the-solar-atmosphere" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-photosphere">
-<h3><span class="section-number">6.2.1. </span>The Photosphere<a class="headerlink" href="#the-photosphere" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>The Photosphere<a class="headerlink" href="#the-photosphere" title="Permalink to this headline">#</a></h3>
 <p>Optical photons appear to originate from an outer layer of the Sun called the <strong>photosphere</strong>.  The base of the photosphere is somewhat arbitrary since photons because some photons originate from deep within the Sun (<span class="math notranslate nohighlight">\(\tau_\lambda \gg 1\)</span>).  The optical depth from a given layer <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> can be estimated from an estimate of the fraction of photons that we receive from that layer (i.e., <span class="math notranslate nohighlight">\(\tau_\lambda = -\ln\left(I_\lambda/I_{\lambda,o}\right)\)</span>).  For instance, if 1% of the photons from a given layer, then the optical depth is approximately 4.6.  The opacity and optical depth are wavelength-dependent, where the base of the photosphere is also wavelength dependent if it is defined in terms of the optical depth.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -663,51 +752,51 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The base of the photosphere is 100 km below <span class="math notranslate nohighlight">\(s_1\)</span>, which corresponds to an optical depth <span class="math notranslate nohighlight">\(\tau_{500} \approx 23.6\)</span> and the temperature is approximately 9400 K.</p>
 </div>
 <div class="figure align-default" id="solar-thickness-fig">
-<a class="reference internal image-reference" href="../_images/Figure_122.jpg"><img alt="solar thickness" src="../_images/Figure_122.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">The thicknesses of the components of the Sun’s atmosphere. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-thickness-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_12.jpg"><img alt="solar thickness" src="../_images/Figure_12.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">The thicknesses of the components of the Sun’s atmosphere. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-thickness-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The gas temperature decreases to 4400 K at 525 km above <span class="math notranslate nohighlight">\(s_1\)</span> <span class="math notranslate nohighlight">\((\tau_{500}=1)\)</span> as we move upward from the base and through the solar photosphere.  The temperature minimum defines the top of the photosphere, where the temperature begins to rise above this point.  The photosphere is defined to be 625 km thick and the bulk resides above an optical depth equal to unity.  On average, the solar flus is emitted from and optical depth <span class="math notranslate nohighlight">\(\tau = 2/3\)</span> (<a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-eddington-approximation">the Eddington approximation</a>), which leads to defining the effective temperature (for <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#the-connection-between-color-and-temperature">Wien’s law</a>) at this depth.</p>
 <p>A source of opacity exists and is continuous across wavelength due in part to the <span class="math notranslate nohighlight">\(H^-\)</span> ions in the photosphere.  Using the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html#the-saha-equation">Saha equation</a>, we can determine the ratio of <span class="math notranslate nohighlight">\(H^-\)</span> ions to the neutral hydrogen atoms.  The abundance of H II <span class="math notranslate nohighlight">\((H^-\:{\rm ions})\)</span> in the Sun is actually quite low (1 in <span class="math notranslate nohighlight">\(10^7\)</span> atoms), but it becomes important because neutral hydrogen is not capable of contributing significantly to the continuum.</p>
 <p>An individual spectral line is not infinitesimally thin covering a range of wavelengths and different parts of the same line can originate form at different depths of the solar atmosphere.  The absorption lines (e.g., Fraunhofer lines) are produced in the photosphere.</p>
 <p>From Kirchoff’s laws, the absorption lines are produced when there is a cooler gas between the observer and the bulk of the hot source (i.e., continuum-forming region).  In reality, the Fraunhofer lines are formed in the same layers where <span class="math notranslate nohighlight">\(H^-\)</span> ions produce the continuum.  The center of an absorption line originates from the regions of lower optical depth (i.e., higher in the photosphere) where the gas is cooler because the opacity is greatest at the center of the line (i.e., more difficult to see deeper in the atmosphere).  Moving into the wings of the line, the opacity decreases and this implies that absorption is occurring at progressively deeper levels.  At wavelengths far from the central line, the absorption is negligible and the continuum is observed.</p>
 <div class="figure align-default" id="photosphere-line-fig">
-<a class="reference internal image-reference" href="../_images/Figure_131.jpg"><img alt="photosphere line" src="../_images/Figure_131.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">The relationship between absorption line strength and depth in the photosphere for a typical spectral line. The wings of the line are formed deeper in the photosphere than is the center of the line. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#photosphere-line-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_13.jpg"><img alt="photosphere line" src="../_images/Figure_13.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">The relationship between absorption line strength and depth in the photosphere for a typical spectral line. The wings of the line are formed deeper in the photosphere than is the center of the line. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#photosphere-line-fig" title="Permalink to this image">#</a></p>
 </div>
 <div class="section" id="solar-granulation-differential-rotation">
-<h4><span class="section-number">6.2.1.1. </span>Solar Granulation &amp; Differential Rotation<a class="headerlink" href="#solar-granulation-differential-rotation" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.1.1. </span>Solar Granulation &amp; Differential Rotation<a class="headerlink" href="#solar-granulation-differential-rotation" title="Permalink to this headline">#</a></h4>
 <p>Observations of the photosphere show a patchwork of bright and dark regions evolve over time, where the dark regions can appear and then disappear.  The spatial extent of a region can be 700 km and have a lifetime for 5-10 minutes.  This structure is called <strong>granulation</strong> and represents the top portion of a convection zone protruding into the photosphere’s base.  Granulation causes wiggles to appear in the absorption lines due to small Doppler shifts (400 m/s) from the convection cycle.  The brighter regions produce blueshifts (i.e., rising hot material) in the absorption lines while the darker regions are caused by redshifts (i.e., sinking cool material).  The lifetime of a granule is defined as the amount of time for a parcel to rise and fall the distance of one mixing length.</p>
 <div class="figure align-default" id="photosphere-gran-fig">
 <a class="reference internal image-reference" href="../_images/Figure_15.jpg"><img alt="photosphere granulation" src="../_images/Figure_15.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.7 </span><span class="caption-text">A spectrum of a portion of the photospheric granulation showing absorption lines that indicate the presence of radial motions. Wiggles to the left are toward shorter wavelengths and are blueshifted while wiggles to the right are redshifted. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#photosphere-gran-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.7 </span><span class="caption-text">A spectrum of a portion of the photospheric granulation showing absorption lines that indicate the presence of radial motions. Wiggles to the left are toward shorter wavelengths and are blueshifted while wiggles to the right are redshifted. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#photosphere-gran-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The absorption lines are used to measure the rotation rate of the Sun, where measurements are taken from the equator and then outward with increasing latitude.  By measuring Doppler shifts as a function of latitude, we find that the Sun rotates <em>differentially</em> meaning the rotation rate changes with latitude.  The rotation period at the equator is approximately 25 days, while it increases to 36 days at the poles.  The Sun’s rotation also varies internally with radius.  Near the base of the convection zone, differing rotation rates converge into a region known as a <a class="reference external" href="https://en.wikipedia.org/wiki/Tachocline">tachocline</a>.  The differing rotation rates produce a strong shear in the atmosphere, which can result in electric currents in the plasma that generate the Sun’s magnetic field.</p>
 <div class="figure align-default" id="sun-rotation-fig">
-<a class="reference internal image-reference" href="../_images/Figure_161.jpg"><img alt="solar rotation" src="../_images/Figure_161.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.8 </span><span class="caption-text">The rotation period of the Sun varies with latitude and depth. The angular frequency <span class="math notranslate nohighlight">\(\Omega\)</span> has units of radians per second. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#sun-rotation-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_16.jpg"><img alt="solar rotation" src="../_images/Figure_16.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.8 </span><span class="caption-text">The rotation period of the Sun varies with latitude and depth. The angular frequency <span class="math notranslate nohighlight">\(\Omega\)</span> has units of radians per second. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#sun-rotation-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="the-chromosphere">
-<h3><span class="section-number">6.2.2. </span>The Chromosphere<a class="headerlink" href="#the-chromosphere" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.2. </span>The Chromosphere<a class="headerlink" href="#the-chromosphere" title="Permalink to this headline">#</a></h3>
 <p>Above the photosphere lies a portion of the Sun’s atmosphere called the <strong>chromosphere</strong> that is only about 0.01% (or a factor of <span class="math notranslate nohighlight">\(10^{-4}\)</span>) of the photosphere’s intensity and extends upward for approximately 1600 km or 2100 km above <span class="math notranslate nohighlight">\(\tau_{500} = 1\)</span>.  The light produced in the chromosphere indicates that the gas density drops dramatically (by a factor of <span class="math notranslate nohighlight">\(10^4\)</span>) and the temperature begins to increase with altitude, from 4400 K to 10,000 K.  The Boltzmann and Saha equations show that spectral lines can be produced in the low density and high temperature environment of the chromosphere (e.g., He II, Fe II, Si II, Cr II, and Ca II).</p>
 <p>Certain Fraunhofer lines appear as absorption lines in the visible and near-UV, where others begin to appear as emission lines at shorter (or much longer) wavelengths.  Kirchoff’s laws suggest that a hot, low-density gas must be responsible for the emission lines.  The emission cannot occur deep within the Sun’s interior because the Sun is optically thick and so the area of emission line production occurs elsewhere.  The strength of the continuum decreases rapidly at shorter and longer wavelengths (far from the peak at 500 nm).  Thus, emission lines produced far from the visible are not overwhelmed by the expected blackbody radiation.</p>
 <p>Emission lines (in the visible range) are observable near the limb of the Sun for a few seconds when the bright solar disk is occulted during a total eclipse and is known as a <strong>flash spectrum</strong>.  During an eclipse the Sun gaines a reddish hue because the Balmer <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> emission line can now dominate.  Alternatively, filters can be used to restrict observations to the wavelengths of emission lines in the chromosphere (particularly <span class="math notranslate nohighlight">\({\rm H \alpha}\)</span>) and a great deal of hidden structure becomes visible.  On scales of 30,000 km, the continued effects of the convection zone are seen as <strong>supergranulation</strong>.  Similar to granules, Doppler studies reveal the rising and sinking of gas at 400 km/s.  <strong>Spicules</strong>, or vertical filaments of gas, are present that extend upward for 10,000 km and each spicule has a lifetime of only 15 minutes.  As a result the speed of particles in spicules move upwards at approximately 15 km/s, as shown through Doppler studies.</p>
 </div>
 <div class="section" id="the-transition-region">
-<h3><span class="section-number">6.2.3. </span>The Transition Region<a class="headerlink" href="#the-transition-region" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.3. </span>The Transition Region<a class="headerlink" href="#the-transition-region" title="Permalink to this headline">#</a></h3>
 <p>The temperature rises rapidly within approximately 100 km above the chromosphere and reach <span class="math notranslate nohighlight">\(&gt;10^5\)</span> K before <span class="math notranslate nohighlight">\(dT/dr\)</span> begins to flatten.  The temperature still increases, but more slowly until eventually exceeding <span class="math notranslate nohighlight">\(10^6\)</span> K.  Selective observations in the UV and extreme-UV reveal this <strong>transition region</strong>.  Lyman-alpha (or <span class="math notranslate nohighlight">\({\rm Ly\alpha}\)</span>) hydrogen emission (<span class="math notranslate nohighlight">\(2\rightarrow 1\)</span>) is produced when the temperature reaches 20,000 K (at the top of the chromosphere), the C III emission line originates when the temperature reaches 90,000 K, the O VI line occurs at 300,000 K, and the Mg X line occurs at <span class="math notranslate nohighlight">\(1.4 \times 10^6\)</span> K.</p>
 <div class="figure align-default" id="temp-structure-fig">
-<a class="reference internal image-reference" href="../_images/Figure_181.jpg"><img alt="solar rotation" src="../_images/Figure_181.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Logarithmic plots of the temperature structure (solid line) and mass density structure (dashed line) of the upper atmosphere of the Sun. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#temp-structure-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_18.jpg"><img alt="solar rotation" src="../_images/Figure_18.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Logarithmic plots of the temperature structure (solid line) and mass density structure (dashed line) of the upper atmosphere of the Sun. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#temp-structure-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="the-corona">
-<h3><span class="section-number">6.2.4. </span>The Corona<a class="headerlink" href="#the-corona" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.4. </span>The Corona<a class="headerlink" href="#the-corona" title="Permalink to this headline">#</a></h3>
 <p>During a total solar eclipse, a faint <strong>corona</strong> appears around the Sun at totality.  The corona lies above the transition region, extends out into space without a well-defined outer boundary, and is very faint (about <span class="math notranslate nohighlight">\(10^6\)</span> times less intense) compared to the photosphere.  The number density of particles at the corona’s base is <span class="math notranslate nohighlight">\(\sim 10^{15}\:{\rm particles/m^3}\)</span>, whereas the Solar wind has a number density of particles of <span class="math notranslate nohighlight">\(\sim 10^7\:{\rm particles/m^3}\)</span> in the vicinity of Earth and the number density of particles in Earth’s atmosphere at sea level is <span class="math notranslate nohighlight">\(\sim 10^{25}\:{\rm particles/m^3}\)</span>.</p>
 <div class="figure align-default" id="solar-corona-fig">
-<a class="reference internal image-reference" href="../_images/Figure_201.jpg"><img alt="solar corona" src="../_images/Figure_201.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.10 </span><span class="caption-text">(a) The quiet solar corona seen during a total solar eclipse in 1954. The shape of the corona is elongated along the Sun’s equator. (b) The active corona tends to have a very complex structure. This image of the July 11, 1991, eclipse is a composite of five photographs that was processed electronically. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-corona-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_20.jpg"><img alt="solar corona" src="../_images/Figure_20.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.10 </span><span class="caption-text">(a) The quiet solar corona seen during a total solar eclipse in 1954. The shape of the corona is elongated along the Sun’s equator. (b) The active corona tends to have a very complex structure. This image of the July 11, 1991, eclipse is a composite of five photographs that was processed electronically. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-corona-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The corona is essentially transparent to most EM radiation (except long radio wavelengths) and is <strong>not</strong> in LTE.  For gases that are not in LTE, a unique temperature is not strictly definable. Temperatures obtained by considering thermal motions, ionization levels, and radio emission do give consistent results.  The presence of Fe XIV lines indicates temperatures in excess of <span class="math notranslate nohighlight">\(2\times 10^6\)</span> K, as do line widths produce by thermal Doppler broadening.  Three structural components exist within the corona:</p>
 <ul class="simple">
@@ -719,21 +808,21 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The blackbody continuum from the Sun decreases following <span class="math notranslate nohighlight">\(1/\lambda^4\)</span> for sufficiently long wavelengths (<a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#rayleigh-jeans-and-wien-approximation">Rayleigh-Jeans law</a>) and thus, the amount of photospheric radio emission is negligible.  The corona is a source of radio emission, where some of this emission arises from <em>free-free</em> transitions as electrons pass near ions.  Due to these encounters, the change in energy of the electron determines the wavelength of the resulting photon through conservation of energy.  Encounters in a higher density region (i.e., nearer to the Sun) result in shorter wavelength photons, where encounters in the chromosphere and lower corona (with much lower density) emit longer wavelength radiation <span class="math notranslate nohighlight">\((1-20\:{\rm cm})\)</span>.  Synchrotron radiation by relativistic electrons also contributes to the radio emission of the corona.</p>
 <p>X-ray emissions from the photosphere are also rare, where the blackbody continuum decreases more rapidly (i.e., <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#rayleigh-jeans-and-wien-approximation">Wien approximation</a>).  Thus, any X-ray emission from the corona overwhelms the contribution from the photosphere due to its high temperature and low opacity at X-ray wavelengths.  The corona contains a high degree of ionization for all the elements present, where the neutral atoms undergo a large number of transitions.  Each element is capable of producing ans extensive emission spectrum.</p>
 <div class="figure align-default" id="solar-xray-fig">
-<a class="reference internal image-reference" href="../_images/Figure_212.jpg"><img alt="solar xray" src="../_images/Figure_212.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.11 </span><span class="caption-text">A section of the X-ray emission spectrum of the solar corona. Image credit: Carroll &amp; Ostlie (2007); figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1973A%26A....24..215P/abstract">Parkinson (1973)</a>.</span><a class="headerlink" href="#solar-xray-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_21.jpg"><img alt="solar xray" src="../_images/Figure_21.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.11 </span><span class="caption-text">A section of the X-ray emission spectrum of the solar corona. Image credit: Carroll &amp; Ostlie (2007); figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1973A%26A....24..215P/abstract">Parkinson (1973)</a>.</span><a class="headerlink" href="#solar-xray-fig" title="Permalink to this image">#</a></p>
 </div>
 <div class="section" id="coronal-holes-and-the-solar-wind">
-<h4><span class="section-number">6.2.4.1. </span>Coronal Holes and the Solar Wind<a class="headerlink" href="#coronal-holes-and-the-solar-wind" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.4.1. </span>Coronal Holes and the Solar Wind<a class="headerlink" href="#coronal-holes-and-the-solar-wind" title="Permalink to this headline">#</a></h4>
 <p>Observations show that X-ray emission is non-uniform, where active (bright and hot) regions exist along with the <strong>coronal holes</strong> (darker and cooler regions).  Within the coronal holes, localized bright spots (in X-ray wavelengths) can occur over a timescale of several hours.  A weaker X-ray emission coming from the coronal holes is characteristic of the lower density and temperature of the region.</p>
 <p>The existence of coronal holes is tied to the Sun’s magnetic field and the generation of a <em>fast</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Solar_wind">solar wind</a>.  The solar wind consists of a continuous stream of particles escaping from the Sun at speeds of approximately <span class="math notranslate nohighlight">\(750\:{\rm km/s}\)</span>.  A gusty, <em>slow</em> solar wind (speeds of about half the fast solar wind) is produced by streamers in the corona associated with closed magnetic fields.</p>
 <p>The Sun’s magnetic field is similar to a dipole (on a global scale), although its value can differ significantly in localized regions and the field strength is typically <span class="math notranslate nohighlight">\(\sim 10^{-4}\:{\rm T}\)</span> near the surface (or a factor of few larger than Earth’s magnetic field at its surface).  Coronal holes correspond to regions where the magnetic field lines are <em>open</em>, while the X-ray bright regions are associated with <em>closed</em> field lines.  Closed field lines form loops that return to the Sun, while open field lines extend out to great distances.</p>
 <div class="figure align-default" id="solar-dipole-fig">
-<a class="reference internal image-reference" href="../_images/Figure_231.jpg"><img alt="solar dipole" src="../_images/Figure_231.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.12 </span><span class="caption-text">(a) The characteristic dipole magnetic field of a current loop. (b) A generalized depiction of the global magnetic field of the Sun. The dashed lines show the field of a perfect magnetic dipole. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-dipole-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_23.jpg"><img alt="solar dipole" src="../_images/Figure_23.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.12 </span><span class="caption-text">(a) The characteristic dipole magnetic field of a current loop. (b) A generalized depiction of the global magnetic field of the Sun. The dashed lines show the field of a perfect magnetic dipole. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-dipole-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>For charged particles moving in an external magnetic field, the Lorentz force equation applies</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f5feae88-02f2-4aac-ab80-f398364200c1">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-f5feae88-02f2-4aac-ab80-f398364200c1" title="Permalink to this equation">¶</a></span>\[\begin{align} \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B}), \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1a6ae3c2-e261-4e91-abc3-86fd555ad7b7">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-1a6ae3c2-e261-4e91-abc3-86fd555ad7b7" title="Permalink to this equation">#</a></span>\[\begin{align} \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B}), \end{align}\]</div>
 <p>which describes the force <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> exerted on a charged particle <span class="math notranslate nohighlight">\(q\)</span> with a velocity <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> in an electric field <span class="math notranslate nohighlight">\(\mathbf{E}\)</span> and magnetic field <span class="math notranslate nohighlight">\(\mathbf{B}\)</span>.  Due to the vector cross product, the force is always mutually perpendicular to both the direction of the velocity and magnetic field (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Right-hand_rule">right-hand rule</a>).  Assuming that the electric field is negligible <span class="math notranslate nohighlight">\((E \ll vB\sin\theta)\)</span>, charged particles are forced to spiral around the magnetic field lines and cannot actually ross them except by collisions.  Closed magnetic field lines tend to trap charged particles, while open field lines allow the particles to travel away from the Sun.  Thus, <em>the solar wind originates from the coronal holes</em> (or regions of open magnetic field lines).  The bright regions in X-ray observations are due to the higher densities of charged particles (electrons and ions) that are trapped in large and small magnetic field loops.  A similar mechanism of trapping charged particles in magnetic fields occurs on the Earth through the <a class="reference external" href="https://en.wikipedia.org/wiki/Aurora">auroras</a> (aurora borealis (northern lights) and aurora australis (southern lights)) and the <a class="reference external" href="https://en.wikipedia.org/wiki/Van_Allen_radiation_belt">Van Allen radiation belts</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -748,7 +837,7 @@ const thebe_selector_output = ".output, .cell_output"
 \[ dM = \rho dV = (nm_H)(Av\:dt) = (nm_H)(4\pi r^2\:v\:dt), \]</div>
 <p>where the mass density depends on the number density <span class="math notranslate nohighlight">\(n\)</span> and particle mass <span class="math notranslate nohighlight">\(m_H\)</span> (assumed to be hydrogen).  The mass loss <em>rate</em> can be obtained by dividing both sides to get</p>
 <div class="math notranslate nohighlight" id="equation-mass-evol">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-mass-evol" title="Permalink to this equation">¶</a></span>\[\frac{dM}{dt} = 4\pi r^2\:nm_H\:v. \]</div>
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-mass-evol" title="Permalink to this equation">#</a></span>\[\frac{dM}{dt} = 4\pi r^2\:nm_H\:v. \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>By convention, stellar mass loss rates are given in <em>solar masses per year</em> and the rate is symbolized as <span class="math notranslate nohighlight">\(\dot{M}\equiv {dM/dt}\)</span>.</p>
@@ -786,11 +875,11 @@ The entire Sun&#39;s mass would be depleted in 4.030e+13 yr.
 <p>It would require more than <span class="math notranslate nohighlight">\(10^{13}\)</span> yr (or <span class="math notranslate nohighlight">\(10^4\)</span> Gyr) before the entire mass of the Sun is dissipated and so the effect of the present-day solar wind negligible compared to the evolution of the Sun’s interior.</p>
 </div>
 <div class="section" id="the-parker-wind-model">
-<h4><span class="section-number">6.2.4.2. </span>The Parker Wind Model<a class="headerlink" href="#the-parker-wind-model" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.2.4.2. </span>The Parker Wind Model<a class="headerlink" href="#the-parker-wind-model" title="Permalink to this headline">#</a></h4>
 <p>Since the corona is very hot and has a high thermal conductivity, it can referred to as a <a class="reference external" href="https://en.wikipedia.org/wiki/Plasma_(physics)">plasma</a>.  The ability of a plasma to conduct heat implies that the corona is almost isothermal.  In 1958, <a class="reference external" href="https://en.wikipedia.org/wiki/Eugene_Parker">Eugene Parker</a> developed an approximately isothermal model of the solar wind.</p>
 <p>We begin by considering the corona to be in hydrostatic equilibrium, which means that the <em>outward</em> pressure is balanced by the <em>inward</em> pull of gravity.  If the mass of the corona is insignificant compared to the total mass of the Sun, then the mass enclosed at a given radius of the corona <span class="math notranslate nohighlight">\(M_r\)</span> is approximately equal to <span class="math notranslate nohighlight">\(M_\odot\)</span> (i.e., <span class="math notranslate nohighlight">\(M_r \approx M_\odot\)</span>) and the equation for the <a class="reference external" href="https://en.wikipedia.org/wiki/Hydrostatic_equilibrium">hydrostatic equilibrium</a> becomes</p>
 <div class="math notranslate nohighlight" id="equation-pressure-grad">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-pressure-grad" title="Permalink to this equation">¶</a></span>\[\frac{dP}{dr} = -\frac{G M_\odot \rho}{r^2}. \]</div>
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-pressure-grad" title="Permalink to this equation">#</a></span>\[\frac{dP}{dr} = -\frac{G M_\odot \rho}{r^2}. \]</div>
 <p>For simplicity, we assume that the gas is completely ionized hydrogen so that the number density of protons is given by</p>
 <div class="math notranslate nohighlight">
 \[ n \approx \frac{\rho}{m_p}. \]</div>
@@ -799,10 +888,10 @@ The entire Sun&#39;s mass would be depleted in 4.030e+13 yr.
 \[ P = 2nkT, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\mu = 1/2\)</span> for ionized hydrogen (from <a class="reference external" href="https://en.wikipedia.org/wiki/Ideal_gas_law#Statistical_mechanics">statistical mechanics</a>) and <span class="math notranslate nohighlight">\(m_H\approx m_p\)</span>.  Substituting into Eqn. <a class="reference internal" href="#equation-pressure-grad">(6.4)</a> and the hydrostatic equilibrium equation becomes</p>
 <div class="math notranslate nohighlight" id="equation-temp-deriv">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-temp-deriv" title="Permalink to this equation">¶</a></span>\[\frac{d}{dr}(2nkT) = - \frac{GM_\odot nm_p}{r^2}.\]</div>
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-temp-deriv" title="Permalink to this equation">#</a></span>\[\frac{d}{dr}(2nkT) = - \frac{GM_\odot nm_p}{r^2}.\]</div>
 <p>For an <em>isothermal</em> gas, Eqn. <a class="reference internal" href="#equation-temp-deriv">(6.5)</a> can be integrated directly and solved for the number density as a function of radius <span class="math notranslate nohighlight">\(n(r)\)</span> or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e1d414e2-7981-49e3-9cbf-59c8eef3babd">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-e1d414e2-7981-49e3-9cbf-59c8eef3babd" title="Permalink to this equation">¶</a></span>\[\begin{align} n(r) = n_o e^{-\lambda (1-r_o/r)}, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e621d58e-fe9e-48d6-9178-26cca79fec58">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-e621d58e-fe9e-48d6-9178-26cca79fec58" title="Permalink to this equation">#</a></span>\[\begin{align} n(r) = n_o e^{-\lambda (1-r_o/r)}, \end{align}\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[ \lambda \equiv \frac{GM_\odot m_p}{2kTr_o} \]</div>
@@ -859,13 +948,13 @@ The pressure at infinity is 5e-06.
 </div>
 </div>
 <div class="section" id="the-hydrodynamic-nature-of-the-upper-solar-atmosphere">
-<h3><span class="section-number">6.2.5. </span>The Hydrodynamic Nature of the Upper Solar Atmosphere<a class="headerlink" href="#the-hydrodynamic-nature-of-the-upper-solar-atmosphere" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.5. </span>The Hydrodynamic Nature of the Upper Solar Atmosphere<a class="headerlink" href="#the-hydrodynamic-nature-of-the-upper-solar-atmosphere" title="Permalink to this headline">#</a></h3>
 <p>To develop a better understanding of the solar atmosphere’s structure, the approximation of hydrostatic equilibrium must be replaced by a set of <a class="reference external" href="https://en.wikipedia.org/wiki/Fluid_dynamics">hydrodynamic equations</a> that describe the flow.  In particular, we can write the acceleration as</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d^2 r}{dt^2} = \frac{dv}{dt} = \frac{dv}{dr}\frac{dr}{dt} = v\frac{dv}{dr}, \]</div>
 <p>using the chain rule and add a term to Eqn. {eq}`Pressure_grad’ to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b6622910-278d-4824-90fc-67d15384a9c0">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-b6622910-278d-4824-90fc-67d15384a9c0" title="Permalink to this equation">¶</a></span>\[\begin{align} \rho v\frac{dv}{dr} = -\frac{dP}{dr} - \frac{GM_r \rho}{r^2}, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7993bfd0-686a-4e30-8bb7-8f10bc97000d">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-7993bfd0-686a-4e30-8bb7-8f10bc97000d" title="Permalink to this equation">#</a></span>\[\begin{align} \rho v\frac{dv}{dr} = -\frac{dP}{dr} - \frac{GM_r \rho}{r^2}, \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(v\)</span> is the velocity of the flow.  From fluid dynamics, there is also a <em>conservation of mass flow</em> across a boundary and is written as</p>
 <div class="math notranslate nohighlight">
 \[ 4\pi r^2 \rho v = {\rm constant}, \]</div>
@@ -873,8 +962,8 @@ The pressure at infinity is 5e-06.
 <div class="math notranslate nohighlight">
 \[ \frac{d(\rho vr^2)}{dr} = 0. \]</div>
 <p>In the convection zone there is a motion of the hot gas rising and the return flow of the cool gas sinking, which sets up longitudinal (pressure) waves that propagate outward through the photosphere and into the chromosphere.  The outward <em>flux</em> of wave energy <span class="math notranslate nohighlight">\(F_E\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9e984b5-cd82-4e03-98e3-39612cf6954b">
-<span class="eqno">(6.8)<a class="headerlink" href="#equation-e9e984b5-cd82-4e03-98e3-39612cf6954b" title="Permalink to this equation">¶</a></span>\[\begin{align} F_E = \frac{1}{2}\rho v_w^2 v_s, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7d56f9f3-fc56-42bc-af68-4b9742ed9ce8">
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-7d56f9f3-fc56-42bc-af68-4b9742ed9ce8" title="Permalink to this equation">#</a></span>\[\begin{align} F_E = \frac{1}{2}\rho v_w^2 v_s, \end{align}\]</div>
 <p>which depends on the local sound speed <span class="math notranslate nohighlight">\(v_s\)</span> and the velocity amplitude <span class="math notranslate nohighlight">\(v_w\)</span> of particles that oscillate relative to their equilibrium positions.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Speed_of_sound#Speed_of_sound_in_ideal_gases_and_air">sound speed</a> is given by</p>
 <div class="math notranslate nohighlight">
 \[ v_s = \sqrt{\frac{K}{\rho}} = \sqrt{\frac{\gamma P}{\rho}}, \]</div>
@@ -889,15 +978,15 @@ The pressure at infinity is 5e-06.
 <p>A shock wave is characterized by a steep density change over a short distance, which is called the <strong>shock front</strong>.  A shock moving through a gas produces a great deal of heat via collision, which leaves the gas in its wake highly ionized.  The heating comes at the expense of mechanical energy of the shock and thus, the shock quickly dissipates.  The gas in the chromosphere and above is effectively heated by the mass motions created in the convection zone.</p>
 </div>
 <div class="section" id="magnetohydrodynamics-and-alfven-waves">
-<h3><span class="section-number">6.2.6. </span>Magnetohydrodynamics and Alfvén Waves<a class="headerlink" href="#magnetohydrodynamics-and-alfven-waves" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.6. </span>Magnetohydrodynamics and Alfvén Waves<a class="headerlink" href="#magnetohydrodynamics-and-alfven-waves" title="Permalink to this headline">#</a></h3>
 <p>The photosphere is also influenced by the Sun’s magnetic field in which our discussion has yet failed to take into account.  The temperature structure of the outer solar atmosphere is expected to result from the presence of the magnetic field.  <a class="reference external" href="https://en.wikipedia.org/wiki/Magnetohydrodynamics">Magnetohydrodynamics</a> (or <strong>MHD</strong>) is the study of interactions between magnetic fields and plasmas.  A complete solution to the MHD equations applied to the Sun’s outer atmosphere does not yet exist.  but, there are some useful aspects to the partial solutions.</p>
 <p>A second kind of wave motion can be generated by the presence of a magnetic field, which are transverse waves that propagate along a magnetic field line.  These waves are a consequence of the restoring force associated with the magnetic field lines.  Recall that a magnetic field requires energy (i.e., no magnetic monopole) through moving charges or currents and the energy can be described as begin stored within the magnetic field itself as a magnetic field energy density <span class="math notranslate nohighlight">\(u_m\)</span>.  The value of the magnetic energy density is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2d0d233-020a-4a3d-a385-30b7a9935f53">
-<span class="eqno">(6.9)<a class="headerlink" href="#equation-b2d0d233-020a-4a3d-a385-30b7a9935f53" title="Permalink to this equation">¶</a></span>\[\begin{align} u_m = \frac{B^2}{2\mu_o}, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d160cfc1-e0f8-4668-882d-313ff779a2ac">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-d160cfc1-e0f8-4668-882d-313ff779a2ac" title="Permalink to this equation">#</a></span>\[\begin{align} u_m = \frac{B^2}{2\mu_o}, \end{align}\]</div>
 <p>which depends on the permeability of free space <span class="math notranslate nohighlight">\(\mu_o = 4\pi \times 10^{-7}\:{\rm Tm/A}\)</span>. Recall that <span class="math notranslate nohighlight">\(1\:{\rm T} = 1 {\rm \frac{N}{A\cdot m}}\)</span>.</p>
 <p>The density of magnetic field lines increases if a plasma (containing a number of magnetic field lines) is compressed in a direction perpendicular to the lines.  But the density of lines is proportional the strength of the magnetic field itself and the energy density increases during the compression.  A change in volume (i.e., compression) of the plasma leads to work being done <span class="math notranslate nohighlight">\((W=\int P dV)\)</span> and this implies the existence of a magnetic pressure, which is equal to the magnetic energy density,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b02119a-d3f8-4f14-8cf1-1031d2b5c4b5">
-<span class="eqno">(6.10)<a class="headerlink" href="#equation-0b02119a-d3f8-4f14-8cf1-1031d2b5c4b5" title="Permalink to this equation">¶</a></span>\[\begin{align} u_m = P_m = \frac{B^2}{2\mu_o}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-fd814716-1c58-44f1-8999-e4527748deeb">
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-fd814716-1c58-44f1-8999-e4527748deeb" title="Permalink to this equation">#</a></span>\[\begin{align} u_m = P_m = \frac{B^2}{2\mu_o}. \end{align}\]</div>
 <p>The <em>magnetic pressure gradient</em> acts to compensate for an increase in the magnetic pressure in the direction of the magnetic field lines with an decrease in pressure in the opposite direction.  The pressure change restores the field line density to its original value.  This process is analogous to how the tension restores a string after it is plucked and a wave propagates along the string.  This transverse MHD wave is called an <strong>Alfvén wave</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -907,8 +996,8 @@ The pressure at infinity is 5e-06.
 <div class="math notranslate nohighlight">
 \[ v_m \sim \sqrt{\frac{P_m}{\rho}} = \frac{B}{\sqrt{2\mu_o \rho}}, \]</div>
 <p>and a more careful treatment gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5823fe61-684a-4374-aebd-d0772ee06b99">
-<span class="eqno">(6.11)<a class="headerlink" href="#equation-5823fe61-684a-4374-aebd-d0772ee06b99" title="Permalink to this equation">¶</a></span>\[\begin{align} v_m = \frac{B}{\sqrt{\mu_o \rho}}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f6e44af8-ed97-4388-b9f1-2dc23874090a">
+<span class="eqno">(6.11)<a class="headerlink" href="#equation-f6e44af8-ed97-4388-b9f1-2dc23874090a" title="Permalink to this equation">#</a></span>\[\begin{align} v_m = \frac{B}{\sqrt{\mu_o \rho}}. \end{align}\]</div>
 <ul class="simple">
 <li><p><strong>How does the sound speed compare to the Alfvén speed in the solar photosphere?</strong></p></li>
 </ul>
@@ -960,7 +1049,7 @@ The Alfven speed is 81 m/s.
 <p>The Sun’s rotation drags the open magnetic field lines along through interplanetary space.  The solar wind is forced to move with the field lines and a torque is produced that actually slows the Sun’s rotation.  The differential rotation present in the photosphere is not manifested in the corona, which is interesting because the magnetic field influences the structure of the corona but not through its rotation.</p>
 </div>
 <div class="section" id="problems">
-<h3><span class="section-number">6.2.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>1. Using the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html#the-saha-equation">Saha equation</a>, calculate the ratio of the number of <span class="math notranslate nohighlight">\(H^−\)</span> ions to neutral hydrogen atoms in the Sun’s photosphere. Take the temperature of the gas to be the effective temperature, and assume that the electron pressure is <span class="math notranslate nohighlight">\(1.5\:{\rm N/m^2}\)</span>. <em>Note that the Pauli exclusion principle requires that only one state can exist for the ion because its two electrons must have opposite spins.</em></p>
 <p>2. The Paschen series of hydrogen (<span class="math notranslate nohighlight">\(n = 3\)</span>) can contribute to the visible continuum for the Sun since the series limit occurs at 820.8 nm. However, it is the contribution from the <span class="math notranslate nohighlight">\(H^−\)</span> ion that dominates the formation of the continuum. Using the results of Problem 1 above, <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_8/classification-of-stellar-spectra.html#combining-the-boltzmann-and-saha-equations">along with the Boltzmann equation</a>, estimate the ratio of the number of <span class="math notranslate nohighlight">\(H^−\)</span> ions to hydrogen atoms in the <span class="math notranslate nohighlight">\(n = 3\)</span> state.</p>
@@ -973,18 +1062,18 @@ The Alfven speed is 81 m/s.
 </div>
 </div>
 <div class="section" id="the-solar-cycle">
-<h2><span class="section-number">6.3. </span>The Solar Cycle<a class="headerlink" href="#the-solar-cycle" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>The Solar Cycle<a class="headerlink" href="#the-solar-cycle" title="Permalink to this headline">#</a></h2>
 <div class="section" id="sunspots">
-<h3><span class="section-number">6.3.1. </span>Sunspots<a class="headerlink" href="#sunspots" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.1. </span>Sunspots<a class="headerlink" href="#sunspots" title="Permalink to this headline">#</a></h3>
 <p>It was Galileo who made the first telescopic observations of <a class="reference external" href="https://en.wikipedia.org/wiki/Sunspot">sunspots</a>.  Even though sunspots are occasionally visible with the naked eye, making such observations is <em>strongly discouraged</em> due to the potential for eye damage.  <a class="reference external" href="https://aty.sdsu.edu/vision/others.html">Newton</a> temporarily blinded himself by trying to look at the Sun using a mirror, though not to observe sunspots.  Reliable observations over the past 200 years show the number of sunspots and the average latitude of sunspot formation is approximately periodic with an 11-year cycle.  A plot of the sunspot location over time is known as the <strong>butterfly diagram</strong>.  Individual sunspots are short-lived (surviving no more than an month or so).  A sunspot remains at a constant latitude over its lifetime, while successive sunspots form at progressively lower latitudes.  New cycles of sunspots occur near <span class="math notranslate nohighlight">\(\pm 40^\circ\)</span> relative to the equator.</p>
 <div class="figure align-default" id="solar-butterfly-fig">
 <a class="reference internal image-reference" href="../_images/Figure_29.jpg"><img alt="solar butterfly" src="../_images/Figure_29.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.13 </span><span class="caption-text">The upper figure depicts the butterfly diagram, showing sunspot latitudes with time. The lower figure shows the percentage of the Sun’s surface covered by sunspots as a function of time. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-butterfly-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.13 </span><span class="caption-text">The upper figure depicts the butterfly diagram, showing sunspot latitudes with time. The lower figure shows the percentage of the Sun’s surface covered by sunspots as a function of time. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-butterfly-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>A key to understanding sunspots lies in their strong magnetic fields.  The darkest part of a sunspot is called the <strong>umbra</strong> and can be up to 30,000 km in diameter (<span class="math notranslate nohighlight">\(\sim2.5\times\)</span> Earth’s diameter).  The umbra is usually surrounded by the <strong>penumbra</strong>, whose appearance indicates the presence of magnetic field lines.  The magnetic fields can be measured through the Zeeman effect (i.e., splitting of spectral lines due to an external magnetic field), where such measurements indicate the strength and polarity of the magnetic field.  Magnetic field strengths <span class="math notranslate nohighlight">\(\gtrsim 0.1\)</span> T have been measured in the centers of umbral regions and the field strength decreases across the penumbral regions.</p>
 <div class="figure align-default" id="solar-zeeman-fig">
-<a class="reference internal image-reference" href="../_images/Figure_311.jpg"><img alt="solar butterfly" src="../_images/Figure_311.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.14 </span><span class="caption-text">The Zeeman splitting of the Fe 525.02-nm spectral line due to the presence of a strong magnetic field in a sunspot. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-zeeman-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_31.jpg"><img alt="solar butterfly" src="../_images/Figure_31.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6.14 </span><span class="caption-text">The Zeeman splitting of the Fe 525.02-nm spectral line due to the presence of a strong magnetic field in a sunspot. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-zeeman-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>Sunspots typically occur in groups, where a dominant sunspot leads in the direction of rotation and the remaining sunspots follow the leader.  During a cycle, the lead sunspot pair at symmetric latitudes (relative to the equator) will have opposite polarity, while the trailing sunspot pairs will have the opposite polarity.  During each successive 11-year sunspot cycle the polarities will be reversed.  Accompanying this local polarity reversal is a global polarity reversal of the Sun’s entire dipole.  Polarity reversals of the Sun occur on a 22-year cycle.</p>
 <p>The dark appearance of the umbra is caused by their significantly lower temperatures (~3900 K) relative to the effective temperature (5777 K).  The luminosity difference is proportional to the temperature ratios raised to the fourth power, where a sunspot can be (5777/3900)<span class="math notranslate nohighlight">\(^4\)</span> = 4.8 times fainter than the surrounding photosphere.  Each sunspot has a lifetime of about a month and thus luminosity variations also occur on a timescale of months.  Although the Sun’s luminosity can experience a luminosity variation over a much longer timescale. For example, very few sunspots were observed from <span class="math notranslate nohighlight">\(1645-1715\)</span>, which corresponds to the <a class="reference external" href="https://en.wikipedia.org/wiki/Maunder_Minimum">Maunder minimum</a>.</p>
@@ -992,7 +1081,7 @@ The Alfven speed is 81 m/s.
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Plage_(astronomy)">Plages</a> (from the French word for <em>beach</em>) are chromospheric regions of bright <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> emission located near active sunspots.  They usually appear before the sunspots and disappear after the sunspots vanish.  Plages have higher densities that the surrounding gas and are products of magnetic fields .</p>
 </div>
 <div class="section" id="solar-flares">
-<h3><span class="section-number">6.3.2. </span>Solar Flares<a class="headerlink" href="#solar-flares" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.2. </span>Solar Flares<a class="headerlink" href="#solar-flares" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_flare">Solar flares</a> are eruptive events that release between <span class="math notranslate nohighlight">\(10^{17}-10^{25}\)</span> J of energy over a range of time intervals (millisecond to more than an hour).  A large flare can reach 100,000 km in length.  During an eruption, the <span class="math notranslate nohighlight">\({\rm H \alpha}\)</span> line appears locally in emission rather than in absorption, implying that photon production occurs above much of the absorbing material.  Other types of EM radiation are produced that can range from <em>nonthermal</em> radio (~1 km) waves due to synchrotron radiation to hard (very short wavelength) X- and gamma-ray emission lines.</p>
 <p>Charge particles are also ejected outward at high speeds becoming <strong>solar cosmic rays</strong> when they escape into interplanetary space.  The ejected charged particles (mostly protons and helium nuclei) can reach Earth in 30 min, disrupting communications and pose a threat to astronauts.  Shock waves can occasionally propagate several AU before dissipating.</p>
 <p><strong>What powers a solar flare?</strong></p>
@@ -1000,7 +1089,7 @@ The Alfven speed is 81 m/s.
 <p>A model of a solar flare shows the general mechanism involves <strong>reconnection</strong> of magnetic field lines.  A disturbance in the magnetic field loops causes the creation of sheet of current in the highly conducting plasma (via Lenz’s law).  The Joule heating from the resistance in the plasma causes temperatures to reach <span class="math notranslate nohighlight">\(10^7\)</span> K.  Particles accelerated away from a reconnection point (and away from the Sun) can escape the Sun entirely to become solar cosmic rays.  Radio, soft X-rays, and <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> emission can all occur as a result of the reconnection.</p>
 <div class="figure align-default" id="solar-flare-fig">
 <a class="reference internal image-reference" href="../_images/Figure_35.jpg"><img alt="solar flare" src="../_images/Figure_35.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.15 </span><span class="caption-text">A model of the January 13, 1992, Masuda solar flare. Note the two hard X-ray (HXR) footpoint sources associated with <span class="math notranslate nohighlight">\({\rm H \alpha}\)</span> flare ribbons. Electrons are accelerated downward along the magnetic field lines until they collide with the chromosphere. Image credit: Carroll &amp; Ostlie (2007); figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1996ApJ...464..985A/abstract">Aschwanden et al. (1996)</a>.</span><a class="headerlink" href="#solar-flare-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.15 </span><span class="caption-text">A model of the January 13, 1992, Masuda solar flare. Note the two hard X-ray (HXR) footpoint sources associated with <span class="math notranslate nohighlight">\({\rm H \alpha}\)</span> flare ribbons. Electrons are accelerated downward along the magnetic field lines until they collide with the chromosphere. Image credit: Carroll &amp; Ostlie (2007); figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1996ApJ...464..985A/abstract">Aschwanden et al. (1996)</a>.</span><a class="headerlink" href="#solar-flare-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>High-energy particles accelerated toward the chromosphere produce hard X-rays and gamma rays due to surface nuclear reactions.  <a class="reference external" href="https://en.wikipedia.org/wiki/Spallation">Spallation reactions</a> break heavier nuclei into lighter nuclei and are associate with solar flares.  Some example reactions are</p>
 <div class="math notranslate nohighlight">
@@ -1020,12 +1109,12 @@ The Alfven speed is 81 m/s.
 <p>with a 2.223 MeV photon.</p>
 </div>
 <div class="section" id="solar-prominences-coronal-mass-ejections">
-<h3><span class="section-number">6.3.3. </span>Solar Prominences &amp; Coronal Mass Ejections<a class="headerlink" href="#solar-prominences-coronal-mass-ejections" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.3. </span>Solar Prominences &amp; Coronal Mass Ejections<a class="headerlink" href="#solar-prominences-coronal-mass-ejections" title="Permalink to this headline">#</a></h3>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Solar_prominence">solar prominence</a> is a large plasma and magnetic field structure that extends outwards from the Sun.  <strong>Quiescent prominences</strong> (or curtains of ionized gas) reach into the corona and can remain stable for weeks (or months).  An active region collects material along its magnetic field lines, which results in a cooler, denser gas compared to the surrounding corona.  This causes the gas to “rain” back down into the chromosphere.  An <strong>active</strong> (or eruptive) prominence may exist for only a few hours, where it disappears due to instabilities in the magnetic field lines that cause the prominence to lift away from the Sun.  This is similar to the production of flares, but the eruptive material is mainly gas ejected (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Coronal_mass_ejection">coronal mass ejection</a> or CMEs) from the Sun instead of EM radiation.</p>
 <p>The solar corona can extend from a few solar radii up to <span class="math notranslate nohighlight">\(30\:{\rm R_\odot}\)</span> and can average about one CME occurs per day over the 11-year sunspot cycle.  When the Sun is more active, this rate can increase to 3.5 CMEs per day.  At a solar minimum, the rate of CMEs decreases substantially to one event every five days.  During a CME event between <span class="math notranslate nohighlight">\(5\times 10^{12} - 5\times 10^{13}\)</span> kg of material may be ejected from the Sun traveling at speeds ranging from <span class="math notranslate nohighlight">\(400-1000\)</span> km/s.  CMEs appear to be associated with prominences 70% of the time and flares 30% of the time.  CMEs are like magnetic bubbles that lift material of the Sun’s surface after a reconnection event and can carry a significant portion of the corona with it.</p>
 </div>
 <div class="section" id="the-magnetic-dynamo-theory">
-<h3><span class="section-number">6.3.4. </span>The Magnetic Dynamo Theory<a class="headerlink" href="#the-magnetic-dynamo-theory" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.4. </span>The Magnetic Dynamo Theory<a class="headerlink" href="#the-magnetic-dynamo-theory" title="Permalink to this headline">#</a></h3>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Dynamo_theory">magnetic dynamo</a> was first proposed by Horace Babcock in 1961, which describes many components of the solar cycle.  Despite its general success, the models doesn’t provide a complete picture.  Any complete picture will require:</p>
 <ul class="simple">
 <li><p>full treatment of the MHD equations in the solar environment,</p></li>
@@ -1040,12 +1129,12 @@ and</p></li>
 <p>At the beginning of a cycle, the magnetic field lines are “frozen” into the gas, but the differential rotation of the Sun drags the lines along.  This converts a <em>poloidal</em> field (i.e., magnetic dipole) into a field with a <em>toroidal</em> component that wraps around the Sun.  The turbulent convection zone can twist the magnetic field lines and create <em>magnetic ropes</em> (i.e., regions of intense magnetic field due higher density of lines).  The magnetic pressure forces the ropes to rise to the surface as sunspot groups.  The polarity of the sunspots comes from the direction of magnetic field along the ropes.</p>
 <div class="figure align-default" id="solar-dynamo-fig">
 <a class="reference internal image-reference" href="../_images/Figure_38.jpg"><img alt="solar dynamo" src="../_images/Figure_38.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.16 </span><span class="caption-text">The magnetic dynamo model of the solar cycle. (a) The solar magnetic field is initially a poloidal field. (b) Differential rotation drags the “frozen-in” magnetic field lines around the Sun. (c) Turbulent convection twists the field lines into magnetic ropes. (d) As the cycle progresses, successive sunspot groups migrate toward the equator where magnetic field reconnection reestablishes the poloidal field, but with the original polarity reversed. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-dynamo-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.16 </span><span class="caption-text">The magnetic dynamo model of the solar cycle. (a) The solar magnetic field is initially a poloidal field. (b) Differential rotation drags the “frozen-in” magnetic field lines around the Sun. (c) Turbulent convection twists the field lines into magnetic ropes. (d) As the cycle progresses, successive sunspot groups migrate toward the equator where magnetic field reconnection reestablishes the poloidal field, but with the original polarity reversed. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#solar-dynamo-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The twisting begins at higher latitudes during a sunspot minimum, then differential rotation drags the field lines and convective ties them into knots, and more sunspots appear at intermediate latitudes leading to a sunspot maximum.  One might expect the greatest amount of twisting to occur at the equator, but sunspots near the equator tend to cancel each other out due to the polarity of the leading spots being opposed.  The cancellation of magnetic fields near the equator causes the poloidal field to be re-established, but with a reversal of polarity.</p>
 </div>
 <div class="section" id="id1">
-<h3><span class="section-number">6.3.5. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.5. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <blockquote>
 <div><p>4. Assuming that an average of one coronal mass ejection (CME) occurs per day and that a typical CME ejects <span class="math notranslate nohighlight">\(10^{13}\)</span> kg of material, estimate the annual mass loss from CMEs and compare your answer with the annual mass loss from the solar wind.  Express your answer as a <em>percentage</em> of CME mass loss to solar wind mass loss.</p>
 <p>5. Assume that the velocity of a CME directed toward Earth is 400 km/s and the mass of the CME is <span class="math notranslate nohighlight">\(10^{13}\)</span> kg.</p>
@@ -1086,9 +1175,11 @@ and</p></li>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_9/stellar-atmospheres.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1104,24 +1195,28 @@ and</p></li>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

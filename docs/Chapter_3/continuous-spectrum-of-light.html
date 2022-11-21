@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1. The Continuous Spectrum of Light &#8212; ASTR4410 Modern Astrophysics</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,28 +28,32 @@
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -64,18 +65,30 @@ const thebe_selector_output = ".output, .cell_output"
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-103786588-2', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-CP3EW7BJEH');
+                </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -84,9 +97,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -99,14 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR4410: Modern Astrophysics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR4410: Modern Astrophysics
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -211,103 +226,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_3/continuous-spectrum-of-light.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/ModernAstro"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_3/continuous-spectrum-of-light.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_3/continuous-spectrum-of-light.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/ModernAstro"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_3/continuous-spectrum-of-light.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stellar-parallax">
    1.1. Stellar Parallax
@@ -438,12 +527,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>The Continuous Spectrum of Light</h1>
@@ -590,13 +678,14 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-continuous-spectrum-of-light">
-<h1><span class="section-number">1. </span>The Continuous Spectrum of Light<a class="headerlink" href="#the-continuous-spectrum-of-light" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>The Continuous Spectrum of Light<a class="headerlink" href="#the-continuous-spectrum-of-light" title="Permalink to this headline">#</a></h1>
 <div class="section" id="stellar-parallax">
-<h2><span class="section-number">1.1. </span>Stellar Parallax<a class="headerlink" href="#stellar-parallax" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>Stellar Parallax<a class="headerlink" href="#stellar-parallax" title="Permalink to this headline">#</a></h2>
 <p>To understand how intrinsically bright a star is, one must first know the distance to the star.  Most ancient civilizations believed that all the stars were fixed in the sky <strong>and</strong> the same distance away from us.  The ancient greeks, most notably <a class="reference external" href="http://atropos.as.arizona.edu/aiz/teaching/a204/lecture14.html">Ptolemy</a>, devised a method to determine the distance to the Moon using the apparent change in the Moon’s position relative to the background stars.  This was one of the first uses of <em>parallax</em>, where the baseline used was the radius of the Earth (determined earlier by Eratosthenes).</p>
 <p>Although the distance to the Moon could be calculated, the distance to each of the planets was unknown.  Kepler’s laws in their original form describe the <em>relative sizes</em> of the planetary orbits.  During 17th Century, the relative distances were given in astronomical units (thanks to Edmund Halley) due to the gap in our ability to measure the Solar System.  The true scale of the Solar System was partially revealed through a transit of <a class="reference external" href="https://skyandtelescope.org/astronomy-news/transits-of-venus-in-history-1631-1716/">Venus</a> in 1761, which was originally proposed by <a class="reference external" href="https://www.eso.org/public/outreach/eduoff/vt-2004/Education/EduSheet2.html">Halley</a>.</p>
 <blockquote class="epigraph">
@@ -605,23 +694,23 @@ const thebe_selector_output = ".output, .cell_output"
 </div></blockquote>
 <p>The method used is called <strong>trigonometric parallax</strong>, which is the measurement of the angular displacement of an object from two different vantage points and is related to the known distance between such points.  For example, the distance to the peak of a mountain can be determined by the peak’s angular position from two observation points separated by a known <em>baseline</em> distance.  Simple trigonometry (i.e., similar triangles) deduces the distance to the peak.</p>
 <div class="figure align-default" id="parallax-fig">
-<a class="reference internal image-reference" href="../_images/Figure_1.jpg"><img alt="Trig parallax" src="../_images/Figure_1.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Trigonometric parallax: <span class="math notranslate nohighlight">\(d=\frac{B}{\tan p}\)</span>. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#parallax-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_14.jpg"><img alt="Trig parallax" src="../_images/Figure_14.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Trigonometric parallax: <span class="math notranslate nohighlight">\(d=\frac{B}{\tan p}\)</span>. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#parallax-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The perceived angular displacement is smaller as the distance to the object increases and hence, finding the distance to the nearest stars requires a longer baseline than Earth’s diameter.  Luckily, we can obtain a much longer baseline for free because the Earth’s position relative to the Sun changes (i.e., the Earth orbits the Sun) and we obtain a different vantage point every 6 months.  The new baseline is equal to the diameter of Earth’s orbit (2 AU) and will reveal the back-and-forth change in position of nearby stars.  We must remember that the stars themselves could be moving (i.e., the star’s <em>proper motion</em>) and this motion can be determined after removing the known periodic motion due to the change in Earth’s position.  The measurement of the <strong>parallax angle</strong> <span class="math notranslate nohighlight">\(p\)</span> (the <em>half</em>-angle of the full angular displacement) determines the distance <span class="math notranslate nohighlight">\(d\)</span> to the star by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5fb87169-9371-4612-9181-607debca7c94">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-5fb87169-9371-4612-9181-607debca7c94" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6f837f1a-aa24-4ee5-becf-61f443803bef">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-6f837f1a-aa24-4ee5-becf-61f443803bef" title="Permalink to this equation">#</a></span>\[\begin{align}
 d = \frac{1\; AU}{\tan p} \approx \frac{1}{p}\; AU, 
 \end{align}\]</div>
 <p>where the small-angle approximation <span class="math notranslate nohighlight">\(\tan p \approx p\)</span> is applied and <span class="math notranslate nohighlight">\(p\)</span> is measured in <strong>radians</strong>.  In most instances, the parallax angle <span class="math notranslate nohighlight">\(p\)</span> is not measured in radians, but in <em>arcseconds</em> and requires an appropriate conversion by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d4b0e1ed-845c-45ba-a57e-6353d0c5488f">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-d4b0e1ed-845c-45ba-a57e-6353d0c5488f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e6ae8980-5b3d-4c39-ac1e-de0b8304a701">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-e6ae8980-5b3d-4c39-ac1e-de0b8304a701" title="Permalink to this equation">#</a></span>\[\begin{align}
 d = \frac{1}{p} \times \frac{180^\circ}{\pi} \times \frac{3600^{\prime\prime}}{1^\circ} \; AU \approx \frac{206,265}{p^{\prime\prime}} \; AU,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p^{\prime\prime}\)</span> is the parallax angle in arcseconds.  The nearest Sun-like stars lie in a binary system called <span class="math notranslate nohighlight">\(\alpha\)</span> Centauri, which has a parallax angle of 754 <span class="math notranslate nohighlight">\(\pm\)</span> 4.11 mas (milliarcseconds; <a class="reference external" href="https://arxiv.org/abs/1601.01636">Pourbaix &amp; Boffin (2016)</a>).</p>
 <div class="figure align-default" id="stellar-parallax-fig">
-<a class="reference internal image-reference" href="../_images/Figure_2.jpg"><img alt="Stellar parallax" src="../_images/Figure_2.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Stellar parallax: <span class="math notranslate nohighlight">\(d = \frac{1}{p^{\prime\prime}}\)</span> pc. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#stellar-parallax-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_24.jpg"><img alt="Stellar parallax" src="../_images/Figure_24.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Stellar parallax: <span class="math notranslate nohighlight">\(d = \frac{1}{p^{\prime\prime}}\)</span> pc. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#stellar-parallax-fig" title="Permalink to this image">#</a></p>
 </div>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-0">
 
@@ -655,8 +744,8 @@ d = \frac{1}{p} \times \frac{180^\circ}{\pi} \times \frac{3600^{\prime\prime}}{1
 </div>
 </div>
 <p>The nearest stars are really, really far away and measuring the distance to stars in AU isn’t practical for the same reason that we don’t typically measure the distance between planets in meters.  Thus, we define a new unit called the <strong>parsec</strong> (<strong>par</strong>allax-<strong>sec</strong>ond, abbreviated as pc), which is the distance given 1 arcsecond of parallax (i.e., a normalization).  Our distance equation then becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9da2accd-68c8-4268-8ce7-057d74103859">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-9da2accd-68c8-4268-8ce7-057d74103859" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-66ecbc39-2d44-4ba1-8b4b-939a6a97daa0">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-66ecbc39-2d44-4ba1-8b4b-939a6a97daa0" title="Permalink to this equation">#</a></span>\[\begin{align}
 d = \frac{1}{p^{\prime\prime}} \;pc.
 \end{align}\]</div>
 <div class="admonition tip">
@@ -741,14 +830,14 @@ Prox Cen is 1.83% closer than Alpha Cen AB.
 <p>The successor to Hipparcos was the <a class="reference external" href="http://ned.ipac.caltech.edu/level5/March19/Mignard/Mignard3.html">Gaia parallax survey</a> and is currently (as of Dec 2021) in operation.  Gaia will measure the parallax of 1.14 <em>billion</em> stars and obtain proper motions for 2 million of those stars.  Gaia’s precision is 25 <span class="math notranslate nohighlight">\({\rm \mu as}\)</span> or 0.025 mas.  It increases our distance horizon to ~30,000 ly.</p>
 </div>
 <div class="section" id="the-magnitude-scale">
-<h2><span class="section-number">1.2. </span>The Magnitude Scale<a class="headerlink" href="#the-magnitude-scale" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>The Magnitude Scale<a class="headerlink" href="#the-magnitude-scale" title="Permalink to this headline">#</a></h2>
 <p>Astronomers use light (i.e., electromagnetic radiation) to decode the physical nature of stars, galaxies, and the interstellar medium.  Technological advancements make a big difference in how we can measure light.  Our eyes measure how bright objects appear as an integrated flux (i.e., number of photons reaching the retina per second), where brighter sources represent a larger integrated flux.  Stars emit radiation in all directions, but only a sliver of the total radiation ever reaches our eyes.  The nature of space augments how we receive this radiation, where a closer source fills a larger surface area than a distant one.  Hence, astronomers have developed different scales over time to account for the ambiguity of brightness due to the distance to the source.</p>
 <div class="section" id="apparent-magnitude">
-<h3><span class="section-number">1.2.1. </span>Apparent Magnitude<a class="headerlink" href="#apparent-magnitude" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.1. </span>Apparent Magnitude<a class="headerlink" href="#apparent-magnitude" title="Permalink to this headline">#</a></h3>
 <p>Ancient people (e.g., Greeks, Persians, Egyptians, etc.) developed methods to identify patterns of stars and identified differences in the apparent brightness.  Records of these observations were collected to form star charts and sky catalogs.  Hipparchus, a Greek astronomer, compiled a list of ~850 stars and invented a numerical scale to describe how bright each star appeared in the sky.  He assigned an <a class="reference external" href="https://en.wikipedia.org/wiki/Apparent_magnitude"><strong>apparent magnitude</strong></a> <span class="math notranslate nohighlight">\(m = 1\)</span> for the brightest stars in the (Greek) night sky, where a magnitude <span class="math notranslate nohighlight">\(m=6\)</span> represented the faintest stars (note that a larger magnitude corresponds to a fainter object).  This scale was widely used by later astronomers, but non-standardized.  Through the Renaissance, Hipparchus’ scale was revisited and modified to reflect the contemporary view that the human eye responds logarithmically to identify the difference in brightness of two objects.</p>
 <p>Hipparchus’ scale was changed so that the difference between magnitudes maintained a <em>constant ratio</em> in brightness.  The difference between Hipparchus’ brightest and faintest object was 5 (e.g., 6-1=5) and scientists at the time (19th Century) decided that this represents a factor of 100 difference in brightness.  Each magnitude increase is equivalent to raising the brightness by an exponent by the following:</p>
 <div class="math notranslate nohighlight" id="equation-delta-b">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-delta-b" title="Permalink to this equation">¶</a></span>\[100^{(m_2-m_1)/5} = \Delta B,\]</div>
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-delta-b" title="Permalink to this equation">#</a></span>\[100^{(m_2-m_1)/5} = \Delta B,\]</div>
 <p>where the apparent magnitude of each star (<span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>) is related the relative change in brightness <span class="math notranslate nohighlight">\(\Delta B\)</span>.  A 1 magnitude difference corresponds to a change in brightness, <span class="math notranslate nohighlight">\(\Delta B = 2.511886... \approx 2.512\)</span>.</p>
 <p>Modern <a class="reference external" href="https://en.wikipedia.org/wiki/Photometry_(astronomy)">photometric</a> detectors allow astronomers to measure the apparent magnitude of an object with an <a class="reference external" href="http://slittlefair.staff.shef.ac.uk/teaching/phy217/lectures/stats/L18/index.html">accuracy</a> of <span class="math notranslate nohighlight">\(\pm\)</span> 0.001 magnitude and the differences in magnitudes <span class="math notranslate nohighlight">\(\pm\)</span> 0.0001 (or ~100 ppm flux differences).  The brightest object detected (from Earth) is the Sun (m = -26.74) and the faintest is a small (<span class="math notranslate nohighlight">\(\sim\)</span> 15 m in diameter) Kuiper Belt Object (KBO) (m = +28.4) observed by the Hubble Space Telescope (HST) in 2003.  HST’s theoretical limit is m = +31.5 and the James Webb Space Telescope (JWST) will push this horizon to m = +34.</p>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-3">
@@ -767,11 +856,11 @@ Prox Cen is 1.83% closer than Alpha Cen AB.
 </div>
 </div>
 <div class="section" id="flux-luminosity-and-the-inverse-square-law">
-<h3><span class="section-number">1.2.2. </span>Flux, Luminosity, and the Inverse Square Law<a class="headerlink" href="#flux-luminosity-and-the-inverse-square-law" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.2. </span>Flux, Luminosity, and the Inverse Square Law<a class="headerlink" href="#flux-luminosity-and-the-inverse-square-law" title="Permalink to this headline">#</a></h3>
 <p>The “brightness” of a star is measured as the total amount of radiation (at all wavelengths) that crosses a unit area per unit time as is called the <strong>radiant flux</strong>.  This definition depends on the intrinsic <strong>luminosity</strong> (energy emitted per second at the stellar surface) and the distance of the source from the unit area (i.e., distance from the observer).  The same star located at a farther distance will appear less bright in the sky.</p>
 <p>Astronomers scale the brightness using a spherically symmetric shell of radius <em>r</em> to designate where the unit area is located.  Assuming a vacuum between the source and the surface of the shell, the radiant flux (<span class="math notranslate nohighlight">\(F\)</span>) can be defined as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-31153992-7a93-45d7-b3c8-70ade9e55129">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-31153992-7a93-45d7-b3c8-70ade9e55129" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fc426199-7355-4f9a-b40d-6876c0b4e2cd">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-fc426199-7355-4f9a-b40d-6876c0b4e2cd" title="Permalink to this equation">#</a></span>\[\begin{align}
 F = \frac{L}{4\pi r^2}, 
 \end{align}\]</div>
 <p>where the luminosity <span class="math notranslate nohighlight">\(L\)</span> is distributed uniformly across the surface area of the shell.  This is the well-known <strong>inverse square law</strong> for light.  The radiant flux of some stars are given relative to the Solar Luminosity (<span class="math notranslate nohighlight">\(L_\odot\)</span>) and the Earth-Sun distance (<span class="math notranslate nohighlight">\(r_\oplus\)</span>) so that the factor <span class="math notranslate nohighlight">\(4 \pi\)</span> isn’t needed as:</p>
@@ -806,20 +895,20 @@ F = \frac{L}{4\pi r^2},
 <p>The value of the solar flux is also known as the solar irradiance or <strong>solar constant</strong>.  This value is used when determining a planet’s potential “habitability” and in climate modeling of the Earth’s atmosphere.</p>
 </div>
 <div class="section" id="flux-ratios-and-apparent-magnitude">
-<h3><span class="section-number">1.2.3. </span>Flux Ratios and Apparent Magnitude<a class="headerlink" href="#flux-ratios-and-apparent-magnitude" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.3. </span>Flux Ratios and Apparent Magnitude<a class="headerlink" href="#flux-ratios-and-apparent-magnitude" title="Permalink to this headline">#</a></h3>
 <p>In the given alternate form of the radiant flux (<span class="math notranslate nohighlight">\(F/F_\oplus\)</span>), it is scaled to a standard distance and luminosity.  While this scaling is useful for studying exoplanets, we can combine the formula for radiant flux with the magnitude scale to determine the relative flux of different stars.  Let’s start by defining the flux ratio (<span class="math notranslate nohighlight">\(F_2/F_1\)</span>) as:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{F_2}{F_1} = \frac{L_2}{L_1}\left(\frac{r_1}{r_2}\right)^2. 
 \]</div>
 <p>Then, we simply set the flux ratio equal to the change in brightness (Eqn. <a class="reference internal" href="#equation-delta-b">(1.4)</a>) by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ffcd4020-93aa-4d79-ab89-3513939221ac">
-<span class="eqno">(1.6)<a class="headerlink" href="#equation-ffcd4020-93aa-4d79-ab89-3513939221ac" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5498ad58-97d8-4e3d-bac0-616874c5b2fa">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-5498ad58-97d8-4e3d-bac0-616874c5b2fa" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{F_2}{F_1} = 100^{(m_1-m_2)/5} = 10^{\frac{2}{5}(m_1-m_2)}.
 \end{align}\]</div>
 <p>Taking the base-10 logarithm of both sides leads to the alternative form:</p>
 <div class="math notranslate nohighlight" id="equation-flux-ratio">
-<span class="eqno">(1.7)<a class="headerlink" href="#equation-flux-ratio" title="Permalink to this equation">¶</a></span>\[2.5\log_{10} \left( \frac{F_2}{F_1} \right) = m_1-m_2. \]</div>
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-flux-ratio" title="Permalink to this equation">#</a></span>\[2.5\log_{10} \left( \frac{F_2}{F_1} \right) = m_1-m_2. \]</div>
 <ul class="simple">
 <li><p><strong>Compare Eqn. <a class="reference internal" href="#equation-flux-ratio">(1.7)</a> to the Equation 4 in Chapter 3 of the textbook.  How are they different?</strong></p></li>
 </ul>
@@ -861,7 +950,7 @@ F = \frac{L}{4\pi r^2},
 </div>
 </div>
 <div class="section" id="absolute-magnitude-and-the-distance-modulus">
-<h3><span class="section-number">1.2.4. </span>Absolute Magnitude and the Distance Modulus<a class="headerlink" href="#absolute-magnitude-and-the-distance-modulus" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.4. </span>Absolute Magnitude and the Distance Modulus<a class="headerlink" href="#absolute-magnitude-and-the-distance-modulus" title="Permalink to this headline">#</a></h3>
 <p>A common normalization is to determine a star’s <strong>absolute magnitude (M)</strong>, which is how bright would a star appear <em>if</em> it were located 10 pc away from the Earth.  An important point is that we are determining how the apparent magnitude of the <em>same star</em> differs when it is at two <em>different distances</em> from us (i.e., <span class="math notranslate nohighlight">\(L_1 = L_2\)</span>).  Under this assumption the flux ratio becomes</p>
 <div class="math notranslate nohighlight">
 \[
@@ -874,13 +963,13 @@ F = \frac{L}{4\pi r^2},
 \]</div>
 <p>and the standard distance of 10 pc is “baked-in” to the definition of the absolute magnitude.  Solving for <span class="math notranslate nohighlight">\(d\)</span> (the star’s distance), we arrive at</p>
 <div class="math notranslate nohighlight" id="equation-dist-eqn">
-<span class="eqno">(1.8)<a class="headerlink" href="#equation-dist-eqn" title="Permalink to this equation">¶</a></span>\[d = 10^{(m-M+5)/5}\;{\rm pc}. \]</div>
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-dist-eqn" title="Permalink to this equation">#</a></span>\[d = 10^{(m-M+5)/5}\;{\rm pc}. \]</div>
 <ul class="simple">
 <li><p><strong>Where does the extra +5 in Eqn. <a class="reference internal" href="#equation-dist-eqn">(1.8)</a> come from?</strong></p></li>
 </ul>
 <p>The quantity <span class="math notranslate nohighlight">\(m-M\)</span> is a measure of the distance to a star and is called the star’s <strong>distance modulus</strong>.  Solving for <span class="math notranslate nohighlight">\(m-M\)</span> instead of <span class="math notranslate nohighlight">\(d\)</span> results in</p>
 <div class="math notranslate nohighlight" id="equation-dist-modulus">
-<span class="eqno">(1.9)<a class="headerlink" href="#equation-dist-modulus" title="Permalink to this equation">¶</a></span>\[m - M = 5\log_{10}\left(\frac{d}{10 \;pc}\right).  \]</div>
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-dist-modulus" title="Permalink to this equation">#</a></span>\[m - M = 5\log_{10}\left(\frac{d}{10 \;pc}\right).  \]</div>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-5">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.6 </span></p>
@@ -923,25 +1012,25 @@ The distance modulus for the Sun is -31.57
 </div>
 <p>Since the absolute magnitude places a star at a standard distance (10 pc), one might wonder how our derivations might change given the absolute magnitudes of two stars, <span class="math notranslate nohighlight">\(M_1\)</span> and <span class="math notranslate nohighlight">\(M_2\)</span>.  With the absolute magnitude, we can treat both stars as being the same distance away from the Earth (i.e., <span class="math notranslate nohighlight">\(r_1 = r_2\)</span>).  Thus, the flux ratio (<span class="math notranslate nohighlight">\(F_2/F_1\)</span>) and luminosity ratio (<span class="math notranslate nohighlight">\(L_2/L_1\)</span>) are equivalent.  Equation <a class="reference internal" href="#equation-flux-ratio">(1.7)</a> becomes</p>
 <div class="math notranslate nohighlight" id="equation-flux-ratio-modulus">
-<span class="eqno">(1.10)<a class="headerlink" href="#equation-flux-ratio-modulus" title="Permalink to this equation">¶</a></span>\[\begin{split}2.5\log_{10} \left( \frac{L_2}{L_1} \right) &amp;= M_1-M_2, \\
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-flux-ratio-modulus" title="Permalink to this equation">#</a></span>\[\begin{split}2.5\log_{10} \left( \frac{L_2}{L_1} \right) &amp;= M_1-M_2, \\
 -2.5\log_{10} \left( \frac{L}{L_\odot} \right) &amp;= M-M_{Sun}, \end{split}\]</div>
 <p>when compared to values of the Sun (<span class="math notranslate nohighlight">\(L_2 = L_\odot\)</span> and <span class="math notranslate nohighlight">\(M_2 = M_{Sun}\)</span>).</p>
 </div>
 </div>
 <div class="section" id="the-wave-nature-of-light">
-<h2><span class="section-number">1.3. </span>The Wave Nature of Light<a class="headerlink" href="#the-wave-nature-of-light" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>The Wave Nature of Light<a class="headerlink" href="#the-wave-nature-of-light" title="Permalink to this headline">#</a></h2>
 <p>Light is the vessel by which information flows through the universe.  Astronomers must take advantage of all its properties because it appears unlikely that we will be visiting even the most nearby stars anytime soon.</p>
 <div class="section" id="the-speed-of-light">
-<h3><span class="section-number">1.3.1. </span>The Speed of Light<a class="headerlink" href="#the-speed-of-light" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.1. </span>The Speed of Light<a class="headerlink" href="#the-speed-of-light" title="Permalink to this headline">#</a></h3>
 <p>The speed of light was first estimated (with some accuracy) by Ole Roemer in 1675.  Galileo made his first the telescope in 1609, where Roemer was using a telescope to study Jupiter’s moons by their eclipses.  Roemer used Kepler’s laws to determine the timing of future eclipses, where a similar method would be used 400 years later to study exoplanets.  Newton’s version of Kepler’s 3rd Law wasn’t published until 1687, which means that Roemer was using Kepler’s original definition without universal gravitation.</p>
 <p>Roemer discovered that the timing of the eclipses differed depending on the relative positions of the Earth and Jupiter.  At closest approach (opposition), the eclipses occurred earlier and as the Earth started moving away, the eclipses occurred behind schedule.  This is called the light-time effect (<a class="reference external" href="http://www.astro.sk/caosp/Eedition/FullTexts/vol43no3/pp493-497.pdf">LITE</a>) and it arises due to the finite speed of light.  Roemer found that 22 minutes was required for light to cross the diameter of Earth’s orbit, where the modern estimate is ~16 minutes.  If Roemer was able to measure the Earth’s orbital diameter precisely (i.e., using meters), then he could determine the <a class="reference external" href="https://www.universetoday.com/38040/speed-of-light-2/">speed of light</a> to 2 significant figures.  The modern value for the speed of light is defined to be <span class="math notranslate nohighlight">\(c = 2.99792458 \times 10^8\)</span> m/s.  However, there are several disciplines of astronomy (e.g., cosmology) that parameterize their equations so that <span class="math notranslate nohighlight">\(c = 1\)</span>.</p>
 </div>
 <div class="section" id="young-s-double-slit-experiment">
-<h3><span class="section-number">1.3.2. </span>Young’s Double-Slit Experiment<a class="headerlink" href="#young-s-double-slit-experiment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.2. </span>Young’s Double-Slit Experiment<a class="headerlink" href="#young-s-double-slit-experiment" title="Permalink to this headline">#</a></h3>
 <p>During the Renaissance, scientists uncovered that two different interpretations of light explained a range of phenomena.  Newton posited that light was a stream of particles because it explained the sharpness of shadows.  But, Chistiaan Huygens suggested that light was composed of waves because it behaved similarly to other known waves (e.g., water and sound).  Both models could explain the phenomena of reflection and refraction.</p>
 <p>The mathematical theory of waves are described by three properties: <strong>wavelength</strong>, <strong>frequency</strong> and <strong>wave speed</strong>.  The wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is the distance between successive wave crests/troughs and the frequency <span class="math notranslate nohighlight">\(\nu\)</span> is the number of waves that pass a point in space per unit of time.  Therefore the wave speed <span class="math notranslate nohighlight">\(c\)</span> is determined by the product of the wavelength and frequency by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93c49b8a-5ce5-459e-aa7a-e1402a287cac">
-<span class="eqno">(1.11)<a class="headerlink" href="#equation-93c49b8a-5ce5-459e-aa7a-e1402a287cac" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-00d24925-7480-46aa-83c3-c7e5fceda930">
+<span class="eqno">(1.11)<a class="headerlink" href="#equation-00d24925-7480-46aa-83c3-c7e5fceda930" title="Permalink to this equation">#</a></span>\[\begin{align}
 c = \lambda \nu.
 \end{align}\]</div>
 <p>The particle nature of light was accepted as the <em>true</em> representation, largely based on Newton’s reputation.  Thomas Young (1773-1829) demonstrated the wave nature of light through his famous double-slit experiment.</p>
@@ -950,13 +1039,13 @@ c = \lambda \nu.
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Young_(scientist)">Thomas Young</a> was also instrumental in deciphering the Rosetta Stone, which unlocked the many mysteries of Ancient Egypt.</p>
 </div>
 <div class="figure align-default" id="double-slit-fig">
-<a class="reference internal image-reference" href="../_images/Figure_3.jpg"><img alt="double slit" src="../_images/Figure_3.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Double slit experiment. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#double-slit-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_33.jpg"><img alt="double slit" src="../_images/Figure_33.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Double slit experiment. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#double-slit-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>For a double slit experiment, monochromatic light with a wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> from a single source passes through two narrow, parallel slits that are separated by a distance <span class="math notranslate nohighlight">\(d\)</span>.  There is a screen at a distance <span class="math notranslate nohighlight">\(L\)</span> beyond the two slits.  A wave model of light predicts that light and dark <em>interference</em> fringes should be observed.  As the light passes through the slits, the waves spread out radially as though the slits are wave sources with a succession of crests and troughs.  Waves obey a <em>superposition</em> principle where the two interacting waves add linearly (e.g., <span class="math notranslate nohighlight">\(\psi = A\psi_1 + B\psi_2\)</span>).  When the wave crests meet at the same time, a bright fringe or maximum is produced (i.e., <strong>constructive</strong> interference).  On the other hand, when the crest from one wave meets the trough of another, then the waves cancel each other out producing a dark fringe or minimum (i.e., <strong>destructive</strong> interference).</p>
 <div class="figure align-default" id="superposition-fig">
-<a class="reference internal image-reference" href="../_images/Figure_4.jpg"><img alt="superposition" src="../_images/Figure_4.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Superposition principle for light waves: (a) Constructive interference. (b) Destructive interference. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#superposition-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_41.jpg"><img alt="superposition" src="../_images/Figure_41.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Superposition principle for light waves: (a) Constructive interference. (b) Destructive interference. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#superposition-fig" title="Permalink to this image">#</a></p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1045,23 +1134,23 @@ Wavelength = 459.296 nm of dark fringe using order n = 10.
 </div>
 </div>
 <div class="section" id="maxwell-s-electromagnetic-wave-theory">
-<h3><span class="section-number">1.3.3. </span>Maxwell’s Electromagnetic Wave Theory<a class="headerlink" href="#maxwell-s-electromagnetic-wave-theory" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.3. </span>Maxwell’s Electromagnetic Wave Theory<a class="headerlink" href="#maxwell-s-electromagnetic-wave-theory" title="Permalink to this headline">#</a></h3>
 <p>Many discoveries were made in the 18th and 19th Century illustrating the properties of electricity and magnetism separately.  However, James Clerk Maxwell was the first to synthesize the prior knowledge and succeed in condensing everything known into <em>four</em> equations.  Maxwell found that his equations could produce wave equations for the electric (<span class="math notranslate nohighlight">\(E\)</span>) and magnetic (<span class="math notranslate nohighlight">\(B\)</span>) field vectors.  One of the main predictions was that these <em>electromagnetic waves</em> propagate through a vacuum with a characteristic speed <span class="math notranslate nohighlight">\(c = 1/\sqrt{\epsilon_o \mu_o}\)</span>, where <span class="math notranslate nohighlight">\(\epsilon_o\)</span> and <span class="math notranslate nohighlight">\(\mu_o\)</span> are constants of nature that describe the permittivity and permeability of free space.  These equations showed that electromagnetic waves are <em>transverse</em> waves and could exhibit polarization (see Fig. <a class="reference internal" href="#emwave-fig"><span class="std std-numref">1.5</span></a>).</p>
 <div class="figure align-default" id="emwave-fig">
-<a class="reference internal image-reference" href="../_images/Figure_5.jpg"><img alt="EM wave" src="../_images/Figure_5.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Electromagnetic wave. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#emwave-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_51.jpg"><img alt="EM wave" src="../_images/Figure_51.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Electromagnetic wave. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#emwave-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="the-poynting-vector-and-radiation-pressure">
-<h3><span class="section-number">1.3.4. </span>The Poynting Vector and Radiation Pressure<a class="headerlink" href="#the-poynting-vector-and-radiation-pressure" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.3.4. </span>The Poynting Vector and Radiation Pressure<a class="headerlink" href="#the-poynting-vector-and-radiation-pressure" title="Permalink to this headline">#</a></h3>
 <p>All waves carry both energy and momentum in the direction of propagation.  The energy flux of a light wave is called the <strong>Poynting vector</strong>,</p>
 <div class="math notranslate nohighlight">
 \[
 \mathbf{S} = \frac{1}{\mu_o}\mathbf{E} \times \mathbf{B},
 \]</div>
 <p>where <span class="math notranslate nohighlight">\({\bf S}\)</span> has units of flux (W/m<span class="math notranslate nohighlight">\(^2\)</span>).  The Poynting vector points in a direction perpendicular to the planes locating the electric and magnetic field vectors.  The quantity of practical interest is the <em>time-averaged</em> magnitude of the Poynting vector over one cycle given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5513a066-9d0a-4a8f-b31c-3415fe72527b">
-<span class="eqno">(1.12)<a class="headerlink" href="#equation-5513a066-9d0a-4a8f-b31c-3415fe72527b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-072b4f5c-ee37-4449-986d-0609824eed4b">
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-072b4f5c-ee37-4449-986d-0609824eed4b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left&lt;S\right&gt; = \frac{1}{2\mu_o}E_o B_o, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(E_o\)</span> and <span class="math notranslate nohighlight">\(B_o\)</span> represent the maximum amplitudes of the electric and magnetic fields, respectively.  Since the wave carries momentum, it can exert a force on a surface (e.g., light-sail).  The resulting <a class="reference external" href="https://en.wikipedia.org/wiki/Radiation_pressure">radiation pressure</a> depends on whether the light wave is reflected from or absorbed by the surface.  The force of the radiation <span class="math notranslate nohighlight">\(F_{\rm rad}\)</span> is related to the time-average flux <span class="math notranslate nohighlight">\(\left&lt;S\right&gt;\)</span>, the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>, the speed of light <span class="math notranslate nohighlight">\(c\)</span>, and the angle of incidence <span class="math notranslate nohighlight">\(\theta\)</span> (e.g., <span class="math notranslate nohighlight">\(0^\circ\)</span> is perpendicular to the surface). The radiation pressure is given by</p>
@@ -1074,23 +1163,23 @@ P_{\rm rad} = \frac{F_{\rm rad}}{A} = \begin{cases}
 \end{split}\]</div>
 <p>where the radiation force due to a absorption has a factor of <span class="math notranslate nohighlight">\(\cos \theta\)</span> corresponding to the incident beam and the force due to a reflection has an additional <span class="math notranslate nohighlight">\(2\cos \theta\)</span> from the reaction force component that is perpendicular to the surface (see Fig. <a class="reference internal" href="#radiation-pressure-fig"><span class="std std-numref">1.6</span></a>.  Radiation pressure has a negligible effect under everyday conditions on Earth.  But small objects, such as dust grains or even asteroids, can experience dramatic effects.  For example, the rings of Saturn are slowly driven into the planet due to radiation pressure from the Solar wind and cosmic rays (e.g., <a class="reference external" href="https://arxiv.org/abs/1201.3578">Jontof-Hutter &amp; Hamilton (2012)</a>).</p>
 <div class="figure align-default" id="radiation-pressure-fig">
-<a class="reference internal image-reference" href="../_images/Figure_6.jpg"><img alt="radiation pressure" src="../_images/Figure_6.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">Radiation pressure force. The surface area <span class="math notranslate nohighlight">\(A\)</span> is seen edge on. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#radiation-pressure-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_61.jpg"><img alt="radiation pressure" src="../_images/Figure_61.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">Radiation pressure force. The surface area <span class="math notranslate nohighlight">\(A\)</span> is seen edge on. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#radiation-pressure-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="blackbody-radiation">
-<h2><span class="section-number">1.4. </span>Blackbody Radiation<a class="headerlink" href="#blackbody-radiation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Blackbody Radiation<a class="headerlink" href="#blackbody-radiation" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-connection-between-color-and-temperature">
-<h3><span class="section-number">1.4.1. </span>The Connection between Color and Temperature<a class="headerlink" href="#the-connection-between-color-and-temperature" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.1. </span>The Connection between Color and Temperature<a class="headerlink" href="#the-connection-between-color-and-temperature" title="Permalink to this headline">#</a></h3>
 <p>The start of thermodynamics begins in earnest in the 19th Century.  Just prior to this epoch (in 1792), Thomas Wedgewood noticed that all of his ovens used to make porcelain became red-hot at the same temperature, independent of their size, shape, and construction.  Further investigation revealed that all objects emit light at all wavelengths with a varying degree of efficiency.  A special case was proposed where the object absorbs all of the incident light energy and re-radiates the incident energy with a characteristic spectrum.  Since this object reflects no light, it is known as a <strong>blackbody</strong> and the emitted energy is <strong>blackbody radiation</strong>.  Stars are blackbodies, at least to a rough first approximation.</p>
 <div class="figure align-default" id="blackbody-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wiens_law.svg/1024px-Wiens_law.svg.png"><img alt="blackbody" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wiens_law.svg/1024px-Wiens_law.svg.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Blackbody radiation as a function of wavelength for various temperatures. Each temperature curve peaks at a different wavelength and Wien’s law describes the shift of that peak. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Wien%27s_displacement_law">Wien’s Law</a>.</span><a class="headerlink" href="#blackbody-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Blackbody radiation as a function of wavelength for various temperatures. Each temperature curve peaks at a different wavelength and Wien’s law describes the shift of that peak. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Wien%27s_displacement_law">Wien’s Law</a>.</span><a class="headerlink" href="#blackbody-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>A blackbody of temperature <span class="math notranslate nohighlight">\(T\)</span> emits a continuous spectrum with some energy at all wavelengths with a maximum intensity occurring at a wavelength <span class="math notranslate nohighlight">\(\lambda_{\rm max}\)</span>.  <strong>Wien’s displacement law</strong> describes the relationship between the temperature and the maximum wavelength as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-98564fce-eb43-4d96-b88d-607db3134d07">
-<span class="eqno">(1.13)<a class="headerlink" href="#equation-98564fce-eb43-4d96-b88d-607db3134d07" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-853c70cf-cd25-4919-968d-2569d1322d72">
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-853c70cf-cd25-4919-968d-2569d1322d72" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda_{\rm max}T = 2.897744 \times 10^6 \; {\rm nm\;K}.
 \end{align}\]</div>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-6">
@@ -1128,10 +1217,10 @@ The maximum wavelength for Rigel is: 239 nm (UV)
 </div>
 </div>
 <div class="section" id="the-stefan-boltzmann-equation">
-<h3><span class="section-number">1.4.2. </span>The Stefan-Boltzmann Equation<a class="headerlink" href="#the-stefan-boltzmann-equation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.4.2. </span>The Stefan-Boltzmann Equation<a class="headerlink" href="#the-stefan-boltzmann-equation" title="Permalink to this headline">#</a></h3>
 <p>Figure <a class="reference internal" href="#blackbody-fig"><span class="std std-numref">1.7</span></a> illustrates that the spectral energy density increases (i.e., more intensity) for a higher surface temperature.  In 1879, Josef Stefan showed that the luminosity <span class="math notranslate nohighlight">\(L\)</span> of a blackbody is proportional to the surface area <span class="math notranslate nohighlight">\(A\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span> (in K).  Five years later, Ludwig Boltzmann derived an equation using the laws of thermodynamics and Maxwell’s formula for radiation pressure.  Now called the <strong>Stefan-Boltzmann equation</strong>, it forms an equality for the luminosity as</p>
 <div class="math notranslate nohighlight" id="equation-sb-eqn">
-<span class="eqno">(1.14)<a class="headerlink" href="#equation-sb-eqn" title="Permalink to this equation">¶</a></span>\[L = \sigma A T^4,\]</div>
+<span class="eqno">(1.14)<a class="headerlink" href="#equation-sb-eqn" title="Permalink to this equation">#</a></span>\[L = \sigma A T^4,\]</div>
 <p>where <span class="math notranslate nohighlight">\(\sigma\)</span> represents the <a class="reference external" href="https://en.wikipedia.org/wiki/Stefan%E2%80%93Boltzmann_constant">Stefan-Boltzmann constant</a> and <span class="math notranslate nohighlight">\(\sigma = 5.670374419\ldots \times 10^{-8}\; {\rm W}\;{\rm m}^{-2}\;{\rm K}^{-4}\)</span>; Note the level of precision is determined by its definition through other fundamental constants.  For a spherical star of Radius <span class="math notranslate nohighlight">\(R\)</span>, the surface area <span class="math notranslate nohighlight">\(A = 4\pi R^2\)</span>.  Since stars are not perfect blackbodies, the equation is redefined in terms of the <strong>effective temperature</strong> <span class="math notranslate nohighlight">\(T_e\)</span> on a star’s surface.  Combining with the equation for flux <span class="math notranslate nohighlight">\(F = L/A\)</span>, the <em>surface flux</em> is <span class="math notranslate nohighlight">\(F_{\rm surf} = \sigma T_e^4\)</span>.</p>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-7">
 
@@ -1181,27 +1270,27 @@ The maximum wavelength for the Sun is: 502.0 nm (visible)
 </div>
 </div>
 <div class="section" id="the-quantization-of-energy">
-<h2><span class="section-number">1.5. </span>The Quantization of Energy<a class="headerlink" href="#the-quantization-of-energy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>The Quantization of Energy<a class="headerlink" href="#the-quantization-of-energy" title="Permalink to this headline">#</a></h2>
 <div class="section" id="rayleigh-jeans-and-wien-approximation">
-<h3><span class="section-number">1.5.1. </span>Rayleigh-Jeans and Wien Approximation<a class="headerlink" href="#rayleigh-jeans-and-wien-approximation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.1. </span>Rayleigh-Jeans and Wien Approximation<a class="headerlink" href="#rayleigh-jeans-and-wien-approximation" title="Permalink to this headline">#</a></h3>
 <p>Although the blackbody curves could be determined empirically, physicists wanted to derive an equation from fundamental physics (first) principles.  Lord Rayleigh developed a formula based on Maxwell’s equations and thermal physics.  His strategy considered a cavity of temperature <span class="math notranslate nohighlight">\(T\)</span> filled with radiation (i.e., a hot oven filled with standing waves).  If <span class="math notranslate nohighlight">\(L\)</span> is the distance between the oven’s walls, then the standing waves will appear at wavelengths <span class="math notranslate nohighlight">\(\lambda = 2L/n\)</span> and <span class="math notranslate nohighlight">\(n\)</span> is an integer.  Each of those wavelengths should receive a packet of energy (E = kT), where <span class="math notranslate nohighlight">\(k = 1.3806503 \times 10^{-23} J/K\)</span> is Boltzmann’s constant from chemistry.  Rayleigh derived an approximation for <span class="math notranslate nohighlight">\(B_\lambda(T)\)</span> that was valid for large (long) <span class="math notranslate nohighlight">\(\lambda\)</span> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f56df58a-fd22-412e-b630-0e0a1fa2716d">
-<span class="eqno">(1.15)<a class="headerlink" href="#equation-f56df58a-fd22-412e-b630-0e0a1fa2716d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-02624775-fe0d-4bf1-ad19-1663c0569438">
+<span class="eqno">(1.15)<a class="headerlink" href="#equation-02624775-fe0d-4bf1-ad19-1663c0569438" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx \frac{2ckT}{\lambda^4},
 \end{align}\]</div>
 <p>and agrees well with the blackbody curve for long <span class="math notranslate nohighlight">\(\lambda\)</span>.  However, this result explodes for short <span class="math notranslate nohighlight">\(\lambda\)</span> (i.e., <span class="math notranslate nohighlight">\( \lim_{\lambda\rightarrow 0} B_\lambda(T) = \infty\)</span>).  The theoretical results was dubbed the “ultraviolet catastrophe” and is known today as the <strong>Rayleigh-Jeans law</strong>.</p>
 <p>At the same time, Wien worked on his own <a class="reference external" href="https://en.wikipedia.org/wiki/Wien_approximation">approximation</a> starting from the Stefan-Boltzmann law.  He developed a formula that was accurate at <em>short</em> wavelengths as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e5439139-53b4-4592-beeb-c7a93c3145b4">
-<span class="eqno">(1.16)<a class="headerlink" href="#equation-e5439139-53b4-4592-beeb-c7a93c3145b4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-af1cc85c-9356-47c8-a988-c9d512b7cb55">
+<span class="eqno">(1.16)<a class="headerlink" href="#equation-af1cc85c-9356-47c8-a988-c9d512b7cb55" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> were determined by a best-fit to the experimental data.</p>
 </div>
 <div class="section" id="planck-s-function-for-the-blackbody-radiation-curve">
-<h3><span class="section-number">1.5.2. </span>Planck’s Function for the Blackbody Radiation Curve<a class="headerlink" href="#planck-s-function-for-the-blackbody-radiation-curve" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.2. </span>Planck’s Function for the Blackbody Radiation Curve<a class="headerlink" href="#planck-s-function-for-the-blackbody-radiation-curve" title="Permalink to this headline">#</a></h3>
 <p>Max Planck discovered a slight modification to Wien’s approximation could fit the blackbody curves for both long and short wavelengths.  This modification was subtracting one from the exponential function as</p>
 <div class="math notranslate nohighlight" id="equation-planck-fn">
-<span class="eqno">(1.17)<a class="headerlink" href="#equation-planck-fn" title="Permalink to this equation">¶</a></span>\[B_\lambda(T) = \frac{a\lambda^{-5}}{e^{\frac{b}{\lambda T}}-1}.\]</div>
+<span class="eqno">(1.17)<a class="headerlink" href="#equation-planck-fn" title="Permalink to this equation">#</a></span>\[B_\lambda(T) = \frac{a\lambda^{-5}}{e^{\frac{b}{\lambda T}}-1}.\]</div>
 <p>To determine the constants <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, Planck assumed that a standing wave was allowed for only a specific energy value that was an integral multiple of a minimum wave energy.  The minimum energy (or quantum) is <span class="math notranslate nohighlight">\(h\nu\)</span> (or <span class="math notranslate nohighlight">\(hc/\lambda\)</span>), where <span class="math notranslate nohighlight">\(h\)</span> is a constant.  Given the assumption of quantized wave energy, the problem of the ultraviolet catastrophe was avoided.  Equation <a class="reference internal" href="#equation-planck-fn">(1.17)</a> is now known as <a class="reference external" href="https://en.wikipedia.org/wiki/Planck%27s_law"><strong>Planck’s function</strong></a>, where <span class="math notranslate nohighlight">\(a=2hc^2\)</span> and <span class="math notranslate nohighlight">\(b= (hc)/k\)</span>.  The value of <span class="math notranslate nohighlight">\(h\)</span> is known as <strong>Planck’s constant</strong> and is <span class="math notranslate nohighlight">\(h = 6.6206876 \times 10^{-34}\)</span> J s.</p>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-8">
 
@@ -1241,36 +1330,36 @@ B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 <p>See the <a class="reference external" href="https://docs.sympy.org/latest/index.html">SymPy</a> documentation for more details on its usage.</p>
 </div>
 <div class="section" id="the-planck-function-and-astrophysics">
-<h3><span class="section-number">1.5.3. </span>The Planck Function and Astrophysics<a class="headerlink" href="#the-planck-function-and-astrophysics" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.5.3. </span>The Planck Function and Astrophysics<a class="headerlink" href="#the-planck-function-and-astrophysics" title="Permalink to this headline">#</a></h3>
 <p>In spherical coordinates (see Fig. <a class="reference internal" href="#blackbody-element-fig"><span class="std std-numref">1.8</span></a>), the radiant energy for a given wavelength per unit time can be expressed from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span> as</p>
 <div class="math notranslate nohighlight" id="equation-radiation-fn">
-<span class="eqno">(1.18)<a class="headerlink" href="#equation-radiation-fn" title="Permalink to this equation">¶</a></span>\[L_\lambda d\lambda = \int \int \int B_\lambda(T)d\lambda dA \cos \theta \sin \theta d\theta d\phi. \]</div>
+<span class="eqno">(1.18)<a class="headerlink" href="#equation-radiation-fn" title="Permalink to this equation">#</a></span>\[L_\lambda d\lambda = \int \int \int B_\lambda(T)d\lambda dA \cos \theta \sin \theta d\theta d\phi. \]</div>
 <p>At times it’s more convenient to work with frequency intervals <span class="math notranslate nohighlight">\(d\nu\)</span> rather than wavelength intervals.  In which case, <span class="math notranslate nohighlight">\(d\nu = -\frac{c}{\lambda^2} d\lambda\)</span> can be substituted in Eqn. <a class="reference internal" href="#equation-radiation-fn">(1.18)</a> to determine <span class="math notranslate nohighlight">\(B_\nu(T)\)</span>.</p>
 <div class="figure align-default" id="blackbody-element-fig">
-<a class="reference internal image-reference" href="../_images/Figure_9.jpg"><img alt="blackbody" src="../_images/Figure_9.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">Blackbody radiation from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span>. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#blackbody-element-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_91.jpg"><img alt="blackbody" src="../_images/Figure_91.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">Blackbody radiation from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span>. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#blackbody-element-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The Planck function relates the observed properties of a star (e.g., radiant flux, apparent magnitude) and its intrinsic properties (e.g., radius and temperature).  Consider a star as a spherical blackbody of radius <span class="math notranslate nohighlight">\(R\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span>.  Each small patch of surface <span class="math notranslate nohighlight">\(dA\)</span> emits the same amount of radiation and the energy per second (luminosity) is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-60e980df-ca70-483b-84e2-528e3c81ea0d">
-<span class="eqno">(1.19)<a class="headerlink" href="#equation-60e980df-ca70-483b-84e2-528e3c81ea0d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-35aac26d-7728-4f93-a4bd-d278cabc38d3">
+<span class="eqno">(1.19)<a class="headerlink" href="#equation-35aac26d-7728-4f93-a4bd-d278cabc38d3" title="Permalink to this equation">#</a></span>\[\begin{align}
  \int_{\phi=0}^{2\pi} \int_{\theta=0}^{\pi/2} \int_A B_\lambda(T)d\lambda dA \cos \theta \sin \theta d\theta d\phi = 4\pi^2 R^2 B_\lambda d\lambda.
 \end{align}\]</div>
 <p>The angular integration (<span class="math notranslate nohighlight">\(\theta\)</span>,<span class="math notranslate nohighlight">\(\phi\)</span>) yields a factor of <span class="math notranslate nohighlight">\(\pi\)</span>, while the integral over the surface area <span class="math notranslate nohighlight">\(A\)</span> produces a factor of <span class="math notranslate nohighlight">\(4\pi R^2\)</span> (i.e., surface area of a sphere).  The result is the <strong>monochromatic luminosity</strong>, which is</p>
 <div class="math notranslate nohighlight" id="equation-mono-lumin">
-<span class="eqno">(1.20)<a class="headerlink" href="#equation-mono-lumin" title="Permalink to this equation">¶</a></span>\[L_\lambda d\lambda = \frac{8h(\pi Rc)^2/\lambda^5}{e^{\frac{hc}{\lambda kT}-1}}d\lambda. \]</div>
+<span class="eqno">(1.20)<a class="headerlink" href="#equation-mono-lumin" title="Permalink to this equation">#</a></span>\[L_\lambda d\lambda = \frac{8h(\pi Rc)^2/\lambda^5}{e^{\frac{hc}{\lambda kT}-1}}d\lambda. \]</div>
 <p>Integrating over all wavelengths leads to the Stefan-Boltzmann equation (see Eqn. <a class="reference internal" href="#equation-sb-eqn">(1.14)</a>). and the monochromatic flux can be obtained by simply dividing Eqn. <a class="reference internal" href="#equation-mono-lumin">(1.20)</a>  by <span class="math notranslate nohighlight">\(4\pi r^2\)</span> (<em>r is the distance away from the sphere</em>).</p>
 </div>
 </div>
 <div class="section" id="the-color-index">
-<h2><span class="section-number">1.6. </span>The Color Index<a class="headerlink" href="#the-color-index" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.6. </span>The Color Index<a class="headerlink" href="#the-color-index" title="Permalink to this headline">#</a></h2>
 <p>Section 1.2 introduced the apparent <span class="math notranslate nohighlight">\(m\)</span> and absolute magnitudes <span class="math notranslate nohighlight">\(M\)</span>, which provide the brightness measured over all wavelengths and corresponds to the <strong>bolometric magnitude</strong>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5336b479-0ba9-4e3b-9aae-47d8848a39ad">
-<span class="eqno">(1.21)<a class="headerlink" href="#equation-5336b479-0ba9-4e3b-9aae-47d8848a39ad" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0c2af265-afb0-44f0-b16c-0c91c9bb7069">
+<span class="eqno">(1.21)<a class="headerlink" href="#equation-0c2af265-afb0-44f0-b16c-0c91c9bb7069" title="Permalink to this equation">#</a></span>\[\begin{align}
  M_{bol} = M_{Sun} - 2.5\log_{10}\left(\frac{L}{L_\odot}\right).
 \end{align}\]</div>
 <p>In practice, detectors measure the radiant flux through a filter that allows only a certain wavelength region to pass through and reach the detector or the detector is sensitive to a particular wavelength range (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Charge-coupled_device">CCDs</a>).</p>
 <div class="section" id="ubv-wavelength-filters">
-<h3><span class="section-number">1.6.1. </span>UBV Wavelength Filters<a class="headerlink" href="#ubv-wavelength-filters" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.1. </span>UBV Wavelength Filters<a class="headerlink" href="#ubv-wavelength-filters" title="Permalink to this headline">#</a></h3>
 <p>A star’s <em>color</em> can be precisely measured using a filter that permits a narrow range of wavelengths (i.e., bands) to pass through.  Astronomers developed a standard <em>UBV</em>  photometric system (or <a class="reference external" href="https://en.wikipedia.org/wiki/UBV_photometric_system">Johnson system</a>) to help classify stars by their color.  These three filters are designated by letter as:</p>
 <ul class="simple">
 <li><p><em>U</em> (ultraviolet) magnitude, where the filter is centered at 365 <span class="math notranslate nohighlight">\(\pm\)</span> 68 nm,</p></li>
@@ -1278,13 +1367,13 @@ B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 <li><p><em>V</em> (visual or green) magnitude, where the filter is centered at 550 <span class="math notranslate nohighlight">\(\pm\)</span> 89 nm.</p></li>
 </ul>
 <div class="figure align-default" id="ubv-fig">
-<a class="reference internal image-reference" href="../_images/Figure_10.jpg"><img alt="UBV filter" src="../_images/Figure_10.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../_images/Figure_101.jpg"><img alt="UBV filter" src="../_images/Figure_101.jpg" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">Sensitivity functions <span class="math notranslate nohighlight">\(S(\lambda)\)</span> for U, B, and V filters. Image Credit: Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1965ApJ...141..923J/abstract">Johnson, Ap. J., 141,
-923, 1965</a>.</span><a class="headerlink" href="#ubv-fig" title="Permalink to this image">¶</a></p>
+923, 1965</a>.</span><a class="headerlink" href="#ubv-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="color-indices-and-the-bolometric-correction">
-<h3><span class="section-number">1.6.2. </span>Color Indices and the Bolometric Correction<a class="headerlink" href="#color-indices-and-the-bolometric-correction" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.2. </span>Color Indices and the Bolometric Correction<a class="headerlink" href="#color-indices-and-the-bolometric-correction" title="Permalink to this headline">#</a></h3>
 <p>Using the distance modulus equation (Eqn. <a class="reference internal" href="#equation-dist-modulus">(1.9)</a>) and a known distance <span class="math notranslate nohighlight">\(d\)</span>, a star’s absolute magnitude <span class="math notranslate nohighlight">\(M\)</span> can be determined and a subscript is added to designate the magnitude within a particular band pass (e.g., <span class="math notranslate nohighlight">\(M_U\)</span> is the <span class="math notranslate nohighlight">\(U\)</span> magnitude).  A <strong>color-index</strong> is the difference between a star’s <em>apparent</em> brightness in each of the standard wavelength filters.  For example:</p>
 <div class="math notranslate nohighlight">
 \[U-B = M_U - M_B\]</div>
@@ -1293,7 +1382,7 @@ B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 \[B-V = M_B - M_V\]</div>
 <p>represent the difference in stellar magnitudes between the filters.  Recall that a brighter star is denoted by a smaller (or more negative) value and vice versa for a dimmer star.  A star is deemed “blue” if its <span class="math notranslate nohighlight">\(M_B\)</span> is brighter than its <span class="math notranslate nohighlight">\(M_V\)</span> or <span class="math notranslate nohighlight">\(B-V\)</span> is brighter.  A particular magnitude depends on the star’s distance, but the difference of magnitudes is <em>independent</em> of the star’s distance (see Eqn <a class="reference internal" href="#equation-flux-ratio-modulus">(1.10)</a>).  The difference between a star’s bolometric magnitude and its visual magnitude is called the <strong>bolometric correction</strong> <span class="math notranslate nohighlight">\(BC\)</span> or</p>
 <div class="math notranslate nohighlight" id="equation-bolometric-corr">
-<span class="eqno">(1.22)<a class="headerlink" href="#equation-bolometric-corr" title="Permalink to this equation">¶</a></span>\[BC = m_{bol} - m_V = M_{bol}-M_V.\]</div>
+<span class="eqno">(1.22)<a class="headerlink" href="#equation-bolometric-corr" title="Permalink to this equation">#</a></span>\[BC = m_{bol} - m_V = M_{bol}-M_V.\]</div>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-9">
 
 <p class="admonition-title"><span class="caption-number">Exercise 1.10 </span></p>
@@ -1357,11 +1446,11 @@ The apparent bolometric magnitude of Sirius A is: -1.57
 <p>Apparent magnitudes corresponding to each filter (UBV) can be determined through the apparent flux compared to another star, where the best measurement is a space telescope above the atmosphere.  However, methods of differential photometry can also be employed.  If the apparent magnitude and flux of the Sun is known for a blue filter, then the flux <span class="math notranslate nohighlight">\(F_\star^B\)</span> of the target star needs to be measured and <span class="math notranslate nohighlight">\(m_\star^B\)</span> can be determined using Eqn. <a class="reference internal" href="#equation-flux-ratio">(1.7)</a>.</p>
 <p>A <em>sensitivity function</em> <span class="math notranslate nohighlight">\(S(\lambda)\)</span> describes how much of a star’s flux can be detected for a given wavelength.  The telescope’s mirror is not 100% reflective (some chromatic photometric loss) and the filters are not uniform across the respected band pass.  A star’s magnitude with respect to a given filter <span class="math notranslate nohighlight">\(X\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-star-mag">
-<span class="eqno">(1.23)<a class="headerlink" href="#equation-star-mag" title="Permalink to this equation">¶</a></span>\[  m_X = -2.5 \log_{10}\left(\int_0^\infty F_\lambda S_X d\lambda\right) + C_X,\]</div>
+<span class="eqno">(1.23)<a class="headerlink" href="#equation-star-mag" title="Permalink to this equation">#</a></span>\[  m_X = -2.5 \log_{10}\left(\int_0^\infty F_\lambda S_X d\lambda\right) + C_X,\]</div>
 <p>where the constant <span class="math notranslate nohighlight">\(C_X\)</span> is chosen so that Vega (<span class="math notranslate nohighlight">\(\alpha\)</span> Lyrae) is normalized to <em>zero</em> magnitude through the filter and <span class="math notranslate nohighlight">\(F_\lambda\)</span> can be determined using Eqn 19.  Modern calibrations use the average magnitude of several stars.  This does <strong>not</strong> imply that Vega or other calibration stars would appear equally bright viewed through each filter.</p>
 <p>The <em>ideal</em> case would be for a <em>perfect</em> bolometer, where <span class="math notranslate nohighlight">\(S(\lambda)=1\)</span> and a constant <span class="math notranslate nohighlight">\(C_{\rm bol}\)</span> is measured over all wavelengths (i.e., independent of the filter). Equation <a class="reference internal" href="#equation-star-mag">(1.23)</a> becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1a7fb8cc-69be-473c-bd5a-54f22036aa43">
-<span class="eqno">(1.24)<a class="headerlink" href="#equation-1a7fb8cc-69be-473c-bd5a-54f22036aa43" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7063d000-3b2e-4c4b-b7f5-6f537940a217">
+<span class="eqno">(1.24)<a class="headerlink" href="#equation-7063d000-3b2e-4c4b-b7f5-6f537940a217" title="Permalink to this equation">#</a></span>\[\begin{align}
   m_{bol} = -2.5 \log_{10}\left(\int_0^\infty F_\lambda d\lambda\right) + C_{bol},
 \end{align}\]</div>
 <div class="cell tag_hide-cell docutils container">
@@ -1423,17 +1512,19 @@ The apparent bolometric magnitude of Sirius A is: -1.57
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The peak wavelength of the Sun is 501.5.
-Total flux from the Sun is: 16.41 in base-10 logarithm.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total flux from the Sun is: 16.41 in base-10 logarithm.
 The bolometric constant C_bol for the Sun is 14.20
 The bolometric correction BC for the Sun is -0.09
 </pre></div>
 </div>
-<img alt="../_images/continuous-spectrum-of-light_31_1.png" src="../_images/continuous-spectrum-of-light_31_1.png" />
+<img alt="../_images/continuous-spectrum-of-light_31_2.png" src="../_images/continuous-spectrum-of-light_31_2.png" />
 </div>
 </div>
 <p>The value of <span class="math notranslate nohighlight">\(C_{bol}\)</span> was first calibrated so that the bolometric correction <span class="math notranslate nohighlight">\(BC = m_{bol}-m_V &lt; 0\)</span> for all stars while still be close to zeros as possible.  However, it was discovered that some supergiant star have <em>positive</em> bolometric corrections.  Using Eqn. <a class="reference internal" href="#equation-bolometric-corr">(1.22)</a>, the color indices (<span class="math notranslate nohighlight">\(U-B\)</span> or <span class="math notranslate nohighlight">\(B-V\)</span>) are determined through the flux ratio.  For <span class="math notranslate nohighlight">\(X-Y\)</span>, it follows that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3b5ffe02-a2e6-473a-9e56-174b0cca2f0c">
-<span class="eqno">(1.25)<a class="headerlink" href="#equation-3b5ffe02-a2e6-473a-9e56-174b0cca2f0c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-30ee6656-1203-4210-8f27-9cd5a490f682">
+<span class="eqno">(1.25)<a class="headerlink" href="#equation-30ee6656-1203-4210-8f27-9cd5a490f682" title="Permalink to this equation">#</a></span>\[\begin{align}
  X-Y = m_X - m_Y = -2.5 \log_{10}\left(\frac{\int F_\lambda S_X d\lambda}{\int F_\lambda S_Y d\lambda} \right) + C_{X-Y}, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C_{X-Y} = C_X - C_Y\)</span>.  Note that the dependence on (<span class="math notranslate nohighlight">\(R/r\)</span>) cancels in the flux ratio and thus the color indices do not depend either the radius <span class="math notranslate nohighlight">\(R\)</span> of the model star or the distance <span class="math notranslate nohighlight">\(r\)</span> from the star.  Moreover, the color indices reduce the integral over the flux to the band pass of the filter because <span class="math notranslate nohighlight">\(S(\lambda) = 0\)</span> due to the nature of the filter.  The constant <span class="math notranslate nohighlight">\(C_{X-Y}\)</span> can be approximated by determining the flux at the peak wavelength multiplied by the respective bandwidth.</p>
@@ -1481,23 +1572,23 @@ C_{B-V} &amp; = 0.65.
 </div>
 </div>
 <div class="section" id="the-color-color-diagram">
-<h3><span class="section-number">1.6.3. </span>The Color-Color-Diagram<a class="headerlink" href="#the-color-color-diagram" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.6.3. </span>The Color-Color-Diagram<a class="headerlink" href="#the-color-color-diagram" title="Permalink to this headline">#</a></h3>
 <p>A <strong>color-color diagram</strong> shows the relation between the <span class="math notranslate nohighlight">\(U-B\)</span> and <span class="math notranslate nohighlight">\(B-V\)</span> color indices for main sequence stars (see Fig. <a class="reference internal" href="#color-color-fig"><span class="std std-numref">1.10</span></a>).  Main-sequence stars are powered by the nuclear fusion of hydrogen nuclei and approximately 80-90% of all stars lie on the main-sequence.  If the stars were true blackbodies, then there is a linear relationship between the color indices.  When the color indices are plotted for real stars, astronomers find the observed relationship isn’t as simple.</p>
 <div class="figure align-default" id="color-color-fig">
-<a class="reference internal image-reference" href="../_images/Figure_11.jpg"><img alt="color color" src="../_images/Figure_11.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.10 </span><span class="caption-text">Color-color diagram for main-sequence stars. The dashed line is for a blackbody. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#color-color-fig" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../_images/Figure_112.jpg"><img alt="color color" src="../_images/Figure_112.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.10 </span><span class="caption-text">Color-color diagram for main-sequence stars. The dashed line is for a blackbody. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#color-color-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>Some light is absorbed as it travels from the stellar core through the star’s atmosphere.  The light is differentially absorbed as a function of the wavelength of light and the star’s temperature.  Very hot stars (Spectral type B0) agree better with the model black body compared to cooler stars (Spectral Type A0, F0, G0, K0, and M0).</p>
 </div>
 </div>
 <div class="section" id="homework">
-<h2><span class="section-number">1.7. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
 <div class="admonition-problem-1 admonition">
 <p class="admonition-title">Problem 1</p>
 <p>In 1672, an international effort was made to measure the parallax angle of Mars at the time of opposition (when it was closest to Earth; see Fig. <a class="reference internal" href="#problem-fig"><span class="std std-numref">1.11</span></a>.  Consider two observers who are separated by a baseline equal to Earth’s diameter.</p>
 <div class="figure align-default" id="problem-fig">
 <a class="reference internal image-reference" href="../_images/Figure_P1.jpg"><img alt="Mars parallax" src="../_images/Figure_P1.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.11 </span><span class="caption-text">The retrograde motion of Mars described by the Copernican Model.  Note that the lines of sight from Earth to Mars cross for position 3, 4, and 5. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#problem-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.11 </span><span class="caption-text">The retrograde motion of Mars described by the Copernican Model.  Note that the lines of sight from Earth to Mars cross for position 3, 4, and 5. Image Credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#problem-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>If the difference in there measurements of Mars’ angular position is 33.6 <span class="math notranslate nohighlight">\(^{\prime\prime}\)</span>, what is the distance between Earth and Mars at the time of opposition? Express your answer both in units of m and in AU.</p>
 </div>
@@ -1580,9 +1671,11 @@ B_\nu (T) = \frac{2h\nu^3/c^2}{e^{\frac{h\nu}{kT}-1}}.
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Preamble/Markdown-basics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1598,24 +1691,28 @@ B_\nu (T) = \frac{2h\nu^3/c^2}{e^{\frac{h\nu}{kT}-1}}.
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
