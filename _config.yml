@@ -7,7 +7,7 @@
 # Book settings
 title                       : ASTR4410 Modern Astrophysics  # The title of the book. Will be placed in the left navbar.
 author                      : Billy Quarles  # The author of the book
-copyright                   : "2022"  # Copyright year to be placed in the footer
+copyright                   : "2023"  # Copyright year to be placed in the footer
 logo                        : ""  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints","*.png"]
@@ -24,18 +24,16 @@ execute:
   allow_errors              : true # If `False`, when a code cell raises an error the execution is stopped, otherwise all cells are always run.
   stderr_output             : show  # One of 'show', 'remove', 'remove-warn', 'warn', 'error', 'severe'
 
-#######################################################################################
 # Parse and render settings
 parse:
   myst_url_schemes          : [mailto, http, https]  # URI schemes that will be recognised as external URLs in Markdown links
   myst_enable_extensions:
+  # don't forget to list any other extensions you want enabled,
+  # including those that are enabled by default!
     - amsmath  # needed for LaTeX-style math blocks like \begin{align*} \end{align*} with $$ delimitations
     - dollarmath
     - html_image
     - html_admonition
-  #   # don't forget to list any other extensions you want enabled,
-  #   # including those that are enabled by default!
-  #  - amsmath  # needed for LaTeX-style math blocks like \begin{align*} \end{align*} with $$ delimitations
 
 #######################################################################################
 # LaTeX-specific settings
@@ -47,10 +45,9 @@ latex:
 launch_buttons:
   notebook_interface: classic  # The interface interactive links will activate ["classic", "jupyterlab"]
   colab_url: "https://colab.research.google.com" # The URL of Google Colab (https://colab.research.google.com)
-  binderhub_url: "" #https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  binderhub_url: "https://mybinder.org" #https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
   #jupyterhub_url: "https://lore.atmos.albany.edu:8000"  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
-  #thebe: false  # Add a thebe button to pages (requires the repository to run on Binder)
-  
+  thebe: true  # Add a thebe button to pages (requires the repository to run on Binder)
 
 repository:
   url: https://github.com/saturnaxis/ModernAstro # The URL to your book's repository
@@ -66,14 +63,13 @@ html:
   use_issues_button         : false  # Whether to add an "open an issue" button
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   #extra_footer              : "This page was created by <a href="http://www.atmos.albany.edu/facstaff/brose">Brian E. J. Rose</a> using <a href="https://jupyterbook.org">Jupyter Book</a>."  # Will be displayed underneath the footer.
-  google_analytics_id       : "G-CP3EW7BJEH" # # A GA id that can be used to track book views.
+  google_analytics_id       : "G-CP3EW7BJEH"  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
   baseurl                   : "https://saturnaxis.github.io/ModernAstro/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
   comments:
     hypothesis              : false
     utterances              : false
 sphinx:
-  config:
-    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   extra_extensions:
     - sphinx_exercise
+    - sphinx_inline_tabs
