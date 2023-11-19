@@ -1,51 +1,74 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. Stellar Atmospheres &#8212; ASTR4410 Modern Astrophysics</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>5. Stellar Atmospheres &#8212; ASTR4410 Modern Astrophysics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-CP3EW7BJEH');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,65 +77,98 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_9/stellar-atmospheres';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. The Sun" href="../Chapter_10/sun.html" />
     <link rel="prev" title="4. The Classification of Stellar Spectra" href="../Chapter_8/classification-of-stellar-spectra.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-CP3EW7BJEH');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">ASTR4410 Modern Astrophysics</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ASTR4410 Modern Astrophysics</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -121,697 +177,335 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Preamble/who-for.html">
-   Who are these notes for?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Preamble/Python-basics.html">
-   Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Preamble/Markdown-basics.html">
-   Introduction to Markdown
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/who-for.html">Who are these notes for?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/Python-basics.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/Markdown-basics.html">Introduction to Markdown</a></li>
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_3/continuous-spectrum-of-light.html">
-   1. The Continuous Spectrum of Light
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_5/interaction-of-light-and-matter.html">
-   2. The Interaction of Matter and Light
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_6/telescopes.html">
-   3. Telescopes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_8/classification-of-stellar-spectra.html">
-   4. The Classification of Stellar Spectra
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/continuous-spectrum-of-light.html">1. The Continuous Spectrum of Light</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_5/interaction-of-light-and-matter.html">2. The Interaction of Matter and Light</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_6/telescopes.html">3. Telescopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_8/classification-of-stellar-spectra.html">4. The Classification of Stellar Spectra</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Stellar Interiors &amp; Star Formation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stellar Interiors &amp; Star Formation</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   5. Stellar Atmospheres
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_10/sun.html">
-   6. The Sun
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_11/interiors-of-stars.html">
-   7. The Interiors of Stars
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_12/interstellar-medium-and-star-formation.html">
-   8. The Interstellar Medium and Star Formation
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Stellar Atmospheres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_10/sun.html">6. The Sun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_11/interiors-of-stars.html">7. The Interiors of Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_12/interstellar-medium-and-star-formation.html">8. The Interstellar Medium and Star Formation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Stellar Evolution &amp; Death
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stellar Evolution &amp; Death</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_13/stellar-evolution.html">
-   9. Main-Sequence and Post-Main-Sequence Stellar Evolution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_14/stellar-pulsation.html">
-   10. Stellar Pulsation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">
-   11. The Fate of Massive Stars
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html">
-   12. The Degenerate Remnants of Stars
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_13/stellar-evolution.html">9. Main-Sequence and Post-Main-Sequence Stellar Evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_14/stellar-pulsation.html">10. Stellar Pulsation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">11. The Fate of Massive Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html">12. The Degenerate Remnants of Stars</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_9/stellar-atmospheres.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Chapter_9/stellar-atmospheres.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Chapter_9/stellar-atmospheres.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+<a href="https://github.com/saturnaxis/ModernAstro" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/saturnaxis/ModernAstro"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
 
 </a>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/Chapter_9/stellar-atmospheres.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Chapter_9/stellar-atmospheres.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
   </span>
 
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-description-of-the-radiation-field">
-   5.1. The Description of the Radiation Field
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-specific-and-mean-intensities">
-     5.1.1. The Specific and Mean Intensities
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-specific-energy-density">
-     5.1.2. The Specific Energy Density
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-specific-radiative-flux">
-     5.1.3. The Specific Radiative Flux
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#radiation-pressure">
-     5.1.4. Radiation Pressure
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problems">
-     5.1.5.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stellar-opacity">
-   5.2. Stellar Opacity
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#temperature-and-local-thermodynamic-equilibrium">
-     5.2.1. Temperature and Local Thermodynamic Equilibrium
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-definition-of-opacity">
-     5.2.2. The Definition of Opacity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optical-depth">
-     5.2.3. Optical Depth
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#general-sources-of-opacity">
-     5.2.4. General Sources of Opacity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-rosseland-mean-opacity">
-     5.2.5. The Rosseland Mean Opacity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     5.2.6.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#radiative-transfer">
-   5.3. Radiative Transfer
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#photon-emission-processes">
-     5.3.1. Photon Emission Processes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-random-walk">
-     5.3.2. The Random Walk
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#limb-darkening">
-     5.3.3. Limb Darkening
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-radiation-pressure-gradient">
-     5.3.4. The Radiation Pressure Gradient
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-transfer-equation">
-   5.4. The Transfer Equation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-emission-coefficient">
-     5.4.1. The Emission Coefficient
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">
-     5.4.2. The Source Function and the Transfer Equation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">
-     5.4.3. The Special Case of Blackbody Radiation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">
-     5.4.4. The Assumption of a Plane-Parallel Atmosphere
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-eddington-approximation">
-     5.4.5. The Eddington Approximation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#limb-darkening-revisited">
-     5.4.6. Limb Darkening Revisited
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     5.4.7.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">
-   5.5. The Profiles of Spectral Lines
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#equivalent-widths">
-     5.5.1. Equivalent Widths
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#processes-that-broaden-spectral-lines">
-     5.5.2. Processes That Broaden Spectral Lines
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-voigt-profile">
-     5.5.3. The Voigt Profile
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-curve-of-growth">
-     5.5.4. The Curve of Growth
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computer-modeling-of-stellar-atmospheres">
-     5.5.5. Computer Modeling of Stellar Atmospheres
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#supplemental-links">
-   5.6. Supplemental Links
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Stellar Atmospheres</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-description-of-the-radiation-field">
-   5.1. The Description of the Radiation Field
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-specific-and-mean-intensities">
-     5.1.1. The Specific and Mean Intensities
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-specific-energy-density">
-     5.1.2. The Specific Energy Density
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-specific-radiative-flux">
-     5.1.3. The Specific Radiative Flux
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#radiation-pressure">
-     5.1.4. Radiation Pressure
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#problems">
-     5.1.5.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stellar-opacity">
-   5.2. Stellar Opacity
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#temperature-and-local-thermodynamic-equilibrium">
-     5.2.1. Temperature and Local Thermodynamic Equilibrium
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-definition-of-opacity">
-     5.2.2. The Definition of Opacity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#optical-depth">
-     5.2.3. Optical Depth
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#general-sources-of-opacity">
-     5.2.4. General Sources of Opacity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-rosseland-mean-opacity">
-     5.2.5. The Rosseland Mean Opacity
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     5.2.6.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#radiative-transfer">
-   5.3. Radiative Transfer
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#photon-emission-processes">
-     5.3.1. Photon Emission Processes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-random-walk">
-     5.3.2. The Random Walk
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#limb-darkening">
-     5.3.3. Limb Darkening
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-radiation-pressure-gradient">
-     5.3.4. The Radiation Pressure Gradient
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-transfer-equation">
-   5.4. The Transfer Equation
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-emission-coefficient">
-     5.4.1. The Emission Coefficient
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">
-     5.4.2. The Source Function and the Transfer Equation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">
-     5.4.3. The Special Case of Blackbody Radiation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">
-     5.4.4. The Assumption of a Plane-Parallel Atmosphere
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-eddington-approximation">
-     5.4.5. The Eddington Approximation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#limb-darkening-revisited">
-     5.4.6. Limb Darkening Revisited
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     5.4.7.
-     <strong>
-      Problems
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">
-   5.5. The Profiles of Spectral Lines
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#equivalent-widths">
-     5.5.1. Equivalent Widths
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#processes-that-broaden-spectral-lines">
-     5.5.2. Processes That Broaden Spectral Lines
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-voigt-profile">
-     5.5.3. The Voigt Profile
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-curve-of-growth">
-     5.5.4. The Curve of Growth
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#computer-modeling-of-stellar-atmospheres">
-     5.5.5. Computer Modeling of Stellar Atmospheres
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#supplemental-links">
-   5.6. Supplemental Links
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Stellar Atmospheres</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-description-of-the-radiation-field">5.1. The Description of the Radiation Field</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-and-mean-intensities">5.1.1. The Specific and Mean Intensities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-energy-density">5.1.2. The Specific Energy Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-radiative-flux">5.1.3. The Specific Radiative Flux</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation-pressure">5.1.4. Radiation Pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">5.1.5. <strong>Problems</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-opacity">5.2. Stellar Opacity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-and-local-thermodynamic-equilibrium">5.2.1. Temperature and Local Thermodynamic Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-opacity">5.2.2. The Definition of Opacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-depth">5.2.3. Optical Depth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-sources-of-opacity">5.2.4. General Sources of Opacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rosseland-mean-opacity">5.2.5. The Rosseland Mean Opacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.2.6. <strong>Problems</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiative-transfer">5.3. Radiative Transfer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photon-emission-processes">5.3.1. Photon Emission Processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-random-walk">5.3.2. The Random Walk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limb-darkening">5.3.3. Limb Darkening</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-radiation-pressure-gradient">5.3.4. The Radiation Pressure Gradient</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transfer-equation">5.4. The Transfer Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-emission-coefficient">5.4.1. The Emission Coefficient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">5.4.2. The Source Function and the Transfer Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">5.4.3. The Special Case of Blackbody Radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4. The Assumption of a Plane-Parallel Atmosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5. The Eddington Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limb-darkening-revisited">5.4.6. Limb Darkening Revisited</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.4.7. <strong>Problems</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">5.5. The Profiles of Spectral Lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-widths">5.5.1. Equivalent Widths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-that-broaden-spectral-lines">5.5.2. Processes That Broaden Spectral Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-voigt-profile">5.5.3. The Voigt Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curve-of-growth">5.5.4. The Curve of Growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-modeling-of-stellar-atmospheres">5.5.5. Computer Modeling of Stellar Atmospheres</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplemental-links">5.6. Supplemental Links</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="stellar-atmospheres">
-<h1><span class="section-number">5. </span>Stellar Atmospheres<a class="headerlink" href="#stellar-atmospheres" title="Permalink to this headline">#</a></h1>
-<div class="section" id="the-description-of-the-radiation-field">
-<h2><span class="section-number">5.1. </span>The Description of the Radiation Field<a class="headerlink" href="#the-description-of-the-radiation-field" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="stellar-atmospheres">
+<h1><span class="section-number">5. </span>Stellar Atmospheres<a class="headerlink" href="#stellar-atmospheres" title="Permalink to this heading">#</a></h1>
+<section id="the-description-of-the-radiation-field">
+<h2><span class="section-number">5.1. </span>The Description of the Radiation Field<a class="headerlink" href="#the-description-of-the-radiation-field" title="Permalink to this heading">#</a></h2>
 <p>Astronomers receive light only from the outermost layer of the star’s atmosphere that overly an opaque interior.  The <em>temperature</em>, <em>density</em>, and <em>composition</em> of this layer determine the features of the star’s spectrum, where we must describe how light travels through the gas to interpret the observed spectral lines properly.</p>
-<div class="section" id="the-specific-and-mean-intensities">
-<h3><span class="section-number">5.1.1. </span>The Specific and Mean Intensities<a class="headerlink" href="#the-specific-and-mean-intensities" title="Permalink to this headline">#</a></h3>
+<section id="the-specific-and-mean-intensities">
+<h3><span class="section-number">5.1.1. </span>The Specific and Mean Intensities<a class="headerlink" href="#the-specific-and-mean-intensities" title="Permalink to this heading">#</a></h3>
 <p>Recall the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#the-planck-function-and-astrophysics">Planck function</a> was based upon the wavelength-dependent flux of blackbody radiation <span class="math notranslate nohighlight">\(B_\lambda(T)\)</span> from an element of surface area <span class="math notranslate nohighlight">\(dA\)</span>.  A similar procedure can be used to define the intensity of a cone of light.  The light is measured in spherical coordinates by the angle <span class="math notranslate nohighlight">\(\theta\)</span>, which is the direction perpendicular to the surface <span class="math notranslate nohighlight">\(dA\)</span> so that <span class="math notranslate nohighlight">\(dA\cos\theta\)</span> is an area projected onto a plane perpendicular to the propagation direction of the light.  The light energy is wavelength dependent (<span class="math notranslate nohighlight">\(E = hc/\lambda\)</span>) and thus can be defined as</p>
 <div class="math notranslate nohighlight">
 \[ E_\lambda \equiv \frac{\partial E}{\partial \lambda}, \]</div>
 <p>where <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> is the energy carried by the rays in the light cone in a time interval <span class="math notranslate nohighlight">\(dt\)</span>.  The <strong>specific intensity</strong> of the rays is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-160b8ee0-4277-4bab-a64d-82917f205d42">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-160b8ee0-4277-4bab-a64d-82917f205d42" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda\:dt\:dA \cos\theta\:d\Omega}, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cc921336-ef08-4715-b60c-83ff740c9ab1">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-cc921336-ef08-4715-b60c-83ff740c9ab1" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda\:dt\:dA \cos\theta\:d\Omega}, \end{align}\]</div>
 <p>which carries the units of energy per time per Area per steradian <em>sr</em> (<a class="reference external" href="https://en.wikipedia.org/wiki/Steradian">solid angle)</a> or more simply, energy per everything.</p>
-<div class="figure align-default" id="intensity-fig">
-<a class="reference internal image-reference" href="../_images/Figure_17.jpg"><img alt="Intensity" src="../_images/Figure_17.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Schematic for the intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> that passes through a surface. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#intensity-fig" title="Permalink to this image">#</a></p>
-</div>
+<figure class="align-default" id="intensity-fig">
+<a class="reference internal image-reference" href="../_images/Figure_14.jpg"><img alt="Intensity" src="../_images/Figure_14.jpg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Schematic for the intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> that passes through a surface. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#intensity-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There is a <span class="math notranslate nohighlight">\(d\lambda\)</span> factor in the numerator and denominator, which is a placeholder for the alternate definition of specific intensity in terms of frequency <span class="math notranslate nohighlight">\(I_\nu\)</span>.  Recall from the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#the-planck-function-and-astrophysics">Planck function</a> using <span class="math notranslate nohighlight">\(d\nu = -\frac{c}{\lambda^2}d\lambda\)</span> as a conversion factor.</p>
@@ -824,21 +518,23 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-mean-intensity">
 <span class="eqno">(5.3)<a class="headerlink" href="#equation-mean-intensity" title="Permalink to this equation">#</a></span>\[\langle I_\lambda \rangle \equiv \frac{1}{4\pi} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_\lambda \sin\theta d\theta\:d\phi.\]</div>
 <p>For an isotropic radiation field (i.e., one with the same intensity in all directions), the mean intensity is the intensity and since blackbody radiation is isotropic, then <span class="math notranslate nohighlight">\(\langle I_\lambda \rangle = B_\lambda\)</span>.</p>
-</div>
-<div class="section" id="the-specific-energy-density">
-<h3><span class="section-number">5.1.2. </span>The Specific Energy Density<a class="headerlink" href="#the-specific-energy-density" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-specific-energy-density">
+<h3><span class="section-number">5.1.2. </span>The Specific Energy Density<a class="headerlink" href="#the-specific-energy-density" title="Permalink to this heading">#</a></h3>
 <p>Consider a small cylinder (open at both ends) with perfectly reflecting walls inside, where light enters the base of the cylinder and bounces until it exits through the top of the cylinder.  The radiation that enters the cylinder at an angle <span class="math notranslate nohighlight">\(\theta\)</span> travels through the cylinder in a time <span class="math notranslate nohighlight">\(dt = dL/(c\cos\theta)\)</span> and the energy inside (within a wavelength range <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>) is</p>
 <div class="math notranslate nohighlight">
 \[ E_\lambda d\lambda = I_\lambda d\lambda\:dt\:dA \cos\theta\:d\Omega = I_\lambda d\lambda\:dA\:d\Omega\:\frac{dL}{c}, \]</div>
 <p>using Eqn. <a class="reference internal" href="#equation-specific-intensity">(5.2)</a> and the substitution of <span class="math notranslate nohighlight">\(dt\)</span>.  The quantity <span class="math notranslate nohighlight">\(dA dL\)</span> is the volume of the cylinder, where the <strong>specific energy density</strong> (<span class="math notranslate nohighlight">\(u_\lambda d\lambda\)</span>) is found by normalizing the energy <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> by the volume of the cylinder, integrating over all the solid angles, and using Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d3c196d-ddc0-4394-a709-b3da1856cd79">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-3d3c196d-ddc0-4394-a709-b3da1856cd79" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-ce9e766c-6c6a-43db-a55b-68a795dfc356">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-ce9e766c-6c6a-43db-a55b-68a795dfc356" title="Permalink to this equation">#</a></span>\[\begin{align} 
 u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_\lambda d\lambda\:\sin\theta d\theta\:d\phi = \frac{4\pi}{c} \langle I_\lambda \rangle d\lambda. 
 \end{align}\]</div>
-<div class="figure align-default" id="cylindrical-trap-fig">
-<a class="reference internal image-reference" href="../_images/Figure_25.jpg"><img alt="cylindrical trap" src="../_images/Figure_25.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Example of a cylindrical “trap” for measuring the energy density <span class="math notranslate nohighlight">\(u_\lambda\)</span>. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#cylindrical-trap-fig" title="Permalink to this image">#</a></p>
-</div>
+<figure class="align-default" id="cylindrical-trap-fig">
+<a class="reference internal image-reference" href="../_images/Figure_24.jpg"><img alt="cylindrical trap" src="../_images/Figure_24.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Example of a cylindrical “trap” for measuring the energy density <span class="math notranslate nohighlight">\(u_\lambda\)</span>. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#cylindrical-trap-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For blackbody radiation,</p>
 <div class="math notranslate nohighlight" id="equation-energy-density">
 <span class="eqno">(5.5)<a class="headerlink" href="#equation-energy-density" title="Permalink to this equation">#</a></span>\[u_\lambda d\lambda = \frac{4\pi}{c}B_\lambda d\lambda = \frac{8\pi hc \lambda^{-5}}{e^{hc/(\lambda kT)}-1} d\lambda.\]</div>
@@ -849,31 +545,35 @@ u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_
 <div class="math notranslate nohighlight" id="equation-tot-energy-density">
 <span class="eqno">(5.6)<a class="headerlink" href="#equation-tot-energy-density" title="Permalink to this equation">#</a></span>\[u = \frac{4\pi}{c} \int_0^\infty \frac{8\pi hc \lambda^{-5}}{e^{hc/(\lambda kT)}-1} d\lambda = \frac{4\sigma T^4}{c},\]</div>
 <p>where <span class="math notranslate nohighlight">\(4\sigma/c = 7.565767 \times 10^{-16}\;{\rm J/m^3/K^4}\)</span> and is known as the <em>radiation constant</em>.</p>
-</div>
-<div class="section" id="the-specific-radiative-flux">
-<h3><span class="section-number">5.1.3. </span>The Specific Radiative Flux<a class="headerlink" href="#the-specific-radiative-flux" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-specific-radiative-flux">
+<h3><span class="section-number">5.1.3. </span>The Specific Radiative Flux<a class="headerlink" href="#the-specific-radiative-flux" title="Permalink to this heading">#</a></h3>
 <p>Astronomers are often interested in the <em>net</em> energy that passes through a <em>unit area</em> in the direction of the z-axis.  This is given by the <strong>specific radiative flux</strong> <span class="math notranslate nohighlight">\(F_\lambda\)</span> as</p>
 <div class="math notranslate nohighlight" id="equation-spec-flux">
 <span class="eqno">(5.7)<a class="headerlink" href="#equation-spec-flux" title="Permalink to this equation">#</a></span>\[F_\lambda d\lambda = \int I_\lambda d\lambda\:\cos\theta\:d\Omega = \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi I_\lambda d\lambda\:\cos\theta\sin\theta d\theta\:d\phi.\]</div>
 <p>The specific radiative flux considers only the <em>z</em>-component (i.e., <span class="math notranslate nohighlight">\(\cos\theta\)</span>) of a light ray, where oppositely directed rays cancel.  Both the radiative flux and the specific intensity (Eqn. <a class="reference internal" href="#equation-specific-intensity">(5.2)</a>) describe the light received from a celestial source.  When a source is resolved by the telescope as defined by Rayleigh’s criterion (<span class="math notranslate nohighlight">\(\theta &gt; \theta_{\rm min}\)</span>), the <em>specific intensity</em> is measured.  For example, the measured value of the specific intensity (at 501 nm) at the center of the Sun’s disk is <span class="math notranslate nohighlight">\(I_{501} = 4.03 \times 10^{13}\;{\rm W/m^{3}/sr}\)</span>.</p>
-<div class="figure align-default" id="source-fig">
+<figure class="align-default" id="source-fig">
 <a class="reference internal image-reference" href="../_images/Figure_36.jpg"><img alt="source" src="../_images/Figure_36.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The measurement of (a) the specific intensity for a resolved source and (b) the radiative flux for an unresolved source. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#source-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The measurement of (a) the specific intensity for a resolved source and (b) the radiative flux for an unresolved source. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#source-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For an unresolved source, the <em>radiative flux</em> is measured because the energy received from the entire source will disperse through the diffraction pattern (i.e., Airy disk and rings).  Because the light arriving at the detector leaves the source at all angles, the detector is effectively integrating the specific intensity over all directions.  As the distance to the source increases, the amount of energy falling within the Airy disk decreases as <span class="math notranslate nohighlight">\(1/r^2\)</span>, as expected.</p>
-</div>
-<div class="section" id="radiation-pressure">
-<h3><span class="section-number">5.1.4. </span>Radiation Pressure<a class="headerlink" href="#radiation-pressure" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="radiation-pressure">
+<h3><span class="section-number">5.1.4. </span>Radiation Pressure<a class="headerlink" href="#radiation-pressure" title="Permalink to this heading">#</a></h3>
 <p>Einstein’s special theory of relativity describes photons as massless particles that nonetheless carry a momentum <span class="math notranslate nohighlight">\(p\)</span> that is related to its energy <span class="math notranslate nohighlight">\(E\)</span>.  Thus, the photon can exert a <strong>radiation pressure</strong>.  Consider the gas pressure exerted by molecules bouncing off a wall, where the radiation pressure of photons can be described through a similar process. At a given time, a photon can strike a perfectly reflecting surface of area <span class="math notranslate nohighlight">\(dA\)</span> and be reflected into a solid angle <span class="math notranslate nohighlight">\({\rm d}\Omega\)</span>  (at the same angles <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\({\rm d}\Omega\)</span> due to the law of reflection).  The change in <span class="math notranslate nohighlight">\(p_z\)</span> of photons within a range of wavelengths from the reflection is</p>
 <div class="math notranslate nohighlight">
 \[ dp_{z,\lambda} d\lambda = p_\lambda \bigg\rvert_{z_o}^{z_f} d\lambda = \frac{2E_\lambda\cos\theta}{c} d\lambda = \frac{2}{c} I_\lambda d\lambda\:dt\:dA\cos^2\theta\:d\Omega, \]</div>
 <p>using <span class="math notranslate nohighlight">\(E_\lambda\)</span> from Eqn. <a class="reference internal" href="#equation-specific-intensity">(5.2)</a>.  Recall that <span class="math notranslate nohighlight">\(F = dp/dt\)</span> and <span class="math notranslate nohighlight">\(P = F/A\)</span> so that the radiation pressure <span class="math notranslate nohighlight">\(P_{\rm rad,\lambda}d\lambda\)</span> can be written as</p>
 <div class="math notranslate nohighlight">
 \[ P_{\rm rad,\lambda} d\lambda = \frac{2}{c} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^{\pi/2} I_\lambda d\lambda\:\cos^2\theta\sin\theta d\theta\:d\phi. \quad {\rm (reflection)} \]</div>
-<div class="figure align-default" id="rad-press-fig">
+<figure class="align-default" id="rad-press-fig">
 <a class="reference internal image-reference" href="../_images/Figure_42.jpg"><img alt="radiation pressure" src="../_images/Figure_42.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Radiation pressure produced by reflected photons from the solid angle <span class="math notranslate nohighlight">\(d\Omega\)</span>. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#rad-press-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Radiation pressure produced by reflected photons from the solid angle <span class="math notranslate nohighlight">\(d\Omega\)</span>. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#rad-press-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Instead of a reflecting wall, replace it with a mathematical surface <span class="math notranslate nohighlight">\(dA\)</span> where the incident photons will now keep on going through and be streaming from the other side.  For an <em>isotropic radiation field</em>, the leading factor of 2 is removed because there is no longer a change in momentum upon reflection.  The radiation pressure becomes</p>
 <div class="math notranslate nohighlight" id="equation-rad-press-trans">
 <span class="eqno">(5.8)<a class="headerlink" href="#equation-rad-press-trans" title="Permalink to this equation">#</a></span>\[P_{\rm rad,\lambda} d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi I_\lambda d\lambda\:\cos^2\theta\sin\theta d\theta\:d\phi = \frac{4\pi}{3c}I_\lambda d\lambda, \quad {\rm (transmission)}\]</div>
@@ -882,25 +582,25 @@ u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_
 <div class="math notranslate nohighlight">
 \[ P_{\rm rad} = \int_0^\infty P_{\rm rad,\lambda} d\lambda, \]</div>
 <p>where the substitution <span class="math notranslate nohighlight">\(B_\lambda = I_\lambda\)</span> in Eqn. <a class="reference internal" href="#equation-rad-press-trans">(5.8)</a> can be made blackbody radiation to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cd025c69-d586-4fb9-8437-450e113fe78c">
-<span class="eqno">(5.9)<a class="headerlink" href="#equation-cd025c69-d586-4fb9-8437-450e113fe78c" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-735487f8-e384-41cd-b26d-edaa427f4edc">
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-735487f8-e384-41cd-b26d-edaa427f4edc" title="Permalink to this equation">#</a></span>\[\begin{align} 
 P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \frac{1}{3}u.
 \end{align}\]</div>
 <p>The <strong>blackbody radiation pressure</strong> is one-third of the energy density, where an ideal monatomic gas is two-thirds of its energy density.</p>
-</div>
-<div class="section" id="problems">
-<h3><span class="section-number">5.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="problems">
+<h3><span class="section-number">5.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>1. Find an expression for <span class="math notranslate nohighlight">\(n_\lambda\:d\lambda\)</span> (the number density of blackbody photons) with a wavelength between <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>.</p>
 <p>2. Using your expression from Problem 1, find the total number of photons inside a kitchen oven assuming a volume of 0.5 <span class="math notranslate nohighlight">\({\rm m^3}\)</span> and set at 477 K.</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="stellar-opacity">
-<h2><span class="section-number">5.2. </span>Stellar Opacity<a class="headerlink" href="#stellar-opacity" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="stellar-opacity">
+<h2><span class="section-number">5.2. </span>Stellar Opacity<a class="headerlink" href="#stellar-opacity" title="Permalink to this heading">#</a></h2>
 <p>The classification of stellar spectra is complicated by the fact that stars are not actually blackbodies.  The temperature of a star’s photosphere can be estimated by the Stefan-Boltzmann law and the spectrum shape using the Planck function.  However, the Sun’s spectrum deviates substantially from the idealized shape because solar absorption lines remove light at certain wavelengths.  A dense series of metallic absorption lines in the Solar spectrum is especially effective and called <strong>line blanketing</strong>.</p>
-<div class="section" id="temperature-and-local-thermodynamic-equilibrium">
-<h3><span class="section-number">5.2.1. </span>Temperature and Local Thermodynamic Equilibrium<a class="headerlink" href="#temperature-and-local-thermodynamic-equilibrium" title="Permalink to this headline">#</a></h3>
+<section id="temperature-and-local-thermodynamic-equilibrium">
+<h3><span class="section-number">5.2.1. </span>Temperature and Local Thermodynamic Equilibrium<a class="headerlink" href="#temperature-and-local-thermodynamic-equilibrium" title="Permalink to this heading">#</a></h3>
 <p>There are many different measures of temperature within a star, which are defined according to a particular physical process.</p>
 <ul class="simple">
 <li><p>The temperature obtained from the Stefan-Boltzmann law (<strong>effective temperature</strong>) is <em>uniquely defined for a particular layer</em> of the stellar atmosphere.</p></li>
@@ -909,10 +609,12 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 <li><p>The <strong>kinetic temperature</strong> is contained in the Maxwell-Boltzmann distribution, which describes the velocity distribution of gas particles.</p></li>
 <li><p>The <strong>color temperature</strong> is obtained by fitting the Planck function to the shape of a star’s continuous spectrum.</p></li>
 </ul>
-<div class="figure align-default" id="solar-spec-fig">
+<figure class="align-default" id="solar-spec-fig">
 <a class="reference internal image-reference" href="../_images/Figure_53.jpg"><img alt="solar spectra" src="../_images/Figure_53.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">The spectrum of the Sun in 2 nm wavelength intervals. The dashed curve represents an ideal blackbody with the Sun’s effective temperature. Image credit: Carroll &amp; Ostlie (2007); data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>.</span><a class="headerlink" href="#solar-spec-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">The spectrum of the Sun in 2 nm wavelength intervals. The dashed curve represents an ideal blackbody with the Sun’s effective temperature. Image credit: Carroll &amp; Ostlie (2007); data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>.</span><a class="headerlink" href="#solar-spec-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The effective temperature is the only measure that depends strictly on the location within the star, while the remaining temperatures vary according to the conditions of the gas that can be described by the simple case of a gas confined within an “ideal” box (i.e., ideal gas law).  Due to the boundary condition of the box, the energy of the gas particles and blackbody radiation will come into equilibrium and can be described by a single well-defined temperature.  As a result, there is no net flow of energy through the box, or between the matter and radiation.  The number of photons absorbed per unit time is equal to the number of photons emitted, which is called <a class="reference external" href="https://en.wikipedia.org/wiki/Thermodynamic_equilibrium">thermodynamic equilibrium</a>.</p>
 <p>Such a case cannot be true everywhere in a star (i.e., stars shine so some photons escape) and a star cannot be in perfect thermodynamic equilibrium.  A net outward flow of energy occurs through the star and the temperature varies with the stellar radius.  The ideal box approximation can be used: <em>if the distance over which the temperature changes significantly is large compared with the distances traveled by the particles and photons between collisions</em> (i.e., the ideal box is small enough).  The distances traveled by particles are called their <em>mean free paths</em>.  When the above condition is met, the particles and photons cannot escape the local environment and the temperature of the box is nearly constant (i.e., <strong>local thermodynamic equilibrium</strong> <em>LTE</em>).</p>
 <p>The photosphere is the surface layer of the Sun’s atmosphere where the photons can escape into space.  The temperature in one region varies from 5580 K to 5790 K over a distance of 25.0 km.  The <em>temperature scale height</em> <span class="math notranslate nohighlight">\(H_T\)</span> is the characteristic distance over which the temperature varies: <span class="math notranslate nohighlight">\(H_T \equiv T_{\rm avg}/|dT/dr|\)</span>.</p>
@@ -948,10 +650,12 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 <div class="math notranslate nohighlight">
 \[ n = \frac{\rho}{m_H} = 1.27 \times 10^{23}\:{\rm m^{-3}} \]</div>
 <p>with the mass of hydrogen <span class="math notranslate nohighlight">\(m_H = 1.67 \times 10^{-27}\:{\rm kg}\)</span>. The collision probability for two atoms is higher if their centers pass within twice the atomic radius (i.e., <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_5/interaction-of-light-and-matter.html#bohr-s-semiclassical-atom">Bohr radius</a>) or <span class="math notranslate nohighlight">\(2a_o\)</span>, where <span class="math notranslate nohighlight">\(a_o \approx 5.29 \times 10^{-11}\:{\rm m}\)</span>. This region of higher collision probability defines an area or <strong>cross section</strong> <span class="math notranslate nohighlight">\(\sigma \equiv \pi(2a_o)^2\)</span>.</p>
-<div class="figure align-default" id="mean-free-path-fig">
+<figure class="align-default" id="mean-free-path-fig">
 <a class="reference internal image-reference" href="../_images/Figure_63.jpg"><img alt="mean free path" src="../_images/Figure_63.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Mean free path <span class="math notranslate nohighlight">\(\ell\)</span> of a hydrogen atom. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#mean-free-path-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Mean free path <span class="math notranslate nohighlight">\(\ell\)</span> of a hydrogen atom. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#mean-free-path-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Consider a single atom of radius <span class="math notranslate nohighlight">\(2a_o\)</span> with a cross section of <span class="math notranslate nohighlight">\(4\pi a_o^2\)</span> moving with a speed <span class="math notranslate nohighlight">\(v\)</span> over a time <span class="math notranslate nohighlight">\(t\)</span>.  The atom has moved a distance <span class="math notranslate nohighlight">\(vt\)</span> and sweeps out a cylindrical volume <span class="math notranslate nohighlight">\(V=\sigma vt\)</span>.  Within the volume, there are <span class="math notranslate nohighlight">\(n\sigma vt\)</span> point atoms that collide with the moving atom.  The <strong>mean free path</strong> <span class="math notranslate nohighlight">\(\ell\)</span> between collisions is</p>
 <div class="math notranslate nohighlight" id="equation-mean-free-path">
 <span class="eqno">(5.10)<a class="headerlink" href="#equation-mean-free-path" title="Permalink to this equation">#</a></span>\[\ell = \frac{\rm distance\:traveled}{\rm number\:of\:atoms} = \frac{vt}{n\sigma vt} = \frac{1}{n\sigma}.\]</div>
@@ -980,9 +684,9 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 </div>
 </div>
 <p>The temperature scale height in the Sun’s photosphere is 677 km and the mean free path for collisions is <span class="math notranslate nohighlight">\(2.26 \times 10^{-4}\)</span> m, where <span class="math notranslate nohighlight">\(H_T/\ell \approx 3 \times 10^9\)</span>.  The criteria for LTE is satisfied for the hydrogen atoms of the photosphere (not the photons) and the gas particles see an essentially constant kinetic temperature between collisions.  In addition, they are effectively confined within a limited volume.</p>
-</div>
-<div class="section" id="the-definition-of-opacity">
-<h3><span class="section-number">5.2.2. </span>The Definition of Opacity<a class="headerlink" href="#the-definition-of-opacity" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-definition-of-opacity">
+<h3><span class="section-number">5.2.2. </span>The Definition of Opacity<a class="headerlink" href="#the-definition-of-opacity" title="Permalink to this heading">#</a></h3>
 <p>Any process that removes photons from a beam of light is collectively termed <strong>absorption</strong>, which includes the <em>scattering</em> of photons (i.e., Compton scattering), the absorption of photons by atomic electrons making upward transitions, and molecular energy-level transitions.  The change in intensity <span class="math notranslate nohighlight">\(dI_\lambda\)</span> of a photon as it travels through a gas is proportional to its intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span>, the distance traveled <span class="math notranslate nohighlight">\(ds\)</span>, and the density of the gas <span class="math notranslate nohighlight">\(\rho\)</span> through the relation,</p>
 <div class="math notranslate nohighlight" id="equation-intensity-change">
 <span class="eqno">(5.11)<a class="headerlink" href="#equation-intensity-change" title="Permalink to this equation">#</a></span>\[\frac{dI_\lambda}{I_\lambda} = -\kappa_\lambda \rho  ds.\]</div>
@@ -1021,12 +725,12 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 </div>
 </div>
 <p>The temperature scale height is 677 km, where for photons <span class="math notranslate nohighlight">\(H_T/\ell \approx 4.2\)</span> and the criteria for local thermodynamic equilibrium is not satisfied.  The photospheric photons do <em>not</em> see a constant temperature and LTE is not strictly valid in the photosphere.  Although LTE is a commonly invoked assumption in stellar atmospheres, it <em>must</em> be used with caution.</p>
-</div>
-<div class="section" id="optical-depth">
-<h3><span class="section-number">5.2.3. </span>Optical Depth<a class="headerlink" href="#optical-depth" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="optical-depth">
+<h3><span class="section-number">5.2.3. </span>Optical Depth<a class="headerlink" href="#optical-depth" title="Permalink to this heading">#</a></h3>
 <p>Scatter photons have a mean free path (given by Eqn. <a class="reference internal" href="#equation-mean-free-path">(5.10)</a>), where <span class="math notranslate nohighlight">\(\kappa_\lambda \rho\)</span> and <span class="math notranslate nohighlight">\(n\sigma_\lambda\)</span> can be though of as the <em>fraction</em> of photons scatter per meter of distance traveled.  Note that the mean free path is dependent on the photon wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  However it is convenient to define an <strong>optical depth</strong> <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-530e5d2f-39e6-471e-9f09-43e5f4088540">
-<span class="eqno">(5.13)<a class="headerlink" href="#equation-530e5d2f-39e6-471e-9f09-43e5f4088540" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a71e4099-4b01-4be5-aed5-bb30981d0714">
+<span class="eqno">(5.13)<a class="headerlink" href="#equation-a71e4099-4b01-4be5-aed5-bb30981d0714" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(s\)</span> is the distance measured along the photon’s direction of motion (i.e., looking back along the path traveled by the photon).  The difference in optical depth <span class="math notranslate nohighlight">\(\Delta \tau_\lambda\)</span> can be determined as the difference between the final (<span class="math notranslate nohighlight">\(\tau_{\lambda,f}\)</span>) and initial (<span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span>) optical depths, or the integral along the photon’s path as</p>
 <div class="math notranslate nohighlight" id="equation-tau-diff">
 <span class="eqno">(5.14)<a class="headerlink" href="#equation-tau-diff" title="Permalink to this equation">#</a></span>\[\Delta \tau_\lambda = \tau_{\lambda,f} - \tau_{\lambda,o} = -\int_0^s \kappa_\lambda \rho ds.\]</div>
@@ -1034,10 +738,12 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 <div class="math notranslate nohighlight" id="equation-tau-integral">
 <span class="eqno">(5.15)<a class="headerlink" href="#equation-tau-integral" title="Permalink to this equation">#</a></span>\[\tau_\lambda = \int_0^s \kappa_\lambda \rho ds\]</div>
 <p>and the subscript <span class="math notranslate nohighlight">\(o\)</span> is dropped.</p>
-<div class="figure align-default" id="optical-depth-fig">
+<figure class="align-default" id="optical-depth-fig">
 <a class="reference internal image-reference" href="../_images/Figure_72.jpg"><img alt="optical depth" src="../_images/Figure_72.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> measured along a ray’s path starting from outside the material. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#optical-depth-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.7 </span><span class="caption-text">Optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> measured along a ray’s path starting from outside the material. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#optical-depth-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The optical depth can be related to the intensity by combining Eqn. <a class="reference internal" href="#equation-intensity-absorb">(5.12)</a> with Eqn. <a class="reference internal" href="#equation-tau-integral">(5.15)</a>, where there is a decline in the intensity given by</p>
 <div class="math notranslate nohighlight">
 \[ I_\lambda = I_{\lambda,o} e^{-\tau_\lambda}.\]</div>
@@ -1052,10 +758,12 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 <li><p>If <span class="math notranslate nohighlight">\(\tau_\lambda \ll 1\)</span>, then the gas is <em>optically thin</em>.</p></li>
 </ul>
 <p>The optical depth varies with wavelength, where a gas could be optically thick for a specific wavelength but optically thin for a different wavelength.  For example, the Earth’s atmosphere is optically thick for X-rays, but optically thin for visible light.</p>
-<div class="figure align-default" id="ray-absorption-fig">
+<figure class="align-default" id="ray-absorption-fig">
 <a class="reference internal image-reference" href="../_images/Figure_82.jpg"><img alt="ray absorption" src="../_images/Figure_82.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">(a) A light ray entering Earth’s atmosphere at an angle <span class="math notranslate nohighlight">\(\theta\)</span> (b) Example of the determination of <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> from a fit of <span class="math notranslate nohighlight">\(I_\lambda\)</span> vs. <span class="math notranslate nohighlight">\(\sec \theta\)</span>. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#ray-absorption-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.8 </span><span class="caption-text">(a) A light ray entering Earth’s atmosphere at an angle <span class="math notranslate nohighlight">\(\theta\)</span> (b) Example of the determination of <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> from a fit of <span class="math notranslate nohighlight">\(I_\lambda\)</span> vs. <span class="math notranslate nohighlight">\(\sec \theta\)</span>. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#ray-absorption-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p><strong>How can the opacity of the Earth’s atmosphere be corrected for?</strong></p></li>
 </ul>
@@ -1063,17 +771,17 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 <div class="math notranslate nohighlight">
 \[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds = \sec \theta \int_0^h \kappa_\lambda \rho dz = \tau_{\lambda,o} \sec \theta, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> refers to the optical depth of a vertically traveling photon ($\theta = 0).  The intensity of the light at the telescope is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d888bf1-d662-4fe1-a9e7-b58a570395f9">
-<span class="eqno">(5.16)<a class="headerlink" href="#equation-7d888bf1-d662-4fe1-a9e7-b58a570395f9" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-1df2dc8f-f3fd-4b82-8288-6ea1f80e6b24">
+<span class="eqno">(5.16)<a class="headerlink" href="#equation-1df2dc8f-f3fd-4b82-8288-6ea1f80e6b24" title="Permalink to this equation">#</a></span>\[\begin{align} 
 I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 \end{align}\]</div>
 <p>For a single observation, both <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> are unknown.  Over a night of observation, the Earth rotates on its axis and several measurements of the received intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> as a function of <span class="math notranslate nohighlight">\(\sec \theta\)</span> can be made.  Then the best-fitting <em>slope</em> is <span class="math notranslate nohighlight">\(-\tau_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> can be determined through extrapolation</p>
 <div class="math notranslate nohighlight">
 \[ \lim_{\sec \theta \rightarrow 0} \ln I_\lambda = \ln I_{\lambda,o}. \]</div>
 <p>Measurements of the specific intensity or radiative flux can be corrected for absorption by Earth’s atmosphere.</p>
-</div>
-<div class="section" id="general-sources-of-opacity">
-<h3><span class="section-number">5.2.4. </span>General Sources of Opacity<a class="headerlink" href="#general-sources-of-opacity" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="general-sources-of-opacity">
+<h3><span class="section-number">5.2.4. </span>General Sources of Opacity<a class="headerlink" href="#general-sources-of-opacity" title="Permalink to this heading">#</a></h3>
 <p>The opacity of a material depends on the chemical composition and how photons interact with the particles (atoms, ions, and free electrons) within the material.  If a photon passes within <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span> (i.e., the particles’s cross-sectional area) of the particle, then the phone can be either: scattered or absorbed.</p>
 <ul class="simple">
 <li><p>In an absorption process, the photon ceases to exist and its energy is incorporated into the thermal energy of the gas.</p></li>
@@ -1081,7 +789,7 @@ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 </ul>
 <p>Both absorption and scattering can remove photons (of a specific wavelength) like a sieve and contribute to the opacity <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> of the stellar material.  If the opacity varies slowly with wavelength, it contributes to the star’s continuous spectrum (or <em>continuum</em>) and dark absorption lines are the result of a <em>rapid</em> variation in the opacity.</p>
 <p>There are four primary sources of opacity available for removing photons from our observations of a star.  These sources involve the quantum state of an electron, where the terms <em>bound</em> and <em>free</em> are used to describe the initial and final states of the electron within an atom.</p>
-<ol>
+<ol class="arabic">
 <li><p><strong>Bound-bound transitions</strong> are electron transitions from one orbital to another (i.e., excitation and de-excitation).  The bound-bound opacity <span class="math notranslate nohighlight">\(\kappa_{\lambda,bb}\)</span>    accounts for electrons that remove photons through absorption and the re-emission of the photons are scattered into a different direction than the line-of-sight.  This opacity is small except at wavelengths capable of absorption and hence is responsible for absorption lines in stellar spectra.</p>
 <p>The de-excitation may also come from collisions with neighboring particles.  An important by-product is the degrading of the average energy of the photons.  For example, if two photons are emitted (from a cascade process) for every photon absorbed, then the average energy is cut in half.  There is not simple equation for bound-bound transitions.</p>
 </li>
@@ -1092,14 +800,16 @@ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 <p>which depends on the quantum state <span class="math notranslate nohighlight">\(n\)</span> and the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  The inverse process of <em>free-bound</em> emission occurs during atomic recombination (free electron recombines with an ion, emitting a photon).  Similar to bound-bound emission, this also reduces the average energy of the photons.</p>
 </li>
 <li><p><strong>Free-free absorption</strong> is a scattering process that occurs when the speed of a free electron increases (or decreases) after a nearby ion absorbs (or emits) a photon, respectively.  This process occurs due to conservation of both energy and momentum.  The free-free opacity <span class="math notranslate nohighlight">\(\kappa_{\lambda,ff}\)</span> contributes to the continuum opacity.  The process of free-free emission is also known as <a class="reference external" href="https://en.wikipedia.org/wiki/Bremsstrahlung">bremsstrahlung</a>, when means “braking radiation” in German.</p>
-<div class="figure align-default" id="ff-absorption-fig">
+<figure class="align-default" id="ff-absorption-fig">
 <a class="reference internal image-reference" href="../_images/Figure_93.jpg"><img alt="ray absorption" src="../_images/Figure_93.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Free-free absorption when an free electron is scattered in the vicinity of an ion due to a photon. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#ff-absorption-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Free-free absorption when an free electron is scattered in the vicinity of an ion due to a photon. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#ff-absorption-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </li>
 <li><p><strong>Electron scattering</strong> is as you would expect where a photon is scatter (<em>not absorbed</em>) by a free electron through the process of <a class="reference external" href="https://en.wikipedia.org/wiki/Thomson_scattering">Thomas scattering</a>.  The electron “oscillates” (like a buoy) in the wake of a photon.  Because the electron’s cross section is tiny, it is a poor target for an incident photon.  The cross section for Thomson scattering <span class="math notranslate nohighlight">\(\sigma_T\)</span> has the same value (independent of wavelength),  <br> <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b86045f-6364-430a-a956-045d834bcac4">
-<span class="eqno">(5.17)<a class="headerlink" href="#equation-5b86045f-6364-430a-a956-045d834bcac4" title="Permalink to this equation">#</a></span>\[\begin{align} \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-149d3911-5aa6-458c-adc6-e8a6423922bb">
+<span class="eqno">(5.17)<a class="headerlink" href="#equation-149d3911-5aa6-458c-adc6-e8a6423922bb" title="Permalink to this equation">#</a></span>\[\begin{align} \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}. \end{align}\]</div>
 <p>This is ~2 billion times smaller than the hydrogen cross section for photoionization from bound-free absorption, <span class="math notranslate nohighlight">\(\sigma_{bf}\)</span>.  Electron scattering is most effective when the electron density is very high (i.e., high temperatures for ionization) and other sources of opacity are eliminated due to the absence of necessary bound electrons.  For high temperatures, the electron scattering opacity <span class="math notranslate nohighlight">\(\kappa_{es}\)</span> dominates the continuum opacity. <br> <br></p>
 <p>A photon can also be scattered by loosely bound electrons.  <em>Compton scattering</em> occurs when the photon’s wavelength is much smaller than the atom or <em>Rayleigh scattering</em> if the wavelength is much larger.  Compton scatter is usually lumped together with Thomson scattering due to the small change in wavelength of the scattered photon.  The cross section for Rayleigh scattering is smaller than the Thomson cross section and can be neglected in most stellar atmospheres.  However, it is important in the UV for supergiant stars with their extended envelopes and in cool main-sequence stars.
 The opacity of stellar material suddenly increases at wavelengths <span class="math notranslate nohighlight">\(\lambda \leq 364.7\:{\rm nm}\)</span> and the measured radiative flux of the star suddenly decreases.  This abrupt drop in the continuous spectrum is the <strong>Balmer jump</strong> and is evident in the Sun’s spectrum.  The size of the Balmer jump in hot stars depends on the fraction of hydrogen atoms in the first excited state.  The Balmer jump appears in the middle of the <em>U</em> band in the <em>UBV</em> system, which results in a decrease in the amount of light received in the bandwidth of the <em>U</em> filter and increase the measured values for both the <em>U</em> magnitude and color index (<span class="math notranslate nohighlight">\(U-B\)</span>).</p>
@@ -1131,12 +841,12 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-rosseland-mean-opacity">
-<h3><span class="section-number">5.2.5. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-rosseland-mean-opacity">
+<h3><span class="section-number">5.2.5. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this heading">#</a></h3>
 <p>The opacity in Eqn. <a class="reference internal" href="#equation-tau-integral">(5.15)</a> depends on the wavelength of light, where a star is expected to produce photons covering a wide range of wavelengths.  It is often useful to define an opacity that has been averaged over all wavelengths.  This averaging produces an opacity that depends only on the composition, density, and temperature of the stellar atmosphere.  The most commonly used scheme to compute a wavelength-independent opacity is the <a class="reference external" href="http://personal.psu.edu/rbc3/A534/lec6.pdf">Rosseland mean opacity</a> or the <strong>Rosseland mean</strong>.  The Rosseland mean incorporates a weighting function that depends on how fast the blackbody spectrum varies with temperature, which is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-798dcad3-c63f-47e2-950f-7ab1b128b45b">
-<span class="eqno">(5.18)<a class="headerlink" href="#equation-798dcad3-c63f-47e2-950f-7ab1b128b45b" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}. 
+<div class="amsmath math notranslate nohighlight" id="equation-8ffc0d87-1104-465b-8355-784273916044">
+<span class="eqno">(5.18)<a class="headerlink" href="#equation-8ffc0d87-1104-465b-8355-784273916044" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}. 
 \end{align}\]</div>
 <p>The absorption coefficient <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> varies with wavelength, but it also depends on the assumed source of opacity (e.g., bound-free, free-free, etc.) and there is not a simple equation to describe the average absorption coefficient for bound-bound transitions.  Approximation formulae have been developed for the average bound-free and free-free opacities:</p>
 <div class="math notranslate nohighlight" id="equation-bf-kappa">
@@ -1149,32 +859,34 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>Because most stellar gases are primarily composed of hydrogen and helium, all other constituents are lumped together and referred to as <em>metals</em>.  However, certain applications require more specific detail in the composition, where each species is represented by its own mass fraction.</p>
 </div>
 <p>The mass fractions are formally defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4fb9fcc7-a2a3-4756-96cb-07473948debf">
-<span class="eqno">(5.21)<a class="headerlink" href="#equation-4fb9fcc7-a2a3-4756-96cb-07473948debf" title="Permalink to this equation">#</a></span>\[\begin{align}  X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-3369f77c-b406-4495-a0df-35688c392e07">
-<span class="eqno">(5.22)<a class="headerlink" href="#equation-3369f77c-b406-4495-a0df-35688c392e07" title="Permalink to this equation">#</a></span>\[\begin{align}  Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-0248f235-25ec-4a1f-9678-d0556805f592">
-<span class="eqno">(5.23)<a class="headerlink" href="#equation-0248f235-25ec-4a1f-9678-d0556805f592" title="Permalink to this equation">#</a></span>\[\begin{align} Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e935346f-b1b7-4f0f-ac5e-c0c72e3280a1">
+<span class="eqno">(5.21)<a class="headerlink" href="#equation-e935346f-b1b7-4f0f-ac5e-c0c72e3280a1" title="Permalink to this equation">#</a></span>\[\begin{align}  X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6d0f2961-6d9c-4c34-9a2e-ca5005ee610d">
+<span class="eqno">(5.22)<a class="headerlink" href="#equation-6d0f2961-6d9c-4c34-9a2e-ca5005ee610d" title="Permalink to this equation">#</a></span>\[\begin{align}  Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6e9db784-2e57-46df-9168-3f0198aa414b">
+<span class="eqno">(5.23)<a class="headerlink" href="#equation-6e9db784-2e57-46df-9168-3f0198aa414b" title="Permalink to this equation">#</a></span>\[\begin{align} Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \end{align}\]</div>
 <p>such that <span class="math notranslate nohighlight">\(X+Y+Z = 1\)</span>.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Gaunt_factor">Gaunt factors</a> (<span class="math notranslate nohighlight">\(g_{bf}\)</span> and <span class="math notranslate nohighlight">\(g_{ff}\)</span>) in Eqns. <a class="reference internal" href="#equation-bf-kappa">(5.19)</a> and <a class="reference internal" href="#equation-ff-kappa">(5.20)</a> are quantum-mechanical correction terms.  These Gaunt factors are approximately 1 for the visible and UV wavelengths of interest.  The <strong>guillotine factor</strong> <span class="math notranslate nohighlight">\(t\)</span> (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1932MNRAS..92..364E/abstract">Eddington 1932</a>) describes a cutoff to the opacity of an atom after it has been ionized, where typical values lie between 1 and 100.</p>
 <p>Equations <a class="reference internal" href="#equation-bf-kappa">(5.19)</a> and <a class="reference internal" href="#equation-ff-kappa">(5.20)</a> have the functional form <span class="math notranslate nohighlight">\(\bar{\kappa} \propto \kappa_o \rho/T^{3.5}\)</span>, where <span class="math notranslate nohighlight">\(\kappa_o\)</span> combines all the factors that depend on composition. H. A. Kramers derived the first forms (in 1923) using classical physics and the Rosseland mean.  As a result, any opacity having a temperature and density dependence is referred to as <strong>Kramers opacity law</strong>.</p>
 <p>The electron scattering cross section is independent of wavelength and the Rosseland mean is simply</p>
-<div class="amsmath math notranslate nohighlight" id="equation-86e9b965-9102-449d-b46e-fa0ccc605d82">
-<span class="eqno">(5.24)<a class="headerlink" href="#equation-86e9b965-9102-449d-b46e-fa0ccc605d82" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{es} = 0.02(1+X) \:{\rm m^2/kg}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-dd7ad543-cd68-4c32-a988-f41c95d1b060">
+<span class="eqno">(5.24)<a class="headerlink" href="#equation-dd7ad543-cd68-4c32-a988-f41c95d1b060" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{es} = 0.02(1+X) \:{\rm m^2/kg}. \end{align}\]</div>
 <p>The mean opacity is modified in cooler stars (later than F0) by the <span class="math notranslate nohighlight">\(H^-\)</span> ion over specific temperature range (3000 K <span class="math notranslate nohighlight">\(\leq T \leq\)</span> 6000 K), density range (<span class="math notranslate nohighlight">\(10^{-7}\leq \rho \leq 10^{-2}\: {\rm kg/m^3}\)</span>), and metal mass fraction (<span class="math notranslate nohighlight">\(0.001 &lt; Z &lt; 0.03\)</span>), when the hydrogen mass fraction <span class="math notranslate nohighlight">\(X\sim0.7\)</span> is lower.  The average opacity is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-501f27e7-2ff8-4b19-9312-444cfdaf6020">
-<span class="eqno">(5.25)<a class="headerlink" href="#equation-501f27e7-2ff8-4b19-9312-444cfdaf6020" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{H^-} \approx 7.9 \times 10^{-34} (50Z)\sqrt{\rho}T^9\:{\rm m^2/kg}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-38453797-89fb-42e3-bd78-d0e77331c900">
+<span class="eqno">(5.25)<a class="headerlink" href="#equation-38453797-89fb-42e3-bd78-d0e77331c900" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{H^-} \approx 7.9 \times 10^{-34} (50Z)\sqrt{\rho}T^9\:{\rm m^2/kg}. \end{align}\]</div>
 <p>The total Rosseland mean opacity <span class="math notranslate nohighlight">\(\bar{\kappa}\)</span> is the average of the sum of the individual contributions or</p>
 <div class="math notranslate nohighlight">
 \[ \bar{\kappa} = \overline{\kappa_{bb}+\kappa_{bf}+\kappa_{ff}+\kappa_{es}+\kappa_{H^-}}. \]</div>
-<div class="figure align-default" id="rosseland-mean-fig">
+<figure class="align-default" id="rosseland-mean-fig">
 <a class="reference internal image-reference" href="../_images/Figure_104.jpg"><img alt="Rosseland mean opacity" src="../_images/Figure_104.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Rosseland mean opacity for a star with <span class="math notranslate nohighlight">\(X=0.7\)</span>, <span class="math notranslate nohighlight">\(Y=0.28\)</span>, and <span class="math notranslate nohighlight">\(Z=0.02\)</span>. The curves are labeled by the logarithmic value of the density. Image credit: Carroll &amp; Ostlie (2007); data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1996ApJ...464..943I/abstract">Iglesias &amp; Rogers (1996)</a>.</span><a class="headerlink" href="#rosseland-mean-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Rosseland mean opacity for a star with <span class="math notranslate nohighlight">\(X=0.7\)</span>, <span class="math notranslate nohighlight">\(Y=0.28\)</span>, and <span class="math notranslate nohighlight">\(Z=0.02\)</span>. The curves are labeled by the logarithmic value of the density. Image credit: Carroll &amp; Ostlie (2007); data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1996ApJ...464..943I/abstract">Iglesias &amp; Rogers (1996)</a>.</span><a class="headerlink" href="#rosseland-mean-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>From detailed computer calculations of the Rosseland mean using quantum physics, we find that the opacity increases linearly with density for a given temperature.  At a contour of constant density, the opacity rises with increasing temperature that reflects the greater number of free electrons produce by ionization of hydrogen and helium.  The hydrogen partial ionization zone and neutral helium ionization occur at about the same temperature (10,000 K).  The decline in opacity (after <span class="math notranslate nohighlight">\(\log_{10} T = 4\)</span> or 10,000 K) roughly follows a Kramers law (<span class="math notranslate nohighlight">\(\bar{\kappa} \propto T^{-3.5}\)</span>) and is primarily due to the bound-free and free-free absorption.</p>
 <p>The He II ion becomes fully ionized at 40,000 K for a wide range of stellar parameters, where there is a slight increase in the number of free electrons available.  Ionization of certain metals (most notably iron) occurs above <span class="math notranslate nohighlight">\(10^5\)</span> K, which produces another increase in the average opacity.  Electron scattering dominates at the highest temperatures when nearly all the stellar material is ionized (i.e., few electrons available for bound-bound or bound-free processes).</p>
-</div>
-<div class="section" id="id1">
-<h3><span class="section-number">5.2.6. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id1">
+<h3><span class="section-number">5.2.6. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>3. Take the radius of a nitrogen molecule <span class="math notranslate nohighlight">\({\rm N}_2\)</span> to be 0.1 nm and the density of air to be 1.2 <span class="math notranslate nohighlight">\({\rm kg/m^3}\)</span>.  A nitrogen molecule contains 28 nucleons (protons and neutrons).</p>
 <blockquote>
@@ -1188,24 +900,26 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <strong>(b)</strong> Calculate the average time it would take for the photon to escape from the Sun if this mean free path remained constant for the photon’s journey to the surface.</p>
 </div></blockquote>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="radiative-transfer">
-<h2><span class="section-number">5.3. </span>Radiative Transfer<a class="headerlink" href="#radiative-transfer" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="radiative-transfer">
+<h2><span class="section-number">5.3. </span>Radiative Transfer<a class="headerlink" href="#radiative-transfer" title="Permalink to this heading">#</a></h2>
 <p>This section describes stellar atmospheres that are in equilibrium or a steady-state.  This means that the mechanisms involved in absorbing and emitting energy must be in balance throughout the star so that no change in total energy occurs within any layer of the interior.  There are stars where this is not the case (e.g., pulsating stars) and such stars periodically absorb or “dam up” the outward flow of energy to drive stellar oscillations.</p>
-<div class="section" id="photon-emission-processes">
-<h3><span class="section-number">5.3.1. </span>Photon Emission Processes<a class="headerlink" href="#photon-emission-processes" title="Permalink to this headline">#</a></h3>
+<section id="photon-emission-processes">
+<h3><span class="section-number">5.3.1. </span>Photon Emission Processes<a class="headerlink" href="#photon-emission-processes" title="Permalink to this heading">#</a></h3>
 <p><strong>Emission</strong> is defined as any process that adds photons to a beam of light, which includes the scattering of photons into the beam and the true emission of photons through electron transitions.  Opacity described processes (bound-bound and free-bound) that absorb photons, where there is an inverse process through emission (e.g., bound-bound emission, etc.).  The processes of absorption and emission hinder the flow of photons through a star and there is not a direct flow of photons streaming towards the surface.  Instead, individual photons travel only temporarily within the beam as they are repeatedly scattered in random directions (i.e., going on side-quests) while on their journey.</p>
-</div>
-<div class="section" id="the-random-walk">
-<h3><span class="section-number">5.3.2. </span>The Random Walk<a class="headerlink" href="#the-random-walk" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-random-walk">
+<h3><span class="section-number">5.3.2. </span>The Random Walk<a class="headerlink" href="#the-random-walk" title="Permalink to this heading">#</a></h3>
 <p>As the photons move through the stellar material, they follow a <strong>random walk</strong> (i.e., a haphazard path).  Between each atomic encounter, the photon travels a path <span class="math notranslate nohighlight">\({\bf \ell}\)</span> (the mean free path), which can be summed over a large number <span class="math notranslate nohighlight">\(N\)</span> directed steps to produce a net vector displacement <strong>d</strong>:</p>
 <div class="math notranslate nohighlight">
 \[ {\bf d} = {\bf \ell}_1 + {\bf \ell}_2 + \cdots + {\bf \ell}_N = \sum_{i=1}^N {\bf \ell}_i. \]</div>
-<div class="figure align-default" id="displacement-fig">
+<figure class="align-default" id="displacement-fig">
 <a class="reference internal image-reference" href="../_images/Figure_115.jpg"><img alt="displacement" src="../_images/Figure_115.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Displacement <strong>d</strong> of a random walking photon. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#displacement-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Displacement <strong>d</strong> of a random walking photon. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#displacement-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The vector dot product of <strong>d</strong> determines the scalar contribution of each path by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -1232,28 +946,30 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>Looking into a star at any angle, we can look back to an optical depth of about <span class="math notranslate nohighlight">\(\tau_\lambda = 2/3\)</span> as measured relative to the line of sight.</p>
 </div>
 <p>A star’s photosphere is defined as the layer which visible light can escape the star’s atmosphere and come to us or <span class="math notranslate nohighlight">\(\tau_\lambda \approx 2/3\)</span> for wavelengths in the star’s continuum.</p>
-</div>
-<div class="section" id="limb-darkening">
-<h3><span class="section-number">5.3.3. </span>Limb Darkening<a class="headerlink" href="#limb-darkening" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="limb-darkening">
+<h3><span class="section-number">5.3.3. </span>Limb Darkening<a class="headerlink" href="#limb-darkening" title="Permalink to this heading">#</a></h3>
 <p>An observer looking at the Sun’s disk sees the brightest (hottest) portion near the center due to optical depth (<span class="math notranslate nohighlight">\(\tau_\lambda = 2/3\)</span>), observations near the edge (or <em>limb</em>) of the Sun appear darker (cooler).  The optical depth limits how deep an observer can see into the Sun, where at the center a finite depth reaches the hotter inner layers that glow more brightly.  At the limb, the penetration depth only reaches the uppermost (cooler) layers of the atmosphere and we will see a lower temperature compared to the center of the disk.  This effect is called <strong>limb darkening</strong>, where astronomers have to account for it in transit photometry (e.g., binary stars and <a class="reference external" href="https://www.paulanthonywilson.com/exoplanets/exoplanet-detection-techniques/the-exoplanet-transit-method/">exoplanets</a>).</p>
-<div class="figure align-default" id="limb-darkening-fig">
+<figure class="align-default" id="limb-darkening-fig">
 <a class="reference internal image-reference" href="../_images/Figure_121.jpg"><img alt="limb darkening" src="../_images/Figure_121.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Schematic of limb darkening, where the brightness of the stellar disk depends on the temperature of the layer that is reached within the stellar atmosphere along the line of sight. The thickness of a typical photosphere is ~0.1% of the stellar radius. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#limb-darkening-fig" title="Permalink to this image">#</a></p>
-</div>
-</div>
-<div class="section" id="the-radiation-pressure-gradient">
-<h3><span class="section-number">5.3.4. </span>The Radiation Pressure Gradient<a class="headerlink" href="#the-radiation-pressure-gradient" title="Permalink to this headline">#</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Schematic of limb darkening, where the brightness of the stellar disk depends on the temperature of the layer that is reached within the stellar atmosphere along the line of sight. The thickness of a typical photosphere is ~0.1% of the stellar radius. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#limb-darkening-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-radiation-pressure-gradient">
+<h3><span class="section-number">5.3.4. </span>The Radiation Pressure Gradient<a class="headerlink" href="#the-radiation-pressure-gradient" title="Permalink to this heading">#</a></h3>
 <p>In addition to the photon’s meandering journey, there is a pressure that builds within the Sun’s atmosphere due to collisions.  This is similar to the air pressure within a closed room, where an individual molecule moves ~500 m/s and collides with other air molecules several billion times per second.  In the analogy of the closed room, a net flow of air (i.e., breeze) can occur after opening a window.</p>
 <p>The pressure outside is lower than the pressure inside the room, which can be expressed as a pressure differential using Bernoulli’s principle.  In a star, the high pressure interior and vacuum of space also produces a pressure difference.  The extent of the difference is not uniform, where the pressure decreases with stellar radius (i.e., as you get closer to the surface).  But it is enough to create a light movement of photons toward the surface that described by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76b55a87-408c-42db-9d36-54b2bc6cc6a2">
-<span class="eqno">(5.28)<a class="headerlink" href="#equation-76b55a87-408c-42db-9d36-54b2bc6cc6a2" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{dP_{\rm rad}}{dr} = -\frac{\bar{\kappa}\rho}{c}F_{\rm rad}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cbdef64c-6751-471c-bd17-c11a3c19339d">
+<span class="eqno">(5.28)<a class="headerlink" href="#equation-cbdef64c-6751-471c-bd17-c11a3c19339d" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{dP_{\rm rad}}{dr} = -\frac{\bar{\kappa}\rho}{c}F_{\rm rad}. \end{align}\]</div>
 <p>The transfer of radiation as a flow with photons drifting toward the surface is a better description than a “beam” that propagate radially outward.  The description of a beam is a convenient fiction used to define the direct of motion for a photon at a snapshot along its journey of continual absorption and scattering.</p>
-</div>
-</div>
-<div class="section" id="the-transfer-equation">
-<h2><span class="section-number">5.4. </span>The Transfer Equation<a class="headerlink" href="#the-transfer-equation" title="Permalink to this headline">#</a></h2>
-<div class="section" id="the-emission-coefficient">
-<h3><span class="section-number">5.4.1. </span>The Emission Coefficient<a class="headerlink" href="#the-emission-coefficient" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="the-transfer-equation">
+<h2><span class="section-number">5.4. </span>The Transfer Equation<a class="headerlink" href="#the-transfer-equation" title="Permalink to this heading">#</a></h2>
+<section id="the-emission-coefficient">
+<h3><span class="section-number">5.4.1. </span>The Emission Coefficient<a class="headerlink" href="#the-emission-coefficient" title="Permalink to this heading">#</a></h3>
 <p>When examining the transfer of radiation, we are interested in the net flow of energy, not the specific path taken by individual photons. The intensity of light (i.e., change in flow) can be increased through the emission process as a ray travels through a gas.  The change in intensity <span class="math notranslate nohighlight">\(dI_\lambda\)</span> is proportional to the distance traveled <span class="math notranslate nohighlight">\(ds\)</span> and the density of the gas <span class="math notranslate nohighlight">\(\rho\)</span>.  Pure emission is described by</p>
 <div class="math notranslate nohighlight" id="equation-emission-coeff">
 <span class="eqno">(5.29)<a class="headerlink" href="#equation-emission-coeff" title="Permalink to this equation">#</a></span>\[dI_\lambda = j_\lambda \rho ds, \]</div>
@@ -1262,9 +978,9 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight" id="equation-beam-intensity">
 <span class="eqno">(5.30)<a class="headerlink" href="#equation-beam-intensity" title="Permalink to this equation">#</a></span>\[dI_\lambda = -\kappa_\lambda \rho I_\lambda ds + j_\lambda \rho ds = (-\kappa_\lambda I_\lambda + j_\lambda)\rho ds.\]</div>
 <p>The competing processes (in Eqn. <a class="reference internal" href="#equation-beam-intensity">(5.30)</a>) determine the changes in the beam intensity.  Imagine an interstate highway, where there is a flow of cars in one direction.  Due to the placement of on- and off-ramps, the total number of cars can increase or decrease over time.  The instantaneous changes in the flow of cars onto/off-off the highway affect the net flow of cars, where a large influx can lead to a traffic jam.</p>
-</div>
-<div class="section" id="the-source-function-and-the-transfer-equation">
-<h3><span class="section-number">5.4.2. </span>The Source Function and the Transfer Equation<a class="headerlink" href="#the-source-function-and-the-transfer-equation" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-source-function-and-the-transfer-equation">
+<h3><span class="section-number">5.4.2. </span>The Source Function and the Transfer Equation<a class="headerlink" href="#the-source-function-and-the-transfer-equation" title="Permalink to this heading">#</a></h3>
 <p>In a stellar atmosphere or interior, photons are added or removed from a net flow of radiation and we observe the net result.  The ratio of emission and absorption rates determine how rapidly the beam intensity changes and the tendency for a specific wavelength of photon to dominate the local population.  To determine the ratio of emission to absorption (<span class="math notranslate nohighlight">\(j_\lambda/\kappa_\lambda\)</span>), or <strong>source function</strong> <span class="math notranslate nohighlight">\(S_\lambda\)</span> , we divide Eqn. <a class="reference internal" href="#equation-beam-intensity">(5.30)</a> by <span class="math notranslate nohighlight">\(-\kappa_\lambda \rho ds\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-source-fcn">
 <span class="eqno">(5.31)<a class="headerlink" href="#equation-source-fcn" title="Permalink to this equation">#</a></span>\[-\frac{1}{\kappa_\lambda \rho}\frac{dI_\lambda}{ds} = I_\lambda -  \frac{j_\lambda}{\kappa_\lambda} = I_\lambda - S_\lambda.\]</div>
@@ -1274,9 +990,9 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>This form of the transfer equation assumes that the atmosphere is in a steady state.  Otherwise, a time-derivative term would have to be included.  Recall the definition of <span class="math notranslate nohighlight">\(S_\lambda\)</span> is inversely proportional to <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> so that the source function “blows up” as <span class="math notranslate nohighlight">\(\kappa_\lambda \rightarrow 0\)</span>.  In this case, Equation <a class="reference internal" href="#equation-emission-coeff">(5.29)</a> should be used instead.</p>
 </div>
 <p>If the intensity is <em>greater</em> than the source function (<span class="math notranslate nohighlight">\(I_\lambda &gt; S_\lambda\)</span>), then the intensity of light decreases with distance (i.e., more absorption than emission).  On the other hand, if the intensity is <em>less</em>* than the source function (<span class="math notranslate nohighlight">\(I_\lambda &lt; S_\lambda\)</span>), then the intensity increases with distance (i.e., more emission than absorption).  This is a mathematical restatement of: <em>the intensity of the light tends to become equal to the local value of the source function</em>.</p>
-</div>
-<div class="section" id="the-special-case-of-blackbody-radiation">
-<h3><span class="section-number">5.4.3. </span>The Special Case of Blackbody Radiation<a class="headerlink" href="#the-special-case-of-blackbody-radiation" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-special-case-of-blackbody-radiation">
+<h3><span class="section-number">5.4.3. </span>The Special Case of Blackbody Radiation<a class="headerlink" href="#the-special-case-of-blackbody-radiation" title="Permalink to this heading">#</a></h3>
 <p>Consider a box containing an optically thick gas maintained at a constant temperature <span class="math notranslate nohighlight">\(T\)</span>. The confined particles and blackbody radiation are in thermodynamic equilibrium by definition because there isn’t a flow of energy through the box or between the gas particles.  A consequence of this equilibrium is that every process of absorption is met with an inverse process of emission.  The intensity of the radiation is described by the Planck function <span class="math notranslate nohighlight">\(I_\lambda = B_\lambda\)</span> and the variation of intensity goes to zero, <span class="math notranslate nohighlight">\(dI_\lambda/ds = 0\)</span> and <span class="math notranslate nohighlight">\(S_\lambda = I_\lambda\)</span>.  Using the transitive property (<span class="math notranslate nohighlight">\(A=B\)</span>, <span class="math notranslate nohighlight">\(B=C\)</span>, and therefore <span class="math notranslate nohighlight">\(A=C\)</span>) and <em>thermodynamic equilibrium</em>, <em>the source function is equal to the Planck function</em>, <span class="math notranslate nohighlight">\(S_\lambda = B_\lambda\)</span>.</p>
 <p>A star cannot be in perfect thermodynamic equilibrium because there is a net flow of energy from the center to the surface.  But deep the in atmosphere (or a large optical depth, <span class="math notranslate nohighlight">\(\tau_\lambda \gg 1\)</span>), a random-walking photon (with many scattering events) will take at least <span class="math notranslate nohighlight">\(\tau_\lambda^2\)</span> steps (Eqn. <a class="reference internal" href="#equation-number-steps">(5.27)</a>) to reach the surface.  When the photon mean free path is small compared to temperature scale height, the photons are <em>effectively</em> confined to a volume of nearly constant temperature and the conditions for local thermodynamic equilibrium (LTE) are satisfied.  Overall the statements: <strong>(a)</strong> <span class="math notranslate nohighlight">\(I_\lambda = B_\lambda\)</span> and <strong>(b)</strong> <span class="math notranslate nohighlight">\(S_\lambda = B_\lambda\)</span> indicate that the radiation field is described by the Planck function and the source function describes the physical source of the radiation (<span class="math notranslate nohighlight">\(j_\lambda/\kappa_\lambda\)</span>) as one that produces the radiation.</p>
 <p><strong>Applying the Transfer Equation</strong></p>
@@ -1293,8 +1009,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ \ln \left(\frac{I_\lambda - S_\lambda}{I_{\lambda,o} - S_\lambda}\right) = -\kappa_\lambda \rho s, \]</div>
 <p>which simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-87aa55e7-fc62-41be-aff3-b0ad00195c0f">
-<span class="eqno">(5.32)<a class="headerlink" href="#equation-87aa55e7-fc62-41be-aff3-b0ad00195c0f" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda(s) = I_{\lambda,o} e^{-\kappa_\lambda \rho s} + S_\lambda(1-e^{-\kappa_\lambda \rho s}). \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ea63b130-7a02-4a62-83b2-295a685c3049">
+<span class="eqno">(5.32)<a class="headerlink" href="#equation-ea63b130-7a02-4a62-83b2-295a685c3049" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda(s) = I_{\lambda,o} e^{-\kappa_\lambda \rho s} + S_\lambda(1-e^{-\kappa_\lambda \rho s}). \end{align}\]</div>
 <ul class="simple">
 <li><p><strong>Suppose the source function <span class="math notranslate nohighlight">\(S_\lambda\)</span> is twice the initial intensity <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span>, then plot the transformation of the intensity in units of <span class="math notranslate nohighlight">\(\kappa_\lambda \rho s\)</span>.</strong></p></li>
 </ul>
@@ -1326,41 +1042,43 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/stellar-atmospheres_18_0.png" src="../_images/stellar-atmospheres_18_0.png" />
+<img alt="../_images/b4df10230be32756c496091a2e314dafaaad34048af6474cfc591126c532eedd.png" src="../_images/b4df10230be32756c496091a2e314dafaaad34048af6474cfc591126c532eedd.png" />
 </div>
 </div>
-</div>
-<div class="section" id="the-assumption-of-a-plane-parallel-atmosphere">
-<h3><span class="section-number">5.4.4. </span>The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-assumption-of-a-plane-parallel-atmosphere">
+<h3><span class="section-number">5.4.4. </span>The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this heading">#</a></h3>
 <p>The intensity of light must depend on the path for the outward flow of energy.  The absorption and emission coefficients are the same for light traveling in all directions, but these coefficients depend on the temperature and density in a complicated way.  For astronomers to understand the stellar interior, they must know <em>at what depth</em> a spectral line is formed.  Since we are interested in the depth, let’s rewrite the transfer equation in terms of the optical depth, which is simply</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4eca4ef7-8884-4cf3-ae99-78881278e15d">
-<span class="eqno">(5.33)<a class="headerlink" href="#equation-4eca4ef7-8884-4cf3-ae99-78881278e15d" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d7ccae9f-8ccb-41a4-9c68-bea43fd83429">
+<span class="eqno">(5.33)<a class="headerlink" href="#equation-d7ccae9f-8ccb-41a4-9c68-bea43fd83429" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \end{align}\]</div>
 <p>Optical depth does not provide a unique geometric depth in the atmosphere and thus, must be replaced with a more meaningful measure of position.  The atmospheres of main-sequence stars are physically thin compared with the size of the star.  The atmosphere’s radius of curvature is much larger than its thickness, where we may consider the atmosphere as a <em>plane-parallel slab</em>.  If we assume align the <em>z</em>-axis with the vertical direction, then <span class="math notranslate nohighlight">\(z=0\)</span> denotes the top of this <strong>plane-parallel</strong> atmosphere and a <strong>vertical optical depth</strong> <span class="math notranslate nohighlight">\(\tau_{\lambda,v}(z)\)</span> is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a4158754-78e2-464d-b07d-b7c22e482a77">
-<span class="eqno">(5.34)<a class="headerlink" href="#equation-a4158754-78e2-464d-b07d-b7c22e482a77" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_{\lambda,v}(z) \equiv \int_z^0 \kappa_\lambda \rho dz. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ec7f6c29-f17c-4528-a736-586b7f348058">
+<span class="eqno">(5.34)<a class="headerlink" href="#equation-ec7f6c29-f17c-4528-a736-586b7f348058" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_{\lambda,v}(z) \equiv \int_z^0 \kappa_\lambda \rho dz. \end{align}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <span class="math notranslate nohighlight">\(v\)</span> symbol is not to be confused with <span class="math notranslate nohighlight">\(\nu\)</span>, where the former signifies the <strong>v</strong> in vertical.</p>
 </div>
 <p>Recall the discussion for correcting the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#optical-depth">opacity of the Earth’s atmosphere</a>, the depth was parameterized in a similar manner.  A ray that travels upward at an angle <span class="math notranslate nohighlight">\(\theta\)</span> has farther to go through the atmosphere to reach the surface.  The optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> is <em>greater</em> than the vertical optical depth <span class="math notranslate nohighlight">\(\tau_{\lambda,v}\)</span>.  The two optical depths are related by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f775462-3d91-414e-9c69-bf1c75e0d6e8">
-<span class="eqno">(5.35)<a class="headerlink" href="#equation-6f775462-3d91-414e-9c69-bf1c75e0d6e8" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_\lambda = \frac{\tau_{\lambda,v}}{\cos \theta} = \tau_{\lambda,v} \sec \theta \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b812f41d-77af-4320-b1f3-31e749edfb5f">
+<span class="eqno">(5.35)<a class="headerlink" href="#equation-b812f41d-77af-4320-b1f3-31e749edfb5f" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_\lambda = \frac{\tau_{\lambda,v}}{\cos \theta} = \tau_{\lambda,v} \sec \theta \end{align}\]</div>
 <p>and then the transfer equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5023b552-1364-4850-8e07-4458eb2b9991">
-<span class="eqno">(5.36)<a class="headerlink" href="#equation-5023b552-1364-4850-8e07-4458eb2b9991" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-702047d1-3983-4cd4-b79d-a36955bfd2ca">
+<span class="eqno">(5.36)<a class="headerlink" href="#equation-702047d1-3983-4cd4-b79d-a36955bfd2ca" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \end{align}\]</div>
 <p>for the approximation of a plane-parallel atmosphere.</p>
-<div class="figure align-default" id="pp-atmos-fig">
+<figure class="align-default" id="pp-atmos-fig">
 <a class="reference internal image-reference" href="../_images/Figure_141.jpg"><img alt="plane parallel atmosphere" src="../_images/Figure_141.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Plane-parallel stellar atmosphere. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#pp-atmos-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Plane-parallel stellar atmosphere. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#pp-atmos-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The value of the vertical optical depth is wavelength dependent, but when considering the bulk flow of photons a <em>gray</em> atmosphere is assumed.  Gray atmospheres are used when the measured flux does not show a strong wavelength dependence.  Thus, the transfer equation for a plane-parallel gray atmosphere is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af571017-01e4-4fae-9e66-8ba0608a0123">
-<span class="eqno">(5.37)<a class="headerlink" href="#equation-af571017-01e4-4fae-9e66-8ba0608a0123" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \dfrac{dI}{d\tau_v} = I - S. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-97754d4e-e029-4091-adc5-bcc0477de29e">
+<span class="eqno">(5.37)<a class="headerlink" href="#equation-97754d4e-e029-4091-adc5-bcc0477de29e" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \dfrac{dI}{d\tau_v} = I - S. \end{align}\]</div>
 <p>Formulating the transfer equation in terms of an angle and optical depth leads to two useful relations describing the radiation field.</p>
 <p><strong>1) Integrating over all solid angles</strong></p>
 <p>The source function <span class="math notranslate nohighlight">\(S\)</span> depends only on the local conditions, so we can integrate over all solid angles to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-10e19948-8f46-46dd-9ae8-76f3f317ec38">
-<span class="eqno">(5.38)<a class="headerlink" href="#equation-10e19948-8f46-46dd-9ae8-76f3f317ec38" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c30ac6fa-0458-44e1-923c-9dd739bb7c29">
+<span class="eqno">(5.38)<a class="headerlink" href="#equation-c30ac6fa-0458-44e1-923c-9dd739bb7c29" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \end{align}\]</div>
 <p>This expression can be simplified using <span class="math notranslate nohighlight">\(\int d\Omega = 4\pi\)</span>, definition of <span class="math notranslate nohighlight">\(F_{rad}\)</span> (Eqn. <a class="reference internal" href="#equation-spec-flux">(5.7)</a>, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>) and the mean intensity (Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a>, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>).  Through substitution, we find</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d F_{rad}}{d\tau_v} = 4\pi(\langle I \rangle - S). \]</div>
@@ -1376,8 +1094,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 \[ \frac{d P_{rad}}{dr} = -\frac{\kappa \rho}{c}F_{rad}, \]</div>
 <p>in terms of a spherical coordinate system with its origin at the center fo the star.  As mention in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-radiation-pressure-gradient">the radiation pressure gradient</a>, this result describes the net radiative flux driven by differences in radiation pressure (i.e., “photon wind”).</p>
 <p>For a plane-parallel atmosphere to be in equilibrium, the radiative flux must have the same value at every level, including its surface, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0cdafd79-8778-48e5-8703-affea5f3408e">
-<span class="eqno">(5.40)<a class="headerlink" href="#equation-0cdafd79-8778-48e5-8703-affea5f3408e" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-1172c5f2-0060-4ef8-bf52-9efbcdaf657b">
+<span class="eqno">(5.40)<a class="headerlink" href="#equation-1172c5f2-0060-4ef8-bf52-9efbcdaf657b" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \end{align}\]</div>
 <p>This implies that the first of the above relations (<span class="math notranslate nohighlight">\(dF_{rad}/d\tau_v\)</span>) is zero and the mean intensity must equal the source function as</p>
 <div class="math notranslate nohighlight">
 \[ \langle I \rangle = S. \]</div>
@@ -1385,14 +1103,14 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight" id="equation-rad-pressure">
 <span class="eqno">(5.41)<a class="headerlink" href="#equation-rad-pressure" title="Permalink to this equation">#</a></span>\[P_{rad} = \frac{\tau_v}{c}F_{rad} + C,\]</div>
 <p>where <span class="math notranslate nohighlight">\(C\)</span> is the constant of integration.</p>
-</div>
-<div class="section" id="the-eddington-approximation">
-<h3><span class="section-number">5.4.5. </span>The Eddington Approximation<a class="headerlink" href="#the-eddington-approximation" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-eddington-approximation">
+<h3><span class="section-number">5.4.5. </span>The Eddington Approximation<a class="headerlink" href="#the-eddington-approximation" title="Permalink to this heading">#</a></h3>
 <p>The temperature as a function of the optical depth (i.e., temperature structure) can be determined if we knew how the radiation pressure varied with temperature in the general case.  Equation <a class="reference internal" href="#equation-rad-pressure">(5.41)</a> could be used if we also <em>assume</em> a description of the angular distribution of intensity.  An approximation was made by <a class="reference external" href="https://en.wikipedia.org/wiki/Arthur_Eddington">Eddington</a>, where the intensity of the radiation field is defined in the +<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm out}\)</span> and another in the -<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm in}\)</span>.  These intensities vary with depth in the atmosphere and when <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>, then <span class="math notranslate nohighlight">\(I_{\rm in} = 0\)</span> (i.e., radiation doesn’t flow inward at the top of the atmosphere).  The <strong>Eddington approximation</strong> gives the mean intensity, radiative flux, and radiation pressure by:</p>
 <div class="math notranslate nohighlight" id="equation-average-intens-edd">
 <span class="eqno">(5.42)<a class="headerlink" href="#equation-average-intens-edd" title="Permalink to this equation">#</a></span>\[\langle I \rangle = \frac{1}{2}(I_{\rm out} + I_{\rm in}), \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-8e162dcc-7df0-4bca-b2ce-61412ae1311f">
-<span class="eqno">(5.43)<a class="headerlink" href="#equation-8e162dcc-7df0-4bca-b2ce-61412ae1311f" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = \pi(I_{\rm out} - I_{\rm in}), \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bf823a75-6bbd-4bbb-bdbb-3c7a76e56e3c">
+<span class="eqno">(5.43)<a class="headerlink" href="#equation-bf823a75-6bbd-4bbb-bdbb-3c7a76e56e3c" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = \pi(I_{\rm out} - I_{\rm in}), \end{align}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-rad-press-edd">
 <span class="eqno">(5.44)<a class="headerlink" href="#equation-rad-press-edd" title="Permalink to this equation">#</a></span>\[P_{rad}= \frac{2\pi}{3c}(I_{\rm out} + I_{\rm in}) = \frac{4\pi}{3c} \langle I \rangle .\]</div>
@@ -1403,8 +1121,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ \frac{2\pi}{3c} I_{\rm out} = \frac{2}{3c} F_{rad} = C, \]</div>
 <p>and substituting back into Eqn. <a class="reference internal" href="#equation-rad-press-int">(5.45)</a>, we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-947e4e9b-74ac-4b56-aa70-61017869ce05">
-<span class="eqno">(5.46)<a class="headerlink" href="#equation-947e4e9b-74ac-4b56-aa70-61017869ce05" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} +  \frac{2}{3c} F_{rad} = \frac{F_{rad}}{c}\left(\tau_v + \frac{2}{3}\right).  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f32f47f6-a2f1-4586-9e95-334b9fe6cf1e">
+<span class="eqno">(5.46)<a class="headerlink" href="#equation-f32f47f6-a2f1-4586-9e95-334b9fe6cf1e" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} +  \frac{2}{3c} F_{rad} = \frac{F_{rad}}{c}\left(\tau_v + \frac{2}{3}\right).  \end{align}\]</div>
 <p>But we already know the radiative flux is a constant (<span class="math notranslate nohighlight">\(F_{rad} = \sigma T_e^4\)</span>) and thus, the mean intensity can be determined as a function of vertical optical depth by</p>
 <div class="math notranslate nohighlight" id="equation-mean-intensity-vod">
 <span class="eqno">(5.47)<a class="headerlink" href="#equation-mean-intensity-vod" title="Permalink to this equation">#</a></span>\[\langle I \rangle  = \frac{3\sigma}{4\pi}T_e^4\left(\tau_v + \frac{2}{3}\right).\]</div>
@@ -1412,12 +1130,12 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight" id="equation-source-func">
 <span class="eqno">(5.48)<a class="headerlink" href="#equation-source-func" title="Permalink to this equation">#</a></span>\[S = B = \langle I \rangle  = \frac{\sigma T^4}{\pi}.\]</div>
 <p>Substituting Eqn. <a class="reference internal" href="#equation-source-func">(5.48)</a> back into Eqn. <a class="reference internal" href="#equation-mean-intensity-vod">(5.47)</a> results in the variation of the temperature with vertical optical depth in a plane-parallel gray atmosphere in LTE, assuming the Eddington approximation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ca0a693-9e46-4710-be9c-c8779aaa3f5c">
-<span class="eqno">(5.49)<a class="headerlink" href="#equation-8ca0a693-9e46-4710-be9c-c8779aaa3f5c" title="Permalink to this equation">#</a></span>\[\begin{align}  T^4 = \frac{3}{4}T_e^4\left(\tau_v + \frac{2}{3}\right). \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-073c8ff2-a4d2-46af-9204-223fb1c6525d">
+<span class="eqno">(5.49)<a class="headerlink" href="#equation-073c8ff2-a4d2-46af-9204-223fb1c6525d" title="Permalink to this equation">#</a></span>\[\begin{align}  T^4 = \frac{3}{4}T_e^4\left(\tau_v + \frac{2}{3}\right). \end{align}\]</div>
 <p>This relation reveals that <span class="math notranslate nohighlight">\(T=T_e\)</span> at <span class="math notranslate nohighlight">\(\tau_v = 2/3\)</span> and <em>not</em> at <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>.  The “surface” of a star for which we measure an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> is <em>not</em> at the top of the atmosphere, but deeper down where <span class="math notranslate nohighlight">\(\tau_v=2/3\)</span>.  The average point of origin for the photons comes from within the stellar atmosphere.  <em>When looking at a star, we see down to a vertical optical depth of <span class="math notranslate nohighlight">\(\tau_v \approx 2/3\)</span>, averaged over the disk of the star.</em></p>
-</div>
-<div class="section" id="limb-darkening-revisited">
-<h3><span class="section-number">5.4.6. </span>Limb Darkening Revisited<a class="headerlink" href="#limb-darkening-revisited" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="limb-darkening-revisited">
+<h3><span class="section-number">5.4.6. </span>Limb Darkening Revisited<a class="headerlink" href="#limb-darkening-revisited" title="Permalink to this heading">#</a></h3>
 <p>The previous discussion of <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#limb-darkening">limb darkening</a> described limb darkening qualitatively.  Limb darkening is one measure of the how the source function varies with depth in a star’s atmosphere.  Now we can examine this more closely starting with the transfer equation,</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \]</div>
@@ -1437,10 +1155,12 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>If we relax our assumptions (gray atmosphere, LTE, and Eddington approximation) but keep the plane-parallel atmosphere, then the problem of limb darkening is not very different, where each contribution is modified as a function of <span class="math notranslate nohighlight">\(\theta\)</span>.  This easily accomplished through the substitution <span class="math notranslate nohighlight">\(\tau_{\lambda,o} = \tau_{v,o} \sec \theta\)</span> that uses the vertical optical depth <span class="math notranslate nohighlight">\(\tau_v\)</span> to get</p>
 <div class="math notranslate nohighlight">
 \[ I_\lambda(\theta) = I_{\lambda,o}e^{-\tau_{v,o} \sec \theta} - \int_{\tau_{v,o} \sec\theta}^0 S_\lambda\sec\theta\: e^{-\tau_{v\sec \theta}} d\tau_v. \]</div>
-<div class="figure align-default" id="intensity-pp-fig">
+<figure class="align-default" id="intensity-pp-fig">
 <a class="reference internal image-reference" href="../_images/Figure_161.jpg"><img alt="plane parallel intensity" src="../_images/Figure_161.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Finding <span class="math notranslate nohighlight">\(I(\theta)\)</span> for limb darkening in a plane-parallel geometry. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#intensity-pp-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Finding <span class="math notranslate nohighlight">\(I(\theta)\)</span> for limb darkening in a plane-parallel geometry. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#intensity-pp-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Including the contributions from all layers of the atmosphere (or <span class="math notranslate nohighlight">\(\tau_{v,o}=\infty\)</span>), then the first term goes to zero leaving</p>
 <div class="math notranslate nohighlight" id="equation-intensity-int">
 <span class="eqno">(5.51)<a class="headerlink" href="#equation-intensity-int" title="Permalink to this equation">#</a></span>\[I_\lambda(\theta) =  \int_0^\infty S_\lambda\sec\theta\: e^{-\tau_{v\sec \theta}} d\tau_v.\]</div>
@@ -1459,46 +1179,50 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ a_\lambda = \frac{\sigma T_e^4}{2\pi}\quad {\rm and} \quad b_\lambda = \frac{3\sigma}{4\pi} T_e^4. \]</div>
 <p>Using Eqn. <a class="reference internal" href="#equation-solar-src-fcn">(5.53)</a>, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b0d7d81f-7a22-4230-990a-4953e94b6f41">
-<span class="eqno">(5.54)<a class="headerlink" href="#equation-b0d7d81f-7a22-4230-990a-4953e94b6f41" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{I(\theta)}{I(0)} = \frac{a_\lambda + b_\lambda \tau_v}{a_\lambda + b_\lambda} = \frac{2}{5} + \frac{3}{5}\cos \theta. \end{align}\]</div>
-<div class="figure align-default" id="eddingtion-approx-fig">
+<div class="amsmath math notranslate nohighlight" id="equation-21a283e3-e116-48d2-9f73-d94ecea5009d">
+<span class="eqno">(5.54)<a class="headerlink" href="#equation-21a283e3-e116-48d2-9f73-d94ecea5009d" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{I(\theta)}{I(0)} = \frac{a_\lambda + b_\lambda \tau_v}{a_\lambda + b_\lambda} = \frac{2}{5} + \frac{3}{5}\cos \theta. \end{align}\]</div>
+<figure class="align-default" id="eddingtion-approx-fig">
 <a class="reference internal image-reference" href="../_images/Figure_161.jpg"><img alt="Eddington approximation" src="../_images/Figure_161.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">A theoretical Eddington approximation of solar limb darkening integrated over all wavelengths (curve) compared to observational data (dots) for the Sun. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#eddingtion-approx-fig" title="Permalink to this image">#</a></p>
-</div>
-</div>
-<div class="section" id="id2">
-<h3><span class="section-number">5.4.7. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 5.15 </span><span class="caption-text">A theoretical Eddington approximation of solar limb darkening integrated over all wavelengths (curve) compared to observational data (dots) for the Sun. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#eddingtion-approx-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id2">
+<h3><span class="section-number">5.4.7. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>6. If the temperature of a star’s atmosphere is increasing outward, what type of spectral lines would you expect to find in the star’s spectrum at those wavelengths where the opacity is greatest?</p>
 <p>7. For a plane-parallel atmosphere, show that the Eddington approximation leads to expressions for the mean intensity, radiative flux, and radiation pressure given in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-eddington-approximation">Eqns. <a class="reference internal" href="#equation-average-intens-edd">(5.42)</a>-<a class="reference internal" href="#equation-rad-press-edd">(5.44)</a></a>. <em>Hint: Start with <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-specific-and-mean-intensities">Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a></a> and apply boundary conditions.</em></p>
 <p>8. Complete Problem 28 (a-c) from Chapter 9 (Carroll &amp; Ostlie (2007)).</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="the-profiles-of-spectral-lines">
-<h2><span class="section-number">5.5. </span>The Profiles of Spectral Lines<a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this headline">#</a></h2>
-<div class="section" id="equivalent-widths">
-<h3><span class="section-number">5.5.1. </span>Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="the-profiles-of-spectral-lines">
+<h2><span class="section-number">5.5. </span>The Profiles of Spectral Lines<a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this heading">#</a></h2>
+<section id="equivalent-widths">
+<h3><span class="section-number">5.5.1. </span>Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this heading">#</a></h3>
 <p>Absorption spectral lines are identified on graphs of the radiant flux <span class="math notranslate nohighlight">\(F_\lambda\)</span> as a function of the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  The radiant flux can be normalized relative to the flux of the continuous spectrum <span class="math notranslate nohighlight">\(F_c\)</span> outside the spectral line (i.e., <span class="math notranslate nohighlight">\(F_\lambda/F_c\)</span>).  Near the middle of the absorption (i.e., <em>core</em> of the spectral line), there is the central wavelength <span class="math notranslate nohighlight">\(\lambda_o\)</span> and the <em>wings</em> extend outward, sweeping up to the continuum.  The depth <span class="math notranslate nohighlight">\(\delta\)</span> of the line is simply the fractional decrease in radiant flux relative to the continuum (i.e., <span class="math notranslate nohighlight">\(\delta F_\lambda = 1 - F_\lambda/F_c\)</span>).  The strength of absorption is measured by its <strong>equivalent width</strong> <span class="math notranslate nohighlight">\(W\)</span>, which is a rectangle with height equal to unity and a specific width so that the area of the rectangle is equal to the total area removed from the continuum by the absorption.  Mathematically, this is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba276475-5615-47cc-8cf8-04d348038240">
-<span class="eqno">(5.55)<a class="headerlink" href="#equation-ba276475-5615-47cc-8cf8-04d348038240" title="Permalink to this equation">#</a></span>\[\begin{align}  W = \int 1- \frac{F_\lambda}{F_c} d\lambda = \int \delta F d\lambda, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bc07b70e-0b9a-499b-8128-d0b660318cfe">
+<span class="eqno">(5.55)<a class="headerlink" href="#equation-bc07b70e-0b9a-499b-8128-d0b660318cfe" title="Permalink to this equation">#</a></span>\[\begin{align}  W = \int 1- \frac{F_\lambda}{F_c} d\lambda = \int \delta F d\lambda, \end{align}\]</div>
 <p>where the integral is taken from one side of <span class="math notranslate nohighlight">\(\lambda_o\)</span> to the other and is usually on the order of 0.01 nm.  Another measure of spectral line width uses a point at half of the depth at the core wavelength (i.e., <span class="math notranslate nohighlight">\(\delta F_{1/2} = 1/2 - F_{\lambda_o}/(2F_c)\)</span>) and moves to the left/right a <span class="math notranslate nohighlight">\(\Delta \lambda_{1/2} = \lambda_o \pm \lambda_{\delta F}\)</span> until intersecting the absorption line so that <span class="math notranslate nohighlight">\(\delta F = \delta F_{1/2}\)</span>, or</p>
 <div class="math notranslate nohighlight">
 \[ 1 - \frac{F_\lambda}{F_c} = \frac{1}{2}\left(1 - \frac{F_{\lambda_o}}{F_c} \right), \]</div>
 <p>which is called the <strong>full width at half-maximum</strong> (FWHM).</p>
-<div class="figure align-default" id="line-profile-fig">
+<figure class="align-default" id="line-profile-fig">
 <a class="reference internal image-reference" href="../_images/Figure_181.jpg"><img alt="line profile" src="../_images/Figure_181.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.16 </span><span class="caption-text">The profile of a typical spectral line. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#line-profile-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.16 </span><span class="caption-text">The profile of a typical spectral line. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#line-profile-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>A spectral line is called <strong>optically thin</strong> when there is no wavelength at which the radiant flux is completely blocked (i.e., <span class="math notranslate nohighlight">\(F_\lambda/F_c = 0\)</span>).  The opacity <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> is greatest at the core wavelength <span class="math notranslate nohighlight">\(\lambda_o\)</span> and decreases moving into the wings.  The core wavelength is formed at higher (and cooler regions) of the stellar atmosphere, where the wings form at progressively deeper (and hotter) layers of the atmosphere, until it merges with the continuum producing region (<span class="math notranslate nohighlight">\(\tau_v = 2/3\)</span>).</p>
-</div>
-<div class="section" id="processes-that-broaden-spectral-lines">
-<h3><span class="section-number">5.5.2. </span>Processes That Broaden Spectral Lines<a class="headerlink" href="#processes-that-broaden-spectral-lines" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="processes-that-broaden-spectral-lines">
+<h3><span class="section-number">5.5.2. </span>Processes That Broaden Spectral Lines<a class="headerlink" href="#processes-that-broaden-spectral-lines" title="Permalink to this heading">#</a></h3>
 <p>Three main processes are responsible for broadening spectral lines with mechanisms that produce a distinctive line shape or <em>line profile</em>.</p>
-<ol>
+<ol class="arabic">
 <li><p><strong>Natural broadening</strong> occurs because the spectral lines cannot be sharp even for motionless, isolated atoms due to Heisenberg’s uncertainty principle.  An electron occupies the orbital for the first excited state for an instant <span class="math notranslate nohighlight">\(\Delta t\)</span> and the orbital’s energy <span class="math notranslate nohighlight">\(E\)</span> cannot have a precise value (<span class="math notranslate nohighlight">\(\Delta E\: \Delta t \approx \hbar\)</span>).  Electrons can transition from nearby orbitals to these “fuzzy” energy levels, which produces an uncertainty in the absorbed/emitted photons.  Using the wavelength form for the energy of a photon (<span class="math notranslate nohighlight">\(E = hc/\lambda\)</span>), we find that the uncertainty <span class="math notranslate nohighlight">\(\Delta \lambda\)</span> is roughly <br> <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-eaa7c474-f921-47ea-8b65-00a5197831c4">
-<span class="eqno">(5.56)<a class="headerlink" href="#equation-eaa7c474-f921-47ea-8b65-00a5197831c4" title="Permalink to this equation">#</a></span>\[\begin{align} \Delta \lambda \approx \frac{\lambda^2}{2\pi c}\left(\frac{1}{\Delta t_o} + \frac{1}{\Delta t_f} \right),  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0d0f291b-9545-4c46-b8cd-d36fef11c61a">
+<span class="eqno">(5.56)<a class="headerlink" href="#equation-0d0f291b-9545-4c46-b8cd-d36fef11c61a" title="Permalink to this equation">#</a></span>\[\begin{align} \Delta \lambda \approx \frac{\lambda^2}{2\pi c}\left(\frac{1}{\Delta t_o} + \frac{1}{\Delta t_f} \right),  \end{align}\]</div>
 <p>which depends on the lifetime of the electron in its initial state <span class="math notranslate nohighlight">\(\Delta t_o\)</span> and final state <span class="math notranslate nohighlight">\(\Delta t_f\)</span>.</p>
 </li>
 <li><p><strong>Doppler broadening</strong> occurs because the gas particles of the atmosphere have thermal motion that is described by the Maxwell-Boltzmann distribution function with a most probable speed of the atoms (<span class="math notranslate nohighlight">\(v_{mp} = \sqrt{2kT/m}\)</span>).  The wavelengths of the absorbed or emitted light are Doppler-shifted nonrelativistically according to <span class="math notranslate nohighlight">\(\Delta \lambda /\lambda = \pm |v_r|/c\)</span>.  The width of a Doppler broadened spectral line should be  <br> <br></p>
@@ -1519,8 +1243,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ \Delta t_o \approx \frac{\ell}{v} = \frac{1}{n\sigma} \sqrt{\frac{m}{2kT}}, \]</div>
 <p>which depends on the atom mass <span class="math notranslate nohighlight">\(m\)</span>, the collisional cross section <span class="math notranslate nohighlight">\(\sigma\)</span> and the number density <span class="math notranslate nohighlight">\(n\)</span> of the atoms.  The spectral line width due to (collisional) pressure broadening is  <br> <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-066fd35a-3df2-406e-a0f4-d243cb1cff08">
-<span class="eqno">(5.57)<a class="headerlink" href="#equation-066fd35a-3df2-406e-a0f4-d243cb1cff08" title="Permalink to this equation">#</a></span>\[\begin{align}  \Delta \lambda = \frac{\lambda^2}{\pi c \Delta t_o} \approx \frac{\lambda^2 n \sigma}{\pi c}\sqrt{\frac{2kT}{m}}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7e636b87-38d5-4265-ab6a-6dea097a78f9">
+<span class="eqno">(5.57)<a class="headerlink" href="#equation-7e636b87-38d5-4265-ab6a-6dea097a78f9" title="Permalink to this equation">#</a></span>\[\begin{align}  \Delta \lambda = \frac{\lambda^2}{\pi c \Delta t_o} \approx \frac{\lambda^2 n \sigma}{\pi c}\sqrt{\frac{2kT}{m}}. \end{align}\]</div>
 <p>The spectral line width is proportional to <span class="math notranslate nohighlight">\(n\)</span> and narrower lines for the more luminous giant and supergiant stars are due to the lower <span class="math notranslate nohighlight">\(n\)</span> in their extended atmospheres (i.e., the Morgan-Keenan luminosity classes).  Pressure broadening is more significant in the denser atmospheres of main-sequence stars, where collisions occur more frequently.</p>
 </li>
 </ol>
@@ -1612,32 +1336,38 @@ The Pressure broadening is 0.98 times that of natural broadening (Natural ~ Pres
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-voigt-profile">
-<h3><span class="section-number">5.5.3. </span>The Voigt Profile<a class="headerlink" href="#the-voigt-profile" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="the-voigt-profile">
+<h3><span class="section-number">5.5.3. </span>The Voigt Profile<a class="headerlink" href="#the-voigt-profile" title="Permalink to this heading">#</a></h3>
 <p>The total line profile (<strong>Voight profile</strong>) is due to the contributions of both the Doppler and damping (pressure) profiles.  The Doppler broadening dominates near the core wavelength, where the damping profile dominates in the wings at about <span class="math notranslate nohighlight">\(1.8\times\)</span> the FWHM wavelength <span class="math notranslate nohighlight">\((\Delta \lambda)_{1/2}\)</span>.  Some line profiles tend to have <em>Doppler cores</em> and <em>damping wings.</em></p>
-<div class="figure align-default" id="doppler-profile-fig">
+<figure class="align-default" id="doppler-profile-fig">
 <a class="reference internal image-reference" href="../_images/Figure_19.jpg"><img alt="Doppler profile" src="../_images/Figure_19.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.17 </span><span class="caption-text">Schematic Doppler and damping line profiles scaled to have the same equivalent width. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#doppler-profile-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.17 </span><span class="caption-text">Schematic Doppler and damping line profiles scaled to have the same equivalent width. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#doppler-profile-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The simplest model used (<strong>Schuster-Schwarzchild model</strong> ) for calculating a line profile assume that the star’s photosphere acts like a blackbody and atoms above the photosphere remove photons from the continuous spectrum.  This is inconsistent with the idea that photons originate at an optical depth <span class="math notranslate nohighlight">\(\tau_\lambda = 2/3\)</span>, but it is still a useful approximation.  To use the model, one must adopt values for the temperature, density, and composition for the region above the photosphere.  The temperature and density: 1) determine the importance of Doppler and pressure broadening and 2) are used in the Boltzmann and Saha equations.</p>
 <p>Let <span class="math notranslate nohighlight">\(N\)</span> be the number of atoms of a certain element per unit area lying above the photosphere, where <span class="math notranslate nohighlight">\(N\)</span> represents a <strong>column density</strong> with units of <span class="math notranslate nohighlight">\({\rm m^{-2}}\)</span>.  The temperature and density are used (in the Boltzmann and Saha equations) to calculate the excitation and ionization states that determine the number of absorbing atoms <span class="math notranslate nohighlight">\(N_a\)</span> (i.e., number of atoms that have electrons in the proper orbital for absorption).  Our goal is to determine <span class="math notranslate nohighlight">\(N_a\)</span> using the calculated and observed line profiles.  Quantum mechanics is used to determine the likelihood of transitions and the relative probabilities of an electron making a transition are given by <em>f-values</em> or <em>oscillator strengths</em>.  For hydrogen, <span class="math notranslate nohighlight">\(f=0.637\)</span> for <span class="math notranslate nohighlight">\({\rm H \alpha}\)</span> and <span class="math notranslate nohighlight">\(f=0.119\)</span> for <span class="math notranslate nohighlight">\({\rm H\beta}\)</span>.  The oscillator strength may be numerically or experimentally determined, where they are defined so that the <em>f-values</em> for transitions (from the same initial orbital) add up to the number of electrons in the atom or ion.  <em>The oscillator strength is the product of <span class="math notranslate nohighlight">\(N_a\)</span> and the f-value.</em></p>
-<div class="figure align-default" id="voigt-profile-fig">
+<figure class="align-default" id="voigt-profile-fig">
 <a class="reference internal image-reference" href="../_images/Figure_201.jpg"><img alt="Voigt profile" src="../_images/Figure_201.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.18 </span><span class="caption-text">Voigt profiles of the Ca II K line, where the shallowest line is produced by <span class="math notranslate nohighlight">\(N_a = 3.4 \times 10^{15}\:{\rm ions/m^2}\)</span>. The ions are ten times more abundant for each successively broader lines. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#voigt-profile-fig" title="Permalink to this image">#</a></p>
-</div>
-</div>
-<div class="section" id="the-curve-of-growth">
-<h3><span class="section-number">5.5.4. </span>The Curve of Growth<a class="headerlink" href="#the-curve-of-growth" title="Permalink to this headline">#</a></h3>
+<figcaption>
+<p><span class="caption-number">Fig. 5.18 </span><span class="caption-text">Voigt profiles of the Ca II K line, where the shallowest line is produced by <span class="math notranslate nohighlight">\(N_a = 3.4 \times 10^{15}\:{\rm ions/m^2}\)</span>. The ions are ten times more abundant for each successively broader lines. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#voigt-profile-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-curve-of-growth">
+<h3><span class="section-number">5.5.4. </span>The Curve of Growth<a class="headerlink" href="#the-curve-of-growth" title="Permalink to this heading">#</a></h3>
 <p>The <strong>curve of growth</strong> helps determine the value of <span class="math notranslate nohighlight">\(N_a\)</span> and the abundances of elements in stellar atmospheres.  Since the equivalent width <span class="math notranslate nohighlight">\(W\)</span> varies with <span class="math notranslate nohighlight">\(N_a\)</span>, a curve of growth represents the logarithmic change in both quantities.  When an absorbing element is introduced it produces absorption lines that are linearly proportional to <span class="math notranslate nohighlight">\(N_a\)</span>, until a saturation point is reached and the core line is optically thick.  The wings are still optically thin and can deepen, so the curve of growth increases proportional to <span class="math notranslate nohighlight">\(\sqrt{\ln N_a}\)</span>.  For large numbers of absorbing atoms, the pressure broadening contributes to deepening the wings and the absorption width grows proportionally to <span class="math notranslate nohighlight">\(\sqrt{N_a}\)</span>.  Using the curve of growth and a measured equivalent width, we can obtain the number of absorbing atoms.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To reduce the errors involved in a single spectral line, it is advantageous to locate (on a single curve of growth) the positions of equivalent widths of several lines formed by transitions from the same initial orbital.  However this in not applicable for all broad lines (e.g., H) and may lead to inaccurate results.  A logarithmic plot of the equivalent width per wavelength versus the <em>f</em>-value of the Number of atoms as a function of wavelength (normalized relative to 500 nm) provides this alternative view of the curve of growth (see Figure <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a>).</p>
 </div>
-<div class="figure align-default" id="growth-curve-fig">
+<figure class="align-default" id="growth-curve-fig">
 <a class="reference internal image-reference" href="../_images/Figure_211.jpg"><img alt="Curve of growth" src="../_images/Figure_211.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.19 </span><span class="caption-text">The curve of growth for the Ca II K line. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#growth-curve-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.19 </span><span class="caption-text">The curve of growth for the Ca II K line. Image credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#growth-curve-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><strong>Absorption in the Sun’s photosphere</strong></p>
 <p>The Solar spectrum contains absorption lines of sodium at 330.238 and 588.997 nm.  Carroll and Ostlie (2007) assumed a particular temperature (<span class="math notranslate nohighlight">\(T = 5800\)</span> K) and electron pressure (<span class="math notranslate nohighlight">\(P_e = 1\:{\rm N/m^2}\)</span>) for this example for the curve of growth.  <strong>Table 1</strong> provides equivalent widths, <em>f</em>-values, and values from the curve of growth as a function of wavelength.  <em>Note that the final column does not include the number of absorbing atoms per unit area <span class="math notranslate nohighlight">\(N_a\)</span>.</em></p>
 <div align="center">
@@ -1645,10 +1375,12 @@ The Pressure broadening is 0.98 times that of natural broadening (Natural ~ Pres
 <strong>Table 1</strong>: Data for Solar sodium lines. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>)</p>
 </div>
 <p>Sodium lines are produced during upward electron transitions from the ground state of the Na I atom and thus, these lines have the same value of <span class="math notranslate nohighlight">\(N_a\)</span> above the continuum-forming layer of the photosphere.  The value for <span class="math notranslate nohighlight">\(N_a\)</span> can be determined using the values of <span class="math notranslate nohighlight">\(\log_{10}(W/\lambda)\)</span> from Table 1 to locate the respective values of <span class="math notranslate nohighlight">\(\log_{10}(fN_a(\lambda/500\:{\rm nm}))\)</span> in Figure <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a> (i.e., follow the arrows).</p>
-<div class="figure align-default" id="solar-growth-fig">
+<figure class="align-default" id="solar-growth-fig">
 <a class="reference internal image-reference" href="../_images/Figure_221.jpg"><img alt="Curve of growth Solar" src="../_images/Figure_221.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.20 </span><span class="caption-text">The general curve of growth for the Sun. Image credit: Carroll &amp; Ostlie (2007); data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>.</span><a class="headerlink" href="#solar-growth-fig" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.20 </span><span class="caption-text">The general curve of growth for the Sun. Image credit: Carroll &amp; Ostlie (2007); data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>.</span><a class="headerlink" href="#solar-growth-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Using Fig. <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a>, we find values of 17.15 and 18.83 for the 330.238 and 588.997 nm lines, respectively.  Therefore, the respective <span class="math notranslate nohighlight">\(N_a\)</span> values can be determined from the <em>difference of values</em> from the curve of growth (Fig. <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a>) and the tabulated values (Table 1).  It follows</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -1731,9 +1463,9 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 </div>
 </div>
 <p>The number of absorbing atoms can be determined by comparing the measured equivalent widths for different absorption lines with a theoretical curve of growth.  A similar analysis can be performed for lines originating from atoms (or ions) in different initial states, where the Boltzmann equation is applied to the relative numbers of atoms (or ions) to calculate the excitation temperature.  It also possible to use the Saha equation to find either the electron pressure of the ionization temperature.</p>
-</div>
-<div class="section" id="computer-modeling-of-stellar-atmospheres">
-<h3><span class="section-number">5.5.5. </span>Computer Modeling of Stellar Atmospheres<a class="headerlink" href="#computer-modeling-of-stellar-atmospheres" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="computer-modeling-of-stellar-atmospheres">
+<h3><span class="section-number">5.5.5. </span>Computer Modeling of Stellar Atmospheres<a class="headerlink" href="#computer-modeling-of-stellar-atmospheres" title="Permalink to this heading">#</a></h3>
 <p>The ultimate refinement in analyzing stellar atmospheres comes from the construction of a <em>model atmosphere</em> on a computer.  Each of the parameters that we use (temperature, pressure, and density) depend on each other in complex ways.  Each atmospheric layer is involved in the formation of line profiles that contribute to the observed stellar spectrum.  The equations of hydrostatic equilibrium, thermodynamics, statistical and quantum mechanics, and energy transport (by radiation and convection) are combined with extensive libraries of opacities to calculate the temperature, pressure, and density as a function of depth below the surface.</p>
 <div align="center">
 <p><img alt="Table 2" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Table_2.jpg?raw=true?" /><br>
@@ -1745,10 +1477,10 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 <li><p>the production of heavier elements by supernovae, and</p></li>
 <li><p>the Big Bang that produced the primordial H and He that started it all.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="supplemental-links">
-<h2><span class="section-number">5.6. </span>Supplemental Links<a class="headerlink" href="#supplemental-links" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="supplemental-links">
+<h2><span class="section-number">5.6. </span>Supplemental Links<a class="headerlink" href="#supplemental-links" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.ifa.hawaii.edu/users/kud/teaching_12/3_Radiative_transfer.pdf">Powerpoint slides</a> from Rolf Kudritzki at the University of Hawaii’s Institute for Astronomy (IfA).</p></li>
 <li><p><a class="reference external" href="http://people.tamu.edu/~kevinkrisciunas/planck.pdf">Integrating the Planck function</a> from Kevin Krisciunas at Texas A&amp;M University.</p></li>
@@ -1756,22 +1488,22 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 <li><p><a class="reference external" href="http://spiff.rit.edu/classes/phys440/lectures/optd/optd.html">Notes on Optical Depth</a> from Michael Richmond at Rochester Institute of Technology.</p></li>
 <li><p><a class="reference external" href="http://www.astro.wisc.edu/~townsend/resource/teaching/astro-310-F08/13-gray-eddington.pdf">Notes on Eddington Approximation</a> from Richard Townsend at University of Wisconsin-Madison.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "saturnaxis/ModernAstro",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Chapter_9"
         },
         predefinedOutput: true
@@ -1779,50 +1511,143 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../Chapter_8/classification-of-stellar-spectra.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>The Classification of Stellar Spectra</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Chapter_8/classification-of-stellar-spectra.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>The Classification of Stellar Spectra</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../Chapter_10/sun.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../Chapter_10/sun.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">6. </span>The Sun</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-description-of-the-radiation-field">5.1. The Description of the Radiation Field</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-and-mean-intensities">5.1.1. The Specific and Mean Intensities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-energy-density">5.1.2. The Specific Energy Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-radiative-flux">5.1.3. The Specific Radiative Flux</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation-pressure">5.1.4. Radiation Pressure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">5.1.5. <strong>Problems</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-opacity">5.2. Stellar Opacity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-and-local-thermodynamic-equilibrium">5.2.1. Temperature and Local Thermodynamic Equilibrium</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-opacity">5.2.2. The Definition of Opacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-depth">5.2.3. Optical Depth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-sources-of-opacity">5.2.4. General Sources of Opacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rosseland-mean-opacity">5.2.5. The Rosseland Mean Opacity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.2.6. <strong>Problems</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiative-transfer">5.3. Radiative Transfer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photon-emission-processes">5.3.1. Photon Emission Processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-random-walk">5.3.2. The Random Walk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limb-darkening">5.3.3. Limb Darkening</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-radiation-pressure-gradient">5.3.4. The Radiation Pressure Gradient</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transfer-equation">5.4. The Transfer Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-emission-coefficient">5.4.1. The Emission Coefficient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">5.4.2. The Source Function and the Transfer Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">5.4.3. The Special Case of Blackbody Radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4. The Assumption of a Plane-Parallel Atmosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5. The Eddington Approximation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limb-darkening-revisited">5.4.6. Limb Darkening Revisited</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.4.7. <strong>Problems</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">5.5. The Profiles of Spectral Lines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-widths">5.5.1. Equivalent Widths</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-that-broaden-spectral-lines">5.5.2. Processes That Broaden Spectral Lines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-voigt-profile">5.5.3. The Voigt Profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curve-of-growth">5.5.4. The Curve of Growth</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-modeling-of-stellar-atmospheres">5.5.5. Computer Modeling of Stellar Atmospheres</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplemental-links">5.6. Supplemental Links</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Billy Quarles<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

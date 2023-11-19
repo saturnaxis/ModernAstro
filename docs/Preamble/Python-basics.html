@@ -1,51 +1,74 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction to Python &#8212; ASTR4410 Modern Astrophysics</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Introduction to Python &#8212; ASTR4410 Modern Astrophysics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-CP3EW7BJEH');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -54,65 +77,98 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Preamble/Python-basics';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Preamble/Python-basics.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Introduction to Markdown" href="Markdown-basics.html" />
     <link rel="prev" title="Who are these notes for?" href="who-for.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CP3EW7BJEH"></script>
-<script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){ dataLayer.push(arguments); }
-                    gtag('js', new Date());
-                    gtag('config', 'G-CP3EW7BJEH');
-                </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">ASTR4410 Modern Astrophysics</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">ASTR4410 Modern Astrophysics</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -121,453 +177,293 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Preamble
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="who-for.html">
-   Who are these notes for?
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Markdown-basics.html">
-   Introduction to Markdown
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="who-for.html">Who are these notes for?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Markdown-basics.html">Introduction to Markdown</a></li>
+
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_3/continuous-spectrum-of-light.html">
-   1. The Continuous Spectrum of Light
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_5/interaction-of-light-and-matter.html">
-   2. The Interaction of Matter and Light
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_6/telescopes.html">
-   3. Telescopes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_8/classification-of-stellar-spectra.html">
-   4. The Classification of Stellar Spectra
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_3/continuous-spectrum-of-light.html">1. The Continuous Spectrum of Light</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_5/interaction-of-light-and-matter.html">2. The Interaction of Matter and Light</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_6/telescopes.html">3. Telescopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_8/classification-of-stellar-spectra.html">4. The Classification of Stellar Spectra</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Stellar Interiors &amp; Star Formation
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stellar Interiors &amp; Star Formation</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_9/stellar-atmospheres.html">
-   5. Stellar Atmospheres
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_10/sun.html">
-   6. The Sun
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_11/interiors-of-stars.html">
-   7. The Interiors of Stars
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_12/interstellar-medium-and-star-formation.html">
-   8. The Interstellar Medium and Star Formation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_9/stellar-atmospheres.html">5. Stellar Atmospheres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_10/sun.html">6. The Sun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_11/interiors-of-stars.html">7. The Interiors of Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_12/interstellar-medium-and-star-formation.html">8. The Interstellar Medium and Star Formation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Stellar Evolution &amp; Death
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Stellar Evolution &amp; Death</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_13/stellar-evolution.html">
-   9. Main-Sequence and Post-Main-Sequence Stellar Evolution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_14/stellar-pulsation.html">
-   10. Stellar Pulsation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">
-   11. The Fate of Massive Stars
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html">
-   12. The Degenerate Remnants of Stars
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_13/stellar-evolution.html">9. Main-Sequence and Post-Main-Sequence Stellar Evolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_14/stellar-pulsation.html">10. Stellar Pulsation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">11. The Fate of Massive Stars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html">12. The Degenerate Remnants of Stars</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Preamble/Python-basics.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/saturnaxis/ModernAstro/main?urlpath=tree/Preamble/Python-basics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/saturnaxis/ModernAstro/blob/main/Preamble/Python-basics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+<a href="https://github.com/saturnaxis/ModernAstro" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-<a href="https://github.com/saturnaxis/ModernAstro"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
 
 </a>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/Preamble/Python-basics.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Preamble/Python-basics.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</li>
+      
+      
+      
       
       <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
   </span>
 
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-python">
-   What is Python?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comments">
-   Comments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simple-input-output">
-   Simple Input &amp; Output
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-types">
-   Variable Types
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sequence-tricks">
-     Sequence Tricks
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#iterables">
-     Iterables
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mathematical-operators">
-   Mathematical Operators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lines-in-python">
-   Lines in Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#control-structures">
-   Control Structures
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#functions">
-   Functions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#defining-a-function">
-     Defining a function
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#passing-functions">
-     Passing functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#program-structure">
-   Program Structure
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction to Python</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-python">
-   What is Python?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comments">
-   Comments
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#simple-input-output">
-   Simple Input &amp; Output
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-types">
-   Variable Types
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sequence-tricks">
-     Sequence Tricks
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#iterables">
-     Iterables
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mathematical-operators">
-   Mathematical Operators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lines-in-python">
-   Lines in Python
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#control-structures">
-   Control Structures
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#functions">
-   Functions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#defining-a-function">
-     Defining a function
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#passing-functions">
-     Passing functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#program-structure">
-   Program Structure
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction to Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-input-output">Simple Input &amp; Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-types">Variable Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-tricks">Sequence Tricks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterables">Iterables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operators">Mathematical Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lines-in-python">Lines in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-function">Defining a function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passing-functions">Passing functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-structure">Program Structure</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-python">
-<h1>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">#</a></h1>
-<div class="section" id="what-is-python">
-<h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-python">
+<h1>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this heading">#</a></h1>
+<section id="what-is-python">
+<h2>What is Python?<a class="headerlink" href="#what-is-python" title="Permalink to this heading">#</a></h2>
 <p>Python is an interpreted high-level programming language that converts human-friendly commands into computer instructions.  This means that it takes human-readable code as input and then interprets the code into machine language.  In a sense, other computer languages involve a similar process; however languages like C/C++ or Fortran are much more efficient at it.  But, those languages are categorized as compiled languages because they are converted to machine code once the compilation process is complete.  Python programs are analyzed by the interpreter “on the fly”, which causes Python to run much slower.  Luckily, hardware and software (OS) improvements have been so dramatic over the past 30+ years that the hit to performance is not as noticeable.  The advantage to coding in an interpreted language is that it is easier to tweak and debug because the variables are stored in local memory and there is no need to re-compile with every change.</p>
 <p>Additionally, Python can be easily run from the command-line, which allows users to experiment with Python commands without having to create a fully fledged program.  For this course, we will make use of Jupyter notebooks, which are similar to notebooks in Mathematica.  In the previous chapter, we experimented with storing variables and creating a numpy array.  Python can be used for arithmetic tasks as well.  Try this:</p>
 <div class="cell docutils container">
@@ -642,18 +538,18 @@ title="Print to PDF"
 </div>
 </div>
 <p>You may be asking where this might be important.  Python includes a function for square root (e.g., <span class="math notranslate nohighlight">\(\sqrt{x}\)</span> = sqrt(X)), but not for higher roots.  Some Python (and C) programs will change 1/3 from a cube root into 0 and return 1.</p>
-</div>
-<div class="section" id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h2>
 <p>Every programming language allows for the programmer to leave notes (or comments) within the code.  Adding comments to your code is very important because</p>
 <ul class="simple">
 <li><p>You and <em>future you</em> need to communicate; It is not uncommon to write some code and comeback to it more than 6 months later.  After which, some unkind words maybe directed at <em>past you</em> from yourself for not leaving comments.</p></li>
 <li><p>The <em>future person</em> to read the code may not be <em>future you</em> and they will not know what you were thinking.</p></li>
 </ul>
 <p>Comments can be designated with the # (hashtag) symbol, where the text that follows it is ignored by the interpreter until the next line.  However this can be impractical if you are providing a description of a function that takes many lines.  In this case, three ‘ (apostrophe) symbols are used to begin a <em>block comment</em>, where another three ‘ symbols are needed to end the block comment.  Otherwise, the interpreter will either return an error or not do anything at all.</p>
-</div>
-<div class="section" id="simple-input-output">
-<h2>Simple Input &amp; Output<a class="headerlink" href="#simple-input-output" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="simple-input-output">
+<h2>Simple Input &amp; Output<a class="headerlink" href="#simple-input-output" title="Permalink to this heading">#</a></h2>
 <p>We could read from a file using the <em>genfromtxt</em> function from Numpy, but you may want to take in some user input “on the fly”.  This can be accomplished using the <em>input</em> function, where you will need to designate a variable to store the user input.  You could try the following in a python interpreter (like Google Colab):</p>
 <blockquote>
 <div><p>name = input(“What is your name?”)</p>
@@ -781,9 +677,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="variable-types">
-<h2>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="variable-types">
+<h2>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this heading">#</a></h2>
 <p>Thus far, I hinted at the different types of variables in Python.  Those are the typical variables that exist in all programming languages.  However, there are two broad divisions in variable types in Python: a) <em>numeric</em> and <em>sequence</em> types. Numeric types hold a single number, such as an integer, floating point number, or a complex number (e.g., 2-3<em>i</em>).  Sequence types hold multiple objects (imagine a filled grocery bag), which could be single numbers, characters, or even collections of different things.</p>
 <ul class="simple">
 <li><p>Numeric Types</p>
@@ -832,7 +728,7 @@ title="Print to PDF"
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [12],</span> in <span class="ni">&lt;cell line: 11&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">11</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="n">Pythons</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1">#Let&#39;s see what happens if we try to replace an element of a tuple</span>
 <span class="ne">---&gt; </span><span class="mi">11</span> <span class="n">Pythons</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Atkinson&quot;</span>
@@ -922,10 +818,10 @@ The element in the 0th row and 2nd column is:  3
 </div>
 </div>
 </div>
-<div class="section" id="sequence-tricks">
-<h3>Sequence Tricks<a class="headerlink" href="#sequence-tricks" title="Permalink to this headline">#</a></h3>
+<section id="sequence-tricks">
+<h3>Sequence Tricks<a class="headerlink" href="#sequence-tricks" title="Permalink to this heading">#</a></h3>
 <p>If you are needing to store of <em>N</em> numbers, but don’t know the values beforehand.  Here are two ways:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Create an empty list with the needed length</p></li>
 <li><p>Create an empty array filled with ones/zeros</p></li>
 </ol>
@@ -1002,9 +898,9 @@ Replacing an element of ValueData with a string:  [0, 2, 2, 3, &#39;Nina&#39;, 5
 </div>
 </div>
 <p>The last two lines mixed the data types so that a string is now in the list of values.  <strong>Do you think a sort will work?</strong></p>
-</div>
-<div class="section" id="iterables">
-<h3>Iterables<a class="headerlink" href="#iterables" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="iterables">
+<h3>Iterables<a class="headerlink" href="#iterables" title="Permalink to this heading">#</a></h3>
 <p>Python allows for special functions called <em>iterables</em> that can contain the instructions to generate a list without allocating the memory.  A common iterable is the <strong>range</strong> function, which generates a list of <em>integers</em> given three parameters: starting value, stopping value, and increment (must be an integer).  This is especially useful if you need to quickly generate a range of indices for a process or array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1075,10 +971,10 @@ Replacing an element of ValueData with a string:  [0, 2, 2, 3, &#39;Nina&#39;, 5
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="mathematical-operators">
-<h2>Mathematical Operators<a class="headerlink" href="#mathematical-operators" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="mathematical-operators">
+<h2>Mathematical Operators<a class="headerlink" href="#mathematical-operators" title="Permalink to this heading">#</a></h2>
 <p>Thus far, you have seen typical arithmetic operators +-*/ on numerical values.  However, these operators don’t work the same way with lists.  The + operator for two lists does not add them together, rather it <strong>concatenates</strong> them (i.e., joins the lists).  A similar process occurs with strings because they are lists of characters.  The * operator makes copies of lists instead of multiplying the elements.</p>
 <p>Division (/) has a few quirks, where it works fine for floats.  But it does <em>third-grade</em> math for integers (i.e., the result is the integer portion of the actual answer).  There are instances when you might want the <em>third-grade</em> math behavior for floats, in which case you can use the floor division (//) operator.  At the beginning of this chapter, you saw that ** is responsible for exponentiation.  The modulo operator (%) returns the remainder, although it was also used for string conversions.</p>
 <div class="cell docutils container">
@@ -1132,9 +1028,9 @@ The next value is  2
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="lines-in-python">
-<h2>Lines in Python<a class="headerlink" href="#lines-in-python" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="lines-in-python">
+<h2>Lines in Python<a class="headerlink" href="#lines-in-python" title="Permalink to this heading">#</a></h2>
 <p>Python uses spaces and indentation as part of the syntax.  This is in contrast to C/C++, Fortran, or JAVA that use (), {}, or ; to separate out bits of code.  The Python interpreter actually cares about blank spaces before commands on a line.  As a result, there are two types of lines: <strong>physical</strong> or <strong>logical</strong> lines.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1164,9 +1060,9 @@ this line is multiple     physical lines but is     just one logical line
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="control-structures">
-<h2>Control Structures<a class="headerlink" href="#control-structures" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="control-structures">
+<h2>Control Structures<a class="headerlink" href="#control-structures" title="Permalink to this heading">#</a></h2>
 <p>Control statements direct or modify the flow of logic within a program thereby allowing the program to be flexible depending on what happens.  For example, “If you are hungry, then eat lunch” is a control statement.  Control statements require a conditional (boolean) to evaluate before taking an action.  Most control statements have a clear end point, where <strong>While</strong> does not (be careful with while loops).</p>
 <p>Conditionals
 A conditional is anything that can be evaluated as either <strong>True</strong> or <strong>False</strong>. In Python, the following things are always False:</p>
@@ -1206,28 +1102,21 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="nn">Input In [28],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">Name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">Cast</span> <span class="o">=</span> <span class="n">Pythons</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">if</span> <span class="n">Name</span> <span class="ow">in</span> <span class="n">Cast</span><span class="p">:</span>
 
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1065</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1066</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1067</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1068</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1069</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1070</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1071</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1072</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1073</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1074</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1075</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1076</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1077</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1078</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1079</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="p">)</span>
+<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/ipykernel/kernelbase.py:1201,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1199</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1200</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1201</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1202</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1203</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1204</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1205</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1206</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1207</span> <span class="p">)</span>
 
 <span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
@@ -1297,30 +1186,23 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="nn">Input In [29],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Create a Python program to determine whether a number is prime.  \</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># DISCLAIMER: This is not the most efficient way</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">Number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What integer do you want to check?&quot;</span><span class="p">))</span> <span class="c1">#need to make sure input is an integer</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">divisor</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#Use this to set floor on numbers to check</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1">#Main loop to test each number</span>
 
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1065</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1066</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1067</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1068</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1069</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1070</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1071</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1072</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1073</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1074</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1075</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1076</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1077</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1078</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1079</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="p">)</span>
+<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/ipykernel/kernelbase.py:1201,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1199</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1200</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1201</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1202</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1203</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1204</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1205</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1206</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1207</span> <span class="p">)</span>
 
 <span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
@@ -1334,11 +1216,11 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 </pre></div>
 </div>
 <p>After executing the lines within the for loop, the next Item will be the next value in the Sequence.  The most common for is <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(start,stop)</span></code>, where the range function generates the sequence and <em>i</em> is simply the index within the range.  <strong>Make sure that the Sequence is not being changed within the for loop</strong>.</p>
-</div>
-<div class="section" id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
-<div class="section" id="defining-a-function">
-<h3>Defining a function<a class="headerlink" href="#defining-a-function" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<section id="defining-a-function">
+<h3>Defining a function<a class="headerlink" href="#defining-a-function" title="Permalink to this heading">#</a></h3>
 <p>A <strong>function</strong> is a bit of code that you want to use more than once.  It can be a calculation, such as find the distance between two points, or it could be an action like draw a graph or save some data to a file.  Functions are defined using <strong>def</strong> and the function name must start with a letter, while the rest of the name can be composed of numbers, letters or underscore.  After the function name, there is a set of () that contains a list of input variables that are passed to the function.  The def command should end with a colon (:).  The lines following the def command are an indented block and non-indented lines (relative to the def command) are outside the function.</p>
 <p>Generally, the first line of a function is a comment block that describes the use of the function, including any assumptions for the input variables (e.g., type, format).  A function can return a value, but this is not required and depends on the inheritance of variables.  The return value can be numerical or a boolean (True or False).</p>
 <div class="cell docutils container">
@@ -1346,7 +1228,7 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Write a function that calculates the factorial of a positive integer</span>
 
 <span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function calculates n! by the simplest method imaginable</span>
 <span class="sd">    n: input integer</span>
 <span class="sd">    f: return value</span>
@@ -1456,7 +1338,7 @@ values after function call  4 5 9
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [33],</span> in <span class="ni">&lt;cell line: 13&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">33</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;values after function call &quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>  <span class="c1">#What will these values be?</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1">#Can we print d here?</span>
 <span class="ne">---&gt; </span><span class="mi">13</span> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
@@ -1466,9 +1348,9 @@ values after function call  4 5 9
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="passing-functions">
-<h3>Passing functions<a class="headerlink" href="#passing-functions" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="passing-functions">
+<h3>Passing functions<a class="headerlink" href="#passing-functions" title="Permalink to this heading">#</a></h3>
 <p>Python treats functions just like any other variable.  This means that you can store function in other variables or sequences.  Even passing functions into other functions is allowed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1505,14 +1387,14 @@ function value at pi/6 is:  0.8660254037844387
 function value at pi/6 is:  0.5773502691896257
 </pre></div>
 </div>
-<img alt="../_images/Python-basics_66_1.png" src="../_images/Python-basics_66_1.png" />
+<img alt="../_images/f1dcc2a8d11f20de06e63ff3cf6ef17989e760383d7311264c57018994249136.png" src="../_images/f1dcc2a8d11f20de06e63ff3cf6ef17989e760383d7311264c57018994249136.png" />
 </div>
 </div>
 <p>The functions in this example are stored in a list, referred to as elements in lists, and passed to other functions.</p>
-</div>
-</div>
-<div class="section" id="program-structure">
-<h2>Program Structure<a class="headerlink" href="#program-structure" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="program-structure">
+<h2>Program Structure<a class="headerlink" href="#program-structure" title="Permalink to this heading">#</a></h2>
 <p>Python programs allow for a lot of flexibility, which is one of its strengths.  However, this much freedom can also be a source of confusion.  When we develop a program, we must employ some convention to make it easier for others to read and/or use.  This is similar to how we choose to write from left to right or drive on the <em>right</em> side of the road (those silly Brits).  As a result a common program structure is as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Program title</span>
 <span class="c1">#short description</span>
@@ -1528,22 +1410,22 @@ function value at pi/6 is:  0.5773502691896257
 <span class="n">Program</span> <span class="n">end</span> <span class="c1">#sometimes you need to close the opened objects (files, figures, processing pool, etc.)</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "saturnaxis/ModernAstro",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Preamble"
         },
         predefinedOutput: true
@@ -1551,50 +1433,117 @@ function value at pi/6 is:  0.5773502691896257
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="who-for.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Who are these notes for?</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="who-for.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Who are these notes for?</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Markdown-basics.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Markdown-basics.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Introduction to Markdown</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-python">What is Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-input-output">Simple Input &amp; Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-types">Variable Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-tricks">Sequence Tricks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterables">Iterables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-operators">Mathematical Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lines-in-python">Lines in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-function">Defining a function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#passing-functions">Passing functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-structure">Program Structure</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Billy Quarles<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Billy Quarles
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
