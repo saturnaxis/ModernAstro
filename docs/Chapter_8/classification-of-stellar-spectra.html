@@ -438,15 +438,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-saha-equation">4.1.4. The Saha Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-the-boltzmann-and-saha-equations">4.1.5. Combining The Boltzmann and Saha Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-the-sun">4.1.6. Application to the Sun</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">4.1.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hertzsprung-russell-diagram">4.2. The Hertzsprung-Russell Diagram</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-enormous-range-in-stellar-radii">4.2.1. An Enormous Range in Stellar Radii</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#morgan-keenan-luminosity-classes">4.2.2. Morgan-Keenan Luminosity Classes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.2.3. <strong>Problems</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.3. <strong>Homework</strong></a></li>
 </ul>
             </nav>
         </div>
@@ -575,6 +574,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">scipy.constants</span> <span class="kn">import</span> <span class="n">k</span><span class="p">,</span> <span class="n">m_p</span>
 
 <span class="k">def</span> <span class="nf">Maxwell_Boltzmann</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">dv</span><span class="p">):</span>
     <span class="c1">#v = velocity</span>
@@ -584,8 +584,8 @@ document.write(`
     <span class="k">return</span> <span class="n">MB</span>
 
 <span class="n">T_eq</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1">#K; surface temperature of an A0 star</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mf">1.380649e-23</span> <span class="c1">#J/K; Boltzmann constant</span>
-<span class="n">m_H</span> <span class="o">=</span> <span class="mf">1.67e-27</span> <span class="c1">#kg; mass of hydrogen </span>
+<span class="c1">#k = 1.380649e-23 #J/K; Boltzmann constant</span>
+<span class="n">m_H</span> <span class="o">=</span> <span class="n">m_p</span> <span class="c1">#1.67e-27 #kg; mass of hydrogen </span>
 
 <span class="n">v_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">4e4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#velocity range in m/s</span>
 <span class="n">nv_n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v_rng</span><span class="p">))</span>
@@ -612,15 +612,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The most probable speed for hydrogen atoms in an A0 star is 1.29e+04 m/s.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The most probable speed for hydrogen atoms in an A0 star is 1.28e+04 m/s.
 </pre></div>
 </div>
-<img alt="../_images/695838263cd5cc09212b0099ca68fd5d9439853b783ecf4139dc0612824dac1b.png" src="../_images/695838263cd5cc09212b0099ca68fd5d9439853b783ecf4139dc0612824dac1b.png" />
+<img alt="../_images/ae0570bd9941aa1276894a4d9a43fdbf4c7320a8361e8f0bd5f9cabe2dbe10e6.png" src="../_images/ae0570bd9941aa1276894a4d9a43fdbf4c7320a8361e8f0bd5f9cabe2dbe10e6.png" />
 </div>
 </div>
 <p>The exponent of the Maxwell-Boltzmann distribution function is the ratio of a gas particle’s kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span>) to the characteristic thermal energy (<span class="math notranslate nohighlight">\(kT\)</span>).  Particles above the thermal energy tend to either can escape so the overall distribution remains the same.  This is analogous as to why the temperature of a pot of boiling water doesn’t keep increasing.  The distribution peaks when the particle energies are equal at a <strong>most probable speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4569101c-7dde-404d-806a-9cbf9b98a9c4">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-4569101c-7dde-404d-806a-9cbf9b98a9c4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-970a18d7-500f-4042-9315-6a3fd1c62fa8">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-970a18d7-500f-4042-9315-6a3fd1c62fa8" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{mp} = \sqrt{\frac{2kT}{m}}. 
 \end{align}\]</div>
 <ul class="simple">
@@ -629,8 +629,8 @@ v_{mp} = \sqrt{\frac{2kT}{m}}.
 <div class="math notranslate nohighlight">
 \[ v_{mp} = \sqrt{\frac{2(1.38\times 10^{-23})(10^4)}{1.67 \times 10^{-27}}} = 1.29 \times 10^4\;{\rm m/s} \]</div>
 <p>The high-speed exponential “tail” of the distribution function results in a somewhat higher <strong>root-mean-square speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-11907551-50a1-4288-b4aa-220730b33862">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-11907551-50a1-4288-b4aa-220730b33862" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8bc0b24c-98b1-4494-9bc0-2515daef9a3d">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-8bc0b24c-98b1-4494-9bc0-2515daef9a3d" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{rms} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 <p>The area under the curve of the Maxwell-Boltzmann distribution <em>fraction</em> of gas particles within a range of speeds or,</p>
@@ -644,7 +644,9 @@ v_{rms} = \sqrt{\frac{3kT}{m}}.
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v_rms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">3</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T_eq</span><span class="p">)</span><span class="o">/</span><span class="n">m_H</span><span class="p">)</span> <span class="c1">#using Eqn 3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">v_rms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="mi">3</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="n">T_eq</span><span class="p">)</span><span class="o">/</span><span class="n">m_H</span><span class="p">)</span> <span class="c1">#using Eqn 3</span>
 <span class="n">vrms_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">v_rms</span><span class="o">-</span><span class="n">v_rng</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">vrng_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">v_rng</span><span class="o">&gt;=</span><span class="mf">2e4</span><span class="p">,</span><span class="n">v_rng</span><span class="o">&lt;=</span><span class="mf">2.5e4</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
 
@@ -668,7 +670,7 @@ v_{rms} = \sqrt{\frac{3kT}{m}}.
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_rng</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="n">nv_n</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_rms</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrms_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_rms</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrms_idx</span><span class="p">])</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">v_rng</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
 
@@ -684,60 +686,11 @@ v_{rms} = \sqrt{\frac{3kT}{m}}.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">25</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_rng</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="n">nv_n</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">25</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_rms</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrms_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">v_rng</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_axes.py:841,</span> in <span class="ni">Axes.axvline</span><span class="nt">(self, x, ymin, ymax, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">839</span> <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_xaxis_transform</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;grid&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">840</span> <span class="n">l</span> <span class="o">=</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">],</span> <span class="p">[</span><span class="n">ymin</span><span class="p">,</span> <span class="n">ymax</span><span class="p">],</span> <span class="n">transform</span><span class="o">=</span><span class="n">trans</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">841</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">842</span> <span class="k">if</span> <span class="n">scalex</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">843</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_request_autoscale_view</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_base.py:2304,</span> in <span class="ni">_AxesBase.add_line</span><span class="nt">(self, line)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2301</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">get_clip_path</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2302</span>     <span class="n">line</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2304</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_line_limits</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2305</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">get_label</span><span class="p">():</span>
-<span class="g g-Whitespace">   </span><span class="mi">2306</span>     <span class="n">line</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;_child</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_children</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_base.py:2327,</span> in <span class="ni">_AxesBase._update_line_limits</span><span class="nt">(self, line)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2323</span> <span class="k">def</span> <span class="nf">_update_line_limits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2324</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2325</span><span class="sd">     Figures out the data limit of the given line, updating self.dataLim.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2326</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">2327</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">get_path</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">2328</span>     <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2329</span>         <span class="k">return</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/lines.py:1028,</span> in <span class="ni">Line2D.get_path</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1026</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Return the `~matplotlib.path.Path` associated with this line.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1027</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidy</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidx</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1028</span>     <span class="bp">self</span><span class="o">.</span><span class="n">recache</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1029</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/lines.py:664,</span> in <span class="ni">Line2D.recache</span><span class="nt">(self, always)</span>
-<span class="g g-Whitespace">    </span><span class="mi">662</span> <span class="k">if</span> <span class="n">always</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidy</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">663</span>     <span class="n">yconv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_yunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_yorig</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">664</span>     <span class="n">y</span> <span class="o">=</span> <span class="n">_to_unmasked_float_array</span><span class="p">(</span><span class="n">yconv</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">665</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">666</span>     <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_y</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/cbook/__init__.py:1340,</span> in <span class="ni">_to_unmasked_float_array</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1338</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1339</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1340</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
-
-<span class="ne">ValueError</span>: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The v_rms for the hydrogen atoms is 1.57e+04 m/s.
+The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </pre></div>
 </div>
-<img alt="../_images/935d5ae77a3c4eca4547dc09f7a60934e68f047e5b933bff436c7d04358060cf.png" src="../_images/935d5ae77a3c4eca4547dc09f7a60934e68f047e5b933bff436c7d04358060cf.png" />
+<img alt="../_images/d052b18f3fbd433b27f01321d8192b5a85243d5e86daf20c92e68c874a39c929.png" src="../_images/d052b18f3fbd433b27f01321d8192b5a85243d5e86daf20c92e68c874a39c929.png" />
 </div>
 </div>
 <p>The Maxwell-Boltzmann distribution function describes the kinetic energy of gas particles within a star’s atmosphere at an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> and allows us to derive the most probable speed <span class="math notranslate nohighlight">\(v_{mp}\)</span> of the particles.  Recall our first question was to determine the most likely orbitals for the electrons.  While this cannot be answered fully yet, the next step will estimate the relative likelihood of a possible energy level through the Boltzmann equation.</p>
@@ -814,8 +767,8 @@ v_{rms} = \sqrt{\frac{3kT}{m}}.
 </table>
 </div>
 <p>There exists some probability <span class="math notranslate nohighlight">\(P(s_x)\)</span> that the system is in a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Then the ratio of the probability between orbital states represents the likelihood for which electrons may be found.  Using the states <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, the ratio of probability is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-592651b8-e55f-4065-9d9b-a282dad506d2">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-592651b8-e55f-4065-9d9b-a282dad506d2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c4020049-fbd2-40b8-9360-5dc04a704f88">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-c4020049-fbd2-40b8-9360-5dc04a704f88" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{P(s_b)}{P(s_a)} = \frac{e^{-E_b/(kT)}}{e^{-E_a/(kT)}} = e^{-(E_b-E_a)/(kT)}, 
 \end{align}\]</div>
 <div class="admonition note">
@@ -880,10 +833,8 @@ v_{rms} = \sqrt{\frac{3kT}{m}}.
 <section id="the-saha-equation">
 <h3><span class="section-number">4.1.4. </span>The Saha Equation<a class="headerlink" href="#the-saha-equation" title="Permalink to this heading">#</a></h3>
 <p>The Maxwell-Boltzmann equation does not provide a complete picture, which lies in also considering the relative number of atoms <em>in different stages of ionization</em>.  Ionization energy is the requisite energy to remove an electron from an atom and thus, increasing its ionization stage by one (i.e., stage <em>i</em> to stage <em>i+1</em>).  The ionization energy of hydrogen is 13.6 eV or the energy needed to convert it from H I to H II.  However, not all electron transitions start from the ground state.  An average must be taken over the orbital energies to allow for the possible partitioning of the atom’s electrons among its orbitals.  The average is obtained using the <strong>partition function</strong> <em>Z</em>, which is the weighted sum of <em>the number of ways</em> the atom can arrange its electrons with the same energy.  More energetic configurations receive less weight from the Boltzmann factor when the sum is taken.  Let <span class="math notranslate nohighlight">\(E_j\)</span> be the energy of the <em>j</em>th energy level and <span class="math notranslate nohighlight">\(g_j\)</span> is the degeneracy of that level, then the partition function <span class="math notranslate nohighlight">\(Z\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4aa54df4-55d3-4383-bbf0-283bf514ced6">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-4aa54df4-55d3-4383-bbf0-283bf514ced6" title="Permalink to this equation">#</a></span>\[\begin{align} 
-Z = \sum_{j=1}^\infty g_j e^{-(E_j-E_1)/(kT)},
-\end{align}\]</div>
+<div class="math notranslate nohighlight" id="equation-part-func">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-part-func" title="Permalink to this equation">#</a></span>\[Z = \sum_{j=1}^\infty g_j e^{-(E_j-E_1)/(kT)},\]</div>
 <p>and is measured relative to the ground state energy <span class="math notranslate nohighlight">\(E_1\)</span>.  If we use the partition functions of two ionization stages (<span class="math notranslate nohighlight">\(Z_i\)</span> and <span class="math notranslate nohighlight">\(Z_{i+1}\)</span>), then the ratio of atoms in each stage is</p>
 <div class="math notranslate nohighlight" id="equation-saha-eq">
 <span class="eqno">(4.8)<a class="headerlink" href="#equation-saha-eq" title="Permalink to this equation">#</a></span>\[\frac{N_{i+1}}{N_i} = \frac{2Z_{i+1}}{n_eZ_i}\left(\frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-\chi_i/(kT)}, \]</div>
@@ -896,13 +847,13 @@ Z = \sum_{j=1}^\infty g_j e^{-(E_j-E_1)/(kT)},
 <section id="combining-the-boltzmann-and-saha-equations">
 <h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this heading">#</a></h3>
 <p>The Boltzmann equation describes what is <em>possible</em>, where the Saha equation describes what is <em>probable</em>.  Therefore, what we observe should be a combination of effects from both equations.  Consider the degree of ionization in a stellar atmosphere consisting of pure hydrogen and that the electron pressure is a constant <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span>.  Hydrogen has only two states: neutral hydrogen (H I) and ionized hydrogen (H II).  The fraction of atoms that are ionized depends on the ratio of the number ionized atoms <span class="math notranslate nohighlight">\(N_{\rm II}\)</span> and the total number of atoms <span class="math notranslate nohighlight">\(N_{\rm tot}=N_{\rm I} + N_{\rm II}\)</span>.  Ionized hydrogen is just a proton and thus, has no degeneracy and the partition function <span class="math notranslate nohighlight">\(Z_{\rm II} = 1\)</span>.  The partition function for the remaining neutral hydrogen (H I) is simply <span class="math notranslate nohighlight">\(Z_{\rm I} \approx g_1 = 2(1)^2 = 2\)</span>.  The temperatures of stellar atmospheres range from 5000 K - 25,000 K and the previous example (using the Boltzmann equation) showed that most electrons for the hydrogen atoms are in the ground state (<span class="math notranslate nohighlight">\(n=1\)</span>).  For neutral hydrogen, equation 7 becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2d84f0d-e42c-4b81-a268-d757bc15dda2">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-b2d84f0d-e42c-4b81-a268-d757bc15dda2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5ee75dc3-259a-450c-abea-2fe11a2a9a0d">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-5ee75dc3-259a-450c-abea-2fe11a2a9a0d" title="Permalink to this equation">#</a></span>\[\begin{align}
 Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E_2-E_1)/(kT)} ,
 \end{align}\]</div>
 <p>where the second term <span class="math notranslate nohighlight">\(g_2 e^{-(E_2-E_1)/(kT)} \rightarrow 0\)</span> because <span class="math notranslate nohighlight">\(kT = 0.4-2.2\)</span> eV for the appropriate temperature range and <span class="math notranslate nohighlight">\(e^{-(E_2-E_1)/(kT)} \ll 1\)</span>.  The ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm tot}\)</span> can be rewritten as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-249e600f-20b9-462d-b470-f5b94f2f0a2a">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-249e600f-20b9-462d-b470-f5b94f2f0a2a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-32a3778e-420d-4b77-a75f-a1bdc7fd1486">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-32a3778e-420d-4b77-a75f-a1bdc7fd1486" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{N_{\rm II}}{N_{\rm tot}} = \frac{N_{\rm II}/N_{\rm I}}{1 + N_{\rm II}/N_{\rm I}}. 
 \end{align}\]</div>
 <p>Then the Saha equation can be used to determine the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span>.  Using the ionization energy <span class="math notranslate nohighlight">\(\chi_{\rm I} = 13.6\)</span> eV for hydrogen, the ideal gas law, and substituting the values for <span class="math notranslate nohighlight">\(Z_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(Z_{\rm II}\)</span> into Equation <a class="reference internal" href="#equation-prob-ratio">(4.6)</a>, the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> is given as</p>
@@ -946,7 +897,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 
 <span class="n">fifty_pct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">NII_Ntot</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.025</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">fifty_pct</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">]</span><span class="o">-</span><span class="mi">5000</span><span class="p">)</span><span class="o">/</span><span class="mf">2e4</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">]</span><span class="o">-</span><span class="mi">5000</span><span class="p">)</span><span class="o">/</span><span class="mf">2e4</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fifty percent ionization occurs at T ~ </span><span class="si">%4d</span><span class="s2"> K.&quot;</span> <span class="o">%</span> <span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">])</span>
 
@@ -960,60 +911,10 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">25</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">fifty_pct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">NII_Ntot</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.025</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">fifty_pct</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">25</span>     <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">]</span><span class="o">-</span><span class="mi">5000</span><span class="p">)</span><span class="o">/</span><span class="mf">2e4</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fifty percent ionization occurs at T ~ </span><span class="si">%4d</span><span class="s2"> K.&quot;</span> <span class="o">%</span> <span class="n">T_rng</span><span class="p">[</span><span class="n">fifty_pct</span><span class="p">])</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_axes.py:773,</span> in <span class="ni">Axes.axhline</span><span class="nt">(self, y, xmin, xmax, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">771</span> <span class="n">trans</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_yaxis_transform</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;grid&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">772</span> <span class="n">l</span> <span class="o">=</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">([</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">],</span> <span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">transform</span><span class="o">=</span><span class="n">trans</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">773</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">774</span> <span class="k">if</span> <span class="n">scaley</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">775</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_request_autoscale_view</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_base.py:2304,</span> in <span class="ni">_AxesBase.add_line</span><span class="nt">(self, line)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2301</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">get_clip_path</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2302</span>     <span class="n">line</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2304</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_line_limits</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2305</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">get_label</span><span class="p">():</span>
-<span class="g g-Whitespace">   </span><span class="mi">2306</span>     <span class="n">line</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;_child</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_children</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/axes/_base.py:2327,</span> in <span class="ni">_AxesBase._update_line_limits</span><span class="nt">(self, line)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2323</span> <span class="k">def</span> <span class="nf">_update_line_limits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">2324</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2325</span><span class="sd">     Figures out the data limit of the given line, updating self.dataLim.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2326</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">2327</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">get_path</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">2328</span>     <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2329</span>         <span class="k">return</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/lines.py:1028,</span> in <span class="ni">Line2D.get_path</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1026</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Return the `~matplotlib.path.Path` associated with this line.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1027</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidy</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidx</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1028</span>     <span class="bp">self</span><span class="o">.</span><span class="n">recache</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1029</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/lines.py:659,</span> in <span class="ni">Line2D.recache</span><span class="nt">(self, always)</span>
-<span class="g g-Whitespace">    </span><span class="mi">657</span> <span class="k">if</span> <span class="n">always</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidx</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span>     <span class="n">xconv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_xunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_xorig</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">659</span>     <span class="n">x</span> <span class="o">=</span> <span class="n">_to_unmasked_float_array</span><span class="p">(</span><span class="n">xconv</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">660</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">661</span>     <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_x</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.11/site-packages/matplotlib/cbook/__init__.py:1340,</span> in <span class="ni">_to_unmasked_float_array</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1338</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1339</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1340</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
-
-<span class="ne">ValueError</span>: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Fifty percent ionization occurs at T ~ 9600 K.
 </pre></div>
 </div>
-<img alt="../_images/254eea93b70e616d1ca92364cabdc70fb838fb2e8dc64965ca848a6564735ac7.png" src="../_images/254eea93b70e616d1ca92364cabdc70fb838fb2e8dc64965ca848a6564735ac7.png" />
+<img alt="../_images/36dbf82879bf14256a1743d141c07fefd6823470ef9c8f9c043e66b05669ca92.png" src="../_images/36dbf82879bf14256a1743d141c07fefd6823470ef9c8f9c043e66b05669ca92.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1177,20 +1078,6 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </figure>
 <p>In the early 20th century, it was the scientific consensus that if the Earth’s crust should be raised to the temperature of the Sun’s atmosphere, then it would give a very similar absorption spectrum.  The observations of the time had only uncovered that many of the same elements of Earth’s crust were also in the Sun.  <a class="reference external" href="https://en.wikipedia.org/wiki/Cecilia_Payne-Gaposchkin">Cecilia Payne-Gaposchkin</a> showed in her 1925 <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1925PhDT.........1P/abstract">PhD thesis</a> the connection between the spectral types and ionization states.  It was unclear at the time whether her interpretation would prove correct. But after a few years, others confirmed her results and then the importance of her work was realized.</p>
 </section>
-<section id="problems">
-<h3><span class="section-number">4.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>1. For a gas of neutral hydrogen atoms, at what temperature is the number of atoms in the 1st excited state only 1% of the number of atoms in the ground state?  What is the temperature for 10%?</p>
-<p>2. Equation 7 for the partition function actually diverges for <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>.  Why can we ignore these large <span class="math notranslate nohighlight">\(n\)</span> terms?</p>
-<p>3. Assuming an stellar atmosphere composed of pure helium (which is actually a white dwarf), you want to find the temperature at the middle of the He I partial ionization zone, where half of the He I atoms have been ionized.  The ionization energies of neutral helium and singly ionized helium are <span class="math notranslate nohighlight">\(\chi_{\rm I} = 24.6\)</span> eV and <span class="math notranslate nohighlight">\(\chi_{\rm II} = 54.4\)</span> eV, respectively.  The partition functions are <span class="math notranslate nohighlight">\(Z_{\rm I} = 1\)</span>, <span class="math notranslate nohighlight">\(Z_{\rm II} = 2\)</span>, and <span class="math notranslate nohighlight">\(Z_{\rm III} = 1\)</span>.  Use <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span> for the electron pressure.</p>
-<blockquote>
-<div><p><strong>(a)</strong> Use Eqn. <a class="reference internal" href="#equation-saha-eq">(4.8)</a> (with a substitution for the electron pressure <span class="math notranslate nohighlight">\(P_e\)</span>) to find <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(N_{\rm III}/N_{\rm II}\)</span> for temperatures 5000 K,  15,000 K, and 25,000 K.  How do they compare?</p>
-<p><strong>(b)</strong> Show that <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm total} = N_{\rm II}/(N_{\rm I}+N_{\rm II}+N_{\rm III})\)</span> can be expressed in terms of the ratios <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(N_{\rm III}/N_{\rm II}\)</span>.</p>
-<p><strong>(c)</strong> Make a graph of <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm total}\)</span> for a range of temperatures 5000 K to 25,000 K.  What is the temperature at the middle of the He I partial ionization zone?</p>
-</div></blockquote>
-<p>4. Use the Saha equation to determine the fraction of hydrogen atoms that are ionized, <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm total}\)</span> at the center of the Sun.  Here the temperature is <span class="math notranslate nohighlight">\(15.7 \times 10^6\)</span> K and the number density of electrons is about <span class="math notranslate nohighlight">\(n_e = 6.1 \times 10^{31}\;{\rm m^{-3}}\)</span>.  Does your result agree with the fact that practically all of the Sun’s hydrogen is ionized at the Sun’s center? What is the reason for any discrepancy?</p>
-</div></blockquote>
-</section>
 </section>
 <section id="the-hertzsprung-russell-diagram">
 <h2><span class="section-number">4.2. </span>The Hertzsprung-Russell Diagram<a class="headerlink" href="#the-hertzsprung-russell-diagram" title="Permalink to this heading">#</a></h2>
@@ -1335,13 +1222,36 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 </tbody>
 </table>
 </div></section>
-<section id="id1">
-<h3><span class="section-number">4.2.3. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>5. A white dwarf star typically has a radius that is only 1% of the Sun’s.  Determine the average density of a Solar-mass white dwarf.</p>
-<p>6. <a class="reference external" href="https://en.wikipedia.org/wiki/Fomalhaut">Fomalhaut A</a> has an <em>apparent</em> visual magnitude of <span class="math notranslate nohighlight">\(V = 1.16\)</span> and has a surface temperature of 8590 K (or <span class="math notranslate nohighlight">\(B-V = 0.09\)</span>).  Use the H-R diagram to determine the distance to this star.</p>
-</div></blockquote>
 </section>
+<section id="homework">
+<h2><span class="section-number">4.3. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p>For a gas of neutral hydrogen atoms, at what temperature is the number of atoms in the 1st excited state only 1% of the number of atoms in the ground state?  What is the temperature for 10%?</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<p>Equation <a class="reference internal" href="#equation-part-func">(4.7)</a> for the partition function actually diverges for <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>.  Why can we ignore these large <span class="math notranslate nohighlight">\(n\)</span> terms?</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>Assuming an stellar atmosphere composed of pure helium (which is actually a white dwarf), you want to find the temperature at the middle of the He I partial ionization zone, where half of the He I atoms have been ionized.  The ionization energies of neutral helium and singly ionized helium are <span class="math notranslate nohighlight">\(\chi_{\rm I} = 24.6\)</span> eV and <span class="math notranslate nohighlight">\(\chi_{\rm II} = 54.4\)</span> eV, respectively.  The partition functions are <span class="math notranslate nohighlight">\(Z_{\rm I} = 1\)</span>, <span class="math notranslate nohighlight">\(Z_{\rm II} = 2\)</span>, and <span class="math notranslate nohighlight">\(Z_{\rm III} = 1\)</span>.  Use <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span> for the electron pressure.</p>
+<p><strong>(a)</strong> Use Eqn. <a class="reference internal" href="#equation-saha-eq">(4.8)</a> (with a substitution for the electron pressure <span class="math notranslate nohighlight">\(P_e\)</span>) to find <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(N_{\rm III}/N_{\rm II}\)</span> for temperatures 5000 K,  15,000 K, and 25,000 K.  How do they compare?</p>
+<p><strong>(b)</strong> Show that <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm total} = N_{\rm II}/(N_{\rm I}+N_{\rm II}+N_{\rm III})\)</span> can be expressed in terms of the ratios <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(N_{\rm III}/N_{\rm II}\)</span>.</p>
+<p><strong>(c)</strong> Make a graph of <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm total}\)</span> for a range of temperatures 5000 K to 25,000 K.  What is the temperature at the middle of the He I partial ionization zone?</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p>Use the Saha equation to determine the fraction of hydrogen atoms that are ionized, <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm total}\)</span> at the center of the Sun.  Here the temperature is <span class="math notranslate nohighlight">\(15.7 \times 10^6\)</span> K and the number density of electrons is about <span class="math notranslate nohighlight">\(n_e = 6.1 \times 10^{31}\;{\rm m^{-3}}\)</span>.  Does your result agree with the fact that practically all of the Sun’s hydrogen is ionized at the Sun’s center? What is the reason for any discrepancy?</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p>A white dwarf star typically has a radius that is only 1% of the Sun’s.  Determine the average density of a Solar-mass white dwarf.</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Fomalhaut">Fomalhaut A</a> has an <em>apparent</em> visual magnitude of <span class="math notranslate nohighlight">\(V = 1.16\)</span> and has a surface temperature of 8590 K (or <span class="math notranslate nohighlight">\(B-V = 0.09\)</span>).  Use the H-R diagram to determine the distance to this star.</p>
+</div>
 </section>
 </section>
 
@@ -1415,15 +1325,14 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-saha-equation">4.1.4. The Saha Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#combining-the-boltzmann-and-saha-equations">4.1.5. Combining The Boltzmann and Saha Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-to-the-sun">4.1.6. Application to the Sun</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">4.1.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hertzsprung-russell-diagram">4.2. The Hertzsprung-Russell Diagram</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#an-enormous-range-in-stellar-radii">4.2.1. An Enormous Range in Stellar Radii</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#morgan-keenan-luminosity-classes">4.2.2. Morgan-Keenan Luminosity Classes</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.2.3. <strong>Problems</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">4.3. <strong>Homework</strong></a></li>
 </ul>
   </nav></div>
 
