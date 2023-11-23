@@ -484,8 +484,8 @@ document.write(`
 <li><p>Note that the frequency <span class="math notranslate nohighlight">\(\nu\)</span> of the wave remains unchanged and the refracted wavelength must change.</p></li>
 </ul>
 <p>The incoming ray possesses an angle of incidence <span class="math notranslate nohighlight">\(\theta_i\)</span> and the refracted ray is bent by <span class="math notranslate nohighlight">\(\theta_r\)</span>, where both angles are measured relative to the normal to the interface.  Then Snell’s law is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c1eb8505-e4e5-415d-919d-c84cee9ac5da">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-c1eb8505-e4e5-415d-919d-c84cee9ac5da" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-65bd4e9c-3d65-4af2-b633-f3250232618a">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-65bd4e9c-3d65-4af2-b633-f3250232618a" title="Permalink to this equation">#</a></span>\[\begin{align}
 n_1 \sin \theta_i = n_2 \sin \theta_r.
 \end{align}\]</div>
 <figure class="align-default" id="snelllaw-fig">
@@ -667,14 +667,14 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div>
 <p>There can be aberrations that result from the shape of the reflecting or refracting surface.  Imperfections in the grinding/polishing of lens/mirrors mean not all areas will focus a parallel set of light rays to a single point.  This type of distortion is called <a class="reference external" href="https://en.wikipedia.org/wiki/Spherical_aberration">spherical aberration</a> and can be overcome with a corrective lens.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Hubble_Space_Telescope">Hubble Space Telescope</a> (HST) initially had imaging problems due to spherical aberration when a mistake was made while grinding the primary and left the center of the mirror too shallow by about 2 <span class="math notranslate nohighlight">\(\mu m\)</span>.  A repair mission in 1993, installed a special corrective optics package on the telescope.</p>
-<p>A <strong>coma</strong> produces elongated images of a point sources that lie off the optical axis. An <strong>astigmatism</strong> is a defect where different parts of a lens or mirror converge an image a slightly different locations on the focal plane.  Correcting for astigmatism can create other problems, such as the <strong>curvature of field</strong> that is due to the focusing of images on a curve rather than on a flat surface.</p>
+<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Lens#Coma"><strong>coma</strong></a> produces elongated images of a point sources that lie off the optical axis. An <strong>astigmatism</strong> is a defect where different parts of a lens or mirror converge an image a slightly different locations on the focal plane.  Correcting for astigmatism can create other problems, such as the <strong>curvature of field</strong> that is due to the focusing of images on a curve rather than on a flat surface.</p>
 </section>
 <section id="brightness-of-an-image">
 <h3><span class="section-number">3.1.5. </span>Brightness of an Image<a class="headerlink" href="#brightness-of-an-image" title="Permalink to this heading">#</a></h3>
 <p>It might be assumed that the brightness of an extended (resolved) image depends on the area of the aperture.  This is the case for photography, where the camera has an adjustable aperture (iris) that controls how much light enters the camera to reach the detector on the focal plane.  For most astronomical applications, the aperture is fully open because the object is effectively infinitely far away (i.e., distance <span class="math notranslate nohighlight">\(r \gg \)</span> focal length <span class="math notranslate nohighlight">\(f\)</span>).  Then, it can be shown that the <strong>intensity</strong> of the radiation is the same for both the object and image; independent of the area of the aperture.  The exception is for bright objects (e.g., the Moon), where an adjustable iris helps prevent over-exposing the image (i.e., saturation).</p>
 <p>The light-gathering power of telescopes is the <strong>illumination</strong> <span class="math notranslate nohighlight">\(J\)</span> or the number of photons per second that are focused onto a unit area of a resolved image.  When comparing telescopes, the amount of light collected is proportional to the area of the aperture or the illumination <span class="math notranslate nohighlight">\(J \propto \pi D^2/4\)</span>, where <span class="math notranslate nohighlight">\(D\)</span> is the diameter of the telescope’s aperture.  Through the plate scale (Eq. <a class="reference internal" href="#equation-plate-scale">(3.3)</a>) we have the linear size of the image proportional to the focal length of the lens and the image area is proportional to <span class="math notranslate nohighlight">\(f^2\)</span>.  The illumination is proportional to the ratio of the aperture diameter <span class="math notranslate nohighlight">\(D\)</span> to the focal length <span class="math notranslate nohighlight">\(f\)</span> (i.e., <span class="math notranslate nohighlight">\(J\propto D^2/f^2\)</span>).  The inverse of the ratio is ofter referred to as the <strong>focal ratio</strong> (or f-ratio),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a92d9b2d-2dc6-4c2f-90bb-c4189e73b927">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-a92d9b2d-2dc6-4c2f-90bb-c4189e73b927" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e8e517f0-c036-4497-ad0e-48681ddb4393">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-e8e517f0-c036-4497-ad0e-48681ddb4393" title="Permalink to this equation">#</a></span>\[\begin{align}
 F = \frac{f}{D}. 
 \end{align}\]</div>
 <p>The illumination indicates the amount of time required to collect the photons needed to form a bright image.  A larger focal ratio corresponds to a slower telescope, which means that a longer exposure is necessary to reach an equivalent illumination.</p>
@@ -722,14 +722,14 @@ allowfullscreen></iframe>
 <h3><span class="section-number">3.2.1. </span>Refracting Telescopes<a class="headerlink" href="#refracting-telescopes" title="Permalink to this heading">#</a></h3>
 <p>The major optical component of a refracting telescope is the primary (or <em>objective</em>) lens with a focal length <span class="math notranslate nohighlight">\(f_{\rm obj}\)</span>.  The objective lens collects the light and brings the light to a focus at the focal plane, where a photographic plate or other detector can be placed at the focal plane to record the image.  The eyepiece serves as a magnifying glass and would be placed a distance from the focal plane equal to its focal length <span class="math notranslate nohighlight">\(f_{\rm eye}\)</span>.  The path of rays coming from a point source lying off the optical axis (at an angle <span class="math notranslate nohighlight">\(\theta\)</span>) ultimately emerge from the eyepiece an an angle <span class="math notranslate nohighlight">\(\phi\)</span> from the optical axis.</p>
 <figure class="align-default" id="refract-telescope-fig">
-<a class="reference internal image-reference" href="../_images/refract_telescope.jpg"><img alt="refracting telescope" src="../_images/refract_telescope.jpg" style="width: 450px;" /></a>
+<a class="reference internal image-reference" href="../_images/Fig03.png"><img alt="refracting telescope" src="../_images/Fig03.png" style="width: 550px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">A refracting telescope is composed of an objective lens and an eyepiece. Image credit: Carroll &amp; Ostlie (2007)</span><a class="headerlink" href="#refract-telescope-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">A refracting telescope is composed of an objective lens and an eyepiece.</span><a class="headerlink" href="#refract-telescope-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The <strong>angular magnification</strong> produced by this arrangement of lenses can be shown to be</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf35722e-0763-4709-b455-0d2e8e58c08d">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-bf35722e-0763-4709-b455-0d2e8e58c08d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9fef4f33-570d-4a28-a6fd-95c25a99fbbd">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-9fef4f33-570d-4a28-a6fd-95c25a99fbbd" title="Permalink to this equation">#</a></span>\[\begin{align}
 m = \frac{f_{\rm obj}}{f_{\rm eye}},
 \end{align}\]</div>
 <p>where a review is available in <a class="reference external" href="https://openstax.org/books/college-physics/pages/26-5-telescopes">OpenStax:College Physics</a>.  Since the objective lens tends to be a fixed part of the telescope, several eyepieces (of different focal lengths) can be used to produce different angular magnifications.  Note that viewing a large image requires a long objective in combination with a short focal length for the eyepiece.</p>
@@ -747,6 +747,12 @@ m = \frac{f_{\rm obj}}{f_{\rm eye}},
 <section id="adaptive-optics">
 <h3><span class="section-number">3.2.3. </span>Adaptive Optics<a class="headerlink" href="#adaptive-optics" title="Permalink to this heading">#</a></h3>
 <p>While large-aperture ground-based telescopes have a larger light-gathering power than small telescopes, they are still limited in resolving power due to thermal fluctuations of the atmosphere.  Even the Keck telescopes at Mauna Kea cannot resolve a source any better than a 0.2 m telescope without the aide of <em>active optics</em> to correct the distortions in the telescope’s mirrors and <a class="reference external" href="https://en.wikipedia.org/wiki/Adaptive_optics">adaptive optics</a> to compensate for atmospheric turbulence.  A small deformable (“rubber”) mirror is used with many piezoelectric crystals attached to the back.  To counteract changes in the shape of wavefronts due to Earth’s atmosphere, the crystals make <span class="math notranslate nohighlight">\(\mu m\)</span>-size adjustments to the shape of the mirror several hundred times per second.  To make the needed adjustments, the telescope monitors a guide star that is very near the target.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/aomovie_hist.gif"><img alt="adaptive optics" src="../_images/aomovie_hist.gif" style="width: 350px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">The Galactic Center at 2.2 <span class="math notranslate nohighlight">\(\rm \mu m\)</span>.  Image credit: <a class="reference external" href="https://galacticcenter.astro.ucla.edu/adaptive-optics.html">UCLA Galactic Group</a></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="space-based-observatories">
 <h3><span class="section-number">3.2.4. </span>Space-based Observatories<a class="headerlink" href="#space-based-observatories" title="Permalink to this heading">#</a></h3>
@@ -755,6 +761,13 @@ m = \frac{f_{\rm obj}}{f_{\rm eye}},
 <section id="electronic-detectors">
 <h3><span class="section-number">3.2.5. </span>Electronic Detectors<a class="headerlink" href="#electronic-detectors" title="Permalink to this heading">#</a></h3>
 <p>For most of history, the human eye was the main tool of an astronomer to identify the stars for rituals, navigation, and agriculture.  <a class="reference external" href="https://en.wikipedia.org/wiki/Photographic_plate">Photographic plates</a> were developed at the end of the 19th century and became a mainstay for astronomers through much of the 20th century due to there persistence of vision.  Today, the semiconductor device known as the charge-coupled device (CCD) revolutionized the counting of photons  (through process similar to the photoelectric effect).  CCDs are able to detect nearly 100% of the incident photons over a very wide range of wavelengths.  CCDs also have a wide dynamic range, where they can differentiate between very bright and dim objects viewed simultaneously.</p>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/MAQU-smPtFY"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
 <p>A CCD works by collecting electrons that are excited into higher energy states (conduction bands) when a detector is struck by a photon.  The number of electrons collected in each pixel is proportional to the image brightness.  HST’s Wide Field and Planetary Camera (WF/PC 2) has 2.5 million pixels with each pixel capable of holding up to 70,000 electrons.  A very bright target (e.g., <span class="math notranslate nohighlight">\(\alpha\)</span> Cen AB (<a class="reference external" href="https://academic.oup.com/mnras/article/450/2/2043/981103">Brice-Olivier et al. 2015</a>)) requires a fast shutter so that the pixels don’t saturate (i.e., overflow with electrons).</p>
 </section>
 </section>
@@ -762,24 +775,41 @@ m = \frac{f_{\rm obj}}{f_{\rm eye}},
 <h2><span class="section-number">3.3. </span>Radio Telescopes<a class="headerlink" href="#radio-telescopes" title="Permalink to this heading">#</a></h2>
 <p>By the 1930s, radio was the state-of-the-art in terms of communications for the United States and Europe.  Companies, such as Bell Labs, were interested in short wave (<span class="math notranslate nohighlight">\(\lambda = 10-20\)</span> m) transmissions for use in a trans-Atlantic radio service, where properties of the atmosphere and ionosphere could introduce static to radio voice transmissions.  In 1928, <a class="reference external" href="https://en.wikipedia.org/wiki/Karl_Guthe_Jansky">Karl Jansky</a> was assigned the task of investigating the sources of static and by 1931, he discovered that some of the static in his receiver was of “extraterrestrial origin.”  Jansky concluded (correctly) that much of the measured signal originated from the plane of the Milky Way.  Jansky’s work pioneered the birth of <a class="reference external" href="https://en.wikipedia.org/wiki/Radio_astronomy"><em>radio astronomy</em></a> as a new way to view and investigate the cosmos.</p>
 <p>Radio telescopes operate differently from their optical counterparts, where radio observations can be taken any time of day or night.  But, observations from the Earth’s surface are limited to a specific range of wavelengths (i.e., those that can pass through the atmosphere). At long wavelengths, transmission is limited by the ionosphere.  Water vapor interferes with radio astronomy at shorter wavelengths, which has led to building radio observatories that conduct observations at millimeter wavelengths at very high and dry sites (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Atacama_Large_Millimeter_Array">ALMA</a>), to minimize the water vapor content in the line of sight.  These are some of the known sources of noise to avoid and the increasing needs of human telecommunication force astronomers to build observatories in remote areas.</p>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/C3WkAB92oIw"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
 <section id="spectral-flux-density">
 <h3><span class="section-number">3.3.1. </span>Spectral Flux Density<a class="headerlink" href="#spectral-flux-density" title="Permalink to this heading">#</a></h3>
 <p>A radio telescope typically uses a parabolic dish to reflect the radio energy to an antenna, where the signal is amplified and processed to produce a <em>radio map</em> at a particular wavelength.</p>
 <figure class="align-default" id="radio-telescope-fig">
 <a class="reference internal image-reference" href="https://public.nrao.edu/wp-content/uploads/2018/02/3C402_NDV1.jpg"><img alt="radio telescope" src="https://public.nrao.edu/wp-content/uploads/2018/02/3C402_NDV1.jpg" style="width: 450px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">(Left) NRAO VLA Sky Survey (NVSS); (Middle) 2nd Digitized Sky Survey Red (DSS2R*); (Right) 2017 Very Large Array Sky Survey (VLASS). Image credit: <a class="reference external" href="https://public.nrao.edu/blogs/dr-claire-chandler/">NRAO</a></span><a class="headerlink" href="#radio-telescope-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">(Left) NRAO VLA Sky Survey (NVSS); (Middle) 2nd Digitized Sky Survey Red (DSS2R*); (Right) 2017 Very Large Array Sky Survey (VLASS). Image credit: <a class="reference external" href="https://public.nrao.edu/blogs/dr-claire-chandler/">NRAO</a></span><a class="headerlink" href="#radio-telescope-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The strength of a radio source is measured in terms of the <strong>spectral flux density</strong> <span class="math notranslate nohighlight">\(S(\nu)\)</span>, which is the amount of energy per second (W) per unit of frequency (Hz) per unit area (<span class="math notranslate nohighlight">\({\rm m}^2\)</span>).  To determine the power collected by the receiver, the spectral flux must be integrated over the telescope’s collecting area and over the detector’s bandwidth (i.e., frequency interval).  Mathematically the power is given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3b54405a-996b-4313-8bff-cbaa3bfe6113">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-3b54405a-996b-4313-8bff-cbaa3bfe6113" title="Permalink to this equation">#</a></span>\[\begin{align}
-P = \int_A \int_\nu S(\nu)f_\nu d\nu dA, 
-\end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(f_\nu\)</span> is the detector efficiency at a particular frequency <span class="math notranslate nohighlight">\(\nu\)</span>.  If the detector is 100% efficient, then <span class="math notranslate nohighlight">\(f_\nu = 1\)</span>; otherwise it is a value between 0-1.  If <span class="math notranslate nohighlight">\(S(\nu)\)</span> is approximately constant over the bandwidth (and 100% efficient), then the integral simplifies to <span class="math notranslate nohighlight">\(P = SA\Delta \nu\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is the effective area of the aperture.  The unit for the spectral flux density is a jansky (Jy), where 1 Jy = <span class="math notranslate nohighlight">\(10^{-26}\)</span> <span class="math notranslate nohighlight">\({\rm W}/{\rm m}^2/{\rm Hz}\)</span>.  Typical measurements are on the order of mJy, where a large aperture is needed to collect enough photons to be measurable.</p>
-<ul class="simple">
-<li><p><strong>The third strongest radio source in the sky is the galaxy Cygnus A, where its spectral density is 4500 Jy at 400 MHz.  What is the power collected of this source over a 5 MHz frequency band with a 25 m radio telescope?</strong></p></li>
-</ul>
+<div class="math notranslate nohighlight" id="equation-radio-power">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-radio-power" title="Permalink to this equation">#</a></span>\[P = \int_A \int_\nu S(\nu)f_\nu d\nu dA, \]</div>
+<p>where <span class="math notranslate nohighlight">\(f_\nu\)</span> is the detector efficiency at a particular frequency <span class="math notranslate nohighlight">\(\nu\)</span>.  If the detector is 100% efficient, then <span class="math notranslate nohighlight">\(f_\nu = 1\)</span>; otherwise it is a value between 0-1.  If <span class="math notranslate nohighlight">\(S(\nu)\)</span> is approximately constant over the bandwidth (and 100% efficient), then the integral simplifies to <span class="math notranslate nohighlight">\(P = SA\Delta \nu\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is the effective area of the aperture.  The unit for the spectral flux density is a jansky (Jy), where 1 Jy = <span class="math notranslate nohighlight">\(10^{-26}\)</span> <span class="math notranslate nohighlight">\({\rm W}/{\rm m}^2/{\rm Hz\ Jy}\)</span>.  Typical measurements are on the order of mJy, where a large aperture is needed to collect enough photons to be measurable.</p>
+<div class="exercise orange admonition" id="Chapter_6/telescopes-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.5 </span></p>
+<section id="exercise-content">
+<p><strong>The third strongest radio source in the sky is the galaxy Cygnus A, where its spectral density is 4500 Jy at 400 MHz.  What is the power collected of this source over a 5 MHz frequency band with a 25 m radio telescope?</strong></p>
+<p>The power collected from a radio source is integrated over the frequency band observed <span class="math notranslate nohighlight">\((\delta \nu)\)</span> depends on the telescope’s aperature <span class="math notranslate nohighlight">\(A\ (= 0.25 \pi D^2)\)</span>.  We can calculate the power (using Eq. <a class="reference internal" href="#equation-radio-power">(3.8)</a>) as,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+P &amp;= \int_A \int_\nu S(\nu)f_\nu d\nu dA = \int_\nu S(\nu)f_\nu d\nu \int_A dA, \\
+  &amp;= A S(\nu)\Delta \nu = \left(\frac{\pi}{4}\ ({\rm 25\ m})^2 \right)(4500\ {\rm Jy})\left(10^{-26} \frac{\rm W}{\rm m^2\ Hz}\right)(5\times 10^6\ {\rm Hz}),\\
+  &amp; = 1.1 \times 10^{-13}\ {\rm W},
+\end{align*}\]</div>
+<p>assuming 100% detector efficiency, or <span class="math notranslate nohighlight">\(f_\nu = 1\)</span>.</p>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">radio_power</span><span class="p">(</span><span class="n">S</span><span class="p">,</span><span class="n">D_scope</span><span class="p">,</span><span class="n">freq_band</span><span class="p">):</span>
@@ -806,9 +836,19 @@ P = \int_A \int_\nu S(\nu)f_\nu d\nu dA,
 <section id="improving-resolution-large-apertures-and-interferometry">
 <h3><span class="section-number">3.3.2. </span>Improving Resolution: Large Apertures and Interferometry<a class="headerlink" href="#improving-resolution-large-apertures-and-interferometry" title="Permalink to this heading">#</a></h3>
 <p>The resolution of a single small radio telescope poor due to Rayleigh’s criterion (Eq. <a class="reference internal" href="#equation-rayleigh-crit">(3.5)</a>) because the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is necessarily large compared to the optical regime.  To obtain a comparable resolution requires a very large aperture.  However, an advantage of long wavelengths is that small deviations from an ideal parabolic shape isn’t as crucial.  For example, observing at 21 cm requires variations of <span class="math notranslate nohighlight">\(\leq1\)</span> cm (i.e., <span class="math notranslate nohighlight">\(\lambda/20\)</span>) in the shape of the dish to produce tolerable images.</p>
-<ul class="simple">
-<li><p><strong>What diameter radio dish would be required to observe at 21 cm with a resolution equivalent to the Keck telescopes (<span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>)?</strong></p></li>
-</ul>
+<div class="exercise orange admonition" id="Chapter_6/telescopes-exercise-5">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.6 </span></p>
+<section id="exercise-content">
+<p><strong>What diameter radio dish would be required to observe at 21 cm with a resolution equivalent to the Keck telescopes <span class="math notranslate nohighlight">\((0.5^{\prime\prime})\)</span>?</strong></p>
+<p>A telescope’s resolution depends on Rayleigh’s criterion, where we need to solve for the telescope’s aperature instead of its resolution.  Rearranging Eq. <a class="reference internal" href="#equation-rayleigh-crit">(3.5)</a>, we find that</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+D &amp;= 1.22 \frac{\lambda}{\theta_{\rm min}} = 1.22 \left( \frac{0.21\ {\rm m}}{0.5^{\prime\prime}} \times \frac{3600^{\prime\prime}}{1^\circ} \times \frac{180^\circ}{\pi}\right), \\
+ &amp;\simeq \mathbf{110\ {\rm km}}.
+\end{align*}\]</div>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dish_size</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">th</span><span class="p">):</span>
@@ -829,6 +869,12 @@ P = \int_A \int_\nu S(\nu)f_\nu d\nu dA,
 </div>
 </div>
 <p>For comparison, the dish at <a class="reference external" href="https://en.wikipedia.org/wiki/Arecibo_Observatory">Arecibo Observatory</a> is 305 m across and was the largest single aperture radio telescope before the construction of the Five-hundred-meter Aperture Spherical radio Telescope (<a class="reference external" href="https://en.wikipedia.org/wiki/Five-hundred-meter_Aperture_Spherical_Telescope">FAST</a>) in southwest China.  The aperture would need to be about <span class="math notranslate nohighlight">\(200\times\)</span> larger to observe down to <span class="math notranslate nohighlight">\(0.5^{\prime\prime}\)</span>.</p>
+<figure class="align-default" id="map-comparison-fig">
+<a class="reference internal image-reference" href="../_images/Map_radius.png"><img alt="map comparison" src="../_images/Map_radius.png" style="width: 550px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">A telescope with a single 110 km aperature would stretch from Valdosta, GA to Tallahassee, FL. Image credit: <a class="reference external" href="https://www.google.com/maps">Google Maps</a>.</span><a class="headerlink" href="#map-comparison-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The solution to improved resolution is accomplished through a technique called interferometry, which uses multiple telescopes to mimic a larger aperture.  As a result, astronomers have nevertheless been able to resolve radio images to better than <span class="math notranslate nohighlight">\(0.001^{\prime\prime}\)</span>.  For interferometry to work, astronomers utilize two radio telescopes (of modest size) separated by a baseline distance <span class="math notranslate nohighlight">\(d\)</span>.  This is similar to the Young double-slit experiment, where the baseline is analogous to the slit spacing.  For the  signal to arrive at both telescopes <em>in-phase</em> and at a maximum intensity, the extra distance traveled to one telescope must be an integral number of wavelengths <span class="math notranslate nohighlight">\(L = n\lambda\)</span>, where <span class="math notranslate nohighlight">\(n = 0,1,2,\ldots\)</span>.  Alternatively, the signal will destructively interfere if the distance <span class="math notranslate nohighlight">\(L = (n-1/2)\lambda\)</span> is a odd number of half-wavelengths.  The pointing angle <span class="math notranslate nohighlight">\(\theta\)</span> is then determined as</p>
 <div class="math notranslate nohighlight" id="equation-pointing-angle">
 <span class="eqno">(3.9)<a class="headerlink" href="#equation-pointing-angle" title="Permalink to this equation">#</a></span>\[\sin \theta = \frac{L}{d}, \]</div>
@@ -836,11 +882,18 @@ P = \int_A \int_\nu S(\nu)f_\nu d\nu dA,
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Very-long-baseline_interferometry">Very long baseline interferometry</a> (VLBI) is possible using instruments across a whole continent or even between continents. for example, the Event Horizon Telescope (<a class="reference external" href="https://en.wikipedia.org/wiki/Event_Horizon_Telescope">EHT</a>) combined contemporaneous observations of M87’s galactic center to produce a direct image of a black hole’s accretion disk.  It used data from radio telescopes across the world, where the exact time of data acquisition was recorded and reconstructed the image.</p>
 <p>A single antenna has its greatest sensitivity along its pointed direction, but it can also be sensitive to radio sources at other angles.  A typical antenna <a class="reference external" href="https://en.wikipedia.org/wiki/Radiation_pattern">pattern</a> maximizes the symmetry in dipole radiation, where there are three regions: a main lobe, back lobe and sidelobes.  The <em>longer</em> the lobe, the more sensitive the telescope is in that direction.  Note that the directionality of the beam is not perfect and components of the sidelobes contributed to a background noise.  The narrowness of the main lobe is referred to as the <strong>half-power beam width</strong> (HPBW) or angular width at half its length.  This width can be modulated by the addition of other telescopes to produce a particular diffraction pattern (i.e., similar to the increase in grating lines for optical diffraction) and the effect of the sidelobes can be reduced.</p>
 <figure class="align-default" id="radiation-pattern-fig">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sidelobes_en.svg/800px-Sidelobes_en.svg.png"><img alt="radiation pattern" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sidelobes_en.svg/800px-Sidelobes_en.svg.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sidelobes_en.svg/800px-Sidelobes_en.svg.png"><img alt="radiation pattern" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sidelobes_en.svg/800px-Sidelobes_en.svg.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Typical polar radiation plot. Most antennas show a pattern of “lobes” or maxima of radiation. In a directive antenna, shown here, the largest lobe, in the desired direction of propagation, is called the “main lobe”. The other lobes are called “sidelobes” and usually represent radiation in unwanted directions. Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Radiation_pattern/">Radiation pattern</a></span><a class="headerlink" href="#radiation-pattern-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Typical polar radiation plot. Most antennas show a pattern of “lobes” or maxima of radiation. In a directive antenna, shown here, the largest lobe, in the desired direction of propagation, is called the “main lobe”. The other lobes are called “sidelobes” and usually represent radiation in unwanted directions. Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Radiation_pattern/">Radiation pattern</a></span><a class="headerlink" href="#radiation-pattern-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/Rf3mX3XP5RE"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Very_Large_Array">Very Large Array</a> (VLA) in Socorro, New Mexico consists of 27 radio telescopes in a movable Y configuration.  The 25 m telescopes are on tracks, use receivers sensitive at a variety of frequencies, and can have a maximum configuration diameter of 27 km.  It is capable of producing a high-resolution map of the sky by combining data from all of the individual telescopes.  The effective collecting area is 27 times greater than a single telescope.</p>
 </section>
 </section>
@@ -850,9 +903,9 @@ P = \int_A \int_\nu S(\nu)f_\nu d\nu dA,
 <h3><span class="section-number">3.4.1. </span>Atmospheric Windows in the EM Spectrum<a class="headerlink" href="#atmospheric-windows-in-the-em-spectrum" title="Permalink to this heading">#</a></h3>
 <p>Optical and radio telescopes can detect a vast majority of the radiation that reaches Earth’s surface.  The Earth’s atmosphere is opaque to most of the remaining electromagnetic spectrum.  The primary contributor to IR absorption is water vapor, where some observatories are placed above the atmospheric water vapor to make their observations.  NASA and the UK operate IR telescopes on Mauna Kea, where the humidity is quite low.  The Stratospheric Observatory for Infrared Astronomy (<a class="reference external" href="https://en.wikipedia.org/wiki/Stratospheric_Observatory_for_Infrared_Astronomy">SOFIA</a>) uses a 2.5 m telescope mounted in a Boeing 747 with a large door in the aft fuselage and is designed for overnight flights at altitudes of about 12 km to make observations.</p>
 <figure class="align-default" id="opacity-fig">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atmospheric_electromagnetic_opacity.svg/1920px-Atmospheric_electromagnetic_opacity.svg.png"><img alt="atmosphere opacity" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atmospheric_electromagnetic_opacity.svg/1920px-Atmospheric_electromagnetic_opacity.svg.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atmospheric_electromagnetic_opacity.svg/1920px-Atmospheric_electromagnetic_opacity.svg.png"><img alt="atmosphere opacity" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atmospheric_electromagnetic_opacity.svg/1920px-Atmospheric_electromagnetic_opacity.svg.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Opacity of the Earth’s atmosphere as a function of wavelength. Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Radio_window/">Radio window</a></span><a class="headerlink" href="#opacity-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Opacity of the Earth’s atmosphere as a function of wavelength. Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Radio_window/">Radio window</a></span><a class="headerlink" href="#opacity-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In addition to atmospheric absorption, IR observations are complicated by the background heat of the telescope and detector.  From Wien’s law, the peak wavelength of an object near room temperature (300 K) is nearly 10 <span class="math notranslate nohighlight">\(\mu {\rm m}\)</span>, which could be in an observer’s wavelength region of interest.  Thus, steps must be taken to cool the detector to remove the signal from the background heat.</p>
@@ -863,14 +916,14 @@ P = \int_A \int_\nu S(\nu)f_\nu d\nu dA,
 <figure class="align-default" id="iras-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/f/f2/IRAS_all-sky_infrared_survey.jpg"><img alt="IRAS" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/IRAS_all-sky_infrared_survey.jpg" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Nearly the entire sky, as seen in infrared wavelengths and projected at one-half degree resolution, is shown in this image, assembled from six months of data from the Infrared Astronomical Satellite (IRAS). Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/IRAS/">IRAS</a></span><a class="headerlink" href="#iras-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Nearly the entire sky, as seen in infrared wavelengths and projected at one-half degree resolution, is shown in this image, assembled from six months of data from the Infrared Astronomical Satellite (IRAS). Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/IRAS/">IRAS</a></span><a class="headerlink" href="#iras-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>From the success of IRAS, the European space Agency followed with the <strong>Infrared Space Observatory</strong> in 1995.  Later, the <a class="reference external" href="https://en.wikipedia.org/wiki/Spitzer_Space_Telescope">Spitzer Space Telescope</a> was placed into an Earth-trailing orbit in 2003 and was recently retired in 2020.  The mission was only planned to last 2.5 years.  The liquid helium was exhausted in 2009 and the telescope was repurposed to continue observing in its <strong>Warm Mission</strong>, which limited its observations to 3.6 and 4.5 <span class="math notranslate nohighlight">\(\mu{\rm m}\)</span>.  Spitzer had a 0.85 m (f/12) mirror constructed of beryllium and was cooled to less than 5.5 K prior to 2009.</p>
 <figure class="align-default" id="spitzer-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Andromeda_galaxy_Ssc2005-20a1.jpg/1920px-Andromeda_galaxy_Ssc2005-20a1.jpg"><img alt="Spitzer Andromeda" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Andromeda_galaxy_Ssc2005-20a1.jpg/1920px-Andromeda_galaxy_Ssc2005-20a1.jpg" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">The Andromeda Galaxy imaged by the MIPS instrument at 24 μm using the Spitzer Space Telescope. Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Spitzer_Space_Telescope/">Spitzer_Space_Telescope</a></span><a class="headerlink" href="#spitzer-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.10 </span><span class="caption-text">The Andromeda Galaxy imaged by the MIPS instrument at 24 μm using the Spitzer Space Telescope. Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Spitzer_Space_Telescope/">Spitzer_Space_Telescope</a></span><a class="headerlink" href="#spitzer-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Cosmic_Background_Explorer">Cosmic Background Explorer</a> (COBE) was launched and operated from 1989-1993 investigating the microwave regime.  It measured the microwave background radiation as 2.7 K, which validated the previous measurements made from the ground. COBE was followed by two more advanced spacecraft: the <a class="reference external" href="https://en.wikipedia.org/wiki/Wilkinson_Microwave_Anisotropy_Probe">Wilkinson Microwave Anisotropy Probe</a> (WMAP) operated from 2001 to 2010 and the <a class="reference external" href="https://en.wikipedia.org/wiki/Planck_(spacecraft)">Planck spacecraft</a> from 2009 to 2013</p>
