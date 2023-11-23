@@ -16,19 +16,27 @@ where both presentations will be assessed by both the instructor and fellow stud
 - Astronomical Coordinates 4: Cross-matching Catalogs Using astropy.coordinates and astroquery (Main-Sequence and Post-Main-Sequence Stellar Evolution)
 - Modeling 1: Make a quick fit using astropy.modeling (Stellar Pulsation)
 
-
 ## Annual Review of Astronomy and Astrophysics (AARA)
-- Chemical Composition of the Sun (Asplund et al. 2009)
-- Interstellar Dust Grains (Draine 2003)
-- Theory of Star Formation (McKee and Ostriker 2007)
-- Evolution of Asymptotic Giant Branch Stars (Herwig 2005)
-- Star Formation in the Milky Way and Nearby Galaxies (Kennicutt and Evans 2012)
+- Chemical Composition of the Sun ([Asplund et al. (2009)](https://ui.adsabs.harvard.edu/abs/2009ARA%26A..47..481A/abstract))
+- Interstellar Dust Grains ([Draine (2003)](https://ui.adsabs.harvard.edu/abs/2003ARA%26A..41..241D/abstract))
+- Theory of Star Formation ([McKee and Ostriker (2007)](https://ui.adsabs.harvard.edu/abs/2007ARA%26A..45..565M/abstract))
+- Evolution of Asymptotic Giant Branch Stars ([Herwig (2005)](https://ui.adsabs.harvard.edu/abs/2005ARA%26A..43..435H/abstract))
+- Thermonuclear Reaction Rates ([Fowler, Caughlan, & Zimmerman (1967)](https://ui.adsabs.harvard.edu/abs/1967ARA%26A...5..525F/abstract))
+- Cool White Dwarfs ([Hansen & Liebert (2003)](https://ui.adsabs.harvard.edu/abs/2003ARA%26A..41..465H/abstract))
+- Tests of Evolutionary Sequences using Color-Magnitude Diagrams of Globular Clusters ([Renzini & Fusi Pecci (1988)](https://ui.adsabs.harvard.edu/abs/1988ARA%26A..26..199R/abstract))
 
 ## Other Useful links
 - An awesome list of resources for professional astronomers (https://github.com/jonathansick/awesome-astronomy)
 - Astrobetter: Tips and Tricks for Professional Astronomers (https://www.astrobetter.com/)
 - Astrobites: astro-ph reader's digest (https://astrobites.org/)
 - Arxiv:astro-ph preprint server (https://arxiv.org/archive/astro-ph)
+
+## Additional Suggested Reading
+- Constraining Solar Abundances Using Helioseismology,  [Basu & Antia (2004)](https://ui.adsabs.harvard.edu/abs/2004ApJ...606L..85B/abstract)
+- Line Formation in Solar Granulation, [Aslpund et al. (2004)](https://ui.adsabs.harvard.edu/abs/2004A%26A...417..751A/abstract)
+- Solar Models: Current Epoch and Time Dependences, Neutrinos, and Helioseismological Properties, [Bahcall, Pinsonneault, & Basu (2001)](https://ui.adsabs.harvard.edu/abs/2001ApJ...555..990B/abstract)
+- The Stability of Supermassive Stars, [Fowler (1966)](https://ui.adsabs.harvard.edu/abs/1966ApJ...144..180F/abstract)
+- Dynamics of the Interplanetary Gas and Magnetic Fields, [Parker (1958)](https://ui.adsabs.harvard.edu/abs/1958ApJ...128..664P/abstract)
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 

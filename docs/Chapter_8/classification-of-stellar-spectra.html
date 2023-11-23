@@ -619,8 +619,8 @@ document.write(`
 </div>
 </div>
 <p>The exponent of the Maxwell-Boltzmann distribution function is the ratio of a gas particle’s kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span>) to the characteristic thermal energy (<span class="math notranslate nohighlight">\(kT\)</span>).  Particles above the thermal energy tend to either can escape so the overall distribution remains the same.  This is analogous as to why the temperature of a pot of boiling water doesn’t keep increasing.  The distribution peaks when the particle energies are equal at a <strong>most probable speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-970a18d7-500f-4042-9315-6a3fd1c62fa8">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-970a18d7-500f-4042-9315-6a3fd1c62fa8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5a1c44c-5c16-4cf9-b66d-8bf8a430fc7a">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-a5a1c44c-5c16-4cf9-b66d-8bf8a430fc7a" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{mp} = \sqrt{\frac{2kT}{m}}. 
 \end{align}\]</div>
 <ul class="simple">
@@ -629,8 +629,8 @@ v_{mp} = \sqrt{\frac{2kT}{m}}.
 <div class="math notranslate nohighlight">
 \[ v_{mp} = \sqrt{\frac{2(1.38\times 10^{-23})(10^4)}{1.67 \times 10^{-27}}} = 1.29 \times 10^4\;{\rm m/s} \]</div>
 <p>The high-speed exponential “tail” of the distribution function results in a somewhat higher <strong>root-mean-square speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8bc0b24c-98b1-4494-9bc0-2515daef9a3d">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-8bc0b24c-98b1-4494-9bc0-2515daef9a3d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3e6ab678-793c-4fd3-8d39-aef8aa329a8e">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-3e6ab678-793c-4fd3-8d39-aef8aa329a8e" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{rms} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 <p>The area under the curve of the Maxwell-Boltzmann distribution <em>fraction</em> of gas particles within a range of speeds or,</p>
@@ -767,8 +767,8 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </table>
 </div>
 <p>There exists some probability <span class="math notranslate nohighlight">\(P(s_x)\)</span> that the system is in a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Then the ratio of the probability between orbital states represents the likelihood for which electrons may be found.  Using the states <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, the ratio of probability is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c4020049-fbd2-40b8-9360-5dc04a704f88">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-c4020049-fbd2-40b8-9360-5dc04a704f88" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0ed690f4-0a4e-40c8-bbf9-f5b978c57d9a">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-0ed690f4-0a4e-40c8-bbf9-f5b978c57d9a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{P(s_b)}{P(s_a)} = \frac{e^{-E_b/(kT)}}{e^{-E_a/(kT)}} = e^{-(E_b-E_a)/(kT)}, 
 \end{align}\]</div>
 <div class="admonition note">
@@ -847,13 +847,13 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <section id="combining-the-boltzmann-and-saha-equations">
 <h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this heading">#</a></h3>
 <p>The Boltzmann equation describes what is <em>possible</em>, where the Saha equation describes what is <em>probable</em>.  Therefore, what we observe should be a combination of effects from both equations.  Consider the degree of ionization in a stellar atmosphere consisting of pure hydrogen and that the electron pressure is a constant <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span>.  Hydrogen has only two states: neutral hydrogen (H I) and ionized hydrogen (H II).  The fraction of atoms that are ionized depends on the ratio of the number ionized atoms <span class="math notranslate nohighlight">\(N_{\rm II}\)</span> and the total number of atoms <span class="math notranslate nohighlight">\(N_{\rm tot}=N_{\rm I} + N_{\rm II}\)</span>.  Ionized hydrogen is just a proton and thus, has no degeneracy and the partition function <span class="math notranslate nohighlight">\(Z_{\rm II} = 1\)</span>.  The partition function for the remaining neutral hydrogen (H I) is simply <span class="math notranslate nohighlight">\(Z_{\rm I} \approx g_1 = 2(1)^2 = 2\)</span>.  The temperatures of stellar atmospheres range from 5000 K - 25,000 K and the previous example (using the Boltzmann equation) showed that most electrons for the hydrogen atoms are in the ground state (<span class="math notranslate nohighlight">\(n=1\)</span>).  For neutral hydrogen, equation 7 becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5ee75dc3-259a-450c-abea-2fe11a2a9a0d">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-5ee75dc3-259a-450c-abea-2fe11a2a9a0d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c3074fce-64d3-4ea0-8c2d-f021ec0e5540">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-c3074fce-64d3-4ea0-8c2d-f021ec0e5540" title="Permalink to this equation">#</a></span>\[\begin{align}
 Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E_2-E_1)/(kT)} ,
 \end{align}\]</div>
 <p>where the second term <span class="math notranslate nohighlight">\(g_2 e^{-(E_2-E_1)/(kT)} \rightarrow 0\)</span> because <span class="math notranslate nohighlight">\(kT = 0.4-2.2\)</span> eV for the appropriate temperature range and <span class="math notranslate nohighlight">\(e^{-(E_2-E_1)/(kT)} \ll 1\)</span>.  The ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm tot}\)</span> can be rewritten as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-32a3778e-420d-4b77-a75f-a1bdc7fd1486">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-32a3778e-420d-4b77-a75f-a1bdc7fd1486" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8e7dc7f3-d26f-41d5-990d-8837908a6e24">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-8e7dc7f3-d26f-41d5-990d-8837908a6e24" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{N_{\rm II}}{N_{\rm tot}} = \frac{N_{\rm II}/N_{\rm I}}{1 + N_{\rm II}/N_{\rm I}}. 
 \end{align}\]</div>
 <p>Then the Saha equation can be used to determine the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span>.  Using the ionization energy <span class="math notranslate nohighlight">\(\chi_{\rm I} = 13.6\)</span> eV for hydrogen, the ideal gas law, and substituting the values for <span class="math notranslate nohighlight">\(Z_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(Z_{\rm II}\)</span> into Equation <a class="reference internal" href="#equation-prob-ratio">(4.6)</a>, the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> is given as</p>
@@ -1231,7 +1231,7 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 </div>
 <div class="admonition-problem-2 admonition">
 <p class="admonition-title">Problem 2</p>
-<p>Equation <a class="reference internal" href="#equation-part-func">(4.7)</a> for the partition function actually diverges for <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>.  Why can we ignore these large <span class="math notranslate nohighlight">\(n\)</span> terms?</p>
+<p>The partition function (Eqn. <a class="reference internal" href="#equation-part-func">(4.7)</a>) actually diverges for <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>.  Why can we ignore these large <span class="math notranslate nohighlight">\(n\)</span> terms?</p>
 </div>
 <div class="admonition-problem-3 admonition">
 <p class="admonition-title">Problem 3</p>
