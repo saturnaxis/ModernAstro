@@ -27,10 +27,10 @@ where both presentations will be assessed by both the instructor and fellow stud
 - Tests of Evolutionary Sequences using Color-Magnitude Diagrams of Globular Clusters ([Renzini & Fusi Pecci (1988)](https://ui.adsabs.harvard.edu/abs/1988ARA%26A..26..199R/abstract))
 
 ## Other Useful links
-- An awesome list of resources for professional astronomers (https://github.com/jonathansick/awesome-astronomy)
-- Astrobetter: Tips and Tricks for Professional Astronomers (https://www.astrobetter.com/)
-- Astrobites: astro-ph reader's digest (https://astrobites.org/)
-- Arxiv:astro-ph preprint server (https://arxiv.org/archive/astro-ph)
+- An awesome list of resources for professional astronomers: [awesome-astronomy](https://github.com/jonathansick/awesome-astronomy)
+- [Astrobetter](https://www.astrobetter.com/): Tips and Tricks for Professional Astronomers 
+- [Astrobites](https://astrobites.org/): astro-ph reader's digest 
+- [Arxiv:astro-ph](https://arxiv.org/archive/astro-ph) preprint server 
 
 ## Additional Suggested Reading
 - Constraining Solar Abundances Using Helioseismology,  [Basu & Antia (2004)](https://ui.adsabs.harvard.edu/abs/2004ApJ...606L..85B/abstract)
