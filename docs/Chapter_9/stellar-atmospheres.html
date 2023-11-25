@@ -442,7 +442,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-energy-density">5.1.2. The Specific Energy Density</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-radiative-flux">5.1.3. The Specific Radiative Flux</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation-pressure">5.1.4. Radiation Pressure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">5.1.5. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-opacity">5.2. Stellar Opacity</a><ul class="nav section-nav flex-column">
@@ -451,7 +450,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-depth">5.2.3. Optical Depth</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-sources-of-opacity">5.2.4. General Sources of Opacity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rosseland-mean-opacity">5.2.5. The Rosseland Mean Opacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.2.6. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiative-transfer">5.3. Radiative Transfer</a><ul class="nav section-nav flex-column">
@@ -468,7 +466,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4. The Assumption of a Plane-Parallel Atmosphere</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5. The Eddington Approximation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limb-darkening-revisited">5.4.6. Limb Darkening Revisited</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.4.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">5.5. The Profiles of Spectral Lines</a><ul class="nav section-nav flex-column">
@@ -479,7 +476,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-modeling-of-stellar-atmospheres">5.5.5. Computer Modeling of Stellar Atmospheres</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplemental-links">5.6. Supplemental Links</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">5.6. <strong>Homework</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplemental-links">5.7. Supplemental Links</a></li>
 </ul>
             </nav>
         </div>
@@ -502,8 +500,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ E_\lambda \equiv \frac{\partial E}{\partial \lambda}, \]</div>
 <p>where <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> is the energy carried by the rays in the light cone in a time interval <span class="math notranslate nohighlight">\(dt\)</span>.  The <strong>specific intensity</strong> of the rays is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-83c84874-1b31-444b-b656-fa5600796f11">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-83c84874-1b31-444b-b656-fa5600796f11" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda\:dt\:dA \cos\theta\:d\Omega}, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d0e9e7df-a049-411c-8b8b-dba83bef23ce">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-d0e9e7df-a049-411c-8b8b-dba83bef23ce" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda\:dt\:dA \cos\theta\:d\Omega}, \end{align}\]</div>
 <p>which carries the units of energy per time per Area per steradian <em>sr</em> (<a class="reference external" href="https://en.wikipedia.org/wiki/Steradian">solid angle)</a> or more simply, energy per everything.</p>
 <figure class="align-default" id="intensity-fig">
 <a class="reference internal image-reference" href="../_images/Figure_14.jpg"><img alt="Intensity" src="../_images/Figure_14.jpg" style="width: 500px;" /></a>
@@ -530,8 +528,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ E_\lambda d\lambda = I_\lambda d\lambda\:dt\:dA \cos\theta\:d\Omega = I_\lambda d\lambda\:dA\:d\Omega\:\frac{dL}{c}, \]</div>
 <p>using Eqn. <a class="reference internal" href="#equation-specific-intensity">(5.2)</a> and the substitution of <span class="math notranslate nohighlight">\(dt\)</span>.  The quantity <span class="math notranslate nohighlight">\(dA dL\)</span> is the volume of the cylinder, where the <strong>specific energy density</strong> (<span class="math notranslate nohighlight">\(u_\lambda d\lambda\)</span>) is found by normalizing the energy <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> by the volume of the cylinder, integrating over all the solid angles, and using Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e84f3e4e-c5cc-44a3-a320-08025d32a430">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-e84f3e4e-c5cc-44a3-a320-08025d32a430" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-4cacd9c1-0093-4766-8bce-018915f43733">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-4cacd9c1-0093-4766-8bce-018915f43733" title="Permalink to this equation">#</a></span>\[\begin{align} 
 u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_\lambda d\lambda\:\sin\theta d\theta\:d\phi = \frac{4\pi}{c} \langle I_\lambda \rangle d\lambda. 
 \end{align}\]</div>
 <figure class="align-default" id="cylindrical-trap-fig">
@@ -587,18 +585,11 @@ u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_
 <div class="math notranslate nohighlight">
 \[ P_{\rm rad} = \int_0^\infty P_{\rm rad,\lambda} d\lambda, \]</div>
 <p>where the substitution <span class="math notranslate nohighlight">\(B_\lambda = I_\lambda\)</span> in Eqn. <a class="reference internal" href="#equation-rad-press-trans">(5.8)</a> can be made blackbody radiation to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f558bbf-ca5f-4d0e-b0b0-c7eb5e64469b">
-<span class="eqno">(5.9)<a class="headerlink" href="#equation-9f558bbf-ca5f-4d0e-b0b0-c7eb5e64469b" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-9e9b7fd7-f1a0-45a1-ae4b-91ec5b3a21ef">
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-9e9b7fd7-f1a0-45a1-ae4b-91ec5b3a21ef" title="Permalink to this equation">#</a></span>\[\begin{align} 
 P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \frac{1}{3}u.
 \end{align}\]</div>
 <p>The <strong>blackbody radiation pressure</strong> is one-third of the energy density, where an ideal monatomic gas is two-thirds of its energy density.</p>
-</section>
-<section id="problems">
-<h3><span class="section-number">5.1.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>1. Find an expression for <span class="math notranslate nohighlight">\(n_\lambda\:d\lambda\)</span> (the number density of blackbody photons) with a wavelength between <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>.</p>
-<p>2. Using your expression from Problem 1, find the total number of photons inside a kitchen oven assuming a volume of 0.5 <span class="math notranslate nohighlight">\({\rm m^3}\)</span> and set at 477 K.</p>
-</div></blockquote>
 </section>
 </section>
 <section id="stellar-opacity">
@@ -734,8 +725,8 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 <section id="optical-depth">
 <h3><span class="section-number">5.2.3. </span>Optical Depth<a class="headerlink" href="#optical-depth" title="Permalink to this heading">#</a></h3>
 <p>Scatter photons have a mean free path (given by Eqn. <a class="reference internal" href="#equation-mean-free-path">(5.10)</a>), where <span class="math notranslate nohighlight">\(\kappa_\lambda \rho\)</span> and <span class="math notranslate nohighlight">\(n\sigma_\lambda\)</span> can be though of as the <em>fraction</em> of photons scatter per meter of distance traveled.  Note that the mean free path is dependent on the photon wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  However it is convenient to define an <strong>optical depth</strong> <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5f038013-6ffb-456f-a02b-e559f310a8ee">
-<span class="eqno">(5.13)<a class="headerlink" href="#equation-5f038013-6ffb-456f-a02b-e559f310a8ee" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-26186c45-96fc-4d88-9cf4-9c1a9d171f9b">
+<span class="eqno">(5.13)<a class="headerlink" href="#equation-26186c45-96fc-4d88-9cf4-9c1a9d171f9b" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(s\)</span> is the distance measured along the photon’s direction of motion (i.e., looking back along the path traveled by the photon).  The difference in optical depth <span class="math notranslate nohighlight">\(\Delta \tau_\lambda\)</span> can be determined as the difference between the final (<span class="math notranslate nohighlight">\(\tau_{\lambda,f}\)</span>) and initial (<span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span>) optical depths, or the integral along the photon’s path as</p>
 <div class="math notranslate nohighlight" id="equation-tau-diff">
 <span class="eqno">(5.14)<a class="headerlink" href="#equation-tau-diff" title="Permalink to this equation">#</a></span>\[\Delta \tau_\lambda = \tau_{\lambda,f} - \tau_{\lambda,o} = -\int_0^s \kappa_\lambda \rho ds.\]</div>
@@ -776,8 +767,8 @@ P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \fra
 <div class="math notranslate nohighlight">
 \[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds = \sec \theta \int_0^h \kappa_\lambda \rho dz = \tau_{\lambda,o} \sec \theta, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> refers to the optical depth of a vertically traveling photon ($\theta = 0).  The intensity of the light at the telescope is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d50a923e-2040-4e93-b95c-731c8ac0d67b">
-<span class="eqno">(5.16)<a class="headerlink" href="#equation-d50a923e-2040-4e93-b95c-731c8ac0d67b" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-361e1e6f-62ba-4d73-b3ff-8bfb3b91ea57">
+<span class="eqno">(5.16)<a class="headerlink" href="#equation-361e1e6f-62ba-4d73-b3ff-8bfb3b91ea57" title="Permalink to this equation">#</a></span>\[\begin{align} 
 I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 \end{align}\]</div>
 <p>For a single observation, both <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> are unknown.  Over a night of observation, the Earth rotates on its axis and several measurements of the received intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> as a function of <span class="math notranslate nohighlight">\(\sec \theta\)</span> can be made.  Then the best-fitting <em>slope</em> is <span class="math notranslate nohighlight">\(-\tau_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> can be determined through extrapolation</p>
@@ -812,9 +803,9 @@ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 </figcaption>
 </figure>
 </li>
-<li><p><strong>Electron scattering</strong> is as you would expect where a photon is scatter (<em>not absorbed</em>) by a free electron through the process of <a class="reference external" href="https://en.wikipedia.org/wiki/Thomson_scattering">Thomas scattering</a>.  The electron “oscillates” (like a buoy) in the wake of a photon.  Because the electron’s cross section is tiny, it is a poor target for an incident photon.  The cross section for Thomson scattering <span class="math notranslate nohighlight">\(\sigma_T\)</span> has the same value (independent of wavelength),  <br> <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-049364af-d6fb-46f6-a507-2c85e06461e1">
-<span class="eqno">(5.17)<a class="headerlink" href="#equation-049364af-d6fb-46f6-a507-2c85e06461e1" title="Permalink to this equation">#</a></span>\[\begin{align} \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}. \end{align}\]</div>
+<li><p><strong>Electron scattering</strong> is as you would expect where a photon is scatter (<em>not absorbed</em>) by a free electron through the process of <a class="reference external" href="https://en.wikipedia.org/wiki/Thomson_scattering">Thomson scattering</a>.  The electron “oscillates” (like a buoy) in the wake of a photon.  Because the electron’s cross section is tiny, it is a poor target for an incident photon.  The cross section for Thomson scattering <span class="math notranslate nohighlight">\(\sigma_T\)</span> has the same value (independent of wavelength),  <br> <br></p>
+<div class="amsmath math notranslate nohighlight" id="equation-bbd5ed72-e937-47cc-885d-021eed91a5c6">
+<span class="eqno">(5.17)<a class="headerlink" href="#equation-bbd5ed72-e937-47cc-885d-021eed91a5c6" title="Permalink to this equation">#</a></span>\[\begin{align} \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}. \end{align}\]</div>
 <p>This is ~2 billion times smaller than the hydrogen cross section for photoionization from bound-free absorption, <span class="math notranslate nohighlight">\(\sigma_{bf}\)</span>.  Electron scattering is most effective when the electron density is very high (i.e., high temperatures for ionization) and other sources of opacity are eliminated due to the absence of necessary bound electrons.  For high temperatures, the electron scattering opacity <span class="math notranslate nohighlight">\(\kappa_{es}\)</span> dominates the continuum opacity. <br> <br></p>
 <p>A photon can also be scattered by loosely bound electrons.  <em>Compton scattering</em> occurs when the photon’s wavelength is much smaller than the atom or <em>Rayleigh scattering</em> if the wavelength is much larger.  Compton scatter is usually lumped together with Thomson scattering due to the small change in wavelength of the scattered photon.  The cross section for Rayleigh scattering is smaller than the Thomson cross section and can be neglected in most stellar atmospheres.  However, it is important in the UV for supergiant stars with their extended envelopes and in cool main-sequence stars.
 The opacity of stellar material suddenly increases at wavelengths <span class="math notranslate nohighlight">\(\lambda \leq 364.7\:{\rm nm}\)</span> and the measured radiative flux of the star suddenly decreases.  This abrupt drop in the continuous spectrum is the <strong>Balmer jump</strong> and is evident in the Sun’s spectrum.  The size of the Balmer jump in hot stars depends on the fraction of hydrogen atoms in the first excited state.  The Balmer jump appears in the middle of the <em>U</em> band in the <em>UBV</em> system, which results in a decrease in the amount of light received in the bandwidth of the <em>U</em> filter and increase the measured values for both the <em>U</em> magnitude and color index (<span class="math notranslate nohighlight">\(U-B\)</span>).</p>
@@ -850,8 +841,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <section id="the-rosseland-mean-opacity">
 <h3><span class="section-number">5.2.5. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this heading">#</a></h3>
 <p>The opacity in Eqn. <a class="reference internal" href="#equation-tau-integral">(5.15)</a> depends on the wavelength of light, where a star is expected to produce photons covering a wide range of wavelengths.  It is often useful to define an opacity that has been averaged over all wavelengths.  This averaging produces an opacity that depends only on the composition, density, and temperature of the stellar atmosphere.  The most commonly used scheme to compute a wavelength-independent opacity is the <a class="reference external" href="http://personal.psu.edu/rbc3/A534/lec6.pdf">Rosseland mean opacity</a> or the <strong>Rosseland mean</strong>.  The Rosseland mean incorporates a weighting function that depends on how fast the blackbody spectrum varies with temperature, which is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2b157335-c94f-4636-94a3-df52f405c510">
-<span class="eqno">(5.18)<a class="headerlink" href="#equation-2b157335-c94f-4636-94a3-df52f405c510" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}. 
+<div class="amsmath math notranslate nohighlight" id="equation-900eb9cc-a2bb-46eb-bcf9-3100a1802f02">
+<span class="eqno">(5.18)<a class="headerlink" href="#equation-900eb9cc-a2bb-46eb-bcf9-3100a1802f02" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}. 
 \end{align}\]</div>
 <p>The absorption coefficient <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> varies with wavelength, but it also depends on the assumed source of opacity (e.g., bound-free, free-free, etc.) and there is not a simple equation to describe the average absorption coefficient for bound-bound transitions.  Approximation formulae have been developed for the average bound-free and free-free opacities:</p>
 <div class="math notranslate nohighlight" id="equation-bf-kappa">
@@ -864,20 +855,20 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>Because most stellar gases are primarily composed of hydrogen and helium, all other constituents are lumped together and referred to as <em>metals</em>.  However, certain applications require more specific detail in the composition, where each species is represented by its own mass fraction.</p>
 </div>
 <p>The mass fractions are formally defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9a6b82b4-6fc7-48ff-9c39-5d96a1063048">
-<span class="eqno">(5.21)<a class="headerlink" href="#equation-9a6b82b4-6fc7-48ff-9c39-5d96a1063048" title="Permalink to this equation">#</a></span>\[\begin{align}  X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-3e6f3158-b99b-47f2-8e25-2d9032ff19af">
-<span class="eqno">(5.22)<a class="headerlink" href="#equation-3e6f3158-b99b-47f2-8e25-2d9032ff19af" title="Permalink to this equation">#</a></span>\[\begin{align}  Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-16aa9ca8-a47a-4e29-9317-3195df2a8d75">
-<span class="eqno">(5.23)<a class="headerlink" href="#equation-16aa9ca8-a47a-4e29-9317-3195df2a8d75" title="Permalink to this equation">#</a></span>\[\begin{align} Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2fb6985c-ae88-4f65-9bde-5541dbdfde6a">
+<span class="eqno">(5.21)<a class="headerlink" href="#equation-2fb6985c-ae88-4f65-9bde-5541dbdfde6a" title="Permalink to this equation">#</a></span>\[\begin{align}  X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7b39512f-72c4-4188-b3d4-0e686efe501d">
+<span class="eqno">(5.22)<a class="headerlink" href="#equation-7b39512f-72c4-4188-b3d4-0e686efe501d" title="Permalink to this equation">#</a></span>\[\begin{align}  Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-0bda0bb8-55c0-485a-bc8b-4a6dbcbfef86">
+<span class="eqno">(5.23)<a class="headerlink" href="#equation-0bda0bb8-55c0-485a-bc8b-4a6dbcbfef86" title="Permalink to this equation">#</a></span>\[\begin{align} Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \end{align}\]</div>
 <p>such that <span class="math notranslate nohighlight">\(X+Y+Z = 1\)</span>.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Gaunt_factor">Gaunt factors</a> (<span class="math notranslate nohighlight">\(g_{bf}\)</span> and <span class="math notranslate nohighlight">\(g_{ff}\)</span>) in Eqns. <a class="reference internal" href="#equation-bf-kappa">(5.19)</a> and <a class="reference internal" href="#equation-ff-kappa">(5.20)</a> are quantum-mechanical correction terms.  These Gaunt factors are approximately 1 for the visible and UV wavelengths of interest.  The <strong>guillotine factor</strong> <span class="math notranslate nohighlight">\(t\)</span> (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1932MNRAS..92..364E/abstract">Eddington 1932</a>) describes a cutoff to the opacity of an atom after it has been ionized, where typical values lie between 1 and 100.</p>
 <p>Equations <a class="reference internal" href="#equation-bf-kappa">(5.19)</a> and <a class="reference internal" href="#equation-ff-kappa">(5.20)</a> have the functional form <span class="math notranslate nohighlight">\(\bar{\kappa} \propto \kappa_o \rho/T^{3.5}\)</span>, where <span class="math notranslate nohighlight">\(\kappa_o\)</span> combines all the factors that depend on composition. H. A. Kramers derived the first forms (in 1923) using classical physics and the Rosseland mean.  As a result, any opacity having a temperature and density dependence is referred to as <strong>Kramers opacity law</strong>.</p>
 <p>The electron scattering cross section is independent of wavelength and the Rosseland mean is simply</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6fa292fc-a388-4bb8-8fd9-784eb498eb37">
-<span class="eqno">(5.24)<a class="headerlink" href="#equation-6fa292fc-a388-4bb8-8fd9-784eb498eb37" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{es} = 0.02(1+X) \:{\rm m^2/kg}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d8b8097e-de72-4477-8e9e-23a8395b3e45">
+<span class="eqno">(5.24)<a class="headerlink" href="#equation-d8b8097e-de72-4477-8e9e-23a8395b3e45" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{es} = 0.02(1+X) \:{\rm m^2/kg}. \end{align}\]</div>
 <p>The mean opacity is modified in cooler stars (later than F0) by the <span class="math notranslate nohighlight">\(H^-\)</span> ion over specific temperature range (3000 K <span class="math notranslate nohighlight">\(\leq T \leq\)</span> 6000 K), density range (<span class="math notranslate nohighlight">\(10^{-7}\leq \rho \leq 10^{-2}\: {\rm kg/m^3}\)</span>), and metal mass fraction (<span class="math notranslate nohighlight">\(0.001 &lt; Z &lt; 0.03\)</span>), when the hydrogen mass fraction <span class="math notranslate nohighlight">\(X\sim0.7\)</span> is lower.  The average opacity is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8cc45b71-d120-4c3f-ac62-a10c51bb0a0f">
-<span class="eqno">(5.25)<a class="headerlink" href="#equation-8cc45b71-d120-4c3f-ac62-a10c51bb0a0f" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{H^-} \approx 7.9 \times 10^{-34} (50Z)\sqrt{\rho}T^9\:{\rm m^2/kg}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-339fb3f4-1415-495f-ba6f-aa30c7c06fb8">
+<span class="eqno">(5.25)<a class="headerlink" href="#equation-339fb3f4-1415-495f-ba6f-aa30c7c06fb8" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{H^-} \approx 7.9 \times 10^{-34} (50Z)\sqrt{\rho}T^9\:{\rm m^2/kg}. \end{align}\]</div>
 <p>The total Rosseland mean opacity <span class="math notranslate nohighlight">\(\bar{\kappa}\)</span> is the average of the sum of the individual contributions or</p>
 <div class="math notranslate nohighlight">
 \[ \bar{\kappa} = \overline{\kappa_{bb}+\kappa_{bf}+\kappa_{ff}+\kappa_{es}+\kappa_{H^-}}. \]</div>
@@ -889,22 +880,6 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 </figure>
 <p>From detailed computer calculations of the Rosseland mean using quantum physics, we find that the opacity increases linearly with density for a given temperature.  At a contour of constant density, the opacity rises with increasing temperature that reflects the greater number of free electrons produce by ionization of hydrogen and helium.  The hydrogen partial ionization zone and neutral helium ionization occur at about the same temperature (10,000 K).  The decline in opacity (after <span class="math notranslate nohighlight">\(\log_{10} T = 4\)</span> or 10,000 K) roughly follows a Kramers law (<span class="math notranslate nohighlight">\(\bar{\kappa} \propto T^{-3.5}\)</span>) and is primarily due to the bound-free and free-free absorption.</p>
 <p>The He II ion becomes fully ionized at 40,000 K for a wide range of stellar parameters, where there is a slight increase in the number of free electrons available.  Ionization of certain metals (most notably iron) occurs above <span class="math notranslate nohighlight">\(10^5\)</span> K, which produces another increase in the average opacity.  Electron scattering dominates at the highest temperatures when nearly all the stellar material is ionized (i.e., few electrons available for bound-bound or bound-free processes).</p>
-</section>
-<section id="id1">
-<h3><span class="section-number">5.2.6. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>3. Take the radius of a nitrogen molecule <span class="math notranslate nohighlight">\({\rm N}_2\)</span> to be 0.1 nm and the density of air to be 1.2 <span class="math notranslate nohighlight">\({\rm kg/m^3}\)</span>.  A nitrogen molecule contains 28 nucleons (protons and neutrons).</p>
-<blockquote>
-<div><p><strong>(a)</strong> Use the root-mean-square speed, <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span>, estimate the mean free path of the nitrogen molecules in your classroom at room temperature (300 K).<br />
-<strong>(b)</strong> What is the average time between collisions?</p>
-</div></blockquote>
-<p>4. Calculate how far you could see through Earth’s atmosphere if it had the opacity of the solar photosphere (<span class="math notranslate nohighlight">\(\kappa_{500}=0.03\:{\rm m^2/kg}\)</span>).</p>
-<p>5. According to one model of the Sun, the central density is <span class="math notranslate nohighlight">\(1.53 \times 10^5 \:{\rm kg/m^3}\)</span> and the Rosseland mean opacity at the center is 0.217 <span class="math notranslate nohighlight">\({\rm m^2/kg}\)</span>.</p>
-<blockquote>
-<div><p><strong>(a)</strong> Calculate the mean free path of a photon at the center of the Sun.<br />
-<strong>(b)</strong> Calculate the average time it would take for the photon to escape from the Sun if this mean free path remained constant for the photon’s journey to the surface.</p>
-</div></blockquote>
-</div></blockquote>
 </section>
 </section>
 <section id="radiative-transfer">
@@ -966,8 +941,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <h3><span class="section-number">5.3.4. </span>The Radiation Pressure Gradient<a class="headerlink" href="#the-radiation-pressure-gradient" title="Permalink to this heading">#</a></h3>
 <p>In addition to the photon’s meandering journey, there is a pressure that builds within the Sun’s atmosphere due to collisions.  This is similar to the air pressure within a closed room, where an individual molecule moves ~500 m/s and collides with other air molecules several billion times per second.  In the analogy of the closed room, a net flow of air (i.e., breeze) can occur after opening a window.</p>
 <p>The pressure outside is lower than the pressure inside the room, which can be expressed as a pressure differential using Bernoulli’s principle.  In a star, the high pressure interior and vacuum of space also produces a pressure difference.  The extent of the difference is not uniform, where the pressure decreases with stellar radius (i.e., as you get closer to the surface).  But it is enough to create a light movement of photons toward the surface that described by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a054f9cf-699c-4ff9-8261-96a3c50134dd">
-<span class="eqno">(5.28)<a class="headerlink" href="#equation-a054f9cf-699c-4ff9-8261-96a3c50134dd" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{dP_{\rm rad}}{dr} = -\frac{\bar{\kappa}\rho}{c}F_{\rm rad}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ab0d4945-d589-4309-910a-2e12fe4913b7">
+<span class="eqno">(5.28)<a class="headerlink" href="#equation-ab0d4945-d589-4309-910a-2e12fe4913b7" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{dP_{\rm rad}}{dr} = -\frac{\bar{\kappa}\rho}{c}F_{\rm rad}. \end{align}\]</div>
 <p>The transfer of radiation as a flow with photons drifting toward the surface is a better description than a “beam” that propagate radially outward.  The description of a beam is a convenient fiction used to define the direct of motion for a photon at a snapshot along its journey of continual absorption and scattering.</p>
 </section>
 </section>
@@ -1014,8 +989,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ \ln \left(\frac{I_\lambda - S_\lambda}{I_{\lambda,o} - S_\lambda}\right) = -\kappa_\lambda \rho s, \]</div>
 <p>which simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-903287aa-90fa-442e-8ea8-8709b9339d24">
-<span class="eqno">(5.32)<a class="headerlink" href="#equation-903287aa-90fa-442e-8ea8-8709b9339d24" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda(s) = I_{\lambda,o} e^{-\kappa_\lambda \rho s} + S_\lambda(1-e^{-\kappa_\lambda \rho s}). \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-3c76edb9-e259-4759-9cfc-fd409f2e9559">
+<span class="eqno">(5.32)<a class="headerlink" href="#equation-3c76edb9-e259-4759-9cfc-fd409f2e9559" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda(s) = I_{\lambda,o} e^{-\kappa_\lambda \rho s} + S_\lambda(1-e^{-\kappa_\lambda \rho s}). \end{align}\]</div>
 <ul class="simple">
 <li><p><strong>Suppose the source function <span class="math notranslate nohighlight">\(S_\lambda\)</span> is twice the initial intensity <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span>, then plot the transformation of the intensity in units of <span class="math notranslate nohighlight">\(\kappa_\lambda \rho s\)</span>.</strong></p></li>
 </ul>
@@ -1054,21 +1029,21 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <section id="the-assumption-of-a-plane-parallel-atmosphere">
 <h3><span class="section-number">5.4.4. </span>The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this heading">#</a></h3>
 <p>The intensity of light must depend on the path for the outward flow of energy.  The absorption and emission coefficients are the same for light traveling in all directions, but these coefficients depend on the temperature and density in a complicated way.  For astronomers to understand the stellar interior, they must know <em>at what depth</em> a spectral line is formed.  Since we are interested in the depth, let’s rewrite the transfer equation in terms of the optical depth, which is simply</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0025a669-bc31-447b-8619-e8abc49ceb06">
-<span class="eqno">(5.33)<a class="headerlink" href="#equation-0025a669-bc31-447b-8619-e8abc49ceb06" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-72d3ade4-77bf-412a-88e6-78c7231c1c67">
+<span class="eqno">(5.33)<a class="headerlink" href="#equation-72d3ade4-77bf-412a-88e6-78c7231c1c67" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \end{align}\]</div>
 <p>Optical depth does not provide a unique geometric depth in the atmosphere and thus, must be replaced with a more meaningful measure of position.  The atmospheres of main-sequence stars are physically thin compared with the size of the star.  The atmosphere’s radius of curvature is much larger than its thickness, where we may consider the atmosphere as a <em>plane-parallel slab</em>.  If we assume align the <em>z</em>-axis with the vertical direction, then <span class="math notranslate nohighlight">\(z=0\)</span> denotes the top of this <strong>plane-parallel</strong> atmosphere and a <strong>vertical optical depth</strong> <span class="math notranslate nohighlight">\(\tau_{\lambda,v}(z)\)</span> is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d7c9493-b263-4e62-a77a-a8b95939e902">
-<span class="eqno">(5.34)<a class="headerlink" href="#equation-5d7c9493-b263-4e62-a77a-a8b95939e902" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_{\lambda,v}(z) \equiv \int_z^0 \kappa_\lambda \rho dz. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d3edd881-2083-4725-a325-f6f0c1bb4176">
+<span class="eqno">(5.34)<a class="headerlink" href="#equation-d3edd881-2083-4725-a325-f6f0c1bb4176" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_{\lambda,v}(z) \equiv \int_z^0 \kappa_\lambda \rho dz. \end{align}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <span class="math notranslate nohighlight">\(v\)</span> symbol is not to be confused with <span class="math notranslate nohighlight">\(\nu\)</span>, where the former signifies the <strong>v</strong> in vertical.</p>
 </div>
 <p>Recall the discussion for correcting the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#optical-depth">opacity of the Earth’s atmosphere</a>, the depth was parameterized in a similar manner.  A ray that travels upward at an angle <span class="math notranslate nohighlight">\(\theta\)</span> has farther to go through the atmosphere to reach the surface.  The optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> is <em>greater</em> than the vertical optical depth <span class="math notranslate nohighlight">\(\tau_{\lambda,v}\)</span>.  The two optical depths are related by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-786ed528-76dd-4531-86a7-a926067ca8ac">
-<span class="eqno">(5.35)<a class="headerlink" href="#equation-786ed528-76dd-4531-86a7-a926067ca8ac" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_\lambda = \frac{\tau_{\lambda,v}}{\cos \theta} = \tau_{\lambda,v} \sec \theta \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9152ee0d-90aa-425f-b8ea-307154c6bbce">
+<span class="eqno">(5.35)<a class="headerlink" href="#equation-9152ee0d-90aa-425f-b8ea-307154c6bbce" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_\lambda = \frac{\tau_{\lambda,v}}{\cos \theta} = \tau_{\lambda,v} \sec \theta \end{align}\]</div>
 <p>and then the transfer equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-78336ddd-62ba-4aa2-b6cc-2bc91734c2c9">
-<span class="eqno">(5.36)<a class="headerlink" href="#equation-78336ddd-62ba-4aa2-b6cc-2bc91734c2c9" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-68a0ca17-8534-4a28-83e4-5db0eb46ccbf">
+<span class="eqno">(5.36)<a class="headerlink" href="#equation-68a0ca17-8534-4a28-83e4-5db0eb46ccbf" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \end{align}\]</div>
 <p>for the approximation of a plane-parallel atmosphere.</p>
 <figure class="align-default" id="pp-atmos-fig">
 <a class="reference internal image-reference" href="../_images/Figure_141.jpg"><img alt="plane parallel atmosphere" src="../_images/Figure_141.jpg" style="width: 450px;" /></a>
@@ -1077,13 +1052,13 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 </figcaption>
 </figure>
 <p>The value of the vertical optical depth is wavelength dependent, but when considering the bulk flow of photons a <em>gray</em> atmosphere is assumed.  Gray atmospheres are used when the measured flux does not show a strong wavelength dependence.  Thus, the transfer equation for a plane-parallel gray atmosphere is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c4162b2c-71c3-4813-9870-1fe0d54ac413">
-<span class="eqno">(5.37)<a class="headerlink" href="#equation-c4162b2c-71c3-4813-9870-1fe0d54ac413" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \dfrac{dI}{d\tau_v} = I - S. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c1aa7296-165b-481f-ad1f-f48c4a80c91d">
+<span class="eqno">(5.37)<a class="headerlink" href="#equation-c1aa7296-165b-481f-ad1f-f48c4a80c91d" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \dfrac{dI}{d\tau_v} = I - S. \end{align}\]</div>
 <p>Formulating the transfer equation in terms of an angle and optical depth leads to two useful relations describing the radiation field.</p>
 <p><strong>1) Integrating over all solid angles</strong></p>
 <p>The source function <span class="math notranslate nohighlight">\(S\)</span> depends only on the local conditions, so we can integrate over all solid angles to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-52820b98-381a-43f2-a97a-28168c5cea0b">
-<span class="eqno">(5.38)<a class="headerlink" href="#equation-52820b98-381a-43f2-a97a-28168c5cea0b" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-858fc0d2-d015-45aa-9606-dc4ec94f746d">
+<span class="eqno">(5.38)<a class="headerlink" href="#equation-858fc0d2-d015-45aa-9606-dc4ec94f746d" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \end{align}\]</div>
 <p>This expression can be simplified using <span class="math notranslate nohighlight">\(\int d\Omega = 4\pi\)</span>, definition of <span class="math notranslate nohighlight">\(F_{rad}\)</span> (Eqn. <a class="reference internal" href="#equation-spec-flux">(5.7)</a>, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>) and the mean intensity (Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a>, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>).  Through substitution, we find</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d F_{rad}}{d\tau_v} = 4\pi(\langle I \rangle - S). \]</div>
@@ -1099,8 +1074,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 \[ \frac{d P_{rad}}{dr} = -\frac{\kappa \rho}{c}F_{rad}, \]</div>
 <p>in terms of a spherical coordinate system with its origin at the center fo the star.  As mention in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-radiation-pressure-gradient">the radiation pressure gradient</a>, this result describes the net radiative flux driven by differences in radiation pressure (i.e., “photon wind”).</p>
 <p>For a plane-parallel atmosphere to be in equilibrium, the radiative flux must have the same value at every level, including its surface, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aee9fd5a-94a4-47f5-b593-e85ae750f3ea">
-<span class="eqno">(5.40)<a class="headerlink" href="#equation-aee9fd5a-94a4-47f5-b593-e85ae750f3ea" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-468dee94-4fe6-4d47-98ec-a7deefa695d6">
+<span class="eqno">(5.40)<a class="headerlink" href="#equation-468dee94-4fe6-4d47-98ec-a7deefa695d6" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \end{align}\]</div>
 <p>This implies that the first of the above relations (<span class="math notranslate nohighlight">\(dF_{rad}/d\tau_v\)</span>) is zero and the mean intensity must equal the source function as</p>
 <div class="math notranslate nohighlight">
 \[ \langle I \rangle = S. \]</div>
@@ -1114,8 +1089,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>The temperature as a function of the optical depth (i.e., temperature structure) can be determined if we knew how the radiation pressure varied with temperature in the general case.  Equation <a class="reference internal" href="#equation-rad-pressure">(5.41)</a> could be used if we also <em>assume</em> a description of the angular distribution of intensity.  An approximation was made by <a class="reference external" href="https://en.wikipedia.org/wiki/Arthur_Eddington">Eddington</a>, where the intensity of the radiation field is defined in the +<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm out}\)</span> and another in the -<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm in}\)</span>.  These intensities vary with depth in the atmosphere and when <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>, then <span class="math notranslate nohighlight">\(I_{\rm in} = 0\)</span> (i.e., radiation doesn’t flow inward at the top of the atmosphere).  The <strong>Eddington approximation</strong> gives the mean intensity, radiative flux, and radiation pressure by:</p>
 <div class="math notranslate nohighlight" id="equation-average-intens-edd">
 <span class="eqno">(5.42)<a class="headerlink" href="#equation-average-intens-edd" title="Permalink to this equation">#</a></span>\[\langle I \rangle = \frac{1}{2}(I_{\rm out} + I_{\rm in}), \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-87656c4b-0dc0-4f1b-83da-cce647df0e8b">
-<span class="eqno">(5.43)<a class="headerlink" href="#equation-87656c4b-0dc0-4f1b-83da-cce647df0e8b" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = \pi(I_{\rm out} - I_{\rm in}), \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-792280b8-3623-4921-811b-6e6f3a426696">
+<span class="eqno">(5.43)<a class="headerlink" href="#equation-792280b8-3623-4921-811b-6e6f3a426696" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = \pi(I_{\rm out} - I_{\rm in}), \end{align}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-rad-press-edd">
 <span class="eqno">(5.44)<a class="headerlink" href="#equation-rad-press-edd" title="Permalink to this equation">#</a></span>\[P_{rad}= \frac{2\pi}{3c}(I_{\rm out} + I_{\rm in}) = \frac{4\pi}{3c} \langle I \rangle .\]</div>
@@ -1126,8 +1101,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ \frac{2\pi}{3c} I_{\rm out} = \frac{2}{3c} F_{rad} = C, \]</div>
 <p>and substituting back into Eqn. <a class="reference internal" href="#equation-rad-press-int">(5.45)</a>, we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3bbfefa9-6b1d-4028-8635-6d2019693bff">
-<span class="eqno">(5.46)<a class="headerlink" href="#equation-3bbfefa9-6b1d-4028-8635-6d2019693bff" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} +  \frac{2}{3c} F_{rad} = \frac{F_{rad}}{c}\left(\tau_v + \frac{2}{3}\right).  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2afb4057-5ac0-447a-9d24-601ae174febc">
+<span class="eqno">(5.46)<a class="headerlink" href="#equation-2afb4057-5ac0-447a-9d24-601ae174febc" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} +  \frac{2}{3c} F_{rad} = \frac{F_{rad}}{c}\left(\tau_v + \frac{2}{3}\right).  \end{align}\]</div>
 <p>But we already know the radiative flux is a constant (<span class="math notranslate nohighlight">\(F_{rad} = \sigma T_e^4\)</span>) and thus, the mean intensity can be determined as a function of vertical optical depth by</p>
 <div class="math notranslate nohighlight" id="equation-mean-intensity-vod">
 <span class="eqno">(5.47)<a class="headerlink" href="#equation-mean-intensity-vod" title="Permalink to this equation">#</a></span>\[\langle I \rangle  = \frac{3\sigma}{4\pi}T_e^4\left(\tau_v + \frac{2}{3}\right).\]</div>
@@ -1135,8 +1110,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight" id="equation-source-func">
 <span class="eqno">(5.48)<a class="headerlink" href="#equation-source-func" title="Permalink to this equation">#</a></span>\[S = B = \langle I \rangle  = \frac{\sigma T^4}{\pi}.\]</div>
 <p>Substituting Eqn. <a class="reference internal" href="#equation-source-func">(5.48)</a> back into Eqn. <a class="reference internal" href="#equation-mean-intensity-vod">(5.47)</a> results in the variation of the temperature with vertical optical depth in a plane-parallel gray atmosphere in LTE, assuming the Eddington approximation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-82a3f01d-43a3-413a-a269-63c1eb812358">
-<span class="eqno">(5.49)<a class="headerlink" href="#equation-82a3f01d-43a3-413a-a269-63c1eb812358" title="Permalink to this equation">#</a></span>\[\begin{align}  T^4 = \frac{3}{4}T_e^4\left(\tau_v + \frac{2}{3}\right). \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8699c454-5cac-4a37-83d4-2e4cebad3946">
+<span class="eqno">(5.49)<a class="headerlink" href="#equation-8699c454-5cac-4a37-83d4-2e4cebad3946" title="Permalink to this equation">#</a></span>\[\begin{align}  T^4 = \frac{3}{4}T_e^4\left(\tau_v + \frac{2}{3}\right). \end{align}\]</div>
 <p>This relation reveals that <span class="math notranslate nohighlight">\(T=T_e\)</span> at <span class="math notranslate nohighlight">\(\tau_v = 2/3\)</span> and <em>not</em> at <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>.  The “surface” of a star for which we measure an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> is <em>not</em> at the top of the atmosphere, but deeper down where <span class="math notranslate nohighlight">\(\tau_v=2/3\)</span>.  The average point of origin for the photons comes from within the stellar atmosphere.  <em>When looking at a star, we see down to a vertical optical depth of <span class="math notranslate nohighlight">\(\tau_v \approx 2/3\)</span>, averaged over the disk of the star.</em></p>
 </section>
 <section id="limb-darkening-revisited">
@@ -1184,8 +1159,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ a_\lambda = \frac{\sigma T_e^4}{2\pi}\quad {\rm and} \quad b_\lambda = \frac{3\sigma}{4\pi} T_e^4. \]</div>
 <p>Using Eqn. <a class="reference internal" href="#equation-solar-src-fcn">(5.53)</a>, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9cdb8bdb-7949-49d4-b6b4-67849b455f39">
-<span class="eqno">(5.54)<a class="headerlink" href="#equation-9cdb8bdb-7949-49d4-b6b4-67849b455f39" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{I(\theta)}{I(0)} = \frac{a_\lambda + b_\lambda \tau_v}{a_\lambda + b_\lambda} = \frac{2}{5} + \frac{3}{5}\cos \theta. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2a470dc2-bb15-411b-bdfe-c9e1fbec9ca5">
+<span class="eqno">(5.54)<a class="headerlink" href="#equation-2a470dc2-bb15-411b-bdfe-c9e1fbec9ca5" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{I(\theta)}{I(0)} = \frac{a_\lambda + b_\lambda \tau_v}{a_\lambda + b_\lambda} = \frac{2}{5} + \frac{3}{5}\cos \theta. \end{align}\]</div>
 <figure class="align-default" id="eddingtion-approx-fig">
 <a class="reference internal image-reference" href="../_images/Figure_161.jpg"><img alt="Eddington approximation" src="../_images/Figure_161.jpg" style="width: 450px;" /></a>
 <figcaption>
@@ -1193,22 +1168,14 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 </figcaption>
 </figure>
 </section>
-<section id="id2">
-<h3><span class="section-number">5.4.7. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>6. If the temperature of a star’s atmosphere is increasing outward, what type of spectral lines would you expect to find in the star’s spectrum at those wavelengths where the opacity is greatest?</p>
-<p>7. For a plane-parallel atmosphere, show that the Eddington approximation leads to expressions for the mean intensity, radiative flux, and radiation pressure given in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-eddington-approximation">Eqns. <a class="reference internal" href="#equation-average-intens-edd">(5.42)</a>-<a class="reference internal" href="#equation-rad-press-edd">(5.44)</a></a>. <em>Hint: Start with <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-specific-and-mean-intensities">Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a></a> and apply boundary conditions.</em></p>
-<p>8. Complete Problem 28 (a-c) from Chapter 9 (Carroll &amp; Ostlie (2007)).</p>
-</div></blockquote>
-</section>
 </section>
 <section id="the-profiles-of-spectral-lines">
 <h2><span class="section-number">5.5. </span>The Profiles of Spectral Lines<a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this heading">#</a></h2>
 <section id="equivalent-widths">
 <h3><span class="section-number">5.5.1. </span>Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this heading">#</a></h3>
 <p>Absorption spectral lines are identified on graphs of the radiant flux <span class="math notranslate nohighlight">\(F_\lambda\)</span> as a function of the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  The radiant flux can be normalized relative to the flux of the continuous spectrum <span class="math notranslate nohighlight">\(F_c\)</span> outside the spectral line (i.e., <span class="math notranslate nohighlight">\(F_\lambda/F_c\)</span>).  Near the middle of the absorption (i.e., <em>core</em> of the spectral line), there is the central wavelength <span class="math notranslate nohighlight">\(\lambda_o\)</span> and the <em>wings</em> extend outward, sweeping up to the continuum.  The depth <span class="math notranslate nohighlight">\(\delta\)</span> of the line is simply the fractional decrease in radiant flux relative to the continuum (i.e., <span class="math notranslate nohighlight">\(\delta F_\lambda = 1 - F_\lambda/F_c\)</span>).  The strength of absorption is measured by its <strong>equivalent width</strong> <span class="math notranslate nohighlight">\(W\)</span>, which is a rectangle with height equal to unity and a specific width so that the area of the rectangle is equal to the total area removed from the continuum by the absorption.  Mathematically, this is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e5619936-a495-4a74-919d-947b48e76332">
-<span class="eqno">(5.55)<a class="headerlink" href="#equation-e5619936-a495-4a74-919d-947b48e76332" title="Permalink to this equation">#</a></span>\[\begin{align}  W = \int 1- \frac{F_\lambda}{F_c} d\lambda = \int \delta F d\lambda, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8bed7049-03b2-43fd-90a7-faeea9a1ad42">
+<span class="eqno">(5.55)<a class="headerlink" href="#equation-8bed7049-03b2-43fd-90a7-faeea9a1ad42" title="Permalink to this equation">#</a></span>\[\begin{align}  W = \int 1- \frac{F_\lambda}{F_c} d\lambda = \int \delta F d\lambda, \end{align}\]</div>
 <p>where the integral is taken from one side of <span class="math notranslate nohighlight">\(\lambda_o\)</span> to the other and is usually on the order of 0.01 nm.  Another measure of spectral line width uses a point at half of the depth at the core wavelength (i.e., <span class="math notranslate nohighlight">\(\delta F_{1/2} = 1/2 - F_{\lambda_o}/(2F_c)\)</span>) and moves to the left/right a <span class="math notranslate nohighlight">\(\Delta \lambda_{1/2} = \lambda_o \pm \lambda_{\delta F}\)</span> until intersecting the absorption line so that <span class="math notranslate nohighlight">\(\delta F = \delta F_{1/2}\)</span>, or</p>
 <div class="math notranslate nohighlight">
 \[ 1 - \frac{F_\lambda}{F_c} = \frac{1}{2}\left(1 - \frac{F_{\lambda_o}}{F_c} \right), \]</div>
@@ -1226,8 +1193,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>Three main processes are responsible for broadening spectral lines with mechanisms that produce a distinctive line shape or <em>line profile</em>.</p>
 <ol class="arabic">
 <li><p><strong>Natural broadening</strong> occurs because the spectral lines cannot be sharp even for motionless, isolated atoms due to Heisenberg’s uncertainty principle.  An electron occupies the orbital for the first excited state for an instant <span class="math notranslate nohighlight">\(\Delta t\)</span> and the orbital’s energy <span class="math notranslate nohighlight">\(E\)</span> cannot have a precise value (<span class="math notranslate nohighlight">\(\Delta E\: \Delta t \approx \hbar\)</span>).  Electrons can transition from nearby orbitals to these “fuzzy” energy levels, which produces an uncertainty in the absorbed/emitted photons.  Using the wavelength form for the energy of a photon (<span class="math notranslate nohighlight">\(E = hc/\lambda\)</span>), we find that the uncertainty <span class="math notranslate nohighlight">\(\Delta \lambda\)</span> is roughly <br> <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-52d33d7c-686b-4f5f-9fce-6da0d7a09e1a">
-<span class="eqno">(5.56)<a class="headerlink" href="#equation-52d33d7c-686b-4f5f-9fce-6da0d7a09e1a" title="Permalink to this equation">#</a></span>\[\begin{align} \Delta \lambda \approx \frac{\lambda^2}{2\pi c}\left(\frac{1}{\Delta t_o} + \frac{1}{\Delta t_f} \right),  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ad1785b3-161f-4248-b187-a92e7488f157">
+<span class="eqno">(5.56)<a class="headerlink" href="#equation-ad1785b3-161f-4248-b187-a92e7488f157" title="Permalink to this equation">#</a></span>\[\begin{align} \Delta \lambda \approx \frac{\lambda^2}{2\pi c}\left(\frac{1}{\Delta t_o} + \frac{1}{\Delta t_f} \right),  \end{align}\]</div>
 <p>which depends on the lifetime of the electron in its initial state <span class="math notranslate nohighlight">\(\Delta t_o\)</span> and final state <span class="math notranslate nohighlight">\(\Delta t_f\)</span>.</p>
 </li>
 <li><p><strong>Doppler broadening</strong> occurs because the gas particles of the atmosphere have thermal motion that is described by the Maxwell-Boltzmann distribution function with a most probable speed of the atoms (<span class="math notranslate nohighlight">\(v_{mp} = \sqrt{2kT/m}\)</span>).  The wavelengths of the absorbed or emitted light are Doppler-shifted nonrelativistically according to <span class="math notranslate nohighlight">\(\Delta \lambda /\lambda = \pm |v_r|/c\)</span>.  The width of a Doppler broadened spectral line should be  <br> <br></p>
@@ -1248,8 +1215,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <div class="math notranslate nohighlight">
 \[ \Delta t_o \approx \frac{\ell}{v} = \frac{1}{n\sigma} \sqrt{\frac{m}{2kT}}, \]</div>
 <p>which depends on the atom mass <span class="math notranslate nohighlight">\(m\)</span>, the collisional cross section <span class="math notranslate nohighlight">\(\sigma\)</span> and the number density <span class="math notranslate nohighlight">\(n\)</span> of the atoms.  The spectral line width due to (collisional) pressure broadening is  <br> <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-de097c78-bb40-4d91-904e-bddfdb3886ca">
-<span class="eqno">(5.57)<a class="headerlink" href="#equation-de097c78-bb40-4d91-904e-bddfdb3886ca" title="Permalink to this equation">#</a></span>\[\begin{align}  \Delta \lambda = \frac{\lambda^2}{\pi c \Delta t_o} \approx \frac{\lambda^2 n \sigma}{\pi c}\sqrt{\frac{2kT}{m}}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-8c148978-a823-465f-b1d8-53d4a33143fd">
+<span class="eqno">(5.57)<a class="headerlink" href="#equation-8c148978-a823-465f-b1d8-53d4a33143fd" title="Permalink to this equation">#</a></span>\[\begin{align}  \Delta \lambda = \frac{\lambda^2}{\pi c \Delta t_o} \approx \frac{\lambda^2 n \sigma}{\pi c}\sqrt{\frac{2kT}{m}}. \end{align}\]</div>
 <p>The spectral line width is proportional to <span class="math notranslate nohighlight">\(n\)</span> and narrower lines for the more luminous giant and supergiant stars are due to the lower <span class="math notranslate nohighlight">\(n\)</span> in their extended atmospheres (i.e., the Morgan-Keenan luminosity classes).  Pressure broadening is more significant in the denser atmospheres of main-sequence stars, where collisions occur more frequently.</p>
 </li>
 </ol>
@@ -1374,19 +1341,40 @@ The Pressure broadening is 0.98 times that of natural broadening (Natural ~ Pres
 </figcaption>
 </figure>
 <p><strong>Absorption in the Sun’s photosphere</strong></p>
-<p>The Solar spectrum contains absorption lines of sodium at 330.238 and 588.997 nm.  Carroll and Ostlie (2007) assumed a particular temperature (<span class="math notranslate nohighlight">\(T = 5800\)</span> K) and electron pressure (<span class="math notranslate nohighlight">\(P_e = 1\:{\rm N/m^2}\)</span>) for this example for the curve of growth.  <strong>Table 1</strong> provides equivalent widths, <em>f</em>-values, and values from the curve of growth as a function of wavelength.  <em>Note that the final column does not include the number of absorbing atoms per unit area <span class="math notranslate nohighlight">\(N_a\)</span>.</em></p>
-<div align="center">
-<p><img alt="Table 1" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Table_1.jpg?raw=true?" /><br>
-<strong>Table 1</strong>: Data for Solar sodium lines. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>)</p>
-</div>
-<p>Sodium lines are produced during upward electron transitions from the ground state of the Na I atom and thus, these lines have the same value of <span class="math notranslate nohighlight">\(N_a\)</span> above the continuum-forming layer of the photosphere.  The value for <span class="math notranslate nohighlight">\(N_a\)</span> can be determined using the values of <span class="math notranslate nohighlight">\(\log_{10}(W/\lambda)\)</span> from Table 1 to locate the respective values of <span class="math notranslate nohighlight">\(\log_{10}(fN_a(\lambda/500\:{\rm nm}))\)</span> in Figure <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a> (i.e., follow the arrows).</p>
+<p>The Solar spectrum contains absorption lines of sodium at 330.238 and 588.997 nm.  Carroll and Ostlie (2007) assumed a particular temperature (<span class="math notranslate nohighlight">\(T = 5800\)</span> K) and electron pressure (<span class="math notranslate nohighlight">\(P_e = 1\:{\rm N/m^2}\)</span>) for this example for the curve of growth.  <strong>Table <a class="reference internal" href="#solar-sodium-table"><span class="std std-numref">5.1</span></a></strong> provides equivalent widths, <em>f</em>-values, and values from the curve of growth as a function of wavelength.  <em>Note that the final column does not include the number of absorbing atoms per unit area <span class="math notranslate nohighlight">\(N_a\)</span>.</em></p>
+<table class="colwidths-auto table" id="solar-sodium-table" style="width: 500px">
+<caption><span class="caption-number">Table 5.1 </span><span class="caption-text">Data for Solar sodium lines. (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>).</span><a class="headerlink" href="#solar-sodium-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="text-right head"><p><span class="math notranslate nohighlight">\(\lambda\ ({\rm nm})\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(W\ ({\rm nm})\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(f\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(\log_{10}(W/\lambda)\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(\log_{10}\left[f(\lambda/500\ {\rm nm})\right]\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>330.238</p></td>
+<td class="text-center"><p>0.0088</p></td>
+<td class="text-center"><p>0.0214</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-4.58\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-1.85\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>588.997</p></td>
+<td class="text-center"><p>0.0730</p></td>
+<td class="text-center"><p>0.645</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(-3.90\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(0.12\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Sodium lines are produced during upward electron transitions from the ground state of the Na I atom and thus, these lines have the same value of <span class="math notranslate nohighlight">\(N_a\)</span> above the continuum-forming layer of the photosphere.  The value for <span class="math notranslate nohighlight">\(N_a\)</span> can be determined using the values of <span class="math notranslate nohighlight">\(\log_{10}(W/\lambda)\)</span> from Table <a class="reference internal" href="#solar-sodium-table"><span class="std std-numref">5.1</span></a> to locate the respective values of <span class="math notranslate nohighlight">\(\log_{10}(fN_a(\lambda/500\:{\rm nm}))\)</span> in Figure <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a> (i.e., follow the arrows).</p>
 <figure class="align-default" id="solar-growth-fig">
 <a class="reference internal image-reference" href="../_images/Figure_221.jpg"><img alt="Curve of growth Solar" src="../_images/Figure_221.jpg" style="width: 600px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5.20 </span><span class="caption-text">The general curve of growth for the Sun. Image credit: Carroll &amp; Ostlie (2007); data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1991asn..book.....A/abstract">Aller (1991)</a>.</span><a class="headerlink" href="#solar-growth-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Using Fig. <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a>, we find values of 17.15 and 18.83 for the 330.238 and 588.997 nm lines, respectively.  Therefore, the respective <span class="math notranslate nohighlight">\(N_a\)</span> values can be determined from the <em>difference of values</em> from the curve of growth (Fig. <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a>) and the tabulated values (Table 1).  It follows</p>
+<p>Using Fig. <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a>, we find values of 17.15 and 18.83 for the 330.238 and 588.997 nm lines, respectively.  Therefore, the respective <span class="math notranslate nohighlight">\(N_a\)</span> values can be determined from the <em>difference of values</em> from the curve of growth (Fig. <a class="reference internal" href="#solar-growth-fig"><span class="std std-numref">5.20</span></a>) and the tabulated values (Table <a class="reference internal" href="#solar-sodium-table"><span class="std std-numref">5.1</span></a>).  It follows</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \log_{10}\:N_a &amp;= \log_{10}\left(\frac{fN_a\lambda}{500\:{\rm nm}}\right) - \log_{10}\left(\frac{f\lambda}{500\:{\rm nm}}\right)  \\
@@ -1472,10 +1460,93 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 <section id="computer-modeling-of-stellar-atmospheres">
 <h3><span class="section-number">5.5.5. </span>Computer Modeling of Stellar Atmospheres<a class="headerlink" href="#computer-modeling-of-stellar-atmospheres" title="Permalink to this heading">#</a></h3>
 <p>The ultimate refinement in analyzing stellar atmospheres comes from the construction of a <em>model atmosphere</em> on a computer.  Each of the parameters that we use (temperature, pressure, and density) depend on each other in complex ways.  Each atmospheric layer is involved in the formation of line profiles that contribute to the observed stellar spectrum.  The equations of hydrostatic equilibrium, thermodynamics, statistical and quantum mechanics, and energy transport (by radiation and convection) are combined with extensive libraries of opacities to calculate the temperature, pressure, and density as a function of depth below the surface.</p>
-<div align="center">
-<p><img alt="Table 2" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_9/Table_2.jpg?raw=true?" /><br>
-<strong>Table 2</strong>: Elemental abundance in the Solar photosphere.  The relative abundance refers to the abundance relative to H (<span class="math notranslate nohighlight">\(\log_{10}\:N_H=12.00\)</span>) (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1998SSRv...85..161G/abstract">Grevesse &amp; Sauval (1998)</a>; Carroll &amp; Ostlie (2007))</p>
-</div>
+<table class="colwidths-auto table" id="solar-abundance-table" style="width: 400px">
+<caption><span class="caption-number">Table 5.2 </span><span class="caption-text">Elemental abundance in the Solar photosphere.  The relative abundance refers to the abundance relative to H (<span class="math notranslate nohighlight">\(\log_{10}\:N_H=12.00\)</span>) (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1998SSRv...85..161G/abstract">Grevesse &amp; Sauval (1998)</a>)</span><a class="headerlink" href="#solar-abundance-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="text-right head"><p>Element <br> Name</p></th>
+<th class="text-right head"><p>Chemical <br> Symbol</p></th>
+<th class="text-right head"><p>Atomic <br>Number</p></th>
+<th class="text-center head"><p>Log Relative <br> Abundance</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>Hydrogen</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm H\)</span></p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-center"><p>12.00</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Helium</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm He\)</span></p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-center"><p>10.93 <span class="math notranslate nohighlight">\(\pm\)</span> 0.004</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Oxygen</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm O\)</span></p></td>
+<td class="text-right"><p>8</p></td>
+<td class="text-center"><p>8.83 <span class="math notranslate nohighlight">\(\pm\)</span> 0.06</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Carbon</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm C\)</span></p></td>
+<td class="text-right"><p>6</p></td>
+<td class="text-center"><p>8.52 <span class="math notranslate nohighlight">\(\pm\)</span> 0.06</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Neon</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Ne\)</span></p></td>
+<td class="text-right"><p>10</p></td>
+<td class="text-center"><p>8.08 <span class="math notranslate nohighlight">\(\pm\)</span> 0.06</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Nitrogen</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm N\)</span></p></td>
+<td class="text-right"><p>7</p></td>
+<td class="text-center"><p>7.92 <span class="math notranslate nohighlight">\(\pm\)</span> 0.06</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Magnesium</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Mg\)</span></p></td>
+<td class="text-right"><p>12</p></td>
+<td class="text-center"><p>7.58 <span class="math notranslate nohighlight">\(\pm\)</span> 0.05</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Silicon</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Si\)</span></p></td>
+<td class="text-right"><p>14</p></td>
+<td class="text-center"><p>7.55 <span class="math notranslate nohighlight">\(\pm\)</span> 0.05</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Iron</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Fe\)</span></p></td>
+<td class="text-right"><p>26</p></td>
+<td class="text-center"><p>7.50 <span class="math notranslate nohighlight">\(\pm\)</span> 0.05</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Sulfur</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm S\)</span></p></td>
+<td class="text-right"><p>16</p></td>
+<td class="text-center"><p>7.33 <span class="math notranslate nohighlight">\(\pm\)</span> 0.11</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Aluminum</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Al\)</span></p></td>
+<td class="text-right"><p>13</p></td>
+<td class="text-center"><p>6.47 <span class="math notranslate nohighlight">\(\pm\)</span> 0.07</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Argon</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Ar\)</span></p></td>
+<td class="text-right"><p>18</p></td>
+<td class="text-center"><p>6.40 <span class="math notranslate nohighlight">\(\pm\)</span> 0.06</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Calcium</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Ca\)</span></p></td>
+<td class="text-right"><p>20</p></td>
+<td class="text-center"><p>6.36 <span class="math notranslate nohighlight">\(\pm\)</span> 0.02</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>Sodium</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Na\)</span></p></td>
+<td class="text-right"><p>12</p></td>
+<td class="text-center"><p>6.33 <span class="math notranslate nohighlight">\(\pm\)</span> 0.03</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>Nickel</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\rm Ni\)</span></p></td>
+<td class="text-right"><p>28</p></td>
+<td class="text-center"><p>6.25 <span class="math notranslate nohighlight">\(\pm\)</span> 0.04</p></td>
+</tr>
+</tbody>
+</table>
 <p>The models provide insight into measurable fundamental properties (surface temperature and surface gravity) of a star.  After extensive minimization (or “fine-tuning”) relative to the observations, astronomers can finally claim to understand the coded information emanating as light from a star.  This basic procedure led astronomers to an understanding of the elemental abundances of the Sun and other stars.  Knowledge of the basic ingredients of the universe provides observational tests and constraints for some of the most fundamental theories in astronomy:</p>
 <ul class="simple">
 <li><p>the nucleosynthesis of light elements as a result of stellar evolution,</p></li>
@@ -1484,8 +1555,43 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 </ul>
 </section>
 </section>
+<section id="homework">
+<h2><span class="section-number">5.6. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p>Find an expression for <span class="math notranslate nohighlight">\(n_\lambda\:d\lambda\)</span> (the number density of blackbody photons) with a wavelength between <span class="math notranslate nohighlight">\(\lambda\)</span> and <span class="math notranslate nohighlight">\(\lambda + d\lambda\)</span>.</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2 </p>
+<p>Using your expression from Problem 1, find the total number of photons inside a kitchen oven assuming a volume of 0.5 <span class="math notranslate nohighlight">\({\rm m^3}\)</span> and set at 477 K.</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>Take the radius of a nitrogen molecule <span class="math notranslate nohighlight">\({\rm N}_2\)</span> to be 0.1 nm and the density of air to be 1.2 <span class="math notranslate nohighlight">\({\rm kg/m^3}\)</span>.  A nitrogen molecule contains 28 nucleons (protons and neutrons).</p>
+<p><strong>(a)</strong> Use the root-mean-square speed, <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span>, estimate the mean free path of the nitrogen molecules in your classroom at room temperature (300 K).</p>
+<p><strong>(b)</strong> What is the average time between collisions?</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p>Calculate how far you could see through Earth’s atmosphere if it had the opacity of the solar photosphere (<span class="math notranslate nohighlight">\(\kappa_{500}=0.03\:{\rm m^2/kg}\)</span>).</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p>According to one model of the Sun, the central density is <span class="math notranslate nohighlight">\(1.53 \times 10^5 \:{\rm kg/m^3}\)</span> and the Rosseland mean opacity at the center is 0.217 <span class="math notranslate nohighlight">\({\rm m^2/kg}\)</span>.</p>
+<p><strong>(a)</strong> Calculate the mean free path of a photon at the center of the Sun.</p>
+<p><strong>(b)</strong> Calculate the average time it would take for the photon to escape from the Sun if this mean free path remained constant for the photon’s journey to the surface.</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<p>If the temperature of a star’s atmosphere is increasing outward, what type of spectral lines would you expect to find in the star’s spectrum at those wavelengths where the opacity is greatest?</p>
+</div>
+<div class="admonition-problem-7 admonition">
+<p class="admonition-title">Problem 7</p>
+<p>For a plane-parallel atmosphere, show that the Eddington approximation leads to expressions for the mean intensity, radiative flux, and radiation pressure given in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-eddington-approximation">Eqns. <a class="reference internal" href="#equation-average-intens-edd">(5.42)</a>-<a class="reference internal" href="#equation-rad-press-edd">(5.44)</a></a>. <em>Hint: Start with <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-specific-and-mean-intensities">Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a></a> and apply boundary conditions.</em></p>
+</div>
+</section>
 <section id="supplemental-links">
-<h2><span class="section-number">5.6. </span>Supplemental Links<a class="headerlink" href="#supplemental-links" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.7. </span>Supplemental Links<a class="headerlink" href="#supplemental-links" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.ifa.hawaii.edu/users/kud/teaching_12/3_Radiative_transfer.pdf">Powerpoint slides</a> from Rolf Kudritzki at the University of Hawaii’s Institute for Astronomy (IfA).</p></li>
 <li><p><a class="reference external" href="http://people.tamu.edu/~kevinkrisciunas/planck.pdf">Integrating the Planck function</a> from Kevin Krisciunas at Texas A&amp;M University.</p></li>
@@ -1564,7 +1670,6 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-energy-density">5.1.2. The Specific Energy Density</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-specific-radiative-flux">5.1.3. The Specific Radiative Flux</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation-pressure">5.1.4. Radiation Pressure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">5.1.5. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-opacity">5.2. Stellar Opacity</a><ul class="nav section-nav flex-column">
@@ -1573,7 +1678,6 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-depth">5.2.3. Optical Depth</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-sources-of-opacity">5.2.4. General Sources of Opacity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rosseland-mean-opacity">5.2.5. The Rosseland Mean Opacity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.2.6. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiative-transfer">5.3. Radiative Transfer</a><ul class="nav section-nav flex-column">
@@ -1590,7 +1694,6 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4. The Assumption of a Plane-Parallel Atmosphere</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5. The Eddington Approximation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limb-darkening-revisited">5.4.6. Limb Darkening Revisited</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.4.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines">5.5. The Profiles of Spectral Lines</a><ul class="nav section-nav flex-column">
@@ -1601,7 +1704,8 @@ The density of Na above each m^2 of the photosphere is 8.47e-04 kg/m^2
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computer-modeling-of-stellar-atmospheres">5.5.5. Computer Modeling of Stellar Atmospheres</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplemental-links">5.6. Supplemental Links</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">5.6. <strong>Homework</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supplemental-links">5.7. Supplemental Links</a></li>
 </ul>
   </nav></div>
 
