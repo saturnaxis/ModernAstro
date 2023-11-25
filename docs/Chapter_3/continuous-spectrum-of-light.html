@@ -508,13 +508,13 @@ allowfullscreen></iframe>
 <p>The perceived angular displacement is smaller as the distance to the object increases and hence, finding the distance to the nearest stars requires a longer baseline than Earth’s diameter.</p>
 <p>Luckily, we can obtain a much longer baseline for free because the Earth’s position relative to the Sun changes (i.e., the Earth orbits the Sun) and we obtain a different vantage point every 6 months.  The new baseline is equal to the diameter of Earth’s orbit (2 AU) and will reveal the back-and-forth change in position of nearby stars.  We must remember that the stars themselves could be moving (i.e., the star’s <em>proper motion</em>) and this motion can be determined after removing the known periodic motion due to the change in Earth’s position.</p>
 <p>The measurement of the <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_parallax"><strong>parallax angle</strong></a> <span class="math notranslate nohighlight">\(p\)</span> (the <em>half</em>-angle of the full angular displacement) determines the distance <span class="math notranslate nohighlight">\(d\)</span> to the star by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-778d7768-a75d-489e-920e-6723a7061875">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-778d7768-a75d-489e-920e-6723a7061875" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-11d6a96d-baa5-47ed-8edf-1c9b50660e44">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-11d6a96d-baa5-47ed-8edf-1c9b50660e44" title="Permalink to this equation">#</a></span>\[\begin{align}
 d = \frac{1\; AU}{\tan p} \approx \frac{1}{p}\; AU, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p\)</span> is measured in <strong>radians</strong> for the <span class="math notranslate nohighlight">\(\tan\)</span> function and <span class="math notranslate nohighlight">\(\tan p \approx p\)</span> through the small-angle approximation.  In most instances, the parallax angle <span class="math notranslate nohighlight">\(p\)</span> is not measured in radians, but in <em>arcseconds</em> and requires an appropriate conversion by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2b5797ab-c4b4-4f26-ba80-bc90b923aff9">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-2b5797ab-c4b4-4f26-ba80-bc90b923aff9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-242011c4-03ba-4b1e-9a63-9c76b779146d">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-242011c4-03ba-4b1e-9a63-9c76b779146d" title="Permalink to this equation">#</a></span>\[\begin{align}
 d = \frac{1\ {\rm AU}}{p^{\prime\prime}} \times  \left(\frac{3600^{\prime\prime}}{1^\circ} \times \frac{180^\circ}{\pi} \right) \approx \frac{2.06265 \times 10^5}{p^{\prime\prime}} \; AU,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(p^{\prime\prime}\)</span> is the parallax angle in arcseconds.  The nearest Sun-like stars lie in a binary system called <span class="math notranslate nohighlight">\(\alpha\)</span> Centauri, which has a parallax angle of 754 <span class="math notranslate nohighlight">\(\pm\)</span> 4.11 mas (milliarcseconds; <a class="reference external" href="https://arxiv.org/abs/1601.01636">Pourbaix &amp; Boffin (2016)</a>).</p>
@@ -551,8 +551,8 @@ d = \frac{1\ {\rm AU}}{p^{\prime\prime}} \times  \left(\frac{3600^{\prime\prime}
 </div>
 </div>
 <p>The nearest stars are really, really far away and measuring the distance to stars in AU isn’t practical for the same reason that we don’t typically measure the distance between planets in meters.  Thus, we define a new unit called the <strong>parsec</strong> (<strong>par</strong>allax-<strong>sec</strong>ond, abbreviated as pc), which is the distance given 1 arcsecond of parallax (i.e., a normalization).  Our distance equation then becomes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-051deb04-fc70-4a91-8ffa-70c1c5c6a628">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-051deb04-fc70-4a91-8ffa-70c1c5c6a628" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3e54070e-b620-4b3f-b528-063b050798c2">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-3e54070e-b620-4b3f-b528-063b050798c2" title="Permalink to this equation">#</a></span>\[\begin{align}
 d = \frac{1}{p^{\prime\prime}}\ {\rm pc}.
 \end{align}\]</div>
 <div class="admonition tip">
@@ -672,8 +672,8 @@ Prox Cen is 1.83% closer than Alpha Cen AB.
 <h3><span class="section-number">1.2.2. </span>Flux, Luminosity, and the Inverse Square Law<a class="headerlink" href="#flux-luminosity-and-the-inverse-square-law" title="Permalink to this heading">#</a></h3>
 <p>The “brightness” of a star is measured as the total amount of radiation (at all wavelengths) that crosses a unit area per unit time as is called the <strong>radiant flux</strong>.  This definition depends on the intrinsic <strong>luminosity</strong> (energy emitted per second at the stellar surface) and the distance of the source from the unit area (i.e., distance from the observer).  The same star located at a farther distance will appear less bright in the sky.</p>
 <p>Astronomers scale the brightness using a spherically symmetric shell of radius <em>r</em> to designate where the unit area is located.  Assuming a vacuum between the source and the surface of the shell, the radiant flux (<span class="math notranslate nohighlight">\(F\)</span>) can be defined as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ed535546-e585-46fb-98d7-2b0f5fe0ae3e">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-ed535546-e585-46fb-98d7-2b0f5fe0ae3e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1cdad744-f142-4bd0-9998-0f56e29e4499">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-1cdad744-f142-4bd0-9998-0f56e29e4499" title="Permalink to this equation">#</a></span>\[\begin{align}
 F = \frac{L}{4\pi r^2}, 
 \end{align}\]</div>
 <p>where the luminosity <span class="math notranslate nohighlight">\(L\)</span> is distributed uniformly across the surface area of the shell.  This is the well-known <strong>inverse square law</strong> for light.  The radiant flux of some stars are given relative to the Solar Luminosity (<span class="math notranslate nohighlight">\(L_\odot\)</span>) and the Earth-Sun distance (<span class="math notranslate nohighlight">\(r_\oplus\)</span>) so that the factor <span class="math notranslate nohighlight">\(4 \pi\)</span> isn’t needed as:</p>
@@ -715,8 +715,8 @@ F = \frac{L}{4\pi r^2},
 \frac{F_2}{F_1} = \frac{L_2}{L_1}\left(\frac{r_1}{r_2}\right)^2. 
 \]</div>
 <p>Then, we simply set the flux ratio equal to the change in brightness (Eqn. <a class="reference internal" href="#equation-delta-b">(1.4)</a>) by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-24553aa5-b033-4bd3-9342-6ce2eaab7c67">
-<span class="eqno">(1.6)<a class="headerlink" href="#equation-24553aa5-b033-4bd3-9342-6ce2eaab7c67" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-de65a795-3175-4bd0-8ab3-fe0d194e7d72">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-de65a795-3175-4bd0-8ab3-fe0d194e7d72" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{F_2}{F_1} = 100^{(m_1-m_2)/5} = 10^{\frac{2}{5}(m_1-m_2)}.
 \end{align}\]</div>
 <p>Taking the base-10 logarithm of both sides leads to the alternative form:</p>
@@ -849,8 +849,8 @@ allowfullscreen></iframe>
 <h3><span class="section-number">1.3.2. </span>Young’s Double-Slit Experiment<a class="headerlink" href="#young-s-double-slit-experiment" title="Permalink to this heading">#</a></h3>
 <p>During the Renaissance, scientists uncovered that two different interpretations of light explained a range of phenomena.  Newton posited that light was a stream of particles because it explained the sharpness of shadows.  But, Chistiaan Huygens suggested that light was composed of waves because it behaved similarly to other known waves (e.g., water and sound).  Both models could explain the phenomena of reflection and refraction.</p>
 <p>The mathematical theory of waves are described by three properties: <strong>wavelength</strong>, <strong>frequency</strong> and <strong>wave speed</strong>.  The wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is the distance between successive wave crests/troughs and the frequency <span class="math notranslate nohighlight">\(\nu\)</span> is the number of waves that pass a point in space per unit of time.  Therefore the wave speed <span class="math notranslate nohighlight">\(c\)</span> is determined by the product of the wavelength and frequency by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5adeba69-f6a3-4985-adcc-45ea82e3893d">
-<span class="eqno">(1.11)<a class="headerlink" href="#equation-5adeba69-f6a3-4985-adcc-45ea82e3893d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b94b3721-4029-43d7-a6b7-5ad140fccd8e">
+<span class="eqno">(1.11)<a class="headerlink" href="#equation-b94b3721-4029-43d7-a6b7-5ad140fccd8e" title="Permalink to this equation">#</a></span>\[\begin{align}
 c = \lambda \nu.
 \end{align}\]</div>
 <p>The particle nature of light was accepted as the <em>true</em> representation, largely based on Newton’s reputation.  Thomas Young (1773-1829) demonstrated the wave nature of light through his famous double-slit experiment.</p>
@@ -1015,8 +1015,8 @@ Wavelength = 459.296 nm of dark fringe using order n = 10.
 \mathbf{S} = \frac{1}{\mu_o}\mathbf{E} \times \mathbf{B},
 \]</div>
 <p>where <span class="math notranslate nohighlight">\({\bf S}\)</span> has units of flux (W/m<span class="math notranslate nohighlight">\(^2\)</span>).  The Poynting vector points in a direction perpendicular to the planes locating the electric and magnetic field vectors.  The quantity of practical interest is the <em>time-averaged</em> magnitude of the Poynting vector over one cycle given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eed180ae-60c2-46a0-b2ac-8e96f0f2ff5f">
-<span class="eqno">(1.12)<a class="headerlink" href="#equation-eed180ae-60c2-46a0-b2ac-8e96f0f2ff5f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e59b42dd-46a3-4f6a-a305-6c31a31064f4">
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-e59b42dd-46a3-4f6a-a305-6c31a31064f4" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left&lt;S\right&gt; = \frac{1}{2\mu_o}E_o B_o, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(E_o\)</span> and <span class="math notranslate nohighlight">\(B_o\)</span> represent the maximum amplitudes of the electric and magnetic fields, respectively.  Since the wave carries momentum, it can exert a force on a surface (e.g., light-sail).  The resulting <a class="reference external" href="https://en.wikipedia.org/wiki/Radiation_pressure">radiation pressure</a> depends on whether the light wave is reflected from or absorbed by the surface.  The force of the radiation <span class="math notranslate nohighlight">\(F_{\rm rad}\)</span> is related to the time-average flux <span class="math notranslate nohighlight">\(\left&lt;S\right&gt;\)</span>, the cross-sectional area <span class="math notranslate nohighlight">\(A\)</span>, the speed of light <span class="math notranslate nohighlight">\(c\)</span>, and the angle of incidence <span class="math notranslate nohighlight">\(\theta\)</span> (e.g., <span class="math notranslate nohighlight">\(0^\circ\)</span> is perpendicular to the surface). The radiation pressure is given by</p>
@@ -1048,8 +1048,8 @@ P_{\rm rad} = \frac{F_{\rm rad}}{A} = \begin{cases}
 </figcaption>
 </figure>
 <p>A blackbody of temperature <span class="math notranslate nohighlight">\(T\)</span> emits a continuous spectrum with some energy at all wavelengths with a maximum intensity occurring at a wavelength <span class="math notranslate nohighlight">\(\lambda_{\rm max}\)</span>.  <strong>Wien’s displacement law</strong> describes the relationship between the temperature and the maximum wavelength as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bcb89c6e-7af4-45e7-85f3-eb6d187d009f">
-<span class="eqno">(1.13)<a class="headerlink" href="#equation-bcb89c6e-7af4-45e7-85f3-eb6d187d009f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18027fe4-9e4a-4d27-90f6-4ceb4d87eadc">
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-18027fe4-9e4a-4d27-90f6-4ceb4d87eadc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda_{\rm max}T = 2.897744 \times 10^6 \; {\rm nm\;K}.
 \end{align}\]</div>
 <div class="exercise orange admonition" id="Chapter_3/continuous-spectrum-of-light-exercise-6">
@@ -1144,14 +1144,14 @@ The maximum wavelength for the Sun is: 502.0 nm (visible)
 <section id="rayleigh-jeans-and-wien-approximation">
 <h3><span class="section-number">1.5.1. </span>Rayleigh-Jeans and Wien Approximation<a class="headerlink" href="#rayleigh-jeans-and-wien-approximation" title="Permalink to this heading">#</a></h3>
 <p>Although the blackbody curves could be determined empirically, physicists wanted to derive an equation from fundamental physics (first) principles.  Lord Rayleigh developed a formula based on Maxwell’s equations and thermal physics.  His strategy considered a cavity of temperature <span class="math notranslate nohighlight">\(T\)</span> filled with radiation (i.e., a hot oven filled with standing waves).  If <span class="math notranslate nohighlight">\(L\)</span> is the distance between the oven’s walls, then the standing waves will appear at wavelengths <span class="math notranslate nohighlight">\(\lambda = 2L/n\)</span> and <span class="math notranslate nohighlight">\(n\)</span> is an integer.  Each of those wavelengths should receive a packet of energy (E = kT), where <span class="math notranslate nohighlight">\(k = 1.3806503 \times 10^{-23} J/K\)</span> is Boltzmann’s constant from chemistry.  Rayleigh derived an approximation for <span class="math notranslate nohighlight">\(B_\lambda(T)\)</span> that was valid for large (long) <span class="math notranslate nohighlight">\(\lambda\)</span> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-efe3b273-dfba-4b63-a90e-328de04f2357">
-<span class="eqno">(1.15)<a class="headerlink" href="#equation-efe3b273-dfba-4b63-a90e-328de04f2357" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9746bc0c-24d9-431a-bb85-d9a48ddbf235">
+<span class="eqno">(1.15)<a class="headerlink" href="#equation-9746bc0c-24d9-431a-bb85-d9a48ddbf235" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx \frac{2ckT}{\lambda^4},
 \end{align}\]</div>
 <p>and agrees well with the blackbody curve for long <span class="math notranslate nohighlight">\(\lambda\)</span>.  However, this result explodes for short <span class="math notranslate nohighlight">\(\lambda\)</span> (i.e., <span class="math notranslate nohighlight">\( \lim_{\lambda\rightarrow 0} B_\lambda(T) = \infty\)</span>).  The theoretical results was dubbed the “ultraviolet catastrophe” and is known today as the <strong>Rayleigh-Jeans law</strong>.</p>
 <p>At the same time, Wien worked on his own <a class="reference external" href="https://en.wikipedia.org/wiki/Wien_approximation">approximation</a> starting from the Stefan-Boltzmann law.  He developed a formula that was accurate at <em>short</em> wavelengths as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f23cd57-5ed9-437e-8376-ce1b92b69872">
-<span class="eqno">(1.16)<a class="headerlink" href="#equation-3f23cd57-5ed9-437e-8376-ce1b92b69872" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1e0a975b-abd6-4b0a-9e8e-60b4cfa3247b">
+<span class="eqno">(1.16)<a class="headerlink" href="#equation-1e0a975b-abd6-4b0a-9e8e-60b4cfa3247b" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> were determined by a best-fit to the experimental data.</p>
@@ -1212,8 +1212,8 @@ B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 </figcaption>
 </figure>
 <p>The Planck function relates the observed properties of a star (e.g., radiant flux, apparent magnitude) and its intrinsic properties (e.g., radius and temperature).  Consider a star as a spherical blackbody of radius <span class="math notranslate nohighlight">\(R\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span>.  Each small patch of surface <span class="math notranslate nohighlight">\(dA\)</span> emits the same amount of radiation and the energy per second (luminosity) is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d4bca7db-c95a-4189-a9e7-fe51bfd27684">
-<span class="eqno">(1.19)<a class="headerlink" href="#equation-d4bca7db-c95a-4189-a9e7-fe51bfd27684" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2996c2aa-368a-45e4-9e88-8b3908f014d9">
+<span class="eqno">(1.19)<a class="headerlink" href="#equation-2996c2aa-368a-45e4-9e88-8b3908f014d9" title="Permalink to this equation">#</a></span>\[\begin{align}
  \int_{\phi=0}^{2\pi} \int_{\theta=0}^{\pi/2} \int_A B_\lambda(T)d\lambda dA \cos \theta \sin \theta d\theta d\phi = 4\pi^2 R^2 B_\lambda d\lambda.
 \end{align}\]</div>
 <p>The angular integration (<span class="math notranslate nohighlight">\(\theta\)</span>,<span class="math notranslate nohighlight">\(\phi\)</span>) yields a factor of <span class="math notranslate nohighlight">\(\pi\)</span>, while the integral over the surface area <span class="math notranslate nohighlight">\(A\)</span> produces a factor of <span class="math notranslate nohighlight">\(4\pi R^2\)</span> (i.e., surface area of a sphere).  The result is the <strong>monochromatic luminosity</strong>, which is</p>
@@ -1225,8 +1225,8 @@ B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 <section id="the-color-index">
 <h2><span class="section-number">1.6. </span>The Color Index<a class="headerlink" href="#the-color-index" title="Permalink to this heading">#</a></h2>
 <p>Section 1.2 introduced the apparent <span class="math notranslate nohighlight">\(m\)</span> and absolute magnitudes <span class="math notranslate nohighlight">\(M\)</span>, which provide the brightness measured over all wavelengths and corresponds to the <strong>bolometric magnitude</strong>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-02b48e9e-7abc-43d2-9ba9-f00a127f0a71">
-<span class="eqno">(1.21)<a class="headerlink" href="#equation-02b48e9e-7abc-43d2-9ba9-f00a127f0a71" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1925b79a-0f32-4419-9c96-44069df60521">
+<span class="eqno">(1.21)<a class="headerlink" href="#equation-1925b79a-0f32-4419-9c96-44069df60521" title="Permalink to this equation">#</a></span>\[\begin{align}
  M_{bol} = M_{Sun} - 2.5\log_{10}\left(\frac{L}{L_\odot}\right).
 \end{align}\]</div>
 <p>In practice, detectors measure the radiant flux through a filter that allows only a certain wavelength region to pass through and reach the detector or the detector is sensitive to a particular wavelength range (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Charge-coupled_device">CCDs</a>).</p>
@@ -1362,8 +1362,8 @@ The apparent bolometric magnitude of Sirius A is: -1.57
 <span class="eqno">(1.23)<a class="headerlink" href="#equation-star-mag" title="Permalink to this equation">#</a></span>\[  m_X = -2.5 \log_{10}\left(\int_0^\infty F_\lambda S_X d\lambda\right) + C_X,\]</div>
 <p>where the constant <span class="math notranslate nohighlight">\(C_X\)</span> is chosen so that Vega (<span class="math notranslate nohighlight">\(\alpha\)</span> Lyrae) is normalized to <em>zero</em> magnitude through the filter and <span class="math notranslate nohighlight">\(F_\lambda\)</span> can be determined using Eqn 19.  Modern calibrations use the average magnitude of several stars.  This does <strong>not</strong> imply that Vega or other calibration stars would appear equally bright viewed through each filter.</p>
 <p>The <em>ideal</em> case would be for a <em>perfect</em> bolometer, where <span class="math notranslate nohighlight">\(S(\lambda)=1\)</span> and a constant <span class="math notranslate nohighlight">\(C_{\rm bol}\)</span> is measured over all wavelengths (i.e., independent of the filter). Equation <a class="reference internal" href="#equation-star-mag">(1.23)</a> becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-50cf1ffa-22c9-415f-b650-6a912ca6603b">
-<span class="eqno">(1.24)<a class="headerlink" href="#equation-50cf1ffa-22c9-415f-b650-6a912ca6603b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a9e573ba-18c6-4efe-aabd-3bbf8e8c0199">
+<span class="eqno">(1.24)<a class="headerlink" href="#equation-a9e573ba-18c6-4efe-aabd-3bbf8e8c0199" title="Permalink to this equation">#</a></span>\[\begin{align}
   m_{bol} = -2.5 \log_{10}\left(\int_0^\infty F_\lambda d\lambda\right) + C_{bol},
 \end{align}\]</div>
 <div class="cell tag_hide-cell docutils container">
@@ -1440,8 +1440,8 @@ The bolometric correction BC for the Sun is -0.09
 </details>
 </div>
 <p>The value of <span class="math notranslate nohighlight">\(C_{bol}\)</span> was first calibrated so that the bolometric correction <span class="math notranslate nohighlight">\(BC = m_{bol}-m_V &lt; 0\)</span> for all stars while still be close to zeros as possible.  However, it was discovered that some supergiant star have <em>positive</em> bolometric corrections.  Using Eqn. <a class="reference internal" href="#equation-bolometric-corr">(1.22)</a>, the color indices (<span class="math notranslate nohighlight">\(U-B\)</span> or <span class="math notranslate nohighlight">\(B-V\)</span>) are determined through the flux ratio.  For <span class="math notranslate nohighlight">\(X-Y\)</span>, it follows that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2bc5485-deba-457c-900e-5fd5c6b2bba6">
-<span class="eqno">(1.25)<a class="headerlink" href="#equation-b2bc5485-deba-457c-900e-5fd5c6b2bba6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-573908be-3fce-47fd-8cb5-e86f72dffbfb">
+<span class="eqno">(1.25)<a class="headerlink" href="#equation-573908be-3fce-47fd-8cb5-e86f72dffbfb" title="Permalink to this equation">#</a></span>\[\begin{align}
  X-Y = m_X - m_Y = -2.5 \log_{10}\left(\frac{\int F_\lambda S_X d\lambda}{\int F_\lambda S_Y d\lambda} \right) + C_{X-Y}, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(C_{X-Y} = C_X - C_Y\)</span>.  Note that the dependence on (<span class="math notranslate nohighlight">\(R/r\)</span>) cancels in the flux ratio and thus the color indices do not depend either the radius <span class="math notranslate nohighlight">\(R\)</span> of the model star or the distance <span class="math notranslate nohighlight">\(r\)</span> from the star.  Moreover, the color indices reduce the integral over the flux to the band pass of the filter because <span class="math notranslate nohighlight">\(S(\lambda) = 0\)</span> due to the nature of the filter.  The constant <span class="math notranslate nohighlight">\(C_{X-Y}\)</span> can be approximated by determining the flux at the peak wavelength multiplied by the respective bandwidth.</p>

@@ -9,13 +9,19 @@ and
 
 where both presentations will be assessed by both the instructor and fellow students.  The presentation using the astropy tutorials must explain to the class: how to use the relevant tools and connect to the material in the associated chapters of the textbook (as indicated below).
 
-## [Astropy](https://learn.astropy.org/) 
-- Modeling 2: Create a User Defined Model using astropy.modeling (The Classification of Stellar Spectra)
-- Analyzing UVES Spectroscopy with Astropy (Stellar Atmospheres)
-- Analyzing interstellar reddening and calculating synthetic photometry (The Interstellar Medium and Star Formation)
-- Astronomical Coordinates 4: Cross-matching Catalogs Using astropy.coordinates and astroquery (Main-Sequence and Post-Main-Sequence Stellar Evolution)
-- Modeling 1: Make a quick fit using astropy.modeling (Stellar Pulsation)
-
+## Python Tutorials
+- **Astropy**:
+    - [Modeling 2: Create a User Defined Model using astropy.modeling](https://learn.astropy.org/tutorials/User-Defined-Model.html)
+    - [Analyzing UVES Spectroscopy with Astropy](https://learn.astropy.org/tutorials/UVES.html)
+    - [Analyzing interstellar reddening and calculating synthetic photometry](https://learn.astropy.org/tutorials/color-excess.html)
+    - [Read in catalog information from a text file and plot some parameters](https://learn.astropy.org/tutorials/plot-catalog.html)
+    - [Modeling 1: Make a quick fit using astropy.modeling](https://learn.astropy.org/tutorials/Models-Quick-Fit.html)
+    - [Synthetic Images from simulated data](https://learn.astropy.org/tutorials/synthetic-images.html)
+    - [Viewing and manipulating FITS images](https://learn.astropy.org/tutorials/FITS-images.html)
+    - [CCD Data reduction](https://www.astropy.org/ccd-reduction-and-photometry-guide/v/dev/notebooks/00-00-Preface.html)
+- [Astronomical Data in Python](https://github.com/AllenDowney/AstronomicalData)
+- [Lightkurve: exoplanet examples](https://docs.lightkurve.org/tutorials/index.html)
+- [PlanetPlanet: exoplanet lightcurves](https://luger.dev/planetplanet/quickstart.html)
 
 ## Annual Review of Astronomy and Astrophysics (AARA)
 - Chemical Composition of the Sun ([Asplund et al. (2009)](https://ui.adsabs.harvard.edu/abs/2009ARA%26A..47..481A/abstract))
@@ -31,6 +37,12 @@ where both presentations will be assessed by both the instructor and fellow stud
 - [Astrobetter](https://www.astrobetter.com/): Tips and Tricks for Professional Astronomers 
 - [Astrobites](https://astrobites.org/): astro-ph reader's digest 
 - [Arxiv:astro-ph](https://arxiv.org/archive/astro-ph) preprint server 
+- [Astronomy Research Tutorial](https://www.astrowhit.com/astronomy-research-tutorial-repository) from Katherine Whitaker (UMass Amherst)
+- [Astropy](https://learn.astropy.org/): general tools for astronomy using python
+- [Skyfield](https://rhodesmill.org/skyfield/): tools for computing object positions in the sky
+- [Boyce-Astro Video Tutorials](https://boyce-astro.org/videos/): video tutorials for many basic topics in astronomy
+- [AstroML](https://www.astroml.org/astroML-notebooks/index.html): Machine Learning notebooks for astronomy
+- [Astro animations](https://zingale.github.io/astro_animations/) from Michael Zingale @ Stonybrook
 
 ## Additional Suggested Reading
 - Constraining Solar Abundances Using Helioseismology,  [Basu & Antia (2004)](https://ui.adsabs.harvard.edu/abs/2004ApJ...606L..85B/abstract)

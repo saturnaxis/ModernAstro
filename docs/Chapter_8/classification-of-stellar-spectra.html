@@ -488,66 +488,70 @@ document.write(`
 <li><p>Are the different <em>surface temperatures</em> responsible for the relative strengths of the absorption lines?</p></li>
 </ul>
 <p>The theoretical understanding of the quantum atom unlocked the secrets to stellar spectra.  Absorption lines are created when an atom absorbs a photon with <em>exactly</em> the energy required for an electron to make an upward transition between energy levels.  Emission lines are formed by the inverse process.  The distinction between spectra of stars with different temperatures are due to the electrons occupying different atomic orbitals in the <em>atmospheres</em> of these stars.  The details of spectral lines are complicated by the potential ionization stage of the the atoms.  <em>Note: an atom’s ionization stage is denoted by a Roman numeral (e.g., Ca II is singly ionized calcium).</em></p>
-<div align="center">
-<p><strong>Table 1</strong>: Harvard spectral classification.</p>
-<table class="colwidths-auto table">
+<table class="colwidths-given table" id="spectral-table">
+<caption><span class="caption-number">Table 4.1 </span><span class="caption-text">Harvard spectral classification.</span><a class="headerlink" href="#spectral-table" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 24%" />
+<col style="width: 51%" />
+</colgroup>
 <thead>
-<tr class="row-odd"><th class="text-center head"><p>Spectral <br>Type</p></th>
-<th class="text-center head"><p>Color</p></th>
-<th class="text-center head"><p>Effective<br>Temperature</p></th>
-<th class="text-left head"><p>Characteristics</p></th>
+<tr class="row-odd"><th class="head"><p>Spectral <br> Type</p></th>
+<th class="head"><p>Color</p></th>
+<th class="head"><p>Effective<br>Temperature</p></th>
+<th class="head"><p>Characteristics</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-center"><p>O</p></td>
-<td class="text-center"><p>Blue-white</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(\geq\)</span> 30,000 K</p></td>
-<td class="text-left"><p>Strong He II absorption/emission<br>He I absorption becoming stronger</p></td>
+<tr class="row-even"><td><p>O</p></td>
+<td><p>Blue-white</p></td>
+<td><p><span class="math notranslate nohighlight">\(\geq \text{30,000}\ {\rm K}\)</span></p></td>
+<td><p>Strong <span class="math notranslate nohighlight">\(\rm He\ II\)</span> absorption/emission <br> <span class="math notranslate nohighlight">\(\rm He\ I\)</span> absorption becoming stronger</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>B</p></td>
-<td class="text-center"><p>Blue-white</p></td>
-<td class="text-center"><p>10,000-30,000 K</p></td>
-<td class="text-left"><p>He I absorption strongest at B2<br>H I absorption becoming stronger</p></td>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>Blue-white</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{10,000-30,000}\ {\rm K}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm He\ I\)</span> absorption strongest at B2 <br> <span class="math notranslate nohighlight">\(\rm H\ I\)</span> absorption becoming stronger</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>A</p></td>
-<td class="text-center"><p>White</p></td>
-<td class="text-center"><p>7500-10,000 K</p></td>
-<td class="text-left"><p>Balmer absorption lines strongest at A0<br>Ca II absorption becoming stronger</p></td>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>White</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{7500-10,000}\ {\rm K}\)</span></p></td>
+<td><p>Balmer absorption lines strongest at A0<br><span class="math notranslate nohighlight">\(\rm Ca\ II\)</span>  absorption becoming stronger</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>F</p></td>
-<td class="text-center"><p>Yellow-white</p></td>
-<td class="text-center"><p>6000-7500 K</p></td>
-<td class="text-left"><p>Ca II lines strengthen as Balmer lines weaken<br>Neutral metal absorption (Fe I, Cr I)</p></td>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>Yellow-white</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{6000-7500}\ {\rm K}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ca\ I\)</span> lines strengthen as Balmer lines weaken<br>Neutral metal absorption (<span class="math notranslate nohighlight">\(\rm Fe\ I\)</span>, <span class="math notranslate nohighlight">\(\rm Cr\ I\)</span>)</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>G</p></td>
-<td class="text-center"><p>Yellow</p></td>
-<td class="text-center"><p>5200-6000 K</p></td>
-<td class="text-left"><p>Solar-type spectra<br>Ca II, Fe I, and other neutral metals strengthen</p></td>
+<tr class="row-even"><td><p>G</p></td>
+<td><p>Yellow</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{5200-6000}\ {\rm K}\)</span></p></td>
+<td><p>Solar-type spectra<br><span class="math notranslate nohighlight">\(\rm Ca\ II\)</span>, <span class="math notranslate nohighlight">\(\rm Fe\ I\)</span>, and other neutral metals strengthen</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>K</p></td>
-<td class="text-center"><p>Orange</p></td>
-<td class="text-center"><p>3700-5200 K</p></td>
-<td class="text-left"><p>Strong Ca II H &amp; K lines<br>Spectra dominated by metals</p></td>
+<tr class="row-odd"><td><p>K</p></td>
+<td><p>Orange</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{3700-5200}\ {\rm K}\)</span></p></td>
+<td><p>Strong <span class="math notranslate nohighlight">\(\rm Ca\ II\ H\ \&amp;\ K\)</span> lines<br>Spectra dominated by metals</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>M</p></td>
-<td class="text-center"><p>Red</p></td>
-<td class="text-center"><p>2400-3700 K</p></td>
-<td class="text-left"><p>Spectra dominated by molecular absorption (oxides)<br>Neutral metals remain strong</p></td>
+<tr class="row-even"><td><p>M</p></td>
+<td><p>Red</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{2400-3700}\ {\rm K}\)</span></p></td>
+<td><p>Spectra dominated by molecular absorption (oxides)<br>Neutral metals remain strong</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>L</p></td>
-<td class="text-center"><p>Dark red</p></td>
-<td class="text-center"><p>1300-2400 K</p></td>
-<td class="text-left"><p>Stronger in IR than in visible<br>Strong molecular absorption in metal hydrides (FeH), <br>water, carbon monoxide, and alkali metals <br>Molecular absorption in oxides weakening</p></td>
+<tr class="row-odd"><td><p>L</p></td>
+<td><p>Dark red</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{1300-2400}\ {\rm K}\)</span></p></td>
+<td><p>Stronger in IR than in visible <br> Strong molecular absorption in metal hydrides (<span class="math notranslate nohighlight">\(\rm FeH\)</span>), <br> water, carbon monoxide, and alkali metals <br> Molecular absorption in oxides weakening</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>T</p></td>
-<td class="text-center"><p>Infrared</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(\leq\)</span> 1300 K</p></td>
-<td class="text-left"><p>Strong methane (CH_4) bands<br>Weakening carbon monoxide (CO) bands</p></td>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>Infrared</p></td>
+<td><p><span class="math notranslate nohighlight">\(\leq \text{1300}\ {\rm K}\)</span></p></td>
+<td><p>Strong methane (<span class="math notranslate nohighlight">\(\rm CH_4\)</span>) bands<br>Weakening carbon monoxide (<span class="math notranslate nohighlight">\(\rm CO\)</span>) bands</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<p>In Cannon’s classification scheme, the Balmer lines (hydrogen absorption) reach their maximum intensity when the effective surface temperature of the star reaches 10,000 K.  The visible neutral Helium (He I) lines occur at 22,000 K (B2 stars) and singly ionized calcium (Ca II) are most intense at 5250 K (K0 stars).  In astronomy, spectral lines of Ca II H and K are quoted, which are 396.8 nm and 393.3 nm, respectively.  Also, astronomers use the term <strong>metal</strong> to refer to a chemical element heavier than helium because hydrogen and helium are the most abundant elements in the universe. Table 1 includes the traditional Harvard classification scheme and the spectral types of very cool stars (L-Type) and <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Class_T:_methane_dwarfs">brown dwarfs</a> (T-Type).  Brown dwarfs are objects with too lite mass for nuclear fusion (of hydrogen) to occur in their interiors and are not considered stars.  Figure <a class="reference internal" href="#ms-spectra-fig"><span class="std std-numref">4.1</span></a> illustrates how the spectra appear for a range of spectral classes (falsely colored).  Figure <a class="reference internal" href="#spectra-fig"><span class="std std-numref">4.2</span></a> demonstrates the resultant spectra after analysis and digitization.</p>
+<p>In Cannon’s classification scheme, the Balmer lines (hydrogen absorption) reach their maximum intensity when the effective surface temperature of the star reaches 10,000 K.  The visible neutral Helium (He I) lines occur at 22,000 K (B2 stars) and singly ionized calcium (Ca II) are most intense at 5250 K (K0 stars).  In astronomy, spectral lines of Ca II H and K are quoted, which are 396.8 nm and 393.3 nm, respectively.  Also, astronomers use the term <strong>metal</strong> to refer to a chemical element heavier than helium because hydrogen and helium are the most abundant elements in the universe. Table <a class="reference internal" href="#spectral-table"><span class="std std-numref">4.1</span></a> includes the traditional Harvard classification scheme and the spectral types of very cool stars (L-Type) and <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Class_T:_methane_dwarfs">brown dwarfs</a> (T-Type).  Brown dwarfs are objects with too lite mass for nuclear fusion (of hydrogen) to occur in their interiors and are not considered stars.  Figure <a class="reference internal" href="#ms-spectra-fig"><span class="std std-numref">4.1</span></a> illustrates how the spectra appear for a range of spectral classes (falsely colored).  Figure <a class="reference internal" href="#spectra-fig"><span class="std std-numref">4.2</span></a> demonstrates the resultant spectra after analysis and digitization.</p>
 <figure class="align-default" id="ms-spectra-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/0/0b/Dwarf_star_spectra_%28luminosity_class_V%29_from_Pickles_1998.png"><img alt="MS star spectra" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Dwarf_star_spectra_%28luminosity_class_V%29_from_Pickles_1998.png" style="width: 600px;" /></a>
 <figcaption>
@@ -573,9 +577,31 @@ document.write(`
 <div class="math notranslate nohighlight" id="equation-number-density">
 <span class="eqno">(4.1)<a class="headerlink" href="#equation-number-density" title="Permalink to this equation">#</a></span>\[n_v dv = n \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-mv^2/(2kT)}4\pi v^2 dv,\]</div>
 <p>which depends on the total number density <span class="math notranslate nohighlight">\(n\)</span>, the particle’s mass <span class="math notranslate nohighlight">\(m\)</span>, the Boltzmann constant <span class="math notranslate nohighlight">\(k\)</span>, and the temperature of the gas <span class="math notranslate nohighlight">\(T\)</span> (in K).</p>
-<ul class="simple">
-<li><p><strong>What is the most probable speed for hydrogen atoms in an A0 spectral-type star?</strong></p></li>
-</ul>
+<p>The exponent of the Maxwell-Boltzmann distribution function is the ratio of a gas particle’s kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span>) to the characteristic thermal energy (<span class="math notranslate nohighlight">\(kT\)</span>).  Particles above the thermal energy tend to either can escape so the overall distribution remains the same.  This is analogous as to why the temperature of a pot of boiling water doesn’t keep increasing.  The distribution peaks when the particle energies are equal at a <strong>most probable speed</strong> of</p>
+<div class="amsmath math notranslate nohighlight" id="equation-669e266c-004f-4bd0-a754-39dd4acb7394">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-669e266c-004f-4bd0-a754-39dd4acb7394" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\rm mp} = \sqrt{\frac{2kT}{m}}. 
+\end{align}\]</div>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/KZ4s24x_FTQ"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+<div class="exercise orange admonition" id="Chapter_8/classification-of-stellar-spectra-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.1 </span></p>
+<section id="exercise-content">
+<p><strong>What is the most probable speed for hydrogen atoms in an A0 spectral-type star?</strong></p>
+<p>The most probable speed depends on the temperature <span class="math notranslate nohighlight">\(T\)</span> of a gas and the mass <span class="math notranslate nohighlight">\(m\)</span> of the average particle.  For an A0 spectral-type star, the effective surface temperature <span class="math notranslate nohighlight">\(T_{e}\)</span> is <span class="math notranslate nohighlight">\(10^4\ {\rm K}\)</span>, while the outer atmosphere is mostly hydrogen, or <span class="math notranslate nohighlight">\(m = m_{\rm H} = 1.67\times 10^{-27}\ {\rm kg}\)</span>.  Using these factors, we calculate the most probable speed <span class="math notranslate nohighlight">\(v_{\rm mp}\)</span> as,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v_{\rm mp} &amp;= \sqrt{\frac{2kT_e}{m_{\rm H}}}, \\
+ &amp;= \sqrt{\frac{2(1.38\times 10^{-23})(10^4)}{1.67 \times 10^{-27}}} = 1.29 \times 10^4\;{\rm m/s}.
+\end{align*}\]</div>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -600,12 +626,13 @@ document.write(`
 
 <span class="n">v_mp</span> <span class="o">=</span> <span class="n">v_rng</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)]</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_rng</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="n">nv_n</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_{</span><span class="se">\\</span><span class="s1">rm mp}$&#39;</span><span class="p">)</span>
 
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 
@@ -621,33 +648,44 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The most probable speed for hydrogen atoms in an A0 star is 1.28e+04 m/s.
 </pre></div>
 </div>
-<img alt="../_images/ae0570bd9941aa1276894a4d9a43fdbf4c7320a8361e8f0bd5f9cabe2dbe10e6.png" src="../_images/ae0570bd9941aa1276894a4d9a43fdbf4c7320a8361e8f0bd5f9cabe2dbe10e6.png" />
+<img alt="../_images/f0bfac17feb489535aed3f5b43c45451b053d728cacd5d43ced8577f9a3d642e.png" src="../_images/f0bfac17feb489535aed3f5b43c45451b053d728cacd5d43ced8577f9a3d642e.png" />
 </div>
 </div>
-<p>The exponent of the Maxwell-Boltzmann distribution function is the ratio of a gas particle’s kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span>) to the characteristic thermal energy (<span class="math notranslate nohighlight">\(kT\)</span>).  Particles above the thermal energy tend to either can escape so the overall distribution remains the same.  This is analogous as to why the temperature of a pot of boiling water doesn’t keep increasing.  The distribution peaks when the particle energies are equal at a <strong>most probable speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a5a1c44c-5c16-4cf9-b66d-8bf8a430fc7a">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-a5a1c44c-5c16-4cf9-b66d-8bf8a430fc7a" title="Permalink to this equation">#</a></span>\[\begin{align}
-v_{mp} = \sqrt{\frac{2kT}{m}}. 
-\end{align}\]</div>
-<ul class="simple">
-<li><p><strong>How does this compare to our previous example?</strong></p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[ v_{mp} = \sqrt{\frac{2(1.38\times 10^{-23})(10^4)}{1.67 \times 10^{-27}}} = 1.29 \times 10^4\;{\rm m/s} \]</div>
 <p>The high-speed exponential “tail” of the distribution function results in a somewhat higher <strong>root-mean-square speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3e6ab678-793c-4fd3-8d39-aef8aa329a8e">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-3e6ab678-793c-4fd3-8d39-aef8aa329a8e" title="Permalink to this equation">#</a></span>\[\begin{align}
-v_{rms} = \sqrt{\frac{3kT}{m}}.
+<div class="amsmath math notranslate nohighlight" id="equation-c9c6f4f7-f2b3-4250-b00f-f8cd8f85cfe6">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-c9c6f4f7-f2b3-4250-b00f-f8cd8f85cfe6" title="Permalink to this equation">#</a></span>\[\begin{align}
+v_{\rm rms} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
-<p>The area under the curve of the Maxwell-Boltzmann distribution <em>fraction</em> of gas particles within a range of speeds or,</p>
+<p>The area under the curve of the Maxwell-Boltzmann distribution is the <em>fraction</em> of gas particles within a range of speeds or,</p>
 <div class="math notranslate nohighlight" id="equation-mb-dist">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-mb-dist" title="Permalink to this equation">#</a></span>\[\begin{split}N/N_{total} &amp;= \frac{1}{n}\int_{v_1}^{v_2} n_v dv, \\ 
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-mb-dist" title="Permalink to this equation">#</a></span>\[\begin{split}N/N_{\rm total} &amp;= \frac{1}{n}\int_{v_1}^{v_2} n_v dv, \\ 
 &amp;= \left(\frac{m}{2\pi kT}\right)^{3/2} \int_{v_1}^{v_2} e^{-mv^2/(2kT)} 4\pi v^2 dv.\end{split}\]</div>
 <p>Equation <a class="reference internal" href="#equation-mb-dist">(4.4)</a> has a closed-form solution when <span class="math notranslate nohighlight">\(v_1 = 0\)</span> and <span class="math notranslate nohighlight">\(v_2\rightarrow \infty\)</span>, it must be evaluated numerically in other cases.</p>
-<ul class="simple">
-<li><p><strong>What is the root-mean-square speed of the hydrogen atoms in an A0 star?</strong></p></li>
-<li><p><strong>What is the fraction of gas particles with speeds between 20-25 km/s?</strong></p></li>
-</ul>
+<div class="exercise orange admonition" id="Chapter_8/classification-of-stellar-spectra-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
+<section id="exercise-content">
+<p><strong>What is the root-mean-square speed of the hydrogen atoms in an A0 star?</strong></p>
+<p>The root-mean-square (<span class="math notranslate nohighlight">\(v_{\rm rms}\)</span>) speed of gas particle is similar to the most probable speed, where they are related by a factor of <span class="math notranslate nohighlight">\(\sqrt{3/2}\)</span>.  Therefore, we calculate <span class="math notranslate nohighlight">\(v_{\rm rms}\)</span> using this factor to get,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v_{\rm rms} &amp;= \sqrt{\frac{3kT}{m}} = \sqrt{\frac{3}{2}}v_{\rm rms}, \\
+&amp; = 1.57 \times 10^4\ {\rm m/s}.
+\end{align*}\]</div>
+</section>
+</div>
+<div class="exercise orange admonition" id="Chapter_8/classification-of-stellar-spectra-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.3 </span></p>
+<section id="exercise-content">
+<p><strong>What is the fraction of gas particles with speeds between 20-25 km/s?</strong></p>
+<p>The fraction of gas particles between a speed <span class="math notranslate nohighlight">\(v_1\)</span> and <span class="math notranslate nohighlight">\(v_2\)</span> is determined by integrating the Maxwell-Boltzmann distribution (Eq. <a class="reference internal" href="#equation-mb-dist">(4.4)</a>).  The indefinite integral of Eq. <a class="reference internal" href="#equation-mb-dist">(4.4)</a> introduces the <a class="reference external" href="https://en.wikipedia.org/wiki/Error_function">error function</a> <span class="math notranslate nohighlight">\(\rm erf(z)\)</span> (see the result in <a class="reference external" href="https://www.wolframalpha.com/input?i=integral+of+e%5E%7B-kx%5E2%7D+x%5E2+dx">Wolfram Alpha</a>).  Therefore, we employ <a class="reference external" href="https://saturnaxis.github.io/CompPhysics/Chapter_4/Integration.html#simpson-s-rule">Simpson’s rule</a> to evaluate the integral.  The result of this numerical method (see the python code below) is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+N/N_{\rm total} = 0.128,\ \text{or } 12.8\%.
+\end{align*}\]</div>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -671,14 +709,16 @@ v_{rms} = \sqrt{\frac{3kT}{m}}.
 <span class="n">frac_rng</span> <span class="o">=</span> <span class="n">Simpsons_rule</span><span class="p">(</span><span class="mf">2e4</span><span class="p">,</span><span class="mf">2.5e4</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">Maxwell_Boltzmann</span><span class="p">)</span>
 
 <span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_rng</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="n">nv_n</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_rms</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrms_idx</span><span class="p">])</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_mp</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">nv_n</span><span class="p">)</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_{</span><span class="se">\\</span><span class="s1">rm mp}$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">v_rms</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrms_idx</span><span class="p">])</span><span class="o">/</span><span class="mf">7e-5</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$v_{</span><span class="se">\\</span><span class="s1">rm rms}$&#39;</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">v_rng</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">nv_n</span><span class="p">[</span><span class="n">vrng_idx</span><span class="p">]</span><span class="o">/</span><span class="mf">1e-5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
@@ -696,7 +736,7 @@ v_{rms} = \sqrt{\frac{3kT}{m}}.
 The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </pre></div>
 </div>
-<img alt="../_images/d052b18f3fbd433b27f01321d8192b5a85243d5e86daf20c92e68c874a39c929.png" src="../_images/d052b18f3fbd433b27f01321d8192b5a85243d5e86daf20c92e68c874a39c929.png" />
+<img alt="../_images/43bf164a465002ba0b71c976c687a8640ac54dad98881b199c3e73a0bdd2ec8a.png" src="../_images/43bf164a465002ba0b71c976c687a8640ac54dad98881b199c3e73a0bdd2ec8a.png" />
 </div>
 </div>
 <p>The Maxwell-Boltzmann distribution function describes the kinetic energy of gas particles within a star’s atmosphere at an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> and allows us to derive the most probable speed <span class="math notranslate nohighlight">\(v_{mp}\)</span> of the particles.  Recall our first question was to determine the most likely orbitals for the electrons.  While this cannot be answered fully yet, the next step will estimate the relative likelihood of a possible energy level through the Boltzmann equation.</p>
@@ -706,11 +746,10 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <p>Collisions between gas particles cause some particles to gain and lose energy and thus, produce a definite distribution in the speeds of gas particles.  Statistical mechanics shows that orbitals of higher energy are less likely to be occupied by electrons.  Suppose there are two states of Energy <span class="math notranslate nohighlight">\(E_a\)</span> and <span class="math notranslate nohighlight">\(E_b\)</span> that are represented by a set of quantum numbers <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, respectively.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If the first state <span class="math notranslate nohighlight">\(E_a\)</span> is the ground state of hydrogen (<span class="math notranslate nohighlight">\(E_a = -13.6\)</span> eV), then its quantum state is <span class="math notranslate nohighlight">\(s_a = \{1,0,0,+1/2\}\)</span>; in general, the individual elements are the quantum numbers, <span class="math notranslate nohighlight">\(\{n,\ell,m_\ell,m_s\}\)</span>. See Table 2 for a listing of the quantum numbers of for the ground (<span class="math notranslate nohighlight">\(n=1\)</span>) and 1st excited (<span class="math notranslate nohighlight">\(n=2\)</span>) states.</p>
+<p>If the first state <span class="math notranslate nohighlight">\(E_a\)</span> is the ground state of hydrogen (<span class="math notranslate nohighlight">\(E_a = -13.6\)</span> eV), then its quantum state is <span class="math notranslate nohighlight">\(s_a = \{1,0,0,+1/2\}\)</span>; in general, the individual elements are the quantum numbers, <span class="math notranslate nohighlight">\(\{n,\ell,m_\ell,m_s\}\)</span>. See Table <a class="reference internal" href="#quantum-numbers-table"><span class="std std-numref">4.2</span></a> for a listing of the quantum numbers of for the ground (<span class="math notranslate nohighlight">\(n=1\)</span>) and 1st excited (<span class="math notranslate nohighlight">\(n=2\)</span>) states.</p>
 </div>
-<div align="center"> 
-<p><strong>Table 2</strong>: Quantum Numbers for the Hydrogen Atom.</p>
-<table class="colwidths-auto table">
+<table class="colwidths-auto table" id="quantum-numbers-table" style="width: 250px">
+<caption><span class="caption-number">Table 4.2 </span><span class="caption-text">Quantum Numbers for the Hydrogen Atom.</span><a class="headerlink" href="#quantum-numbers-table" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="text-right head"><p><span class="math notranslate nohighlight">\(n\)</span></p></th>
 <th class="text-right head"><p><span class="math notranslate nohighlight">\(\ell\)</span></p></th>
@@ -771,10 +810,9 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </tr>
 </tbody>
 </table>
-</div>
 <p>There exists some probability <span class="math notranslate nohighlight">\(P(s_x)\)</span> that the system is in a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Then the ratio of the probability between orbital states represents the likelihood for which electrons may be found.  Using the states <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, the ratio of probability is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0ed690f4-0a4e-40c8-bbf9-f5b978c57d9a">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-0ed690f4-0a4e-40c8-bbf9-f5b978c57d9a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a7f520c1-9309-4269-a348-8a458d3c3d25">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-a7f520c1-9309-4269-a348-8a458d3c3d25" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{P(s_b)}{P(s_a)} = \frac{e^{-E_b/(kT)}}{e^{-E_a/(kT)}} = e^{-(E_b-E_a)/(kT)}, 
 \end{align}\]</div>
 <div class="admonition note">
@@ -782,27 +820,37 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <p>An alternate form of the <a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_constant">Boltzmann constant</a> is <span class="math notranslate nohighlight">\(8.617333262145 \times 10^{-5}\)</span> eV/K, which is useful for solving problems when the energy is given in eV.</p>
 </div>
 <p>where <span class="math notranslate nohighlight">\(T\)</span> is the common temperature of the two systems and <span class="math notranslate nohighlight">\(e^{-E_x/(kT)}\)</span> represents the <em>Boltzmann factor</em> for a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Suppose that <span class="math notranslate nohighlight">\(E_b &gt; E_a\)</span> and the temperature is decreasing (<span class="math notranslate nohighlight">\(T\rightarrow 0\)</span>), then the factor in the exponential <span class="math notranslate nohighlight">\(-(E_b-E_a)/(kT) \rightarrow -\infty\)</span> and so the ratio of probability <span class="math notranslate nohighlight">\(P(s_b)/P(s_a) \rightarrow 0\)</span>.  This means that there isn’t any thermal energy available to excite the electron to a higher energy level.  Conversely, if there is an infinite amount of energy (i.e., <span class="math notranslate nohighlight">\(T\rightarrow \infty\)</span>), then it is certain that an excitation will occur because <span class="math notranslate nohighlight">\(P(s_b)/P(s_a) \rightarrow 1\)</span>.</p>
-<p>It is often the case that then energy levels of the system may be <strong>degenerate</strong>, where more than one quantum state can have the same energy.  For example, two electrons in the ground state of hydrogen with opposite spins will have the same energy because <span class="math notranslate nohighlight">\(E_n\)</span> doesn’t depend on the quantum number <span class="math notranslate nohighlight">\(m_s\)</span>.  <em>Table 2 shows two states for the ground (<span class="math notranslate nohighlight">\(n=1\)</span>) state and eight states for the 1st excited (<span class="math notranslate nohighlight">\(n=2\)</span>) state so that the number of degenerate states <span class="math notranslate nohighlight">\(g_n = 2n^2\)</span>.</em> When taking averages, we must account for the degenerate states using a separate factor <span class="math notranslate nohighlight">\(g_x\)</span>, which is the statistical weight of the energy level.  The ratio of the probability between two degenerate states is given by</p>
+<p>It is often the case that then energy levels of the system may be <strong>degenerate</strong>, where more than one quantum state can have the same energy.  For example, two electrons in the ground state of hydrogen with opposite spins will have the same energy because <span class="math notranslate nohighlight">\(E_n\)</span> doesn’t depend on the quantum number <span class="math notranslate nohighlight">\(m_s\)</span>.  <em>Table <a class="reference internal" href="#quantum-numbers-table"><span class="std std-numref">4.2</span></a> shows two states for the ground (<span class="math notranslate nohighlight">\(n=1\)</span>) state and eight states for the 1st excited (<span class="math notranslate nohighlight">\(n=2\)</span>) state so that the number of degenerate states <span class="math notranslate nohighlight">\(g_n = 2n^2\)</span>.</em> When taking averages, we must account for the degenerate states using a separate factor <span class="math notranslate nohighlight">\(g_x\)</span>, which is the statistical weight of the energy level.  The ratio of the probability between two degenerate states is given by</p>
 <div class="math notranslate nohighlight" id="equation-prob-ratio">
 <span class="eqno">(4.6)<a class="headerlink" href="#equation-prob-ratio" title="Permalink to this equation">#</a></span>\[\frac{P(s_b)}{P(s_a)} = \frac{g_b e^{-E_b/(kT)}}{g_a e^{-E_a/(kT)}} = \frac{g_b}{g_a} e^{-(E_b-E_a)/(kT)} = \frac{N_b}{N_a},\]</div>
 <p>which is typically indistinguishable from the ratio of the number of atoms <span class="math notranslate nohighlight">\(N_b/N_a\)</span> because stellar atmospheres contain a vast number of atoms.  Equation <a class="reference internal" href="#equation-prob-ratio">(4.6)</a> is also called the <a class="reference external" href="https://phys.libretexts.org/Bookshelves/Astronomy__Cosmology/Book%3A_Stellar_Atmospheres_(Tatum)/08%3A_Boltzmann's_and_Saha's_Equations/8.04%3A_Boltzmann's_Equation">Boltzmann equation</a>.</p>
-<ul class="simple">
-<li><p><strong>At what temperature will equal numbers of atoms have electrons in the ground and 1st excited states?</strong></p></li>
-</ul>
-<blockquote>
-<div><p>The ratio of the number of atoms between the 1st excited and ground states is <span class="math notranslate nohighlight">\(N_2/N_1\)</span>.  If these are in equal amounts, then the ratio is equal to unity.  To account for the degeneracy between states, we recall that <span class="math notranslate nohighlight">\(g_2 = 8\)</span> and <span class="math notranslate nohighlight">\(g_1 = 2\)</span>.  Finally, we can use the Boltzmann equation, along with the energy equation for hydrogen <span class="math notranslate nohighlight">\(E_n = 13.6/n^2\)</span> eV to get,</p>
-<div class="math notranslate nohighlight">
-\[ 1= \frac{8}{2}e^{-[(-13.6/4 \;{\rm eV})-(-13.6 \;{\rm eV})]/(kT)}. \]</div>
+<div class="exercise orange admonition" id="Chapter_8/classification-of-stellar-spectra-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.4 </span></p>
+<section id="exercise-content">
+<p><strong>At what temperature will equal numbers of atoms have electrons in the ground and 1st excited states?</strong></p>
+<p>The ratio of the number of atoms between the 1st excited and ground states is <span class="math notranslate nohighlight">\(N_2/N_1\)</span>.  If these are in equal amounts, then the ratio is equal to unity.  To account for the degeneracy between states, we recall that <span class="math notranslate nohighlight">\(g_2 = 8\)</span> and <span class="math notranslate nohighlight">\(g_1 = 2\)</span>.  Finally, we can use the Boltzmann equation, along with the energy equation for hydrogen <span class="math notranslate nohighlight">\(E_n = 13.6/n^2\)</span> eV to get,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+1= \frac{8}{2}e^{-[(-13.6/4 \;{\rm eV})-(-13.6 \;{\rm eV})]/(kT)}.
+\end{align*}\]</div>
 <p>Solving for the exponential, we get</p>
-<div class="math notranslate nohighlight">
-\[ 4^{-1} = e^{-10.2\;{\rm eV}/(kT)} \]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+4^{-1} = e^{-10.2\;{\rm eV}/(kT)}
+\end{align*}\]</div>
 <p>and taking the logarithm of both sides to get</p>
-<div class="math notranslate nohighlight">
-\[ \frac{10.2\;{\rm eV}}{kT} = \ln(4). \]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+\frac{10.2\;{\rm eV}}{kT} = \ln(4).
+\end{align*}\]</div>
 <p>Solving for the temperature yields,</p>
-<div class="math notranslate nohighlight">
-\[ T = \frac{10.2\;{\rm eV}}{8.6173333\times 10^{-5}\;{\rm eV/K}\cdot\ln(4)} = 85,400\;{\rm K}.\]</div>
-</div></blockquote>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} 
+T = \frac{10.2\;{\rm eV}}{8.6173333\times 10^{-5}\;{\rm eV/K}\cdot\ln(4)} = 85,400\;{\rm K}.
+\end{align*}\]</div>
+</section>
+</div>
 <p>Extremely high temperatures are required for a significant number of hydrogen atoms to have electrons in the 1st excited state, where we have shown what it takes to get equal amounts.  Exploring all the possible ratios <span class="math notranslate nohighlight">\(N_2/N_{\rm tot}\)</span> (or <span class="math notranslate nohighlight">\(1/(1+N_1/N_2)\)</span>) as a function of temperature <span class="math notranslate nohighlight">\(T\)</span> reveals that only a small fraction (<span class="math notranslate nohighlight">\(\leq3.5\)</span>%) of electrons will be in the 1st excited state even if the temperature reaches 25,000 K.  We observe Balmer lines within stars at a much lower temperature (9520 K).  There must be another piece to this puzzle and it is found in the Saha equation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -814,7 +862,7 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <span class="n">k_boltz</span> <span class="o">=</span> <span class="mf">8.6173333e-5</span> <span class="c1">#eV/K</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
 <span class="n">T_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mf">2.5e4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -832,7 +880,7 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4c71645fd4e59473e2d3d38c755f3f38d92d82b6404a3ca50aa2cf666ff58544.png" src="../_images/4c71645fd4e59473e2d3d38c755f3f38d92d82b6404a3ca50aa2cf666ff58544.png" />
+<img alt="../_images/d4a6b81168235f05e0360b9c255a3ec81204b83f8d397378fd12525dd76bc314.png" src="../_images/d4a6b81168235f05e0360b9c255a3ec81204b83f8d397378fd12525dd76bc314.png" />
 </div>
 </div>
 </section>
@@ -849,17 +897,30 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 <p class="admonition-title">Note</p>
 <p>Equation <a class="reference internal" href="#equation-saha-eq">(4.8)</a> is known as the <strong>Saha equation</strong>, after the Indian astrophysicist <a class="reference external" href="https://en.wikipedia.org/wiki/Meghnad_Saha">Meghnad Saha</a>.</p>
 </div>
-</section>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/58hVf6fAD7w"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/RGNmyUxC9-Q"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div></section>
 <section id="combining-the-boltzmann-and-saha-equations">
 <h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this heading">#</a></h3>
 <p>The Boltzmann equation describes what is <em>possible</em>, where the Saha equation describes what is <em>probable</em>.  Therefore, what we observe should be a combination of effects from both equations.  Consider the degree of ionization in a stellar atmosphere consisting of pure hydrogen and that the electron pressure is a constant <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span>.  Hydrogen has only two states: neutral hydrogen (H I) and ionized hydrogen (H II).  The fraction of atoms that are ionized depends on the ratio of the number ionized atoms <span class="math notranslate nohighlight">\(N_{\rm II}\)</span> and the total number of atoms <span class="math notranslate nohighlight">\(N_{\rm tot}=N_{\rm I} + N_{\rm II}\)</span>.  Ionized hydrogen is just a proton and thus, has no degeneracy and the partition function <span class="math notranslate nohighlight">\(Z_{\rm II} = 1\)</span>.  The partition function for the remaining neutral hydrogen (H I) is simply <span class="math notranslate nohighlight">\(Z_{\rm I} \approx g_1 = 2(1)^2 = 2\)</span>.  The temperatures of stellar atmospheres range from 5000 K - 25,000 K and the previous example (using the Boltzmann equation) showed that most electrons for the hydrogen atoms are in the ground state (<span class="math notranslate nohighlight">\(n=1\)</span>).  For neutral hydrogen, equation 7 becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c3074fce-64d3-4ea0-8c2d-f021ec0e5540">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-c3074fce-64d3-4ea0-8c2d-f021ec0e5540" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5b8ffec-d037-4c38-9d95-680a8b7d27d7">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-a5b8ffec-d037-4c38-9d95-680a8b7d27d7" title="Permalink to this equation">#</a></span>\[\begin{align}
 Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E_2-E_1)/(kT)} ,
 \end{align}\]</div>
 <p>where the second term <span class="math notranslate nohighlight">\(g_2 e^{-(E_2-E_1)/(kT)} \rightarrow 0\)</span> because <span class="math notranslate nohighlight">\(kT = 0.4-2.2\)</span> eV for the appropriate temperature range and <span class="math notranslate nohighlight">\(e^{-(E_2-E_1)/(kT)} \ll 1\)</span>.  The ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm tot}\)</span> can be rewritten as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e7dc7f3-d26f-41d5-990d-8837908a6e24">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-8e7dc7f3-d26f-41d5-990d-8837908a6e24" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ff3793f1-e199-43ff-a7a7-b6d4ef3575ee">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-ff3793f1-e199-43ff-a7a7-b6d4ef3575ee" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{N_{\rm II}}{N_{\rm tot}} = \frac{N_{\rm II}/N_{\rm I}}{1 + N_{\rm II}/N_{\rm I}}. 
 \end{align}\]</div>
 <p>Then the Saha equation can be used to determine the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span>.  Using the ionization energy <span class="math notranslate nohighlight">\(\chi_{\rm I} = 13.6\)</span> eV for hydrogen, the ideal gas law, and substituting the values for <span class="math notranslate nohighlight">\(Z_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(Z_{\rm II}\)</span> into Equation <a class="reference internal" href="#equation-prob-ratio">(4.6)</a>, the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> is given as</p>
@@ -894,7 +955,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 <span class="n">Z_II</span> <span class="o">=</span> <span class="mf">1.</span> 
 <span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;x-large&#39;</span>
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 <span class="n">T_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mf">2.5e4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">NII_NI</span> <span class="o">=</span> <span class="n">Saha_Eq_H12</span><span class="p">(</span><span class="n">P_e</span><span class="p">,</span><span class="n">T_rng</span><span class="p">)</span>
@@ -935,7 +996,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 <span class="n">N2_Ntotal</span> <span class="o">=</span> <span class="n">N2_N1</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">N2_N1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">NII_NI</span><span class="p">))</span><span class="o">/</span><span class="mf">1e-6</span>
 <span class="n">T_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">N2_Ntotal</span><span class="p">)</span>
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T_rng</span><span class="p">,</span><span class="n">N2_Ntotal</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -1011,7 +1072,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </div>
 </div>
 </div>
-<p>Turning to the calcium atoms, we need to modify our functions to the ionization energy of Ca I (<span class="math notranslate nohighlight">\(\chi_I = 6.11\)</span> eV) and use tabulated values for the partition functions <span class="math notranslate nohighlight">\(Z_1 = 1.32\)</span> and <span class="math notranslate nohighlight">\(Z_2 = 2.30\)</span> <a class="reference external" href="https://www.google.com/books/edition/Astrophysics/OdK3AAAAIAAJ?hl=en">Aller (1963)</a>.</p>
+<p>Turning to the calcium atoms, we need to modify our functions to the ionization energy of Ca I (<span class="math notranslate nohighlight">\(\chi_I = 6.11\)</span> eV) and use tabulated values for the partition functions <span class="math notranslate nohighlight">\(Z_1 = 1.32\)</span> and <span class="math notranslate nohighlight">\(Z_2 = 2.30\)</span> (<a class="reference external" href="https://www.google.com/books/edition/Astrophysics/OdK3AAAAIAAJ?hl=en">Aller (1963)</a>).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Saha equation is sensitive to the ionization energy because <span class="math notranslate nohighlight">\(\chi/(kT)\)</span> appears as an exponent and <span class="math notranslate nohighlight">\(kT \approx 0.5\;{\rm eV} \ll \chi\)</span>.  Thus a small difference in the ionization energy produces a change of many powers of <span class="math notranslate nohighlight">\(e\)</span> in the Saha equation.</p>
@@ -1111,10 +1172,37 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </figure>
 <p>The Sun (G2) is found on the main sequence of the H-R diagram, which has both axes scaled logarithmically to accommodate the huge span of stellar luminosities and temperatures.  The main sequence is not a straight line, but a curve with a finite width due to changes in the star’s temperature and luminosity that occur over its main sequence lifetime.  The giants occupy the region above the main sequence, where the brightest stars are <strong>supergiants</strong> and can occupy a range in spectral type (e.g., blue or red supergiants).  After converting spectral type to surface temperature and absolute magnitude to luminosity, Eqn. <a class="reference internal" href="#equation-radius-ratio">(4.13)</a> can be used to determine the radius of a star.  If two stars have the same surface temperature, but one stars is 100 times brighter than the other, then the radius of the brighter star is <span class="math notranslate nohighlight">\(\sqrt{100}=10\)</span> times larger.  A logarithmically scaled H-R diagram allows for lines of constant radius since the Stefan-Boltzmann law is represented as a power law.</p>
 <p>The existence of a simple relation between the luminosity and temperature for main=sequence stars is a valuable clue that the star’s <em>mass</em> plays an important role in determining when a star lies on the main sequence.  The H-R diagram spans from the most massive O stars (<span class="math notranslate nohighlight">\(60\; M_\odot\)</span>) to the least massive M stars (<span class="math notranslate nohighlight">\(0.08\;M_\odot\)</span>).  Knowing both the mass and radius of stars allows for the calculation of the <em>average density</em> of the stars.  Surprisingly, main-sequence stars have roughly the same density as water and moving up the main sequence, the more massive, larger, early type stars have a <em>lower</em> average density.</p>
-<ul class="simple">
-<li><p><strong>What is the average density of the Sun?</strong></p></li>
-<li><p><strong>How do the stars <a class="reference external" href="https://en.wikipedia.org/wiki/Sirius">Sirius A</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Betelgeuse">Betelgeuse</a> compare to the Sun in terms of average density?</strong></p></li>
-</ul>
+<div class="exercise orange admonition" id="Chapter_8/classification-of-stellar-spectra-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.5 </span></p>
+<section id="exercise-content">
+<p><strong>What is the average density of the Sun?</strong></p>
+<p>The average density of the Sun is calculated given the Sun’s mass (<span class="math notranslate nohighlight">\(M_\odot = 1.9891 \times 10^{30}\ {\rm kg}\)</span>) and radius (<span class="math notranslate nohighlight">\(R_\odot = 6.95508 \times 10^8\ {\rm m}\)</span>) using the equation for density <span class="math notranslate nohighlight">\(\bar{\rho} = {\rm M/V}\)</span>.  The average density of the Sun is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\bar{\rho}_\odot = \frac{1.9891 \times 10^{30}\ {\rm kg}}{\frac{4}{3}\pi \left( 6.95508 \times 10^8\ {\rm m}\right)^3} = 1410\ {\rm kg/m^3}.
+\end{align*}\]</div>
+</section>
+</div>
+<div class="exercise orange admonition" id="Chapter_8/classification-of-stellar-spectra-exercise-5">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.6 </span></p>
+<section id="exercise-content">
+<p><strong>How do the stars <a class="reference external" href="https://en.wikipedia.org/wiki/Sirius">Sirius A</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Betelgeuse">Betelgeuse</a> compare to the Sun in terms of average density?</strong></p>
+<p>Having calculated the average density of the Sun in the previous problem, we can use measurments of other stars in solar units to determine the relative average density of those stars.  The average density of Sirius A and Betelguese are</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+
+\rho_{\rm Sirius\ A} &amp;= \frac{2.063\ M_\odot}{\frac{4}{3}\pi \left(1.711\ R_\odot \right)^3} = \frac{2.063}{1.711^3} \bar{\rho}_\odot, \\
+  &amp; = 0.412\bar{\rho}_\odot = 581.3\ {\rm kg/m^3}, \\
+  \\
+  &amp;\quad \text{and} \\
+  \\
+\rho_{\rm Betelgeuese} &amp;= \frac{16.5\ M_\odot}{\frac{4}{3}\pi \left(1021\ R_\odot \right)^3}= \frac{16.5}{1021^3} \bar{\rho}_\odot, \\
+  &amp; = 1.55 \times 10^{-8} \bar{\rho}_\odot = 2.188 \times 10^{-5}\ {\rm kg/m^3}.
+\end{align*}\]</div>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">avg_stellar_density</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="n">R</span><span class="p">):</span>
@@ -1146,52 +1234,57 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 </div>
 </div>
 </div>
-<p>Table 3 provides the the average stellar density <span class="math notranslate nohighlight">\(\bar{\rho}\)</span> of the Sun, Sirius A, and Betelgeuse.  The Sun is 41% more dense (on average) than water (<span class="math notranslate nohighlight">\(\rho_{\rm water} = 1000\;{\rm kg/m^3}\)</span>), while Sirius A and Betelgeuse are less dense than water.  This implies that more massive stars would float in water!</p>
-<div align="center"> 
-<p><strong>Table 3</strong>: Average Stellar Density of the Sun, Sirius A, and Betelgeuse.</p>
-<table class="colwidths-auto table">
+<p>Table <a class="reference internal" href="#sun-comp-table"><span class="std std-numref">4.3</span></a> provides the the average stellar density <span class="math notranslate nohighlight">\(\bar{\rho}\)</span> of the Sun, Sirius A, and Betelgeuse.  The Sun is 41% more dense (on average) than water (<span class="math notranslate nohighlight">\(\rho_{\rm water} = 1000\;{\rm kg/m^3}\)</span>), while Sirius A and Betelgeuse are less dense than water.  This implies that more massive stars would float in water!</p>
+<table class="table" id="sun-comp-table">
+<caption><span class="caption-number">Table 4.3 </span><span class="caption-text">Average Stellar Density of the Sun, Sirius A, and Betelgeuse.</span><a class="headerlink" href="#sun-comp-table" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
 <thead>
-<tr class="row-odd"><th class="text-left head"><p>Star</p></th>
-<th class="text-center head"><p><span class="math notranslate nohighlight">\(M\)</span> (<span class="math notranslate nohighlight">\(M_\odot\)</span>)</p></th>
-<th class="text-center head"><p><span class="math notranslate nohighlight">\(R\)</span> (<span class="math notranslate nohighlight">\(R_\odot\)</span>)</p></th>
-<th class="text-center head"><p><span class="math notranslate nohighlight">\(\bar{\rho}\)</span> (<span class="math notranslate nohighlight">\(\rho_\odot\)</span>)</p></th>
-<th class="text-center head"><p><span class="math notranslate nohighlight">\(\bar{\rho}\;{\rm kg/m^3}\)</span></p></th>
+<tr class="row-odd"><th class="head"><p>Star</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(M\)</span> (<span class="math notranslate nohighlight">\(M_\odot\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(R\)</span> (<span class="math notranslate nohighlight">\(R_\odot\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\bar{\rho}\)</span> (<span class="math notranslate nohighlight">\(\rho_\odot\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\bar{\rho}\;{\rm kg/m^3}\)</span></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Sun</p></td>
-<td class="text-center"><p>1.0</p></td>
-<td class="text-center"><p>1.0</p></td>
-<td class="text-center"><p>1.0</p></td>
-<td class="text-center"><p>1410</p></td>
+<tr class="row-even"><td><p>Sun</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1410\)</span></p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Sirius A</p></td>
-<td class="text-center"><p>2.063</p></td>
-<td class="text-center"><p>1.711</p></td>
-<td class="text-center"><p>0.412</p></td>
-<td class="text-center"><p>581.3</p></td>
+<tr class="row-odd"><td><p>Sirius A</p></td>
+<td><p><span class="math notranslate nohighlight">\(2.063 \)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.711\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0.412\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(581.3\)</span></p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Betelgeuse</p></td>
-<td class="text-center"><p>16.5</p></td>
-<td class="text-center"><p>1021</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(1.55 \times 10^{-8}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(2.19 \times 10^{-5}\)</span></p></td>
+<tr class="row-even"><td><p>Betelgeuse</p></td>
+<td><p><span class="math notranslate nohighlight">\(16.5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1021\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.55 \times 10^{-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.19 \times 10^{-5}\)</span></p></td>
 </tr>
 </tbody>
 </table>
-</div></section>
+</section>
 <section id="morgan-keenan-luminosity-classes">
 <h3><span class="section-number">4.2.2. </span>Morgan-Keenan Luminosity Classes<a class="headerlink" href="#morgan-keenan-luminosity-classes" title="Permalink to this heading">#</a></h3>
 <p>Using the spectra cataloged by Antonia Maury, Hertzsprung found a difference in the spectra of giant and main-sequence stars of the same spectral type.  There are subtle differences in the relative strengths of spectral lines for stars of similar effective temperatures and different luminosities.  In 1943, <a class="reference external" href="https://en.wikipedia.org/wiki/William_Wilson_Morgan">William W. Morgan</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Philip_Childs_Keenan">Phillip C. Keenan</a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Edith_Kellman">Edith Kellman</a> published the <em>Atlas of Stellar Spectra</em>, which consists of 55 prints of spectra that clearly display the effect of temperature and luminosity.  The <em>MKK Atlas</em> established the 2D Morgan-Keenan (M-K) system of spectral classification.</p>
-<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Luminosity_class">luminosity class</a> is appended to a star’s Harvard spectral type and designated by a Roman numeral (see Table 4).  The supergiant stars use the Roman numeral “I” (also divided into subclasses Ia and Ib), where main-sequence stars use the Roman numeral “V”.  The strengths of two closely spaced lines are measured and their ratio is often used to place a star in the appropriate luminosity class.  In general, narrower lines are usually produced by more luminous stars with the same spectral type.  The series of Roman numerals extends below the main sequence, where the subdwarfs (VI or “sd”) are slightly to the left of the main sequence because they are deficient in metals.  The M-K system is not applied to white dwarfs, which are instead classified by the letter D.</p>
+<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Luminosity_class">luminosity class</a> is appended to a star’s Harvard spectral type and designated by a Roman numeral (see Table <a class="reference internal" href="#mk-luminosity-table"><span class="std std-numref">4.4</span></a>).  The supergiant stars use the Roman numeral “I” (also divided into subclasses Ia and Ib), where main-sequence stars use the Roman numeral “V”.  The strengths of two closely spaced lines are measured and their ratio is often used to place a star in the appropriate luminosity class.  In general, narrower lines are usually produced by more luminous stars with the same spectral type.  The series of Roman numerals extends below the main sequence, where the subdwarfs (VI or “sd”) are slightly to the left of the main sequence because they are deficient in metals.  The M-K system is not applied to white dwarfs, which are instead classified by the letter D.</p>
 <p>The 2D M-K classification scheme enables astronomers to locate a star’s position on the H-R diagram based <em>entirely</em> on the appearance of its spectrum.  Using a star’s absolute magnitude <em>M</em> (see the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#absolute-magnitude-and-the-distance-modulus">magnitude scale</a>) from the vertical axis of the H-R diagram, the *distance tot he star can be calculated from its apparent magnitude <em>m</em>.  This method of distance determination is called the <strong>spectroscopic parallax</strong> and is responsible for many of the measured stellar distances.  The accuracy of spectroscopic parallax is limited because there is not a perfect correlation between the absolute magnitude and luminosity class.  A specific luminosity class has an intrinsic scatter of about <span class="math notranslate nohighlight">\(\pm 1\)</span> magnitude, which corresponds to a brightness difference of <span class="math notranslate nohighlight">\(10^{1/5}\)</span> or 1.6.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since the technique of parallax is not involved, the term <em>spectroscopic parallax</em> is a misnomer.  Although, the name does give a connotation of distance determination.</p>
 </div>
-<div align="center"> 
-<p><strong>Table 4</strong>: Morgan-Keenan Luminosity Classes.</p>
-<table class="colwidths-auto table">
+<table class="colwidths-auto table" id="mk-luminosity-table" style="width: 400px">
+<caption><span class="caption-number">Table 4.4 </span><span class="caption-text">Morgan-Keenan Luminosity Classes.</span><a class="headerlink" href="#mk-luminosity-table" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="text-center head"><p>Class</p></th>
 <th class="text-left head"><p>Type of Star</p></th>
@@ -1227,7 +1320,7 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 </tr>
 </tbody>
 </table>
-</div></section>
+</section>
 </section>
 <section id="homework">
 <h2><span class="section-number">4.3. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
