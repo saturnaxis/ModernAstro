@@ -449,7 +449,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interstellar-chemistry">8.1.9. Interstellar Chemistry</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-heating-and-cooling-of-the-ism">8.1.10. The Heating and Cooling of the ISM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sources-of-dust-grains">8.1.11. The Sources of Dust Grains</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">8.1.12. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formation-of-protostars">8.2. The Formation of Protostars</a><ul class="nav section-nav flex-column">
@@ -459,7 +458,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-physical-processes-in-protostellar-star-formation">8.2.4. Additional Physical Processes in Protostellar Star Formation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambipolar-diffusion">8.2.5. Ambipolar Diffusion</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-simulations-of-protostellar-evolution">8.2.6. Numerical Simulations of Protostellar Evolution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.2.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-main-sequence-evolution">8.3. Pre-Main-Sequence Evolution</a><ul class="nav section-nav flex-column">
@@ -484,9 +482,9 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#circumstellar-disk-formation">8.3.10.2. Circumstellar Disk Formation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">8.3.11. <strong>Problems</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">8.4. <strong>Homework</strong></a></li>
 </ul>
             </nav>
         </div>
@@ -560,11 +558,12 @@ m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
 <p>These limiting cases can be understood by analogy with the waves on the surface of a lake.  If the size of the surface waves (i.e., wavelength) is much larger than an object in their way, then the waves pass by almost completely unaffected <span class="math notranslate nohighlight">\((\sigma_\lambda \sim 0)\)</span>.  However, if the object (e.g., an island) is large compared to the waves, then they are simply blocked.  The only waves that pass by the large object are those that miss it altogether.  The light we detect from a dust cloud is the light that passes between the dust particles.</p>
 <p>The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is clearly wavelength-dependent, where longer wavelengths (redder light) are not scattered as strongly as shorter wavelengths (bluer light).  The starlight that passes through is preferentially red, or <em>reddened</em>, as the blue light is removed.  This <strong>interstellar reddening</strong> causes stars to appear redder, where we might infer them to be cooler through Wien’s law.  Fortunately, we can carefully analyze the star’s spectrum (i.e., absorption and emission lines) to detect the change.</p>
 <p>Strongly scattered blue light can leave the cloud in any direction, where a bright star behind a cloud casts a blue <strong>reflection nebula</strong> for observers that are not along the line of sight (e.g., the Pleiades).  This process is analogous to Rayleigh scattering, which produces a blue sky on Earth.  The difference between Mie scattering and Rayleigh scattering is that the scattering particles are much smaller than the wavelength of visible light in Rayleigh scattering and leads to <span class="math notranslate nohighlight">\(\sigma_\lambda \propto \lambda^{-4}\)</span>.</p>
-<ul class="simple">
-<li><p><strong>A star is found to be dimmer than expected at 550 nm by 1.1 magnitudes in the visual (i.e., <span class="math notranslate nohighlight">\(A_V = 1.1\)</span>).  If <span class="math notranslate nohighlight">\(Q_{550}=1.5\)</span> and the radius of the dust grains are 0.2 <span class="math notranslate nohighlight">\({\rm \mu m}\)</span>, estimate the average density <span class="math notranslate nohighlight">\(\overline{n}\)</span> of the material between the star and Earth.  The star is 0.8 kpc from Earth.</strong></p></li>
-</ul>
-<blockquote>
-<div><p>The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is related to the optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> by a faction of 1.086, where <span class="math notranslate nohighlight">\(\tau_{550} = 1.1/1.086 \simeq 1\)</span>.  Given the radius of the dust grains <span class="math notranslate nohighlight">\((a = 0.2\,{\rm \mu m})\)</span> and the extinction coefficient <span class="math notranslate nohighlight">\(Q_{550} = 1.5\)</span> we have,</p>
+<div class="exercise admonition" id="Chapter_12/interstellar-medium-and-star-formation-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 8.1 </span></p>
+<section id="exercise-content">
+<p><strong>A star is found to be dimmer than expected at 550 nm by 1.1 magnitudes in the visual (i.e., <span class="math notranslate nohighlight">\(A_V = 1.1\)</span>).  If <span class="math notranslate nohighlight">\(Q_{550}=1.5\)</span> and the radius of the dust grains are 0.2 <span class="math notranslate nohighlight">\({\rm \mu m}\)</span>, estimate the average density <span class="math notranslate nohighlight">\(\overline{n}\)</span> of the material between the star and Earth.  The star is 0.8 kpc from Earth.</strong></p>
+<p>The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is related to the optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> by a faction of 1.086, where <span class="math notranslate nohighlight">\(\tau_{550} = 1.1/1.086 \simeq 1\)</span>.  Given the radius of the dust grains <span class="math notranslate nohighlight">\((a = 0.2\,{\rm \mu m})\)</span> and the extinction coefficient <span class="math notranslate nohighlight">\(Q_{550} = 1.5\)</span> we have,</p>
 <div class="math notranslate nohighlight">
 \[ \sigma_{550} = 1.5\pi (2\times 10^{-7}\,{\rm m})^2 \simeq 2 \times 10^{-13}\,{\rm m^2}. \]</div>
 <p>The column density of the dust along the line of sight is</p>
@@ -573,7 +572,8 @@ m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
 <p>and the column density is the integrated particle density across the distance to the star.  Then we have,</p>
 <div class="math notranslate nohighlight">
 \[ \overline{n} = \frac{N_d}{0.8\, {\rm kpc}} = 2 \times 10^{-7} \,{\rm m^{-3}}. \]</div>
-</div></blockquote>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -753,19 +753,6 @@ p^+ + {\rm H_2} &amp;\rightarrow {\rm H_2^+} + e^- + p^+. \\
 <li><p>as a product of supernova explosions and stellar winds.</p></li>
 </ul>
 <p>None of these sources appear able to provide the abundance of massive grains found in molecular clouds.  It appears that grains probably grow by a process of coagulation within the molecular clouds themselves.</p>
-</section>
-<section id="problems">
-<h3><span class="section-number">8.1.12. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>1. In a certain part of the North American Nebula, the amount of interstellar extinction in the visual wavelength band is 1.1 magnitudes,  the thickness of the nebula is estimated to be 20 pc, and it is located 700 pc away from Earth.  Suppose that a B spectral class main-sequence star is observed in the direction of the nebula and that the absolute visual magnitude of the star is known to be <span class="math notranslate nohighlight">\(M_V = -1.1\)</span>.  Neglect any other sources of extinction between the observer and the nebula.</p>
-<blockquote>
-<div><p><strong>(a)</strong> Find the apparent visual magnitude of the star if it is lying just <em>in front of</em> the nebula.</p>
-<p><strong>(b)</strong> Find the apparent visual magnitude of the star if it is lying just <em>behind</em> the nebula.</p>
-<p><strong>(c)</strong>  Without taking the existence of the nebula into consideration (based on its apparent magnitude), how far away does the star in part (b) appear to be?  What would be the percentage error in determining the distance if the interstellar extinction were neglected?</p>
-</div></blockquote>
-<p>2. An <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> cloud produces a 21 cm line with an optical depth at its center of <span class="math notranslate nohighlight">\(\tau_H = 0.5\)</span> (i.e., the line is optically thin). The temperature of the gas is 100 K, the line’s FWHM is <span class="math notranslate nohighlight">\({10\,{\rm km/s}}\)</span>, and the average atomic number density of the cloud is <span class="math notranslate nohighlight">\(10^7\,{\rm m^{-3}}\)</span>.  <strong>Find the thickness of the cloud. Express your answer in pc.</strong></p>
-<p>3. In light of the cooling mechanisms discussed for molecular clouds, explain why dense cores are generally cooler than the surrounding giant molecular clouds, and why GMCs are cooler than diffuse molecular clouds.</p>
-</div></blockquote>
 </section>
 </section>
 <section id="the-formation-of-protostars">
@@ -1088,16 +1075,6 @@ collapse began. (Carroll &amp; Ostlie (2007))</p>
 </div>
 <p>After the core collapse, a second shock front is established that continues to heat the infalling material.  The main accretion phase when the temperature can increase by several orders of magnitude, while the luminosity remains roughly flat.  In this period, the deep interior of the protostar increases enough to start deuterium burning and produces up to 60% of the luminosity of a <span class="math notranslate nohighlight">\(1\,M_\odot\)</span> protostar.  The deuterium burning reaction has a fairly large cross section <span class="math notranslate nohighlight">\(\sigma(E)\)</span> at low temperatures and is favored over the PP I chain.  Eventually the luminosity must decrease due to a limited amount of initial resources from the original cloud.  After the deuterium is exhausted, the evolutionary track bends downward and the effective temperature decreases slightly.  The evolution has reached a quasi-static pre-main-sequence phase.</p>
 </section>
-<section id="id1">
-<h3><span class="section-number">8.2.7. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>4. Show that the Jeans mass can also be written in the form</p>
-<div class="math notranslate nohighlight">
-\[ M_J \simeq \frac{c_J v_T^4}{P_o^{1/2} G^{3/2}}, \]</div>
-<p>where the isothermal sound speed <span class="math notranslate nohighlight">\(v_T \equiv \sqrt{kT/(\mu m_H)}\)</span>, the pressure <span class="math notranslate nohighlight">\(P_o\)</span> associated with the density <span class="math notranslate nohighlight">\(\rho_o\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span>, and there is a dimensionless constant <span class="math notranslate nohighlight">\(c_J \simeq 5.46\)</span>.</p>
-<p>5. Assuming that the free-fall acceleration of the surface of a collapsing cloud remains constant during the entire collapse, derive an expression for the free-fall time.  Show that your answer differs from Eqn. 21 only by a term of order unity.</p>
-</div></blockquote>
-</section>
 </section>
 <section id="pre-main-sequence-evolution">
 <h2><span class="section-number">8.3. </span>Pre-Main-Sequence Evolution<a class="headerlink" href="#pre-main-sequence-evolution" title="Permalink to this heading">#</a></h2>
@@ -1294,16 +1271,41 @@ Team, and NASA.]</p>
 <p>A problem immediately arises when the effect of angular momentum is included in the collapse.  Conservation of angular momentum arguments suggest that all main sequence stars should be rotating very rapidly (at rates close to breakup).  However, this is generally not seen in observations, where the angular momentum must be transferred away from the collapsing star.  One suggestion is that magnetic fields slow the rotation by applying torques (i.e., magnetic braking).  Additionally, star-disk or star-planet interactions are likely to play a role in distributing the angular momentum.</p>
 </section>
 </section>
-<section id="id2">
-<h3><span class="section-number">8.3.11. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>6. Assuming a mass loss rate of <span class="math notranslate nohighlight">\(10^{-7}\, M_\odot/{\rm yr}\)</span> and a stellar wind velocity of <span class="math notranslate nohighlight">\(80\,{\rm km/s}\)</span> from a T Tauri star,</p>
-<blockquote>
-<div><p><strong>(a)</strong> estimate the mass density of the wind at a distance of 100 AU from the star, and</p>
-<p><strong>(b)</strong> compare your answer in (a) with the density of the giant molecular cloud <span class="math notranslate nohighlight">\((\rho_o=3\times 10^{-17}\,{\rm kg/m^{-3}})\)</span>.</p>
-</div></blockquote>
-</div></blockquote>
 </section>
+<section id="homework">
+<h2><span class="section-number">8.4. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p>In a certain part of the North American Nebula, the amount of interstellar extinction in the visual wavelength band is 1.1 magnitudes,  the thickness of the nebula is estimated to be 20 pc, and it is located 700 pc away from Earth.  Suppose that a B spectral class main-sequence star is observed in the direction of the nebula and that the absolute visual magnitude of the star is known to be <span class="math notranslate nohighlight">\(M_V = -1.1\)</span>.  Neglect any other sources of extinction between the observer and the nebula.
+<strong>(a)</strong> Find the apparent visual magnitude of the star if it is lying just <em>in front of</em> the nebula.</p>
+<p><strong>(b)</strong> Find the apparent visual magnitude of the star if it is lying just <em>behind</em> the nebula.</p>
+<p><strong>(c)</strong>  Without taking the existence of the nebula into consideration (based on its apparent magnitude), how far away does the star in part (b) appear to be?  What would be the percentage error in determining the distance if the interstellar extinction were neglected?</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<p>An <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> cloud produces a 21 cm line with an optical depth at its center of <span class="math notranslate nohighlight">\(\tau_H = 0.5\)</span> (i.e., the line is optically thin). The temperature of the gas is 100 K, the line’s FWHM is <span class="math notranslate nohighlight">\({10\,{\rm km/s}}\)</span>, and the average atomic number density of the cloud is <span class="math notranslate nohighlight">\(10^7\,{\rm m^{-3}}\)</span>.  <strong>Find the thickness of the cloud. Express your answer in pc.</strong></p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>In light of the cooling mechanisms discussed for molecular clouds, explain why dense cores are generally cooler than the surrounding giant molecular clouds, and why GMCs are cooler than diffuse molecular clouds.</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p>Show that the Jeans mass can also be written in the form</p>
+<div class="math notranslate nohighlight">
+\[ M_J \simeq \frac{c_J v_T^4}{P_o^{1/2} G^{3/2}}, \]</div>
+<p>where the isothermal sound speed <span class="math notranslate nohighlight">\(v_T \equiv \sqrt{kT/(\mu m_H)}\)</span>, the pressure <span class="math notranslate nohighlight">\(P_o\)</span> associated with the density <span class="math notranslate nohighlight">\(\rho_o\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span>, and there is a dimensionless constant <span class="math notranslate nohighlight">\(c_J \simeq 5.46\)</span>.</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p>Assuming that the free-fall acceleration of the surface of a collapsing cloud remains constant during the entire collapse, derive an expression for the free-fall time.  Show that your answer differs from Eqn. 21 only by a term of order unity.</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<p>Assuming a mass loss rate of <span class="math notranslate nohighlight">\(10^{-7}\, M_\odot/{\rm yr}\)</span> and a stellar wind velocity of <span class="math notranslate nohighlight">\(80\,{\rm km/s}\)</span> from a T Tauri star,</p>
+<p><strong>(a)</strong> estimate the mass density of the wind at a distance of 100 AU from the star, and</p>
+<p><strong>(b)</strong> compare your answer in (a) with the density of the giant molecular cloud <span class="math notranslate nohighlight">\((\rho_o=3\times 10^{-17}\,{\rm kg/m^{-3}})\)</span>.</p>
+</div>
 </section>
 </section>
 
@@ -1382,7 +1384,6 @@ Team, and NASA.]</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interstellar-chemistry">8.1.9. Interstellar Chemistry</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-heating-and-cooling-of-the-ism">8.1.10. The Heating and Cooling of the ISM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sources-of-dust-grains">8.1.11. The Sources of Dust Grains</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">8.1.12. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-formation-of-protostars">8.2. The Formation of Protostars</a><ul class="nav section-nav flex-column">
@@ -1392,7 +1393,6 @@ Team, and NASA.]</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-physical-processes-in-protostellar-star-formation">8.2.4. Additional Physical Processes in Protostellar Star Formation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ambipolar-diffusion">8.2.5. Ambipolar Diffusion</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-simulations-of-protostellar-evolution">8.2.6. Numerical Simulations of Protostellar Evolution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.2.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-main-sequence-evolution">8.3. Pre-Main-Sequence Evolution</a><ul class="nav section-nav flex-column">
@@ -1417,9 +1417,9 @@ Team, and NASA.]</p>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#circumstellar-disk-formation">8.3.10.2. Circumstellar Disk Formation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">8.3.11. <strong>Problems</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">8.4. <strong>Homework</strong></a></li>
 </ul>
   </nav></div>
 
