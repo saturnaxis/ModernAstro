@@ -502,20 +502,233 @@ document.write(`
 <p class="admonition-title">Note</p>
 <p>Icko Iben Jr. pioneered the first computations (in the mid-1960s) of main-sequence and post-main-sequence evolutionary tracks for a range of stellar masses.  Modern calculations now consider the effects of convective overshooting and mass over the stellar lifetime.</p>
 </div>
-<div align="center">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Main-Sequence Evolutionary Tracks</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="ms-tracks-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_1.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_1.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_1.jpg?raw=true?" style="width: 600px;" /></a>
-<a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Table_1.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Table_1.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Table_1.jpg?raw=true?" style="width: 475px;" /></a>
-<p><strong>Figure 1</strong>: (a) Main-sequence and post-main-sequence evolutionary tracks of stars with an initial composition of <span class="math notranslate nohighlight">\(X = 0.68\)</span>, <span class="math notranslate nohighlight">\(Y = 0.30\)</span>, and <span class="math notranslate nohighlight">\(Z = 0.02\)</span>.; (b) The elapsed times since reaching the zero-age main sequence to the indicated points on the left, measured in millions of years (Myr). (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1992A%26AS...96..269S">Schaller et al., Astron. Astrophys. Suppl., 96, 269, 1992.</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Main-sequence and post-main-sequence evolutionary tracks of stars with an initial composition of <span class="math notranslate nohighlight">\(X = 0.68\)</span>, <span class="math notranslate nohighlight">\(Y = 0.30\)</span>, and <span class="math notranslate nohighlight">\(Z = 0.02\)</span>.</span><a class="headerlink" href="#ms-tracks-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Main-Sequence Contraction Times</label><div class="sd-tab-content docutils">
+<table class="colwidths-auto table table-center" id="ms-times-table">
+<caption><span class="caption-number">Table 9.1 </span><span class="caption-text">The elapsed times since reaching the zero-age main sequence to the indicated points on the left, measured in millions of years (Myr). (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1992A%26AS...96..269S">Schaller et al., Astron. Astrophys. Suppl., 96, 269, 1992.</a>)</span><a class="headerlink" href="#ms-times-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="text-center head"><p>Initial Mass <br> (<span class="math notranslate nohighlight">\(M_\odot\)</span>)</p></th>
+<th class="text-center head"><p>1</p></th>
+<th class="text-center head"><p>2</p></th>
+<th class="text-center head"><p>3</p></th>
+<th class="text-center head"><p>4</p></th>
+<th class="text-center head"><p>5</p></th>
+<th class="text-center head"><p>6</p></th>
+<th class="text-center head"><p>7</p></th>
+<th class="text-center head"><p>8</p></th>
+<th class="text-center head"><p>9</p></th>
+<th class="text-center head"><p>10</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>25</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>6.33044</p></td>
+<td class="text-center"><p>6.40774</p></td>
+<td class="text-center"><p>6.41337</p></td>
+<td class="text-center"><p>6.43767</p></td>
+<td class="text-center"><p>6.51783</p></td>
+<td class="text-center"><p>7.04971</p></td>
+<td class="text-center"><p>7.0591</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>15</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>11.4099</p></td>
+<td class="text-center"><p>11.5842</p></td>
+<td class="text-center"><p>11.5986</p></td>
+<td class="text-center"><p>11.6118</p></td>
+<td class="text-center"><p>11.6135</p></td>
+<td class="text-center"><p>11.6991</p></td>
+<td class="text-center"><p>12.7554</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>12</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>15.7149</p></td>
+<td class="text-center"><p>16.0176</p></td>
+<td class="text-center"><p>16.0337</p></td>
+<td class="text-center"><p>16.0555</p></td>
+<td class="text-center"><p>16.1150</p></td>
+<td class="text-center"><p>16.4230</p></td>
+<td class="text-center"><p>16.7120</p></td>
+<td class="text-center"><p>17.5847</p></td>
+<td class="text-center"><p>17.6749</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>9</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>25.9376</p></td>
+<td class="text-center"><p>26.3886</p></td>
+<td class="text-center"><p>26.4198</p></td>
+<td class="text-center"><p>26.4580</p></td>
+<td class="text-center"><p>26.5019</p></td>
+<td class="text-center"><p>27.6446</p></td>
+<td class="text-center"><p>28.1330</p></td>
+<td class="text-center"><p>28.9618</p></td>
+<td class="text-center"><p>29.2294</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>7</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>42.4607</p></td>
+<td class="text-center"><p>43.1880</p></td>
+<td class="text-center"><p>43.2291</p></td>
+<td class="text-center"><p>43.3388</p></td>
+<td class="text-center"><p>43.4304</p></td>
+<td class="text-center"><p>45.3175</p></td>
+<td class="text-center"><p>46.1810</p></td>
+<td class="text-center"><p>47.9727</p></td>
+<td class="text-center"><p>48.3916</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>92.9357</p></td>
+<td class="text-center"><p>94.4591</p></td>
+<td class="text-center"><p>94.5735</p></td>
+<td class="text-center"><p>94.9218</p></td>
+<td class="text-center"><p>95.2108</p></td>
+<td class="text-center"><p>99.3835</p></td>
+<td class="text-center"><p>100.888</p></td>
+<td class="text-center"><p>107.208</p></td>
+<td class="text-center"><p>108.454</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>162.043</p></td>
+<td class="text-center"><p>164.734</p></td>
+<td class="text-center"><p>164.916</p></td>
+<td class="text-center"><p>165.701</p></td>
+<td class="text-center"><p>166.362</p></td>
+<td class="text-center"><p>172.38</p></td>
+<td class="text-center"><p>185.435</p></td>
+<td class="text-center"><p>192.198</p></td>
+<td class="text-center"><p>194.284</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>346.240</p></td>
+<td class="text-center"><p>352.503</p></td>
+<td class="text-center"><p>352.792</p></td>
+<td class="text-center"><p>355.018</p></td>
+<td class="text-center"><p>357.310</p></td>
+<td class="text-center"><p>366.880</p></td>
+<td class="text-center"><p>420.502</p></td>
+<td class="text-center"><p>440.536</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>2.5</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>574.337</p></td>
+<td class="text-center"><p>584.916</p></td>
+<td class="text-center"><p>586.165</p></td>
+<td class="text-center"><p>589.786</p></td>
+<td class="text-center"><p>595.476</p></td>
+<td class="text-center"><p>607.356</p></td>
+<td class="text-center"><p>710.235</p></td>
+<td class="text-center"><p>757.056</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>1094.08</p></td>
+<td class="text-center"><p>1115.94</p></td>
+<td class="text-center"><p>1117.74</p></td>
+<td class="text-center"><p>1129.12</p></td>
+<td class="text-center"><p>1148.10</p></td>
+<td class="text-center"><p>1160.96</p></td>
+<td class="text-center"><p>1379.94</p></td>
+<td class="text-center"><p>1411.25</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1.5</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>2632.52</p></td>
+<td class="text-center"><p>2690.39</p></td>
+<td class="text-center"><p>2699.52</p></td>
+<td class="text-center"><p>2756.73</p></td>
+<td class="text-center"><p>2910.76</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>1.25</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>4703.20</p></td>
+<td class="text-center"><p>4910.11</p></td>
+<td class="text-center"><p>4933.83</p></td>
+<td class="text-center"><p>5114.83</p></td>
+<td class="text-center"><p>5588.92</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>7048.40</p></td>
+<td class="text-center"><p>9844.57</p></td>
+<td class="text-center"><p>11386.0</p></td>
+<td class="text-center"><p>11635.8</p></td>
+<td class="text-center"><p>12269.8</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>0.8</p></td>
+<td class="text-center"><p>0</p></td>
+<td class="text-center"><p>18828.9</p></td>
+<td class="text-center"><p>25027.9</p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <p>With the depletion of hydrogen in the core, the generation of energy via the pp chain must stop.  But the core temperature can increase to a point where nuclear fusion continues to generate energy in a thick hydrogen-burning shell around a small helium core.  The luminosity remains close to zero throughout the inner 3% of a star’s mass, the temperature gradient <span class="math notranslate nohighlight">\(dT/dr\simeq 0\)</span>, and <span class="math notranslate nohighlight">\(T\)</span> is nearly constant.  For an isothermal core to support the material above it in hydrostatic equilibrium, the pressure gradient must result from a continuous increase in the density at the center of the star.  At this point, the luminosity being generated in the thick shell actually exceeds the production by the core during the hydrogen burning phase.  Some of the luminosity from the shell goes into a slow expansion of an outer envelope.  The effective temperature begins to decrease slightly.  As the hydrogen-burning shell continues to consume its nuclear fuel, the “ash” from nuclear burning causes the isothermal helium core to grow in mass while the star moves farther to the red in the H-R diagram.</p>
-<div align="center">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Interior Structure Modern Sun</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="sun-structure-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_2.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_2.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_2.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 2</strong>: The interior structure of the present-day Sun (a 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> star), 4.57 Gyr after reaching the ZAMS. The numbered subscripts refer to the mass fraction by atomic number (e.g., $X_{12} = mass of carbon-12/total mass in star). (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://iopscience.iop.org/article/10.1086/321493/pdf">Bahcall, Pinsonneault, and Basu, Ap. J., 555, 990, 2001.</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.2 </span><span class="caption-text">The interior structure of the present-day Sun (a 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> star), 4.57 Gyr after reaching the ZAMS. The numbered subscripts refer to the mass fraction by atomic number (e.g., <span class="math notranslate nohighlight">\(X_{12} =\)</span> mass of carbon-12/total mass in star). (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://iopscience.iop.org/article/10.1086/321493/pdf">Bahcall, Pinsonneault, and Basu, Ap. J., 555, 990, 2001.</a>)</span><a class="headerlink" href="#sun-structure-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
-<div align="center">
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Interior Structure Sun &#64; 10 Gyr</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="point-3-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_3.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_3.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_3.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 3</strong>: The interior structure of a 1 M⊙ star near point 3 in Fig. 1, as described by the pioneering calculations of Icko Iben. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</p>
-</div></section>
+<figcaption>
+<p><span class="caption-number">Fig. 9.3 </span><span class="caption-text">The interior structure of a 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> star near point 3 in Fig. <a class="reference internal" href="#ms-tracks-fig"><span class="std std-numref">9.1</span></a>, as described by the pioneering calculations of Icko Iben. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</span><a class="headerlink" href="#point-3-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
 <section id="the-schonberg-chandrasekhar-limit">
 <h3><span class="section-number">9.1.3. </span>The Schönberg-Chandrasekhar Limit<a class="headerlink" href="#the-schonberg-chandrasekhar-limit" title="Permalink to this heading">#</a></h3>
 <p>The hydrogen shell burning phase of evolution ends when the isothermal core mass is too great and the core pressure can no longer support the material above it.  Schönberg and Chandrasekhar (in 1942) showed the maximum star mass fraction that can exist in an isothermal core and still support the overlying layers is</p>

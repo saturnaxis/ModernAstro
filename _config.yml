@@ -34,6 +34,7 @@ parse:
     - dollarmath
     - html_image
     - html_admonition
+    - colon_fence
 
 #######################################################################################
 # LaTeX-specific settings
