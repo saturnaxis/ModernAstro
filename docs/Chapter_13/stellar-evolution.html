@@ -444,7 +444,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-degenerate-electron-gas">9.1.4. The Degenerate Electron Gas</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-evolution-of-massive-stars">9.1.5. Main-Sequence Evolution of Massive Stars</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-derivation-of-the-schonberg-chandrasekhar-limit">9.1.6. A Derivation of the Schönberg-Chandrasekhar Limit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">9.1.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#late-stages-of-stellar-evolution">9.2. Late Stages of Stellar Evolution</a><ul class="nav section-nav flex-column">
@@ -460,7 +459,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-loss-and-agb-evolution">9.2.10. Mass Loss and AGB Evolution</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-asymptotic-giant-branch">9.2.11. Post-Asymptotic Giant Branch</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#planetary-nebulae">9.2.12. Planetary Nebulae</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.2.13. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-clusters">9.3. Stellar Clusters</a><ul class="nav section-nav flex-column">
@@ -471,10 +469,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isochrones-and-cluster-ages">9.3.5. Isochrones and Cluster Ages</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hertzsprung-gap">9.3.6. The Hertzsprung Gap</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blue-stragglers">9.3.7. Blue Stragglers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.3.8. <strong>Problems</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">9.4. Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">9.4. <strong>Homework</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">9.5. Additional Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -732,18 +730,20 @@ Interior Structure Sun &#64; 10 Gyr</label><div class="sd-tab-content docutils">
 <section id="the-schonberg-chandrasekhar-limit">
 <h3><span class="section-number">9.1.3. </span>The Schönberg-Chandrasekhar Limit<a class="headerlink" href="#the-schonberg-chandrasekhar-limit" title="Permalink to this heading">#</a></h3>
 <p>The hydrogen shell burning phase of evolution ends when the isothermal core mass is too great and the core pressure can no longer support the material above it.  Schönberg and Chandrasekhar (in 1942) showed the maximum star mass fraction that can exist in an isothermal core and still support the overlying layers is</p>
-<div class="math notranslate nohighlight">
-\[ \left(\frac{M_{ic}}{M} \right)_{\rm SC} \simeq 0.37 \left( \frac{\mu_{\rm env}}{\mu_{ic}}\right)^2, \tag{1} \]</div>
+<div class="math notranslate nohighlight" id="equation-max-mass-frac">
+<span class="eqno">(9.1)<a class="headerlink" href="#equation-max-mass-frac" title="Permalink to this equation">#</a></span>\[\left(\frac{M_{ic}}{M} \right)_{\rm SC} \simeq 0.37 \left( \frac{\mu_{\rm env}}{\mu_{ic}}\right)^2,\]</div>
 <p>where the subscripts <span class="math notranslate nohighlight">\(ic\)</span> and <span class="math notranslate nohighlight">\({\rm env}\)</span> represent the isothermal core and overlying envelope, respectively.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Sch%C3%B6nberg%E2%80%93Chandrasekhar_limit">Schönberg-Chandrasekhar Limit</a> is another consequence of the virial theorem.  The maximum stellar mass fraction depends on the fraction of the mean molecular weights between the core and the envelope.  When the isothermal helium core’s mass exceeds this limit, the core collapses on a Kelvin-Helmholtz timescale and the star evolves very rapidly compared to the nuclear timescale of the main sequence.  For stars below about 1.2 <span class="math notranslate nohighlight">\(M_\odot\)</span>, this defines the end of the main-sequence phase.</p>
-<ul class="simple">
-<li><p><strong>Assume a star forms with an initial composition (<span class="math notranslate nohighlight">\(X=0.68\)</span>, <span class="math notranslate nohighlight">\(Y=0.30\)</span>, and <span class="math notranslate nohighlight">\(Z=0.02\)</span>) and complete ionization occurs at the core-envelope boundary so that <span class="math notranslate nohighlight">\(\mu_{\rm env} \simeq 0.63\)</span>.  What is the Schönberg-Chandrasekhar limit once all the hydrogen is converted into helium in the isothermal core, <span class="math notranslate nohighlight">\(\mu_{ic} \simeq 1.34\)</span>?</strong></p></li>
-</ul>
-<blockquote>
-<div><p>Using Eqn. 1, we can estimate the Schönberg-Chandrasekhar limit as</p>
+<div class="exercise orange admonition" id="Chapter_13/stellar-evolution-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9.1 </span></p>
+<section id="exercise-content">
+<p><strong>Assume a star forms with an initial composition (<span class="math notranslate nohighlight">\(X=0.68\)</span>, <span class="math notranslate nohighlight">\(Y=0.30\)</span>, and <span class="math notranslate nohighlight">\(Z=0.02\)</span>) and complete ionization occurs at the core-envelope boundary so that <span class="math notranslate nohighlight">\(\mu_{\rm env} \simeq 0.63\)</span>.  What is the Schönberg-Chandrasekhar limit once all the hydrogen is converted into helium in the isothermal core, <span class="math notranslate nohighlight">\(\mu_{ic} \simeq 1.34\)</span>?</strong></p>
+<p>Using Eq. <a class="reference internal" href="#equation-max-mass-frac">(9.1)</a>, we can estimate the Schönberg-Chandrasekhar limit as</p>
 <div class="math notranslate nohighlight">
 \[ \left(\frac{M_{ic}}{M} \right)_{\rm SC} \simeq 0.08. \]</div>
 <p>The isothermal core will collapse if its mass exceeds 8% of the total stellar mass.</p>
-</div></blockquote>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu_ic</span> <span class="o">=</span> <span class="mf">1.34</span>
@@ -765,8 +765,10 @@ Interior Structure Sun &#64; 10 Gyr</label><div class="sd-tab-content docutils">
 <h3><span class="section-number">9.1.4. </span>The Degenerate Electron Gas<a class="headerlink" href="#the-degenerate-electron-gas" title="Permalink to this heading">#</a></h3>
 <p>The isothermal core mass can exceed the Schönberg-Chandrasekhar limit if an <em>additional source of pressure</em> can supplement the ideal gas pressure.  A <strong>degenerate</strong> gas pressure if the gas density becomes sufficiently high and the electrons are forced to occupy the lowest available energy levels.  Electrons cannot all occupy the same quantum state because they are fermions and obey the Pauli exclusion principle.  The electrons are stacked starting with the ground state into progressively higher energy states.  For <em>complete degeneracy</em>, the gas pressure is due to the nonthermal motion of the electrons and becomes independent of the gas temperature.</p>
 <p>If the electrons are nonrelativistic, the pressure of a completely degenerate electron gas is given by a <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#polytropic-models-and-the-lane-emden-equation">polytropic equation of state</a>:</p>
-<div class="math notranslate nohighlight">
-\[ P_e = K \rho^{5/3}, \tag{2} \]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-4542d831-5329-4a12-9b5b-7c20b16e1dcf">
+<span class="eqno">(9.2)<a class="headerlink" href="#equation-4542d831-5329-4a12-9b5b-7c20b16e1dcf" title="Permalink to this equation">#</a></span>\[\begin{align}
+P_e = K \rho^{5/3}, 
+\end{align}\]</div>
 <p>which has an index <span class="math notranslate nohighlight">\(n = 3/2\)</span> and a constant <span class="math notranslate nohighlight">\(K\)</span>.  For a <em>partial degeneracy</em>, some temperature dependence remains.  The isothermal core of a Solar-mass star is partially degenerate, where the isothermal core mass fraction can reach 0.13 before it begins to collapse.  Less massive stars exhibit even higher levels of degeneracy and many not exceed the Schönberg-Chandrasekhar limit at all before the next stage of burning starts.</p>
 </section>
 <section id="main-sequence-evolution-of-massive-stars">
@@ -777,20 +779,22 @@ Interior Structure Sun &#64; 10 Gyr</label><div class="sd-tab-content docutils">
 <section id="a-derivation-of-the-schonberg-chandrasekhar-limit">
 <h3><span class="section-number">9.1.6. </span>A Derivation of the Schönberg-Chandrasekhar Limit<a class="headerlink" href="#a-derivation-of-the-schonberg-chandrasekhar-limit" title="Permalink to this heading">#</a></h3>
 <p>To estimate the Schönberg-Chandrasekhar limit, we begin by dividing the equations of hydrostatic equilibrium <span class="math notranslate nohighlight">\(dP/dr\)</span> and mass conservation <span class="math notranslate nohighlight">\(dM_r/dr\)</span> to get</p>
-<div class="math notranslate nohighlight">
-\[ \frac{dP}{dM_r} = -\frac{GM_r}{4\pi r^4}, \tag{3}\]</div>
-<p>which is called the <em>Lagrangian form</em> of the condition for hydrostatic equilibrium.  The left-hand side of Eqn. 3 can be rewritten in terms of a derivative as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
+<div class="math notranslate nohighlight" id="equation-sc-hydro">
+<span class="eqno">(9.3)<a class="headerlink" href="#equation-sc-hydro" title="Permalink to this equation">#</a></span>\[ \frac{dP}{dM_r} = -\frac{GM_r}{4\pi r^4}, \]</div>
+<p>which is called the <em>Lagrangian form</em> of the condition for hydrostatic equilibrium.  The left-hand side of Eq. <a class="reference internal" href="#equation-sc-hydro">(9.3)</a> can be rewritten in terms of a derivative as</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 4\pi r^3 \frac{dP}{dM_r} &amp;= \frac{d}{dM_r}\left(4\pi r^3 P\right) -12\pi r^2 P\frac{dr}{dM_r}\\
 &amp;= \frac{d}{dM_r}\left(4\pi r^3 P\right) - \frac{3 P}{\rho}, 
-\end{align*}\end{split}\]</div>
-<p>which makes use of Eqn. 7 from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-equation-of-mass-conservation">The Equation of Mass Conservation</a>.  Multiplying the <span class="math notranslate nohighlight">\(4\pi r^3\)</span> factor through Eqn. 3 and substituting, we get</p>
-<div class="math notranslate nohighlight">
-\[\frac{d}{dM_r}\left(4\pi r^3 P\right) - \frac{3 P}{\rho} = - \frac{GM_r}{r} \tag{4}. \]</div>
+\end{align*}\]</div>
+<p>which makes use of Eq. <a class="reference internal" href="../Chapter_11/interiors-of-stars.html#equation-mass-consv-eq">(7.8)</a>.  Multiplying the <span class="math notranslate nohighlight">\(4\pi r^3\)</span> factor through Eq. <a class="reference internal" href="#equation-sc-hydro">(9.3)</a> and substituting, we get</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7d4f101b-663a-48b7-9ddf-7d484005c044">
+<span class="eqno">(9.4)<a class="headerlink" href="#equation-7d4f101b-663a-48b7-9ddf-7d484005c044" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{d}{dM_r}\left(4\pi r^3 P\right) - \frac{3 P}{\rho} = - \frac{GM_r}{r}.
+\end{align}\]</div>
 <p>Integrating over the isothermal core mass <span class="math notranslate nohighlight">\(M_{ic}\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[ \int_0^{M_{ic}} \frac{d}{dM_r}\left(4\pi r^3 P\right)dM_r -  \int_0^{M_{ic}} \frac{3 P}{\rho}dM_r= -  \int_0^{M_{ic}} \frac{GM_r}{r} dM_r. \tag{5}\]</div>
+<div class="math notranslate nohighlight" id="equation-isotherm-mass-int">
+<span class="eqno">(9.5)<a class="headerlink" href="#equation-isotherm-mass-int" title="Permalink to this equation">#</a></span>\[\int_0^{M_{ic}} \frac{d}{dM_r}\left(4\pi r^3 P\right)dM_r -  \int_0^{M_{ic}} \frac{3 P}{\rho}dM_r= -  \int_0^{M_{ic}} \frac{GM_r}{r} dM_r. \]</div>
 <p>Each term will be considered separately.  Starting with the first term on the left-hand side, we can integrate directly to get</p>
 <div class="math notranslate nohighlight">
 \[ \int_0^{M_{ic}} \frac{d}{dM_r}\left(4\pi r^3 P\right)dM_r = 4\pi R^3_{ic} P_{ic}, \]</div>
@@ -798,98 +802,120 @@ Interior Structure Sun &#64; 10 Gyr</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[ P = \frac{\rho}{\mu_{ic}m_H}kT_{ic}. \]</div>
 <p>By direct integration, we get</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 \int_0^{M_{ic}} \frac{3 P}{\rho}dM_r &amp;= \frac{3M_{ic}kT_{ic}}{\mu_{ic}m_H} \\
 &amp;= 3 N_{ic}kT_{ic} \\
 &amp;= 2 K_{ic},
-\end{align*} \end{split}\]</div>
-<p>using substitutions for the number of gas particles in the isothermal core <span class="math notranslate nohighlight">\((N_{ic} \equiv M_{ic}/(\mu_{ic}m_H))\)</span> and the total thermal energy of the core <span class="math notranslate nohighlight">\(K_{ic} = \frac{3}{2}N_{ic}kT_{ic}\)</span>, assuming an ideal monatomic gas.  The right-hand side of Eqn. 5 is simply the gravitational potential energy of the core or</p>
+\end{align*}\]</div>
+<p>using substitutions for the number of gas particles in the isothermal core <span class="math notranslate nohighlight">\((N_{ic} \equiv M_{ic}/(\mu_{ic}m_H))\)</span> and the total thermal energy of the core <span class="math notranslate nohighlight">\(K_{ic} = \frac{3}{2}N_{ic}kT_{ic}\)</span>, assuming an ideal monatomic gas.  The right-hand side of Eq. <a class="reference internal" href="#equation-isotherm-mass-int">(9.5)</a> is simply the gravitational potential energy of the core or</p>
 <div class="math notranslate nohighlight">
 \[ -\int_0^{M_{ic}} \frac{GM_r}{r} dM_r = U_{ic}. \]</div>
-<p>Substituting each term into Eqn. 5, we find</p>
-<div class="math notranslate nohighlight">
-\[ 4\pi R^3_{ic} P_{ic} - 2 K_{ic} = U_{ic}. \tag{6} \]</div>
-<p>If we had integrated to the surface of the star <span class="math notranslate nohighlight">\(R_s\)</span> instead of the radius of the core <span class="math notranslate nohighlight">\(R_{ic}\)</span>, then the first term on the left-hand side of Eqn. 6 would be zero (i.e., <span class="math notranslate nohighlight">\(P\simeq 0\)</span>).  Thus Eqn. 6 is a generalized form of the virial theorem for stellar interiors in hydrostatic equilibrium.  Equation 6 can be solved for the isothermal core pressure in terms either fundamental constants or observable quantities as</p>
-<div class="math notranslate nohighlight">
-\[ P_{ic} = \frac{3}{4\pi R_{ic}^3} \left( \frac{M_{ic}kT_{ic}}{2\mu_{ic} m_H} - \frac{GM_{ic}^2}{5R_{ic}} \right). \tag{7} \]</div>
-<p>The two competing terms in Eqn. 7 are due to the thermal energy and the gravitational effects.</p>
+<p>Substituting each term into Eq. <a class="reference internal" href="#equation-isotherm-mass-int">(9.5)</a>, we find</p>
+<div class="math notranslate nohighlight" id="equation-ic-pot-energy">
+<span class="eqno">(9.6)<a class="headerlink" href="#equation-ic-pot-energy" title="Permalink to this equation">#</a></span>\[4\pi R^3_{ic} P_{ic} - 2 K_{ic} = U_{ic}. \]</div>
+<p>If we had integrated to the surface of the star <span class="math notranslate nohighlight">\(R_s\)</span> instead of the radius of the core <span class="math notranslate nohighlight">\(R_{ic}\)</span>, then the first term on the left-hand side of Eq. <a class="reference internal" href="#equation-ic-pot-energy">(9.6)</a> would be zero (i.e., <span class="math notranslate nohighlight">\(P\simeq 0\)</span>).  Thus Eq. <a class="reference internal" href="#equation-ic-pot-energy">(9.6)</a> is a generalized form of the virial theorem for stellar interiors in hydrostatic equilibrium.  Equation <a class="reference internal" href="#equation-ic-pot-energy">(9.6)</a> can be solved for the isothermal core pressure in terms either fundamental constants or observable quantities as</p>
+<div class="math notranslate nohighlight" id="equation-ic-press">
+<span class="eqno">(9.7)<a class="headerlink" href="#equation-ic-press" title="Permalink to this equation">#</a></span>\[ P_{ic} = \frac{3}{4\pi R_{ic}^3} \left( \frac{M_{ic}kT_{ic}}{2\mu_{ic} m_H} - \frac{GM_{ic}^2}{5R_{ic}} \right). \]</div>
+<p>The two competing terms in Eq. <a class="reference internal" href="#equation-ic-press">(9.7)</a> are due to the thermal energy and the gravitational effects.</p>
 <ul class="simple">
 <li><p>For specific values of <span class="math notranslate nohighlight">\(T_{ic}\)</span> and <span class="math notranslate nohighlight">\(R_{ic}\)</span>, the thermal energy tends to increase the pressure at the core surface while the gravitational term tends to decrease it, as the core mass increases.</p></li>
 <li><p>For some value of <span class="math notranslate nohighlight">\(M_{ic}\)</span>, there exists an upper limit on how much pressure the isothermal core can exert to support the overlying envelope because <span class="math notranslate nohighlight">\(P_{ic}\)</span> is maximized.</p></li>
 </ul>
 <p>To determine the maximum <span class="math notranslate nohighlight">\(P_{ic}\)</span>, we <em>differentiate with respect to <span class="math notranslate nohighlight">\(M_{ic}\)</span> and set the result equal to zero</em>.  After which, the maximum <span class="math notranslate nohighlight">\(P_{ic}\)</span> occurs at</p>
-<div class="math notranslate nohighlight">
-\[ R_{ic} = \frac{2}{5} \frac{GM_{ic}\mu_{ic}m_H}{kT_{ic}} \tag{8} \]</div>
+<div class="math notranslate nohighlight" id="equation-radius-ic">
+<span class="eqno">(9.8)<a class="headerlink" href="#equation-radius-ic" title="Permalink to this equation">#</a></span>\[R_{ic} = \frac{2}{5} \frac{GM_{ic}\mu_{ic}m_H}{kT_{ic}} \]</div>
 <p>and the maximum <span class="math notranslate nohighlight">\(P_{ic}\)</span> is given by</p>
-<div class="math notranslate nohighlight">
-\[ P_{ic,max} = \frac{375}{64 \pi}\frac{1}{G^3M_{ic}^2}\left( \frac{kT_{ic}}{\mu_{ic}m_H}\right)^4.  \tag{9} \]</div>
-<p>Equation 9 shows the maximum cores surface pressure <em>decreases</em> as the mass <em>increases</em>.  There is a critical condition where the mass is too great for the isothermal core to support the overlying layers of the stellar envelope.</p>
-<p>To estimate the critical mass, we need to determine the pressure exerted on the core by the overlying envelope.  We will start with Eqn. 3, this time integrating from the stellar surface down to the core radius.  Assuming that the pressure at the stellar surface is zero,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
+<div class="math notranslate nohighlight" id="equation-max-ic-press">
+<span class="eqno">(9.9)<a class="headerlink" href="#equation-max-ic-press" title="Permalink to this equation">#</a></span>\[ P_{ic,max} = \frac{375}{64 \pi}\frac{1}{G^3M_{ic}^2}\left( \frac{kT_{ic}}{\mu_{ic}m_H}\right)^4.  \]</div>
+<p>Equation <a class="reference internal" href="#equation-max-ic-press">(9.9)</a> shows the maximum cores surface pressure <em>decreases</em> as the mass <em>increases</em>.  There is a critical condition where the mass is too great for the isothermal core to support the overlying layers of the stellar envelope.</p>
+<p>To estimate the critical mass, we need to determine the pressure exerted on the core by the overlying envelope.  We will start with Eq. <a class="reference internal" href="#equation-sc-hydro">(9.3)</a>, this time integrating from the stellar surface down to the core radius.  Assuming that the pressure at the stellar surface is zero,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
 P_{ic,env} &amp;= \int_0^{P_{ic,env}} dP \\
 &amp;= -\int_M^{M_{ic}} \frac{GM_r}{4\pi r^4} dM_r \\
 &amp;\simeq -\frac{G}{8\pi \langle r^4 \rangle}\left( M_{ic}^2 - M^2\right), 
-\end{align*} \end{split}\]</div>
+\end{align*}\]</div>
 <p>which depends on the total mass <span class="math notranslate nohighlight">\(M\)</span>, and an average value <span class="math notranslate nohighlight">\(\langle r^4 \rangle\)</span> between the radius of the core and surface.  Assuming that the core mass is small compared to the total mass (i.e., <span class="math notranslate nohighlight">\(M_{ic}\ll M\)</span>) and <span class="math notranslate nohighlight">\(\langle r^4 \rangle \sim R^4/2\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[ P_{ic,env} \sim \frac{GM^2}{4\pi R^4}, \tag{10} \]</div>
+<div class="math notranslate nohighlight" id="equation-env-ic-press">
+<span class="eqno">(9.10)<a class="headerlink" href="#equation-env-ic-press" title="Permalink to this equation">#</a></span>\[ P_{ic,env} \sim \frac{GM^2}{4\pi R^4}, \]</div>
 <p>for the core surface pressure <em>due to the weight of the envelope</em>.  The quantity <span class="math notranslate nohighlight">\(R^4\)</span> can be written in terms of the stellar mass and isothermal core temperature using the ideal gas law,</p>
-<div class="math notranslate nohighlight">
-\[ T_{ic} = \frac{P_{ic,env} \mu_{env}m_H}{\rho_{ic,env}k}, \tag{11}\]</div>
+<div class="math notranslate nohighlight" id="equation-t-ic">
+<span class="eqno">(9.11)<a class="headerlink" href="#equation-t-ic" title="Permalink to this equation">#</a></span>\[T_{ic} = \frac{P_{ic,env} \mu_{env}m_H}{\rho_{ic,env}k}, \]</div>
 <p>using the subscript <span class="math notranslate nohighlight">\(env\)</span> to designate the variables dependence on the envelope.  Through the bulk density,</p>
 <div class="math notranslate nohighlight">
 \[ \rho_{ic,env} \sim \frac{3M}{4\pi R^3},\]</div>
-<p>Equation 10, and solving for <span class="math notranslate nohighlight">\(R\)</span> in Eqn. 11 gives,</p>
+<p>using Eq. <a class="reference internal" href="#equation-env-ic-press">(9.10)</a>, and solving for <span class="math notranslate nohighlight">\(R\)</span> in Eq. <a class="reference internal" href="#equation-t-ic">(9.11)</a> gives,</p>
 <div class="math notranslate nohighlight">
 \[ R\sim \frac{GM\mu_{env}m_H}{3kT_{ic}}. \]</div>
-<p>Substituting the estimate of the envelope radius <span class="math notranslate nohighlight">\(R\)</span> back into Eqn. 10, we find</p>
-<div class="math notranslate nohighlight">
-\[ P_{ic,env} \sim \frac{81}{4\pi}\frac{1}{G^3M^2} \left( \frac{kT_{ic}}{\mu_{ic}m_H} \right)^4, \tag{12} \]</div>
-<p>which is similar to Eqn. 9.  Finally, to estimate the Schönberg-Chandrasekhar limit, we set Eqn. 12 equal to Eqn 9.  This immediately simplifies to give</p>
+<p>Substituting the estimate of the envelope radius <span class="math notranslate nohighlight">\(R\)</span> back into Eq. <a class="reference internal" href="#equation-env-ic-press">(9.10)</a>, we find</p>
+<div class="math notranslate nohighlight" id="equation-p-ic-deriv">
+<span class="eqno">(9.12)<a class="headerlink" href="#equation-p-ic-deriv" title="Permalink to this equation">#</a></span>\[ P_{ic,env} \sim \frac{81}{4\pi}\frac{1}{G^3M^2} \left( \frac{kT_{ic}}{\mu_{ic}m_H} \right)^4, \]</div>
+<p>which is similar to Eqn. <a class="reference internal" href="#equation-max-ic-press">(9.9)</a>.  Finally, to estimate the Schönberg-Chandrasekhar limit, we set Eqn. <a class="reference internal" href="#equation-p-ic-deriv">(9.12)</a> equal to Eq. <a class="reference internal" href="#equation-max-ic-press">(9.9)</a>.  This immediately simplifies to give</p>
 <div class="math notranslate nohighlight">
 \[ \frac{M_{ic}}{M} \sim 0.54 \left(\frac{\mu_{env}}{\mu_{ic}} \right)^2, \]</div>
-<p>where the our coefficient is only slightly larger than the value determined by Schönberg-Chandrasekhar (Eqn. 1).</p>
-</section>
-<section id="problems">
-<h3><span class="section-number">9.1.7. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>1. <strong>Construct a table</strong> that expresses the evolutionary times between points 2 and 3, points 3 and 4, and so on,
-as a percentage of the lifetime of the star on the main sequence between points 1 and 2. Use the Table associated with Fig. 1 for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star.</p>
-<blockquote>
-<div><p><strong>(a)</strong> How long does it take a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star to cross the points 3 and 5 relative to its main-sequence lifetime?</p>
-<p><strong>(b)</strong> How long does a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star spend on between points 7 and 8 relative to its main-sequence lifetime?</p>
-<p><strong>(c)</strong> How long does a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star spend on between points 8 and 9 relative to its main-sequence lifetime?</p>
-</div></blockquote>
-<p>2. Show that the radius of the isothermal core for which the gas pressure is a maximum is given by Equation 8. Recall that this solution assumes that the
-gas in the core is ideal and monatomic.</p>
-<p>3. The age of the universe is 13.7 Gyr. Compare this value to the main-sequence lifetime of a 0.8 <span class="math notranslate nohighlight">\(M_\odot\)</span> star. Why isn’t it useful to compute the detailed post-main-sequence evolution of stars with masses much lower than the mass of the Sun?</p>
-</div></blockquote>
+<p>where our coefficient is only slightly larger than the value determined by Schönberg-Chandrasekhar (Eq. <a class="reference internal" href="#equation-max-mass-frac">(9.1)</a>).</p>
 </section>
 </section>
 <section id="late-stages-of-stellar-evolution">
 <h2><span class="section-number">9.2. </span>Late Stages of Stellar Evolution<a class="headerlink" href="#late-stages-of-stellar-evolution" title="Permalink to this heading">#</a></h2>
-<div align="center">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Low-mass Star</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="low-mass-evol-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_4.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_4.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_4.jpg?raw=true?" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9.4 </span><span class="caption-text">A schematic diagram of the evolution of a low-mass star of 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> from the zero-age main sequence to the formation of a white dwarf star. (Carroll &amp; Ostlie (2007))</span><a class="headerlink" href="#low-mass-evol-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Intermediate-mass star</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="inter-mass-evol-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_5.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_5.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_5.jpg?raw=true?" style="width: 700px;" /></a>
-<p><strong>Figure 4</strong>: A schematic diagram of the evolution of a (a) low-mass star of 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> and (b) intermediate-mass star of 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> from the zero-age main sequence to the formation of a white dwarf star. (Carroll &amp; Ostlie (2007))</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.5 </span><span class="caption-text">A schematic diagram of the evolution of an intermediate-mass star of 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> from the zero-age main sequence to the formation of a white dwarf star. (Carroll &amp; Ostlie (2007))</span><a class="headerlink" href="#inter-mass-evol-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <section id="evolution-off-the-main-sequence">
 <h3><span class="section-number">9.2.1. </span>Evolution Off the Main Sequence<a class="headerlink" href="#evolution-off-the-main-sequence" title="Permalink to this heading">#</a></h3>
 <p>The end of the main-sequence phase occurs when hydrogen burning ceases in the stellar core.  In the case of a Solar-mass (<em>low mass</em>) star, the core begins to contract while a thick hydrogen burning shell continues to consume the available fuel.  Under core contraction, the temperature rises and the shell actually produces more energy than the core did on the main sequence, which causes the luminosity to increase, the envelope to expand slightly, and the effective temperature to rise.</p>
 <p>For a <span class="math notranslate nohighlight">\(5\,M_\odot\)</span> star, the entire star participates in an overall contraction on a Kelvin-Helmholtz timescale rather than just the hydrogen-burning shell.  This contraction phase releases gravitational potential energy with results similar to the low mass star case (i.e., slight increase in luminosity, decrease in the stellar radius, and the effective temperature).  Eventually, the temperature outside the helium core increases sufficiently to cause a thick shell of hydrogen-burning. The overlying envelope is forced to expand slightly due to the ignition of the shell, where it absorbs some of the energy released by the shell.  Since energy is absorbed, the luminosity decreases momentarily (compared to the evolution timescale) and the effective temperature drops.</p>
-<div align="center">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Intermediate-mass Star Composition</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="comp-massfrac-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_6.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_6.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_6.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 5</strong>: The chemical composition as a function of interior mass fraction for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star during the phase of overall contraction, following the main-sequence phase of core hydrogen burning. (Carroll &amp; Ostlie (2007))</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.6 </span><span class="caption-text">The chemical composition as a function of interior mass fraction for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star during the phase of overall contraction, following the main-sequence phase of core hydrogen burning. (Carroll &amp; Ostlie (2007))</span><a class="headerlink" href="#comp-massfrac-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
-<div align="center">
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Intermediate-mass Star Late Evolution</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="late-evol-inter-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_7.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_7.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_7.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 6</strong>: 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star with a helium core and a hydrogen-burning shell shortly after shell ignition (point 3 in Fig. 1). (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.7 </span><span class="caption-text">5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star with a helium core and a hydrogen-burning shell shortly after shell ignition (point 3 in Fig. <a class="reference internal" href="#ms-tracks-fig"><span class="std std-numref">9.1</span></a>). (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</span><a class="headerlink" href="#late-evol-inter-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
-<div align="center">
+<input id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+Intermediate-mass Star Early AGB</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="early-agb-inter-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_8.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_8.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_8.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 7</strong>: 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star on the early asymptotic giant branch with a carbon–oxygen core and hydrogen- and helium-burning shells. Note that relative to the surface radius, the scale of the shells and core has been increased by a factor of 100 for clarity. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.8 </span><span class="caption-text">5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star on the early asymptotic giant branch with a carbon–oxygen core and hydrogen- and helium-burning shells. Note that relative to the surface radius, the scale of the shells and core has been increased by a factor of 100 for clarity. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</span><a class="headerlink" href="#early-agb-inter-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="the-subgiant-branch">
@@ -923,19 +949,23 @@ gas in the core is ideal and monatomic.</p>
 <h3><span class="section-number">9.2.7. </span>The Early Asymptotic Giant Branch<a class="headerlink" href="#the-early-asymptotic-giant-branch" title="Permalink to this heading">#</a></h3>
 <p>When the redward evolution reaches the Hayashi track, the evolutionary track bends upward along a path called the <strong>asymptotic giant branch</strong> (AGB), where the AGB is analogous to the hydrogen-burning shell RGB, but with a helium-burning shell. The core temperature of a <span class="math notranslate nohighlight">\(5\,M_\odot\)</span> star is approximately <span class="math notranslate nohighlight">\(2\times10^8\,{\rm K}\)</span> and it density is <span class="math notranslate nohighlight">\(\sim 10^9\,{\rm kg/m^3}\)</span>.  During the early AGB, two shells are typically depicted but the helium-burning shell dominates the energy output and the hydrogen-burning shell becomes nearly inactive.</p>
 <p>The expanding envelope initially absorbs much of the energy produced by the helium-burning shell, which causes the effective temperature to decrease.  The convective envelope deepens and extends downward to the chemical discontinuity between the hydrogen-rich outer layer and the helium-rich region above the helium-burning shell.  The mixing that results is called the <strong>second dredge-up</strong> (where the first occurred in the RGB) and increases the helium and nitrogen content of the envelope.</p>
-<div align="center">
+<figure class="align-default" id="low-mass-flash-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_9.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_9.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_9.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 8</strong>: The surface luminosity as a function of time for a 0.6 <span class="math notranslate nohighlight">\(M_\odot\)</span> stellar model that is undergoing helium shell flashes on the TP-AGB. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 9.9 </span><span class="caption-text">The surface luminosity as a function of time for a 0.6 <span class="math notranslate nohighlight">\(M_\odot\)</span> stellar model that is undergoing helium shell flashes on the TP-AGB. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</span><a class="headerlink" href="#low-mass-flash-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="the-thermal-pulse-asymptotic-giant-branch">
 <h3><span class="section-number">9.2.8. </span>The Thermal-Pulse Asymptotic Giant Branch<a class="headerlink" href="#the-thermal-pulse-asymptotic-giant-branch" title="Permalink to this heading">#</a></h3>
 <p>Near the upper portion of the AGB is the <em>thermal-pulse AGB</em> (TP-AGB), which describes the evolution of the dormant hydrogen burning-shell that reignites and dominates the energy output of the star.  However, the narrowing helium-burning shell begins to turn on-and-off quasi-periodically.  This causes intermittent <strong>helium <em>shell</em> flashes</strong> because the hydrogen-burning shell is dumping helium ash onto the helium layer below.  As the mass of the helium layer increases, its base becomes slightly degenerate.  When the temperature at the base of the helium shell increases sufficiently, a helium <em>shell</em> flash occurs and is analogous to the earlier helium <em>core</em> flashes of low-mass stars (although less energetic).  The flashes drive the hydrogen-burning shell outward, where the shell cools and turns off for a time.</p>
 <p>Eventually, the helium shell burning diminishes, the hydrogen burning shell recovers, and the process repeats.  The period between pulses depends on the stellar mass and can range from 1000s of years <span class="math notranslate nohighlight">\((M\sim5\,M_\odot)\)</span> to 100s of years for low-mass stars <span class="math notranslate nohighlight">\((\sim 0.6\,M_\odot)\)</span>, with the pulse amplitude growing with each successive event.  The periodic activity from the deep stellar interior is observed in the luminosity changes at the surface.</p>
-<div align="center">
+<figure class="align-default" id="tp-agb-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_10.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_10.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_10.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 9</strong>: Time-dependent changes in the properties of a 7 <span class="math notranslate nohighlight">\(M_\odot\)</span> AGB star produced by helium shell flashes on the TP-AGB. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 9.10 </span><span class="caption-text">Time-dependent changes in the properties of a 7 <span class="math notranslate nohighlight">\(M_\odot\)</span> AGB star produced by helium shell flashes on the TP-AGB. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</span><a class="headerlink" href="#tp-agb-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Following a helium shell flash, the luminosity arising from the hydrogen-burning shell drops while the energy output from the helium-burning shell increases.  The hydrogen-burning shell is pushed outward and cools, where the hydrogen-burning shell is responsible for most of the stellar energy output and the star’s luminosity abruptly decreases when a helium flash occurs.  At the same time, the surface radius of a star decreases and the star’s effective temperature increases.  Later, the energy output of the helium shell diminishes after the degeneracy is lifted, the hydrogen-burning shell moves deeper into the star and the hydrogen-burning shell once again dominates the star’s total energy output.  The surface radius, luminosity, and effective temperature relax back to near their pre-flash values.  <em>Note that the overall evolutionary track of the star is toward greater luminosity and lower effective temperature throughout the TP-AGB</em>.</p>
 <p>A class of pulsating variable stars is called <strong>long-period variables</strong> (LPVs) are AGB stars, which have pulsation periods of <span class="math notranslate nohighlight">\(100-700\)</span> days and include the subclass of <strong>Mira variables</strong>.  Structural changes arising from shell flashes could cause observable changes in teh periods of some of these stars, where several Miras (e.g., W Dra, R Aql, and R Hya) are observed to undergo relatively rapid period changes.</p>
 </section>
@@ -962,43 +992,78 @@ gas in the core is ideal and monatomic.</p>
 </ul>
 <p>The rate of mass loss can accelerate because the luminosity and radius are increasing while the mass is decreasing during the evolution up the AGB.  The decreasing mass and decreasing stellar radius implies that the surface gravity is also decreasing, where the surface material is progressively less tightly bound.  As a result, the mass loss becomes more important as the star evolves along the AGB.</p>
 <p>in the latest stages of evolution on the AGB, a <strong>superwind</strong> develops that increases the mass loss to its highest rate, <span class="math notranslate nohighlight">\(\dot{M} \sim 10^{-4}\,M_\odot/{\rm yr}\)</span>.  The observed high mass loss rates appear responsible for <strong>OH/IR sources</strong>, which are stars shrouded in optically thick dust clouds that radiate their energy primarily in the IR.  The OH is due to the detection of <span class="math notranslate nohighlight">\({\rm OH}\)</span> molecules through their <strong>maser</strong> emission (<strong>m</strong>icrowave <strong>a</strong>mplification by <strong>s</strong>timulated <strong>e</strong>mission of <strong>r</strong>adiation).  A maser is the molecular analog of a laser, where electrons are “pumped up” from a lower energy level into an higher, long-lived metastable energy state.  The downward transition of the electron is stimulated by a photon with the exact energy required.  The original photon and the emitted photon travel together in the same direction and will be in phase (hence the amplification).</p>
-<div align="center">
+<figure class="align-default" id="three-lvl-maser-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_11.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_11.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_11.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 10</strong>: A schematic diagram of a hypothetical three-level maser. (Carroll &amp; Ostlie (2007))</p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 9.11 </span><span class="caption-text">A schematic diagram of a hypothetical three-level maser. (Carroll &amp; Ostlie (2007))</span><a class="headerlink" href="#three-lvl-maser-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="post-asymptotic-giant-branch">
 <h3><span class="section-number">9.2.11. </span>Post-Asymptotic Giant Branch<a class="headerlink" href="#post-asymptotic-giant-branch" title="Permalink to this heading">#</a></h3>
 <p>AS the clout around the OH/IR source expands, it eventually becomes optically thin and exposes the central star, which exhibits a spectrum of an F or G supergiant.  The <span class="math notranslate nohighlight">\(1-5\,M_\odot\)</span> stars evolve blueward, where they leave the TP-AGB and move nearly horizontally across the H-R diagram as <strong>post-AGB</strong> stars.  During the final phase of mass loss, the remainder of the star’s envelope is expelled.  With only a very thin layer of material remaining, the hydrogen- and helium-burning shells are extinguished causing the luminosity of the star to drop rapidly.  The hot central object will cool to become a <strong>white dwarf star</strong>, which is essentially the red giant’s degenerate <span class="math notranslate nohighlight">\({\rm CO}\)</span> core (or <span class="math notranslate nohighlight">\({\rm ONeMg}\)</span> cores for more massive stars) and surrounded by a thin layer of residual hydrogen and helium.</p>
-<div align="center">
+<figure class="align-default" id="lowmass-agb-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_12.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_12.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_12.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 11</strong>: The AGB and post-AGB evolution of a 0.6 <span class="math notranslate nohighlight">\(M_\odot\)</span> star undergoing mass loss. The initial composition of the model is <span class="math notranslate nohighlight">\(X = 0.749\)</span>, <span class="math notranslate nohighlight">\(Y = 0.25\)</span>, and <span class="math notranslate nohighlight">\(Z = 0.001\)</span>. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 9.12 </span><span class="caption-text">The AGB and post-AGB evolution of a 0.6 <span class="math notranslate nohighlight">\(M_\odot\)</span> star undergoing mass loss. The initial composition of the model is <span class="math notranslate nohighlight">\(X = 0.749\)</span>, <span class="math notranslate nohighlight">\(Y = 0.25\)</span>, and <span class="math notranslate nohighlight">\(Z = 0.001\)</span>. (Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://articles.adsabs.harvard.edu/pdf/1967ApJ...147..624I">Iben, Ap. J., 147, 624, 1967.</a>)</span><a class="headerlink" href="#lowmass-agb-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 <section id="planetary-nebulae">
 <h3><span class="section-number">9.2.12. </span>Planetary Nebulae<a class="headerlink" href="#planetary-nebulae" title="Permalink to this heading">#</a></h3>
 <p>The expanding shell of gas around a white dwarf progenitor is called a <strong>planetary nebula</strong>.  These glowing gas clouds were given this name in the 19th century because they looked somewhat like giant gaseous planets when viewing through a small telescope.  A planetary nebular owes its appearance to the UV light emitted by the hot, condensed central star.  The UV photons are absorbed bye the surrounding gas in the nebula, which causes the atoms to become excited or ionized.  When the electrons cascade back down to lower energy levels, photons are emitted whose wavelengths are in the visible.</p>
-<div align="center">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+Helix nebula</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="helix-nebula-fig">
 <a class="reference internal image-reference" href="https://cdn.spacetelescope.org/archives/images/screen/opo0432b.jpg"><img alt="https://cdn.spacetelescope.org/archives/images/screen/opo0432b.jpg" src="https://cdn.spacetelescope.org/archives/images/screen/opo0432b.jpg" style="width: 800px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9.13 </span><span class="caption-text">The Helix nebula (NGC 7293) is one of the closest planetary nebulae to Earth, 213 pc away in the constellation of Aquarius. (Credit: <a class="reference external" href="https://esahubble.org/images/opo0432b/">NASA, ESA, C.R. O’Dell (Vanderbilt University), and M. Meixner, P. McCullough, and G. Bacon (STScI)</a>)</span><a class="headerlink" href="#helix-nebula-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-10">
+Cometary Knots </label><div class="sd-tab-content docutils">
+<figure class="align-default" id="cometary-knots-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/1/16/Helix-nebula-detail-hubble.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/1/16/Helix-nebula-detail-hubble.jpg" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Helix-nebula-detail-hubble.jpg" style="width: 400px;" /></a>
-<p><strong>Figure 12</strong>: (a) The Helix nebula (NGC 7293) is one of the closest planetary nebulae to Earth, 213 pc away in the constellation of Aquarius. (Credit: <a class="reference external" href="https://esahubble.org/images/opo0432b/">NASA, ESA, C.R. O’Dell (Vanderbilt University), and M. Meixner, P. McCullough, and G. Bacon (STScI)</a>); (b) A close-up of “cometary knots” in the Helix nebula. (Credit: <a class="reference external" href="https://hubblesite.org/contents/news-releases/1996/news-1996-13.html?Topic=104-stars-and-nebulas&amp;keyword=helix%2520nebula">NASA, C. Robert O’Dell and Kerry P. Handron (Rice University)</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.14 </span><span class="caption-text">A close-up of “cometary knots” in the Helix nebula. (Credit: <a class="reference external" href="https://hubblesite.org/contents/news-releases/1996/news-1996-13.html?Topic=104-stars-and-nebulas&amp;keyword=helix%2520nebula">NASA, C. Robert O’Dell and Kerry P. Handron (Rice University)</a>)</span><a class="headerlink" href="#cometary-knots-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 <p>With high-resolution images, astronomers have realized that the morphologies of the planetary nebulae are often much more complex than the spherically symmetric parent TP-AGB star.  The Helix nebula looks as though it has a ringlike structure because the gas is ejected preferentially along the equator of the star due to the presence of angular momentum and our viewing angle is down the star’s rotation axis.  Nebula differ in structure due to the varying viewing angles, multiple ejections of material from the stellar surface, the presence of companion stars, and magnetic fields.</p>
-<div align="center">
+<figure class="align-default" id="ngc-6543-fig">
 <a class="reference internal image-reference" href="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2004/09/an_unblinking_eye/10276533-2-eng-GB/An_unblinking_eye_pillars.jpg"><img alt="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2004/09/an_unblinking_eye/10276533-2-eng-GB/An_unblinking_eye_pillars.jpg" src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2004/09/an_unblinking_eye/10276533-2-eng-GB/An_unblinking_eye_pillars.jpg" style="width: 600px;" /></a>
-<p><strong>Figure 13</strong>: NGC 6543 (the “Cat’s Eye”) is a planetary nebula in Draco, 900 pc away. (Credit: <a class="reference external" href="https://www.esa.int/ESA_Multimedia/Images/2004/09/An_unblinking_eye#.YlRkVfMI8NQ.link">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA)</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.15 </span><span class="caption-text">NGC 6543 (the “Cat’s Eye”) is a planetary nebula in Draco, 900 pc away. (Credit: <a class="reference external" href="https://www.esa.int/ESA_Multimedia/Images/2004/09/An_unblinking_eye#.YlRkVfMI8NQ.link">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA)</a>)</span><a class="headerlink" href="#ngc-6543-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The expansion velocities of planetary nebulae (as measured by Doppler-shifted spectral lines) show that the gas is typically moving away from the central star with speeds between <span class="math notranslate nohighlight">\(10-30\,{\rm km/s}\)</span>, although much greater speeds have been measured.  Combined with characteristic length scales of around 0.3 pc, their estimated ages are <span class="math notranslate nohighlight">\({\sim}\text{10,000}\)</span> yr.  After 50,000 yr, a planetary nebula will dissipate into the ISM.  Despite their short lifetime about 1500 planetary nebulae are known to exist in the Milky Way Galaxy.  Given the observational biases, the estimate should be an order of magnitude bigger (15,000 planetary nebulae).</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-11" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-11">
+Twin Jet nebula</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="twin-jet-fig">
+<a class="reference internal image-reference" href="https://smd-cms.nasa.gov/wp-content/uploads/2023/04/heic1518a-jpg.webp?w=2560&amp;format=webp"><img alt="https://smd-cms.nasa.gov/wp-content/uploads/2023/04/heic1518a-jpg.webp?w=2560&amp;format=webp" src="https://smd-cms.nasa.gov/wp-content/uploads/2023/04/heic1518a-jpg.webp?w=2560&amp;format=webp" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9.16 </span><span class="caption-text">The Twin Jet Nebula, or PN M2-9, is a striking example of a bipolar planetary nebula. (Credit: <a class="reference external" href="https://science.nasa.gov/m2-9-wings-butterfly-nebula">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA); processing Judy Schmidt</a>)</span><a class="headerlink" href="#twin-jet-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
-<p>The expansion velocities of planetary nebulae (as measured by Doppler-shifted spectral lines) show that the gas is typically moving away from the central star with speeds between <span class="math notranslate nohighlight">\(10-30\,{\rm km/s}\)</span>, although much greater speeds have been measured.  Combined with characteristic length scales of around 0.3 pc, their estimated ages are <span class="math notranslate nohighlight">\(\sim\)</span> 10,000 yr.  After 50,000 yr, a planetary nebula will dissipate into the ISM.  Despite their short lifetime about 1500 planetary nebulae are known to exist in the Milky Way Galaxy.  Given the observational biases, the estimate should be an order of magnitude bigger (15,000 planetary nebulae).</p>
-<div align="center">
-<a class="reference internal image-reference" href="https://science.nasa.gov/files/science-pink/s3fs-public/styles/image_gallery_scale_960w/public/atoms/M2D9_HubbleSchmidt_985.jpg?itok=j_TlbBOy"><img alt="https://science.nasa.gov/files/science-pink/s3fs-public/styles/image_gallery_scale_960w/public/atoms/M2D9_HubbleSchmidt_985.jpg?itok=j_TlbBOy" src="https://science.nasa.gov/files/science-pink/s3fs-public/styles/image_gallery_scale_960w/public/atoms/M2D9_HubbleSchmidt_985.jpg?itok=j_TlbBOy" style="width: 400px;" /></a>
+<input id="sd-tab-item-12" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-12">
+Menzel 3</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="menzel-3-fig">
 <a class="reference internal image-reference" href="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2003/05/menzel_3_or_mz3_ant_nebula/9869106-3-eng-GB/Menzel_3_or_Mz3_Ant_Nebula_pillars.jpg"><img alt="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2003/05/menzel_3_or_mz3_ant_nebula/9869106-3-eng-GB/Menzel_3_or_Mz3_Ant_Nebula_pillars.jpg" src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2003/05/menzel_3_or_mz3_ant_nebula/9869106-3-eng-GB/Menzel_3_or_Mz3_Ant_Nebula_pillars.jpg" style="width: 450px;" /></a>
-<p><strong>Figure 14</strong>: (a) The Twin Jet Nebula, or PN M2-9, is a striking example of a bipolar planetary nebula. (Credit: <a class="reference external" href="https://science.nasa.gov/m2-9-wings-butterfly-nebula">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA); processing Judy Schmidt</a>); (b) From Earth, Menzel 3 resembles the head and thorax of a common garden ant, hence its name. (Credit: [<a class="reference external" href="https://www.esa.int/Science_Exploration/Space_Science/Exploring_space/The_Ant_Nebula_Menzel_3_Mz_3">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA)</a>)</p>
-</div></section>
-<section id="id1">
-<h3><span class="section-number">9.2.13. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>4. Estimate the Kelvin–Helmholtz timescale for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star on the subgiant branch and compare your result with the amount of time the star spends between points 4 and 5 in Figure 1.</p>
-</div></blockquote>
+<figcaption>
+<p><span class="caption-number">Fig. 9.17 </span><span class="caption-text">From Earth, Menzel 3 resembles the head and thorax of a common garden ant, hence its name. (Credit: <a class="reference external" href="https://www.esa.int/Science_Exploration/Space_Science/Exploring_space/The_Ant_Nebula_Menzel_3_Mz_3">ESA, NASA, HEIC and The Hubble Heritage Team (STScI/AURA)</a>)</span><a class="headerlink" href="#menzel-3-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
 </section>
 </section>
 <section id="stellar-clusters">
@@ -1023,10 +1088,27 @@ gas in the core is ideal and monatomic.</p>
 </ul>
 <p>Excluding effects like rotation, magnetic fields, and binary star membership, the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-vogt-russell-theorem">Vogt-Russell theorem</a> suggests that solely <em>their initial masses</em> explain the differences in each cluster member’s evolutionary state.</p>
 <p>Extreme Population II cluster formed when the Milky Way Galaxy was very young, which makes them some of the oldest objects in the Galaxy.  They also contain the largest number of members.  <a class="reference external" href="https://en.wikipedia.org/wiki/Globular_cluster">Globular clusters</a> are Population II objects and M13 (located in the constellation Hercules) is an example.  Population I clusters (e.g., the Pleiades) tend to be smaller, younger, and bluer.  These smaller clusters are called <a class="reference external" href="https://en.wikipedia.org/wiki/Open_cluster">open clusters</a>.</p>
-<div align="center">
-<a class="reference internal image-reference" href="https://science.nasa.gov/files/science-pink/s3fs-public/styles/image_gallery_scale_960w/public/atoms/m13s_3Block.jpg?itok=hWACEusA"><img alt="https://science.nasa.gov/files/science-pink/s3fs-public/styles/image_gallery_scale_960w/public/atoms/m13s_3Block.jpg?itok=hWACEusA" src="https://science.nasa.gov/files/science-pink/s3fs-public/styles/image_gallery_scale_960w/public/atoms/m13s_3Block.jpg?itok=hWACEusA" style="width: 400px;" /></a>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-13" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-13">
+Messier 13</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="m13-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/6/69/Messier_13.jpg"><img alt="https://upload.wikimedia.org/wikipedia/commons/6/69/Messier_13.jpg" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Messier_13.jpg" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 9.18 </span><span class="caption-text">M13, the great globular cluster in Hercules, is located approximately 7000 pc from Earth. (Credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Messier_13#/media/File:Messier_13.jpg">Adam Block, Mt. Lemmon SkyCenter, U. Arizona</a>)</span><a class="headerlink" href="#m13-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<input id="sd-tab-item-14" name="sd-tab-set-6" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-14">
+Pleiades</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="pleiades-fig">
 <a class="reference internal image-reference" href="https://stsci-opo.org/STScI-01EVVEYSNSXR7BDD3865PPJBWX.jpg"><img alt="https://stsci-opo.org/STScI-01EVVEYSNSXR7BDD3865PPJBWX.jpg" src="https://stsci-opo.org/STScI-01EVVEYSNSXR7BDD3865PPJBWX.jpg" style="width: 700px;" /></a>
-<p><strong>Figure 15</strong>: (a) M13, the great globular cluster in Hercules, is located approximately 7000 pc from Earth. (Credit: <a class="reference external" href="https://science.nasa.gov/m13-great-globular-cluster-hercules">Adam Block, Mt. Lemmon SkyCenter, U. Arizona</a>); (b) The Pleiades is a galactic cluster found in the constellation of Taurus, at a distance of 130 pc. (Credit: <a class="reference external" href="https://hubblesite.org/contents/media/images/2004/20/1562-Image.html?Topic=104-stars-and-nebulas&amp;keyword=pleiades">ESA, NASA, Aura and CalTech</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.19 </span><span class="caption-text">The Pleiades is a galactic cluster found in the constellation of Taurus, at a distance of 130 pc. (Credit: <a class="reference external" href="https://hubblesite.org/contents/media/images/2004/20/1562-Image.html?Topic=104-stars-and-nebulas&amp;keyword=pleiades">ESA, NASA, Aura and CalTech</a>)</span><a class="headerlink" href="#pleiades-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="spectroscopic-parallax">
@@ -1036,13 +1118,27 @@ gas in the core is ideal and monatomic.</p>
 <section id="color-magnitude-diagrams">
 <h3><span class="section-number">9.3.4. </span>Color-Magnitude Diagrams<a class="headerlink" href="#color-magnitude-diagrams" title="Permalink to this heading">#</a></h3>
 <p>Rather than attempting to determine the effective temperature of <em>every member</em> of a cluster, it is much faster to determine their color indices <span class="math notranslate nohighlight">\(B-V\)</span>.  With the knowledge of apparent magnitude and the color index of each star, a <strong>color-magnitude diagram</strong> can be constructed with the apparent magnitude <span class="math notranslate nohighlight">\(V\)</span> along the y-axis and the color index <span class="math notranslate nohighlight">\(B-V\)</span> along the x-axis.</p>
-<div align="center">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-15" name="sd-tab-set-7" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-15">
+M3 Color-magnitude</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="m3-cm-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_17.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_17.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_17.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 16</strong>: A color–magnitude diagram for M3, an old globular cluster. (Carroll &amp; Ostlie (2007); Figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1988ARA%26A..26..199R/abstract">Renzini &amp; Fusi Pecci. Annu. Rev. Astron. Astrophys. 26, 199, 1988.</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.20 </span><span class="caption-text">A color–magnitude diagram for M3, an old globular cluster. (Carroll &amp; Ostlie (2007); Figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1988ARA%26A..26..199R/abstract">Renzini &amp; Fusi Pecci. Annu. Rev. Astron. Astrophys. 26, 199, 1988.</a>)</span><a class="headerlink" href="#m3-cm-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
-<div align="center">
+<input id="sd-tab-item-16" name="sd-tab-set-7" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-16">
+NGC 869 and 884 Color-magnitude</label><div class="sd-tab-content docutils">
+<figure class="align-default" id="hx-cm-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_18.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_18.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_18.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 17</strong>: A color–magnitude diagram for the young double galactic cluster, h and <span class="math notranslate nohighlight">\(\chi\)</span> Persei. (Carroll &amp; Ostlie (2007); Figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1964ApJS....8..439W/abstract">Wildey, ApJS, 8. 439, 1964.</a>)</p>
+<figcaption>
+<p><span class="caption-number">Fig. 9.21 </span><span class="caption-text">A color–magnitude diagram for the young double galactic cluster, <span class="math notranslate nohighlight">\(h\)</span> (NGC 869) and <span class="math notranslate nohighlight">\(\chi\)</span> (NGC 884) Persei. (Carroll &amp; Ostlie (2007); Figure adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1964ApJS....8..439W/abstract">Wildey, ApJS, 8. 439, 1964.</a>)</span><a class="headerlink" href="#hx-cm-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="isochrones-and-cluster-ages">
@@ -1053,10 +1149,13 @@ gas in the core is ideal and monatomic.</p>
 <section id="the-hertzsprung-gap">
 <h3><span class="section-number">9.3.6. </span>The Hertzsprung Gap<a class="headerlink" href="#the-hertzsprung-gap" title="Permalink to this heading">#</a></h3>
 <p>Another consequence of varying timescales can be seen in the color-magnitude diagrams of <a class="reference external" href="https://www.messier.seds.org/xtra/ngc/n0869.html"><span class="math notranslate nohighlight">\(h+\chi\)</span> Persei</a>.  Apparent are red giants, low-mass main sequence stars, and a population of very red <span class="math notranslate nohighlight">\((B-V\sim 1.75)\)</span> giants.  It is unlikely that this represents an incomplete survey, since the stars are the brightest members of the cluster.  It points out the very rapid evolution that occurs just after leaving the main sequence and is known as the <strong>Hertzsprung gap</strong>.  The existence of the Hertzsprung gap is due to the evolution on a Kelvin-Helmholtz timescale across the SGB following the core contraction at the Schöberg-Chandrasekhar limit.  The clusters M67 and M3 do not show the existence of the Hertzsprung gap because the rapid contraction phase (below <span class="math notranslate nohighlight">\(1.25\,M_\odot\)</span>) related to the Schöberg-Chandrasekhar limit is less pronounced.  Color-magnitude diagrams of old globular clusters with turn-off points near or less than a Solar-mass have continuous star distributions leading to the red giant region.</p>
-<div align="center">
+<figure class="align-default" id="popi-gal-clusters-fig">
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_19.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_19.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_13/Figure_19.jpg?raw=true?" style="width: 600px;" /></a>
-<p><strong>Figure 18</strong>: A composite color–magnitude diagram for a set of Population I galactic clusters. (Carroll &amp; Ostlie (2007))</p>
-</div></section>
+<figcaption>
+<p><span class="caption-number">Fig. 9.22 </span><span class="caption-text">A composite color–magnitude diagram for a set of Population I galactic clusters. (Carroll &amp; Ostlie (2007))</span><a class="headerlink" href="#popi-gal-clusters-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 <section id="blue-stragglers">
 <h3><span class="section-number">9.3.7. </span>Blue Stragglers<a class="headerlink" href="#blue-stragglers" title="Permalink to this heading">#</a></h3>
 <p>A group of stars, known as <strong>blue stragglers</strong>, can be found above the turn-off point of M3.  It appears that their tardiness (in leaving the main sequence) is due to an unusual aspect of their evolution, where the most likely scenarios appear to be:</p>
@@ -1066,20 +1165,43 @@ gas in the core is ideal and monatomic.</p>
 </ul>
 <p>which extends the star’s main-sequence lifetime.</p>
 </section>
-<section id="id2">
-<h3><span class="section-number">9.3.8. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>5. The Helix nebula is a planetary nebula with an angular diameter of 16’ that is located approximately 213 pc from Earth.</p>
-<blockquote>
-<div><p><strong>(a)</strong> Calculate the diameter of the nebula.</p>
-<p><strong>(b)</strong> Assuming that the nebula is expanding away from the central star at a constant velocity of <span class="math notranslate nohighlight">\(20\,{\rm km/s}\)</span>, estimate its age.</p>
-</div></blockquote>
-<p>6. Using the technique of main-sequence fitting, estimate the distance to M3; refer to Figs. 16 and 18.</p>
-</div></blockquote>
 </section>
+<section id="homework">
+<h2><span class="section-number">9.4. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p><strong>Construct a table</strong> that expresses the evolutionary times between points 2 and 3, points 3 and 4, and so on,
+as a percentage of the lifetime of the star on the main sequence between points 1 and 2. Use the Table associated with Fig. <a class="reference internal" href="#ms-tracks-fig"><span class="std std-numref">9.1</span></a> for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star.</p>
+<p><strong>(a)</strong> How long does it take a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star to cross the points 3 and 5 relative to its main-sequence lifetime?</p>
+<p><strong>(b)</strong> How long does a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star spend on between points 7 and 8 relative to its main-sequence lifetime?</p>
+<p><strong>(c)</strong> How long does a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star spend on between points 8 and 9 relative to its main-sequence lifetime?</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<p>Show that the radius of the isothermal core for which the gas pressure is a maximum is given by Eq. <a class="reference internal" href="#equation-radius-ic">(9.8)</a>. Recall that this solution assumes that the
+gas in the core is ideal and monatomic.</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>The age of the universe is 13.7 Gyr. Compare this value to the main-sequence lifetime of a 0.8 <span class="math notranslate nohighlight">\(M_\odot\)</span> star. Why isn’t it useful to compute the detailed post-main-sequence evolution of stars with masses much lower than the mass of the Sun?</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p>Estimate the Kelvin–Helmholtz timescale for a 5 <span class="math notranslate nohighlight">\(M_\odot\)</span> star on the subgiant branch and compare your result with the amount of time the star spends between points 4 and 5 in Figure <a class="reference internal" href="#ms-tracks-fig"><span class="std std-numref">9.1</span></a>.</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p>The Helix nebula is a planetary nebula with an angular diameter of 16’ that is located approximately 213 pc from Earth.</p>
+<p><strong>(a)</strong> Calculate the diameter of the nebula.</p>
+<p><strong>(b)</strong> Assuming that the nebula is expanding away from the central star at a constant velocity of <span class="math notranslate nohighlight">\(20\,{\rm km/s}\)</span>, estimate its age.</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<p>Using the technique of main-sequence fitting, estimate the distance to M3; refer to Figs. <a class="reference internal" href="#m3-cm-fig"><span class="std std-numref">9.20</span></a> and <a class="reference internal" href="#popi-gal-clusters-fig"><span class="std std-numref">9.22</span></a>.</p>
+</div>
 </section>
 <section id="additional-resources">
-<h2><span class="section-number">9.4. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">9.5. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>T</strong>ool for <strong>U</strong>nderstanding the <strong>L</strong>ives, <strong>I</strong>nteriors, and <strong>P</strong>hyscis of <strong>S</strong>tars (<a class="reference external" href="https://astro-tulips.readthedocs.io/en/latest/index.html">TULIPS</a>) is a code package to visualize stellar evolution following output from the <a class="reference external" href="https://docs.mesastar.org/">MESA</a> stellar evolution code.</p></li>
 <li><p><strong>M</strong>odules for <strong>E</strong>xperiments in <strong>S</strong>tellar <strong>A</strong>strophysics (<a class="reference external" href="https://docs.mesastar.org/">MESA</a>) is an open-source 1D stellar evolution code.</p></li>
@@ -1157,7 +1279,6 @@ gas in the core is ideal and monatomic.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-degenerate-electron-gas">9.1.4. The Degenerate Electron Gas</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-evolution-of-massive-stars">9.1.5. Main-Sequence Evolution of Massive Stars</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-derivation-of-the-schonberg-chandrasekhar-limit">9.1.6. A Derivation of the Schönberg-Chandrasekhar Limit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">9.1.7. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#late-stages-of-stellar-evolution">9.2. Late Stages of Stellar Evolution</a><ul class="nav section-nav flex-column">
@@ -1173,7 +1294,6 @@ gas in the core is ideal and monatomic.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-loss-and-agb-evolution">9.2.10. Mass Loss and AGB Evolution</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-asymptotic-giant-branch">9.2.11. Post-Asymptotic Giant Branch</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#planetary-nebulae">9.2.12. Planetary Nebulae</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.2.13. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-clusters">9.3. Stellar Clusters</a><ul class="nav section-nav flex-column">
@@ -1184,10 +1304,10 @@ gas in the core is ideal and monatomic.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#isochrones-and-cluster-ages">9.3.5. Isochrones and Cluster Ages</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hertzsprung-gap">9.3.6. The Hertzsprung Gap</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blue-stragglers">9.3.7. Blue Stragglers</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.3.8. <strong>Problems</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">9.4. Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">9.4. <strong>Homework</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">9.5. Additional Resources</a></li>
 </ul>
   </nav></div>
 

@@ -508,8 +508,8 @@ document.write(`
 <section id="interstellar-extinction">
 <h3><span class="section-number">8.1.2. </span>Interstellar Extinction<a class="headerlink" href="#interstellar-extinction" title="Permalink to this heading">#</a></h3>
 <p>On a dark night (far from city lights), some of the dust clouds within the Milky Way Galaxy can be found because they obscure regions of sky that would otherwise be populated with stars.  These dark regions are not devoid of stars, but the intervening dust blocks the background starlight.  Dust that blocks starlight is due to the combined effet of scattering and absorption, which is called <strong>interstellar extinction</strong>.  The apparent magnitude is a measure of how bright a star appears and if it is dimmed by intervening dust, the distance modulus equation must be modified appropriately.  In a given wavelength band centered on <span class="math notranslate nohighlight">\(\lambda\)</span>, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-355a5a37-d903-4982-8ace-cb35f65a338d">
-<span class="eqno">(8.1)<a class="headerlink" href="#equation-355a5a37-d903-4982-8ace-cb35f65a338d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-532eacb8-954b-414d-a9cb-bac608c0f82b">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-532eacb8-954b-414d-a9cb-bac608c0f82b" title="Permalink to this equation">#</a></span>\[\begin{align}
 m_\lambda = M_\lambda + 5\log_{10}\,d-5 + A_\lambda, 
 \end{align}\]</div>
 <p>which is a modified version of the distance modulus equation with a correction factor <span class="math notranslate nohighlight">\(A_\lambda&gt;0\)</span> that adjusts for the interstellar extinction along the line of sight.  The extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span> is positive because it always acts to dim objects along the magnitude scale.  If <span class="math notranslate nohighlight">\(A_\lambda\)</span> is large enough, a star can fall behind the limiting magnitude of the background sky for the naked eye or a telescope.  This is the cause for the dark bands running through the Milky Way.</p>
@@ -546,18 +546,18 @@ m_\lambda - m_{\lambda,o} &amp;= -2.5 \log_{10}\,e^{-\tau_\lambda} \\
 &amp; = 2.5\tau_\lambda\:\log_{10}\,e \approx 1.086\tau_\lambda.
 \end{split} \end{split}\]</div>
 <p>The change in apparent magnitude is simply the extinction magnitude <span class="math notranslate nohighlight">\(A_\lambda\)</span>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-552bd061-582e-4ebc-9479-5daba4e83821">
-<span class="eqno">(8.2)<a class="headerlink" href="#equation-552bd061-582e-4ebc-9479-5daba4e83821" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-047f5175-5d9e-4ee7-ae35-a094fb4072fb">
+<span class="eqno">(8.2)<a class="headerlink" href="#equation-047f5175-5d9e-4ee7-ae35-a094fb4072fb" title="Permalink to this equation">#</a></span>\[\begin{align}
  A_\lambda = 1.086 \tau_\lambda, 
 \end{align}\]</div>
 <p>which restates that <em>the change in magnitude due to extinction is approximately equal to the optical depth along the line of sight</em>.  The optical depth through the cloud is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2b4c61d-a77a-428f-9115-c7187b9eb98c">
-<span class="eqno">(8.3)<a class="headerlink" href="#equation-b2b4c61d-a77a-428f-9115-c7187b9eb98c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9a851a65-e483-4c14-8035-f869a9f0f639">
+<span class="eqno">(8.3)<a class="headerlink" href="#equation-9a851a65-e483-4c14-8035-f869a9f0f639" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau_\lambda = \int_0^s n_d(s^\prime)\sigma_\lambda\,ds^\prime, 
 \end{align}\]</div>
 <p>which depends on the number density of scattering dust grains <span class="math notranslate nohighlight">\(n_d(s^\prime)\)</span> and the scattering cross section <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span>.  If the scattering cross section is constant along the line of sight, then</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eb6c9d25-1e29-41ab-a1f0-928cde2e4658">
-<span class="eqno">(8.4)<a class="headerlink" href="#equation-eb6c9d25-1e29-41ab-a1f0-928cde2e4658" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-295cc031-a175-4ac6-8a2c-8da39f06b629">
+<span class="eqno">(8.4)<a class="headerlink" href="#equation-295cc031-a175-4ac6-8a2c-8da39f06b629" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau_\lambda = \sigma_\lambda \int_0^sn_d(s^\prime),ds^\prime = \sigma_\lambda N_d, 
 \end{align}\]</div>
 <p>and the dust grain <em>column density</em> <span class="math notranslate nohighlight">\(N_d\)</span> represents the number of scattering dust particles in a thin cylinder with a cross section of 1 <span class="math notranslate nohighlight">\({\rm m^2}\)</span> stretching from the observer to the star.  The magnitude of extinction depends on the amount of interstellar dust that the light passes through.</p>
@@ -574,13 +574,13 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight">
 \[ Q_\lambda \equiv \frac{\sigma_\lambda}{\sigma_g}, \]</div>
 <p>where the extinction coefficient <span class="math notranslate nohighlight">\(Q_\lambda\)</span> depends on the composition of the dust grains.  When the wavelength of the light is similar to the size of the dust grains, then <span class="math notranslate nohighlight">\(Q_\lambda \sim a/\lambda\)</span>, implying that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-46d0dba6-d6f9-447f-af21-f30339b91c21">
-<span class="eqno">(8.5)<a class="headerlink" href="#equation-46d0dba6-d6f9-447f-af21-f30339b91c21" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a6310415-9ed7-4848-973a-b90e1ba66c8d">
+<span class="eqno">(8.5)<a class="headerlink" href="#equation-a6310415-9ed7-4848-973a-b90e1ba66c8d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sigma_\lambda \propto \frac{a^3}{\lambda} \qquad (\lambda \gtrsim a).
 \end{align}\]</div>
 <p>The extinction coefficient <span class="math notranslate nohighlight">\(Q_\lambda\)</span> goes to zero when the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is large compared to <span class="math notranslate nohighlight">\(a\)</span>.  Conversely, the extinction coefficient <span class="math notranslate nohighlight">\(Q_\lambda\)</span> approaches a constant (independent of <span class="math notranslate nohighlight">\(\lambda\)</span>) when the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is very small compared to <span class="math notranslate nohighlight">\(a\)</span> or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-991d4ba1-50d7-49c4-864a-636621dea752">
-<span class="eqno">(8.6)<a class="headerlink" href="#equation-991d4ba1-50d7-49c4-864a-636621dea752" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-79133b33-4b17-4da0-b9ef-a7aaff0d5de1">
+<span class="eqno">(8.6)<a class="headerlink" href="#equation-79133b33-4b17-4da0-b9ef-a7aaff0d5de1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \sigma_\lambda \propto a^2 \qquad (\lambda \ll a). 
 \end{align}\]</div>
 <div class="admonition note">
@@ -839,18 +839,18 @@ p^+ + {\rm H_2} &amp;\rightarrow {\rm H_2^+} + e^- + p^+. \\
 <div class="math notranslate nohighlight" id="equation-jeans-crit">
 <span class="eqno">(8.10)<a class="headerlink" href="#equation-jeans-crit" title="Permalink to this equation">#</a></span>\[M_J \simeq \left(\frac{5kT}{G\mu m_H}\right)^{3/2}\left(\frac{3}{4\pi \rho_o}\right)^{1/2}.\]</div>
 <p>The critical mass <span class="math notranslate nohighlight">\(M_J\)</span> is called the <strong>Jeans mass</strong>.  The Jeans criterion may also be expressed in terms of the minimum radius <span class="math notranslate nohighlight">\((R_c &gt; R_J)\)</span> through the cloud density <span class="math notranslate nohighlight">\(\rho_o\)</span> (and solving Eq. <a class="reference internal" href="#equation-virial-collapse">(8.8)</a> in terms of <span class="math notranslate nohighlight">\(M_c\)</span>) to get the <strong>Jeans length</strong>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a29d82ef-0428-41b4-aa98-8069c79127b0">
-<span class="eqno">(8.11)<a class="headerlink" href="#equation-a29d82ef-0428-41b4-aa98-8069c79127b0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-97750510-8601-4b66-aa24-64d2b8ab0bf0">
+<span class="eqno">(8.11)<a class="headerlink" href="#equation-97750510-8601-4b66-aa24-64d2b8ab0bf0" title="Permalink to this equation">#</a></span>\[\begin{align}
 R_J \simeq \sqrt{\frac{15kT}{4\pi G\mu m_H \rho_o}}. 
 \end{align}\]</div>
 <p>The Jeans mass derivation neglected the existence of an external pressure on the cloud due to the surrounding interstellar medium.  The critical mass required for gravitational collapse in the presence of an external gas pressure <span class="math notranslate nohighlight">\(P_o\)</span> is given by the <strong>Bonnor-Ebert mass</strong>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-32f3e882-9bc9-41e7-b031-9cd69bda3895">
-<span class="eqno">(8.12)<a class="headerlink" href="#equation-32f3e882-9bc9-41e7-b031-9cd69bda3895" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-01a6ad48-0480-48b0-84a5-aabfed6f755b">
+<span class="eqno">(8.12)<a class="headerlink" href="#equation-01a6ad48-0480-48b0-84a5-aabfed6f755b" title="Permalink to this equation">#</a></span>\[\begin{align}
 M_{\rm BE} = \frac{c_{\rm BE}v_T^4}{P_o^{1/2}G^{3/2}}, 
 \end{align}\]</div>
 <p>where the <em>isothermal sound speed</em> <span class="math notranslate nohighlight">\(v_T\)</span> <span class="math notranslate nohighlight">\((\gamma = 1)\)</span> is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c3aec337-1781-49c7-a39e-e69999a21d1d">
-<span class="eqno">(8.13)<a class="headerlink" href="#equation-c3aec337-1781-49c7-a39e-e69999a21d1d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3d5fae77-fc84-4d46-9df8-c4697d03cd35">
+<span class="eqno">(8.13)<a class="headerlink" href="#equation-3d5fae77-fc84-4d46-9df8-c4697d03cd35" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_T \equiv \sqrt{\frac{kT}{\mu m_H}}, 
 \end{align}\]</div>
 <p>and the dimensionless constant <span class="math notranslate nohighlight">\(c_{\rm BE}\)</span> is approximately <span class="math notranslate nohighlight">\(1.18\)</span>.  A dimensionless constant <span class="math notranslate nohighlight">\(c_J\)</span> can be derived from Eq. <a class="reference internal" href="#equation-jeans-crit">(8.10)</a> by substitution of <span class="math notranslate nohighlight">\(v_T\)</span> and the ideal gas law, where <span class="math notranslate nohighlight">\(c_J \simeq 5.46\)</span>.  The smaller constant for the Bonnor-Ebert mass is expected since an external compression force (due to <span class="math notranslate nohighlight">\(P_o\)</span>) is being exerted on the cloud.</p>
@@ -937,22 +937,22 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <div class="math notranslate nohighlight" id="equation-vel-surf-angle">
 <span class="eqno">(8.16)<a class="headerlink" href="#equation-vel-surf-angle" title="Permalink to this equation">#</a></span>\[\frac{d\theta}{dt} = -\chi\left(\frac{1}{\theta} - 1 \right)^{1/2} \]</div>
 <p>The integral of Eq. <a class="reference internal" href="#equation-vel-surf-angle">(8.16)</a> is quite messy and we make yet another substitution,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e6110bf0-809d-4ac7-bab7-de7acbd7db1f">
-<span class="eqno">(8.17)<a class="headerlink" href="#equation-e6110bf0-809d-4ac7-bab7-de7acbd7db1f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-13c29303-eb83-4d27-b6e8-5cdec929ffde">
+<span class="eqno">(8.17)<a class="headerlink" href="#equation-13c29303-eb83-4d27-b6e8-5cdec929ffde" title="Permalink to this equation">#</a></span>\[\begin{align}
 \theta \equiv \cos^2 \xi, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\frac{d\theta}{dt} = -2\cos \xi \sin \xi \frac{d\xi}{dt}\)</span> and Eq. <a class="reference internal" href="#equation-vel-surf-angle">(8.16)</a> becomes</p>
 <div class="math notranslate nohighlight" id="equation-vel-surf-sub">
 <span class="eqno">(8.18)<a class="headerlink" href="#equation-vel-surf-sub" title="Permalink to this equation">#</a></span>\[\cos^2 \xi \frac{d\xi}{dt} = \frac{\chi}{2}. \]</div>
 <p>Equation <a class="reference internal" href="#equation-vel-surf-sub">(8.18)</a> can be integrated directly to yield</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a2e5997e-1f29-4fac-b202-1905d8fc9751">
-<span class="eqno">(8.19)<a class="headerlink" href="#equation-a2e5997e-1f29-4fac-b202-1905d8fc9751" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-98f58d4f-2653-44e1-9afc-29fb27b559f5">
+<span class="eqno">(8.19)<a class="headerlink" href="#equation-98f58d4f-2653-44e1-9afc-29fb27b559f5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\xi}{2} + \frac{1}{4}\sin 2\xi = \frac{\chi}{2}t + C_2.
 \end{align}\]</div>
 <p>The integration constant <span class="math notranslate nohighlight">\(C_2\)</span> can be evaluated using the same initial condition as before (<span class="math notranslate nohighlight">\(r=r_o\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span>), which implies that <span class="math notranslate nohighlight">\(d\theta/dt = 0\)</span> or <span class="math notranslate nohighlight">\(\xi = 0\)</span> at the beginning of the collapse.  Therefore, <span class="math notranslate nohighlight">\(C_2=0\)</span>.</p>
 <p>The equation of motion for the gravitational collapse of the cloud (in parameterized form) is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-119e8320-f274-42e5-9e0e-452658d3d0e6">
-<span class="eqno">(8.20)<a class="headerlink" href="#equation-119e8320-f274-42e5-9e0e-452658d3d0e6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b5673e22-45b2-432c-afa1-c986f16efa1f">
+<span class="eqno">(8.20)<a class="headerlink" href="#equation-b5673e22-45b2-432c-afa1-c986f16efa1f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \xi + \frac{1}{2}\sin 2\xi = \chi t.
 \end{align}\]</div>
 <p>The <strong>free-fall timescale</strong> <span class="math notranslate nohighlight">\(t_{\rm ff}\)</span> for a cloud is the time when the radius of the collapsing sphere reaches zero <span class="math notranslate nohighlight">\((\theta = 0\,{\rm or}\, \xi = \pi/2)\)</span> or at least becomes very small.  Then</p>
@@ -1056,8 +1056,8 @@ The Jeans Mass for a dense core in a GMC is 7 M_sun
 <p>An important consequence of the collapse is that the density of the cloud increases by many orders of magnitude during free-fall.  Since the temperature <span class="math notranslate nohighlight">\(T\)</span> remains nearly constant throughout the collapse, it appears that the Jeans mass must decrease.  After the collapse begins, any initial inhomogeneities in density will cause individual sections of the cloud to satisfy the Jeans mass limit independently and begin to collapse locally.  This cascading collapse could lead to the formation of smaller objects.  However, it is likely that only about 1% of the cloud actually forms stars.</p>
 <p><em>What stops the fragmentation process?</em> The answer to this question lies in our implicit assumption that the collapse is isothermal, which in turn implies that the only that changes in the Jeans mass is the density.  Clearly this cannot be the case since stars have temperatures much larger than <span class="math notranslate nohighlight">\(10-100\,{\rm K}\)</span>. The other extreme is an <em>adiabatic</em> collapse, where the temperature must rise.  The real situation lies somewhere between these two limits.</p>
 <p>For an adiabatic process the gas pressure is related to its density by <span class="math notranslate nohighlight">\(\gamma\)</span> (the ratio of specific heats).  An adiabatic relation between density and temperature can be obtained (using the ideal gas law),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-98974f7e-c130-41d6-961c-37c35440a39c">
-<span class="eqno">(8.22)<a class="headerlink" href="#equation-98974f7e-c130-41d6-961c-37c35440a39c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c2efd1de-68e1-478b-93e3-c20362119ce5">
+<span class="eqno">(8.22)<a class="headerlink" href="#equation-c2efd1de-68e1-478b-93e3-c20362119ce5" title="Permalink to this equation">#</a></span>\[\begin{align}
 T = K^{\prime\prime}\rho^{\gamma -1}, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(K^{\prime\prime}\)</span> is a constant.  Substituting into the equation for the Jeans mass (Eq. <a class="reference internal" href="#equation-jeans-crit">(8.10)</a>), we find that</p>
@@ -1077,8 +1077,8 @@ T = K^{\prime\prime}\rho^{\gamma -1},
 <div class="math notranslate nohighlight">
 \[ M_J^{5/2} = \frac{4\pi}{G^{3/2}}R_J^{9/2}e\sigma T^4. \]</div>
 <p>Using the initial cloud radius at a constant density (Eq. <a class="reference internal" href="#equation-cloud-radius">(8.9)</a>), and using Eq. <a class="reference internal" href="#equation-jeans-crit">(8.10)</a> to write the density in terms of the Jeans mass, we can determine the minimum obtainable Jeans mass:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-46729c0d-9912-45d2-9526-46d3f7315306">
-<span class="eqno">(8.23)<a class="headerlink" href="#equation-46729c0d-9912-45d2-9526-46d3f7315306" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-a0f51a1b-d096-427a-ac3e-7fafacffe956">
+<span class="eqno">(8.23)<a class="headerlink" href="#equation-a0f51a1b-d096-427a-ac3e-7fafacffe956" title="Permalink to this equation">#</a></span>\[\begin{align} 
 M_{J_{\rm min}} = 0.03 \left(\frac{T^{1/4}}{e^{1/2} \mu^{9/4}}\right)\, M_\odot, 
 \end{align}\]</div>
 <p>which depends on the temperature <span class="math notranslate nohighlight">\(T\)</span> (in K), mean molecular weight <span class="math notranslate nohighlight">\(\mu\)</span>, and the efficiency factor <span class="math notranslate nohighlight">\(e\)</span>.  If we take <span class="math notranslate nohighlight">\(\mu \sim 1\)</span>, <span class="math notranslate nohighlight">\(e\sim 0.1\)</span>, and <span class="math notranslate nohighlight">\(T \sim 1000\,{\rm K}\)</span> to be representative when adiabatic effects become significant, then <span class="math notranslate nohighlight">\(M_J \sim 0.5 M_\odot\)</span>.  Fragmentation ceases when the segments of the original cloud begin to reach the range of solar mass objects.  The estimate is relatively insensitive to other reasonable choices, where if <span class="math notranslate nohighlight">\(e\sim 1\)</span>, then <span class="math notranslate nohighlight">\(M_J \sim 0.2 M_\odot\)</span>.</p>
@@ -1094,13 +1094,13 @@ M_{J_{\rm min}} = 0.03 \left(\frac{T^{1/4}}{e^{1/2} \mu^{9/4}}\right)\, M_\odot,
 <p>The term “frozen-in” refers to <a class="reference external" href="https://en.wikipedia.org/wiki/Alfv%C3%A9n%27s_theorem">Alfvén’s theorem</a>, which states that “in a fluid with infinite electric conductivity, the magnetic field is frozen into the fluid and has to move along with it.”</p>
 </div>
 <p>The virial theorem was invoked during the derivation of the Jean’s criterion as a balance between the gravitational potential energy and the cloud’s internal (thermal) kinetic energy.  The magnetic field energy was ignored, where including the effects of the magnetic field produces a critical mass of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-37705b4c-9d96-4d00-8de6-5fcc21062413">
-<span class="eqno">(8.24)<a class="headerlink" href="#equation-37705b4c-9d96-4d00-8de6-5fcc21062413" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f9b5d45d-b8db-4d63-bf1f-2bc385f4520a">
+<span class="eqno">(8.24)<a class="headerlink" href="#equation-f9b5d45d-b8db-4d63-bf1f-2bc385f4520a" title="Permalink to this equation">#</a></span>\[\begin{align}
 M_B = c_B \frac{\pi R^2 B}{G^{1/2}}, 
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c_B = 380\,{\rm N^{1/2}/m/T}\)</span> for a magnetic field permeating a spherical, uniform cloud.  If the magnetic field strength <span class="math notranslate nohighlight">\(B\)</span> is expressed in <span class="math notranslate nohighlight">\({\rm nT}\)</span> and the cloud radius <span class="math notranslate nohighlight">\(R\)</span> in units of <span class="math notranslate nohighlight">\({\rm pc}\)</span>, then <span class="math notranslate nohighlight">\(M_B\)</span> can be written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c8c52394-d160-4a3a-99e4-369f4979b504">
-<span class="eqno">(8.25)<a class="headerlink" href="#equation-c8c52394-d160-4a3a-99e4-369f4979b504" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fb7c7431-38d3-4355-870c-104b257a6795">
+<span class="eqno">(8.25)<a class="headerlink" href="#equation-fb7c7431-38d3-4355-870c-104b257a6795" title="Permalink to this equation">#</a></span>\[\begin{align}
 M_B \simeq 70\,M_\odot \left(\frac{B}{1\,{\rm nT}} \right) \left(\frac{R}{1\,{\rm pc}} \right)^2. 
 \end{align}\]</div>
 <p>If the mass of the cloud <span class="math notranslate nohighlight">\(M_c\)</span> is less than <span class="math notranslate nohighlight">\(M_B\)</span>, the cloud is said to be <strong>magnetically subcritical</strong> and stable against collapse.  Otherwise, the cloud is <strong>magnetically supercritical</strong> and the force due to gravity will overwhelm the ability of the magnetic field to resist collapse.</p>
@@ -1126,8 +1126,8 @@ M_B \simeq 70\,M_\odot \left(\frac{B}{1\,{\rm nT}} \right) \left(\frac{R}{1\,{\r
 <p>It appears that both processes may occur, although the latter process appears to dominate.</p>
 <p>Only charge particles (e.g., electrons, protons, or ions) are tied to magnetic field lines and given that dense molecular cores are dominated by neutral particles, <em>how can magnetic fields have any substantial effect on the collapse?</em> As neutrals try to drift across magnetic field lines, they <em>collide</em> with the “frozen-in” ions and the motions of the neutrals are slowed.  If there is a net defined motion of the neutrals due to gravitational forces, then they will still tend to migrate slowly in that direction.  This slow migration process is called <strong>ambipolar diffusion</strong>.</p>
 <p>To determine the relative impact of ambipolar diffusion, we need to estimate the characteristic timescale.  If we know the drift velocity of the neutrals and the distance across the molecular cloud, then it can be shown that</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2a78d301-5796-4505-9a04-bafd575f467e">
-<span class="eqno">(8.26)<a class="headerlink" href="#equation-2a78d301-5796-4505-9a04-bafd575f467e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0ae31a2a-6121-4b8a-b860-1914f45cc6d5">
+<span class="eqno">(8.26)<a class="headerlink" href="#equation-0ae31a2a-6121-4b8a-b860-1914f45cc6d5" title="Permalink to this equation">#</a></span>\[\begin{align}
 t_{\rm AD} \simeq \frac{2R}{v_{\rm drift}} \simeq 10\ {\rm Gyr} \left( \frac{n_{\rm H_2}}{10^{10}\,{\rm m^{-3}}}\right) \left( \frac{B}{1\,{\rm nT}}\right)^{-2}  \left( \frac{R}{1\,{\rm pc}}\right)^{2}.
 \end{align}\]</div>
 <div class="exercise orange admonition" id="Chapter_12/interstellar-medium-and-star-formation-exercise-5">
@@ -1287,8 +1287,8 @@ Pre-Main-Sequence Contraction Times</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[ N \simeq \alpha n_H^2 \left(\frac{4}{3} \pi r^3 \right),\]</div>
 <p>which solving for the radius produces</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5243b438-b239-47ce-918a-02fd1baf6b58">
-<span class="eqno">(8.27)<a class="headerlink" href="#equation-5243b438-b239-47ce-918a-02fd1baf6b58" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-77c4ca42-e332-4af3-b6e9-48cea0fbe0e9">
+<span class="eqno">(8.27)<a class="headerlink" href="#equation-77c4ca42-e332-4af3-b6e9-48cea0fbe0e9" title="Permalink to this equation">#</a></span>\[\begin{align}
 r \simeq \left( \frac{3N}{4\pi \alpha n_H^2} \right)^{1/3} 
 \end{align}\]</div>
 <p>and is called the <strong>Strömgren radius</strong> <span class="math notranslate nohighlight">\(r_S\)</span>.</p>
