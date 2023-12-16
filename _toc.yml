@@ -9,6 +9,7 @@ parts:
   - file: Preamble/who-for
   - file: Preamble/Python-basics
   - file: Preamble/Markdown-basics
+  - file: Preamble/HW_template
 - caption: Introduction
   numbered: true
   chapters:
@@ -30,3 +31,6 @@ parts:
   - file: Chapter_14/stellar-pulsation
   - file: Chapter_15/fate-of-massive-stars
   - file: Chapter_16/degenerate-remnants-of-stars
+- caption: Appendix
+  chapters:
+  - file: Appendix/Student_Summaries
