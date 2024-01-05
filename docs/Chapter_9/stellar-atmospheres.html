@@ -506,8 +506,8 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ E_\lambda \equiv \frac{\partial E}{\partial \lambda}, \]</div>
 <p>where <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> is the energy carried by the rays in the light cone in a time interval <span class="math notranslate nohighlight">\(dt\)</span>.  The <strong>specific intensity</strong> of the rays is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-38da8808-4b94-4cdb-a2ea-6a9110262102">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-38da8808-4b94-4cdb-a2ea-6a9110262102" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda\:dt\:dA \cos\theta\:d\Omega}, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9498f137-8dad-4245-b104-3d55e294b403">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-9498f137-8dad-4245-b104-3d55e294b403" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda \equiv \frac{\partial I}{\partial \lambda} \equiv \frac{E_\lambda d\lambda}{d\lambda\:dt\:dA \cos\theta\:d\Omega}, \end{align}\]</div>
 <p>which carries the units of energy per time per Area per steradian <em>sr</em> (<a class="reference external" href="https://en.wikipedia.org/wiki/Steradian">solid angle)</a> or more simply, energy per everything.</p>
 <figure class="align-default" id="intensity-fig">
 <a class="reference internal image-reference" href="../_images/Figure_14.jpg"><img alt="Intensity" src="../_images/Figure_14.jpg" style="width: 500px;" /></a>
@@ -555,8 +555,8 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight">
 \[ E_\lambda d\lambda = I_\lambda d\lambda\:dt\:dA \cos\theta\:d\Omega = I_\lambda d\lambda\:dA\:d\Omega\:\frac{dL}{c}, \]</div>
 <p>using Eqn. <a class="reference internal" href="#equation-specific-intensity">(5.2)</a> and the substitution of <span class="math notranslate nohighlight">\(dt\)</span>.  The quantity <span class="math notranslate nohighlight">\(dA dL\)</span> is the volume of the cylinder, where the <strong>specific energy density</strong> (<span class="math notranslate nohighlight">\(u_\lambda d\lambda\)</span>) is found by normalizing the energy <span class="math notranslate nohighlight">\(E_\lambda d\lambda\)</span> by the volume of the cylinder, integrating over all the solid angles, and using Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af9c0c26-f7b6-4ed0-8975-1f08652f2521">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-af9c0c26-f7b6-4ed0-8975-1f08652f2521" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-88b1a22c-cb05-4100-bcb8-14447e747093">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-88b1a22c-cb05-4100-bcb8-14447e747093" title="Permalink to this equation">#</a></span>\[\begin{align} 
 u_\lambda d\lambda = \frac{1}{c} \int_{\phi = 0}^{2\pi} \int_{\theta=0}^{\pi} I_\lambda d\lambda\:\sin\theta d\theta\:d\phi = \frac{4\pi}{c} \langle I_\lambda \rangle d\lambda. 
 \end{align}\]</div>
 <figure class="align-default" id="cylindrical-trap-fig">
@@ -619,8 +619,8 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight">
 \[ P_{\rm rad} = \int_0^\infty P_{\rm rad,\lambda} d\lambda, \]</div>
 <p>where the substitution <span class="math notranslate nohighlight">\(B_\lambda = I_\lambda\)</span> in Eqn. <a class="reference internal" href="#equation-rad-press-trans">(5.8)</a> can be made blackbody radiation to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4bbd053c-85b4-4c01-a4e5-d21df3303640">
-<span class="eqno">(5.9)<a class="headerlink" href="#equation-4bbd053c-85b4-4c01-a4e5-d21df3303640" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-c7e23fd9-c286-4cd5-8f42-7c7e00b7be38">
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-c7e23fd9-c286-4cd5-8f42-7c7e00b7be38" title="Permalink to this equation">#</a></span>\[\begin{align} 
 P_{\rm rad} = \int_0^\infty B_\lambda(T)d\lambda = \frac{4\sigma T^4}{3c} = \frac{1}{3}u.
 \end{align}\]</div>
 <p>The <strong>blackbody radiation pressure</strong> is one-third of the energy density, where an ideal monatomic gas is two-thirds of its energy density.</p>
@@ -880,8 +880,8 @@ allowfullscreen></iframe>
 <section id="optical-depth">
 <h3><span class="section-number">5.2.3. </span>Optical Depth<a class="headerlink" href="#optical-depth" title="Permalink to this heading">#</a></h3>
 <p>Scatter photons have a mean free path (given by Eqn. <a class="reference internal" href="#equation-mean-free-path">(5.10)</a>), where <span class="math notranslate nohighlight">\(\kappa_\lambda \rho\)</span> and <span class="math notranslate nohighlight">\(n\sigma_\lambda\)</span> can be though of as the <em>fraction</em> of photons scatter per meter of distance traveled.  Note that the mean free path is dependent on the photon wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  However it is convenient to define an <strong>optical depth</strong> <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2787eb79-3842-490d-8d8c-caa16035d500">
-<span class="eqno">(5.13)<a class="headerlink" href="#equation-2787eb79-3842-490d-8d8c-caa16035d500" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a4dafdcd-9224-4536-8c32-5f3e1e831bc2">
+<span class="eqno">(5.13)<a class="headerlink" href="#equation-a4dafdcd-9224-4536-8c32-5f3e1e831bc2" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(s\)</span> is the distance measured along the photon’s direction of motion (i.e., looking back along the path traveled by the photon).  The difference in optical depth <span class="math notranslate nohighlight">\(\Delta \tau_\lambda\)</span> can be determined as the difference between the final (<span class="math notranslate nohighlight">\(\tau_{\lambda,f}\)</span>) and initial (<span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span>) optical depths, or the integral along the photon’s path as</p>
 <div class="math notranslate nohighlight" id="equation-tau-diff">
 <span class="eqno">(5.14)<a class="headerlink" href="#equation-tau-diff" title="Permalink to this equation">#</a></span>\[\Delta \tau_\lambda = \tau_{\lambda,f} - \tau_{\lambda,o} = -\int_0^s \kappa_\lambda \rho ds.\]</div>
@@ -922,8 +922,8 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight">
 \[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds = \sec \theta \int_0^h \kappa_\lambda \rho dz = \tau_{\lambda,o} \sec \theta, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> refers to the optical depth of a vertically traveling photon ($\theta = 0).  The intensity of the light at the telescope is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d3060431-75a8-4ff3-be38-831412d109fd">
-<span class="eqno">(5.16)<a class="headerlink" href="#equation-d3060431-75a8-4ff3-be38-831412d109fd" title="Permalink to this equation">#</a></span>\[\begin{align} 
+<div class="amsmath math notranslate nohighlight" id="equation-50cb9ac8-9e7b-4526-b157-546ba838bd94">
+<span class="eqno">(5.16)<a class="headerlink" href="#equation-50cb9ac8-9e7b-4526-b157-546ba838bd94" title="Permalink to this equation">#</a></span>\[\begin{align} 
 I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 \end{align}\]</div>
 <p>For a single observation, both <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> are unknown.  Over a night of observation, the Earth rotates on its axis and several measurements of the received intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span> as a function of <span class="math notranslate nohighlight">\(\sec \theta\)</span> can be made.  Then the best-fitting <em>slope</em> is <span class="math notranslate nohighlight">\(-\tau_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> can be determined through extrapolation</p>
@@ -959,8 +959,8 @@ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 </figure>
 </li>
 <li><p><strong>Electron scattering</strong> is as you would expect where a photon is scatter (<em>not absorbed</em>) by a free electron through the process of <a class="reference external" href="https://en.wikipedia.org/wiki/Thomson_scattering">Thomson scattering</a>.  The electron “oscillates” (like a buoy) in the wake of a photon.  Because the electron’s cross section is tiny, it is a poor target for an incident photon.  The cross section for Thomson scattering <span class="math notranslate nohighlight">\(\sigma_T\)</span> has the same value (independent of wavelength),  <br> <br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-3383db96-e8b6-4390-9473-c2647fb933c4">
-<span class="eqno">(5.17)<a class="headerlink" href="#equation-3383db96-e8b6-4390-9473-c2647fb933c4" title="Permalink to this equation">#</a></span>\[\begin{align} \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-80db9f26-fc21-47d1-8f66-99348c7751c0">
+<span class="eqno">(5.17)<a class="headerlink" href="#equation-80db9f26-fc21-47d1-8f66-99348c7751c0" title="Permalink to this equation">#</a></span>\[\begin{align} \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}. \end{align}\]</div>
 <p>This is ~2 billion times smaller than the hydrogen cross section for photoionization from bound-free absorption, <span class="math notranslate nohighlight">\(\sigma_{bf}\)</span>.  Electron scattering is most effective when the electron density is very high (i.e., high temperatures for ionization) and other sources of opacity are eliminated due to the absence of necessary bound electrons.  For high temperatures, the electron scattering opacity <span class="math notranslate nohighlight">\(\kappa_{es}\)</span> dominates the continuum opacity. <br> <br></p>
 <p>A photon can also be scattered by loosely bound electrons.  <em>Compton scattering</em> occurs when the photon’s wavelength is much smaller than the atom or <em>Rayleigh scattering</em> if the wavelength is much larger.  Compton scatter is usually lumped together with Thomson scattering due to the small change in wavelength of the scattered photon.  The cross section for Rayleigh scattering is smaller than the Thomson cross section and can be neglected in most stellar atmospheres.  However, it is important in the UV for supergiant stars with their extended envelopes and in cool main-sequence stars.
 The opacity of stellar material suddenly increases at wavelengths <span class="math notranslate nohighlight">\(\lambda \leq 364.7\:{\rm nm}\)</span> and the measured radiative flux of the star suddenly decreases.  This abrupt drop in the continuous spectrum is the <strong>Balmer jump</strong> and is evident in the Sun’s spectrum.  The size of the Balmer jump in hot stars depends on the fraction of hydrogen atoms in the first excited state.  The Balmer jump appears in the middle of the <em>U</em> band in the <em>UBV</em> system, which results in a decrease in the amount of light received in the bandwidth of the <em>U</em> filter and increase the measured values for both the <em>U</em> magnitude and color index (<span class="math notranslate nohighlight">\(U-B\)</span>).</p>
@@ -1005,8 +1005,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <section id="the-rosseland-mean-opacity">
 <h3><span class="section-number">5.2.5. </span>The Rosseland Mean Opacity<a class="headerlink" href="#the-rosseland-mean-opacity" title="Permalink to this heading">#</a></h3>
 <p>The opacity in Eqn. <a class="reference internal" href="#equation-tau-integral">(5.15)</a> depends on the wavelength of light, where a star is expected to produce photons covering a wide range of wavelengths.  It is often useful to define an opacity that has been averaged over all wavelengths.  This averaging produces an opacity that depends only on the composition, density, and temperature of the stellar atmosphere.  The most commonly used scheme to compute a wavelength-independent opacity is the <a class="reference external" href="http://personal.psu.edu/rbc3/A534/lec6.pdf">Rosseland mean opacity</a> or the <strong>Rosseland mean</strong>.  The Rosseland mean incorporates a weighting function that depends on how fast the blackbody spectrum varies with temperature, which is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce3f2f4f-7980-4b6b-b5b3-a8bb02270048">
-<span class="eqno">(5.18)<a class="headerlink" href="#equation-ce3f2f4f-7980-4b6b-b5b3-a8bb02270048" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}. 
+<div class="amsmath math notranslate nohighlight" id="equation-4f970b21-02a9-44b9-8378-be0accea24fe">
+<span class="eqno">(5.18)<a class="headerlink" href="#equation-4f970b21-02a9-44b9-8378-be0accea24fe" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}. 
 \end{align}\]</div>
 <p>The absorption coefficient <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> varies with wavelength, but it also depends on the assumed source of opacity (e.g., bound-free, free-free, etc.) and there is not a simple equation to describe the average absorption coefficient for bound-bound transitions.  Approximation formulae have been developed for the average bound-free and free-free opacities:</p>
 <div class="math notranslate nohighlight" id="equation-bf-kappa">
@@ -1019,20 +1019,20 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <p>Because most stellar gases are primarily composed of hydrogen and helium, all other constituents are lumped together and referred to as <em>metals</em>.  However, certain applications require more specific detail in the composition, where each species is represented by its own mass fraction.</p>
 </div>
 <p>The mass fractions are formally defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0142d1d3-b2a9-4a66-8324-1a7b9d5fc618">
-<span class="eqno">(5.21)<a class="headerlink" href="#equation-0142d1d3-b2a9-4a66-8324-1a7b9d5fc618" title="Permalink to this equation">#</a></span>\[\begin{align}  X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-e3d91629-072f-44da-989d-abc2c5109508">
-<span class="eqno">(5.22)<a class="headerlink" href="#equation-e3d91629-072f-44da-989d-abc2c5109508" title="Permalink to this equation">#</a></span>\[\begin{align}  Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \end{align}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-a403fb22-4a36-48bb-8d03-1e7f887bd79e">
-<span class="eqno">(5.23)<a class="headerlink" href="#equation-a403fb22-4a36-48bb-8d03-1e7f887bd79e" title="Permalink to this equation">#</a></span>\[\begin{align} Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-05ce9e8c-81c1-4945-a4b2-6248658e0269">
+<span class="eqno">(5.21)<a class="headerlink" href="#equation-05ce9e8c-81c1-4945-a4b2-6248658e0269" title="Permalink to this equation">#</a></span>\[\begin{align}  X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b183ccc7-5b48-45d3-a7a8-6efc4ed5e0cb">
+<span class="eqno">(5.22)<a class="headerlink" href="#equation-b183ccc7-5b48-45d3-a7a8-6efc4ed5e0cb" title="Permalink to this equation">#</a></span>\[\begin{align}  Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-54169565-5bd5-4449-b72e-1772ea8990b6">
+<span class="eqno">(5.23)<a class="headerlink" href="#equation-54169565-5bd5-4449-b72e-1772ea8990b6" title="Permalink to this equation">#</a></span>\[\begin{align} Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \end{align}\]</div>
 <p>such that <span class="math notranslate nohighlight">\(X+Y+Z = 1\)</span>.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Gaunt_factor">Gaunt factors</a> (<span class="math notranslate nohighlight">\(g_{bf}\)</span> and <span class="math notranslate nohighlight">\(g_{ff}\)</span>) in Eqns. <a class="reference internal" href="#equation-bf-kappa">(5.19)</a> and <a class="reference internal" href="#equation-ff-kappa">(5.20)</a> are quantum-mechanical correction terms.  These Gaunt factors are approximately 1 for the visible and UV wavelengths of interest.  The <strong>guillotine factor</strong> <span class="math notranslate nohighlight">\(t\)</span> (<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1932MNRAS..92..364E/abstract">Eddington 1932</a>) describes a cutoff to the opacity of an atom after it has been ionized, where typical values lie between 1 and 100.</p>
 <p>Equations <a class="reference internal" href="#equation-bf-kappa">(5.19)</a> and <a class="reference internal" href="#equation-ff-kappa">(5.20)</a> have the functional form <span class="math notranslate nohighlight">\(\bar{\kappa} \propto \kappa_o \rho/T^{3.5}\)</span>, where <span class="math notranslate nohighlight">\(\kappa_o\)</span> combines all the factors that depend on composition. H. A. Kramers derived the first forms (in 1923) using classical physics and the Rosseland mean.  As a result, any opacity having a temperature and density dependence is referred to as <strong>Kramers opacity law</strong>.</p>
 <p>The electron scattering cross section is independent of wavelength and the Rosseland mean is simply</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9d8b572-7a73-47c6-ab40-2a35d7d85ca8">
-<span class="eqno">(5.24)<a class="headerlink" href="#equation-e9d8b572-7a73-47c6-ab40-2a35d7d85ca8" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{es} = 0.02(1+X) \:{\rm m^2/kg}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ca4c9ed8-c3d8-48a1-bf84-5c2dc9db23f5">
+<span class="eqno">(5.24)<a class="headerlink" href="#equation-ca4c9ed8-c3d8-48a1-bf84-5c2dc9db23f5" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{es} = 0.02(1+X) \:{\rm m^2/kg}. \end{align}\]</div>
 <p>The mean opacity is modified in cooler stars (later than F0) by the <span class="math notranslate nohighlight">\(H^-\)</span> ion over specific temperature range (3000 K <span class="math notranslate nohighlight">\(\leq T \leq\)</span> 6000 K), density range (<span class="math notranslate nohighlight">\(10^{-7}\leq \rho \leq 10^{-2}\: {\rm kg/m^3}\)</span>), and metal mass fraction (<span class="math notranslate nohighlight">\(0.001 &lt; Z &lt; 0.03\)</span>), when the hydrogen mass fraction <span class="math notranslate nohighlight">\(X\sim0.7\)</span> is lower.  The average opacity is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e405e8e-a4a2-41cc-9ee5-5e6efb29347e">
-<span class="eqno">(5.25)<a class="headerlink" href="#equation-8e405e8e-a4a2-41cc-9ee5-5e6efb29347e" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{H^-} \approx 7.9 \times 10^{-34} (50Z)\sqrt{\rho}T^9\:{\rm m^2/kg}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9d111bd2-c378-413b-b8f0-0e6f976e83b2">
+<span class="eqno">(5.25)<a class="headerlink" href="#equation-9d111bd2-c378-413b-b8f0-0e6f976e83b2" title="Permalink to this equation">#</a></span>\[\begin{align} \bar{\kappa}_{H^-} \approx 7.9 \times 10^{-34} (50Z)\sqrt{\rho}T^9\:{\rm m^2/kg}. \end{align}\]</div>
 <p>The total Rosseland mean opacity <span class="math notranslate nohighlight">\(\bar{\kappa}\)</span> is the average of the sum of the individual contributions or</p>
 <div class="math notranslate nohighlight">
 \[ \bar{\kappa} = \overline{\kappa_{bb}+\kappa_{bf}+\kappa_{ff}+\kappa_{es}+\kappa_{H^-}}. \]</div>
@@ -1161,8 +1161,8 @@ The opacity of stellar material suddenly increases at wavelengths <span class="m
 <h3><span class="section-number">5.3.4. </span>The Radiation Pressure Gradient<a class="headerlink" href="#the-radiation-pressure-gradient" title="Permalink to this heading">#</a></h3>
 <p>In addition to the photon’s meandering journey, there is a pressure that builds within the Sun’s atmosphere due to collisions.  This is similar to the air pressure within a closed room, where an individual molecule moves ~500 m/s and collides with other air molecules several billion times per second.  In the analogy of the closed room, a net flow of air (i.e., breeze) can occur after opening a window.</p>
 <p>The pressure outside is lower than the pressure inside the room, which can be expressed as a pressure differential using Bernoulli’s principle.  In a star, the high pressure interior and vacuum of space also produces a pressure difference.  The extent of the difference is not uniform, where the pressure decreases with stellar radius (i.e., as you get closer to the surface).  But it is enough to create a light movement of photons toward the surface that described by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6332c876-660e-4e87-9725-640420272eb3">
-<span class="eqno">(5.28)<a class="headerlink" href="#equation-6332c876-660e-4e87-9725-640420272eb3" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{dP_{\rm rad}}{dr} = -\frac{\bar{\kappa}\rho}{c}F_{\rm rad}. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-01e17951-3d3d-4c4d-a839-1dbc66aa5ef6">
+<span class="eqno">(5.28)<a class="headerlink" href="#equation-01e17951-3d3d-4c4d-a839-1dbc66aa5ef6" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{dP_{\rm rad}}{dr} = -\frac{\bar{\kappa}\rho}{c}F_{\rm rad}. \end{align}\]</div>
 <p>The transfer of radiation as a flow with photons drifting toward the surface is a better description than a “beam” that propagate radially outward.  The description of a beam is a convenient fiction used to define the direct of motion for a photon at a snapshot along its journey of continual absorption and scattering.</p>
 </section>
 </section>
@@ -1216,8 +1216,8 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight">
 \[ \ln \left(\frac{I_\lambda - S_\lambda}{I_{\lambda,o} - S_\lambda}\right) = -\kappa_\lambda \rho s, \]</div>
 <p>which simplifies to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-672588a2-fefb-4e26-9268-7d051fc8396b">
-<span class="eqno">(5.32)<a class="headerlink" href="#equation-672588a2-fefb-4e26-9268-7d051fc8396b" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda(s) = I_{\lambda,o} e^{-\kappa_\lambda \rho s} + S_\lambda(1-e^{-\kappa_\lambda \rho s}). \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7314d7ae-b494-43e1-b6c9-7997eaf105bd">
+<span class="eqno">(5.32)<a class="headerlink" href="#equation-7314d7ae-b494-43e1-b6c9-7997eaf105bd" title="Permalink to this equation">#</a></span>\[\begin{align}  I_\lambda(s) = I_{\lambda,o} e^{-\kappa_\lambda \rho s} + S_\lambda(1-e^{-\kappa_\lambda \rho s}). \end{align}\]</div>
 <ul class="simple">
 <li><p><strong>Suppose the source function <span class="math notranslate nohighlight">\(S_\lambda\)</span> is twice the initial intensity <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span>, then plot the transformation of the intensity in units of <span class="math notranslate nohighlight">\(\kappa_\lambda \rho s\)</span>.</strong></p></li>
 </ul>
@@ -1256,21 +1256,21 @@ allowfullscreen></iframe>
 <section id="the-assumption-of-a-plane-parallel-atmosphere">
 <h3><span class="section-number">5.4.4. </span>The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this heading">#</a></h3>
 <p>The intensity of light must depend on the path for the outward flow of energy.  The absorption and emission coefficients are the same for light traveling in all directions, but these coefficients depend on the temperature and density in a complicated way.  For astronomers to understand the stellar interior, they must know <em>at what depth</em> a spectral line is formed.  Since we are interested in the depth, let’s rewrite the transfer equation in terms of the optical depth, which is simply</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f9a16546-d981-48e5-9e19-69c4f6a474f8">
-<span class="eqno">(5.33)<a class="headerlink" href="#equation-f9a16546-d981-48e5-9e19-69c4f6a474f8" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bf4d57b6-5f5b-44b4-b1d9-93c313963c48">
+<span class="eqno">(5.33)<a class="headerlink" href="#equation-bf4d57b6-5f5b-44b4-b1d9-93c313963c48" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda. \end{align}\]</div>
 <p>Optical depth does not provide a unique geometric depth in the atmosphere and thus, must be replaced with a more meaningful measure of position.  The atmospheres of main-sequence stars are physically thin compared with the size of the star.  The atmosphere’s radius of curvature is much larger than its thickness, where we may consider the atmosphere as a <em>plane-parallel slab</em>.  If we assume align the <em>z</em>-axis with the vertical direction, then <span class="math notranslate nohighlight">\(z=0\)</span> denotes the top of this <strong>plane-parallel</strong> atmosphere and a <strong>vertical optical depth</strong> <span class="math notranslate nohighlight">\(\tau_{\lambda,v}(z)\)</span> is defined as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2134ed4-35dd-42a6-9545-d016d3e71eb9">
-<span class="eqno">(5.34)<a class="headerlink" href="#equation-c2134ed4-35dd-42a6-9545-d016d3e71eb9" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_{\lambda,v}(z) \equiv \int_z^0 \kappa_\lambda \rho dz. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-a3fbc323-9504-4d34-a5a6-91c6b904778e">
+<span class="eqno">(5.34)<a class="headerlink" href="#equation-a3fbc323-9504-4d34-a5a6-91c6b904778e" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_{\lambda,v}(z) \equiv \int_z^0 \kappa_\lambda \rho dz. \end{align}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <span class="math notranslate nohighlight">\(v\)</span> symbol is not to be confused with <span class="math notranslate nohighlight">\(\nu\)</span>, where the former signifies the <strong>v</strong> in vertical.</p>
 </div>
 <p>Recall the discussion for correcting the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#optical-depth">opacity of the Earth’s atmosphere</a>, the depth was parameterized in a similar manner.  A ray that travels upward at an angle <span class="math notranslate nohighlight">\(\theta\)</span> has farther to go through the atmosphere to reach the surface.  The optical depth <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> is <em>greater</em> than the vertical optical depth <span class="math notranslate nohighlight">\(\tau_{\lambda,v}\)</span>.  The two optical depths are related by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d0e38b5b-819e-46e7-8e72-c07f7d31808a">
-<span class="eqno">(5.35)<a class="headerlink" href="#equation-d0e38b5b-819e-46e7-8e72-c07f7d31808a" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_\lambda = \frac{\tau_{\lambda,v}}{\cos \theta} = \tau_{\lambda,v} \sec \theta \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-ee235a54-8fba-4b0c-92e4-fe28a8e7f675">
+<span class="eqno">(5.35)<a class="headerlink" href="#equation-ee235a54-8fba-4b0c-92e4-fe28a8e7f675" title="Permalink to this equation">#</a></span>\[\begin{align}  \tau_\lambda = \frac{\tau_{\lambda,v}}{\cos \theta} = \tau_{\lambda,v} \sec \theta \end{align}\]</div>
 <p>and then the transfer equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d809d02d-0ee2-4309-a763-8a3fa788a7dc">
-<span class="eqno">(5.36)<a class="headerlink" href="#equation-d809d02d-0ee2-4309-a763-8a3fa788a7dc" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-cb581573-c159-493f-8fbe-c4fc4c8bcb22">
+<span class="eqno">(5.36)<a class="headerlink" href="#equation-cb581573-c159-493f-8fbe-c4fc4c8bcb22" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \frac{dI_\lambda}{d\tau_{\lambda,v}} = I_\lambda - S_\lambda \end{align}\]</div>
 <p>for the approximation of a plane-parallel atmosphere.</p>
 <figure class="align-default" id="pp-atmos-fig">
 <a class="reference internal image-reference" href="../_images/Figure_141.jpg"><img alt="plane parallel atmosphere" src="../_images/Figure_141.jpg" style="width: 450px;" /></a>
@@ -1279,13 +1279,13 @@ allowfullscreen></iframe>
 </figcaption>
 </figure>
 <p>The value of the vertical optical depth is wavelength dependent, but when considering the bulk flow of photons a <em>gray</em> atmosphere is assumed.  Gray atmospheres are used when the measured flux does not show a strong wavelength dependence.  Thus, the transfer equation for a plane-parallel gray atmosphere is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-880fb2cb-e5aa-4274-9df5-029528c9b6cb">
-<span class="eqno">(5.37)<a class="headerlink" href="#equation-880fb2cb-e5aa-4274-9df5-029528c9b6cb" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \dfrac{dI}{d\tau_v} = I - S. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-dd15db68-ef61-41c6-9446-905863491bc7">
+<span class="eqno">(5.37)<a class="headerlink" href="#equation-dd15db68-ef61-41c6-9446-905863491bc7" title="Permalink to this equation">#</a></span>\[\begin{align}  \cos \theta \dfrac{dI}{d\tau_v} = I - S. \end{align}\]</div>
 <p>Formulating the transfer equation in terms of an angle and optical depth leads to two useful relations describing the radiation field.</p>
 <p><strong>1) Integrating over all solid angles</strong></p>
 <p>The source function <span class="math notranslate nohighlight">\(S\)</span> depends only on the local conditions, so we can integrate over all solid angles to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e357c456-c700-4eb8-97b6-e9fcb842fe56">
-<span class="eqno">(5.38)<a class="headerlink" href="#equation-e357c456-c700-4eb8-97b6-e9fcb842fe56" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-12ea0da8-496b-4444-941d-17f533f38d10">
+<span class="eqno">(5.38)<a class="headerlink" href="#equation-12ea0da8-496b-4444-941d-17f533f38d10" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{d}{d\tau_v}\int I \cos \theta d\Omega = \int I d\Omega - S \int d\Omega.  \end{align}\]</div>
 <p>This expression can be simplified using <span class="math notranslate nohighlight">\(\int d\Omega = 4\pi\)</span>, definition of <span class="math notranslate nohighlight">\(F_{rad}\)</span> (Eqn. <a class="reference internal" href="#equation-spec-flux">(5.7)</a>, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>) and the mean intensity (Eqn. <a class="reference internal" href="#equation-mean-intensity">(5.3)</a>, integrated over <span class="math notranslate nohighlight">\(\lambda\)</span>).  Through substitution, we find</p>
 <div class="math notranslate nohighlight">
 \[ \frac{d F_{rad}}{d\tau_v} = 4\pi(\langle I \rangle - S). \]</div>
@@ -1301,8 +1301,8 @@ allowfullscreen></iframe>
 \[ \frac{d P_{rad}}{dr} = -\frac{\kappa \rho}{c}F_{rad}, \]</div>
 <p>in terms of a spherical coordinate system with its origin at the center fo the star.  As mention in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-radiation-pressure-gradient">the radiation pressure gradient</a>, this result describes the net radiative flux driven by differences in radiation pressure (i.e., “photon wind”).</p>
 <p>For a plane-parallel atmosphere to be in equilibrium, the radiative flux must have the same value at every level, including its surface, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8784c385-fdcb-4060-b327-140bce8677bc">
-<span class="eqno">(5.40)<a class="headerlink" href="#equation-8784c385-fdcb-4060-b327-140bce8677bc" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-99b98ab8-9a89-41f5-925f-6cc1f4628b98">
+<span class="eqno">(5.40)<a class="headerlink" href="#equation-99b98ab8-9a89-41f5-925f-6cc1f4628b98" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = {\rm constant} = F_{surf} = \sigma T_e^4. \end{align}\]</div>
 <p>This implies that the first of the above relations (<span class="math notranslate nohighlight">\(dF_{rad}/d\tau_v\)</span>) is zero and the mean intensity must equal the source function as</p>
 <div class="math notranslate nohighlight">
 \[ \langle I \rangle = S. \]</div>
@@ -1316,8 +1316,8 @@ allowfullscreen></iframe>
 <p>The temperature as a function of the optical depth (i.e., temperature structure) can be determined if we knew how the radiation pressure varied with temperature in the general case.  Equation <a class="reference internal" href="#equation-rad-pressure">(5.41)</a> could be used if we also <em>assume</em> a description of the angular distribution of intensity.  An approximation was made by <a class="reference external" href="https://en.wikipedia.org/wiki/Arthur_Eddington">Eddington</a>, where the intensity of the radiation field is defined in the +<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm out}\)</span> and another in the -<span class="math notranslate nohighlight">\(z\)</span>-direction <span class="math notranslate nohighlight">\(I_{\rm in}\)</span>.  These intensities vary with depth in the atmosphere and when <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>, then <span class="math notranslate nohighlight">\(I_{\rm in} = 0\)</span> (i.e., radiation doesn’t flow inward at the top of the atmosphere).  The <strong>Eddington approximation</strong> gives the mean intensity, radiative flux, and radiation pressure by:</p>
 <div class="math notranslate nohighlight" id="equation-average-intens-edd">
 <span class="eqno">(5.42)<a class="headerlink" href="#equation-average-intens-edd" title="Permalink to this equation">#</a></span>\[\langle I \rangle = \frac{1}{2}(I_{\rm out} + I_{\rm in}), \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-3f51275a-7f25-4cae-b31a-1d86196272c9">
-<span class="eqno">(5.43)<a class="headerlink" href="#equation-3f51275a-7f25-4cae-b31a-1d86196272c9" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = \pi(I_{\rm out} - I_{\rm in}), \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b77cd6cb-a630-4cf1-a0e0-337dd29df3db">
+<span class="eqno">(5.43)<a class="headerlink" href="#equation-b77cd6cb-a630-4cf1-a0e0-337dd29df3db" title="Permalink to this equation">#</a></span>\[\begin{align}  F_{rad} = \pi(I_{\rm out} - I_{\rm in}), \end{align}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-rad-press-edd">
 <span class="eqno">(5.44)<a class="headerlink" href="#equation-rad-press-edd" title="Permalink to this equation">#</a></span>\[P_{rad}= \frac{2\pi}{3c}(I_{\rm out} + I_{\rm in}) = \frac{4\pi}{3c} \langle I \rangle .\]</div>
@@ -1328,8 +1328,8 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight">
 \[ \frac{2\pi}{3c} I_{\rm out} = \frac{2}{3c} F_{rad} = C, \]</div>
 <p>and substituting back into Eqn. <a class="reference internal" href="#equation-rad-press-int">(5.45)</a>, we find</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ab3d8cb-5c65-42db-ae68-2a2d1d612c05">
-<span class="eqno">(5.46)<a class="headerlink" href="#equation-1ab3d8cb-5c65-42db-ae68-2a2d1d612c05" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} +  \frac{2}{3c} F_{rad} = \frac{F_{rad}}{c}\left(\tau_v + \frac{2}{3}\right).  \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f69252ae-d575-4b0b-a6d9-65b43124dd3e">
+<span class="eqno">(5.46)<a class="headerlink" href="#equation-f69252ae-d575-4b0b-a6d9-65b43124dd3e" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{4\pi}{3c} \langle I \rangle = \frac{\tau_v}{c}F_{rad} +  \frac{2}{3c} F_{rad} = \frac{F_{rad}}{c}\left(\tau_v + \frac{2}{3}\right).  \end{align}\]</div>
 <p>But we already know the radiative flux is a constant (<span class="math notranslate nohighlight">\(F_{rad} = \sigma T_e^4\)</span>) and thus, the mean intensity can be determined as a function of vertical optical depth by</p>
 <div class="math notranslate nohighlight" id="equation-mean-intensity-vod">
 <span class="eqno">(5.47)<a class="headerlink" href="#equation-mean-intensity-vod" title="Permalink to this equation">#</a></span>\[\langle I \rangle  = \frac{3\sigma}{4\pi}T_e^4\left(\tau_v + \frac{2}{3}\right).\]</div>
@@ -1337,8 +1337,8 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight" id="equation-source-func">
 <span class="eqno">(5.48)<a class="headerlink" href="#equation-source-func" title="Permalink to this equation">#</a></span>\[S = B = \langle I \rangle  = \frac{\sigma T^4}{\pi}.\]</div>
 <p>Substituting Eqn. <a class="reference internal" href="#equation-source-func">(5.48)</a> back into Eqn. <a class="reference internal" href="#equation-mean-intensity-vod">(5.47)</a> results in the variation of the temperature with vertical optical depth in a plane-parallel gray atmosphere in LTE, assuming the Eddington approximation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ba4fc49-26e2-4f36-9d31-2bbe4ae2a17d">
-<span class="eqno">(5.49)<a class="headerlink" href="#equation-4ba4fc49-26e2-4f36-9d31-2bbe4ae2a17d" title="Permalink to this equation">#</a></span>\[\begin{align}  T^4 = \frac{3}{4}T_e^4\left(\tau_v + \frac{2}{3}\right). \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-33582c24-08ea-474c-9800-eb61b3f78629">
+<span class="eqno">(5.49)<a class="headerlink" href="#equation-33582c24-08ea-474c-9800-eb61b3f78629" title="Permalink to this equation">#</a></span>\[\begin{align}  T^4 = \frac{3}{4}T_e^4\left(\tau_v + \frac{2}{3}\right). \end{align}\]</div>
 <p>This relation reveals that <span class="math notranslate nohighlight">\(T=T_e\)</span> at <span class="math notranslate nohighlight">\(\tau_v = 2/3\)</span> and <em>not</em> at <span class="math notranslate nohighlight">\(\tau_v = 0\)</span>.  The “surface” of a star for which we measure an effective temperature <span class="math notranslate nohighlight">\(T_e\)</span> is <em>not</em> at the top of the atmosphere, but deeper down where <span class="math notranslate nohighlight">\(\tau_v=2/3\)</span>.  The average point of origin for the photons comes from within the stellar atmosphere.  <em>When looking at a star, we see down to a vertical optical depth of <span class="math notranslate nohighlight">\(\tau_v \approx 2/3\)</span>, averaged over the disk of the star.</em></p>
 </section>
 <section id="limb-darkening-revisited">
@@ -1386,8 +1386,8 @@ allowfullscreen></iframe>
 <div class="math notranslate nohighlight">
 \[ a_\lambda = \frac{\sigma T_e^4}{2\pi}\quad {\rm and} \quad b_\lambda = \frac{3\sigma}{4\pi} T_e^4. \]</div>
 <p>Using Eqn. <a class="reference internal" href="#equation-solar-src-fcn">(5.53)</a>, we have</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2d642e4d-33bd-4b5c-83d6-cb3501f94882">
-<span class="eqno">(5.54)<a class="headerlink" href="#equation-2d642e4d-33bd-4b5c-83d6-cb3501f94882" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{I(\theta)}{I(0)} = \frac{a_\lambda + b_\lambda \tau_v}{a_\lambda + b_\lambda} = \frac{2}{5} + \frac{3}{5}\cos \theta. \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-781bcf3a-6758-42be-b886-b22abb8c0bce">
+<span class="eqno">(5.54)<a class="headerlink" href="#equation-781bcf3a-6758-42be-b886-b22abb8c0bce" title="Permalink to this equation">#</a></span>\[\begin{align}  \frac{I(\theta)}{I(0)} = \frac{a_\lambda + b_\lambda \tau_v}{a_\lambda + b_\lambda} = \frac{2}{5} + \frac{3}{5}\cos \theta. \end{align}\]</div>
 <figure class="align-default" id="eddingtion-approx-fig">
 <a class="reference internal image-reference" href="../_images/Figure_161.jpg"><img alt="Eddington approximation" src="../_images/Figure_161.jpg" style="width: 450px;" /></a>
 <figcaption>
@@ -1401,8 +1401,8 @@ allowfullscreen></iframe>
 <section id="equivalent-widths">
 <h3><span class="section-number">5.5.1. </span>Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this heading">#</a></h3>
 <p>Absorption spectral lines are identified on graphs of the radiant flux <span class="math notranslate nohighlight">\(F_\lambda\)</span> as a function of the wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.  The radiant flux can be normalized relative to the flux of the continuous spectrum <span class="math notranslate nohighlight">\(F_c\)</span> outside the spectral line (i.e., <span class="math notranslate nohighlight">\(F_\lambda/F_c\)</span>).  Near the middle of the absorption (i.e., <em>core</em> of the spectral line), there is the central wavelength <span class="math notranslate nohighlight">\(\lambda_o\)</span> and the <em>wings</em> extend outward, sweeping up to the continuum.  The depth <span class="math notranslate nohighlight">\(\delta\)</span> of the line is simply the fractional decrease in radiant flux relative to the continuum (i.e., <span class="math notranslate nohighlight">\(\delta F_\lambda = 1 - F_\lambda/F_c\)</span>).  The strength of absorption is measured by its <strong>equivalent width</strong> <span class="math notranslate nohighlight">\(W\)</span>, which is a rectangle with height equal to unity and a specific width so that the area of the rectangle is equal to the total area removed from the continuum by the absorption.  Mathematically, this is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df6fecb9-2a9d-4df8-9a74-5edd932cc3e3">
-<span class="eqno">(5.55)<a class="headerlink" href="#equation-df6fecb9-2a9d-4df8-9a74-5edd932cc3e3" title="Permalink to this equation">#</a></span>\[\begin{align}  W = \int 1- \frac{F_\lambda}{F_c} d\lambda = \int \delta F d\lambda, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-16ce77e3-a175-436a-b94e-3a5d4165f303">
+<span class="eqno">(5.55)<a class="headerlink" href="#equation-16ce77e3-a175-436a-b94e-3a5d4165f303" title="Permalink to this equation">#</a></span>\[\begin{align}  W = \int 1- \frac{F_\lambda}{F_c} d\lambda = \int \delta F d\lambda, \end{align}\]</div>
 <p>where the integral is taken from one side of <span class="math notranslate nohighlight">\(\lambda_o\)</span> to the other and is usually on the order of 0.01 nm.  Another measure of spectral line width uses a point at half of the depth at the core wavelength (i.e., <span class="math notranslate nohighlight">\(\delta F_{1/2} = 1/2 - F_{\lambda_o}/(2F_c)\)</span>) and moves to the left/right a <span class="math notranslate nohighlight">\(\Delta \lambda_{1/2} = \lambda_o \pm \lambda_{\delta F}\)</span> until intersecting the absorption line so that <span class="math notranslate nohighlight">\(\delta F = \delta F_{1/2}\)</span>, or</p>
 <div class="math notranslate nohighlight">
 \[ 1 - \frac{F_\lambda}{F_c} = \frac{1}{2}\left(1 - \frac{F_{\lambda_o}}{F_c} \right), \]</div>
