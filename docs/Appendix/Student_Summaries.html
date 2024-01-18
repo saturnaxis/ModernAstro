@@ -74,6 +74,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Appendix/Student_Summaries';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Appendix/Student_Summaries.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -702,23 +704,79 @@ using an open-source python package to the instructor and other students.</p></l
 <ul class="simple">
 <li><p><strong>1.1 Stellar Parallax</strong></p>
 <ul>
-<li><p>Add detail using bullets</p></li>
+<li><p><strong>Trigonometric parallax</strong>: measurement of angular displacement of an object from two different vantage points creating a known baseline distance <span class="math notranslate nohighlight">\(B\)</span> between observers. <span class="math notranslate nohighlight">\(d = B/tan(p)\)</span>. <span class="math notranslate nohighlight">\(tan(p)\)</span> comes from small angle approximations, so we can use <span class="math notranslate nohighlight">\(p&quot;\)</span> (” standing for arcseconds) for angle values smaller than <span class="math notranslate nohighlight">\(1\)</span> arcsecond.</p></li>
+<li><p>The angles at which these stars move relative to the much more distant stars in the background are very small.</p></li>
+<li><p><span class="math notranslate nohighlight">\(3600\)</span> arcseconds per <span class="math notranslate nohighlight">\(1\)</span> degree because of <span class="math notranslate nohighlight">\(1/60/60 = 1/3600\)</span>. You have <span class="math notranslate nohighlight">\(360\)</span> degrees of sky, split <span class="math notranslate nohighlight">\(1\)</span> of those degrees into <span class="math notranslate nohighlight">\(60\)</span> pieces, giving you <span class="math notranslate nohighlight">\(60\)</span> arcminutes. Then you take <span class="math notranslate nohighlight">\(1\)</span> of those arcminutes and split that into <span class="math notranslate nohighlight">\(60\)</span> pieces, giving you <span class="math notranslate nohighlight">\(60\)</span> arcseconds.</p></li>
+<li><p>Arcseconds are very small amounts of angle, and can be divided further for smaller movements across the night sky. Example: Proxima Centauri has a parallax angle of less than <span class="math notranslate nohighlight">\(1&quot;\)</span>.</p></li>
+<li><p>We measure stellar distances in units of parsecs (<strong>par</strong>allax-<strong>sec</strong>onds), 206,265 AU per parsec (great distance).</p></li>
+<li><p>First successful measurement of stellar parallax in 1838 by <strong>Fredrich Bessel</strong> (1784-1846).</p></li>
+<li><p><span class="math notranslate nohighlight">\(1 pc = 3.2615638 ly\)</span></p></li>
+<li><p>Objects with small parallax angles have interfering conditions such as geologic tremors or atmospheric turbulence which make it hard to find accurate angles. Space missions such as Hipparcos don’t have this problem.</p></li>
 </ul>
 </li>
 <li><p><strong>1.2 The Magnitude Scale</strong></p>
 <ul>
-<li><p><strong>1.2.1 Apparent Magnitude</strong></p></li>
-<li><p><strong>1.2.2 Flus, Luminosity, and the Inverse Square Law</strong></p></li>
-<li><p><strong>1.2.3 Flux Ratios and Apparent Magnitude</strong></p></li>
-<li><p><strong>1.2.4 Absolute Magnitude and the Distance Modulus</strong></p></li>
+<li><p><strong>1.2.1 Apparent Magnitude</strong></p>
+<ul>
+<li><p><strong>Hipparchus</strong> compiled a list of ~850 stars (some found by Persians before, he just added to the list and listed previously known ones) and compared their brightness. Later examinations of his scale showed that it was logarithmic because the human eye perceives the brightness of objects logarithmically.</p></li>
+<li><p>Example: if a bright light source were <span class="math notranslate nohighlight">\(6\)</span> times brighter than another, the human eye will determine the brighter object as approximately twice the brightness of the other.</p></li>
+<li><p>This means that the difference in brightness between two different magnitude stars is <span class="math notranslate nohighlight">\(100^{(m2-m1)/5}= ΔB\)</span>. Two stars separated by <span class="math notranslate nohighlight">\(1\)</span> magnitude have a difference in brightness of <span class="math notranslate nohighlight">\(2.512\)</span> times, or <span class="math notranslate nohighlight">\(100^{1/5}\)</span>. Two stars separated by 5 magnitudes have <span class="math notranslate nohighlight">\(100\)</span> times difference in brightness.</p></li>
+</ul>
+</li>
+<li><p><strong>1.2.2 Flux, Luminosity, and the Inverse Square Law</strong></p>
+<ul>
+<li><p><strong>Radiant flux <span class="math notranslate nohighlight">\(F\)</span></strong> is the brightness of a star measured by the total amount of radiation at all wavelengths that cross a unit of area per unit time. Definition depends on the energy emitted per second at the stellar surface (intrinsic luminosity <span class="math notranslate nohighlight">\(L\)</span>)</p></li>
+<li><p>Luminosity <span class="math notranslate nohighlight">\(L\)</span> is distributed uniformly across the surface area of a shell of radius <span class="math notranslate nohighlight">\(r\)</span> surrounding a star.</p></li>
+<li><p>This is the well-known inverse square law for light. The <span class="math notranslate nohighlight">\(4π\)</span> factor is not necessarily needed as the radiant flux of some stars are given relative to the Solar Luminosity (L_sol) and the Earth-Sun distance (r_earth).</p></li>
+<li><p><span class="math notranslate nohighlight">\(F = L/4πr^2\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>1.2.3 Flux Ratios and Apparent Magnitude</strong></p>
+<ul>
+<li><p><strong>Absolute magnitude M</strong> of a star is the apparent magnitude a star would have if it were located at a distance of <span class="math notranslate nohighlight">\(10 pc\)</span>. We can find the ratio of their flux to be, <span class="math notranslate nohighlight">\({\frac{F_2}{F_1}} = 100^{m_1-m_2/5}\)</span></p></li>
+<li><p>Logarithm of both sides of the flux ratio above gives an alternative form: <span class="math notranslate nohighlight">\(m_1-m_2 = -2.5log_{10}{\frac{F_2}{F_1}}\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>1.2.4 Absolute Magnitude and the Distance Modulus</strong></p>
+<ul>
+<li><p><strong>Distance modulus</strong>: <span class="math notranslate nohighlight">\(m-M = 5log_{10}(d)-5 = 5log_{10}{\frac{d}{10 parsecs}}\)</span></p></li>
+<li><p>How bright a star would be if it were <span class="math notranslate nohighlight">\(10 pc\)</span> away is called the absolute magnitude</p></li>
+<li><p>Multiply the <span class="math notranslate nohighlight">\(10\)</span> over from <span class="math notranslate nohighlight">\(d/10 pc = 10^{(m-M)/5}\)</span> and that gives you the +5 being added to the two magnitudes in the exponent</p></li>
+<li><p>Goes from <span class="math notranslate nohighlight">\(10^{-6}\)</span> to <span class="math notranslate nohighlight">\(10^{-7}\)</span> because the <span class="math notranslate nohighlight">\(d/10\)</span> you are just dividing by <span class="math notranslate nohighlight">\(10^{1}\)</span> to make a more negative exponent.</p></li>
+<li><p>M_Sun needs to be written out as “Sun” in the subscript, otherwise putting a circle dot would make the quantity the mass of the Sun.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><strong>1.3 The Wave Nature of Light</strong></p>
 <ul>
-<li><p><strong>1.3.1 The Speed of Light</strong></p></li>
-<li><p><strong>1.3.2 Young’s Double-Slit Experiment</strong></p></li>
-<li><p><strong>1.3.3 Maxwell’s Electromagnetic Wave Theory</strong></p></li>
-<li><p><strong>1.3.4 The Poynting Vector and Radiation Pressure</strong></p></li>
+<li><p><strong>1.3.1 The Speed of Light</strong></p>
+<ul>
+<li><p>Ole Roemer determined that the speed of light was finite by extensive measurements of Jupiter’s moons eclipsing when Earth was near the opposite side of the Sun compared to Jupiter.</p></li>
+<li><p>He used Kepler’s original third law without universal gravitation. It wasn’t until 1761 until we found out the distance of an AU, so that also hampered the mathematics needed to calculate the speed of light.</p></li>
+</ul>
+</li>
+<li><p><strong>1.3.2 Young’s Double-Slit Experiment</strong></p>
+<ul>
+<li><p><strong>Christian Huygens</strong> (1629-1695) suggested that light was and behaved similarly to waves, with wavelengths, crests, and troughs.</p></li>
+<li><p>c = (wavelength)(frequency)</p></li>
+<li><p>Thomas Young’s double-slit experiment: two waves of light interfering with each other going through the slits. <strong>Destructive interference</strong> occurs when the peaks and troughs of the light wave cancel eachother, making darker parts on the screen. <strong>Constructive interference</strong> occurs when there are brighter fringes.</p></li>
+</ul>
+</li>
+<li><p><strong>1.3.3 Maxwell’s Electromagnetic Wave Theory</strong></p>
+<ul>
+<li><p>Breakthrough in nature of light waves from Scottish mathematical physicist <strong>James Clerk Maxwell (1831-1879)</strong>.</p></li>
+<li><p>Electromagnetic waves are transverse waves with an <strong>Electric field E</strong> and <strong>magnetic field B</strong> component.</p></li>
+</ul>
+</li>
+<li><p><strong>1.3.4 The Poynting Vector and Radiation Pressure</strong></p>
+<ul>
+<li><p>EM waves carry both energy and momentum in the direction of propagation. The rate at which energy is carried by a light wave is described by the Poynting vector.</p></li>
+<li><p><span class="math notranslate nohighlight">\(S=\frac{1}{\mu_0}ExB\)</span></p></li>
+<li><p>The Poynting vector is reliant on the cross product of the electric and magnetic field components of the EM wave. The units are in watts per meter squared <span class="math notranslate nohighlight">\(W m^{-2}\)</span>.</p></li>
+<li><p>When EM waves reflect off of a surface at a certain angle <span class="math notranslate nohighlight">\(θ\)</span> because it is conserving momentum upon impact, causing it to go in another direction.</p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
