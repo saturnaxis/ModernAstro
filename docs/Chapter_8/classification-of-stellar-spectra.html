@@ -188,6 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/Python-basics.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/Markdown-basics.html">Introduction to Markdown</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/HW_template.html">Homework Assignments</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
@@ -209,6 +211,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_14/stellar-pulsation.html">10. Stellar Pulsation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">11. The Fate of Massive Stars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html">12. The Degenerate Remnants of Stars</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Appendix/Student_Summaries.html">Student Participation (Spring 2024)</a></li>
 </ul>
 
     </div>
@@ -578,8 +584,8 @@ document.write(`
 <span class="eqno">(4.1)<a class="headerlink" href="#equation-number-density" title="Permalink to this equation">#</a></span>\[n_v dv = n \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-mv^2/(2kT)}4\pi v^2 dv,\]</div>
 <p>which depends on the total number density <span class="math notranslate nohighlight">\(n\)</span>, the particle’s mass <span class="math notranslate nohighlight">\(m\)</span>, the Boltzmann constant <span class="math notranslate nohighlight">\(k\)</span>, and the temperature of the gas <span class="math notranslate nohighlight">\(T\)</span> (in K).</p>
 <p>The exponent of the Maxwell-Boltzmann distribution function is the ratio of a gas particle’s kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}mv^2\)</span>) to the characteristic thermal energy (<span class="math notranslate nohighlight">\(kT\)</span>).  Particles above the thermal energy tend to either can escape so the overall distribution remains the same.  This is analogous as to why the temperature of a pot of boiling water doesn’t keep increasing.  The distribution peaks when the particle energies are equal at a <strong>most probable speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7c1c810c-ea23-413f-8727-939975f452af">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-7c1c810c-ea23-413f-8727-939975f452af" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a3738126-7e0a-4872-b66e-a69064412eb1">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-a3738126-7e0a-4872-b66e-a69064412eb1" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm mp} = \sqrt{\frac{2kT}{m}}. 
 \end{align}\]</div>
 <div align="center">
@@ -652,8 +658,8 @@ v_{\rm mp} &amp;= \sqrt{\frac{2kT_e}{m_{\rm H}}}, \\
 </div>
 </div>
 <p>The high-speed exponential “tail” of the distribution function results in a somewhat higher <strong>root-mean-square speed</strong> of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ffc44ef1-3d23-421c-8087-1ed690ec1127">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-ffc44ef1-3d23-421c-8087-1ed690ec1127" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0c91887d-8b93-492b-9267-4e699b1355ce">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-0c91887d-8b93-492b-9267-4e699b1355ce" title="Permalink to this equation">#</a></span>\[\begin{align}
 v_{\rm rms} = \sqrt{\frac{3kT}{m}}.
 \end{align}\]</div>
 <p>The area under the curve of the Maxwell-Boltzmann distribution is the <em>fraction</em> of gas particles within a range of speeds or,</p>
@@ -811,8 +817,8 @@ The fraction of gas particles between 20-25 km/s is 0.128 or 12.8%.
 </tbody>
 </table>
 <p>There exists some probability <span class="math notranslate nohighlight">\(P(s_x)\)</span> that the system is in a state <span class="math notranslate nohighlight">\(s_x\)</span>.  Then the ratio of the probability between orbital states represents the likelihood for which electrons may be found.  Using the states <span class="math notranslate nohighlight">\(s_a\)</span> and <span class="math notranslate nohighlight">\(s_b\)</span>, the ratio of probability is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3ee879d6-3680-494a-aec9-27a5f3aab4f3">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-3ee879d6-3680-494a-aec9-27a5f3aab4f3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-82bb012a-a108-4655-a384-1c12034f396e">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-82bb012a-a108-4655-a384-1c12034f396e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{P(s_b)}{P(s_a)} = \frac{e^{-E_b/(kT)}}{e^{-E_a/(kT)}} = e^{-(E_b-E_a)/(kT)}, 
 \end{align}\]</div>
 <div class="admonition note">
@@ -914,13 +920,13 @@ allowfullscreen></iframe>
 <section id="combining-the-boltzmann-and-saha-equations">
 <h3><span class="section-number">4.1.5. </span>Combining The Boltzmann and Saha Equations<a class="headerlink" href="#combining-the-boltzmann-and-saha-equations" title="Permalink to this heading">#</a></h3>
 <p>The Boltzmann equation describes what is <em>possible</em>, where the Saha equation describes what is <em>probable</em>.  Therefore, what we observe should be a combination of effects from both equations.  Consider the degree of ionization in a stellar atmosphere consisting of pure hydrogen and that the electron pressure is a constant <span class="math notranslate nohighlight">\(P_e = 20\;{\rm N/m^2}\)</span>.  Hydrogen has only two states: neutral hydrogen (H I) and ionized hydrogen (H II).  The fraction of atoms that are ionized depends on the ratio of the number ionized atoms <span class="math notranslate nohighlight">\(N_{\rm II}\)</span> and the total number of atoms <span class="math notranslate nohighlight">\(N_{\rm tot}=N_{\rm I} + N_{\rm II}\)</span>.  Ionized hydrogen is just a proton and thus, has no degeneracy and the partition function <span class="math notranslate nohighlight">\(Z_{\rm II} = 1\)</span>.  The partition function for the remaining neutral hydrogen (H I) is simply <span class="math notranslate nohighlight">\(Z_{\rm I} \approx g_1 = 2(1)^2 = 2\)</span>.  The temperatures of stellar atmospheres range from 5000 K - 25,000 K and the previous example (using the Boltzmann equation) showed that most electrons for the hydrogen atoms are in the ground state (<span class="math notranslate nohighlight">\(n=1\)</span>).  For neutral hydrogen, equation 7 becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-69e56628-4b05-4241-9d03-9eb3dbe517b6">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-69e56628-4b05-4241-9d03-9eb3dbe517b6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-667fef6e-e012-41d1-8c71-ced467fee518">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-667fef6e-e012-41d1-8c71-ced467fee518" title="Permalink to this equation">#</a></span>\[\begin{align}
 Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E_2-E_1)/(kT)} ,
 \end{align}\]</div>
 <p>where the second term <span class="math notranslate nohighlight">\(g_2 e^{-(E_2-E_1)/(kT)} \rightarrow 0\)</span> because <span class="math notranslate nohighlight">\(kT = 0.4-2.2\)</span> eV for the appropriate temperature range and <span class="math notranslate nohighlight">\(e^{-(E_2-E_1)/(kT)} \ll 1\)</span>.  The ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm tot}\)</span> can be rewritten as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f81dd99-b410-4230-b9ae-a18bc2e87ff5">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-2f81dd99-b410-4230-b9ae-a18bc2e87ff5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0ba8cb8d-c509-4178-a5af-56046c1e8631">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-0ba8cb8d-c509-4178-a5af-56046c1e8631" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{N_{\rm II}}{N_{\rm tot}} = \frac{N_{\rm II}/N_{\rm I}}{1 + N_{\rm II}/N_{\rm I}}. 
 \end{align}\]</div>
 <p>Then the Saha equation can be used to determine the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span>.  Using the ionization energy <span class="math notranslate nohighlight">\(\chi_{\rm I} = 13.6\)</span> eV for hydrogen, the ideal gas law, and substituting the values for <span class="math notranslate nohighlight">\(Z_{\rm I}\)</span> and <span class="math notranslate nohighlight">\(Z_{\rm II}\)</span> into Equation <a class="reference internal" href="#equation-prob-ratio">(4.6)</a>, the ratio <span class="math notranslate nohighlight">\(N_{\rm II}/N_{\rm I}\)</span> is given as</p>
@@ -1018,7 +1024,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 <img alt="../_images/1a3525782622f3ca8d6fffe429739805f79f045b6cd2aedc95ebd1044aaa24c2.png" src="../_images/1a3525782622f3ca8d6fffe429739805f79f045b6cd2aedc95ebd1044aaa24c2.png" />
 </div>
 </div>
-<p>The peak at 9900 K is in good agreement with the observations.  The diminishing strength of the Balmer lines at higher temperatures is due to the rapid ionization of hydrogen above 10,000 K.</p>
+<p>The peak at 9900 K is in good agreement with the observations.  The diminishing strength of the Balmer lines at higher temperatures is due to the rapid ionization of hydrogen above 10,000 K.  The narrow region inside of a star with a temperature <span class="math notranslate nohighlight">\({\sim}\)</span>10,000 K is called a hydrogen <strong>partial ionziation zone</strong>.</p>
 <figure class="align-default" id="electron-transition-fig">
 <a class="reference internal image-reference" href="../_images/Figure_102.jpg"><img alt="electron transition" src="../_images/Figure_102.jpg" style="width: 600px;" /></a>
 <figcaption>
@@ -1096,7 +1102,7 @@ Z_{\rm I} = g_1 e^{-(E_1-E_1)/(kT)} + g_2 e^{-(E_2-E_1)/(kT)} = g_1 + g_2 e^{-(E
 </div>
 </div>
 </div>
-<p>Practically all of the calcium atoms are ionized, where there are ~900 Ca II atoms to every one Ca I.  We can now use the Boltzmann equation to estimate the fraction of un-ionized calcium atoms that are also in the ground state.  The first excited state of Ca II is <span class="math notranslate nohighlight">\(E_2 - E_1 = 3.12\)</span> eV above the ground state, where the degeneracies for these states are <span class="math notranslate nohighlight">\(g_1 = 2\)</span> and <span class="math notranslate nohighlight">\(g_2 = 4\)</span>.</p>
+<p>Practically all of the calcium atoms are ionized, where there are ~900 Ca II atoms to every one Ca I.  We can now use the Boltzmann equation to estimate the fraction of non-ionized calcium atoms that are also in the ground state.  The first excited state of Ca II is <span class="math notranslate nohighlight">\(E_2 - E_1 = 3.12\)</span> eV above the ground state, where the degeneracies for these states are <span class="math notranslate nohighlight">\(g_1 = 2\)</span> and <span class="math notranslate nohighlight">\(g_2 = 4\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Boltzmann_Eq_Ca12</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
@@ -1278,7 +1284,7 @@ The average stellar density of Betelgeuse is 1.550e-08 rho_odot or 2.188e-05 kg/
 <h3><span class="section-number">4.2.2. </span>Morgan-Keenan Luminosity Classes<a class="headerlink" href="#morgan-keenan-luminosity-classes" title="Permalink to this heading">#</a></h3>
 <p>Using the spectra cataloged by Antonia Maury, Hertzsprung found a difference in the spectra of giant and main-sequence stars of the same spectral type.  There are subtle differences in the relative strengths of spectral lines for stars of similar effective temperatures and different luminosities.  In 1943, <a class="reference external" href="https://en.wikipedia.org/wiki/William_Wilson_Morgan">William W. Morgan</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Philip_Childs_Keenan">Phillip C. Keenan</a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Edith_Kellman">Edith Kellman</a> published the <em>Atlas of Stellar Spectra</em>, which consists of 55 prints of spectra that clearly display the effect of temperature and luminosity.  The <em>MKK Atlas</em> established the 2D Morgan-Keenan (M-K) system of spectral classification.</p>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification#Luminosity_class">luminosity class</a> is appended to a star’s Harvard spectral type and designated by a Roman numeral (see Table <a class="reference internal" href="#mk-luminosity-table"><span class="std std-numref">4.4</span></a>).  The supergiant stars use the Roman numeral “I” (also divided into subclasses Ia and Ib), where main-sequence stars use the Roman numeral “V”.  The strengths of two closely spaced lines are measured and their ratio is often used to place a star in the appropriate luminosity class.  In general, narrower lines are usually produced by more luminous stars with the same spectral type.  The series of Roman numerals extends below the main sequence, where the subdwarfs (VI or “sd”) are slightly to the left of the main sequence because they are deficient in metals.  The M-K system is not applied to white dwarfs, which are instead classified by the letter D.</p>
-<p>The 2D M-K classification scheme enables astronomers to locate a star’s position on the H-R diagram based <em>entirely</em> on the appearance of its spectrum.  Using a star’s absolute magnitude <em>M</em> (see the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#absolute-magnitude-and-the-distance-modulus">magnitude scale</a>) from the vertical axis of the H-R diagram, the *distance tot he star can be calculated from its apparent magnitude <em>m</em>.  This method of distance determination is called the <strong>spectroscopic parallax</strong> and is responsible for many of the measured stellar distances.  The accuracy of spectroscopic parallax is limited because there is not a perfect correlation between the absolute magnitude and luminosity class.  A specific luminosity class has an intrinsic scatter of about <span class="math notranslate nohighlight">\(\pm 1\)</span> magnitude, which corresponds to a brightness difference of <span class="math notranslate nohighlight">\(10^{1/5}\)</span> or 1.6.</p>
+<p>The 2D M-K classification scheme enables astronomers to locate a star’s position on the H-R diagram based <em>entirely</em> on the appearance of its spectrum.  Using a star’s absolute magnitude <em>M</em> (see the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_3/continuous-spectrum-of-light.html#absolute-magnitude-and-the-distance-modulus">magnitude scale</a>) from the vertical axis of the H-R diagram, the <strong>distance to the star can be calculated from its apparent magnitude</strong> <em>m</em>.  This method of distance determination is called the <strong>spectroscopic parallax</strong> and is responsible for many of the measured stellar distances.  The accuracy of spectroscopic parallax is limited because there is not a perfect correlation between the absolute magnitude and luminosity class.  A specific luminosity class has an intrinsic scatter of about <span class="math notranslate nohighlight">\(\pm 1\)</span> magnitude, which corresponds to a brightness difference of <span class="math notranslate nohighlight">\(10^{1/5}\)</span> or 1.6.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since the technique of parallax is not involved, the term <em>spectroscopic parallax</em> is a misnomer.  Although, the name does give a connotation of distance determination.</p>
