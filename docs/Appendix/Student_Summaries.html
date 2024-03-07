@@ -494,6 +494,21 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-21">Feb 21</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-atmospheres-part-iii">Stellar Atmospheres Part III</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transfer-equation"><strong>5.4 The Transfer Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-emission-coefficient">5.4.1 The Emission Coefficient</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">5.4.2 The Source Function and the Transfer Equation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">5.4.3 The Special Case of Blackbody Radiation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4 The Assumption of a Plane-Parallel Atmosphere</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5 The Eddington Approximation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines"><strong>5.5 The Profiles of Spectral Lines</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-widths">5.5.1 Equivalent Widths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proccess-that-broaden-spectral-lines">5.5.2 Proccess that Broaden Spectral Lines</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-voigt-profile">5.5.3 The Voigt Profile</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curve-of-growth">5.5.4 The Curve of Growth</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-26">Feb 26</a><ul class="nav section-nav flex-column">
@@ -812,8 +827,8 @@ using an open-source python package to the instructor and other students.</p></l
 </ul>
 </li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-f7f5ceea-3253-4029-8099-f655d3a26615">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f7f5ceea-3253-4029-8099-f655d3a26615" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-aa2244e7-5acd-41a9-bf6e-af028177bcdb">
+<span class="eqno">(1)<a class="headerlink" href="#equation-aa2244e7-5acd-41a9-bf6e-af028177bcdb" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda_{\rm max}T = 2.897744 \times 10^6 \; {\rm nm\;K}.
 \end{align}\]</div>
 <p><strong>1.42 The Stefan-Boltzmann Equation</strong></p>
@@ -831,8 +846,8 @@ using an open-source python package to the instructor and other students.</p></l
 <ul class="simple">
 <li><p>based on Maxwells equations, Rayleigh derived an approximate  for wavlenghts and temperature.</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-970b0c66-d180-4877-835a-86d2a83371f6">
-<span class="eqno">(2)<a class="headerlink" href="#equation-970b0c66-d180-4877-835a-86d2a83371f6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18e4b09d-2b8a-42b0-80c3-73681e4e7244">
+<span class="eqno">(2)<a class="headerlink" href="#equation-18e4b09d-2b8a-42b0-80c3-73681e4e7244" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx \frac{2ckT}{\lambda^4},
 \end{align}\]</div>
 <ul class="simple">
@@ -843,8 +858,8 @@ B_\lambda(T) \approx \frac{2ckT}{\lambda^4},
 </li>
 <li><p>At the same time, Wien worked on his own approximation</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-2b8ae423-0c0e-4106-81ba-9590bf3130a6">
-<span class="eqno">(3)<a class="headerlink" href="#equation-2b8ae423-0c0e-4106-81ba-9590bf3130a6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-384e9310-8473-409f-b7da-2e1cc81ba2b9">
+<span class="eqno">(3)<a class="headerlink" href="#equation-384e9310-8473-409f-b7da-2e1cc81ba2b9" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 \end{align}\]</div>
 <ul class="simple">
@@ -869,8 +884,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 <ul class="simple">
 <li><p>Brightness measured over all wavelenghts is called <em>bolometric magnitude</em></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-9e65b272-cffa-4b5e-a28d-2779f4c44798">
-<span class="eqno">(4)<a class="headerlink" href="#equation-9e65b272-cffa-4b5e-a28d-2779f4c44798" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bff45530-452d-4580-bd11-b8166b718aa0">
+<span class="eqno">(4)<a class="headerlink" href="#equation-bff45530-452d-4580-bd11-b8166b718aa0" title="Permalink to this equation">#</a></span>\[\begin{align}
  M_{bol} = M_{Sun} - 2.5\log_{10}\left(\frac{L}{L_\odot}\right).
 \end{align}\]</div>
 <ul class="simple">
@@ -916,8 +931,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 </li>
 <li><p>Color indices (U-B or B-V) are deteremed though the fulx ratio,</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-b8361ecf-ad6e-4baf-8ef7-237968e59f6d">
-<span class="eqno">(5)<a class="headerlink" href="#equation-b8361ecf-ad6e-4baf-8ef7-237968e59f6d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-23411563-7fc5-4989-bba1-b6c77192339d">
+<span class="eqno">(5)<a class="headerlink" href="#equation-23411563-7fc5-4989-bba1-b6c77192339d" title="Permalink to this equation">#</a></span>\[\begin{align}
  X-Y = m_X - m_Y = -2.5 \log_{10}\left(\frac{\int F_\lambda S_X d\lambda}{\int F_\lambda S_Y d\lambda} \right) + C_{X-Y},
 \end{align}\]</div>
 <p><strong>1.6.3. The Color-Color-Diagram</strong></p>
@@ -963,8 +978,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 <ul class="simple">
 <li><p>Radial Velovity (<span class="math notranslate nohighlight">\(v_r\)</span>):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-15b636ac-e226-4b72-9f35-e157c6dae7cd">
-<span class="eqno">(6)<a class="headerlink" href="#equation-15b636ac-e226-4b72-9f35-e157c6dae7cd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-14a94d56-3697-46a7-aa01-1c7699bdbbfb">
+<span class="eqno">(6)<a class="headerlink" href="#equation-14a94d56-3697-46a7-aa01-1c7699bdbbfb" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\lambda_{\rm obs}-\lambda_{\rm rest}}{\lambda_{\rm rest}} = \frac{\Delta \lambda}{\lambda_{\rm rest}}=\frac{v_r}{c}.
 \end{align}\]</div>
 <ul class="simple">
@@ -984,8 +999,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 <li><p><strong>d</strong> is the slit spacing of the grating, <strong>n</strong> is the order of the spectrum and <strong>𝛳</strong> is measured relative the line perpendicular to the grating.</p></li>
 <li><p>The smallest measurable difference in wavelength (<span class="math notranslate nohighlight">\(\Delta \lambda\)</span>)depends on the order and the total number of lines (N), through:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-4ec2f283-ba4d-4ed8-9f9e-8c5158960da7">
-<span class="eqno">(7)<a class="headerlink" href="#equation-4ec2f283-ba4d-4ed8-9f9e-8c5158960da7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f6a7ad27-c488-4d97-90df-9c703ddde813">
+<span class="eqno">(7)<a class="headerlink" href="#equation-f6a7ad27-c488-4d97-90df-9c703ddde813" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \lambda = \frac{\lambda}{nN},
 \end{align}\]</div>
 <ul class="simple">
@@ -1008,8 +1023,8 @@ E_{\rm photon} = h\nu = \frac{hc}{\lambda}.
 \end{align}</p></li>
 <li><p>Maximum kinetic energy of the ejected electrons:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-2bed7dce-347e-4795-a1ba-edea4f038aa9">
-<span class="eqno">(8)<a class="headerlink" href="#equation-2bed7dce-347e-4795-a1ba-edea4f038aa9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c91461ec-1338-4584-9992-9a5e85421e5e">
+<span class="eqno">(8)<a class="headerlink" href="#equation-c91461ec-1338-4584-9992-9a5e85421e5e" title="Permalink to this equation">#</a></span>\[\begin{align}
 K_{\rm max} = E_{\rm photon} - \phi = h\nu - \phi,
 \end{align}\]</div>
 <p><strong>2.2.2 The Compton Effect</strong></p>
@@ -1018,8 +1033,8 @@ K_{\rm max} = E_{\rm photon} - \phi = h\nu - \phi,
 <li><p>The energy of a photon is related to its momentum (p)
 by:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-304f485f-dfde-41c3-b0e3-8db8fc3a6605">
-<span class="eqno">(9)<a class="headerlink" href="#equation-304f485f-dfde-41c3-b0e3-8db8fc3a6605" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-617de170-8847-4018-80e9-d58b352fcc73">
+<span class="eqno">(9)<a class="headerlink" href="#equation-617de170-8847-4018-80e9-d58b352fcc73" title="Permalink to this equation">#</a></span>\[\begin{align}
 E_{\rm photon} = h\nu = pc.
 \end{align}\]</div>
 <ul class="simple">
@@ -1027,8 +1042,8 @@ E_{\rm photon} = h\nu = pc.
 <li><p>The photon’s energy is reduced and the wavelength is increased due to the energy exchange.</p></li>
 <li><p>The change in wavelength is the difference between the final and initial wavelength and can be expressed as:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-7be75698-ac0b-4829-811a-6df0cffc2fbd">
-<span class="eqno">(10)<a class="headerlink" href="#equation-7be75698-ac0b-4829-811a-6df0cffc2fbd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b5ff294e-c5f8-4100-ab23-18a8fff024e6">
+<span class="eqno">(10)<a class="headerlink" href="#equation-b5ff294e-c5f8-4100-ab23-18a8fff024e6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \lambda =\lambda_f - \lambda_i = \frac{h}{m_e c}(1-\cos \theta),
 \end{align}\]</div>
 <ul class="simple">
@@ -1404,8 +1419,8 @@ E_{\rm photon} = h\nu = pc.
 <li><p>The mean free path is dependent on the photon wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.
 It is convenient to define an <strong>optical depth</strong> <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> as</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-5cbac3f1-65b1-4626-9e77-b90fbdf97c0b">
-<span class="eqno">(11)<a class="headerlink" href="#equation-5cbac3f1-65b1-4626-9e77-b90fbdf97c0b" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-9d51d9f4-d869-4966-baa0-8ec61bbb5f57">
+<span class="eqno">(11)<a class="headerlink" href="#equation-9d51d9f4-d869-4966-baa0-8ec61bbb5f57" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(s\)</span> is the distance measured along the photon’s direction of motion (i.e., looking back along the path traveled by the photon).</p>
 <ul class="simple">
 <li><p>The difference in optical depth <span class="math notranslate nohighlight">\(\Delta \tau_\lambda\)</span> can be determined as the difference between the final (<span class="math notranslate nohighlight">\(\tau_{\lambda,f}\)</span>) and initial (<span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span>) optical depths, or the integral along the photon’s path as</p></li>
@@ -1429,8 +1444,8 @@ It is convenient to define an <strong>optical depth</strong> <span class="math n
 <div class="math notranslate nohighlight">
 \[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds = \sec \theta \int_0^h \kappa_\lambda \rho dz = \tau_{\lambda,o} \sec \theta, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> refers to the optical depth of a vertically traveling photon ($\theta = 0).  The intensity of the light at the telescope is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c4d6f34-25aa-44f5-a45a-48c9e876c9c8">
-<span class="eqno">(12)<a class="headerlink" href="#equation-2c4d6f34-25aa-44f5-a45a-48c9e876c9c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8de94025-2f14-417b-9ac8-abe39cc3067e">
+<span class="eqno">(12)<a class="headerlink" href="#equation-8de94025-2f14-417b-9ac8-abe39cc3067e" title="Permalink to this equation">#</a></span>\[\begin{align}
 I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 \end{align}\]</div>
 <p><strong>5.2.4. General Sources of Opacity</strong></p>
@@ -1475,8 +1490,8 @@ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 <li><p><strong>Quantum Effects</strong>: Gaunt factors and guillotine factor contribute to opacity calculations.</p></li>
 <li><p>The most commonly used scheme to compute a wavelength-independent opacity is the Rosseland mean opacity or the <strong>Rosseland mean</strong>.  The Rosseland mean incorporates a weighting function that depends on how fast the blackbody spectrum varies with temperature, which is defined as</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-02e1701d-1012-4d4a-8bd1-5545d7a55d84">
-<span class="eqno">(13)<a class="headerlink" href="#equation-02e1701d-1012-4d4a-8bd1-5545d7a55d84" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}.
+<div class="amsmath math notranslate nohighlight" id="equation-ab4a6489-72ba-4a6a-88f6-86045c2831d6">
+<span class="eqno">(13)<a class="headerlink" href="#equation-ab4a6489-72ba-4a6a-88f6-86045c2831d6" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}.
 \end{align}\]</div>
 <ul class="simple">
 <li><p>Approximation formulae have been developed for the average bound-free and free-free opacities:</p></li>
@@ -1541,6 +1556,89 @@ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 <h2>Feb 21<a class="headerlink" href="#feb-21" title="Permalink to this heading">#</a></h2>
 <section id="stellar-atmospheres-part-iii">
 <h3>Stellar Atmospheres Part III<a class="headerlink" href="#stellar-atmospheres-part-iii" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-transfer-equation">
+<h3><strong>5.4 The Transfer Equation</strong><a class="headerlink" href="#the-transfer-equation" title="Permalink to this heading">#</a></h3>
+<section id="the-emission-coefficient">
+<h4>5.4.1 The Emission Coefficient<a class="headerlink" href="#the-emission-coefficient" title="Permalink to this heading">#</a></h4>
+<p>Interested in the net flow of energy, not the specific path. The intensity can be increased through emission. This change is <span class="math notranslate nohighlight">\( dI_{\lambda} \)</span> is proprtional to the the distance <span class="math notranslate nohighlight">\( ds \)</span> and the density of the gas <span class="math notranslate nohighlight">\( \rho \)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ dI_{\lambda} = j_{\lambda} \rho ds ,\]</div>
+<p>here, <span class="math notranslate nohighlight">\( j_{\lambda} \)</span> is the <strong>emission coefficient</strong>.</p>
+<p>The specific intensity <span class="math notranslate nohighlight">\( I_{\lambda} \)</span>, changes as the photons are added. Combining the equations of absoption and emission gives the general result;</p>
+<div class="math notranslate nohighlight">
+\[ d_{\lambda} = -\kappa_{\lambda} \rho I_{\lambda} ds + j_{\lambda} \rho ds \]</div>
+</section>
+<section id="the-source-function-and-the-transfer-equation">
+<h4>5.4.2 The Source Function and the Transfer Equation<a class="headerlink" href="#the-source-function-and-the-transfer-equation" title="Permalink to this heading">#</a></h4>
+<p>To determine the ratio of emission to absorption ( <span class="math notranslate nohighlight">\( j_{\lambda} / \kappa_{\lambda} \)</span> ), we cal this the <strong>source function</strong> <span class="math notranslate nohighlight">\( S_{\lambda} \)</span> and looks like;</p>
+<div class="math notranslate nohighlight">
+\[ -\frac{1}{\kappa_{\lambda} \rho} \frac{dI_{\lambda}}{ds} = I_{\lambda} - \frac{j_{\lambda}}{\kappa_{\lambda}} = I_{\lambda} - S_{\lambda} \]</div>
+<p>If <span class="math notranslate nohighlight">\( I_{\lambda} &gt; S_{\lambda} \)</span> then the intensity decreases with distance. If <span class="math notranslate nohighlight">\( I_{\lambda} &lt; S_{\lambda} \)</span>, then the intensity increases with distance.</p>
+</section>
+<section id="the-special-case-of-blackbody-radiation">
+<h4>5.4.3 The Special Case of Blackbody Radiation<a class="headerlink" href="#the-special-case-of-blackbody-radiation" title="Permalink to this heading">#</a></h4>
+<p>For a blackbody, the intensity is equal to the Planck function ( <span class="math notranslate nohighlight">\( I_{\lambda} = B_{\lambda} = S_{\lambda} \)</span> ) [for something in thermodynamic equalibrium which stars are not in!]</p>
+<p><strong>Applying the transfer equation</strong></p>
+<div class="math notranslate nohighlight">
+\[ I_{\lambda}(s) = I_{\lambda,o} e^{-\kappa_{\lambda} \rho ds} + S_{\lambda} ( 1 - e^{-\kappa_{\lambda} \rho ds} ) \]</div>
+</section>
+<section id="the-assumption-of-a-plane-parallel-atmosphere">
+<h4>5.4.4 The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this heading">#</a></h4>
+<p>Rewrite the transfer equation as a function of optical depth;</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_{\lambda}}{d\tau_{\lambda}} = I_{\lambda} - S_{\lambda} \]</div>
+<p>Because the atmosphere is not a plane (it curves) we assume a plane-parallel slab of the atmosphere and get the equation for vertical optical depth;</p>
+<div class="math notranslate nohighlight">
+\[ \tau_{\lambda,v}(z) = \int_z^0 \kappa_{\lambda} \rho dz \]</div>
+<p>A gray atmosphere is an atmosphere that has little to no wavelength dependence. The transfer equation for a gray atmosphere is;</p>
+<div class="math notranslate nohighlight">
+\[ cos(\theta) \frac{dI}{d\tau_{\lambda}} = I - S \]</div>
+</section>
+<section id="the-eddington-approximation">
+<h4>5.4.5 The Eddington Approximation<a class="headerlink" href="#the-eddington-approximation" title="Permalink to this heading">#</a></h4>
+<p>When looking at a star, we see down to a vertical optical depth of , averaged over the disk of the star.</p>
+</section>
+</section>
+<section id="the-profiles-of-spectral-lines">
+<h3><strong>5.5 The Profiles of Spectral Lines</strong><a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this heading">#</a></h3>
+<section id="equivalent-widths">
+<h4>5.5.1 Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this heading">#</a></h4>
+<p>Absorption spectral lines are identified on graphs of the radiant flux <span class="math notranslate nohighlight">\( F_{\lambda} \)</span> as a function of the wavelength <span class="math notranslate nohighlight">\( \lambda \)</span>.</p>
+<p><strong>Full width half maximum</strong> (think inverse bell curve and take the half of the lowest point on either side and make a rectangle to connect these two with the max point of the inverse bell curve.)</p>
+</section>
+<section id="proccess-that-broaden-spectral-lines">
+<h4>5.5.2 Proccess that Broaden Spectral Lines<a class="headerlink" href="#proccess-that-broaden-spectral-lines" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Natural Broadening: the spectral lines cannot be sharp even for motionless, isolated atoms due to Heisenberg’s uncertainty principle.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda = \frac{\lambda^2}{2 \pi c}  \left( \frac{1}{\Delta t_0} + \frac{1}{\Delta t_f} \right), \]</div>
+<p>where <span class="math notranslate nohighlight">\( \Delta t_0 \text{ and } \Delta t_f \)</span> is the lifetime of the electron in the initial state and final state respectively.</p>
+<ol class="arabic simple" start="2">
+<li><p>Doppler Broadening: The wavelengths of the absorbed or emitted light are Doppler-shifted nonrelativistically according to <span class="math notranslate nohighlight">\( \Delta \lambda / \lambda = +- | v_r | / c \)</span>. The width of a Doppler broadened spectral line should be;</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda = \frac{2 \lambda}{c} \sqrt{\frac{2 k T}{m}} \]</div>
+<ol class="arabic simple" start="3">
+<li><p>Pressure (and Collisional) Broadening: the atomic orbitals are perturbed by a collision with a neutral atom or a close encounter with the electric field of an ion. Statistical is pressure, individual collisions is collisional. To determin collisional pressue, we need to determine the average time between collisions <span class="math notranslate nohighlight">\( \Delta t_0 \)</span>, and the mean free path <span class="math notranslate nohighlight">\( \ell \)</span>. These are related through the following equation;</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \Delta t_0 = \frac{\ell}{v} = \frac{1}{n \sigma} \sqrt{\frac{m}{2 k T}}, \]</div>
+<p>where <span class="math notranslate nohighlight">\( m \)</span> is the atom mass, <span class="math notranslate nohighlight">\( \sigma \)</span> is the collisional cross-section, and <span class="math notranslate nohighlight">\( n \)</span> is the number of atoms. From the collisional pressure, we can determine the spectral line width broadening to be;</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda = \frac{\lambda}{\pi c \Delta t_0} \approx \frac{\lambda^2 n \sigma}{\pi c} \sqrt{\frac{2 k T}{m}}. \]</div>
+<p>Spectral line width is proportional to <span class="math notranslate nohighlight">\( n \)</span>.</p>
+</section>
+<section id="the-voigt-profile">
+<h4>5.5.3 The Voigt Profile<a class="headerlink" href="#the-voigt-profile" title="Permalink to this heading">#</a></h4>
+<p>The total line profile is called the <strong>Voigt profile</strong> and is due to the contributions of the Doppler and the damping things. Doppler contributes more for the center wavelengths whereas the damping profile is more towards the wings of the curve.</p>
+<p>The goal is to determine <span class="math notranslate nohighlight">\( N_0 \)</span>, which is the coloumn density.</p>
+</section>
+<section id="the-curve-of-growth">
+<h4>5.5.4 The Curve of Growth<a class="headerlink" href="#the-curve-of-growth" title="Permalink to this heading">#</a></h4>
+<p>Helps determine the value of <span class="math notranslate nohighlight">\( N_a \)</span> (the number of atoms that have electrons in the proper orbital for absorbtion) and the abundance of elements in stellar atmospheres. The width <strong>W</strong> varies with <span class="math notranslate nohighlight">\( N_a \)</span> and therefore a log curve can be used to estimate the change in both quantities. Using the curve of growth, and a determined width, we can determine the number of absorbing atoms.</p>
+</section>
 </section>
 </section>
 <section id="feb-26">
@@ -1777,6 +1875,21 @@ I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-21">Feb 21</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-atmospheres-part-iii">Stellar Atmospheres Part III</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transfer-equation"><strong>5.4 The Transfer Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-emission-coefficient">5.4.1 The Emission Coefficient</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">5.4.2 The Source Function and the Transfer Equation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">5.4.3 The Special Case of Blackbody Radiation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4 The Assumption of a Plane-Parallel Atmosphere</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5 The Eddington Approximation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines"><strong>5.5 The Profiles of Spectral Lines</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-widths">5.5.1 Equivalent Widths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proccess-that-broaden-spectral-lines">5.5.2 Proccess that Broaden Spectral Lines</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-voigt-profile">5.5.3 The Voigt Profile</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curve-of-growth">5.5.4 The Curve of Growth</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-26">Feb 26</a><ul class="nav section-nav flex-column">
