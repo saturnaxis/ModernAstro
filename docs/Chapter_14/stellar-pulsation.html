@@ -74,6 +74,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Chapter_14/stellar-pulsation';</script>
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_14/stellar-pulsation.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -186,6 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/Python-basics.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/Markdown-basics.html">Introduction to Markdown</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/HW_template.html">Homework Assignments</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
@@ -207,6 +211,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">10. Stellar Pulsation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">11. The Fate of Massive Stars</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html">12. The Degenerate Remnants of Stars</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Appendix/Student_Summaries.html">Student Participation (Spring 2024)</a></li>
 </ul>
 
     </div>
@@ -412,7 +420,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -428,6 +438,56 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observations-of-pulsating-stars">10.1. Observations of Pulsating Stars</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-period-luminosity-relation">10.1.1. The Period-Luminosity Relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pulsation-hypothesis-for-brightness-variations">10.1.2. The Pulsation Hypothesis for Brightness Variations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-instability-strip">10.1.3. The Instability Strip</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-classes-of-pulsating-stars">10.1.4. Some Classes of Pulsating Stars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-stellar-pulsation">10.2. The Physics of Stellar Pulsation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-period-density-relation">10.2.1. The Period-Density Relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-modes-of-pulsation">10.2.2. Radial Modes of Pulsation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eddington-s-thermodynamic-heat-engine">10.2.3. Eddington’s Thermodynamic Heat Engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nuclear-epsilon-mechanism">10.2.4. The Nuclear <span class="math notranslate nohighlight">\(\epsilon\)</span> Mechanism</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eddington-s-valve">10.2.5. Eddington’s Valve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opacity-effects-and-the-kappa-and-gamma-mechanisms">10.2.6. Opacity Effects and the <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> Mechanisms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hydrogen-and-helium-partial-ionization-zones">10.2.7. The Hydrogen and Helium Partial Ionization Zones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beta-cephei-stars-and-the-iron-opacity-bump">10.2.8. <span class="math notranslate nohighlight">\(\beta\)</span> Cephei Stars and the Iron Opacity “Bump”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-stellar-pulsation">10.3. Modeling Stellar Pulsation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-hydrodynamic-models">10.3.1. Nonlinear Hydrodynamic Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearizing-the-hydrodynamic-equaitons">10.3.2. Linearizing the Hydrodynamic Equaitons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-and-nonadiabatic-calculations">10.3.3. Nonlinear and Nonadiabatic Calculations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-stability">10.3.4. Dynamical Stability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonradial-stellar-pulsation">10.4. Nonradial Stellar Pulsation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonradial-oscillations-and-spherical-harmonic-functions">10.4.1. Nonradial Oscillations and Spherical Harmonic Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-p-and-f-modes">10.4.2. The <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(f\)</span> Modes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-acoustic-frequency">10.4.3. The Acoustic frequency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-g-modes">10.4.4. The <span class="math notranslate nohighlight">\(g\)</span> modes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-brunt-vaisala-buoyancy-frequency">10.4.5. The Brunt-Väisälä (Buoyancy) Frequency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-g-and-p-modes-as-probes-of-stellar-structure">10.4.6. The <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(p\)</span> Modes as Probes of Stellar Structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helioseismology-and-asteroseismology">10.5. Helioseismology and Asteroseismology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-five-minute-solar-oscillations">10.5.1. The Five-Minute Solar Oscillations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-rotation-and-the-solar-convection-zone">10.5.2. Differential Rotation and the Solar Convection Zone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probing-the-deep-interior">10.5.3. Probing the Deep Interior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#driving-solar-oscillations">10.5.4. Driving Solar Oscillations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delta-scuti-stars-and-rapidly-oscillating-ap-stars">10.5.5. <span class="math notranslate nohighlight">\(\delta\)</span> Scuti Stars and Rapidly Oscillating Ap Stars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">10.6. <strong>Homework</strong></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -439,7 +499,427 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="stellar-pulsation">
 <h1><span class="section-number">10. </span>Stellar Pulsation<a class="headerlink" href="#stellar-pulsation" title="Permalink to this heading">#</a></h1>
-<p>Under Construction</p>
+<section id="observations-of-pulsating-stars">
+<h2><span class="section-number">10.1. </span>Observations of Pulsating Stars<a class="headerlink" href="#observations-of-pulsating-stars" title="Permalink to this heading">#</a></h2>
+<p>A Luthern pastor and amatuer astronomer <a class="reference external" href="https://en.wikipedia.org/wiki/David_Fabricius">David Fabricius</a> was observing <span class="math notranslate nohighlight">\(\omicron\)</span> Ceti (omicron Ceti) in August 1595.  The brightness of the star slowly faded over a period of <span class="math notranslate nohighlight">\({\sim}\)</span>2 months and vanished from the sky by October.  The star eventually recovered and returned to its former brilliance after a couple of months.  By 1662, the star was named <a class="reference external" href="https://en.wikipedia.org/wiki/Mira">Mira</a>, which is Latin for astonishing.  Also by this time, the 11-month period of its cycle was established.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The regular changes in brightness were mistakenly attributed to dark “blotches” on the stellar surface.  Supposedly, Mira would appear fainter when the dark areas were turned toward Earth.</p>
+</div>
+<p>Today astronomers recognize that the changes in Mira’s brightness are not due to dark spots on its surface, but to the fact that Mira is a <strong>pulsating star</strong>, or a star tha dims and brightens as its surface expands and contracts.  Mira is the protoype of the <strong>long-period variables</strong>, or stars that have irregular light curves and pulsation periods between <span class="math notranslate nohighlight">\(100-700\)</span> days.</p>
+<figure class="align-default" id="mira-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/8/89/Mira_light_curve.png"><img alt="Mira" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Mira_light_curve.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.1 </span><span class="caption-text">Light curve of Mira. Image credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Mira">Wikipedia:Mira</a>.</span><a class="headerlink" href="#mira-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The next pulsating star was discovered in 1784 by <a class="reference external" href="https://en.wikipedia.org/wiki/John_Goodricke">John Goodricke</a> of York, England.  He found that the brightness of <a class="reference external" href="https://en.wikipedia.org/wiki/Delta_Cephei"><span class="math notranslate nohighlight">\(\delta\)</span> Cephei</a> varies regularly with a period of 5.367 days (or 5 days, 8 hours, 48 minutes).  Goodricke contracted pneumonia while observing <span class="math notranslate nohighlight">\(\delta\)</span> Cephei and died at the age of 21.  <span class="math notranslate nohighlight">\(\delta\)</span> Cephei is different than Mira, in that it varies by less than one magnitude in brightness and never fades from view.  Pulstation stars similar to <span class="math notranslate nohighlight">\(\delta\)</span> Cephei are called <strong>classical Cepheids</strong> and are vitally important to astronomy.</p>
+<figure class="align-default" id="del-cephei-fig">
+<a class="reference internal image-reference" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Astro/imgast/cephd.png"><img alt="Delta Cephei" src="http://hyperphysics.phy-astr.gsu.edu/hbase/Astro/imgast/cephd.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.2 </span><span class="caption-text">Light curve of <span class="math notranslate nohighlight">\(\delta\)</span> Cephei. Image credit: <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Astro/cepheid.html">Hyperphysics:delta Cephei</a>.</span><a class="headerlink" href="#del-cephei-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="the-period-luminosity-relation">
+<h3><span class="section-number">10.1.1. </span>The Period-Luminosity Relation<a class="headerlink" href="#the-period-luminosity-relation" title="Permalink to this heading">#</a></h3>
+<p>In the early 20th century, <a class="reference external" href="https://en.wikipedia.org/wiki/Henrietta_Swan_Leavitt">Henrietta Swan Leavitt</a> was hired at Harvard University to compare photographic plates of the same field of stars taken at different times and detect any star that varied in brightness.  Eventually she discovered 2400 classical Cepheids with perios between <span class="math notranslate nohighlight">\(1-50\)</span> days, where most of them were located in the Small Magellanic Cloud (SMC).  Leavitt noticed that the more lumious Cepheids took longer to complete their pulsation cycles, where she compared the <em>apparent magnitudes</em> of the these SMC stars against their <em>pulsation periods</em>.  As a result, she demonstrated that the apparent magnitudes of classical Cepheids are closely correlated with their peirods, with an uncertainty of only <span class="math notranslate nohighlight">\(\Delta m \approx \pm 0.5\)</span> at a given period.</p>
+<figure class="align-default" id="leavitt-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/9/97/HSLeavittHSCr13Fig2_1912.jpg"><img alt="Delta Cephei" src="https://upload.wikimedia.org/wikipedia/commons/9/97/HSLeavittHSCr13Fig2_1912.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.3 </span><span class="caption-text">Comparision of the apparent magnitude of the SMC stars (y-axis) with respect to their pulsation periods (in days). Image credit: <a class="reference external" href="https://en.wikipedia.org/wiki/Henrietta_Swan_Leavitt">Wikipedia:Henrietta Swan Leavitt</a>.</span><a class="headerlink" href="#leavitt-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The distance to the SMC is large compared to the distance between stars, so we can assume that all the stars in SMC are roughly the same distance from us (about 91 kpc).  The differences in their apparent magnitudes must be the same as the differences in their absolute magnitudes.  The observed differences in the apparent brightness of the stars must reflect intrinsic differences in their luminosities.</p>
+<p>Accurate distances to stars (via parallax) are limited to only the nearest (less than <span class="math notranslate nohighlight">\({\sim}\)</span>10 kpc with the Gaia spacecraft) from us due to the ambiguity in a star’s apparent brightness as a function of distance.  Astronomers were excited at the prospect of determing the absolute magnitude (or luminosity) of a distant Cepheid simply by timing its pulsation.  Recall that the difference between a star’s apparent and absolute magnitude allows for the an independent distance calculation via the distance modulus.  This would permit the measurement of large distances in the universe.</p>
+<p>The only stumbling block was the <em>calibration</em> of Leavitt’s relation.  An independent distance to a single Cepheid had to be obtained to measure its absolute magnitude and luminosity.  The resulting <strong>period-luminosity relation</strong> could be used to measure the distance to any Cepheid.</p>
+<p>The nearest classical Cepheid is Polaris (some 200 pc away).  In the early 20th century, this distance was much to great to be measured via stellar parallax.  However, Hertzsprung (in 1913) succeed by using the longer baseline provided by the Sun’s motion through space (along with statistical methods) to find the distances to Cepheids haveing a specified period.  The calibrated period-luminosity relation for the <span class="math notranslate nohighlight">\(V\)</span> band is described by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8aae115c-bbac-437c-aaef-6a8ad5ecaf76">
+<span class="eqno">(10.1)<a class="headerlink" href="#equation-8aae115c-bbac-437c-aaef-6a8ad5ecaf76" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_{\langle V \rangle} = -2.81 \log_{10}{P_d} - 1.43,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M_{\langle V \rangle}\)</span> represents the average absolute <span class="math notranslate nohighlight">\(V\)</span> magnitude and <span class="math notranslate nohighlight">\(P_d\)</span> is the pulsation period <em>in days</em>.  In terms of the average stellar luminosity, the relation is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-57dfe5b1-ff58-4881-b095-6af0d9f92a84">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-57dfe5b1-ff58-4881-b095-6af0d9f92a84" title="Permalink to this equation">#</a></span>\[\begin{align}
+\log_{10}{\frac{\langle L \rangle}{L_\odot}} = 1.15 \log_{10}{P_d} + 2.47.
+\end{align}\]</div>
+<p>A problem of measuring stars in the <span class="math notranslate nohighlight">\(V\)</span> band is interstellar extinction and reddening is more signficant.  Astronomers can substantially decrease the scatter in the period-luminosity relation by making observations at <strong>infrared</strong> wavelengths, where interstellar extinction is less of a problem.  A fit of the period-luminosity relation in the infrared <span class="math notranslate nohighlight">\(H\)</span> band is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3149f596-0221-453a-ab0d-36f187570f2a">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-3149f596-0221-453a-ab0d-36f187570f2a" title="Permalink to this equation">#</a></span>\[\begin{align}
+H = -3.234 \log_{10}{P_d} + 16.079.
+\end{align}\]</div>
+<p>The scatter can be further reduced by adding a color term to the fit because a star’s color is independent of its distance.  Using the infrared color index <span class="math notranslate nohighlight">\(J-K\)</span>, the fit becomes much tighter.  Note that the <span class="math notranslate nohighlight">\(J\)</span> band is centered on <span class="math notranslate nohighlight">\(1.215\ {\rm \mu m}\)</span>, where the <span class="math notranslate nohighlight">\(K\)</span> band is centered on <span class="math notranslate nohighlight">\(2.157\ {\rm \mu m}\)</span>.  Using the color index, the period-luminosity-color relation is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d787c04d-4ac4-4730-ae2e-6877c46cf9e3">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-d787c04d-4ac4-4730-ae2e-6877c46cf9e3" title="Permalink to this equation">#</a></span>\[\begin{align}
+H = -3.428 \log_{10}{P_d} + 1.54 \langle J-K \rangle + 15.637.
+\end{align}\]</div>
+<p>Classical Cepheids provide astronomy with its third dimension and supply the foundation for the measurement of extragalactic distances.  Cepheids are super giant stars (hence the pulsation), which are about <span class="math notranslate nohighlight">\(50\ R_\odot\)</span> and 1000s of times more luminous, means that they can be seen over intergalactic distances.  They serve as “standard candles,” or beacons scattered through the night sky that serve as guideposts for astronomical surveys of the universe.</p>
+</section>
+<section id="the-pulsation-hypothesis-for-brightness-variations">
+<h3><span class="section-number">10.1.2. </span>The Pulsation Hypothesis for Brightness Variations<a class="headerlink" href="#the-pulsation-hypothesis-for-brightness-variations" title="Permalink to this heading">#</a></h3>
+<p>A detailed understanding of the physical reasons for the light variations of Cepheids is no required to appreciate the important ues of Cepheids as cosmic distance indicators.  The observed changes in brightness were once thought to have originated with the tidal effects of binary stars.</p>
+<p>In 1914, Harlow Shapley argued that the binary theory was fatally flawed because the stellar size needed would exceed the binary orbit.  Shapley advanced an alternative idea:</p>
+<blockquote>
+<div><p>The observed variations in the brightness and temperature of the classical Cepheids were caused by radial pulsations of single stars. He proposed that these stars were rhythmically “breathing” in and out, which corresponded to the process of brightening and dimming.</p>
+</div></blockquote>
+<p>Four years later Eddington provided a firm theoretical framework for the pulsation hypothesis, which received strong support from the observed correlations among the variations in brightness, temperature, and surface velocity throughout the pulsation cycle.</p>
+<p>The change in brightness is primarily due to the <span class="math notranslate nohighlight">\({\sim}1000\ {\rm K}\)</span> variation in the surface temperature of <span class="math notranslate nohighlight">\(\delta\)</span> Cephei.  The accompaning change in size makes a lesser contribution to the luminosity.  Although the total excursion of <span class="math notranslate nohighlight">\(\delta\)</span> Cephei’s surface from its equilibrium radius is large in absolute terms (<span class="math notranslate nohighlight">\(\gtrsim 1R_\odot\)</span>), it is still only <span class="math notranslate nohighlight">\({\sim}5-10\%\)</span> the size of a supergiant star.</p>
+<p>The spectral type of <span class="math notranslate nohighlight">\(\delta\)</span> Cephei changes continuously through the cycle from <span class="math notranslate nohighlight">\({\rm F5-G2}\)</span> (hottest-coolest).  A careful examination of Fig. <a class="reference internal" href="#pulsation-fig"><span class="std std-numref">10.4</span></a> shows that the magnitude and surface velocity curves are nearly identical in shape.  <em>The star is brightest when its surface is expanding outward most rapidly, after it has passed through its minimum radius.</em>  The <strong>phase lag</strong> of maximum luminosity is due to the mechanism that maintains its oscillations.</p>
+<figure class="align-default" id="pulsation-fig">
+<a class="reference internal image-reference" href="../_images/Figure07.jpg"><img alt="Delta Cephei pulsation" src="../_images/Figure07.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.4 </span><span class="caption-text">Observed pulsation properties of <span class="math notranslate nohighlight">\(\delta\)</span> Cephei. Image credit: Carroll &amp; Ostlie (2007); Data from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1938HarCi.431....1S/abstract">Schwarzchild (1938)</a>.</span><a class="headerlink" href="#pulsation-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-instability-strip">
+<h3><span class="section-number">10.1.3. </span>The Instability Strip<a class="headerlink" href="#the-instability-strip" title="Permalink to this heading">#</a></h3>
+<p>The Milky Way is estimated to contain several million pulstating stars.  Given that the total number of stars is several hundred billion, this means that stellar pulsation must be a transient phenomenon.  The positions of the pulsating variables on the H-R diagram confirm this conclusion.</p>
+<figure class="align-default" id="variables-hr-fig">
+<a class="reference internal image-reference" href="https://www.aavso.org/sites/default/files/images/jcd-hrd-norm.png"><img alt="HR diagram pulsation" src="https://www.aavso.org/sites/default/files/images/jcd-hrd-norm.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.5 </span><span class="caption-text">Variable stars on an H-R diagram schematic. Image credit: <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2004ESASP.559....1C/abstract">Christensen-Dalsgaard (2004)</a>.</span><a class="headerlink" href="#variables-hr-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Rather than being located on the main sequence, the majority of pulsating stars occupy a narrow (<span class="math notranslate nohighlight">\({\sim}600-1100\ {\rm K}\)</span> wide), nearly vertical <strong>instability strip</strong> on the right-hand side of the H-R diagram.  Stars evolve along tracks towards the RGB and begin to pulsate as the enter the instability strip and cease their oscillations upon leaving.</p>
+</section>
+<section id="some-classes-of-pulsating-stars">
+<h3><span class="section-number">10.1.4. </span>Some Classes of Pulsating Stars<a class="headerlink" href="#some-classes-of-pulsating-stars" title="Permalink to this heading">#</a></h3>
+<p>Astronomers have divided pulsating stars into several classes. Some of these are listed below.</p>
+<table class="colwidths-auto table table-center" id="id1">
+<caption><span class="caption-number">Table 10.1 </span><span class="caption-text">Pulsating Stars</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Period Range</p></th>
+<th class="head"><p>Population Type</p></th>
+<th class="head"><p>Radial or <br> Nonradial</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Long-Period Variables (LPV)</p></td>
+<td><p><span class="math notranslate nohighlight">\(100-700\ {\rm days}\)</span></p></td>
+<td><p>I, II</p></td>
+<td><p>R</p></td>
+</tr>
+<tr class="row-odd"><td><p>Classical Cepheids</p></td>
+<td><p><span class="math notranslate nohighlight">\(1-50\ {\rm days}\)</span></p></td>
+<td><p>I</p></td>
+<td><p>R</p></td>
+</tr>
+<tr class="row-even"><td><p>W Virginis stars</p></td>
+<td><p><span class="math notranslate nohighlight">\(2-45\ {\rm days}\)</span></p></td>
+<td><p>II</p></td>
+<td><p>R</p></td>
+</tr>
+<tr class="row-odd"><td><p>RR Lyrae stars</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.5-24\ {\rm hours}\)</span></p></td>
+<td><p>II</p></td>
+<td><p>R</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\delta\)</span> Scuti stars</p></td>
+<td><p><span class="math notranslate nohighlight">\(1-3\ {\rm hours}\)</span></p></td>
+<td><p>I</p></td>
+<td><p>R, NR</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\beta\)</span> Cephei stars</p></td>
+<td><p><span class="math notranslate nohighlight">\(3-7\ {\rm hours}\)</span></p></td>
+<td><p>I</p></td>
+<td><p>R, NR</p></td>
+</tr>
+<tr class="row-even"><td><p>ZZ Ceti</p></td>
+<td><p><span class="math notranslate nohighlight">\(100-1000\ {\rm seconds}\)</span></p></td>
+<td><p>I</p></td>
+<td><p>NR</p></td>
+</tr>
+</tbody>
+</table>
+<p>The W Virginis stars are metal-deficient (Pop. II) Cepheids and are about <span class="math notranslate nohighlight">\(4\times\)</span> less luminoius than classical Cepheids with the same period.  Their period luminosity relation is thus lower than and parallel to the one shown for the classical Cepheids.</p>
+<p>RR Lyrae stars (Pop. II) are horizontal-branch stars found in globular clusters.  Since all RR Lyrae stars have nearly the same luminosity, they are also useful as standard candles for distance measurements.</p>
+<p>The <span class="math notranslate nohighlight">\(\delta\)</span> Scuti variables are evovled <span class="math notranslate nohighlight">\(\rm F\)</span> stars found near the main sequence.  They exhibit both radial and nonradial oscillations, where the latter is a more complicated motion than will be discussed later.  Below the main sequence are the pulsating white dwarfs called ZZ Ceti stars.</p>
+<p>The above listed star types (W Vir, RR Lyr, <span class="math notranslate nohighlight">\(\delta\)</span> Scu, and ZZ Cet) lie far within the instability strip, and they share a common mechanism that drives the oscillations.  The long-period variables (e.g., Mira and <span class="math notranslate nohighlight">\(\beta\)</span> Cephei stars) are located outside of the instability strip occupied by the classical Cepheids and RR Lyrae stars.</p>
+</section>
+</section>
+<section id="the-physics-of-stellar-pulsation">
+<h2><span class="section-number">10.2. </span>The Physics of Stellar Pulsation<a class="headerlink" href="#the-physics-of-stellar-pulsation" title="Permalink to this heading">#</a></h2>
+<p>A wealth of knowledge has been obtained about the Earth’s interior using seismic waves produced by earthquakes and other sources.  In the same manner, astrophysicists model the pulsational properties of stars to better understand their internal structure.  By numerically evaluating an evolutionary sequence of stellar models and comparing the pulsational characteristics (e.g., periods, amplitudes, etc.) of the models with observations, astronomers can further test their theories of stellar structure and evolution.  Moreover, they obtain a detailed view of the stellar interior in the process.</p>
+<section id="the-period-density-relation">
+<h3><span class="section-number">10.2.1. </span>The Period-Density Relation<a class="headerlink" href="#the-period-density-relation" title="Permalink to this heading">#</a></h3>
+<p>The radial oscillations of a pulsating star are the result of <em>sound</em> waves resonating in the stellar interior.  A rough estimate of the pulsation period <span class="math notranslate nohighlight">\(\Pi\)</span> can be obtained by considering how long it would take a sound wave to traverse across a model star of radius <span class="math notranslate nohighlight">\(R\)</span> and constant density <span class="math notranslate nohighlight">\(\rho\)</span>.  Recall that the adiabatic sound speed is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v_s = \sqrt{\frac{\gamma P}{\rho}},
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P\)</span> represents the pressure.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pulsation period is represented using <span class="math notranslate nohighlight">\(\Pi\)</span> so that it is not confused with the pressure <span class="math notranslate nohighlight">\(P\)</span>.  While another symbol <span class="math notranslate nohighlight">\(T\)</span> could be used for period, it could lead to confusion with temperature.  Therefore <span class="math notranslate nohighlight">\(\Pi\)</span> is commonly used for pulsation period in stellar pulsation theory studies.</p>
+</div>
+<p>The pressure can be found for hydrostatic equilibrium, using the (<em>unrealistic</em>) assumption of constant density, which gives</p>
+<div class="math notranslate nohighlight" id="equation-con-dens-hydro">
+<span class="eqno">(10.5)<a class="headerlink" href="#equation-con-dens-hydro" title="Permalink to this equation">#</a></span>\[\frac{dP}{dr} = -\frac{GM_r\rho}{r^2} = -\frac{4\pi}{3}G\rho^2 r.\]</div>
+<p>Using the boundary condition <span class="math notranslate nohighlight">\(P=0\)</span> at the surface, Eqn. <a class="reference internal" href="#equation-con-dens-hydro">(10.5)</a> can be integrated to get the pressure as a function of <span class="math notranslate nohighlight">\(r\)</span>,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b709b086-9a1e-4f9b-9a25-d37e9c16fc4e">
+<span class="eqno">(10.6)<a class="headerlink" href="#equation-b709b086-9a1e-4f9b-9a25-d37e9c16fc4e" title="Permalink to this equation">#</a></span>\[\begin{align}
+P(r) = \frac{2\pi}{3} G\rho^2 (R^2-r^2).
+\end{align}\]</div>
+<p>The pulsation period is roughly</p>
+<div class="math notranslate nohighlight" id="equation-period-density-rel">
+<span class="eqno">(10.7)<a class="headerlink" href="#equation-period-density-rel" title="Permalink to this equation">#</a></span>\[\begin{split}\Pi &amp;\approx 2 \int_{0}^R \frac{dr}{v_s} \approx 2 \int_{0}^R \frac{dr}{\sqrt{\frac{2\pi}{3}G\rho (R^2 -r^2)}}, \\
+ &amp; \approx \frac{2}{\sqrt{\frac{2\pi}{3}G\rho }}\int_{0}^R \frac{dr}{\sqrt{R^2 - r^2}}, \\
+ &amp; \approx \sqrt{\frac{3\pi}{2\gamma G \rho}}.\end{split}\]</div>
+<p>This shows that a star’s pulsation period is inversely proportional to the square root of its mean density.  This <strong>period-mean density relation</strong> explains why the pulsation period decreases as we move down the instability strip from the (low density) supergiants to the very dense white dwarfs (See Fig. <a class="reference internal" href="#variables-hr-fig"><span class="std std-numref">10.5</span></a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pulsating white dwarfs exhibit nonradial oscillations, and their periods are longer than predicted by the period-mean density relation.</p>
+</div>
+<p>The tight period-luminoisty relation discovered by Leavitt exists because the instability strip is roughly parallel to the lumionisty axis of the H-R diagram in Fig. <a class="reference internal" href="#variables-hr-fig"><span class="std std-numref">10.5</span></a>.  The quantitative agreement between Eqn. <a class="reference internal" href="#equation-period-density-rel">(10.7)</a> with the observed periods of Cepheids is not too bad, considering the assumptions.</p>
+<p>Consider a typical Cepheid having a mass and radius of <span class="math notranslate nohighlight">\(5\ M_\odot\)</span> and <span class="math notranslate nohighlight">\(50\ R_\odot\)</span>, respectively.  Then <span class="math notranslate nohighlight">\(\Pi \approx 10\ {\rm days}\)</span>.  This falls within the range of periods measured for the classical Cepheids.</p>
+</section>
+<section id="radial-modes-of-pulsation">
+<h3><span class="section-number">10.2.2. </span>Radial Modes of Pulsation<a class="headerlink" href="#radial-modes-of-pulsation" title="Permalink to this heading">#</a></h3>
+<p>The sound waves involved in <strong>radial modes</strong> of stellar pulsation are essentially <em>standing waves</em>, similar to the standing waves that occur in an organ pipe that is open at one end.  Both the star and the organ pipe can sustain several oscillation modes.  The standing wave for each mode has</p>
+<ul class="simple">
+<li><p>a <em>node</em> at one end (the star’s center; the pipe’s closed end), where the gases do not move, and</p></li>
+<li><p>an <em>antinode</em> at the other end (the star’s surface; the pipe’s open end).</p></li>
+</ul>
+<p>For the <strong>fundamental mode</strong>, the gases move in the same direction at every point in the star or pipe.  There is a single node between the center and the surface, which represents the <strong>first overtone</strong> mode, with the gases moving in opposite directions on either side of the node, and two ndes for the <strong>second overtone</strong>.</p>
+<figure class="align-default" id="radial-modes-fig">
+<a class="reference internal image-reference" href="../_images/Figure10.jpg"><img alt="Radial modes" src="../_images/Figure10.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.6 </span><span class="caption-text">Radial modes for a pulsating star.  The waveform for each mode has been arbitrarily scaled so that <span class="math notranslate nohighlight">\(\delta r/R = 1\)</span> at the stellar surface.  The maximum surface ratio <span class="math notranslate nohighlight">\(\delta r/R = 0.05-0.10\)</span> for a classical Cepheid.  Figure credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#radial-modes-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For radial modes, the motion of the stellar material occurs primarily in the surface regions while some oscillation occurs deep inside the star.  This effect is most prominent for the fundamental mode, where non-negligible amplitudes exist.</p>
+<p>The vast majority of the classical Cepheids and W Virginis stars pulsate in the fundamental mode.  The RR Lyrae variables pulsate in either the fundamental or the first overtone, with a few oscillations in both modes simultaneously.  The long-period variables (LPVs) may also oscillate in either the fundamental mode or the first overtone.</p>
+</section>
+<section id="eddington-s-thermodynamic-heat-engine">
+<h3><span class="section-number">10.2.3. </span>Eddington’s Thermodynamic Heat Engine<a class="headerlink" href="#eddington-s-thermodynamic-heat-engine" title="Permalink to this heading">#</a></h3>
+<p>To explain the mechanism that powers these standing sound waves, Eddington proposed that pulsating stars are <strong>thermodynamic heat engines</strong>.  The gases comprising the layers of the star do thermodynamic work <span class="math notranslate nohighlight">\((PdV)\)</span> as they expand and contract throughout the pulsation cycle.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\oint P dV &gt; 0\)</span> for the cycle, a layer does net positive work on its surroundings and contributes to driving the oscillations;</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\oint P dV &lt; 0\)</span>, the net work is negative and tends to dampen the oscillations.</p></li>
+<li><p>If the total work (found by adding up the contributions from all the layers) is positive, the oscillations will grow in amplitude.</p></li>
+<li><p>If the total work is negative, then the oscillations will decay.</p></li>
+</ul>
+<p>These changes in pulsation amplitude continue until an equilibrium value is reached, when the total work done by all the layers is zero.</p>
+<p>As for any heat engine, the net work done by each layer of the star during one cycle is the difference between heat flowing into the gas and the heat leaving the gas.  For driving, the heat must enter the layer during the high-temperature part of the cycle and leave during the low-temperature part.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Just as the spark plug in an internal combustion engine (ICE) fires at the end of the compression stroke, the driving layers of a pulsating star must absorb heat around the time of their maximum compression.  In this case, the maximum pressue will occur after maximum compression, and the oscillations will be amplified.</p>
+</div>
+</section>
+<section id="the-nuclear-epsilon-mechanism">
+<h3><span class="section-number">10.2.4. </span>The Nuclear <span class="math notranslate nohighlight">\(\epsilon\)</span> Mechanism<a class="headerlink" href="#the-nuclear-epsilon-mechanism" title="Permalink to this heading">#</a></h3>
+<p><strong>Where within the star could the driving take place?</strong> Eddington considered that when the center of the star is compressed, its temperature and density rise which increase the thermonuclear energy generation rate <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
+<p>However, there is a node at the center of the star.  The pulsation amplituded is very small near the center.  Although this energy mechanism (<strong><span class="math notranslate nohighlight">\(\epsilon\)</span> mechanism</strong>) operates in the core of a star, it is usually not enough to drive the star’s pulsation.  Variations in the thermonuclear energy generation rate <span class="math notranslate nohighlight">\(\epsilon\)</span> produce oscillations that may prevent the formation of <span class="math notranslate nohighlight">\(\gtrsim 90\ M_\odot\)</span> stars.</p>
+</section>
+<section id="eddington-s-valve">
+<h3><span class="section-number">10.2.5. </span>Eddington’s Valve<a class="headerlink" href="#eddington-s-valve" title="Permalink to this heading">#</a></h3>
+<p>With the failure of the <span class="math notranslate nohighlight">\(\epsilon\)</span> mechanism, Eddington suggested an alternative, a <em>valve mechanism</em>.</p>
+<p><strong>Consider if a layer of the star became more opaque upon compression</strong>, then it could “dam up” the energy flowing toward the surface and push the surface layers upward.  As this expanding layer became more transparent, the trapped heat could escape and the layer would fall back down to begin the cycle anew.</p>
+<blockquote class="epigraph">
+<div><p>To apply this method, we must make the star more heat-tight when compressed than when expanded. –Sir Arthur Stanley Eddington</p>
+</div></blockquote>
+<p>In other words, <em>the opacity must increase with compression</em>.</p>
+<p>In most regions of the star, the opacity actually <em>decreases</em> with compression.  For a Kramers law, the opacity <span class="math notranslate nohighlight">\(\kappa\)</span> depends on the density and temeperature of the stellar material as <span class="math notranslate nohighlight">\(\kappa \propto \rho T^{-3.5}\)</span>.  As the layers of a star are compressed, their density and temperature <strong>both increase</strong>.  The opacity is more sensitive to the temperature than to the density, and the opacity usually decreases upon compression.</p>
+<p>It takes special circumstances to overcome the damping effect of most stellar layers, which explains why stellar pulsation is so rare (only 1 out of every <span class="math notranslate nohighlight">\(10^5\)</span> stars).</p>
+</section>
+<section id="opacity-effects-and-the-kappa-and-gamma-mechanisms">
+<h3><span class="section-number">10.2.6. </span>Opacity Effects and the <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> Mechanisms<a class="headerlink" href="#opacity-effects-and-the-kappa-and-gamma-mechanisms" title="Permalink to this heading">#</a></h3>
+<p>The conditions responsible for exciting and maintaining the stellar oscillations were first identified by <a class="reference external" href="https://en.wikipedia.org/wiki/Sergei_Alexandrovich_Zhevakin">S. A. Zhevakin</a>, and verified in detailed calculations by <a class="reference external" href="https://en.wikipedia.org/wiki/Rudolf_Kippenhahn">Rudolph Kippenhahn</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Norman_H._Baker">Norman Baker</a>, and John P. Cox.  They found that the regions of a star where Eddington’s valve mechanism can successfully operate are its <em>partial ionization zones</em>.</p>
+<p>In these layers of the star, where the gases are partially ionized, part of the work done by the gases (as they are compressed) produces further ionization rather then an increase in temperature of the gas.  With a samller temerpature rise, the increase in density with compression produces a corresponding increase in the Kramers opacity.</p>
+<figure class="align-default" id="opacity-rrlyrae-fig">
+<a class="reference internal image-reference" href="../_images/Figure13.jpg"><img alt="Temperature variations" src="../_images/Figure13.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.7 </span><span class="caption-text">Variations in the temperature and opacity throughout an RR Lyrae stellar model at the time of maixmum compression.  In the <span class="math notranslate nohighlight">\({\rm He\ II}\)</span> partial ionization zone (<span class="math notranslate nohighlight">\(T\approx 4\times 10^4\ {\rm K}\)</span>), <span class="math notranslate nohighlight">\(\delta \kappa &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\delta T\)</span> is reduced.  Figure credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#opacity-rrlyrae-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Similarly, during expansion, the temperature does not decrease as much as expected since the ions now recombine with electrons and release energy.  When the density term in the Kramers law dominates, the opacity decreases with decreasing density during the expansion.  This layer of the star can absorb heat during compression, be pushed outward to release the heat during expansion, and fall back again to begin another cycle.  The opacity mechanism is called the <strong><span class="math notranslate nohighlight">\(\kappa\)</span>-mechanism</strong>.</p>
+<p>In a partial ionziation zone, the <span class="math notranslate nohighlight">\(\kappa\)</span>-mechanism is reinforced by the tendency of heat to flow into the zone during compression because its temperature has increased less than the adjacent stellar layers.  This effect is called the <strong><span class="math notranslate nohighlight">\(\gamma\)</span>-mechanism</strong>, after the smaller ratio of specific heates caused by the increased values of <span class="math notranslate nohighlight">\(C_p\)</span> and <span class="math notranslate nohighlight">\(C_V\)</span>.</p>
+<p>Partial ionization zones are the pistons that drive the oscillations of stars, where they modulate the energy flow through the stellar layers and are the direct cause of stellar pulsation.</p>
+</section>
+<section id="the-hydrogen-and-helium-partial-ionization-zones">
+<h3><span class="section-number">10.2.7. </span>The Hydrogen and Helium Partial Ionization Zones<a class="headerlink" href="#the-hydrogen-and-helium-partial-ionization-zones" title="Permalink to this heading">#</a></h3>
+<p>In most stars, there are two main ionization zones.</p>
+<ul class="simple">
+<li><p>The first is a broad zone where both the ionization of neutral hydrogen and the first ionization of helium occur in layers with a characteristic temperature of <span class="math notranslate nohighlight">\(1-1.5 \times 10^4\ {\rm K}\)</span>.  These layers are called the <strong>hydrogen partial ionization zone</strong>.</p></li>
+<li><p>The second, deeper zone involves the second ionization of helium, which occurs at a characteristic temperature of <span class="math notranslate nohighlight">\(4\times 10^4\ {\rm K}\)</span>.  Unsurpisingly, this is called the <strong><span class="math notranslate nohighlight">\({\rm He\ II}\)</span> partial ionization zone</strong>.</p></li>
+</ul>
+<figure class="align-default" id="local-parial-ions-fig">
+<a class="reference internal image-reference" href="../_images/Figure14.jpg"><img alt="Paritial ionization" src="../_images/Figure14.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.8 </span><span class="caption-text">Hydrogen and helium ionization zones in stars of different temperatures.  For each point in the star, the vertical axis displays the logarithm of the fraction of the star’s mass that lies <em>above</em> that point.  Figure credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#local-parial-ions-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The location of these ionization zones with the star determines its pulsational properties.</p>
+<ul class="simple">
+<li><p>If the star is too hot (<span class="math notranslate nohighlight">\(7500\ {\rm K}\)</span>), the ionization zones will be very near the surface.  At this position, the density is quite low, and there is not enough mass available to drive the oscillations effectively.  This accounts for the hot <strong>blue edge</strong> of the instability strip on the H-R diagram.</p></li>
+<li><p>In a cooler star (<span class="math notranslate nohighlight">\(6500\ {\rm K}\)</span>), the characteristic temperatures of the ionzation zones are found deeper in the star.  There is more mass for the ionization zone “piston” to push around, and the first overtone mode may be excited.</p></li>
+<li><p>In a still cooler star (<span class="math notranslate nohighlight">\(5500\ {\rm K}\)</span>), the ionization zones occur deep enough to drive the fundamental mode of pulsation.</p></li>
+</ul>
+<p>However, if a star’s surface temperature is too low, the onset of efficient convection in its outer layers may dampen the oscillations.  The transport of enerby via convection is more effective when the star is compressed, and the convecting stellar material may lose heat at the minimum radius.  This would overcome the damming up of heat by the ionization zones and quench the pulsation of the star.  The cool <strong>red edge</strong> of the instability strip is the result of the damping effect of convection.</p>
+<p>Detailed numerical calculations demonstrate a good agreement for the location of the instablilty strip on the H-R diagram.  These computations show that it is the <span class="math notranslate nohighlight">\(\rm He\ II\)</span> partial ionization zone that is primarily responsible for driving stellar oscillations within the instability strip.  If the effect of the helium ionization is artificially removed, then the model stars will not pulsate.</p>
+<p>The hydrogen ionization zone plays a more subtle role.  As a star pulsates, the hydrogen ionization zone moves toward or away from the surface as the zone expands and contracts in response to the changing temperature of the stellar gases.  The star is brightest when the <em>least mass</em> lies between the hydrogen ionziation zone and the surface.</p>
+<p>As a star oscillates, the location of an ionization zone changes with respect to both its radial position <span class="math notranslate nohighlight">\(r\)</span> and the mass enclosed <span class="math notranslate nohighlight">\(M_r\)</span>.  The luminosity incident on the <em>bottom</em> of the hydrogen ionization zone is a maximum <em>at minimum radius</em>, but this propels the zone outward (through mass) most rapidly at that instant.  The emergent luminosity is greatest <em>after</em> minimum radius, when the zone is nearest the surface.  The delaying action (of the hydrogen partial ionization zone) produces the phase lag observed for classical Cepheids and RR Lyrae stars.</p>
+<p>The mechanisms repsonsible for the pulsation of stars outside the instability strip are not always well understood.  The long-period variables (LPVs) are red supergiants with huge, diffuse convective envelopes surrounding a compact ocre.  Their spectra are dominated by molecular absorption lines and emission lines that reveal the existence of atmospheric shock waves and significant mass loss.</p>
+</section>
+<section id="beta-cephei-stars-and-the-iron-opacity-bump">
+<h3><span class="section-number">10.2.8. </span><span class="math notranslate nohighlight">\(\beta\)</span> Cephei Stars and the Iron Opacity “Bump”<a class="headerlink" href="#beta-cephei-stars-and-the-iron-opacity-bump" title="Permalink to this heading">#</a></h3>
+<p>The <span class="math notranslate nohighlight">\(\beta\)</span> Cephei stars pose another interesting challenge, where they are located in the upper left-hand side of the H-R diagram (i.e., very hot and luminous).  <span class="math notranslate nohighlight">\(\beta\)</span> Cepheis are early B stars with effective temperatures from <span class="math notranslate nohighlight">\(2-3 \times 10^4\ {\rm K}\)</span> and typically luminosity classes of III, IV, and V.</p>
+<p>Given their high effective temperatures, hydrogen is completely ionized, and the helium ionization zone is too near the surface to effectively drive pulsations.  After many years, it was realized tha the <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> mechanisms are still active in <span class="math notranslate nohighlight">\(\beta\)</span> Cephei stars, but the element responsible for the driving is iron.</p>
+<p>The larger number of absorption lines in the spectrum of iron implies that iron contributes significantly to stellar opacities at temperatures near <span class="math notranslate nohighlight">\(10^5\ {\rm K}\)</span>.  This effect can be seen in the “iron bump” above <span class="math notranslate nohighlight">\(10^5\ {\rm K}\)</span> in the plot of opacity.  The depth of this iron ionization region is sufficient to produce net positive pulsational driving in these stars.</p>
+</section>
+</section>
+<section id="modeling-stellar-pulsation">
+<h2><span class="section-number">10.3. </span>Modeling Stellar Pulsation<a class="headerlink" href="#modeling-stellar-pulsation" title="Permalink to this heading">#</a></h2>
+<section id="nonlinear-hydrodynamic-models">
+<h3><span class="section-number">10.3.1. </span>Nonlinear Hydrodynamic Models<a class="headerlink" href="#nonlinear-hydrodynamic-models" title="Permalink to this heading">#</a></h3>
+<p>A pulsating star is not in hydrostatic equilibrium, where a more general set of equations is employed that takes the oscillation of mass shells into account.  For example, Newton’s second law</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\rho \frac{d^2 r}{dt^2} = -\frac{GM_r \rho}{r^2} - \frac{dP}{dr},
+\end{align*}\]</div>
+<p>must be used for hydrostatic equilibrium.  But the differential equations describing nonequilibrium mechanical and thermal behavior of a star are needed.  Such equations may be replaced by <em>difference equations</em> and solved numerically.  The model star is displaced from its equilibrium configuration and “released” to begin its oscillation.  The mass shells expand and contract, pushing against each other as they move.</p>
+<p>If the conditions are right, the ionization zones in the model star will drive the oscillations, and the pulsation amplitude will slowly increase; otherwise the amplitude will fade away.  Computer programs that carry out these calculations have been successful in modeling the details observed in the light and radial velocity curves of Cepheid variables.</p>
+<p>The main advantage of the preceeding approach is that it is a <strong>nonlinear</strong> calculation, capable (in principle) of modeling the complexitites of large pulsation amplitudes and reproducing the nonsinusoidal shape of <em>actual</em> light curves.  One disadvantage lies in the computer resources required:</p>
+<ul class="simple">
+<li><p>The process requires a significant amount of CPU time andmemory.</p></li>
+<li><p>Many (sometimes thousands of) oscillations must be evaluated before the model settles down into a well-behaved periodic motion.</p></li>
+<li><p>Even more periods may be required for the model to reach its <em>limit cycle</em>, when the pulsation amplitude has reached its final value.</p></li>
+</ul>
+<p>In some cases the computer simulations of certain classes of pulsating stars may never attain a truly periodic solution but exhibit chaotic behavior instead, as observed in some real stars.</p>
+<p>A second disadvantage of nonlinear calulations lies in the challenges involved in accurately convering models at each time step.  Numerical instabilities in the nonlinear equations can cause calculations to lead to unphysical solutions.  This is particularly true when theories of time-dependent convection are required for red giants and supergiants.</p>
+</section>
+<section id="linearizing-the-hydrodynamic-equaitons">
+<h3><span class="section-number">10.3.2. </span>Linearizing the Hydrodynamic Equaitons<a class="headerlink" href="#linearizing-the-hydrodynamic-equaitons" title="Permalink to this heading">#</a></h3>
+<p>An alternative to the nonlinear approach is to <strong>linearize</strong> the differential equaitons by considering only small-amplitude oscillations.  This is done by writing every variable in the differential equations as an equilibrium value plus a small change due to the pulsation (i.e., a perturbative method).  For example, the pressure <span class="math notranslate nohighlight">\(P\)</span> would be written as <span class="math notranslate nohighlight">\(P = P_o + \delta P\)</span>, where <span class="math notranslate nohighlight">\(P_o\)</span> is the pressure in a mass shell of the equilibrium model, and <span class="math notranslate nohighlight">\(\delta P\)</span> is the small change in pressure that occurs as that mass shell moves in the oscillating model star.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\delta P\)</span> varies in time, while <span class="math notranslate nohighlight">\(P_o\)</span> is a constant.  When the variables written in this manner are inserted into the differential equations, the terms containing only equilibrium quantities cancel, and terms that involve powers greater than second order (i.e., greater than $(\delta P)^2) may be discarded because they are negligibly small.  The resulting linearized differential equations and their associated boundary conditions (also linearized) are similar to the equations for a wave on a string or in an organ pipe.</p>
+<p>Only certain standing waves with specific periods are permitted, where the the pulsation modes of the star are clearly identified.  The equations are sufficiently complicated that the motion of the star is forced to be sinusoidal, and the limiting value of the pulsation amplitude cannot be determined.  Modeling the complexities of the full nonlinear behavior of the stellar model is thus sacrificed.</p>
+<div class="exercise orange admonition" id="Chapter_14/stellar-pulsation-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 10.1 </span></p>
+<section id="exercise-content">
+<p><strong>Consider an unrealistic (but very instructive) model of a pulsating star called a <em>one-zone model</em>.  It consists of a central point mass equal to the entire mass of the star <span class="math notranslate nohighlight">\(M\)</span>, surrounded by a single thin, spherical shell of mass <span class="math notranslate nohighlight">\(m\)</span> and radius <span class="math notranslate nohighlight">\(R\)</span> that represents the surface layer of the star.  The interior of the shell is filled with a massless gas of pressure <span class="math notranslate nohighlight">\(P\)</span> whose function is to support the shell against gravity.</strong></p>
+<p><strong>Determine the pulsation period <span class="math notranslate nohighlight">\(\Pi\)</span> using the perturbation approximation.</strong></p>
+<p>First, we apply Newton’s second law for a shell as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-87fc122a-2de6-46af-92e0-ba64a4ab98c9">
+<span class="eqno">(10.8)<a class="headerlink" href="#equation-87fc122a-2de6-46af-92e0-ba64a4ab98c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+\rho \frac{d^2 r}{dt^2} &amp;= -\frac{GM_r \rho}{r^2} - \frac{dP}{dr}, \\
+\frac{m}{V} \frac{d^2 R}{dt^2} &amp;= -\frac{GM}{R^2}\frac{m}{V}  + \frac{P}{R}, \\
+m \frac{d^2 R}{dt^2} &amp;= -\frac{GMm}{R^2}  + PA, \\
+m \frac{d^2 R}{dt^2} &amp;= -\frac{GMm}{R^2}  + 4\pi R^2 P.
+\end{align}\]</div>
+<p>For the equilibrium model, the left-hand side of this equation is zero, where</p>
+<div class="math notranslate nohighlight" id="equation-equil-model-deriv">
+<span class="eqno">(10.9)<a class="headerlink" href="#equation-equil-model-deriv" title="Permalink to this equation">#</a></span>\[\frac{GMm}{R_o^2}  = 4\pi R_o^2 P_o.\]</div>
+<p>The linearization is accomplished by writing the star’s radius and pressure as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6a42ce58-365b-4c2c-9255-25924183979c">
+<span class="eqno">(10.10)<a class="headerlink" href="#equation-6a42ce58-365b-4c2c-9255-25924183979c" title="Permalink to this equation">#</a></span>\[\begin{align}
+R &amp;= R_o + \delta R, &amp; \text{and} \\
+P &amp;= P_o + \delta P, &amp;
+\end{align}\]</div>
+<p>which we then insert into our result from Newton’s second law.  This gives</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2d9baebc-07d7-4370-abac-4dde1affc385">
+<span class="eqno">(10.11)<a class="headerlink" href="#equation-2d9baebc-07d7-4370-abac-4dde1affc385" title="Permalink to this equation">#</a></span>\[\begin{align}
+m \frac{d^2}{dt^2}\left[R_o + \delta R\right] &amp;= -\frac{GMm}{\left(R_o + \delta R\right)^2}  + 4\pi \left(R_o + \delta R\right)^2 (P_o + \delta P).
+\end{align}\]</div>
+<p>Using the first-order approximation</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{1}{\left(R_o + \delta R\right)^2} &amp;= \frac{1}{R_o^2\left(1 + \frac{\delta R}{R_o}\right)^2}, \\
+&amp;= \frac{1}{R_o^2}\left(1 + \frac{\delta R}{R_o}\right)^{-2}, \\
+&amp;\approx \frac{1}{R_o^2}\left(1 - 2\frac{\delta R}{R_o}\right)
+\end{align*}\]</div>
+<p>and keeping only those terms involving the first powers of the deltas results in</p>
+<div class="amsmath math notranslate nohighlight" id="equation-357e5d85-7ef8-4a4d-8d47-fede92b65c8b">
+<span class="eqno">(10.12)<a class="headerlink" href="#equation-357e5d85-7ef8-4a4d-8d47-fede92b65c8b" title="Permalink to this equation">#</a></span>\[\begin{align}
+m \frac{d^2 (\delta R)}{dt^2} &amp;= -\frac{GMm}{R_o^2} + 2\frac{GMm}{R_o^3} + 4\pi R_o^2 P_o + 8\pi R_o P_o \delta R + 4\pi R_o^2 \delta P,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(d^2 R_o/dt^2 = 0\)</span> is used for the equilibrium model.  Also in the equlibrium model (Eq. <a class="reference internal" href="#equation-equil-model-deriv">(10.9)</a>), the first and third terms on the right-hand side cancel, which leaves</p>
+<div class="math notranslate nohighlight" id="equation-press-newt-2nd">
+<span class="eqno">(10.13)<a class="headerlink" href="#equation-press-newt-2nd" title="Permalink to this equation">#</a></span>\[m \frac{d^2 (\delta R)}{dt^2} =  2\frac{GMm}{R_o^3} + 8\pi R_o P_o \delta R + 4\pi R_o^2 \delta P.\]</div>
+<p><strong>This is the linearized version of Newton’s second law for our one-zone model.</strong></p>
+<p>To reduce from two variables (<span class="math notranslate nohighlight">\(\delta R\)</span> and <span class="math notranslate nohighlight">\(\delta P\)</span>) to one, we assume that the oscillations are <em>adiabatic</em>.  As a result, the pressure and volume are related by the adiabatic relation <span class="math notranslate nohighlight">\(PV^\gamma =\ \text{constant}\)</span>, where <span class="math notranslate nohighlight">\(\gamma\)</span> is the ratio of specific heats of the gas.  The volume of the one-zone model is just the volume of a sphere (<span class="math notranslate nohighlight">\(4/3\pi R^3\)</span>), the adiabatic relation becomes <span class="math notranslate nohighlight">\(PR^{3\gamma} =\ \text{constant}\)</span>.  Then the linearized version is found as (see HW)</p>
+<div class="math notranslate nohighlight" id="equation-adiabatic-press-rad">
+<span class="eqno">(10.14)<a class="headerlink" href="#equation-adiabatic-press-rad" title="Permalink to this equation">#</a></span>\[\frac{\delta P}{P_o} = -3\gamma \frac{\delta R}{R_o}.\]</div>
+<p>Using this equation, <span class="math notranslate nohighlight">\(\delta P\)</span> can be eliminated from Eqn. <a class="reference internal" href="#equation-press-newt-2nd">(10.13)</a>.  In addition, the <span class="math notranslate nohighlight">\(8\pi R_o P_o\)</span> can be replaced by <span class="math notranslate nohighlight">\(2GMm/R_o^3\)</span> using Eqn. <a class="reference internal" href="#equation-equil-model-deriv">(10.9)</a>.  Then, the mass <span class="math notranslate nohighlight">\(m\)</span> of the shell cancels, which leaves the linearized equation for <span class="math notranslate nohighlight">\(\delta R\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-linearized-r-eqn">
+<span class="eqno">(10.15)<a class="headerlink" href="#equation-linearized-r-eqn" title="Permalink to this equation">#</a></span>\[\frac{d^2(\delta R)}{dt^2} = -(3\gamma - 4)\frac{GM}{R_o^3}\delta R.\]</div>
+<p>If <span class="math notranslate nohighlight">\(\gamma &gt; 4/3\)</span>, the above relation reduces to the equation for simple harmonic motion, which has a solution <span class="math notranslate nohighlight">\(\delta R = A \sin{(\omega t)}\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> represents the pulsation amplitude and <span class="math notranslate nohighlight">\(\omega\)</span> is the angular pulsation frequency.  Substituting this particular solution into Eqn. <a class="reference internal" href="#equation-linearized-r-eqn">(10.15)</a> results in</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a89e2f84-e592-4025-a001-17a71e98adaf">
+<span class="eqno">(10.16)<a class="headerlink" href="#equation-a89e2f84-e592-4025-a001-17a71e98adaf" title="Permalink to this equation">#</a></span>\[\begin{align}
+\omega^2 &amp;= (3\gamma - 4)\frac{GM}{R_o^3}.
+\end{align}\]</div>
+<p>From this, we can determine the pulsation period of the one-zone model as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-00d279f3-881a-448a-8688-ee4059d8ca25">
+<span class="eqno">(10.17)<a class="headerlink" href="#equation-00d279f3-881a-448a-8688-ee4059d8ca25" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Pi &amp; = 2\pi/\omega, \\
+&amp;= \frac{2\pi}{\sqrt{\frac{4\pi}{3}G\rho_o (3\gamma - 4)}},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_o\)</span> is the average density of the equilibrium model.  For an ideal monatomic gas, <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span>.  Except for factors of order unity, this is the same as our earlier estimate (Eqn. <a class="reference internal" href="#equation-period-density-rel">(10.7)</a>) when we considered the time required for a sound wave to cross the stellar diameter.</p>
+</section>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the above example, the approximations that the pulsation of the one-zone model was <em>linear</em> and <em>adiabatic</em> were used to simplify the calculation.  Note that the pulsation amplitude <span class="math notranslate nohighlight">\(A\)</span> canceled in this example.  The inability to calculate this amplitude is an inherent drawback of the linearized approach to pulsation.</p>
+</div>
+</section>
+<section id="nonlinear-and-nonadiabatic-calculations">
+<h3><span class="section-number">10.3.3. </span>Nonlinear and Nonadiabatic Calculations<a class="headerlink" href="#nonlinear-and-nonadiabatic-calculations" title="Permalink to this heading">#</a></h3>
+<p>Because no heat is allwed to enter (or leave) the layers of a stellar model in an adiabitic analysis, the oscillation amplitude remains constant.  However, astronomers need to know which modes will grow and which will decay away.  This calculation must include the physics involved in Eddington’s valve mechanism.</p>
+<p>The equations describing the heat transfer and radiation through the stellar layers must be incorporated in a <em>nonadiabatic</em> computation.  These nonadiabatic expressions may also be linearized and solved to obtain the periods and growth rates of the individual modes.  However, a more sophisticated (and costly) nonlinear, nonadiabatic calculation is needed to reproduce the complicated light and radial velocity curves for some variable stars.  As a result, such computations are performed numerically.</p>
+</section>
+<section id="dynamical-stability">
+<h3><span class="section-number">10.3.4. </span>Dynamical Stability<a class="headerlink" href="#dynamical-stability" title="Permalink to this heading">#</a></h3>
+<p>Equation <a class="reference internal" href="#equation-linearized-r-eqn">(10.15)</a> provides a very important insight into the <strong>dynamical stability</strong> of a star.  If <span class="math notranslate nohighlight">\(\gamma &lt; 4/3\)</span>, then the right-hand side is positive.  The solution changes from a sinusoidal function to a decaying exponential, or <span class="math notranslate nohighlight">\(\delta R = Ae^{-\kappa t}\)</span>, where <span class="math notranslate nohighlight">\(\kappa^2\)</span> is the same as <span class="math notranslate nohighlight">\(\omega^2\)</span>.  Instead of pulsating, the star <em>collapses</em> if <span class="math notranslate nohighlight">\(\gamma &lt; 4/3\)</span>.  The increase in gas pressure is not enough to overcome the inward pull of gravity and push the mass shell back out again, which results in a <em>dynamically unstable</em> model.</p>
+<p>For the case of <em>nonadiabatic</em> oscillations, the time dependence of the pulsation is usually taken to be the real part of <span class="math notranslate nohighlight">\(e^{i\sigma t}\)</span>, where <span class="math notranslate nohighlight">\(\sigma\)</span> represents the complex frequency <span class="math notranslate nohighlight">\(\sigma = \omega + i\kappa\)</span>.  in this expression, <span class="math notranslate nohighlight">\(\omega\)</span> is the pulsation frequency and <span class="math notranslate nohighlight">\(\kappa\)</span> is a <em>stability coefficient</em>.  The pulsation amplitude is then proportional to <span class="math notranslate nohighlight">\(e^{-\kappa t}\)</span>, and <span class="math notranslate nohighlight">\(\kappa^{-1}\)</span> is the characteristic time for growth or decy of the oscillations.</p>
+</section>
+</section>
+<section id="nonradial-stellar-pulsation">
+<h2><span class="section-number">10.4. </span>Nonradial Stellar Pulsation<a class="headerlink" href="#nonradial-stellar-pulsation" title="Permalink to this heading">#</a></h2>
+<section id="nonradial-oscillations-and-spherical-harmonic-functions">
+<h3><span class="section-number">10.4.1. </span>Nonradial Oscillations and Spherical Harmonic Functions<a class="headerlink" href="#nonradial-oscillations-and-spherical-harmonic-functions" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-p-and-f-modes">
+<h3><span class="section-number">10.4.2. </span>The <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(f\)</span> Modes<a class="headerlink" href="#the-p-and-f-modes" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-acoustic-frequency">
+<h3><span class="section-number">10.4.3. </span>The Acoustic frequency<a class="headerlink" href="#the-acoustic-frequency" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-g-modes">
+<h3><span class="section-number">10.4.4. </span>The <span class="math notranslate nohighlight">\(g\)</span> modes<a class="headerlink" href="#the-g-modes" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-brunt-vaisala-buoyancy-frequency">
+<h3><span class="section-number">10.4.5. </span>The Brunt-Väisälä (Buoyancy) Frequency<a class="headerlink" href="#the-brunt-vaisala-buoyancy-frequency" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-g-and-p-modes-as-probes-of-stellar-structure">
+<h3><span class="section-number">10.4.6. </span>The <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(p\)</span> Modes as Probes of Stellar Structure<a class="headerlink" href="#the-g-and-p-modes-as-probes-of-stellar-structure" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="helioseismology-and-asteroseismology">
+<h2><span class="section-number">10.5. </span>Helioseismology and Asteroseismology<a class="headerlink" href="#helioseismology-and-asteroseismology" title="Permalink to this heading">#</a></h2>
+<section id="the-five-minute-solar-oscillations">
+<h3><span class="section-number">10.5.1. </span>The Five-Minute Solar Oscillations<a class="headerlink" href="#the-five-minute-solar-oscillations" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="differential-rotation-and-the-solar-convection-zone">
+<h3><span class="section-number">10.5.2. </span>Differential Rotation and the Solar Convection Zone<a class="headerlink" href="#differential-rotation-and-the-solar-convection-zone" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="probing-the-deep-interior">
+<h3><span class="section-number">10.5.3. </span>Probing the Deep Interior<a class="headerlink" href="#probing-the-deep-interior" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="driving-solar-oscillations">
+<h3><span class="section-number">10.5.4. </span>Driving Solar Oscillations<a class="headerlink" href="#driving-solar-oscillations" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="delta-scuti-stars-and-rapidly-oscillating-ap-stars">
+<h3><span class="section-number">10.5.5. </span><span class="math notranslate nohighlight">\(\delta\)</span> Scuti Stars and Rapidly Oscillating Ap Stars<a class="headerlink" href="#delta-scuti-stars-and-rapidly-oscillating-ap-stars" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="homework">
+<h2><span class="section-number">10.6. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p><strong>Derive Eqn. <a class="reference internal" href="#equation-adiabatic-press-rad">(10.14)</a> by linearizing the adiabatic relation <span class="math notranslate nohighlight">\(PV^\gamma =\ \text{constant}\)</span>.</strong></p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -496,6 +976,62 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observations-of-pulsating-stars">10.1. Observations of Pulsating Stars</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-period-luminosity-relation">10.1.1. The Period-Luminosity Relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pulsation-hypothesis-for-brightness-variations">10.1.2. The Pulsation Hypothesis for Brightness Variations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-instability-strip">10.1.3. The Instability Strip</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#some-classes-of-pulsating-stars">10.1.4. Some Classes of Pulsating Stars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-stellar-pulsation">10.2. The Physics of Stellar Pulsation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-period-density-relation">10.2.1. The Period-Density Relation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radial-modes-of-pulsation">10.2.2. Radial Modes of Pulsation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eddington-s-thermodynamic-heat-engine">10.2.3. Eddington’s Thermodynamic Heat Engine</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nuclear-epsilon-mechanism">10.2.4. The Nuclear <span class="math notranslate nohighlight">\(\epsilon\)</span> Mechanism</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eddington-s-valve">10.2.5. Eddington’s Valve</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opacity-effects-and-the-kappa-and-gamma-mechanisms">10.2.6. Opacity Effects and the <span class="math notranslate nohighlight">\(\kappa\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> Mechanisms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hydrogen-and-helium-partial-ionization-zones">10.2.7. The Hydrogen and Helium Partial Ionization Zones</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beta-cephei-stars-and-the-iron-opacity-bump">10.2.8. <span class="math notranslate nohighlight">\(\beta\)</span> Cephei Stars and the Iron Opacity “Bump”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-stellar-pulsation">10.3. Modeling Stellar Pulsation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-hydrodynamic-models">10.3.1. Nonlinear Hydrodynamic Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearizing-the-hydrodynamic-equaitons">10.3.2. Linearizing the Hydrodynamic Equaitons</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonlinear-and-nonadiabatic-calculations">10.3.3. Nonlinear and Nonadiabatic Calculations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-stability">10.3.4. Dynamical Stability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonradial-stellar-pulsation">10.4. Nonradial Stellar Pulsation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nonradial-oscillations-and-spherical-harmonic-functions">10.4.1. Nonradial Oscillations and Spherical Harmonic Functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-p-and-f-modes">10.4.2. The <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(f\)</span> Modes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-acoustic-frequency">10.4.3. The Acoustic frequency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-g-modes">10.4.4. The <span class="math notranslate nohighlight">\(g\)</span> modes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-brunt-vaisala-buoyancy-frequency">10.4.5. The Brunt-Väisälä (Buoyancy) Frequency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-g-and-p-modes-as-probes-of-stellar-structure">10.4.6. The <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(p\)</span> Modes as Probes of Stellar Structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helioseismology-and-asteroseismology">10.5. Helioseismology and Asteroseismology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-five-minute-solar-oscillations">10.5.1. The Five-Minute Solar Oscillations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differential-rotation-and-the-solar-convection-zone">10.5.2. Differential Rotation and the Solar Convection Zone</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probing-the-deep-interior">10.5.3. Probing the Deep Interior</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#driving-solar-oscillations">10.5.4. Driving Solar Oscillations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delta-scuti-stars-and-rapidly-oscillating-ap-stars">10.5.5. <span class="math notranslate nohighlight">\(\delta\)</span> Scuti Stars and Rapidly Oscillating Ap Stars</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">10.6. <strong>Homework</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
