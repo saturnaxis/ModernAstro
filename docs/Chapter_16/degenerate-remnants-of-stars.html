@@ -80,6 +80,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://saturnaxis.github.io/ModernAstro/Chapter_16/degenerate-remnants-of-stars.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Student Participation (Spring 2024)" href="../Appendix/Student_Summaries.html" />
     <link rel="prev" title="11. The Fate of Massive Stars" href="../Chapter_15/fate-of-massive-stars.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -187,6 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/Python-basics.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Preamble/Markdown-basics.html">Introduction to Markdown</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../Preamble/HW_template.html">Homework Assignments</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
@@ -208,6 +211,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_14/stellar-pulsation.html">10. Stellar Pulsation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Chapter_15/fate-of-massive-stars.html">11. The Fate of Massive Stars</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">12. The Degenerate Remnants of Stars</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Appendix/Student_Summaries.html">Student Participation (Spring 2024)</a></li>
 </ul>
 
     </div>
@@ -442,7 +449,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#central-conditions-in-white-dwarfs">12.2.2. Central Conditions in White Dwarfs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectra-and-surface-composition">12.2.3. Spectra and Surface Composition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulsating-white-dwarfs">12.2.4. Pulsating White Dwarfs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">12.2.5. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-degenerate-matter">12.3. The Physics of Degenerate Matter</a><ul class="nav section-nav flex-column">
@@ -456,7 +462,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mass-volume-relation">12.4.1. The Mass-Volume Relation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-instability">12.4.2. Dynamical Instability</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-chandrasekhar-limit">12.4.3. Estimating the Chandrasekhar Limit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">12.4.4. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cooling-of-white-dwarfs">12.5. The Cooling of White Dwarfs</a><ul class="nav section-nav flex-column">
@@ -475,7 +480,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chandrasekhar-limit-for-neutron-stars">12.6.5. The Chandrasekhar Limit for Neutron Stars</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rapid-rotation-and-conservation-of-angular-momentum">12.6.6. Rapid Rotation and Conservation of Angular Momentum</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neutron-star-temperatures">12.6.7. Neutron Star Temperatures</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">12.6.8. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pulsars">12.7. Pulsars</a><ul class="nav section-nav flex-column">
@@ -497,6 +501,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">12.8. <strong>Homework</strong></a></li>
 </ul>
             </nav>
         </div>
@@ -680,13 +685,6 @@ The central pressure in Sirius B is 2e+05 times greater than the Sun.
 <a class="reference internal image-reference" href="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_16/Figure_4.jpg?raw=true?"><img alt="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_16/Figure_4.jpg?raw=true?" src="https://github.com/saturnaxis/ModernAstro/blob/main/Chapter_16/Figure_4.jpg?raw=true?" style="width: 700px;" /></a>
 <p><strong>Figure 4</strong>: Compact pulsators on the H-R diagram.  (Carroll &amp; Ostlie (2007); Figure adapted from Winget, <em>Advances in Helio- and Asteroseismology</em>, Christensen-Dalsgaard and Frandsen (eds.), Reidel, Dordrecht, 1988))</p>
 </div></section>
-<section id="problems">
-<h3><span class="section-number">12.2.5. </span><strong>Problems</strong><a class="headerlink" href="#problems" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>1. Estimate the ideal gas pressure and the radiation pressure at the center of Sirius B, using <span class="math notranslate nohighlight">\(3 \times 10^7\ {\rm K}\)</span> for the central temperature. Compare these values with the estimated central pressure, Eqn. 1.</p>
-<p>2. The helium absorption lines seen in the spectra of DB white dwarfs are formed by excited <span class="math notranslate nohighlight">\({\rm He\ I}\)</span> atoms with one electron in the lowest (<span class="math notranslate nohighlight">\(n = 1\)</span>) orbital and the other in an <span class="math notranslate nohighlight">\(n = 2\)</span> orbital. White dwarfs of spectral type DB are not observed with temperatures below about 11,000 K. Using what you know about spectral line formation, give a qualitative explanation why the helium lines would not be seen at lower temperatures. As a DB white dwarf cools below 12,000 K, into what spectral type does it change?</p>
-</div></blockquote>
-</section>
 </section>
 <section id="the-physics-of-degenerate-matter">
 <h2><span class="section-number">12.3. </span>The Physics of Degenerate Matter<a class="headerlink" href="#the-physics-of-degenerate-matter" title="Permalink to this heading">#</a></h2>
@@ -898,19 +896,6 @@ The condition for degeneracy is 69 K m^2/kg^{2/3} for Sirius B.
 <p><strong>Figure 7</strong>: Radii of white dwarfs of <span class="math notranslate nohighlight">\(M_{wd}\leq M_{Ch}\)</span> at <span class="math notranslate nohighlight">\(T = 0\ {\rm K}\)</span>. (Carroll &amp; Ostlie (2007))</p>
 </div>
 <p>It is important to emphasize that the gas pressure of the ideal gas law and the expression for radiation pressure depend explicitly on temperature, where the pressure of a completely degenerate electron gas is independent of its temperature.  This has the effect of decoupling the mechanical structure of the star from its thermal properties.</p>
-</section>
-<section id="id1">
-<h3><span class="section-number">12.4.4. </span><strong>Problems</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>3. The most easily observed white dwarf in the sky is in the constellation of Eridanus (the River Eridanus). Three stars make up the 40 Eridani system: 40 Eri A is a 4th-magnitude star similar to the Sun; 40 Eri B is a 10th-magnitude white dwarf; and 40 Eri C is an 11th-magnitude red M5 star. This problem deals only with the latter two stars, which are separated from 40 Eri A by 400 AU.</p>
-<blockquote>
-<div><p><strong>(a)</strong> The period of the 40 Eri B and C system is 247.9 years. The system’s measured trigonometric parallax is <span class="math notranslate nohighlight">\(0.201^{\prime\prime}\)</span> and the true angular extent of the semimajor axis of the reduced mass is <span class="math notranslate nohighlight">\(6.89^{\prime\prime}\)</span>. The ratio of the distances of 40 Eri B and C from the center of mass is <span class="math notranslate nohighlight">\(a_B/a_C = 0.37\)</span>. Find the mass of 40 Eri B and C in terms of the mass of the Sun.</p>
-<p><strong>(b)</strong> The absolute bolometric magnitude of 40 Eri B is 9.6. Determine its luminosity in terms of the luminosity of the Sun.</p>
-<p><strong>(c)</strong> The effective temperature of 40 Eri B is 16,900 K. Calculate its radius, and compare your answer to the radii of the Sun, Earth, and Sirius B.</p>
-<p><strong>(d)</strong> Calculate the average density of 40 Eri B, and compare your result with the average density of Sirius B. Which is more dense, and why?</p>
-<p><strong>(e)</strong> Calculate the product of the mass and volume of both 40 Eri B and Sirius B. Is there a departure from the mass–volume relation? What might be the cause?</p>
-</div></blockquote>
-</div></blockquote>
 </section>
 </section>
 <section id="the-cooling-of-white-dwarfs">
@@ -1205,13 +1190,6 @@ The ratio of the Newtonian gravitational potential energy to the rest energy is 
 </div>
 </div>
 </section>
-<section id="id2">
-<h3><span class="section-number">12.6.8. </span><strong>Problems</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>4. If our Moon were as dense as a neutron star, what would its diameter be?</p>
-<p>5. Estimate the neutron degeneracy pressure at the center of a <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star (take the central density to be <span class="math notranslate nohighlight">\(1.5 \times 10^{18}\ {\rm kg/m^3}\)</span>), and compare this with the estimated pressure at the center of Sirius B.</p>
-</div></blockquote>
-</section>
 </section>
 <section id="pulsars">
 <h2><span class="section-number">12.7. </span>Pulsars<a class="headerlink" href="#pulsars" title="Permalink to this heading">#</a></h2>
@@ -1457,6 +1435,35 @@ The magetic field strength of PSR 1937+214 is approximately 8.6e+04 T.
 </section>
 </section>
 </section>
+<section id="homework">
+<h2><span class="section-number">12.8. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this heading">#</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p><strong>Estimate the ideal gas pressure and the radiation pressure at the center of Sirius B, using <span class="math notranslate nohighlight">\(3 \times 10^7\ {\rm K}\)</span> for the central temperature. Compare these values with the estimated central pressure, Eqn. 1.</strong></p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<p>The helium absorption lines seen in the spectra of DB white dwarfs are formed by excited <span class="math notranslate nohighlight">\({\rm He\ I}\)</span> atoms with one electron in the lowest (<span class="math notranslate nohighlight">\(n = 1\)</span>) orbital and the other in an <span class="math notranslate nohighlight">\(n = 2\)</span> orbital. White dwarfs of spectral type DB are not observed with temperatures below about 11,000 K.</p>
+<p><strong>Using what you know about spectral line formation, give a qualitative explanation why the helium lines would not be seen at lower temperatures. As a DB white dwarf cools below 12,000 K, into what spectral type does it change?</strong></p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>The most easily observed white dwarf in the sky is in the constellation of Eridanus (the River Eridanus). Three stars make up the 40 Eridani system: 40 Eri A is a 4th-magnitude star similar to the Sun; 40 Eri B is a 10th-magnitude white dwarf; and 40 Eri C is an 11th-magnitude red M5 star. This problem deals only with the latter two stars, which are separated from 40 Eri A by 400 AU.</p>
+<p><strong>(a)</strong> The period of the 40 Eri B and C system is 247.9 years. The system’s measured trigonometric parallax is <span class="math notranslate nohighlight">\(0.201^{\prime\prime}\)</span> and the true angular extent of the semimajor axis of the reduced mass is <span class="math notranslate nohighlight">\(6.89^{\prime\prime}\)</span>. The ratio of the distances of 40 Eri B and C from the center of mass is <span class="math notranslate nohighlight">\(a_B/a_C = 0.37\)</span>. Find the mass of 40 Eri B and C in terms of the mass of the Sun.</p>
+<p><strong>(b)</strong> The absolute bolometric magnitude of 40 Eri B is 9.6. Determine its luminosity in terms of the luminosity of the Sun.</p>
+<p><strong>(c)</strong> The effective temperature of 40 Eri B is 16,900 K. Calculate its radius, and compare your answer to the radii of the Sun, Earth, and Sirius B.</p>
+<p><strong>(d)</strong> Calculate the average density of 40 Eri B, and compare your result with the average density of Sirius B. Which is more dense, and why?</p>
+<p><strong>(e)</strong> Calculate the product of the mass and volume of both 40 Eri B and Sirius B. Is there a departure from the mass–volume relation? What might be the cause?</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p><strong>If our Moon were as dense as a neutron star, what would its diameter be?</strong></p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p><strong>Estimate the neutron degeneracy pressure at the center of a <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star (take the central density to be <span class="math notranslate nohighlight">\(1.5 \times 10^{18}\ {\rm kg/m^3}\)</span>), and compare this with the estimated pressure at the center of Sirius B.</strong></p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1498,6 +1505,15 @@ The magetic field strength of PSR 1937+214 is approximately 8.6e+04 T.
         <p class="prev-next-title"><span class="section-number">11. </span>The Fate of Massive Stars</p>
       </div>
     </a>
+    <a class="right-next"
+       href="../Appendix/Student_Summaries.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Student Participation (Spring 2024)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1519,7 +1535,6 @@ The magetic field strength of PSR 1937+214 is approximately 8.6e+04 T.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#central-conditions-in-white-dwarfs">12.2.2. Central Conditions in White Dwarfs</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spectra-and-surface-composition">12.2.3. Spectra and Surface Composition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pulsating-white-dwarfs">12.2.4. Pulsating White Dwarfs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems">12.2.5. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-degenerate-matter">12.3. The Physics of Degenerate Matter</a><ul class="nav section-nav flex-column">
@@ -1533,7 +1548,6 @@ The magetic field strength of PSR 1937+214 is approximately 8.6e+04 T.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mass-volume-relation">12.4.1. The Mass-Volume Relation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamical-instability">12.4.2. Dynamical Instability</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-the-chandrasekhar-limit">12.4.3. Estimating the Chandrasekhar Limit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">12.4.4. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cooling-of-white-dwarfs">12.5. The Cooling of White Dwarfs</a><ul class="nav section-nav flex-column">
@@ -1552,7 +1566,6 @@ The magetic field strength of PSR 1937+214 is approximately 8.6e+04 T.
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chandrasekhar-limit-for-neutron-stars">12.6.5. The Chandrasekhar Limit for Neutron Stars</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rapid-rotation-and-conservation-of-angular-momentum">12.6.6. Rapid Rotation and Conservation of Angular Momentum</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neutron-star-temperatures">12.6.7. Neutron Star Temperatures</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">12.6.8. <strong>Problems</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pulsars">12.7. Pulsars</a><ul class="nav section-nav flex-column">
@@ -1574,6 +1587,7 @@ The magetic field strength of PSR 1937+214 is approximately 8.6e+04 T.
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homework">12.8. <strong>Homework</strong></a></li>
 </ul>
   </nav></div>
 
