@@ -537,8 +537,8 @@ document.write(`
 <div class="math notranslate nohighlight" id="equation-vis-per-lum-rel">
 <span class="eqno">(10.1)<a class="headerlink" href="#equation-vis-per-lum-rel" title="Permalink to this equation">#</a></span>\[M_{\langle V \rangle} = -2.81 \log_{10}{P_d} - 1.43,\]</div>
 <p>where <span class="math notranslate nohighlight">\(M_{\langle V \rangle}\)</span> represents the average absolute <span class="math notranslate nohighlight">\(V\)</span> magnitude and <span class="math notranslate nohighlight">\(P_d\)</span> is the pulsation period <em>in days</em>.  In terms of the average stellar luminosity, the relation is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3edb3632-7eff-4af4-b48e-ae871b46d0d4">
-<span class="eqno">(10.2)<a class="headerlink" href="#equation-3edb3632-7eff-4af4-b48e-ae871b46d0d4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cb342f44-b88d-4f3b-aa5f-834b25c6cec5">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-cb342f44-b88d-4f3b-aa5f-834b25c6cec5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \log_{10}{\frac{\langle L \rangle}{L_\odot}} = 1.15 \log_{10}{P_d} + 2.47.
 \end{align}\]</div>
 <p>The python code below shows a linear fit to visual magnitude <span class="math notranslate nohighlight">\(M_V\)</span> and pulsation periods <span class="math notranslate nohighlight">\(P_d\)</span> from Cepheids in the Large Magellanic Cloud, LMC, (<a class="reference external" href="https://www.aanda.org/articles/aa/pdf/2011/10/aa17154-11.pdf">Strom et al. (2011)</a>).  This fit reasonably matches the coefficients given in Eqn. <a class="reference internal" href="#equation-vis-per-lum-rel">(10.1)</a>.</p>
@@ -581,13 +581,13 @@ document.write(`
 </div>
 </div>
 <p>A problem of measuring stars in the <span class="math notranslate nohighlight">\(V\)</span> band is interstellar extinction and reddening is more signficant.  Astronomers can substantially decrease the scatter in the period-luminosity relation by making observations at <strong>infrared</strong> wavelengths, where interstellar extinction is less of a problem.  A fit of the period-luminosity relation in the infrared <span class="math notranslate nohighlight">\(H\)</span> band is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a524d555-3199-437d-9951-d75c69c18944">
-<span class="eqno">(10.3)<a class="headerlink" href="#equation-a524d555-3199-437d-9951-d75c69c18944" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ce83ead5-8830-4f75-a2da-f94262aa6bbe">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-ce83ead5-8830-4f75-a2da-f94262aa6bbe" title="Permalink to this equation">#</a></span>\[\begin{align}
 H = -3.234 \log_{10}{P_d} + 16.079.
 \end{align}\]</div>
 <p>The scatter can be further reduced by adding a color term to the fit because a star’s color is independent of its distance.  Using the infrared color index <span class="math notranslate nohighlight">\(J-K\)</span>, the fit becomes much tighter.  Note that the <span class="math notranslate nohighlight">\(J\)</span> band is centered on <span class="math notranslate nohighlight">\(1.215\ {\rm \mu m}\)</span>, where the <span class="math notranslate nohighlight">\(K\)</span> band is centered on <span class="math notranslate nohighlight">\(2.157\ {\rm \mu m}\)</span>.  Using the color index, the period-luminosity-color relation is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-18f2fe8e-15ca-444c-aa99-78955dd992ba">
-<span class="eqno">(10.4)<a class="headerlink" href="#equation-18f2fe8e-15ca-444c-aa99-78955dd992ba" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-03459746-b09d-429b-a95c-f9373cf1e428">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-03459746-b09d-429b-a95c-f9373cf1e428" title="Permalink to this equation">#</a></span>\[\begin{align}
 H = -3.428 \log_{10}{P_d} + 1.54 \langle J-K \rangle + 15.637.
 \end{align}\]</div>
 <p>Classical Cepheids provide astronomy with its third dimension and supply the foundation for the measurement of extragalactic distances.  Cepheids are super giant stars (hence the pulsation), which are about <span class="math notranslate nohighlight">\(50\ R_\odot\)</span> and 1000s of times more luminous, means that they can be seen over intergalactic distances.  They serve as “standard candles,” or beacons scattered through the night sky that serve as guideposts for astronomical surveys of the universe.</p>
@@ -695,8 +695,8 @@ v_s = \sqrt{\frac{\gamma P}{\rho}},
 <div class="math notranslate nohighlight" id="equation-con-dens-hydro">
 <span class="eqno">(10.5)<a class="headerlink" href="#equation-con-dens-hydro" title="Permalink to this equation">#</a></span>\[\frac{dP}{dr} = -\frac{GM_r\rho}{r^2} = -\frac{4\pi}{3}G\rho^2 r.\]</div>
 <p>Using the boundary condition <span class="math notranslate nohighlight">\(P=0\)</span> at the surface, Eqn. <a class="reference internal" href="#equation-con-dens-hydro">(10.5)</a> can be integrated to get the pressure as a function of <span class="math notranslate nohighlight">\(r\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e5d00c15-4d16-479d-94b4-5ff1806c655e">
-<span class="eqno">(10.6)<a class="headerlink" href="#equation-e5d00c15-4d16-479d-94b4-5ff1806c655e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8b4c3a1b-cd81-4a7c-9ee4-1dbca0c4a823">
+<span class="eqno">(10.6)<a class="headerlink" href="#equation-8b4c3a1b-cd81-4a7c-9ee4-1dbca0c4a823" title="Permalink to this equation">#</a></span>\[\begin{align}
 P(r) = \frac{2\pi}{3} G\rho^2 (R^2-r^2).
 \end{align}\]</div>
 <p>The pulsation period is roughly</p>
@@ -830,7 +830,7 @@ P(r) = \frac{2\pi}{3} G\rho^2 (R^2-r^2).
 <section id="linearizing-the-hydrodynamic-equaitons">
 <h3><span class="section-number">10.3.2. </span>Linearizing the Hydrodynamic Equaitons<a class="headerlink" href="#linearizing-the-hydrodynamic-equaitons" title="Permalink to this heading">#</a></h3>
 <p>An alternative to the nonlinear approach is to <strong>linearize</strong> the differential equaitons by considering only small-amplitude oscillations.  This is done by writing every variable in the differential equations as an equilibrium value plus a small change due to the pulsation (i.e., a perturbative method).  For example, the pressure <span class="math notranslate nohighlight">\(P\)</span> would be written as <span class="math notranslate nohighlight">\(P = P_o + \delta P\)</span>, where <span class="math notranslate nohighlight">\(P_o\)</span> is the pressure in a mass shell of the equilibrium model, and <span class="math notranslate nohighlight">\(\delta P\)</span> is the small change in pressure that occurs as that mass shell moves in the oscillating model star.</p>
-<p>Note that <span class="math notranslate nohighlight">\(\delta P\)</span> varies in time, while <span class="math notranslate nohighlight">\(P_o\)</span> is a constant.  When the variables written in this manner are inserted into the differential equations, the terms containing only equilibrium quantities cancel, and terms that involve powers greater than second order (i.e., greater than $(\delta P)^2) may be discarded because they are negligibly small.  The resulting linearized differential equations and their associated boundary conditions (also linearized) are similar to the equations for a wave on a string or in an organ pipe.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\delta P\)</span> varies in time, while <span class="math notranslate nohighlight">\(P_o\)</span> is a constant.  When the variables written in this manner are inserted into the differential equations, the terms containing only equilibrium quantities cancel, and terms that involve powers greater than second order (i.e., greater than <span class="math notranslate nohighlight">\((\delta P)^2)\)</span> may be discarded because they are negligibly small.  The resulting linearized differential equations and their associated boundary conditions (also linearized) are similar to the equations for a wave on a string or in an organ pipe.</p>
 <p>Only certain standing waves with specific periods are permitted, where the the pulsation modes of the star are clearly identified.  The equations are sufficiently complicated that the motion of the star is forced to be sinusoidal, and the limiting value of the pulsation amplitude cannot be determined.  Modeling the complexities of the full nonlinear behavior of the stellar model is thus sacrificed.</p>
 <div class="exercise orange admonition" id="Chapter_14/stellar-pulsation-exercise-0">
 
@@ -839,8 +839,8 @@ P(r) = \frac{2\pi}{3} G\rho^2 (R^2-r^2).
 <p><strong>Consider an unrealistic (but very instructive) model of a pulsating star called a <em>one-zone model</em>.  It consists of a central point mass equal to the entire mass of the star <span class="math notranslate nohighlight">\(M\)</span>, surrounded by a single thin, spherical shell of mass <span class="math notranslate nohighlight">\(m\)</span> and radius <span class="math notranslate nohighlight">\(R\)</span> that represents the surface layer of the star.  The interior of the shell is filled with a massless gas of pressure <span class="math notranslate nohighlight">\(P\)</span> whose function is to support the shell against gravity.</strong></p>
 <p><strong>Determine the pulsation period <span class="math notranslate nohighlight">\(\Pi\)</span> using the perturbation approximation.</strong></p>
 <p>First, we apply Newton’s second law for a shell as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-62cc5131-a969-40ea-b3bb-c32c6a252e4b">
-<span class="eqno">(10.8)<a class="headerlink" href="#equation-62cc5131-a969-40ea-b3bb-c32c6a252e4b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b4d51b84-3c40-4da3-b300-f2ff6e566657">
+<span class="eqno">(10.8)<a class="headerlink" href="#equation-b4d51b84-3c40-4da3-b300-f2ff6e566657" title="Permalink to this equation">#</a></span>\[\begin{align}
 \rho \frac{d^2 r}{dt^2} &amp;= -\frac{GM_r \rho}{r^2} - \frac{dP}{dr}, \\
 \frac{m}{V} \frac{d^2 R}{dt^2} &amp;= -\frac{GM}{R^2}\frac{m}{V}  + \frac{P}{R}, \\
 m \frac{d^2 R}{dt^2} &amp;= -\frac{GMm}{R^2}  + PA, \\
@@ -850,14 +850,14 @@ m \frac{d^2 R}{dt^2} &amp;= -\frac{GMm}{R^2}  + 4\pi R^2 P.
 <div class="math notranslate nohighlight" id="equation-equil-model-deriv">
 <span class="eqno">(10.9)<a class="headerlink" href="#equation-equil-model-deriv" title="Permalink to this equation">#</a></span>\[\frac{GMm}{R_o^2}  = 4\pi R_o^2 P_o.\]</div>
 <p>The linearization is accomplished by writing the star’s radius and pressure as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26d85365-0e02-4c34-8e2d-5b23f302f2f1">
-<span class="eqno">(10.10)<a class="headerlink" href="#equation-26d85365-0e02-4c34-8e2d-5b23f302f2f1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9498f7ee-83c5-4cba-9ad4-9011eef31a70">
+<span class="eqno">(10.10)<a class="headerlink" href="#equation-9498f7ee-83c5-4cba-9ad4-9011eef31a70" title="Permalink to this equation">#</a></span>\[\begin{align}
 R &amp;= R_o + \delta R, &amp; \text{and} \\
 P &amp;= P_o + \delta P, &amp;
 \end{align}\]</div>
 <p>which we then insert into our result from Newton’s second law.  This gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a5332790-6c14-4765-8233-a5e57043999c">
-<span class="eqno">(10.11)<a class="headerlink" href="#equation-a5332790-6c14-4765-8233-a5e57043999c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2cf45ad8-c593-4ac8-8d99-fd335d19fe3d">
+<span class="eqno">(10.11)<a class="headerlink" href="#equation-2cf45ad8-c593-4ac8-8d99-fd335d19fe3d" title="Permalink to this equation">#</a></span>\[\begin{align}
 m \frac{d^2}{dt^2}\left[R_o + \delta R\right] &amp;= -\frac{GMm}{\left(R_o + \delta R\right)^2}  + 4\pi \left(R_o + \delta R\right)^2 (P_o + \delta P).
 \end{align}\]</div>
 <p>Using the first-order approximation</p>
@@ -868,8 +868,8 @@ m \frac{d^2}{dt^2}\left[R_o + \delta R\right] &amp;= -\frac{GMm}{\left(R_o + \de
 &amp;\approx \frac{1}{R_o^2}\left(1 - 2\frac{\delta R}{R_o}\right)
 \end{align*}\]</div>
 <p>and keeping only those terms involving the first powers of the deltas results in</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ca597502-83a4-4d10-af01-af644513104b">
-<span class="eqno">(10.12)<a class="headerlink" href="#equation-ca597502-83a4-4d10-af01-af644513104b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-621f092c-e6c3-4e66-9f6f-1c38b96091ed">
+<span class="eqno">(10.12)<a class="headerlink" href="#equation-621f092c-e6c3-4e66-9f6f-1c38b96091ed" title="Permalink to this equation">#</a></span>\[\begin{align}
 m \frac{d^2 (\delta R)}{dt^2} &amp;= -\frac{GMm}{R_o^2} + 2\frac{GMm}{R_o^3} + 4\pi R_o^2 P_o + 8\pi R_o P_o \delta R + 4\pi R_o^2 \delta P,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(d^2 R_o/dt^2 = 0\)</span> is used for the equilibrium model.  Also in the equlibrium model (Eq. <a class="reference internal" href="#equation-equil-model-deriv">(10.9)</a>), the first and third terms on the right-hand side cancel, which leaves</p>
@@ -883,13 +883,13 @@ m \frac{d^2 (\delta R)}{dt^2} &amp;= -\frac{GMm}{R_o^2} + 2\frac{GMm}{R_o^3} + 4
 <div class="math notranslate nohighlight" id="equation-linearized-r-eqn">
 <span class="eqno">(10.15)<a class="headerlink" href="#equation-linearized-r-eqn" title="Permalink to this equation">#</a></span>\[\frac{d^2(\delta R)}{dt^2} = -(3\gamma - 4)\frac{GM}{R_o^3}\delta R.\]</div>
 <p>If <span class="math notranslate nohighlight">\(\gamma &gt; 4/3\)</span>, the above relation reduces to the equation for simple harmonic motion, which has a solution <span class="math notranslate nohighlight">\(\delta R = A \sin{(\omega t)}\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> represents the pulsation amplitude and <span class="math notranslate nohighlight">\(\omega\)</span> is the angular pulsation frequency.  Substituting this particular solution into Eqn. <a class="reference internal" href="#equation-linearized-r-eqn">(10.15)</a> results in</p>
-<div class="amsmath math notranslate nohighlight" id="equation-282a9783-8a4a-4a59-86cf-b903ec58e9ed">
-<span class="eqno">(10.16)<a class="headerlink" href="#equation-282a9783-8a4a-4a59-86cf-b903ec58e9ed" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-593045d5-8967-490a-917d-bd1dba1852a7">
+<span class="eqno">(10.16)<a class="headerlink" href="#equation-593045d5-8967-490a-917d-bd1dba1852a7" title="Permalink to this equation">#</a></span>\[\begin{align}
 \omega^2 &amp;= (3\gamma - 4)\frac{GM}{R_o^3}.
 \end{align}\]</div>
 <p>From this, we can determine the pulsation period of the one-zone model as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2511c808-abe1-41f3-b02c-2c7dea9ba04c">
-<span class="eqno">(10.17)<a class="headerlink" href="#equation-2511c808-abe1-41f3-b02c-2c7dea9ba04c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-281dc11d-b664-41e3-97e3-f917cc8a9e5b">
+<span class="eqno">(10.17)<a class="headerlink" href="#equation-281dc11d-b664-41e3-97e3-f917cc8a9e5b" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Pi &amp; = 2\pi/\omega, \\
 &amp;= \frac{2\pi}{\sqrt{\frac{4\pi}{3}G\rho_o (3\gamma - 4)}},
 \end{align}\]</div>
@@ -1001,8 +1001,8 @@ Y^{\pm 1}_1(\theta,\phi) &amp;= K^{\pm 1}_1\ \sin{\theta}e^{\pm i\phi}, &amp; Y^
 <section id="the-acoustic-frequency">
 <h3><span class="section-number">10.4.3. </span>The Acoustic frequency<a class="headerlink" href="#the-acoustic-frequency" title="Permalink to this heading">#</a></h3>
 <p>An estimate of the angular frequency of a <span class="math notranslate nohighlight">\(p\)</span>-mode can be made from the time for a sound wave to travel one horizontal wavelenth, from one angular node line to the nest.  This horizontal wavelength is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b2d2b77-5f91-478b-b209-80e811f91caa">
-<span class="eqno">(10.18)<a class="headerlink" href="#equation-0b2d2b77-5f91-478b-b209-80e811f91caa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-855cdcf2-d80e-4e0c-9138-90baaffdb680">
+<span class="eqno">(10.18)<a class="headerlink" href="#equation-855cdcf2-d80e-4e0c-9138-90baaffdb680" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda_h = \frac{2\pi r}{\sqrt{\ell(\ell +1)}},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is the radial distance from the center of the star.  The <strong>acoustic frequency</strong> at this depth in the star is then defined as</p>
@@ -1011,8 +1011,8 @@ Y^{\pm 1}_1(\theta,\phi) &amp;= K^{\pm 1}_1\ \sin{\theta}e^{\pm i\phi}, &amp; Y^
 S_\ell = \frac{2\pi}{\text{time for sound to travel }\lambda_h},
 \end{align*}\]</div>
 <p>which can be written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6e2724e2-5044-463d-afde-33b752e4fd87">
-<span class="eqno">(10.19)<a class="headerlink" href="#equation-6e2724e2-5044-463d-afde-33b752e4fd87" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fdd6f3ce-a9c5-43b8-ac03-61f9111bf37a">
+<span class="eqno">(10.19)<a class="headerlink" href="#equation-fdd6f3ce-a9c5-43b8-ac03-61f9111bf37a" title="Permalink to this equation">#</a></span>\[\begin{align}
 S_\ell &amp;= 2\pi \left[\frac{v_s}{2\pi r/\sqrt{\ell(\ell+1)}}\right], \\
 &amp;= \sqrt{\frac{\gamma P}{\rho}}\frac{\sqrt{\ell(\ell + 1)}}{r},
 \end{align}\]</div>
