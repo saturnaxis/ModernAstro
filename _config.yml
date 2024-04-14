@@ -7,7 +7,7 @@
 # Book settings
 title                       : ASTR4410 Modern Astrophysics  # The title of the book. Will be placed in the left navbar.
 author                      : Billy Quarles  # The author of the book
-copyright                   : "2023"  # Copyright year to be placed in the footer
+copyright                   : "2024"  # Copyright year to be placed in the footer
 logo                        : "Diagram_of_stellar_evolution.jpg"  # A path to the book logo
 # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
 exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints","*.png"]
@@ -61,9 +61,9 @@ html:
   favicon                   : ""  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : true  # Whether to add a link to your repository button
-  use_issues_button         : false  # Whether to add an "open an issue" button
+  use_issues_button         : true  # Whether to add an "open an issue" button
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
-  #extra_footer              : "This page was created by <a href="http://www.atmos.albany.edu/facstaff/brose">Brian E. J. Rose</a> using <a href="https://jupyterbook.org">Jupyter Book</a>."  # Will be displayed underneath the footer.
+  extra_footer              : This page was created by <a href="https://www.billyquarles.com">Billy Quarles</a> using <a href="https://jupyterbook.org">Jupyter Book</a>.  # Will be displayed underneath the footer.
   google_analytics_id       : "G-CP3EW7BJEH"  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
   baseurl                   : "https://saturnaxis.github.io/ModernAstro/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
