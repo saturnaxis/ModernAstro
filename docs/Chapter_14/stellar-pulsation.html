@@ -569,8 +569,8 @@ document.write(`
 <div class="math notranslate nohighlight" id="equation-vis-per-lum-rel">
 <span class="eqno">(10.1)<a class="headerlink" href="#equation-vis-per-lum-rel" title="Permalink to this equation">#</a></span>\[M_{\langle V \rangle} = -2.81 \log_{10}{P_d} - 1.43,\]</div>
 <p>where <span class="math notranslate nohighlight">\(M_{\langle V \rangle}\)</span> represents the average absolute <span class="math notranslate nohighlight">\(V\)</span> magnitude and <span class="math notranslate nohighlight">\(P_d\)</span> is the pulsation period <em>in days</em>.  In terms of the average stellar luminosity, the relation is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cb342f44-b88d-4f3b-aa5f-834b25c6cec5">
-<span class="eqno">(10.2)<a class="headerlink" href="#equation-cb342f44-b88d-4f3b-aa5f-834b25c6cec5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe933020-2d0f-4964-812c-cd2aad58ba4d">
+<span class="eqno">(10.2)<a class="headerlink" href="#equation-fe933020-2d0f-4964-812c-cd2aad58ba4d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \log_{10}{\frac{\langle L \rangle}{L_\odot}} = 1.15 \log_{10}{P_d} + 2.47.
 \end{align}\]</div>
 <p>The python code below shows a linear fit to visual magnitude <span class="math notranslate nohighlight">\(M_V\)</span> and pulsation periods <span class="math notranslate nohighlight">\(P_d\)</span> from Cepheids in the Large Magellanic Cloud, LMC, (<a class="reference external" href="https://www.aanda.org/articles/aa/pdf/2011/10/aa17154-11.pdf">Strom et al. (2011)</a>).  This fit reasonably matches the coefficients given in Eqn. <a class="reference internal" href="#equation-vis-per-lum-rel">(10.1)</a>.</p>
@@ -613,13 +613,13 @@ document.write(`
 </div>
 </div>
 <p>A problem of measuring stars in the <span class="math notranslate nohighlight">\(V\)</span> band is interstellar extinction and reddening is more signficant.  Astronomers can substantially decrease the scatter in the period-luminosity relation by making observations at <strong>infrared</strong> wavelengths, where interstellar extinction is less of a problem.  A fit of the period-luminosity relation in the infrared <span class="math notranslate nohighlight">\(H\)</span> band is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce83ead5-8830-4f75-a2da-f94262aa6bbe">
-<span class="eqno">(10.3)<a class="headerlink" href="#equation-ce83ead5-8830-4f75-a2da-f94262aa6bbe" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cf4246be-5189-4300-9411-b089eca1f8a5">
+<span class="eqno">(10.3)<a class="headerlink" href="#equation-cf4246be-5189-4300-9411-b089eca1f8a5" title="Permalink to this equation">#</a></span>\[\begin{align}
 H = -3.234 \log_{10}{P_d} + 16.079.
 \end{align}\]</div>
 <p>The scatter can be further reduced by adding a color term to the fit because a star’s color is independent of its distance.  Using the infrared color index <span class="math notranslate nohighlight">\(J-K\)</span>, the fit becomes much tighter.  Note that the <span class="math notranslate nohighlight">\(J\)</span> band is centered on <span class="math notranslate nohighlight">\(1.215\ {\rm \mu m}\)</span>, where the <span class="math notranslate nohighlight">\(K\)</span> band is centered on <span class="math notranslate nohighlight">\(2.157\ {\rm \mu m}\)</span>.  Using the color index, the period-luminosity-color relation is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-03459746-b09d-429b-a95c-f9373cf1e428">
-<span class="eqno">(10.4)<a class="headerlink" href="#equation-03459746-b09d-429b-a95c-f9373cf1e428" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-170b37e9-7402-43ad-9309-ab5a156ac9ec">
+<span class="eqno">(10.4)<a class="headerlink" href="#equation-170b37e9-7402-43ad-9309-ab5a156ac9ec" title="Permalink to this equation">#</a></span>\[\begin{align}
 H = -3.428 \log_{10}{P_d} + 1.54 \langle J-K \rangle + 15.637.
 \end{align}\]</div>
 <p>Classical Cepheids provide astronomy with its third dimension and supply the foundation for the measurement of extragalactic distances.  Cepheids are super giant stars (hence the pulsation), which are about <span class="math notranslate nohighlight">\(50\ R_\odot\)</span> and 1000s of times more luminous, means that they can be seen over intergalactic distances.  They serve as “standard candles,” or beacons scattered through the night sky that serve as guideposts for astronomical surveys of the universe.</p>
@@ -727,8 +727,8 @@ v_s = \sqrt{\frac{\gamma P}{\rho}},
 <div class="math notranslate nohighlight" id="equation-con-dens-hydro">
 <span class="eqno">(10.5)<a class="headerlink" href="#equation-con-dens-hydro" title="Permalink to this equation">#</a></span>\[\frac{dP}{dr} = -\frac{GM_r\rho}{r^2} = -\frac{4\pi}{3}G\rho^2 r.\]</div>
 <p>Using the boundary condition <span class="math notranslate nohighlight">\(P=0\)</span> at the surface, Eqn. <a class="reference internal" href="#equation-con-dens-hydro">(10.5)</a> can be integrated to get the pressure as a function of <span class="math notranslate nohighlight">\(r\)</span>,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b4c3a1b-cd81-4a7c-9ee4-1dbca0c4a823">
-<span class="eqno">(10.6)<a class="headerlink" href="#equation-8b4c3a1b-cd81-4a7c-9ee4-1dbca0c4a823" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1b795700-f6c9-4c93-9325-9ee40fdcd90a">
+<span class="eqno">(10.6)<a class="headerlink" href="#equation-1b795700-f6c9-4c93-9325-9ee40fdcd90a" title="Permalink to this equation">#</a></span>\[\begin{align}
 P(r) = \frac{2\pi}{3} G\rho^2 (R^2-r^2).
 \end{align}\]</div>
 <p>The pulsation period is roughly</p>
@@ -863,7 +863,7 @@ P(r) = \frac{2\pi}{3} G\rho^2 (R^2-r^2).
 <h3><span class="section-number">10.3.2. </span>Linearizing the Hydrodynamic Equaitons<a class="headerlink" href="#linearizing-the-hydrodynamic-equaitons" title="Permalink to this heading">#</a></h3>
 <p>An alternative to the nonlinear approach is to <strong>linearize</strong> the differential equaitons by considering only small-amplitude oscillations.  This is done by writing every variable in the differential equations as an equilibrium value plus a small change due to the pulsation (i.e., a perturbative method).  For example, the pressure <span class="math notranslate nohighlight">\(P\)</span> would be written as <span class="math notranslate nohighlight">\(P = P_o + \delta P\)</span>, where <span class="math notranslate nohighlight">\(P_o\)</span> is the pressure in a mass shell of the equilibrium model, and <span class="math notranslate nohighlight">\(\delta P\)</span> is the small change in pressure that occurs as that mass shell moves in the oscillating model star.</p>
 <p>Note that <span class="math notranslate nohighlight">\(\delta P\)</span> varies in time, while <span class="math notranslate nohighlight">\(P_o\)</span> is a constant.  When the variables written in this manner are inserted into the differential equations, the terms containing only equilibrium quantities cancel, and terms that involve powers greater than second order (i.e., greater than <span class="math notranslate nohighlight">\((\delta P)^2)\)</span> may be discarded because they are negligibly small.  The resulting linearized differential equations and their associated boundary conditions (also linearized) are similar to the equations for a wave on a string or in an organ pipe.</p>
-<p>Only certain standing waves with specific periods are permitted, where the the pulsation modes of the star are clearly identified.  The equations are sufficiently complicated that the motion of the star is forced to be sinusoidal, and the limiting value of the pulsation amplitude cannot be determined.  Modeling the complexities of the full nonlinear behavior of the stellar model is thus sacrificed.</p>
+<p>Only certain standing waves with specific periods are permitted, where the pulsation modes of the star are clearly identified.  The equations are sufficiently complicated that the motion of the star is forced to be sinusoidal, and the limiting value of the pulsation amplitude cannot be determined.  Modeling the complexities of the full nonlinear behavior of the stellar model is thus sacrificed.</p>
 <div class="exercise orange admonition" id="Chapter_14/stellar-pulsation-exercise-0">
 
 <p class="admonition-title"><span class="caption-number">Exercise 10.1 </span></p>
@@ -871,8 +871,8 @@ P(r) = \frac{2\pi}{3} G\rho^2 (R^2-r^2).
 <p><strong>Consider an unrealistic (but very instructive) model of a pulsating star called a <em>one-zone model</em>.  It consists of a central point mass equal to the entire mass of the star <span class="math notranslate nohighlight">\(M\)</span>, surrounded by a single thin, spherical shell of mass <span class="math notranslate nohighlight">\(m\)</span> and radius <span class="math notranslate nohighlight">\(R\)</span> that represents the surface layer of the star.  The interior of the shell is filled with a massless gas of pressure <span class="math notranslate nohighlight">\(P\)</span> whose function is to support the shell against gravity.</strong></p>
 <p><strong>Determine the pulsation period <span class="math notranslate nohighlight">\(\Pi\)</span> using the perturbation approximation.</strong></p>
 <p>First, we apply Newton’s second law for a shell as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b4d51b84-3c40-4da3-b300-f2ff6e566657">
-<span class="eqno">(10.8)<a class="headerlink" href="#equation-b4d51b84-3c40-4da3-b300-f2ff6e566657" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-04fdf2f1-2def-4c0e-b65f-c5c3723536f3">
+<span class="eqno">(10.8)<a class="headerlink" href="#equation-04fdf2f1-2def-4c0e-b65f-c5c3723536f3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \rho \frac{d^2 r}{dt^2} &amp;= -\frac{GM_r \rho}{r^2} - \frac{dP}{dr}, \\
 \frac{m}{V} \frac{d^2 R}{dt^2} &amp;= -\frac{GM}{R^2}\frac{m}{V}  + \frac{P}{R}, \\
 m \frac{d^2 R}{dt^2} &amp;= -\frac{GMm}{R^2}  + PA, \\
@@ -882,14 +882,14 @@ m \frac{d^2 R}{dt^2} &amp;= -\frac{GMm}{R^2}  + 4\pi R^2 P.
 <div class="math notranslate nohighlight" id="equation-equil-model-deriv">
 <span class="eqno">(10.9)<a class="headerlink" href="#equation-equil-model-deriv" title="Permalink to this equation">#</a></span>\[\frac{GMm}{R_o^2}  = 4\pi R_o^2 P_o.\]</div>
 <p>The linearization is accomplished by writing the star’s radius and pressure as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9498f7ee-83c5-4cba-9ad4-9011eef31a70">
-<span class="eqno">(10.10)<a class="headerlink" href="#equation-9498f7ee-83c5-4cba-9ad4-9011eef31a70" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ad297b7f-0db6-447e-889f-00ddfffa72f1">
+<span class="eqno">(10.10)<a class="headerlink" href="#equation-ad297b7f-0db6-447e-889f-00ddfffa72f1" title="Permalink to this equation">#</a></span>\[\begin{align}
 R &amp;= R_o + \delta R, &amp; \text{and} \\
 P &amp;= P_o + \delta P, &amp;
 \end{align}\]</div>
 <p>which we then insert into our result from Newton’s second law.  This gives</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2cf45ad8-c593-4ac8-8d99-fd335d19fe3d">
-<span class="eqno">(10.11)<a class="headerlink" href="#equation-2cf45ad8-c593-4ac8-8d99-fd335d19fe3d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e9458636-00fe-4178-9d8c-8578837838e7">
+<span class="eqno">(10.11)<a class="headerlink" href="#equation-e9458636-00fe-4178-9d8c-8578837838e7" title="Permalink to this equation">#</a></span>\[\begin{align}
 m \frac{d^2}{dt^2}\left[R_o + \delta R\right] &amp;= -\frac{GMm}{\left(R_o + \delta R\right)^2}  + 4\pi \left(R_o + \delta R\right)^2 (P_o + \delta P).
 \end{align}\]</div>
 <p>Using the first-order approximation</p>
@@ -900,8 +900,8 @@ m \frac{d^2}{dt^2}\left[R_o + \delta R\right] &amp;= -\frac{GMm}{\left(R_o + \de
 &amp;\approx \frac{1}{R_o^2}\left(1 - 2\frac{\delta R}{R_o}\right)
 \end{align*}\]</div>
 <p>and keeping only those terms involving the first powers of the deltas results in</p>
-<div class="amsmath math notranslate nohighlight" id="equation-621f092c-e6c3-4e66-9f6f-1c38b96091ed">
-<span class="eqno">(10.12)<a class="headerlink" href="#equation-621f092c-e6c3-4e66-9f6f-1c38b96091ed" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5b87b0ff-ac1c-4d1c-a297-8d8ef78cfc6e">
+<span class="eqno">(10.12)<a class="headerlink" href="#equation-5b87b0ff-ac1c-4d1c-a297-8d8ef78cfc6e" title="Permalink to this equation">#</a></span>\[\begin{align}
 m \frac{d^2 (\delta R)}{dt^2} &amp;= -\frac{GMm}{R_o^2} + 2\frac{GMm}{R_o^3} + 4\pi R_o^2 P_o + 8\pi R_o P_o \delta R + 4\pi R_o^2 \delta P,
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(d^2 R_o/dt^2 = 0\)</span> is used for the equilibrium model.  Also in the equlibrium model (Eq. <a class="reference internal" href="#equation-equil-model-deriv">(10.9)</a>), the first and third terms on the right-hand side cancel, which leaves</p>
@@ -915,13 +915,13 @@ m \frac{d^2 (\delta R)}{dt^2} &amp;= -\frac{GMm}{R_o^2} + 2\frac{GMm}{R_o^3} + 4
 <div class="math notranslate nohighlight" id="equation-linearized-r-eqn">
 <span class="eqno">(10.15)<a class="headerlink" href="#equation-linearized-r-eqn" title="Permalink to this equation">#</a></span>\[\frac{d^2(\delta R)}{dt^2} = -(3\gamma - 4)\frac{GM}{R_o^3}\delta R.\]</div>
 <p>If <span class="math notranslate nohighlight">\(\gamma &gt; 4/3\)</span>, the above relation reduces to the equation for simple harmonic motion, which has a solution <span class="math notranslate nohighlight">\(\delta R = A \sin{(\omega t)}\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> represents the pulsation amplitude and <span class="math notranslate nohighlight">\(\omega\)</span> is the angular pulsation frequency.  Substituting this particular solution into Eqn. <a class="reference internal" href="#equation-linearized-r-eqn">(10.15)</a> results in</p>
-<div class="amsmath math notranslate nohighlight" id="equation-593045d5-8967-490a-917d-bd1dba1852a7">
-<span class="eqno">(10.16)<a class="headerlink" href="#equation-593045d5-8967-490a-917d-bd1dba1852a7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bd09f331-0deb-4492-82cf-f5ce3d661857">
+<span class="eqno">(10.16)<a class="headerlink" href="#equation-bd09f331-0deb-4492-82cf-f5ce3d661857" title="Permalink to this equation">#</a></span>\[\begin{align}
 \omega^2 &amp;= (3\gamma - 4)\frac{GM}{R_o^3}.
 \end{align}\]</div>
 <p>From this, we can determine the pulsation period of the one-zone model as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-281dc11d-b664-41e3-97e3-f917cc8a9e5b">
-<span class="eqno">(10.17)<a class="headerlink" href="#equation-281dc11d-b664-41e3-97e3-f917cc8a9e5b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1250d8f2-5d57-4121-b5e2-09a1b559e71f">
+<span class="eqno">(10.17)<a class="headerlink" href="#equation-1250d8f2-5d57-4121-b5e2-09a1b559e71f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Pi &amp; = 2\pi/\omega, \\
 &amp;= \frac{2\pi}{\sqrt{\frac{4\pi}{3}G\rho_o (3\gamma - 4)}},
 \end{align}\]</div>
@@ -1013,7 +1013,7 @@ Y^{\pm 1}_1(\theta,\phi) &amp;= K^{\pm 1}_1\ \sin{\theta}e^{\pm i\phi}, &amp; Y^
 <p>where the <span class="math notranslate nohighlight">\(K^{\pm m}_\ell\)</span> are normalization constants and <span class="math notranslate nohighlight">\(i\)</span> is the imaginary number.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Recall from Euler’s formula that <span class="math notranslate nohighlight">\(e^{\pm mi\phi} = \cos(m\phi) \pm i\sin{m\phi}\)</span>.  thus the real part of <span class="math notranslate nohighlight">\(e^{\pm mi\phi}\)</span> is just <span class="math notranslate nohighlight">\(\cos(m\phi)\)</span>.</p>
+<p>Recall from Euler’s formula that <span class="math notranslate nohighlight">\(e^{\pm mi\phi} = \cos(m\phi) \pm i\sin{m\phi}\)</span>.  Thus the real part of <span class="math notranslate nohighlight">\(e^{\pm mi\phi}\)</span> is just <span class="math notranslate nohighlight">\(\cos(m\phi)\)</span>.</p>
 </div>
 <p>The patterns for nonzero <span class="math notranslate nohighlight">\(m\)</span> represent <em>traveling</em> waves that move across the star parallel to its equator.  The time required for the waves to travel around the star is <span class="math notranslate nohighlight">\(|m|\)</span> times the star’s pulsation period.</p>
 <p>It is important to note that the star itself may not be rotating at all.  Just as water waves may travel across the surface of a lake without the water itself making the trip, these traveling waves are distrubances that pass through the stellar gases.</p>
@@ -1033,8 +1033,8 @@ Y^{\pm 1}_1(\theta,\phi) &amp;= K^{\pm 1}_1\ \sin{\theta}e^{\pm i\phi}, &amp; Y^
 <section id="the-acoustic-frequency">
 <h3><span class="section-number">10.4.3. </span>The Acoustic frequency<a class="headerlink" href="#the-acoustic-frequency" title="Permalink to this heading">#</a></h3>
 <p>An estimate of the angular frequency of a <span class="math notranslate nohighlight">\(p\)</span>-mode can be made from the time for a sound wave to travel one horizontal wavelenth, from one angular node line to the nest.  This horizontal wavelength is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-855cdcf2-d80e-4e0c-9138-90baaffdb680">
-<span class="eqno">(10.18)<a class="headerlink" href="#equation-855cdcf2-d80e-4e0c-9138-90baaffdb680" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-01d30aa7-bf07-46a2-b274-72eced9f52b8">
+<span class="eqno">(10.18)<a class="headerlink" href="#equation-01d30aa7-bf07-46a2-b274-72eced9f52b8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda_h = \frac{2\pi r}{\sqrt{\ell(\ell +1)}},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(r\)</span> is the radial distance from the center of the star.  The <strong>acoustic frequency</strong> at this depth in the star is then defined as</p>
@@ -1043,8 +1043,8 @@ Y^{\pm 1}_1(\theta,\phi) &amp;= K^{\pm 1}_1\ \sin{\theta}e^{\pm i\phi}, &amp; Y^
 S_\ell = \frac{2\pi}{\text{time for sound to travel }\lambda_h},
 \end{align*}\]</div>
 <p>which can be written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fdd6f3ce-a9c5-43b8-ac03-61f9111bf37a">
-<span class="eqno">(10.19)<a class="headerlink" href="#equation-fdd6f3ce-a9c5-43b8-ac03-61f9111bf37a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fb7b5f8e-98c4-4257-a521-5492589b5c7d">
+<span class="eqno">(10.19)<a class="headerlink" href="#equation-fb7b5f8e-98c4-4257-a521-5492589b5c7d" title="Permalink to this equation">#</a></span>\[\begin{align}
 S_\ell &amp;= 2\pi \left[\frac{v_s}{2\pi r/\sqrt{\ell(\ell+1)}}\right], \\
 &amp;= \sqrt{\frac{\gamma P}{\rho}}\frac{\sqrt{\ell(\ell + 1)}}{r},
 \end{align}\]</div>
@@ -1061,27 +1061,81 @@ S_\ell &amp;= 2\pi \left[\frac{v_s}{2\pi r/\sqrt{\ell(\ell+1)}}\right], \\
 </section>
 <section id="the-brunt-vaisala-buoyancy-frequency">
 <h3><span class="section-number">10.4.5. </span>The Brunt-Väisälä (Buoyancy) Frequency<a class="headerlink" href="#the-brunt-vaisala-buoyancy-frequency" title="Permalink to this heading">#</a></h3>
+<p>To better understand the <span class="math notranslate nohighlight">\(g\)</span>-modes, <strong>consider a small bubble of stellar material that is displaced upward from its equilibrium position by an amount <span class="math notranslate nohighlight">\(dr\)</span>.</strong>  We wll assume that the motion occurs</p>
+<ol class="arabic simple">
+<li><p>slow enough for the pressure in the bubble, <span class="math notranslate nohighlight">\(P^b\)</span>, is always equal to the pressure of its surroundings, <span class="math notranslate nohighlight">\(P^s\)</span>; and</p></li>
+<li><p>rapid enough so that no heat is exchanged between the bubble an dits surroundings (i.e., adiabatic).</p></li>
+</ol>
+<p>If the density of the displaced bubble is greater than the density of its new surroundings, the bubble will fall back to its original position.  The <em>net restoring force per unit volume</em> on the bubble is the difference between the upward buoyant force (i.e., Archimedes’ law) and the downward gravitational force at its <strong>f</strong>inal location:</p>
+<div class="math notranslate nohighlight">
+\[ f_{\rm net} = \left( \rho_f^s - \rho_f^s\right)\ g, \]</div>
+<p>where <span class="math notranslate nohighlight">\(g\)</span> represents the local gravity (<span class="math notranslate nohighlight">\(GM_r/r^2\)</span>).  Using a Taylor expansion for the densitites about their initial positions in</p>
+<div class="math notranslate nohighlight">
+\[f_{\rm net} = \left[\left( \rho_i^s + \frac{d\rho^s}{dr}dr\right) - \left( \rho_i^b + \frac{d\rho^b}{dr}dr\right)\right]\ g. \]</div>
+<p>The initial densities of the bubble and its surroundings are the same (<span class="math notranslate nohighlight">\(\rho_i^s = \rho_i^b\)</span>) and after canceling terms, leaves</p>
+<div class="math notranslate nohighlight">
+\[f_{\rm net} = \left(\frac{d\rho^s}{dr} - \frac{d\rho^b}{dr}\right)\ g\ dr. \]</div>
+<p>Because the motion of the bubble is adiabatic (and considering the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#a-criterion-for-stellar-convection">conditions for convection</a>), the <span class="math notranslate nohighlight">\(d\rho^b/dr\)</span> can be replaced to get</p>
+<div class="math notranslate nohighlight">
+\[ f_{\rm net} = \left(\frac{d\rho^s}{dr} - \frac{\rho^b}{\gamma P_i^b}\frac{dP^b}{dr}\right)\ g\ dr. \]</div>
+<p>Actually, all of the <span class="math notranslate nohighlight">\(b\)</span> superscripts can be changed to <span class="math notranslate nohighlight">\(s\)</span> because the initial densities are equal.  Using our first assumption, the pressures inside <strong>and</strong> outside the bubble are <em>always</em> the same.  Thus all quantities in refer to the stellar material surrounding the bubble, which allows us to drop the subscripts/superscipts and results in</p>
+<div class="math notranslate nohighlight" id="equation-net-bubble-force">
+<span class="eqno">(10.20)<a class="headerlink" href="#equation-net-bubble-force" title="Permalink to this equation">#</a></span>\[\begin{split}f_{\rm net} &amp;= \left(\frac{d\rho}{dr} - \frac{\rho}{\gamma P}\frac{dP}{dr}\right)\ g\ dr\\
+&amp;= A \rho g\ dr.\end{split}\]</div>
+<p>The <span class="math notranslate nohighlight">\(A\)</span> represents the difference in the rate of change for the pressure and density (see Eq. <a class="reference internal" href="../Chapter_11/interiors-of-stars.html#equation-press-sound-speed">(7.57)</a>).</p>
+<p>If <span class="math notranslate nohighlight">\(A&gt;0\)</span>, the net force has the same sign as <span class="math notranslate nohighlight">\(dr\)</span> and the bubble will contiune to move away from its equilibrium position.  This is the condition necessary for <em>convection</em> to occur.</p>
+<p>However, if <span class="math notranslate nohighlight">\(A&lt;0\)</span>, then the net force will be in an opposite direction relative to the displacement and the bubble will be pushed back toward its equilibrium position.  In this case, the result of Eq. <a class="reference internal" href="#equation-net-bubble-force">(10.20)</a> has the form of Hooke’s law with the restoring force proportional to the displacement.  We should expect that the bubble will <em>oscillate</em> about its equilibrium position with simple harmonic motion when <span class="math notranslate nohighlight">\(A&lt;0\)</span>.</p>
+<p>Dividing the force per unit volume <span class="math notranslate nohighlight">\(f_{\rm net}\)</span> by the mass per unit volume <span class="math notranslate nohighlight">\(\rho\)</span>, gives the force per unit mass (or acceleration): <span class="math notranslate nohighlight">\(a = f_{\rm net}/\rho = Ag\ dr\)</span>.  As a result, we have</p>
+<div class="math notranslate nohighlight">
+\[ a = -N^2 dr = Ag\ dr, \]</div>
+<p>where <span class="math notranslate nohighlight">\(N\)</span> represents the angular frequency of the bubble about its equilibrium position and is called the **Brunt-Väisälä frequency$$ or the <strong>bouyant frequency</strong>.  More explicitly,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-78e142e5-55a5-4ee2-aaac-14ea92f9d929">
+<span class="eqno">(10.21)<a class="headerlink" href="#equation-78e142e5-55a5-4ee2-aaac-14ea92f9d929" title="Permalink to this equation">#</a></span>\[\begin{align}
+N &amp;= \sqrt{-Ag}, \\
+&amp;= \sqrt{\frac{\rho}{\gamma P}\frac{dP}{dr} - \left(\frac{d\rho}{dr}\right)\ g}.
+\end{align}\]</div>
+<p>The bouyancy frequency is zero at the stellar center (where <span class="math notranslate nohighlight">\(g=0\)</span>) and at the edges of the convection zones (where <span class="math notranslate nohighlight">\(A=0\)</span>).</p>
 </section>
 <section id="the-g-and-p-modes-as-probes-of-stellar-structure">
 <h3><span class="section-number">10.4.6. </span>The <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(p\)</span> Modes as Probes of Stellar Structure<a class="headerlink" href="#the-g-and-p-modes-as-probes-of-stellar-structure" title="Permalink to this heading">#</a></h3>
+<p>The <em>sloshing</em> effect of neighboring regions of the star produces the internal gravity waves that are responsible fo rthe <span class="math notranslate nohighlight">\(g\)</span>-modes of a nonradially pulsating star.  The frequency of a <span class="math notranslate nohighlight">\(g\)</span>-mode is determined by the value of <span class="math notranslate nohighlight">\(N\)</span> averaged across the star.</p>
+<p><span class="math notranslate nohighlight">\(f\)</span>-modes and <span class="math notranslate nohighlight">\(g\)</span>-modes each produce different profiles for how material moves radially within a star.  This makes them useful to astronomers attempting to study stellar interiors.  The <span class="math notranslate nohighlight">\(g\)</span>-modes involve significant movement of the stellar material deep within the star, while the <span class="math notranslate nohighlight">\(p\)</span>-mode’s motion are confined to the stellar surface.  Thus, <span class="math notranslate nohighlight">\(g\)</span>-modes provide a view into the very heart of a star, while <span class="math notranslate nohighlight">\(p\)</span>-modes present the conditions in the surface layers.</p>
+<figure class="align-default" id="nonradial-gmodes-fig">
+<a class="reference internal image-reference" href="../_images/Figure18.jpg"><img alt="Nonradial g-modes" src="../_images/Figure18.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10.10 </span><span class="caption-text">Nonradial <span class="math notranslate nohighlight">\(g\)</span>-modes with <span class="math notranslate nohighlight">\(\ell = 2\)</span>.  The waveforms have been arbitrarily scales so that <span class="math notranslate nohighlight">\(\delta r/R = 1\)</span> a the star’s surface.   Figure credit: Carroll &amp; Ostlie (2007).</span><a class="headerlink" href="#nonradial-gmodes-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="helioseismology-and-asteroseismology">
 <h2><span class="section-number">10.5. </span>Helioseismology and Asteroseismology<a class="headerlink" href="#helioseismology-and-asteroseismology" title="Permalink to this heading">#</a></h2>
+<p>Nonradial pulsation is a the heart of a science called <a class="reference external" href="https://en.wikipedia.org/wiki/Helioseismology">helioseismology</a>.  A typical solar oscillation mode has a very low amplituded, with a surface velocity of only <span class="math notranslate nohighlight">\(10\ {\rm cm/s}\)</span> or less, and a luminosity variation <span class="math notranslate nohighlight">\(\delta L/L_\odot\)</span> of only <span class="math notranslate nohighlight">\(10^{-6}\)</span>.  With an incoherent superposition of roughly <em>ten million</em> modes rippling through the Sun’s surface and interior, our star is “ringing” like a bell.</p>
 <section id="the-five-minute-solar-oscillations">
 <h3><span class="section-number">10.5.1. </span>The Five-Minute Solar Oscillations<a class="headerlink" href="#the-five-minute-solar-oscillations" title="Permalink to this heading">#</a></h3>
+<p>The oscillations observed on the Sun have modes with periods from <span class="math notranslate nohighlight">\(3-8\)</span> minutes and very short horizontal wavelengths (<span class="math notranslate nohighlight">\(\ell\)</span> ranging up to 1000 or more).  These so-called <em>five-minute oscillations</em> are <span class="math notranslate nohighlight">\(p\)</span>-modes.  The five-minute <span class="math notranslate nohighlight">\(p\)</span>-modes are concentrated below the photosphere within the Sun’s convection zone, where <span class="math notranslate nohighlight">\(g\)</span>-modes are located deep in the solar interior.  By studying these <span class="math notranslate nohighlight">\(p\)</span>-mode oscillations, astronomers have been able to gain new insights in the structure of the Sun in these regions.</p>
 </section>
 <section id="differential-rotation-and-the-solar-convection-zone">
 <h3><span class="section-number">10.5.2. </span>Differential Rotation and the Solar Convection Zone<a class="headerlink" href="#differential-rotation-and-the-solar-convection-zone" title="Permalink to this heading">#</a></h3>
+<p>Based on studies of helioseismology (combined with detailed stellar evolution calculations), we know the base of the solar convection zone lies at <span class="math notranslate nohighlight">\(0.714\ R_\odot\)</span> with a temperature of about <span class="math notranslate nohighlight">\(2.18 \times 10^6\ {\rm K}\)</span>.  The rotational splitting observed for <span class="math notranslate nohighlight">\(p\)</span>-mode frequencies indicates that differential roation observed at the Sun’ surface decreases slightly down through the convection zone.</p>
+<p>Those <span class="math notranslate nohighlight">\(p\)</span>-modes with shorter horizontal wavelengths (larger <span class="math notranslate nohighlight">\(\ell\)</span>) do not penetrate the convection zone as deeply, so the difference in rotational frequency splitting with <span class="math notranslate nohighlight">\(\ell\)</span> reveals the depth dependence of the rotation.  The measured depth dependence of the differential rotation comes from the dependence on the rotational frequency splitting on <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<p>Below the convection zone, the equatorial and polar rotation rates converge to a single value at <span class="math notranslate nohighlight">\(r/R_\odot \approx 0.65\)</span>.  To convert the Sun’s magnetic field from a poloidal to a toroidal geometry a change in the rotation rate with depth is needed.  The Sun’s magnetic dynamo is probably seated in the tachocline at the interface between the radiation and convection zones.</p>
 </section>
 <section id="probing-the-deep-interior">
 <h3><span class="section-number">10.5.3. </span>Probing the Deep Interior<a class="headerlink" href="#probing-the-deep-interior" title="Permalink to this heading">#</a></h3>
+<p>Astronomers had more difficulty using the solar <span class="math notranslate nohighlight">\(g\)</span>-modes as a probe of the Sun’s interior because they dwell beneath the convection zone, where their amplitudes are significantly diminished at the Sun’s surface.  Here is an <a class="reference external" href="https://astrobites.org/2018/02/07/the-deepest-rumblings-of-the-sun/">astrobites</a> article summarizing a recent attempt to measure the <span class="math notranslate nohighlight">\(g\)</span>-modes indirectly.  However, a definitive measurement remains hotly debated.</p>
 </section>
 <section id="driving-solar-oscillations">
 <h3><span class="section-number">10.5.4. </span>Driving Solar Oscillations<a class="headerlink" href="#driving-solar-oscillations" title="Permalink to this heading">#</a></h3>
+<p>The question of the mechanism responsible for driving the solar oscillations has not been conclusevely answered.  Our main-sequence Sun lies beyond the red edge of the instability strip on the H-R diagram.  Therefore, Eddington’s valve mechanism cannot be responsible for the solar oscillations.  However, the timescale for convection near the top of the convection zone is a few minutes, and it is strongly suspected that the <span class="math notranslate nohighlight">\(p\)</span>-modes are driven by tapping in to the turbulent energy of the convection zone itself, where the <span class="math notranslate nohighlight">\(p\)</span>-modes are confined.</p>
 </section>
 <section id="delta-scuti-stars-and-rapidly-oscillating-ap-stars">
 <h3><span class="section-number">10.5.5. </span><span class="math notranslate nohighlight">\(\delta\)</span> Scuti Stars and Rapidly Oscillating Ap Stars<a class="headerlink" href="#delta-scuti-stars-and-rapidly-oscillating-ap-stars" title="Permalink to this heading">#</a></h3>
+<p>The techniques of helioseismology can be applied to other stars to become <a class="reference external" href="https://en.wikipedia.org/wiki/Asteroseismology">asteroseismology</a>, where astronomers study the pulastion modes of other stars in order to investigate their internal structures, chemical compositions, rotation, and magnetic fields.</p>
+<p><span class="math notranslate nohighlight">\(\delta\)</span> Scuti stars are Pop I main-sequence and giant stars within the spectral type range <span class="math notranslate nohighlight">\(\rm A-F\)</span>. They tend to pulsate in low-overtone radial modes and in low-order <span class="math notranslate nohighlight">\(p\)</span>-modes (and possibly <span class="math notranslate nohighlight">\(g\)</span>-modes).  The amplitudes of <span class="math notranslate nohighlight">\(\delta\)</span> Scutis are fairly small, ranging from a few millimagnitudes to roughly 0.8 mag.  Population II subgiants also exhibit radial and nonradial oscillations, which are known as SX Phoenicis stars.</p>
+<p>The <strong>rapidly oscillating Ap stars</strong> (<span class="math notranslate nohighlight">\(\rm roAp\)</span>) are found in the same portion of the H-R diagram as the <span class="math notranslate nohighlight">\(\delta\)</span> Scuti stars.  These stars have peculiar surface chemical compositions (hence the “p” designation), are rotating, and have strong magnetic fields.  The unusual chemical composition is likely du to the settling of heavier elements, similar to the elmenetal diffusion that has occured near the surface of the Sun.</p>
+<p>Some elements may have been eleveated in the atmosphere if they have a significant number of absorption lines near the peak of the star’s blackbody spectrum.  These atoms preferentially absorb photons that impart a net upward momentum.  If the atmosphere is sufficiently stable against turbulent motions, some of these atoms will tend to drift upward.</p>
+<p><span class="math notranslate nohighlight">\(\rm roAp\)</span> stars have very small pulsation amplitutdes of less than 0.016 mag.  It appears that they primarly pulsate in higher-order <span class="math notranslate nohighlight">\(p\)</span>-modes and that the axis for the pulsation is aligned with the magnetic field axis, which is tilted relative to the roation axis.  <span class="math notranslate nohighlight">\(\rm roAp\)</span> star are among the most well-studied of main-sequene stars other than the Sun, but the pulsation driving mechanism still remains in question.</p>
 </section>
 </section>
 <section id="homework">
