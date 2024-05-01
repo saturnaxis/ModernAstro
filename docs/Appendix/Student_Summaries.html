@@ -324,18 +324,50 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<a href="https://github.com/saturnaxis/ModernAstro" target="_blank"
-   class="btn btn-sm btn-source-repository-button"
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/ModernAstro" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
-   data-bs-placement="bottom" data-bs-toggle="tooltip"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-
+<span class="btn__text-container">Repository</span>
 </a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/saturnaxis/ModernAstro/issues/new?title=Issue%20on%20page%20%2FAppendix/Student_Summaries.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
 
 
 
@@ -494,10 +526,35 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-21">Feb 21</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-atmospheres-part-iii">Stellar Atmospheres Part III</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transfer-equation"><strong>5.4 The Transfer Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-emission-coefficient">5.4.1 The Emission Coefficient</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">5.4.2 The Source Function and the Transfer Equation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">5.4.3 The Special Case of Blackbody Radiation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4 The Assumption of a Plane-Parallel Atmosphere</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5 The Eddington Approximation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines"><strong>5.5 The Profiles of Spectral Lines</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-widths">5.5.1 Equivalent Widths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proccess-that-broaden-spectral-lines">5.5.2 Proccess that Broaden Spectral Lines</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-voigt-profile">5.5.3 The Voigt Profile</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curve-of-growth">5.5.4 The Curve of Growth</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-26">Feb 26</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sun-part-i">The Sun Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-evolutionary-history-of-the-sun">6.1.1. The Evolutionary History of the Sun</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-present-day-interior-structure-of-the-sun">6.1.2. The Present-Day Interior Structure of the Sun</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-solar-neutrino-problem-a-detective-story-solved">6.1.3. The Solar Neutrino Problem: A Detective Story Solved</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-solar-atmosphere">6.2. The Solar Atmosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-photosphere">6.2.1. The Photosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solar-granulation-differential-rotation">6.2.1.1. Solar Granulation &amp; Differential Rotation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chromosphere">6.2.2. The Chromosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transition-region">6.2.3. The Transition Region</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-corona">6.2.4. The Corona</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coronal-holes-and-the-solar-wind">6.2.4.1. Coronal Holes and the Solar Wind</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-28">Feb 28</a><ul class="nav section-nav flex-column">
@@ -526,34 +583,41 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-20">Mar 20</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interiors-of-stars-part-iv">The Interiors of Stars Part IV</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Teaching Presentations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-transport-and-thermodynamics">7.4 Energy Transport and Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#three-energy-transport-systems">7.4.1 Three Energy Transport Systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-radiative-temperature-gradient">7.4.2 The Radiative Temperature Gradient</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pressure-scale-height">7.4.3 The Pressure Scale Height</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-25">Mar 25</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-i">The Interstellar Medium and Star Formation Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interiors-of-stars-part-v">The Interiors of Stars Part V</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Teaching Presentations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-27-exam-ii-take-home">Mar 27 (Exam II take-home)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-ii">The Interstellar Medium and Star Formation Part II</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-i">The Interstellar Medium and Star Formation Part I</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-1">Apr 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-i">Main-Sequence and Post-Main-Sequence Stellar Evolution Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-ii">The Interstellar Medium and Star Formation Part II</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-3">Apr 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-ii">Main-Sequence and Post-Main-Sequence Stellar Evolution Part II</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-i">Main-Sequence and Post-Main-Sequence Stellar Evolution Part I</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-8">Apr 8</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-pulsation">Stellar Pulsation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-ii">Main-Sequence and Post-Main-Sequence Stellar Evolution Part II</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-10">Apr 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fate-of-massive-stars-part-i">The Fate of Massive Stars Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-pulsation">Stellar Pulsation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-15">Apr 15</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fate-of-massive-stars-part-ii">The Fate of Massive Stars Part II</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fate-of-massive-stars">The Fate of Massive Stars</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-17">Apr 17</a><ul class="nav section-nav flex-column">
@@ -569,7 +633,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-29">Apr 29</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Review Paper Presentations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Review Paper Presentations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#may-2-final-exam">May 2 (Final Exam)</a><ul class="nav section-nav flex-column">
@@ -812,8 +876,8 @@ using an open-source python package to the instructor and other students.</p></l
 </ul>
 </li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-e259fd9f-636b-477b-9e58-32ffa6738601">
-<span class="eqno">(1)<a class="headerlink" href="#equation-e259fd9f-636b-477b-9e58-32ffa6738601" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2b33e5c8-ca3d-4bf6-bfd6-da2ea2365961">
+<span class="eqno">(1)<a class="headerlink" href="#equation-2b33e5c8-ca3d-4bf6-bfd6-da2ea2365961" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda_{\rm max}T = 2.897744 \times 10^6 \; {\rm nm\;K}.
 \end{align}\]</div>
 <p><strong>1.42 The Stefan-Boltzmann Equation</strong></p>
@@ -831,8 +895,8 @@ using an open-source python package to the instructor and other students.</p></l
 <ul class="simple">
 <li><p>based on Maxwells equations, Rayleigh derived an approximate  for wavlenghts and temperature.</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-a8995f0a-ca2f-4fc6-9367-6e28c93cb555">
-<span class="eqno">(2)<a class="headerlink" href="#equation-a8995f0a-ca2f-4fc6-9367-6e28c93cb555" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c599610c-0be1-481d-8f9d-1b1218739fcb">
+<span class="eqno">(2)<a class="headerlink" href="#equation-c599610c-0be1-481d-8f9d-1b1218739fcb" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx \frac{2ckT}{\lambda^4},
 \end{align}\]</div>
 <ul class="simple">
@@ -843,8 +907,8 @@ B_\lambda(T) \approx \frac{2ckT}{\lambda^4},
 </li>
 <li><p>At the same time, Wien worked on his own approximation</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-5b370a97-36a9-4faa-a9b1-272561a2b8ac">
-<span class="eqno">(3)<a class="headerlink" href="#equation-5b370a97-36a9-4faa-a9b1-272561a2b8ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-221cfad5-ceb2-43b7-9c90-0621168549c0">
+<span class="eqno">(3)<a class="headerlink" href="#equation-221cfad5-ceb2-43b7-9c90-0621168549c0" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda(T) \approx a\lambda^{-5}e^{-\frac{b}{\lambda T}},
 \end{align}\]</div>
 <ul class="simple">
@@ -869,8 +933,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 <ul class="simple">
 <li><p>Brightness measured over all wavelenghts is called <em>bolometric magnitude</em></p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-ae048e32-4a14-41f8-981f-84b2c1bc1108">
-<span class="eqno">(4)<a class="headerlink" href="#equation-ae048e32-4a14-41f8-981f-84b2c1bc1108" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-aca1f382-9868-421d-8e34-10f4d103326a">
+<span class="eqno">(4)<a class="headerlink" href="#equation-aca1f382-9868-421d-8e34-10f4d103326a" title="Permalink to this equation">#</a></span>\[\begin{align}
  M_{bol} = M_{Sun} - 2.5\log_{10}\left(\frac{L}{L_\odot}\right).
 \end{align}\]</div>
 <ul class="simple">
@@ -916,8 +980,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 </li>
 <li><p>Color indices (U-B or B-V) are deteremed though the fulx ratio,</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-b630b33b-edf5-45f3-a6c9-072890e31c22">
-<span class="eqno">(5)<a class="headerlink" href="#equation-b630b33b-edf5-45f3-a6c9-072890e31c22" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4c0bc448-ab94-410b-818d-fbac368ee0c9">
+<span class="eqno">(5)<a class="headerlink" href="#equation-4c0bc448-ab94-410b-818d-fbac368ee0c9" title="Permalink to this equation">#</a></span>\[\begin{align}
  X-Y = m_X - m_Y = -2.5 \log_{10}\left(\frac{\int F_\lambda S_X d\lambda}{\int F_\lambda S_Y d\lambda} \right) + C_{X-Y},
 \end{align}\]</div>
 <p><strong>1.6.3. The Color-Color-Diagram</strong></p>
@@ -963,8 +1027,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 <ul class="simple">
 <li><p>Radial Velovity (<span class="math notranslate nohighlight">\(v_r\)</span>):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-a25f91bf-f849-43f8-a484-9a95b2f411b4">
-<span class="eqno">(6)<a class="headerlink" href="#equation-a25f91bf-f849-43f8-a484-9a95b2f411b4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7d011c69-efad-4a44-8767-a1668604761e">
+<span class="eqno">(6)<a class="headerlink" href="#equation-7d011c69-efad-4a44-8767-a1668604761e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{\lambda_{\rm obs}-\lambda_{\rm rest}}{\lambda_{\rm rest}} = \frac{\Delta \lambda}{\lambda_{\rm rest}}=\frac{v_r}{c}.
 \end{align}\]</div>
 <ul class="simple">
@@ -984,8 +1048,8 @@ $<span class="math notranslate nohighlight">\(L_\lambda d\lambda = \int \int \in
 <li><p><strong>d</strong> is the slit spacing of the grating, <strong>n</strong> is the order of the spectrum and <strong>𝛳</strong> is measured relative the line perpendicular to the grating.</p></li>
 <li><p>The smallest measurable difference in wavelength (<span class="math notranslate nohighlight">\(\Delta \lambda\)</span>)depends on the order and the total number of lines (N), through:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-e36f4af3-391d-47a9-a0c9-558e136483b7">
-<span class="eqno">(7)<a class="headerlink" href="#equation-e36f4af3-391d-47a9-a0c9-558e136483b7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-70887ddf-8bdb-4091-bb66-0eb5cc215d3d">
+<span class="eqno">(7)<a class="headerlink" href="#equation-70887ddf-8bdb-4091-bb66-0eb5cc215d3d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \lambda = \frac{\lambda}{nN},
 \end{align}\]</div>
 <ul class="simple">
@@ -1008,8 +1072,8 @@ E_{\rm photon} = h\nu = \frac{hc}{\lambda}.
 \end{align}</p></li>
 <li><p>Maximum kinetic energy of the ejected electrons:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-e3adf1ff-9bce-438b-bee8-1103f24d8305">
-<span class="eqno">(8)<a class="headerlink" href="#equation-e3adf1ff-9bce-438b-bee8-1103f24d8305" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f015bfeb-2dd0-46ea-b9c2-76bee37ad56e">
+<span class="eqno">(8)<a class="headerlink" href="#equation-f015bfeb-2dd0-46ea-b9c2-76bee37ad56e" title="Permalink to this equation">#</a></span>\[\begin{align}
 K_{\rm max} = E_{\rm photon} - \phi = h\nu - \phi,
 \end{align}\]</div>
 <p><strong>2.2.2 The Compton Effect</strong></p>
@@ -1018,8 +1082,8 @@ K_{\rm max} = E_{\rm photon} - \phi = h\nu - \phi,
 <li><p>The energy of a photon is related to its momentum (p)
 by:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-806a2e4a-679e-4889-bf5f-14ab69489b23">
-<span class="eqno">(9)<a class="headerlink" href="#equation-806a2e4a-679e-4889-bf5f-14ab69489b23" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-52511d17-bda5-4799-a622-04a24da5c29c">
+<span class="eqno">(9)<a class="headerlink" href="#equation-52511d17-bda5-4799-a622-04a24da5c29c" title="Permalink to this equation">#</a></span>\[\begin{align}
 E_{\rm photon} = h\nu = pc.
 \end{align}\]</div>
 <ul class="simple">
@@ -1027,8 +1091,8 @@ E_{\rm photon} = h\nu = pc.
 <li><p>The photon’s energy is reduced and the wavelength is increased due to the energy exchange.</p></li>
 <li><p>The change in wavelength is the difference between the final and initial wavelength and can be expressed as:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-4b10ff46-146a-44a2-9d29-71d02ad80a1d">
-<span class="eqno">(10)<a class="headerlink" href="#equation-4b10ff46-146a-44a2-9d29-71d02ad80a1d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7760b702-9ab3-4211-b8c8-8ed491a10784">
+<span class="eqno">(10)<a class="headerlink" href="#equation-7760b702-9ab3-4211-b8c8-8ed491a10784" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \lambda =\lambda_f - \lambda_i = \frac{h}{m_e c}(1-\cos \theta),
 \end{align}\]</div>
 <ul class="simple">
@@ -1384,6 +1448,157 @@ E_{\rm photon} = h\nu = pc.
 <h2>Feb 19<a class="headerlink" href="#feb-19" title="Permalink to this heading">#</a></h2>
 <section id="stellar-atmospheres-part-ii">
 <h3>Stellar Atmospheres Part II<a class="headerlink" href="#stellar-atmospheres-part-ii" title="Permalink to this heading">#</a></h3>
+<p><strong>5.2.2. The Definition of Opacity</strong></p>
+<ul class="simple">
+<li><p>Any process that removes photons from a beam of light is collectively termed <strong>absorption</strong>, which includes the <em>scattering</em> of photons (i.e., Compton scattering)</p></li>
+<li><p><strong>Opacity Equation:</strong> Describes the change in intensity I of light through a gas, dependent on intensity  <span class="math notranslate nohighlight">\(I_0\)</span> , distance traveled  d , and gas density <span class="math notranslate nohighlight">\( \rho \)</span>.</p></li>
+<li><p><strong>Absorption Coefficient κ</strong>: Determines opacity, measured in area per unit mass  <span class="math notranslate nohighlight">\(\text{m}^2/\text{kg} \)</span>, influenced by gas composition, density, and temperature.</p></li>
+<li><p><strong>Characteristic Length ℓ</strong>: Describes how far a photon travels before intensity declines, calculated using the opacity and gas density.</p></li>
+<li><p>The change in intensity <span class="math notranslate nohighlight">\(dI_\lambda\)</span> of a photon as it travels through a gas is proportional to its intensity <span class="math notranslate nohighlight">\(I_\lambda\)</span>, the distance traveled <span class="math notranslate nohighlight">\(ds\)</span>, and the density of the gas <span class="math notranslate nohighlight">\(\rho\)</span> through the relation,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dI_\lambda}{I_\lambda} = -\kappa_\lambda \rho  ds.\]</div>
+<p>The quantity <span class="math notranslate nohighlight">\(\kappa_\lambda\)</span> is called the wavelength-dependent <strong>absorption coefficient</strong> (or <strong>opacity</strong>).</p>
+<p><strong>5.2.3. Optical Depth</strong></p>
+<ul class="simple">
+<li><p><strong>Relation to Intensity</strong>: Optical depth affects intensity decline exponentially as light travels through a medium.</p></li>
+<li><p><strong>Optical Depth Variations</strong>: Dependent on material’s properties, density, and wavelength.</p></li>
+<li><p><strong>Implications</strong>: Optical depth impacts radiative flux through a medium.</p></li>
+<li><p><strong>Mean Free Path</strong> : Distance a photon travels before scattering, dependent on wavelength.</p></li>
+<li><p>The mean free path is dependent on the photon wavelength <span class="math notranslate nohighlight">\(\lambda\)</span>.
+It is convenient to define an <strong>optical depth</strong> <span class="math notranslate nohighlight">\(\tau_\lambda\)</span> as</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-fb32c8fe-f9ef-4964-819f-762b30606dca">
+<span class="eqno">(11)<a class="headerlink" href="#equation-fb32c8fe-f9ef-4964-819f-762b30606dca" title="Permalink to this equation">#</a></span>\[\begin{align} d\tau_\lambda = -\kappa_\lambda \rho ds, \end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(s\)</span> is the distance measured along the photon’s direction of motion (i.e., looking back along the path traveled by the photon).</p>
+<ul class="simple">
+<li><p>The difference in optical depth <span class="math notranslate nohighlight">\(\Delta \tau_\lambda\)</span> can be determined as the difference between the final (<span class="math notranslate nohighlight">\(\tau_{\lambda,f}\)</span>) and initial (<span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span>) optical depths, or the integral along the photon’s path as</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\Delta \tau_\lambda = \tau_{\lambda,f} - \tau_{\lambda,o} = -\int_0^s \kappa_\lambda \rho ds.\]</div>
+<ul class="simple">
+<li><p>The optical depth can be related to the intensity where there is a decline in the intensity given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ I_\lambda = I_{\lambda,o} e^{-\tau_\lambda}.\]</div>
+<ul class="simple">
+<li><p>The maximum optical depth is typically <span class="math notranslate nohighlight">\(\tau_\lambda \approx 1\)</span>, where deeper layers are completely obscured.  In some situations, setting <span class="math notranslate nohighlight">\(\tau_\lambda = 0\)</span> occurs inside the star instead of at the surface.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(\tau_\lambda \gg 1\)</span>, then the gas is <em>optically thick</em>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\tau_\lambda \ll 1\)</span>, then the gas is <em>optically thin</em>.</p></li>
+</ul>
+</li>
+<li><p>The intensity of the light before entering the atmosphere is <span class="math notranslate nohighlight">\(I_{\lambda,o}\)</span> and <span class="math notranslate nohighlight">\(I_\lambda\)</span> once it reaches the telescope.The light enters the atmosphere at some angle <span class="math notranslate nohighlight">\(\theta\)</span>, where <span class="math notranslate nohighlight">\(ds = -dz/\cos \theta = -\sec \theta dz\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \tau_\lambda = \int_0^s \kappa_\lambda \rho ds = \sec \theta \int_0^h \kappa_\lambda \rho dz = \tau_{\lambda,o} \sec \theta, \]</div>
+<p>where <span class="math notranslate nohighlight">\(\tau_{\lambda,o}\)</span> refers to the optical depth of a vertically traveling photon ($\theta = 0).  The intensity of the light at the telescope is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b6d99d84-aa01-4b20-ae78-df13be6b1f2f">
+<span class="eqno">(12)<a class="headerlink" href="#equation-b6d99d84-aa01-4b20-ae78-df13be6b1f2f" title="Permalink to this equation">#</a></span>\[\begin{align}
+I_\lambda = I_{\lambda,o}e^{-\tau_{\lambda,o}\sec \theta}.
+\end{align}\]</div>
+<p><strong>5.2.4. General Sources of Opacity</strong></p>
+<ul>
+<li><p><strong>Opacity Sources</strong>: Absorption and scattering processes remove photons, contributing to opacity.</p></li>
+<li><p><strong>Primary Sources</strong>: Bound-bound transitions, bound-free absorption, free-free absorption, and electron scattering.</p></li>
+<li><p><strong>Influence</strong>: Opacity depends on chemical composition and particle interactions.</p></li>
+<li><p><strong>Gaunt Factors</strong>: Quantum-mechanical corrections influencing opacity.</p></li>
+<li><p><strong>Kramers Opacity Law</strong>: Empirical model describing opacity’s temperature and density dependence.</p></li>
+<li><p>The opacity of a material depends on the chemical composition and how photons interact with the particles (atoms, ions, and free electrons) within the material.</p></li>
+<li><p>If a photon passes within <span class="math notranslate nohighlight">\(\sigma_\lambda\)</span> (i.e., the particles’s cross-sectional area) of the particle, then the phone can be either: scattered or absorbed.</p>
+<ul class="simple">
+<li><p>In an absorption process, the photon ceases to exist and its energy is incorporated into the thermal energy of the gas.</p></li>
+<li><p>In a scattering process, the photon just continues along in a different direction.</p></li>
+</ul>
+</li>
+<li><p>There are four primary sources of opacity available for removing photons from our observations of a star.</p>
+<ul>
+<li><p><strong>Bound-bound transitions</strong> are electron transitions from one orbital to another (i.e., excitation and de-excitation).</p></li>
+<li><p><strong>Bound-free absorption</strong>, or <em>photoionization</em>, occurs when an incoming photon has enough energy to free, or ionize, an atom.</p></li>
+<li><p><strong>Free-free absorption</strong> is a scattering process that occurs when the speed of a free electron increases (or decreases) after a nearby ion absorbs (or emits) a photon, respectively.</p></li>
+<li><p><strong>Electron scattering</strong> is as you would expect where a photon is scatter (<em>not absorbed</em>) by a free electron through the process of <a class="reference external" href="https://en.wikipedia.org/wiki/Thomson_scattering">Thomson scattering</a>.</p>
+<ul>
+<li><p>The cross section for Thomson scattering <span class="math notranslate nohighlight">\(\sigma_T\)</span> has the same value (independent of wavelength)</p></li>
+<li><div class="math notranslate nohighlight">
+\[ \sigma_T = \frac{1}{6\pi\epsilon_o^2}\left( \frac{e^2}{m_e c^2}\right) = 6.65 \times 10^{-29}\:{\rm m^2}.\]</div>
+</li>
+<li><p>A photon can also be scattered by loosely bound electrons.  <em>Compton scattering</em> occurs when the photon’s wavelength is much smaller than the atom or <em>Rayleigh scattering</em> if the wavelength is much larger.</p></li>
+<li><p>The opacity of stellar material suddenly increases at wavelengths <span class="math notranslate nohighlight">\(\lambda \leq 364.7\:{\rm nm}\)</span> and the measured radiative flux of the star suddenly decreases.  This abrupt drop in the continuous spectrum is the <strong>Balmer jump</strong> and is evident in the Sun’s spectrum.</p></li>
+</ul>
+</li>
+<li><p><strong><span class="math notranslate nohighlight">\(H^-\)</span> ion photoionization</strong> occurs in the atmospheres of stars later than F0 and is the primary source of continuum opacity, <span class="math notranslate nohighlight">\(\kappa_{H^-}\)</span>. At longer wavelengths <span class="math notranslate nohighlight">\(H^-\)</span> contributes to opacity through free-free absorption (i.e., more free electrons become available through photoionization).</p></li>
+</ul>
+</li>
+<li><p>Rayleigh scattering is important in planetary atmospheres and is responsible for Earth’s blue sky.</p></li>
+</ul>
+<p><strong>5.2.5. The Rosseland Mean opacity</strong></p>
+<ul class="simple">
+<li><p><strong>Mean Opacity Definition</strong>: Averaged opacity over all wavelengths, reflecting composition and density.</p></li>
+<li><p><strong>Rosseland Mean</strong>: Weighted average opacity considering blackbody spectrum variation with temperature.</p></li>
+<li><p><strong>Dependence on Parameters</strong>: Density, temperature, and composition influence mean opacity.</p></li>
+<li><p><strong>Quantum Effects</strong>: Gaunt factors and guillotine factor contribute to opacity calculations.</p></li>
+<li><p>The most commonly used scheme to compute a wavelength-independent opacity is the Rosseland mean opacity or the <strong>Rosseland mean</strong>.  The Rosseland mean incorporates a weighting function that depends on how fast the blackbody spectrum varies with temperature, which is defined as</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-e4910c20-1920-4a38-934b-2c3f2e35938d">
+<span class="eqno">(13)<a class="headerlink" href="#equation-e4910c20-1920-4a38-934b-2c3f2e35938d" title="Permalink to this equation">#</a></span>\[\begin{align} \frac{1}{\bar{\kappa}} \equiv \frac{\int_0^\infty \frac{1}{\kappa_\lambda}\frac{\partial B_\lambda(T)}{\partial T} d\lambda}{\int_0^\infty \frac{\partial B_\lambda(T)}{\partial T} d\lambda}.
+\end{align}\]</div>
+<ul class="simple">
+<li><p>Approximation formulae have been developed for the average bound-free and free-free opacities:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\bar{\kappa}_{bf} = 4.34 \times 10^{21} \frac{g_{bf}}{t}Z(1+X)\frac{\rho}{T^{3.5}} \: {\rm m^2/kg}\]</div>
+<div class="math notranslate nohighlight">
+\[\bar{\kappa}_{ff} = 3.68 \times 10^{18}\:g_{ff}(1-Z)(1+X)\frac{\rho}{T^{3.5}} \: {\rm m^2/kg},\]</div>
+<p>which depends on the density <span class="math notranslate nohighlight">\(\rho\)</span>, temperature <span class="math notranslate nohighlight">\(T\)</span>, the hydrogen <strong>mass fraction</strong> <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<ul class="simple">
+<li><p>The mass fractions are formally defined as</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[X \equiv \frac{\rm total\: mass\:of\:hydrogen}{\rm total\: mass\:of\:gas} \]</div>
+<div class="math notranslate nohighlight">
+\[Y \equiv \frac{\rm total\: mass\:of\:helium}{\rm total\: mass\:of\:gas} \]</div>
+<div class="math notranslate nohighlight">
+\[Z \equiv \frac{\rm total\: mass\:of\:metals}{\rm total\: mass\:of\:gas} \]</div>
+<p>such that <span class="math notranslate nohighlight">\(X+Y+Z = 1\)</span>.</p>
+<p><strong>5.3 Radiative Transfer</strong></p>
+<ul class="simple">
+<li><p><strong>Equilibrium Conditions</strong>: Stellar atmospheres maintain balance in energy absorption and emission.</p></li>
+<li><p><strong>Emission Processes</strong>: Includes scattering and true emission through electron transitions.</p></li>
+<li><p><strong>Effect on Photon Flow</strong>: Absorption and emission processes hinder photon flow, leading to randomized paths.</p></li>
+<li><p>Describes stellar atmospheres are in equilibrium or a steady state. This means that the mechanisms involved in absorbing and emitting energy must be in balance throughout the star so that no change in total energy occurs within any layer of the interior.</p></li>
+</ul>
+<p><strong>5.3.1. Photon Emission Processes</strong></p>
+<ul class="simple">
+<li><p><strong>Emission</strong> is defined as any process that adds photons to a beam of light, which includes the scattering photons into the beam and the true emission of photons through electron transitions.</p></li>
+</ul>
+<p><strong>5.3.2. The Randowm Walk</strong></p>
+<ul class="simple">
+<li><p>As the photons move through the stellar material, they follow a <strong>random walk</strong> (i.e., a haphazard path).  Between each atomic encounter, the photon travels a path <span class="math notranslate nohighlight">\({\bf \ell}\)</span> (the mean free path), which can be summed over a large number <span class="math notranslate nohighlight">\(N\)</span> directed steps to produce a net vector displacement <strong>d</strong>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ {\bf d} = {\bf \ell}_1 + {\bf \ell}_2 + \cdots + {\bf \ell}_N = \sum_{i=1}^N {\bf \ell}_i. \]</div>
+<ul class="simple">
+<li><p>Through a random walk, the transport of energy through a star by radiation alone can be extremely inefficient. The optical depth is roughly the number of mean free paths <span class="math notranslate nohighlight">\(\ell\)</span> that a photon must travel to get to the surface, which implies that <span class="math notranslate nohighlight">\(d = \tau_\lambda \ell = \ell\sqrt{N}\)</span>.  The average number of steps needed to travel to a distance <span class="math notranslate nohighlight">\(d\)</span> is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[N = \tau_\lambda^2,\]</div>
+<ul class="simple">
+<li><p>for <span class="math notranslate nohighlight">\(\tau_\lambda \gg 1\)</span>. When <span class="math notranslate nohighlight">\(\tau_\lambda \approx 1\)</span>, a photon can potentially escape from that depth, but a more carful analysis shows the average depth of the atmosphere from which photons can escape is <span class="math notranslate nohighlight">\(\tau_\lambda = 2/3\)</span>.</p></li>
+</ul>
+<p><strong>5.3.3. Limb Darkening</strong></p>
+<ul class="simple">
+<li><p>An observer looking at the Sun’s disk sees the brightest (hottest) portion near the center due to optical depth (<span class="math notranslate nohighlight">\(\tau_\lambda = 2/3\)</span>), observations near the edge (or <em>limb</em>) of the Sun appear darker (cooler). At the limb, the penetration depth only reaches the uppermost (cooler) layers of the atmosphere and we will see a lower temperature compared to the center of the disk.  This effect is called <strong>limb darkening</strong>, where astronomers have to account for it in transit photometry</p></li>
+</ul>
+<p><strong>5.3.4. The Radiation Pressure Gradient</strong></p>
+<ul class="simple">
+<li><p>In addition to the photon’s journey, there is a pressure that build’s within the Sun’s atmosphere due to collisions. The pressure outside is lower than the pressure inside the room, which can be expressed as a pressure differential using Bernoulli’s principle.</p></li>
+<li><p>The extent of the difference is not uniform, where the pressure decreases with stellar radius (i.e., as you get closer to the surface).  But it is enough to create a light movement of photons toward the surface that described by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dP_{\rm rad}}{dr} = -\frac{\bar{\kappa}\rho}{c}F_{\rm rad}. \]</div>
+<ul class="simple">
+<li><p>The transfer of radiation as a flow with photons drifting toward the surface is a better description than a “beam” that propagate radially outward.</p></li>
+</ul>
 </section>
 </section>
 <section id="feb-21">
@@ -1391,11 +1606,197 @@ E_{\rm photon} = h\nu = pc.
 <section id="stellar-atmospheres-part-iii">
 <h3>Stellar Atmospheres Part III<a class="headerlink" href="#stellar-atmospheres-part-iii" title="Permalink to this heading">#</a></h3>
 </section>
+<section id="the-transfer-equation">
+<h3><strong>5.4 The Transfer Equation</strong><a class="headerlink" href="#the-transfer-equation" title="Permalink to this heading">#</a></h3>
+<section id="the-emission-coefficient">
+<h4>5.4.1 The Emission Coefficient<a class="headerlink" href="#the-emission-coefficient" title="Permalink to this heading">#</a></h4>
+<p>Interested in the net flow of energy, not the specific path. The intensity can be increased through emission. This change is <span class="math notranslate nohighlight">\( dI_{\lambda} \)</span> is proprtional to the the distance <span class="math notranslate nohighlight">\( ds \)</span> and the density of the gas <span class="math notranslate nohighlight">\( \rho \)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ dI_{\lambda} = j_{\lambda} \rho ds ,\]</div>
+<p>here, <span class="math notranslate nohighlight">\( j_{\lambda} \)</span> is the <strong>emission coefficient</strong>.</p>
+<p>The specific intensity <span class="math notranslate nohighlight">\( I_{\lambda} \)</span>, changes as the photons are added. Combining the equations of absoption and emission gives the general result;</p>
+<div class="math notranslate nohighlight">
+\[ d_{\lambda} = -\kappa_{\lambda} \rho I_{\lambda} ds + j_{\lambda} \rho ds \]</div>
+</section>
+<section id="the-source-function-and-the-transfer-equation">
+<h4>5.4.2 The Source Function and the Transfer Equation<a class="headerlink" href="#the-source-function-and-the-transfer-equation" title="Permalink to this heading">#</a></h4>
+<p>To determine the ratio of emission to absorption ( <span class="math notranslate nohighlight">\( j_{\lambda} / \kappa_{\lambda} \)</span> ), we cal this the <strong>source function</strong> <span class="math notranslate nohighlight">\( S_{\lambda} \)</span> and looks like;</p>
+<div class="math notranslate nohighlight">
+\[ -\frac{1}{\kappa_{\lambda} \rho} \frac{dI_{\lambda}}{ds} = I_{\lambda} - \frac{j_{\lambda}}{\kappa_{\lambda}} = I_{\lambda} - S_{\lambda} \]</div>
+<p>If <span class="math notranslate nohighlight">\( I_{\lambda} &gt; S_{\lambda} \)</span> then the intensity decreases with distance. If <span class="math notranslate nohighlight">\( I_{\lambda} &lt; S_{\lambda} \)</span>, then the intensity increases with distance.</p>
+</section>
+<section id="the-special-case-of-blackbody-radiation">
+<h4>5.4.3 The Special Case of Blackbody Radiation<a class="headerlink" href="#the-special-case-of-blackbody-radiation" title="Permalink to this heading">#</a></h4>
+<p>For a blackbody, the intensity is equal to the Planck function ( <span class="math notranslate nohighlight">\( I_{\lambda} = B_{\lambda} = S_{\lambda} \)</span> ) [for something in thermodynamic equalibrium which stars are not in!]</p>
+<p><strong>Applying the transfer equation</strong></p>
+<div class="math notranslate nohighlight">
+\[ I_{\lambda}(s) = I_{\lambda,o} e^{-\kappa_{\lambda} \rho ds} + S_{\lambda} ( 1 - e^{-\kappa_{\lambda} \rho ds} ) \]</div>
+</section>
+<section id="the-assumption-of-a-plane-parallel-atmosphere">
+<h4>5.4.4 The Assumption of a Plane-Parallel Atmosphere<a class="headerlink" href="#the-assumption-of-a-plane-parallel-atmosphere" title="Permalink to this heading">#</a></h4>
+<p>Rewrite the transfer equation as a function of optical depth;</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dI_{\lambda}}{d\tau_{\lambda}} = I_{\lambda} - S_{\lambda} \]</div>
+<p>Because the atmosphere is not a plane (it curves) we assume a plane-parallel slab of the atmosphere and get the equation for vertical optical depth;</p>
+<div class="math notranslate nohighlight">
+\[ \tau_{\lambda,v}(z) = \int_z^0 \kappa_{\lambda} \rho dz \]</div>
+<p>A gray atmosphere is an atmosphere that has little to no wavelength dependence. The transfer equation for a gray atmosphere is;</p>
+<div class="math notranslate nohighlight">
+\[ cos(\theta) \frac{dI}{d\tau_{\lambda}} = I - S \]</div>
+</section>
+<section id="the-eddington-approximation">
+<h4>5.4.5 The Eddington Approximation<a class="headerlink" href="#the-eddington-approximation" title="Permalink to this heading">#</a></h4>
+<p>When looking at a star, we see down to a vertical optical depth of , averaged over the disk of the star.</p>
+</section>
+</section>
+<section id="the-profiles-of-spectral-lines">
+<h3><strong>5.5 The Profiles of Spectral Lines</strong><a class="headerlink" href="#the-profiles-of-spectral-lines" title="Permalink to this heading">#</a></h3>
+<section id="equivalent-widths">
+<h4>5.5.1 Equivalent Widths<a class="headerlink" href="#equivalent-widths" title="Permalink to this heading">#</a></h4>
+<p>Absorption spectral lines are identified on graphs of the radiant flux <span class="math notranslate nohighlight">\( F_{\lambda} \)</span> as a function of the wavelength <span class="math notranslate nohighlight">\( \lambda \)</span>.</p>
+<p><strong>Full width half maximum</strong> (think inverse bell curve and take the half of the lowest point on either side and make a rectangle to connect these two with the max point of the inverse bell curve.)</p>
+</section>
+<section id="proccess-that-broaden-spectral-lines">
+<h4>5.5.2 Proccess that Broaden Spectral Lines<a class="headerlink" href="#proccess-that-broaden-spectral-lines" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Natural Broadening: the spectral lines cannot be sharp even for motionless, isolated atoms due to Heisenberg’s uncertainty principle.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda = \frac{\lambda^2}{2 \pi c}  \left( \frac{1}{\Delta t_0} + \frac{1}{\Delta t_f} \right), \]</div>
+<p>where <span class="math notranslate nohighlight">\( \Delta t_0 \text{ and } \Delta t_f \)</span> is the lifetime of the electron in the initial state and final state respectively.</p>
+<ol class="arabic simple" start="2">
+<li><p>Doppler Broadening: The wavelengths of the absorbed or emitted light are Doppler-shifted nonrelativistically according to <span class="math notranslate nohighlight">\( \Delta \lambda / \lambda = +- | v_r | / c \)</span>. The width of a Doppler broadened spectral line should be;</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda = \frac{2 \lambda}{c} \sqrt{\frac{2 k T}{m}} \]</div>
+<ol class="arabic simple" start="3">
+<li><p>Pressure (and Collisional) Broadening: the atomic orbitals are perturbed by a collision with a neutral atom or a close encounter with the electric field of an ion. Statistical is pressure, individual collisions is collisional. To determin collisional pressue, we need to determine the average time between collisions <span class="math notranslate nohighlight">\( \Delta t_0 \)</span>, and the mean free path <span class="math notranslate nohighlight">\( \ell \)</span>. These are related through the following equation;</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \Delta t_0 = \frac{\ell}{v} = \frac{1}{n \sigma} \sqrt{\frac{m}{2 k T}}, \]</div>
+<p>where <span class="math notranslate nohighlight">\( m \)</span> is the atom mass, <span class="math notranslate nohighlight">\( \sigma \)</span> is the collisional cross-section, and <span class="math notranslate nohighlight">\( n \)</span> is the number of atoms. From the collisional pressure, we can determine the spectral line width broadening to be;</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \lambda = \frac{\lambda}{\pi c \Delta t_0} \approx \frac{\lambda^2 n \sigma}{\pi c} \sqrt{\frac{2 k T}{m}}. \]</div>
+<p>Spectral line width is proportional to <span class="math notranslate nohighlight">\( n \)</span>.</p>
+</section>
+<section id="the-voigt-profile">
+<h4>5.5.3 The Voigt Profile<a class="headerlink" href="#the-voigt-profile" title="Permalink to this heading">#</a></h4>
+<p>The total line profile is called the <strong>Voigt profile</strong> and is due to the contributions of the Doppler and the damping things. Doppler contributes more for the center wavelengths whereas the damping profile is more towards the wings of the curve.</p>
+<p>The goal is to determine <span class="math notranslate nohighlight">\( N_0 \)</span>, which is the coloumn density.</p>
+</section>
+<section id="the-curve-of-growth">
+<h4>5.5.4 The Curve of Growth<a class="headerlink" href="#the-curve-of-growth" title="Permalink to this heading">#</a></h4>
+<p>Helps determine the value of <span class="math notranslate nohighlight">\( N_a \)</span> (the number of atoms that have electrons in the proper orbital for absorbtion) and the abundance of elements in stellar atmospheres. The width <strong>W</strong> varies with <span class="math notranslate nohighlight">\( N_a \)</span> and therefore a log curve can be used to estimate the change in both quantities. Using the curve of growth, and a determined width, we can determine the number of absorbing atoms.</p>
+</section>
+</section>
 </section>
 <section id="feb-26">
 <h2>Feb 26<a class="headerlink" href="#feb-26" title="Permalink to this heading">#</a></h2>
 <section id="the-sun-part-i">
 <h3>The Sun Part I<a class="headerlink" href="#the-sun-part-i" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-evolutionary-history-of-the-sun">
+<h3>6.1.1. The Evolutionary History of the Sun<a class="headerlink" href="#the-evolutionary-history-of-the-sun" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Our Sun is classified as a typical main-sequence star of spectral class G2, which contains mostly hydrogen <span class="math notranslate nohighlight">\((X=0.74)\)</span>, some helium <span class="math notranslate nohighlight">\((Y=0.24)\)</span>, and a little metal <span class="math notranslate nohighlight">\((Z=0.02)\)</span> by mass.</p></li>
+<li><p>Since becoming a main-sequence star, the Sun’s luminosity has increased by nearly 48% and its radius has increased by 15%, which lead to an increase a 2.7% increase in its effective temperature.</p></li>
+</ul>
+</section>
+<section id="the-present-day-interior-structure-of-the-sun">
+<h3>6.1.2. The Present-Day Interior Structure of the Sun<a class="headerlink" href="#the-present-day-interior-structure-of-the-sun" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Using the current age of the Sun, a solar model must reproduce the current values of the central temperature, pressure, density, and composition.</p></li>
+<li><p>solar model: A mathematical treatment of the Sun as a spherical ball of gas. This model is used to predict the internal observables like neutrino fluxes and oscillation frequencies and consequently to validate its assumptions for its generalization to other stars</p></li>
+<li><p>nucleosynthesis: Is the creation of new atomic nuclei, the centers of atoms that are made up of protons and neutrons</p></li>
+<li><p>The Sun’s primary energy production comes from the proton-proton (pp) chain, where, or tritium is an intermediate species in the reaction sequence.</p></li>
+<li><p>Tritium is relatively more abundant at the top of the hydrogen-burning region where the temperature is lower.  At greater depths, the higher temperatures the destroy the tritium more often than it is created, resulting in a overall decrease in abundance.</p></li>
+<li><p>Mass conservation equation:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dM_r}{dr}=4\pi r^2 \rho →dM_r=4\pi r^2 \rho \space dr=\rho \space dV,\]</div>
+<p>which indicates how the mass within a certain radius interval increases because the volume of a spherical shell increases with a fixed choice of <span class="math notranslate nohighlight">\(dr\)</span>.</p>
+</li>
+<li><p>The energy generated in the interior has to be transported outwards, where a criterion for the onset of convection is that the temperature gradient becomes superadiabatic,</p>
+<div class="math notranslate nohighlight">
+\[\left|\frac{dT}{dr}\right|_{\text{actual}}&gt; \left|\frac{dT}{dr}\right|_{\text{adiabatic}}\]</div>
+<p>where actual and adiabatic refer to the temperature gradients. For an ideal monatomic gas, this conditions becomes, $<span class="math notranslate nohighlight">\(\frac{d \ln P}{d \ln T}&lt; 2.5\)</span>$</p>
+</li>
+</ul>
+</section>
+<section id="the-solar-neutrino-problem-a-detective-story-solved">
+<h3>6.1.3. The Solar Neutrino Problem: A Detective Story Solved<a class="headerlink" href="#the-solar-neutrino-problem-a-detective-story-solved" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Neutrino flux: A measurement of the intensity of such a neutrino stream.</p></li>
+<li><p>The neutrino has a very low cross section for interaction with other matter, which makes it difficult to detect. Neutrinos penetrate where other particles cannot.</p></li>
+<li><p>The Mikheyev-Smirnov-Wolfenstein (or MSW) effect involves transformation of neutrinos between the three types <span class="math notranslate nohighlight">\((\nu_{\mu}, \nu_{\tau}, and \nu_e)\)</span>.</p></li>
+<li><p>Super-Kamiokande was used to detect atmospheric neutrinos produced in Earth’s upper atmosphere.</p></li>
+<li><p>Super-Kamiokande determined that the number of <span class="math notranslate nohighlight">\(\nu_\mu\)</span> traveling upward was significantly reduced compared to those traveling downward, where the difference in numbers is in excellent agreement with the theory of neutrino mixing.</p></li>
+<li><p>For neutrino mixing to occur, the neutrino could not be a massless particle and the experiment confirmed this as well.</p></li>
+<li><p>Cosmic rays are capable of producing only electron and muon neutrinos.</p></li>
+</ul>
+</section>
+<section id="the-solar-atmosphere">
+<h3>6.2. The Solar Atmosphere<a class="headerlink" href="#the-solar-atmosphere" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-photosphere">
+<h3>6.2.1. The Photosphere<a class="headerlink" href="#the-photosphere" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Optical photons appear to originate from an outer layer of the Sun called the photosphere. The base of the photosphere is somewhat arbitrary since photons because some photons originate from deep within the Sun <span class="math notranslate nohighlight">\((\tau_{\lambda}\gg 1)\)</span></p></li>
+<li><p>The optical depth from a given layer <span class="math notranslate nohighlight">\(\tau_{\lambda}\)</span> can be estimated from an estimate of the fraction of photons that we receive from that layer (i.e., <span class="math notranslate nohighlight">\(\tau_{\lambda}=- \ln \left(\frac{I_{\lambda}}{I_{\lambda, o}}\right)\)</span>).</p></li>
+<li><p>On average, the solar flus is emitted from and optical depth <span class="math notranslate nohighlight">\(\tau=2/3\)</span> (the Eddington approximation), which leads to defining the effective temperature (for Wien’s law) at this depth.</p></li>
+<li><p>Using the Saha equation, we can determine the ratio of <span class="math notranslate nohighlight">\(H^-\)</span> ions to the neutral hydrogen atoms.</p></li>
+<li><p>From Kirchhoff’s laws, the absorption lines are produced when there is a cooler gas between the observer and the bulk of the hot source (i.e., continuum-forming region). In reality, the Fraunhofer lines are formed in the same layers where <span class="math notranslate nohighlight">\(H^-\)</span> ions produce the continuum.</p></li>
+</ul>
+</section>
+<section id="solar-granulation-differential-rotation">
+<h3>6.2.1.1. Solar Granulation &amp; Differential Rotation<a class="headerlink" href="#solar-granulation-differential-rotation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This structure is called granulation and represents the top portion of a convection zone protruding into the photosphere’s base.</p></li>
+<li><p>Granulation causes wiggles to appear in the absorption lines due to small Doppler shifts (400 m/s) from the convection cycle.</p></li>
+<li><p>The brighter regions produce blueshifts (i.e., rising hot material) in the absorption lines while the darker regions are caused by redshifts (i.e., sinking cool material).</p></li>
+<li><p>The lifetime of a granule is defined as the amount of time for a parcel to rise and fall the distance of one mixing length.</p></li>
+<li><p>The absorption lines are used to measure the rotation rate of the Sun, where measurements are taken from the equator and then outward with increasing latitude.</p></li>
+<li><p>Tachocline: is the transition region of stars of more than 0.3 solar masses, between the radiative interior and the differentially rotating outer convective zone.</p></li>
+</ul>
+</section>
+<section id="the-chromosphere">
+<h3>6.2.2. The Chromosphere<a class="headerlink" href="#the-chromosphere" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Above the photosphere lies a portion of the Sun’s atmosphere called the chromosphere that is only about 0.01% (or a factor of <span class="math notranslate nohighlight">\(10^{-4}\)</span>) of the photosphere’s intensity and extends upward for approximately 1600 km or 2100 km above <span class="math notranslate nohighlight">\(\tau_{500}=1.\)</span></p></li>
+<li><p>Certain Fraunhofer lines appear as absorption lines in the visible and near-UV, where others begin to appear as emission lines at shorter (or much longer) wavelengths.</p></li>
+<li><p>Kirchhoff’s laws suggest that a hot, low-density gas must be responsible for the emission lines. The emission cannot occur deep within the Sun’s interior because the Sun is optically thick and so the area of emission line production occurs elsewhere.</p></li>
+<li><p>Emission lines (in the visible range) are observable near the limb of the Sun for a few seconds when the bright solar disk is occulted during a total eclipse and is known as a flash spectrum.</p></li>
+<li><p>On scales of 30,000 km, the continued effects of the convection zone are seen as supergranulation. Similar to granules, Doppler studies reveal the rising and sinking of gas at 400 km/s.</p></li>
+<li><p>Spicules, or vertical filaments of gas, are present that extend upward for 10,000 km and each spicule has a lifetime of only 15 minutes. As a result the speed of particles in spicules move upwards at approximately 15 km/s, as shown through Doppler studies.</p></li>
+</ul>
+</section>
+<section id="the-transition-region">
+<h3>6.2.3. The Transition Region<a class="headerlink" href="#the-transition-region" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The temperature rises rapidly within approximately 100 km above the chromosphere and reach <span class="math notranslate nohighlight">\(&gt; 10^5\)</span> K before <span class="math notranslate nohighlight">\(dT/dr\)</span> begins to flatten. The temperature still increases, but more slowly until eventually exceeding <span class="math notranslate nohighlight">\(10^6\)</span> K. Selective observations in the UV and extreme-UV reveal this transition region.</p></li>
+</ul>
+</section>
+<section id="the-corona">
+<h3>6.2.4. The Corona<a class="headerlink" href="#the-corona" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>During a total solar eclipse, a faint corona appears around the Sun at totality. The corona lies above the transition region, extends out into space without a well-defined outer boundary, and is very faint (about <span class="math notranslate nohighlight">\(10^6\)</span> times less intense) compared to the photosphere.</p></li>
+<li><p>The corona is essentially transparent to most EM radiation (except long radio wavelengths) and is not in LTE. For gases that are not in LTE, a unique temperature is not strictly definable.</p></li>
+<li><p>The low number densities in the corona allow forbidden transitions to occur from atomic energy levels that are metastable (or temporarily stable).</p></li>
+<li><p>The corona is a source of radio emission, where some of this emission arises from free-free transitions as electrons pass near ions.</p></li>
+<li><p>Encounters in a higher density region (i.e., nearer to the Sun) result in shorter wavelength photons, where encounters in the chromosphere and lower corona (with much lower density) emit longer wavelength radiation <span class="math notranslate nohighlight">\((1-20\)</span> cm).</p></li>
+<li><p>X-ray emissions from the photosphere are also rare, where the blackbody continuum decreases more rapidly (i.e., Wien approximation). Thus, any X-ray emission from the corona overwhelms the contribution from the photosphere due to its high temperature and low opacity at X-ray wavelengths.</p></li>
+<li><p>The corona contains a high degree of ionization for all the elements present, where the neutral atoms undergo a large number of transitions. Each element is capable of producing ans extensive emission spectrum.</p></li>
+</ul>
+</section>
+<section id="coronal-holes-and-the-solar-wind">
+<h3>6.2.4.1. Coronal Holes and the Solar Wind<a class="headerlink" href="#coronal-holes-and-the-solar-wind" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Observations show that X-ray emission is non-uniform, where active (bright and hot) regions exist along with the coronal holes (darker and cooler regions).</p></li>
+<li><p>A weaker X-ray emission coming from the coronal holes is characteristic of the lower density and temperature of the region.</p></li>
+<li><p>The existence of coronal holes is tied to the Sun’s magnetic field and the generation of a fast solar wind.</p></li>
+<li><p>Coronal holes correspond to regions where the magnetic field lines are open, while the X-ray bright regions are associated with closed field lines. Closed field lines form loops that return to the Sun, while open field lines extend out to great distances.</p></li>
+<li><p>For charged particles moving in an external magnetic field, the Lorentz force equation applies <span class="math notranslate nohighlight">\(F=q(E+V \times B),\)</span>
+which describes the force <span class="math notranslate nohighlight">\(F\)</span> exerted on a charged particle with a velocity <span class="math notranslate nohighlight">\(v\)</span> in an electric field <span class="math notranslate nohighlight">\(E\)</span> and magnetic field <span class="math notranslate nohighlight">\(B\)</span></p></li>
+</ul>
 </section>
 </section>
 <section id="feb-28">
@@ -1444,60 +1845,910 @@ E_{\rm photon} = h\nu = pc.
 </section>
 <section id="id4">
 <h3>Teaching Presentations<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>7.3.7</p>
+<ul>
+<li><p>PPI Chain: first fusion process chain with two hydrogen-1</p></li>
+<li><p>One of the protons undergoes beta decay to change to a neuton, neutrino, and positron which then combines witht he other to become deuterium.
+$<span class="math notranslate nohighlight">\( _1^1H + _1^1H \rightarrow _1^2H+e^++\nu_e\)</span>$</p></li>
+<li><p>Deuterium and proton combine to create He-3 and photon.
+$<span class="math notranslate nohighlight">\( ^2_1H+^1_1H \rightarrow ^3_2He+\gamma\)</span>$</p></li>
+<li><p>Finally two He-3 atoms combine to create He-4 and 2 protons
+$<span class="math notranslate nohighlight">\( ^3_2He +^3_2He \rightarrow ^4_2He+2 ^1_1H\)</span>$</p></li>
+<li><p>PPII Chain: Second part of intial fusion reaction using the He-3 and He-4 and a proton to create 2 He-4
+$<span class="math notranslate nohighlight">\( ^3_2He+^4_2He\rightarrow ^7_4Be+\gamma\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(^7_4Be +e^- \rightarrow ^7_3Li +\nu_e\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(^7_3Li+^1_1H\rightarrow2 ^4_2He\)</span>$</p></li>
+<li><p>PP III: Combination of the Be-7 from PPII of a proton instead of an electron to create 2 more He-4
+$<span class="math notranslate nohighlight">\(^7_4Be +^1_1H\rightarrow ^8_5B+\gamma\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(^8_5B\rightarrow^8_4Be+e^++\nu _e\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(^8_4Be\rightarrow 2^4_2He\)</span>$</p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\]</div>
+<ul class="simple">
+<li><p>7.3.8</p>
+<ul>
+<li><p>CNO cycle uses heavy nuclei as catalyst</p></li>
+<li><p>CNO I produces carbon-12 and Helium-4</p></li>
+<li><p>CNO II only occurs 0.04% of the time and produces Nitrogen-14 and Helium-4</p></li>
+</ul>
+</li>
+<li><p>7.3.9</p>
+<ul>
+<li><p>Triple alpha process produces Carbon-12 out of Helium-4
+$<span class="math notranslate nohighlight">\( ^4_2He +^4_2He ⇌ ^8_4Be\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( ^8_4Be +^4_2He \rightarrow ^{12}_6C+\gamma\)</span>$</p></li>
+</ul>
+</li>
+<li><p>7.3.10 Carbon and Oxygen Burning</p>
+<ul>
+<li><p>Carbon captures alpha particles to create oxygen</p></li>
+<li><p>Helium outside carbon core produce oxygen which then combine to create neon</p></li>
+<li><p>T = 60 million K</p></li>
+<li><p>two carbon-12 can produce either Oxygen-16 and 2 Helium-4, Neon-20 and Helium-4, Sodium-23 and proton, Magnesium-23 and Neutron, or Magneisum-24 and gamma</p></li>
+</ul>
+</li>
+<li><p>7.3.11 Binding energy per nucleon
+$<span class="math notranslate nohighlight">\( E_b = [Zm_p+(A-z)m_n-m_nucleus]c^2\)</span>$</p>
+<ul>
+<li><p>The binding energy per nucleon increases until iron-56, where it begins to decrease</p></li>
+<li><p>Hydrogen-1, Helium-4, and Oxygen-16 are most stable (and abundant) nuclei.</p></li>
+<li><p>Iron-56 is most stable with highest binding energy. Stars build up nuclei starting at lighter elements up to iron. All others are made during supernovae.</p></li>
+<li><p>Past Iron peak, more energy needed and thus fission begins.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="energy-transport-and-thermodynamics">
+<h3>7.4 Energy Transport and Thermodynamics<a class="headerlink" href="#energy-transport-and-thermodynamics" title="Permalink to this heading">#</a></h3>
+<section id="three-energy-transport-systems">
+<h4>7.4.1 Three Energy Transport Systems<a class="headerlink" href="#three-energy-transport-systems" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Radiation: energy from nuclear reaction carried to the surface through photons. (middle efficient)</p></li>
+<li><p>Convection: cooler elements fall inward, hotter elements are carried outwards (most efficient)</p></li>
+<li><p>Conduction: transport via collisions between particles (least efficient so less significant.)</p></li>
+</ul>
+</section>
+<section id="the-radiative-temperature-gradient">
+<h4>7.4.2 The Radiative Temperature Gradient<a class="headerlink" href="#the-radiative-temperature-gradient" title="Permalink to this heading">#</a></h4>
+<p>The radiation presure gradient equation;</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP_{rad}}{dr} = -\frac{\bar \kappa \rho}{c} F_{rad} = \frac{4}{3}aT^3 \frac{dT}{dr}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(r\)</span> is the distance from the center (radius). Adding the equation for <span class="math notranslate nohighlight">\(F_{rad} = \frac{L}{4 \pi r^2}\)</span>, we have;</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dP_{rad}}{dr} = -\frac{3}{4ac} \frac{\bar \kappa \rho}{T^3}\frac{L}{4 \pi r^2} \]</div>
+</section>
+<section id="the-pressure-scale-height">
+<h4>7.4.3 The Pressure Scale Height<a class="headerlink" href="#the-pressure-scale-height" title="Permalink to this heading">#</a></h4>
+<p>If the gradient becomes too steep, convection becomes more efficient (hot air moving up cold air moving down). A characteristic length for convection is the <strong>pressure scale hieght <span class="math notranslate nohighlight">\(H_p\)</span></strong> is defined as;</p>
+<div class="math notranslate nohighlight">
+\[ \frac{1}{H_p} ≡ -\frac{1}{P} \frac{dP}{dr}, \]</div>
+<p>assuming <span class="math notranslate nohighlight">\(H_p\)</span> is constant we solve for the pressure with radius as;</p>
+<div class="math notranslate nohighlight">
+\[ P = P_0 e^{-r/H_p}. \]</div>
+<p>If <span class="math notranslate nohighlight">\(r = H_p\)</span> then <span class="math notranslate nohighlight">\(P=P-0/e\)</span> and then <span class="math notranslate nohighlight">\(H_p\)</span> is the distance over which the gas pressure decreases by a factor of <span class="math notranslate nohighlight">\(e\)</span>. We can write the pressure gradient in terms of the local acceleration of gravity %g = \frac{GM_r}{r^2}. Sub this in and we get;</p>
+<div class="math notranslate nohighlight">
+\[ H_p = -P \left( \frac{dP}{dr} \right)^{-1} = \frac{P}{\rho g}. \]</div>
+<ul class="simple">
+<li><p>7.4.4 Internal Energy and the First law of Thermo</p>
+<ul>
+<li><p>First law relating to energy transfer states
+$<span class="math notranslate nohighlight">\(dU = \delta Q-\delta W\)</span>$
+which describes change in internal energy (U) is modified by difference in Work (W) done and heat added (Q).</p></li>
+<li><p>U is a state function meanging it desrcibes current condition of the gas. dU is thus independent of the process. Heat added and work done depends on the order of processes that are carried out.</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 </section>
 <section id="mar-25">
 <h2>Mar 25<a class="headerlink" href="#mar-25" title="Permalink to this heading">#</a></h2>
-<section id="the-interstellar-medium-and-star-formation-part-i">
-<h3>The Interstellar Medium and Star Formation Part I<a class="headerlink" href="#the-interstellar-medium-and-star-formation-part-i" title="Permalink to this heading">#</a></h3>
+<section id="the-interiors-of-stars-part-v">
+<h3>The Interiors of Stars Part V<a class="headerlink" href="#the-interiors-of-stars-part-v" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="id5">
+<h3>Teaching Presentations<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<p><strong>7.4.4 Internal energy and the first law of Thermodynamics</strong></p>
+<ul class="simple">
+<li><p>A basic understanding of convective Heat transport begins with thermodynamics
+$<span class="math notranslate nohighlight">\(dU = \delta Q - \delta W\)</span>$</p></li>
+</ul>
+<p>This equation describes  how internal energy of a mass element <span class="math notranslate nohighlight">\(dU\)</span>  is modified by the difference of the work done <span class="math notranslate nohighlight">\(\delta W\)</span>  by that element from the heat added <span class="math notranslate nohighlight">\(\delta Q\)</span> to that element.</p>
+<p><strong>State function</strong> (value represents the present condiitions of the gas)</p>
+<p>The internal energy (U) is a function of the gas compostion and temperature. In this case, the internal energy is jsut the kinetic energy per unit mass.</p>
+<p><strong>In an ideal monoatomic gas with on ionization</strong></p>
+<div class="math notranslate nohighlight">
+\[ U = \frac{\text{average energy}}{\text{particle}} \times \frac{\text{number of particles}}{\text{mass}} = \overline{K}\times \frac{1}{\overline{m}}, \]</div>
+<div class="math notranslate nohighlight">
+\[U = \frac{3}{2}\left(\frac{k}{\mu m_H} \right)T = \frac{3}{2}nRT.\]</div>
+<div class="math notranslate nohighlight">
+\[ nR = \frac{k}{\mu m_H}. \]</div>
+<p><strong>7.4.5 Specific Heats</strong></p>
+<ul class="simple">
+<li><p><u>Specfic heat (<span class="math notranslate nohighlight">\(C\)</span>)</u><br />
+the amount of heat <span class="math notranslate nohighlight">\(\delta Q\)</span> required to raise the temperature of a unit mass of a material by a unit temperature
+$<span class="math notranslate nohighlight">\( C_p \equiv \frac{\partial Q}{\partial T}\bigg\rvert_P  \qquad \text{and} \qquad C_V \equiv \frac{\partial Q}{\partial T}\bigg\rvert_V, \)</span>$</p></li>
+<li><p>Consider the amount of work per unit mass done by the gas on its surrounds, suppose that a cylinder of a cross-sectional area is filled with a gas of mass m and pressure.
+$<span class="math notranslate nohighlight">\(\delta W = \frac{F}{m}dr = \frac{PA}{m}dr = PdV,\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(dU = \delta Q - PdV.\)</span>$</p>
+<ul>
+<li><p>for a monatomic gas, γ =5/3 a. If ionization occur , the temperature of the gas will not rise as rapidly becasue some of the heat goes into ionizing athe atoms instead of increasing the average kinetic energy of the particles.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>7.4.6. The adiabatic Gas Law</strong></p>
+<ul class="simple">
+<li><p>Since the change in internal energy is independent of the process involved there is a special proccess called the <u><strong>Adiabatic process</strong></u>
+where no heat flow into or out of a mass element ( no heat exchange)</p></li>
+</ul>
+<p><u><strong>adiabatic gas law is</strong> </u>
+$<span class="math notranslate nohighlight">\(PV^{γ}=Κ\)</span>$</p>
+<ul class="simple">
+<li><p>Using the ideal gas law, a second adiabatic relation is found,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ P = K^\prime T^{\gamma/(\gamma -1)}\]</div>
+<p><strong>7.4.7. The Adiabatic Sound Speed</strong></p>
+<ul class="simple">
+<li><p>The sound speed <span class="math notranslate nohighlight">\(v_s\)</span> through the material is related to the compressibility of the gas and its inertia.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ v_s = \sqrt{\frac{B}{\rho}}, \]</div>
+<p>The bulk Modulus <span class="math notranslate nohighlight">\(B\)</span> of the gas describes how much the volume of the gas will change with pressure and is defined as</p>
+<div class="math notranslate nohighlight">
+\[B \equiv -V\left(\frac{\partial P}{\partial V}\right)_{\rm ad}. \]</div>
+<ul class="simple">
+<li><p><u> aadiabatic sound speed</u></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-51f786be-20ea-4940-8cf6-271705d7755e">
+<span class="eqno">(14)<a class="headerlink" href="#equation-51f786be-20ea-4940-8cf6-271705d7755e" title="Permalink to this equation">#</a></span>\[\begin{align} v_s = \sqrt{\frac{\gamma P}{\rho}}, \end{align}\]</div>
+<p><strong>7.4.8. The Adiabatic Temperature Gradient</strong></p>
+<ul class="simple">
+<li><p>Convecitons bubbles are parcels of hot gas that rise and expand adiabatically. After travleling a certain distance the parcel gives up excess heat as it loses its identity and dissolved into the surrounding gas.</p></li>
+<li><p>Treating the convection bubble as an ideal gas requires knowledge of how it is modified with changing stellar radius. ( differentiation of ideal gas law)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ P = \frac{\rho}{\mu m_H}kT, \]</div>
+<ul class="simple">
+<li><p>Upon differentiations with repsect to r, we obtain
+$<span class="math notranslate nohighlight">\( \frac{dP}{dr} = \frac{1}{\gamma}\frac{dP}{dr} + \frac{P}{T}\frac{dT}{dr}. \)</span>$</p></li>
+</ul>
+<p><u> <em>adiabatic temperature gradient</em></u> is defined as</p>
+<div class="math notranslate nohighlight">
+\[\frac{dT}{dr} \bigg\rvert_{\rm ad} = \left(1-\frac{1}{\gamma}\right)\frac{T}{P} \frac{dP}{dr}.\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dT}{dr}\bigg\rvert_{\rm ad} = - \left(1-\frac{1}{\gamma}\right)\frac{\mu m_H}{k}\frac{GM_r}{r^2}.\]</div>
+<ul class="simple">
+<li><p>This equation can be written im simpler forms using the local acceration of gravity g</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dT}{dr}\bigg\rvert_{\rm ad} = -\frac{g}{C_P}.\]</div>
+<ul class="simple">
+<li><p>This result  describes how the temeprature of the gas inside the bubble changes as the bubble rises and expands adiabatically.If the star’s actual temperature gradient is steeper than the adiabatic temperature gradient, or</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \bigg\lvert\frac{dT}{dr}\bigg\rvert_{\rm actual} &gt; \bigg\lvert\frac{dT}{dr}\bigg\rvert_{\rm ad}, \]</div>
+<p>the temperature is <strong>Superadiabatic</strong> - stars actual temperature gradient is steeper than the adiabatic temperature gradient</p>
+<ul class="simple">
+<li><p>if the deep inerior of a star is just slightly superadiabatic, then it may be possibel to carry nearly all the luminosity by convection.</p>
+<ul>
+<li><p>often the case that radiaiton of convections dominates the energy transport in the deep interior,but near  the sufface both radiation and conveciton carry significant amounts of energy simultaneously.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>7.4.9. A Criterion of Stellar Convection</strong></p>
+<ul class="simple">
+<li><p>Questions regarding when convections occurs</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>What conditions must be met if convecitons is to dominate over radiation in the deep interior</p></li>
+<li><p>When will a hot bubble of gas continue to rise rather than sink</p></li>
+</ol>
+<ul class="simple">
+<li><p>To express this condition in terms of temperature gradients, assume that</p>
+<ul>
+<li><p><strong>the gas is initially, very nearly in thermal equilibrium</strong> <span class="math notranslate nohighlight">\((T_i^{(b)}\simeq T_i^{(s)}\:\text{and}\:\rho_i^{(b)}\simeq \rho_i^{(s)})\)</span>,</p></li>
+<li><p><strong>the bubble expands adiabatically</strong> (i.e., no heat exchange), and</p></li>
+<li><p><strong>the bubble and surrounding gas pressures are equal at all times</strong> <span class="math notranslate nohighlight">\((P_f^{(b)} = P_f^{(s)})\)</span>.</p></li>
+</ul>
+</li>
+<li><p>For an ideal monatomic gas <span class="math notranslate nohighlight">\(\gamma = 5/3\)</span> and the RHS of Eqn. <a class="reference internal" href="../Chapter_11/interiors-of-stars.html#equation-fin-conv-cond">(7.65)</a> is 2.5.  Once <span class="math notranslate nohighlight">\(d\ln P/d\ln T\)</span> is greater than 2.5, then the region is stable against convection.  In general, convection will occur when</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>the stellar opacity is large, implying that an unattainable steep temperature gradient would be necessary for radiative transport,</p></li>
+<li><p>a region exists where ionization is occurring, causing a large specific heat and low adiabatic temperature gradient, and</p></li>
+<li><p>the temperature dependence of the nuclear energy generation rate is large, causing a steep radiative flux gradient and a large temperature gradient..</p></li>
+</ol>
+<p>#7.5. Stellar Model Building</p>
+<p><strong>7.5.1 A summary of the Equations of Stellar Structure</strong></p>
+<ul class="simple">
+<li><p>The basic <em>time-indendent</em> stellar structures equations are summarized as
+$<span class="math notranslate nohighlight">\( \boxed{\begin{align*}
+\frac{dP}{dr} &amp;= -\frac{GM_r \rho}{r^2} &amp;\\
+\frac{dM_r}{dr} &amp;= 4\pi r^2 \, \rho &amp;\\
+\frac{dL_r}{dr} &amp;= 4\pi r^2 \, \rho\,\epsilon &amp;\\
+\frac{dT}{dr} &amp;= -\frac{3}{4ac}\frac{\overline{\kappa}\rho}{T^3}\frac{L_r}{4\pi r^2} &amp; \text{(radiation)} \\
+&amp;= -\left(1 - \frac{1}{\gamma} \right)\frac{\mu m_H}{k}\frac{GM_r}{r^2} &amp; \text{(adiabatic convection)}
+\end{align*}}\)</span>$</p></li>
+<li><p>The convective (adiabatic) temperature gradient can be applied when</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \frac{d\ln P}{d\ln T} &lt; \frac{\gamma}{\gamma-1}. \]</div>
+<p><strong>7.5.2 Entropy</strong></p>
+<ul class="simple">
+<li><p>gravitational energy generation rate can be expressed in terms of the change in entropy per unit mass by</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-745dd230-59a5-4638-99af-0e24ab959781">
+<span class="eqno">(15)<a class="headerlink" href="#equation-745dd230-59a5-4638-99af-0e24ab959781" title="Permalink to this equation">#</a></span>\[\begin{align} dS \equiv \frac{\delta Q}{T}. \end{align}\]</div>
+<ul class="simple">
+<li><p>if the star is collapsing, <span class="math notranslate nohighlight">\(ϵ_\text{gravity}\)</span> is positive <span class="math notranslate nohighlight">\(+\)</span> otherwise it will be negative. As the star contracts, its entropy decrease. <strong>A star is not a closed system, where its entropy may decrease locally while the entropy of the universe due to radiaiton and stellar wind</strong>.</p></li>
+</ul>
+<p><strong>7.5.3 The Constitutive Relations</strong></p>
+<ul class="simple">
+<li><p>Constitutive relations - required conditions are the equations of the state.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+P &amp;= P(\rho, T, \text{composition}) \\
+\overline{\kappa} &amp;= \overline{\kappa}(\rho, T, \text{composition}) \\
+\epsilon &amp;= \epsilon(\rho, T, \text{composition}). \\
+\end{align*} \end{split}\]</div>
+<ul class="simple">
+<li><p>rest(tba)</p></li>
+</ul>
+<p><strong>7.5.4. Boundary Conditions(TBA)</strong></p>
+<p><strong>7.5.5. The Vogt-Russell Theorem</strong></p>
+<ul class="simple">
+<li><p>A summary of how everything in a stars system is connected</p>
+<ul>
+<li><p>The pressure gradient depends on the interior mass and densisty</p></li>
+<li><p>the radiative temperature gradient depends on the local temperature, density, opacity, and interior lumnosity</p></li>
+<li><p>the Luminosity gradient functions depends on the density and energy generation rate</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p><u><strong>The Vogt-Russell Theorem</strong></u>
+<strong>The mass and the composition structure throughout a star <em>uniquely</em> determine its radius, luminosity, and internal structure, as well as its subsequent evolution.</strong></p>
+</div></blockquote>
+<p>The dependence of a star’s mass and composition evolution is a consequence of the change in composition due to nuclear burning (i.e., fusion). There are other factors (e.g., magnetic fields and rotation) that influence stellar interiors, but these are assumed to have little effect in most stars.</p>
+<p><strong>7.5.6. Numerical Modeling of the Stellar Structure Equations</strong></p>
+<p><u><em>polytropes</em></u> - a special  family of approximate solutions to the stelalr structure
+3</p>
+<ul class="simple">
+<li><p>the system of differential equations for the stellar strucutre cannot be solved analytically for all cases. making it neccessary to evalute the DE numerically by approximating the equations by difference equations. then the star is modeled as a set of <strong>spherically symmetric shells</strong> and the integration is carried out starting from some initial radius in finite steps.</p>
+<ul>
+<li><p>An example of this can be found for pressure <span class="math notranslate nohighlight">\(Ρ\)</span></p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P_{i+1}\]</div>
+<div class="math notranslate nohighlight">
+\[ P_{i+1} = P_i + \frac{\Delta P}{\delta r}\delta r\]</div>
+<p><strong>7.5.7. Polytropic Models and the Lane-Emden Equation (TBA)</strong></p>
+<p>Under very special situations, it is possible to find analtic solutions to a subset of the stellar structure equations. The famous equation that helps us describe analytical stellar models is the Lane-Emden equation.</p>
+<ul class="simple">
+<li><p>If a simple realtionshpi existed bewteen pressure and densisty, then the mechanical equations for stellar structure could be solved simultanesouly</p></li>
+<li><p>treats star asa fluid( very complicated math)</p></li>
+</ul>
+<p>#7.6. The Main Sequence</p>
+<p><strong>7.6.1. The Eddington Luminosity limit</strong></p>
+<ul class="simple">
+<li><p>the stability of very massive stars is directly affected thier luminosity, if the temperature is high and gas density is low, then it is possible for radiation pressure to dominate over the gas pressure. When this occurs the outer portions of very massie stars, the outer layers disperse due to the intense stellar wind.</p></li>
+<li><p>The pressure gradient  near the stellar surface is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \frac{dP}{dr} \simeq -\frac{\overline{\kappa}\rho}{c}\frac{L}{4\pi r^2}. \]</div>
+<div class="math notranslate nohighlight">
+\[ L_{\rm Ed} = \frac{4\pi r^2 c}{\overline{\kappa}}g = \frac{4\pi G c}{\overline{\kappa}}M_\star. \]</div>
+<ul>
+<li><p><u><strong>Eddington Limit</strong></u></p>
+<p>the maximum radiative luminosity, aka a maximum value for a star to remain in hydrostatic equilibrium.</p>
+<div class="math notranslate nohighlight">
+\[ L_{\rm Ed} = \frac{4\pi r^2 c}{\overline{\kappa}}g = \frac{4\pi G c}{\overline{\kappa}}M_\star. \]</div>
+<p>It is possible to deteremien the Eddington limit of stars at the end of the main sequence, since most of their effective temperatures is ≈50,000K,</p>
+<div class="math notranslate nohighlight">
+\[ L_{\rm Ed} = \frac{4\pi G c}{\overline{\kappa}_{es}}{M_\odot} = \frac{200\pi Gc}{(1+X)}{M_\odot} = 1.5\times 10^{31}\:{\rm W},\]</div>
+<p>or</p>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \frac{L_{\rm Ed}}{L\odot} = 3.8 \times 10^4 \frac{M}{M_\odot}\:{\rm W}.\]</div>
+<p><strong>7.6.2. Variations of Main-Sequence Stellar Parameters with Mass</strong></p>
+<ul>
+<li><p>From theoretical models computed in the mass range of hydrogen burning, it is possible to obtain a numerical <span class="math notranslate nohighlight">\(M-L\)</span> relationship that agrees well with the observational <span class="math notranslate nohighlight">\(M-L\)</span> relationship.  Stars undergoing hydrogen burning in the cores lie along the observational main sequence.</p>
+<p>This is approximately in the range of <span class="math notranslate nohighlight">\(5\times 10^{-4}\:L_\odot\)</span> to <span class="math notranslate nohighlight">\(1 \times 10^6\:L_\odot\)</span></p>
+</li>
+</ul>
 </section>
 </section>
 <section id="mar-27-exam-ii-take-home">
 <h2>Mar 27 (Exam II take-home)<a class="headerlink" href="#mar-27-exam-ii-take-home" title="Permalink to this heading">#</a></h2>
-<section id="the-interstellar-medium-and-star-formation-part-ii">
-<h3>The Interstellar Medium and Star Formation Part II<a class="headerlink" href="#the-interstellar-medium-and-star-formation-part-ii" title="Permalink to this heading">#</a></h3>
+<section id="the-interstellar-medium-and-star-formation-part-i">
+<h3>The Interstellar Medium and Star Formation Part I<a class="headerlink" href="#the-interstellar-medium-and-star-formation-part-i" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="apr-1">
 <h2>Apr 1<a class="headerlink" href="#apr-1" title="Permalink to this heading">#</a></h2>
-<section id="main-sequence-and-post-main-sequence-stellar-evolution-part-i">
-<h3>Main-Sequence and Post-Main-Sequence Stellar Evolution Part I<a class="headerlink" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-i" title="Permalink to this heading">#</a></h3>
+<section id="the-interstellar-medium-and-star-formation-part-ii">
+<h3>The Interstellar Medium and Star Formation Part II<a class="headerlink" href="#the-interstellar-medium-and-star-formation-part-ii" title="Permalink to this heading">#</a></h3>
+<p><strong>8.2.4. Additional Physical Processes in Protostellar Star Formation</strong></p>
+<ul class="simple">
+<li><p>Zeeman measurements of various molecular clouds indicate the presence of magnetic fields with strengths from <span class="math notranslate nohighlight">\(1 - 100 nT\)</span>.</p></li>
+<li><p>The term “froze-in” refers to Alfven’s theorem, which states that “in a fluid with infinite electric conductivity, the magnetic field is frozen into the fluid and has to move along with it.”</p></li>
+<li><p>The virial theorem was invoked during the derivation of the Jean’s criterion as a balance between the gravitational potential energy and the cloud’s internal (thermal) kinetic energy.  The magnetic field energy was ignored, where including the effects of the magnetic field produces a critical mass of</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-29437b2a-135f-43ff-b7a3-fb007dc2a374">
+<span class="eqno">(16)<a class="headerlink" href="#equation-29437b2a-135f-43ff-b7a3-fb007dc2a374" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_B = c_B \frac{\pi R^2 B}{G^{1/2}}, 
+\end{align}\]</div>
+<ul class="simple">
+<li><p>If the magnetic field strength <span class="math notranslate nohighlight">\(B\)</span> is expressed in <span class="math notranslate nohighlight">\({\rm nT}\)</span> and the cloud radius <span class="math notranslate nohighlight">\(R\)</span> in units of <span class="math notranslate nohighlight">\({\rm pc}\)</span>, then <span class="math notranslate nohighlight">\(M_B\)</span> can be written as</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-8d3414de-acd5-4939-9835-78c49d1aef78">
+<span class="eqno">(17)<a class="headerlink" href="#equation-8d3414de-acd5-4939-9835-78c49d1aef78" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_B \simeq 70\,M_\odot \left(\frac{B}{1\,{\rm nT}} \right) \left(\frac{R}{1\,{\rm pc}} \right)^2. 
+\end{align}\]</div>
+<p><strong>8.2.5. Ambipolar Diffusion</strong></p>
+<ul class="simple">
+<li><p>Another possibility for triggering the collapse of a dense core is through change of state.  If a core that was originally subcritical became supercritical , then collapse could ensue.  This could have in a couple of ways:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>A group of subcritical clouds could combine to form a supercritical cloud, or</p></li>
+<li><p>the magnetic field could be rearranged so that the field strength is lessened in a portion of the cloud.</p></li>
+</ol>
+<ul class="simple">
+<li><p>To determine the relative impact of ambipolar diffusion, we need to estimate the characteristic timescale. By knowing the drift velocty, it can be shown that</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-5b4130ff-0291-4d20-b4bf-b83d62bae938">
+<span class="eqno">(18)<a class="headerlink" href="#equation-5b4130ff-0291-4d20-b4bf-b83d62bae938" title="Permalink to this equation">#</a></span>\[\begin{align}
+t_{\rm AD} \simeq \frac{2R}{v_{\rm drift}} \simeq 10\ {\rm Gyr} \left( \frac{n_{\rm H_2}}{10^{10}\,{\rm m^{-3}}}\right) \left( \frac{B}{1\,{\rm nT}}\right)^{-2}  \left( \frac{R}{1\,{\rm pc}}\right)^{2}.
+\end{align}\]</div>
+<p><strong>8.2.6. Numerical Simulations of Protostellar Evolution</strong></p>
+<ul class="simple">
+<li><p><strong>Consider a spherical cloud of approximately <span class="math notranslate nohighlight">\(1\,M_\odot\)</span> and solar compositions that is supercritical.</strong>  Initially, the early stages of free-fall collapse are nearly isothermal because the absorption by the dust is relatively inefficient (i.e., photons have a significant mean free path). The central region (radius of ~<span class="math notranslate nohighlight">\(5\,{AU}\)</span>) is nearly in hydrostatic equilibrium and this central object is then referred to as a <strong>protostar</strong>.</p></li>
+<li><p>An observable consequence of the cloud becoming optically thick is that the gravitational potential energy released during the collapse is converted into heat and then radiated away in the IR. The curves on the H-R diagram depict the life histories of the simulated clouds are known as <strong>evolutionary tracks</strong>.  As the collapse continues to accelerate, the luminosity of the protostar increases along with its effective temperature.</p></li>
+<li><p>The hydrostatic core slowly increases as more overlying material continues to fall onto it. After the core radius decreases to ~<span class="math notranslate nohighlight">\(1.3\,R_\odot\)</span>, hydrostatic equilibrium is re-established.  The core mass is still <strong>accreting</strong> gas, where the final mass will be larger.</p></li>
+</ul>
+<p><strong>8.3. Pre-Main-Sequence Evolution</strong></p>
+<p><strong>8.3.1. The Hayashi Track</strong></p>
+<ul class="simple">
+<li><p>As the protostar collapse slows, its luminosity decreases while its effective temperature increases slightly and is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Hayashi_track">Hayashi track</a> (i.e. a downward turn at the end of the evolutionary tracks). The Hayashi track represents a boundary between “allowed” and “forbidden” hydrostatic stellar models.</p></li>
+</ul>
+<p><strong>8.3.2. Classical Calculations of Pre-Main-Sequence Evolution</strong></p>
+<ul class="simple">
+<li><p><strong>Consider the pre-main-sequence evolution of a 1 <span class="math notranslate nohighlight">\(M_\odot\)</span> star, beginning on the Hayashi track.</strong> With the high <span class="math notranslate nohighlight">\({\rm H^-}\)</span> opacity near the surface, the star is completely convective for the first 1 Myr, where deuterium burning also occurs during this early period of the collapse.</p></li>
+<li><p>As the central temperature continues to rise, the levels of ionization increase but the opacity decreases.</p></li>
+<li><p>As the radiative core develops, more of the star’s mass is encompassed by the core.</p></li>
+<li><p>Following the descent along the Hayashi track, the luminosity reaches a minimum and the radiative core allows energy to escape into the convective envelope more readily.</p></li>
+<li><p>This causes the luminosity to increase again and the effective temperature increases since the star is still shrinking.</p></li>
+<li><p>The CNO reactions have a high temperature dependence and a temperature gradient is established in the core so that some convection begins to develop there.</p></li>
+<li><p>When the carbon-12 is exhausted (for the CNO cycle), the core completes its readjustment to nuclear burning, where the remainder of the PP I chain becomes important.</p></li>
+<li><p>If the protostar mass is <span class="math notranslate nohighlight">\(\lesssim 0.072\,M_\odot\)</span>, the core never gets hot enough to generate sufficient energy by nuclear reactions to stabilize the star against gravitational collapse.  The stable hydrogen-burning main sequence is never obtained, which explains the lower end of the main sequence.</p></li>
+</ul>
+<p><strong>8.3.3. The Formation of Brown Dwarfs</strong></p>
+<ul class="simple">
+<li><p>The objects between <span class="math notranslate nohighlight">\(0.013-0.072\,M_\odot\)</span> are known as <strong>brown dwarfs</strong> and have spectral types L and T.  The first confirmed discovery of a brown dwarf (Gliese 229B) was announced in 1995.  Hundreds of brown dwarfs have been detected in near-IR all-sky surveys, such as <a class="reference external" href="https://en.wikipedia.org/wiki/2MASS">2MASS</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Sloan_Digital_Sky_Survey">SDSS</a>.</p></li>
+</ul>
+<p><strong>8.3.4. Massive Star Formation</strong></p>
+<ul class="simple">
+<li><p>For massive stars, the central temperature quickly becomes high enough to burn carbon-12 and convert hydrogen into helium-3.  This means that these stars leave the Hayashi track at higher luminosities and evolve nearly horizontally across the H-R diagram.</p></li>
+</ul>
+<p><strong>8.3.5. Possible Modifications to the Classical Models</strong></p>
+<ul class="simple">
+<li><p>Theoretical evolutionary sequences beginning with smaller initial radii lead to a <strong>birth line</strong> where protostars become visible, which places an upper limit on the observed luminosities of protostars.</p></li>
+</ul>
+<p><strong>8.3.6. The Zero-Age Main Sequence (ZAMS)</strong></p>
+<ul class="simple">
+<li><p>The <strong>zero-age main sequence</strong> (ZAMS) is known as a diagonal line in the H-R diagram that indicates when stars of various masses reach the main sequence and begin equilibrium hydrogen burning.</p></li>
+</ul>
+<p><strong>8.3.7. The Initial Mass Function (IMF)</strong></p>
+<ul class="simple">
+<li><p>The number of stars that form <em>per mass interval per unit volume</em> is strongly mass-dependent, where this functional dependence is known as the <strong>initial mass function</strong> (IMF).  A particular IMF depends on a variety of factors, including the local environment in which a cluster of stars forms.</p></li>
+</ul>
+<p><strong>8.3.8. <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> Regions</strong></p>
+<ul class="simple">
+<li><p>The <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions are in equilibrium if they have equal rates of ionization and recombination.  During recombination, the electron cascades downward and produces a number of lower-energy photons (many will be in the visible).  The dominant visible wavelength comes from the <span class="math notranslate nohighlight">\(n=3\)</span> to <span class="math notranslate nohighlight">\(n=2\)</span> transition, or the <span class="math notranslate nohighlight">\({\rm H\alpha}\)</span> line of the Balmer series.  Therefore, <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> regions appear to fluoresce in red light.</p></li>
+<li><p><strong>Emission nebulae</strong> are considered to be the most beautiful objects in the night sky, where one particularly famous <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region is the Orion Nebula (M42).  The Orion A complex contains M42, a giant molecular cloud (OMC 1), and a very your star cluster (the Trapezium cluster).</p></li>
+<li><p>The size of an <span class="math notranslate nohighlight">\({\rm H\,II}\)</span>  region can be estimated by considering the equilibrium requirement. The recombination rate can be multiplied by the volume of the <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region (assumed to be a sphere) and then set equal to the number of ionized photons produced per second.  This is expressed as</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ N \simeq \alpha n_H^2 \left(\frac{4}{3} \pi r^3 \right),\]</div>
+<p>which solving for the radius produces</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d573d18b-0b26-49c9-a4d8-33dacae14dc7">
+<span class="eqno">(19)<a class="headerlink" href="#equation-d573d18b-0b26-49c9-a4d8-33dacae14dc7" title="Permalink to this equation">#</a></span>\[\begin{align}
+r \simeq \left( \frac{3N}{4\pi \alpha n_H^2} \right)^{1/3} 
+\end{align}\]</div>
+<p>and is called the <strong>Strömgren radius</strong> <span class="math notranslate nohighlight">\(r_S\)</span>.</p>
+<p><strong>8.3.9. The Effects of Massive Stars on Gas Clouds</strong></p>
+<ul class="simple">
+<li><p>After reaching the main sequence, the surrounding gas will ionize, resulting tin the creation of a <span class="math notranslate nohighlight">\({\rm H\,II}\)</span> region inside of a <span class="math notranslate nohighlight">\({\rm H\,I}\)</span> region.  Due to the star’s high luminosity, radiation pressure will begin to drive significant mass loss that can disperse the remainder of the cloud.  Some famous examples of this occurring are in the Carina Nebula (about 3000 pc from Earth) and in the <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/Starlog/m16L.html">Eagle Nebula (M16)</a>.</p></li>
+<li><p><strong>8.3.9.1. OB Associations</strong></p></li>
+<li><p>Groups of stars that are dominated by O and B main-sequence stars are called <strong>OB associations</strong>, where studies show that they cannot remain gravitationally bound to on another due to their individual kinematic velocities and masses.</p></li>
+<li><p><strong>8.3.9.2. T Tauri Stars</strong></p></li>
+<li><p>There is a low-mass pre-main-sequence object that represents a transition from protostars still shrouded in dust and main-sequence stars, which is called a <strong>T Tauri</strong> star.</p></li>
+<li><p>T Tauri stars are characterized by unusual spectral features and by large irregular luminosity variations (with timescales on the order of days).</p></li>
+<li><p><strong>8.3.9.3. FU Orionis Stars</strong></p></li>
+<li><p>A T Tauri star star can go through a significant increase in its mass accretion rate <span class="math notranslate nohighlight">\((\dot{M} = 10^{-4}\,M_\odot/{\rm yr})\)</span> and luminosity (by four orders of magnitudes or more) that lasts for decades.  The firs star to undergo these abrupt changes was FU Orionis, where similar behaving stars are called <a class="reference external" href="https://en.wikipedia.org/wiki/FU_Orionis_star">FU Orionis</a> stars.</p></li>
+<li><p><strong>8.3.9.5. Herbig-Haro objects</strong></p></li>
+<li><p>Mass loss during pre-main-sequence evolution can also occur from <strong>jets</strong> of gas that are ejected in narrow beams in opposite directions.  <strong>Herbig-Haro objects</strong> (HH objects) were discovered in the early 1950s by George Herbig and Guillermo Haro in the vicinity of the Orion nebula and are associated with the jets produced by young protostars (e.g., T Tauri stars).</p></li>
+</ul>
+<p><strong>8.3.10. Young Stars with Circumstellar Disks</strong></p>
+<ul class="simple">
+<li><p>Observations have revealed that other young stars also possess circumstellar disks of material, where two well-known examples are Vega and <a class="reference external" href="https://en.wikipedia.org/wiki/Beta_Pictoris"><span class="math notranslate nohighlight">\(\beta\)</span> Pictoris</a>.  An IR image of <span class="math notranslate nohighlight">\(\beta\)</span> Pic shows its disk, where observations of <span class="math notranslate nohighlight">\(\beta\)</span> Pic in the UV suggest that clumps of material are falling from the disk into the star at a rate of 2-3 per week.  There are indications of two substellar objects (planets or brown dwarfs) interacting with a <strong>debris disk</strong> to form resonance gaps.</p></li>
+<li><p><strong>8.3.10.1. Proplyds</strong></p></li>
+<li><p>Analysis of the data revealed 56 (out of 110 stars) brighter than <span class="math notranslate nohighlight">\(V= 21\)</span> are surrounded by disks of circumstellar dust and gas.  <strong>Proplyds</strong>, or protoplanetary disks associated with young stars are less than 1 Myr old.</p></li>
+<li><p><strong>8.3.10.2. Circumstellar Disk Formation</strong></p></li>
+<li><p>Disk formation is fairly common during the collapse of protostellar clouds due to the spin-up of the cloud as required by the conservation of angular momentum.</p></li>
+<li><p>Conservation of angular momentum arguments suggest that all main sequence stars should be rotating very rapidly (at rates close to breakup).</p></li>
+</ul>
 </section>
 </section>
 <section id="apr-3">
 <h2>Apr 3<a class="headerlink" href="#apr-3" title="Permalink to this heading">#</a></h2>
-<section id="main-sequence-and-post-main-sequence-stellar-evolution-part-ii">
-<h3>Main-Sequence and Post-Main-Sequence Stellar Evolution Part II<a class="headerlink" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-ii" title="Permalink to this heading">#</a></h3>
+<section id="main-sequence-and-post-main-sequence-stellar-evolution-part-i">
+<h3>Main-Sequence and Post-Main-Sequence Stellar Evolution Part I<a class="headerlink" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-i" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="apr-8">
 <h2>Apr 8<a class="headerlink" href="#apr-8" title="Permalink to this heading">#</a></h2>
-<section id="stellar-pulsation">
-<h3>Stellar Pulsation<a class="headerlink" href="#stellar-pulsation" title="Permalink to this heading">#</a></h3>
+<section id="main-sequence-and-post-main-sequence-stellar-evolution-part-ii">
+<h3>Main-Sequence and Post-Main-Sequence Stellar Evolution Part II<a class="headerlink" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-ii" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="apr-10">
 <h2>Apr 10<a class="headerlink" href="#apr-10" title="Permalink to this heading">#</a></h2>
-<section id="the-fate-of-massive-stars-part-i">
-<h3>The Fate of Massive Stars Part I<a class="headerlink" href="#the-fate-of-massive-stars-part-i" title="Permalink to this heading">#</a></h3>
+<section id="stellar-pulsation">
+<h3>Stellar Pulsation<a class="headerlink" href="#stellar-pulsation" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="apr-15">
 <h2>Apr 15<a class="headerlink" href="#apr-15" title="Permalink to this heading">#</a></h2>
-<section id="the-fate-of-massive-stars-part-ii">
-<h3>The Fate of Massive Stars Part II<a class="headerlink" href="#the-fate-of-massive-stars-part-ii" title="Permalink to this heading">#</a></h3>
+<section id="the-fate-of-massive-stars">
+<h3>The Fate of Massive Stars<a class="headerlink" href="#the-fate-of-massive-stars" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="apr-17">
 <h2>Apr 17<a class="headerlink" href="#apr-17" title="Permalink to this heading">#</a></h2>
 <section id="the-degenerate-remnants-of-stars-part-i">
 <h3>The Degenerate Remnants of Stars Part I<a class="headerlink" href="#the-degenerate-remnants-of-stars-part-i" title="Permalink to this heading">#</a></h3>
+<p><strong>12.1. The Discovery of Sirius B</strong></p>
+<ul class="simple">
+<li><p>In 1831, Friedrich Wilhelm Bessel used the technique of stellar parallax to find the distance to the star 61 Cygni. Bessel tried Sirius, the brightest star in the sky.  It’s parallax angle is <span class="math notranslate nohighlight">\(p = 0.379^{\prime\prime}\)</span>, which corresponds to a distance of only 2.64 pc, or 8.61 ly.</p></li>
+<li><p>The dominant Sirius A was measured to be nearly <span class="math notranslate nohighlight">\(1000\times\)</span> brighter than the Pup (now called Sirius B) . The orbits of the stars about their center of mass revealed that Sirius A and Sirius B are about <span class="math notranslate nohighlight">\(2.3\ M_\odot\)</span> and <span class="math notranslate nohighlight">\(1.0\ M_\odot\)</span>, respectively.</p></li>
+<li><p>Clark’s discovery of Sirius B was made when the stars were most widely separated (by just <span class="math notranslate nohighlight">\(10^{\prime\prime}\)</span>) at apastron.  The great difference in their luminosities: <span class="math notranslate nohighlight">\(L_A = 25.4\ L_\odot\)</span> and <span class="math notranslate nohighlight">\(L_B=0.056\ L_\odot\)</span> makes observations difficult when the stars are closer together on the sky. Modern observations measure the surface temperature of Sirius B (the Pup) at <span class="math notranslate nohighlight">\(25,000 \pm 200\ {\rm K}\)</span>, which is much hotter than Sirius A at <span class="math notranslate nohighlight">\(9940\ {\rm K}\)</span>.</p></li>
+<li><p>On Earth, the pull of gravity on a teaspoon of white dwarf material would be approximately <span class="math notranslate nohighlight">\(34,300\ {\rm N}\)</span>. This fierce gravity reveals itself in the spectrum of Sirius B, where it produces an immense pressure near the surface that results in very broad hydrogen absorption lines.</p></li>
+<li><p>Astronomers initially dismissed the results, calling them “absurd”.  However, the calculations are so simple and straightforward that this attitude changed.</p></li>
+</ul>
+<p><strong>12.2 White Dwarfs</strong></p>
+<ul class="simple">
+<li><p>Sirius B is not a <em>normal</em> star, where it is in a class of stars that have approximately the mass of the Sun and the size of Earth called <strong>white dwarfs</strong>.</p></li>
+<li><p><strong>12.2.1. Classes of Whihte Dwarfs</strong></p></li>
+<li><p>White dwarfs are whiter than normal stars, but they come in all colors. Their surface temperature range is from <span class="math notranslate nohighlight">\(5000 - 80,000\ K\)</span></p></li>
+<li><p>the largest group (about 2/3 of the total number, including Sirius B) is called <strong>DA white dwarfs</strong> and display only pressure-broadened hydrogen absorption lines in their spectra.</p></li>
+<li><p>Hydrogen lines are absent from the <strong>DB white dwarfs</strong> (8% of the total number), which show only helium absorption lines.</p></li>
+<li><p>No lines are shown at all in the <strong>DC white dwarfs</strong> (14% of the total number), only a continuum devoid of features.</p></li>
+<li><p>The remaining 11% include the <strong>DQ white dwarfs</strong> that exhibit carbon features in their spectra and <strong>DZ white dwarfs</strong> that have evidence of metal lines.</p></li>
+<li><p><strong>12.2.2. Central conditions in White Dwarfs</strong></p></li>
+<li><p>Assuming that Sirius B represents a typical white dwarf (at least 2/3 of them) and recalling the estimate for the central pressure from <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-derivation-of-the-hydrostatic-equilibrium-equation">hydrostatic equilibrium</a>, we have</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P_c = \int_{P_c}^0 dP = \int_0^{R_{wd}} G\left(\frac{4}{3}\pi r^3 \rho \right)\rho rdr = \frac{2}{3}\pi G \rho_{wd}^2 R_{wd}^2,\]</div>
+<ul class="simple">
+<li><p>which is roughly <span class="math notranslate nohighlight">\(5.5 \times 10^{21}\ {\rm N/m^2}\)</span> or 200,000 times greater than the pressure in the Sun <span class="math notranslate nohighlight">\((P_{c,\odot} = 2.477 \times 10^{16}\ {\rm N/m^2})\)</span>.</p></li>
+<li><p>A crude estimate of the central temperature can be obtained for the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-radiative-temperature-gradient">radiative temperature gradient</a> as</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \frac{dT}{dr} = \frac{T_{wd}-T_c}{R_{wd}-0} = - \frac{3}{4ac}\frac{\overline{\kappa}\rho}{T_c^3}\frac{L_{wd}}{4\pi R_{wd}^2},  \]</div>
+<p>assuming that the surface temperature <span class="math notranslate nohighlight">\(T_{wd} \ll T_c\)</span>.  We can also assume that <span class="math notranslate nohighlight">\(\overline{\kappa} = 0.02\ {\rm m^2/kg}\)</span> (from the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-rosseland-mean-opacity">Rosseland mean</a> opacity for electron scattering with <span class="math notranslate nohighlight">\(X=0\)</span>), which gives</p>
+<div class="math notranslate nohighlight">
+\[ T_c \approx \left[\frac{3\overline{\kappa}\rho}{4ac} \frac{L_{wd}}{4\pi R_{wd}} \right]^{1/4} \approx 5.5 \times 10^7\ {\rm K}.\]</div>
+<ul class="simple">
+<li><p>These estimated values for a white dwarf show that hydrogen must be absent from the subsurface layers because they are high enough to start fusion and the white dwarf luminosities would be several orders of magnitude larger than observed.</p></li>
+<li><p><strong>12.2.3. Spectra and Surface Composition</strong></p></li>
+<li><p>The exceptionally strong pull of a white dwarf’s gravity is responsible for the characteristic spectrum of DA white dwarfs.  In this process, heavier nuclei are pulled below the surface while the lighter hydrogen rises to the top and results in a thin outer layer of hydrogen covering a helium layer on top of the <span class="math notranslate nohighlight">\({\rm CO}\)</span> core.</p></li>
+<li><p>The origin of the non-DA (e.g., DB and DC) white dwarfs is not yet clear.  Efficient mass-loss may occur on the AGB associated with the thermal pulse or superwind phases, which strip the white dwarf of nearly all of its hydrogen.</p></li>
+<li><p><strong>12.2.4. Pulsating White Dwarfs</strong></p></li>
+<li><p>White dwarfs with surface temperatures of <span class="math notranslate nohighlight">\(T_e \approx 12,000\ {\rm K}\)</span> lie within the instability strip of the H-R diagram and pulsate with periods between <span class="math notranslate nohighlight">\(100-1000\ {\rm s}\)</span>. In 1968, Arlo Landolt discovered a class of variable white dwarf stars, which are known as <strong>ZZ Ceti</strong> variables or <strong>DAV</strong> stars.</p></li>
+<li><p>Successful numerical calculations of pulsating white dwarf models were carried out by <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2008ARA%26A..46..157W/abstract">Don Winget (and others)</a>, where they demonstrated that the <em>hydrogen</em> partial ionization zone is responsible for driving oscillations in the ZZ Ceti stars. Some stars are described by their transition to the white dwarf stage as: DOV and PNNVs stars that have an effective temperature <span class="math notranslate nohighlight">\(T_e \approx 10^5\ {\rm K}\)</span>.  The DO spectral type marks the initial stage of the white dwarf and the PNNV stands for planetary nebula nuclei.</p></li>
+</ul>
+<p><strong>12.3 The Physics of Degenerate Matter</strong></p>
+<p><strong>12.3.1. The Pauli Exclusion Principle and Electron Degeneracy</strong></p>
+<ul class="simple">
+<li><p>A box of gas particles is filled with standing de Broglie waves that are described by three quantum numbers specifying a particle’s momentum in each of three directions. If the gas particles are fermions (e.g., electrons or neutrons), then the Pauli exclusion principle allows at most one fermion in each quantum state because no two fermions can have the same set of quantum numbers.</p></li>
+<li><p>At standard temperature and pressure (<span class="math notranslate nohighlight">\(20\ {\rm ^\circ C}\)</span> and <span class="math notranslate nohighlight">\(101,325{\rm N/m^2}\)</span>), only one of every
+quantum states is occupied by a gas particle, and the limitations imposed by the Pauli exclusion principle become insignificant.</p></li>
+<li><p>Ordinary gas has a thermal pressure that is related to it temperature by the ideal gas law (i.e.,PV = NkT ).</p></li>
+<li><p>If the particles are fermions, only one particle is allowed in each state and thus, all the particles cannot crowd into the ground state.</p></li>
+<li><p>As the temperature of the gas is lowered, the fermions will fill up the lowest available unoccupied state first and successively occupy the excited states with the lowest energy.</p></li>
+<li><p>At absolute zero, all the lower energy states and none of the higher energy states are occupied. In this case, the fermion gas is completely degenerate.</p></li>
+</ul>
+<p><strong>12.3.2. The Fermi Energy</strong></p>
+<ul>
+<li><p>The maximum energy of any electron in a completely degenerate gas (at absolute zero) is known as the Fermi energy (<span class="math notranslate nohighlight">\(\varepsilon_F\)</span>)</p></li>
+<li><p>consider a 3D box of length L on each side. Treating the electrons as standing waves in the box, their wavelengths in each dimension are,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda_x = \frac{2L}{N_x}, \qquad \lambda_y = \frac{2L}{N_y}, \qquad \lambda_z = \frac{2L}{N_z},\)</span>
+-where there are integer quantum numbers (<span class="math notranslate nohighlight">\(N_x, N_y, N_z\)</span>) associated with each dimension</p></li>
+</ul>
+</li>
+<li><p>Recalling that the de Broglie wavelength is related to the components of momentum by,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p_x = \frac{hN_x}{2L}, \qquad p_y = \frac{hN_y}{2L}, \qquad p_z = \frac{hN_z}{2L}.\)</span></p></li>
+</ul>
+</li>
+<li><p>The total kinetic energy of a particle is the sum of the squares of each component of the momentum, or</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon = \frac{p^2}{2m} = \frac{1}{2m}\left(p_x^2 + p_y^2 + p_z^2 \right).\)</span></p></li>
+</ul>
+</li>
+<li><p>In terms of all the fundamental constants, the energy is</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon = \frac{h^2}{8mL^2}\left(N_x^2 + N_y^2 + N_z^2 \right) = \frac{h^2N^2}{8mL^2}.\)</span></p></li>
+</ul>
+</li>
+<li><p>The total number of electrons in the gas corresponds to the total number of unique quantum numbers times two.</p></li>
+<li><p>Each integer in a coordinate N-space corresponds to the quantum state of two electrons.</p></li>
+<li><p>ith a large enough sample of electrons, the electrons will fill out up to a radius N but only for the positive octant of N-space</p></li>
+<li><p>This means that the total number of electrons will be</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(N_e = 2 \times \left(\text{volume of a positive octant of a sphere of radius N}\right) = 2\left(\frac{1}{8}\right)\left( \frac{4}{3}\pi N^3\right).\)</span></p></li>
+</ul>
+</li>
+<li><p>Solving for N and substituting into Eq. (12.2), we find that the Fermi energy is given by</p>
+<ul>
+<li><div class="amsmath math notranslate nohighlight" id="equation-7f1702de-5711-4375-83f8-d314723c9251">
+<span class="eqno">(20)<a class="headerlink" href="#equation-7f1702de-5711-4375-83f8-d314723c9251" title="Permalink to this equation">#</a></span>\[\begin{align}
+\varepsilon_F = \frac{\hbar^2}{2m_e} \left( 3\pi^2 n\right)^{2/3},
+\end{align}\]</div>
+</li>
+<li><p>depends on the mass of the electron <span class="math notranslate nohighlight">\(m_e\)</span> and the number of electrons per unit volume</p></li>
+</ul>
+</li>
+<li><p>The average energy per electron at absolute zero is <span class="math notranslate nohighlight">\(\frac{3}{5}\varepsilon_F\)</span></p></li>
+</ul>
+<p><strong>12.3.3. The Condition for Degeneracy</strong></p>
+<ul>
+<li><p>Some of the states with an energy less than <span class="math notranslate nohighlight">\(\varepsilon_F\)</span> will become vacant as fermions use their thermal energy to occupy more energetic states.</p></li>
+<li><p>The assumption of complete degeneracy is a good approximation at the densities encountered in the interior of a white dwarf.</p></li>
+<li><p>For full ionization, the number of electrons per unit volume is</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n_e = \left(\frac{\text{# of electrons}}{\text{nucleon}}\right) \left(\frac{\text{# of nucleons}}{\text{volume}} \right) = \left( \frac{Z}{A}\right) \frac{\rho}{m_H},\)</span></p></li>
+<li><p>which depends on the number of protons Z, nucleons A, <span class="math notranslate nohighlight">\(m_H\)</span> and the mass of the hydrogen atom.</p></li>
+</ul>
+</li>
+<li><p>The Fermi energy is proportional to the 2/3 power of the density,</p>
+<ul>
+<li><div class="amsmath math notranslate nohighlight" id="equation-f4c73407-75ad-4621-bb89-c4c101919eac">
+<span class="eqno">(21)<a class="headerlink" href="#equation-f4c73407-75ad-4621-bb89-c4c101919eac" title="Permalink to this equation">#</a></span>\[\begin{align}
+\varepsilon_F = \frac{\hbar^2}{2m_e} \left[ 3\pi^2 \left( \frac{Z}{A}\right) \frac{\rho}{m_H}\right]^{2/3}.
+\end{align}\]</div>
+</li>
+</ul>
+</li>
+<li><p>For a degenerate gas,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{3}{2}kT &lt; \frac{\hbar^2}{2m_e} \left[ 3\pi^2 \left( \frac{Z}{A}\right) \frac{\rho}{m_H}\right]^{2/3},\)</span> or</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{T}{\rho^{2/3}} &lt; \frac{\hbar^2}{3m_e k}\left[ \frac{3\pi^2}{m_H}\left(\frac{Z}{A}\right) \right]^{2/3}.\)</span></p></li>
+</ul>
+</li>
+<li><p>The condition for degeneracy can be written as</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{T}{\rho^{2/3}} &lt; \mathcal{D}.\)</span></p></li>
+<li><p>The smaller the value of <span class="math notranslate nohighlight">\(T/\rho^{2/3}\)</span>, the more degenerate the gas.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>12.3.4. Electron Degeneracy Pressure</strong></p>
+<ul>
+<li><p>Two key ideas of quantum mechanics can be combined to estimate the electron degeneracy pressure:</p>
+<ol class="arabic simple">
+<li><p>The Pauli exclusion principle, which allows at most one electron in each quantum state</p></li>
+<li><p>Heisenberg’s uncertainty principle which requires that an electron confined to small volume of space have a correspondingly high uncertainty in its momentum.</p></li>
+</ol>
+</li>
+<li><p>When we make the unrealistic assumption that all of the electrons have the same momentum, the pressure integral becomes:</p>
+<ul>
+<li><div class="amsmath math notranslate nohighlight" id="equation-02b41db6-4b40-4d2a-9169-40a2f3efeeef">
+<span class="eqno">(22)<a class="headerlink" href="#equation-02b41db6-4b40-4d2a-9169-40a2f3efeeef" title="Permalink to this equation">#</a></span>\[\begin{align}
+P \approx \frac{1}{3}n_e\ p\ v,
+\end{align}\]</div>
+</li>
+</ul>
+</li>
+<li><p>In a completely degenerate electron gas and for a uniform number density of <span class="math notranslate nohighlight">\(n_e\)</span>, the separation between neighboring electrons is about <span class="math notranslate nohighlight">\(n_e^{-1/3}\)</span></p></li>
+<li><p>we can use Heisenberg’s uncertainty relation to estimate the momentum of an electron. In on coordinate direction,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p_x \approx \Delta p_x \approx \frac{\hbar}{\Delta x} \approx \hbar n_e^{1/3}.\)</span></p></li>
+</ul>
+</li>
+<li><p>In a 3D gas each of the directions is equally likely, which implies that</p>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[ p_x^2 = p_y^2 = p_z^2, \]</div>
+</li>
+<li><p>This is just a statement of the equipartition of energy among all the coordinate directions, so it can be rewritten as:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p = \sqrt{3}p_x.\)</span></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>For the electron number density with full ionization:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p \approx \sqrt{3}\hbar \left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{1/3}.\)</span></p></li>
+</ul>
+</li>
+<li><p>For nonrelativistic electrons, the speed is</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v = \frac{p}{m_e} \approx \frac{\sqrt{3} \hbar }{m_e} \left[ \left(\frac{Z}{A}\right) \frac{\rho}{m_H} \right]^{1/3}.\)</span></p></li>
+</ul>
+</li>
+<li><p>The electron degeneracy pressure:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P \approx \frac{\hbar^2}{m_e}\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{5/3}.\)</span></p></li>
+</ul>
+</li>
+<li><p>For nonrelativistic electron gas:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P = \frac{\left(3\pi^2\right)^{2/3}}{5} \frac{\hbar^2}{m_e}\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{5/3}.\)</span></p></li>
+</ul>
+</li>
+<li><p>Electron degeneracy pressure is responsible for maintaining the hydrostatic equilibrium in a white dwarf.</p></li>
+</ul>
+<p><strong>12.4. The Chandrasekhar Limit</strong></p>
+<p><strong>12.4.1. The Mass-Volume Relation</strong></p>
+<ul>
+<li><p>The relation between the radius <span class="math notranslate nohighlight">\(R_{wd}\)</span> and mass <span class="math notranslate nohighlight">\(M_{wd}\)</span> of a white dwarf can be found by setting the estimate of the central pressure equal to the electron degeneracy pressure:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{2}{3} \pi G\rho^2 R_{wd}^2 = \frac{\left(3\pi^2\right)^{2/3}}{5} \frac{\hbar^2}{m_e}\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{5/3}.\)</span></p></li>
+</ul>
+</li>
+<li><p>Assuming a constant density for the white dwarfs leads to an estimate of the radius,</p>
+<ul>
+<li><div class="amsmath math notranslate nohighlight" id="equation-910dedae-14d4-4827-83d5-96402560aebc">
+<span class="eqno">(23)<a class="headerlink" href="#equation-910dedae-14d4-4827-83d5-96402560aebc" title="Permalink to this equation">#</a></span>\[\begin{align}
+R_{wd} \approx \frac{\left(18\pi \right)^{2/3}}{10} \frac{\hbar^2}{GM_{wd}^{1/3}m_e} \left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{5/3}.
+\end{align}\]</div>
+</li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(M_{wd}V_{wd} = \text{constant}.\)</span></p></li>
+<li><p>The volume of a white dwarf is inversely proportional to its mass, where more massive white dwarfs are actually smaller.</p></li>
+<li><p>This mass-volume relation is a result of the electron degeneracy pressure supporting the star.</p></li>
+<li><p>According to the mass-volume relation, a white dwarf would eventually shrink down to zero volume in the limit of continually adding mass.</p></li>
+<li><p>A massive white dwarf is smaller than predicted by the mass-volume relation. There is a limit to the amount of matter than can be supported by electron degeneracy pressure.</p></li>
+</ul>
+<p><strong>12.4.2. Dynamical Instability</strong></p>
+<ul class="simple">
+<li><p>In the extreme relativistic limit, the electron speed <span class="math notranslate nohighlight">\(v=c\)</span> must be used to find the degeneracy pressure, which results in</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P = \frac{\left(3\pi^2\right)^{1/3}}{4} \hbar c\left[\left(\frac{Z}{A}\right)\frac{\rho}{m_H}\right]^{4/3}.\)</span>
+-In this limit, <span class="math notranslate nohighlight">\(\gamma = 4/3\)</span> corresponds to dynamical instability and introduces a polytropic equation with an index <span class="math notranslate nohighlight">\(n=3\)</span></p></li>
+</ul>
+</li>
+<li><p>The smallest departure from equilibrium will cause the white dwarf to collapse as the electron degeneracy pressure fails</p></li>
+<li><p>Approaching this limiting case leads to the collapse of the degenerate core in an aging supergiant and results in a core-collapse supernova</p></li>
+</ul>
+<p><strong>12.4.3. Estimating the Chandrasekhar Limit</strong></p>
+<ul class="simple">
+<li><p>An approximate value for the maximum white dwarf mass can be obtained:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(M_{Ch} = \left(\frac{3\sqrt{2\pi}}{8}\right) \left(\frac{\hbar c}{ G } \right)^{3/2} \left[\left(\frac{Z}{A}\right)\frac{1}{m_H}\right]^2.\)</span></p></li>
+</ul>
+</li>
+<li><p>Using <span class="math notranslate nohighlight">\(Z/A = 0.5\)</span> results in <span class="math notranslate nohighlight">\(0.44\ M_\odot\)</span> for the greatest possible mass.</p></li>
+<li><p>contains the fundamental constants <span class="math notranslate nohighlight">\(\hbar\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(G\)</span>, which represent  the combined effects of quantum mechanics relativity, and Newtonian gravitation on the structure of a white dwarf.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_{Ch} \approx 1.4\ M_\odot\)</span>, which is the <strong>Chandrasekhar limit</strong>.</p></li>
+<li><p>The pressure of a completely degenerate electron gas is independent of its temperature.</p></li>
+</ul>
 </section>
 </section>
 <section id="apr-22">
 <h2>Apr 22<a class="headerlink" href="#apr-22" title="Permalink to this heading">#</a></h2>
 <section id="the-degenerate-remnants-of-stars-part-ii">
 <h3>The Degenerate Remnants of Stars Part II<a class="headerlink" href="#the-degenerate-remnants-of-stars-part-ii" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>12.5 Cooling of white Dwarfs</p>
+<ul>
+<li><p>Most stars end as white dwarfs. Cool off at a constant rate as they lose thermal energy</p></li>
+<li><p>12.5.1 Energy Transport</p>
+<ul class="simple">
+<li><p>Moves to surface through electron conduction</p></li>
+<li><p>So effecient the interior is nearly isothermal.</p></li>
+<li><p>Creates convection zones near surface</p></li>
+<li><p>Nondegenerate envelope allows surface luminosity.
+$<span class="math notranslate nohighlight">\( L ∝ T_{interior}^{7/2} \)</span>$</p></li>
+<li><p>12.5.2 The Cooling Timescale</p></li>
+<li><p>Energy resides in KE of nuclei</p></li>
+<li><p>Cools in around 170 Myr</p></li>
+</ul>
+</li>
+<li><p>12.5.3 Change in Luminosity over time</p></li>
+<li><p>12.5.4 Crystallization</p>
+<ul class="simple">
+<li><p>As WD cools, it crystalizes inside out. Nuclei settle into crystaline structure</p></li>
+<li><p>Release laten heat (kT per nucleus), which slows cooling.</p></li>
+</ul>
+</li>
+<li><p>12.5.5 Comparing Theory and Observations</p>
+<ul class="simple">
+<li><p>Observing the cooling of a pulsating white dwarf despite the large uncertainties in the measurement of its surface temperature that result from high surface gravity and broad spectral features is possible.</p></li>
+<li><p>Its period <span class="math notranslate nohighlight">\(P\)</span> slowly changes according to <span class="math notranslate nohighlight">\(dP/dt \propto T^{-1}\)</span>.  Extremely precise measurements of a rapidly cooling <span class="math notranslate nohighlight">\({\rm DOV}\)</span> star yield <span class="math notranslate nohighlight">\(P/|dP/dt| = 1.4 \times 10^6\ {\rm years}\)</span>, in excellent agreement with the theoretical value.</p></li>
+</ul>
+</li>
+<li><p>12.6 Neutron Stars</p>
+<ul>
+<li><p>Stellar remnants proposed by Baade and Zwicky.</p></li>
+<li><p>12.6.1 Neutron Degeneracy</p>
+<ul class="simple">
+<li><p>The estimated neutron star radius (analogous to Eq. <a class="reference internal" href="../Chapter_16/degenerate-remnants-of-stars.html#equation-mass-vol-relation">(12.13)</a> for a white dwarf) is</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-0231b144-ee41-4243-8a8b-d9de2edbeed3">
+<span class="eqno">(24)<a class="headerlink" href="#equation-0231b144-ee41-4243-8a8b-d9de2edbeed3" title="Permalink to this equation">#</a></span>\[\begin{align}
+            R_{ns} \approx \frac{\left(18\pi \right)^{2/3}}{10}\frac{\hbar^2}{GM_{ns}^{1/3}} m_H^{-8/3}.
+            \end{align}\]</div>
+<ul class="simple">
+<li><p>This yields a value of 4.4 km for the minimum mass <span class="math notranslate nohighlight">\(M_{ns} = 1.4\ M_\odot\)</span>. This estimate is too small by a factor of about 3, where the actual radius lies roughly between 10-15 km.</p></li>
+<li><p>There are many uncertainties for modeling a neutron star.</p></li>
+</ul>
+</li>
+<li><p>12.6.2 The Density of a Neutron Star</p>
+<ul class="simple">
+<li><p>Average density of a neutron star would be around <span class="math notranslate nohighlight">\(6.65 \times 10^{17}\ {\rm kg/m^3}\)</span>.</p></li>
+<li><p>A <span class="math notranslate nohighlight">\(1.4\ M_\odot\)</span> neutron star with a radius of <span class="math notranslate nohighlight">\(10\ {\rm km}\)</span> would have a surface gravity <span class="math notranslate nohighlight">\(g = 1.86 \times 10^{27}\ {\rm m/s^2}\)</span> An object dropped from a height of meter would arrive at the star’s surface with a speed of <span class="math notranslate nohighlight">\(1.93 \times 10^6\ {\rm m/s}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>12.6.3 The Equation of State</p>
+<ul class="simple">
+<li><p>Iron nuclei white dwarf requires <span class="math notranslate nohighlight">\(10^{57}\)</span> nucleons and enough free electrons to net 0 charge</p></li>
+<li><p>At low densities most stable nucleons are found in iron nuclei</p></li>
+<li><p>Energetic electrons convert protons into neutrons and neutrinos
+$<span class="math notranslate nohighlight">\( p^+ +e^- → n +\nu _e\)</span>$</p></li>
+<li><p>gives energy difference of 0.78 MeV</p></li>
+<li><p>No vacant states to allow neutrons to beta decay.</p></li>
+<li><p>At density <span class="math notranslate nohighlight">\(4\times 10^{14}\)</span>, neutrons forced out of nuclei, create neutron fluid.</p>
+<ul>
+<li><p>Has no viscosity</p></li>
+<li><p>Can become super fluid</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>12.6.4 Neutron Star Models</p>
+<ul class="simple">
+<li><p>After an equation of state relating density and pressure is determined, can model star numerically</p></li>
+<li><p>calculations of <span class="math notranslate nohighlight">\(1.4M_{\odot}\)</span> neutron star.</p>
+<ul>
+<li><p>Outer crust is heavy nuclei as either fluid ocean or solid lattice</p></li>
+<li><p>Inner curst consists of three part mixture of lattice of muclei, superfluid of free neutrons, and relativistic degenerate electrons</p></li>
+<li><p>INterior consists primarily of superfluid neutrons, with small number of supefluid protons and relativistic degenerate elctrons</p></li>
+<li><p>May or may not be solid core of pions or other subnuclear particles. Density at center is <span class="math notranslate nohighlight">\(10^{18}\)</span> kg/m^3</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>12.6.5 The Chandrasekhar Limit of Neutron Stars</p>
+<ul class="simple">
+<li><p>Obey mass-volume relation
+$<span class="math notranslate nohighlight">\( M_{ns}V_{ns}=constant\)</span>$</p></li>
+<li><p>so they become smaller more dense with more mass</p></li>
+<li><p>Fails when neutron degeneracy pressure fails.</p></li>
+<li><p>Mass cannot exceed</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(2.2 M_{\odot}\)</span> for static</p></li>
+<li><p><span class="math notranslate nohighlight">\(2.9 M_{\odot}\)</span> for rotating</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>12.6.6 Rapid Rotation and COnservation of Angular Momentum</p>
+<ul class="simple">
+<li><p>Due to decrease in radius, if the supergiant was rotating even a little bit, the Neutron star would rotate much much faster</p></li>
+<li><p>Scale of collapse can be found by ratio of radii:
+$<span class="math notranslate nohighlight">\( \frac{R_{core}}{R_{ns}} ≃ \frac{m_n}{m_e}(\frac{Z}{A})^{5/3} =512\)</span>$</p></li>
+</ul>
+</li>
+<li><p>12.6.7 Neutron Star Temperatures</p>
+<ul class="simple">
+<li><p>Neutron stars were extremely hot when they were created in supernovae
+$<span class="math notranslate nohighlight">\( T ∼ 10^{11} K\)</span>$ \</p></li>
+<li><p>As neutrons and protons interchange, neutrinos and antineutrinos carry off energy</p></li>
+<li><p>T drops to around <span class="math notranslate nohighlight">\(10^9\)</span> in one day.</p></li>
+<li><p>Neutrino processes dominate cooling for next 1000 years</p></li>
+<li><p>Luminosity of <span class="math notranslate nohighlight">\(1.4 M_{\odot}\)</span> <span class="math notranslate nohighlight">\(L=7.13\times 10^{25}\)</span>W.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda_{max}\)</span> = 2.9 nm</p></li>
+</ul>
+</li>
+<li><p>12.7 Pulsars</p>
+<ul class="simple">
+<li><p>Rotating neutron stars are pulsars.</p></li>
+<li><p>Emit signals with precise periods</p></li>
+</ul>
+</li>
+<li><p>12.7.1 General Characteristics</p>
+<ul class="simple">
+<li><p>Most have periods 0.25-2 s, with average around 0.795s</p></li>
+<li><p>Extremely well defined pulse periods</p></li>
+<li><p>Periods increase as pulsars slow down</p></li>
+<li><p>Have a lifetime around 470 Myr</p></li>
+</ul>
+</li>
+<li><p>12.7.2 Possible Pulsar Models</p>
+<ul class="simple">
+<li><p>There are ways to get rapid regular pulses via astronomical phenomena:</p></li>
+<li><p><strong>Binary Stars:</strong></p></li>
+<li><p>Extremely compact stars may be involved if the orbital periods of a binary star system are within the range of  an observed pulsar period.</p></li>
+<li><p>Neutron stars so small that two can orbit each other with period analogous to pulsar period.</p></li>
+<li><p>This way to gather regular pulses is not viable due to relativistic influences. Gravitational waves would be generated from the orbiting, which would take energy away from the system. The pulsing would therefore not be regular with this kind of energy loss.</p></li>
+<li><p><strong>Pulsating Stars</strong></p></li>
+<li><p>Oscillation of white dwarfs occurs with periods between <span class="math notranslate nohighlight">\(100-1000\ {\rm s}\)</span>.</p></li>
+<li><p>Density of neutron stars is about <span class="math notranslate nohighlight">\(10^8\times\)</span> denser than white dwarfs, period of oscillation is proportional to <span class="math notranslate nohighlight">\(\rho^{-1/2}\)</span>. Periods are much too short for the slower pulsars, and this eliminates neutron star oscillations as a source of rapid regular pulses.</p></li>
+<li><p><strong>Rotating Stars</strong></p></li>
+<li><p>Angular momentum being large for a rapidly rotating compact star would account for a regular behavior of pulses.</p></li>
+<li><p>We can calculate the angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> from the balance of gravity with centripetal force. The stellar material moves more rapidly at the equator of the star than other latitudes</p></li>
+<li><p>The enormous angular momentum of a rapidly rotating compact star would guarantee its precise clock-lik behavior.  To estimate how fast such objects must be spinning, we calculate its angular velocity <span class="math notranslate nohighlight">\(\omega\)</span> from the balance of gravity against the centripetal force.
+$<span class="math notranslate nohighlight">\(\omega_{\rm max}^2 R = \frac{GM}{R^2}\)</span>$,</p></li>
+<li><p>so that the minimum rotation period is <span class="math notranslate nohighlight">\(P_{\rm min} = \frac{2\pi}{\omega_{\rm max}}\)</span>, or</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight" id="equation-b9c9e81b-8be6-44d1-b854-58770c584372">
+<span class="eqno">(25)<a class="headerlink" href="#equation-b9c9e81b-8be6-44d1-b854-58770c584372" title="Permalink to this equation">#</a></span>\[\begin{align}
+        P_{\rm min} = 2\pi \sqrt{\frac{R^3}{GM}}.
+        \end{align}\]</div>
+</li>
+<li><p>12.7.3 Synchrotron and Curvature Radiation</p>
+<ul class="simple">
+<li><p>Shklovsky proposed that white light is synchortron radiation as electrons spiral down magnetic field lines
+$<span class="math notranslate nohighlight">\( F_m = q(v\times B)\)</span>$</p></li>
+<li><p>12.7.3.1 Energy Source for Crab’s Synchrotron Radiation</p>
+<ul>
+<li><p>Energy source is the rotating neutron star at center of nebula</p></li>
+<li><p>Stores rotational kinetic energy</p></li>
+<li><p>Energy loss rate
+$<span class="math notranslate nohighlight">\(\frac{dK}{dt} = -I \frac{4\pi^2 P^{̇}}{P^3}\)</span>$</p></li>
+</ul>
+</li>
+<li><p>12.7.3.2 The Structure of the Pulses</p>
+<ul>
+<li><p>Pulses are brifed and recieved over small fraction of pulse period</p></li>
+<li><p>between 20MHz and 10GHz in the radio</p></li>
+<li><p>Electrons in intertsellar space slow radio waves so that they are slower than the speed of light</p></li>
+<li><p>Integrated pulse is average built up by adding together a train of 100 or more pulses</p>
+<ul>
+<li><p>Drifting pulses are subpulses that appear randomly within window of main pulse</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>12.7.4 The Basic Pulsar Model</p>
+<ul class="simple">
+<li><p>Consitsts of rapidly rotation neutron star with stron dipole magnetic field</p></li>
+<li><p>Incline to rotation acis at angle <span class="math notranslate nohighlight">\(\theta\)</span></p></li>
+<li><p>Using energy emmited by rotating magnetic dipole gives us</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[B = \frac{\sqrt{3\mu_o c^3 IPP^{̇}}}{(2\pi)^{3/2}R^3 sin\theta}\]</div>
+</li>
+<li><p>12.7.4.1Correlation Between Period Derivatives and Pulsar Classes</p>
+<ul class="simple">
+<li><p>Most pulsars fall in group near 0.5 s period</p></li>
+<li><p>Pulsars that emit X-ray wavelengths have longest periods and largest period derivatives</p></li>
+<li><p>High-energy pulsars that emit radio and IR tend to have larger period derivatives but typical periods</p></li>
+<li><p>Nearly all pulsars have period derivative &gt;0 (slowing down), where some of them are speeding up.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </section>
 </section>
 <section id="apr-24">
@@ -1508,8 +2759,8 @@ E_{\rm photon} = h\nu = pc.
 </section>
 <section id="apr-29">
 <h2>Apr 29<a class="headerlink" href="#apr-29" title="Permalink to this heading">#</a></h2>
-<section id="id5">
-<h3>Review Paper Presentations<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<section id="id6">
+<h3>Review Paper Presentations<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="may-2-final-exam">
@@ -1626,10 +2877,35 @@ E_{\rm photon} = h\nu = pc.
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-21">Feb 21</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-atmospheres-part-iii">Stellar Atmospheres Part III</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transfer-equation"><strong>5.4 The Transfer Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-emission-coefficient">5.4.1 The Emission Coefficient</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-source-function-and-the-transfer-equation">5.4.2 The Source Function and the Transfer Equation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-special-case-of-blackbody-radiation">5.4.3 The Special Case of Blackbody Radiation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-assumption-of-a-plane-parallel-atmosphere">5.4.4 The Assumption of a Plane-Parallel Atmosphere</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-eddington-approximation">5.4.5 The Eddington Approximation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-profiles-of-spectral-lines"><strong>5.5 The Profiles of Spectral Lines</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalent-widths">5.5.1 Equivalent Widths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#proccess-that-broaden-spectral-lines">5.5.2 Proccess that Broaden Spectral Lines</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-voigt-profile">5.5.3 The Voigt Profile</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-curve-of-growth">5.5.4 The Curve of Growth</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-26">Feb 26</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sun-part-i">The Sun Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-evolutionary-history-of-the-sun">6.1.1. The Evolutionary History of the Sun</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-present-day-interior-structure-of-the-sun">6.1.2. The Present-Day Interior Structure of the Sun</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-solar-neutrino-problem-a-detective-story-solved">6.1.3. The Solar Neutrino Problem: A Detective Story Solved</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-solar-atmosphere">6.2. The Solar Atmosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-photosphere">6.2.1. The Photosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solar-granulation-differential-rotation">6.2.1.1. Solar Granulation &amp; Differential Rotation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-chromosphere">6.2.2. The Chromosphere</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-transition-region">6.2.3. The Transition Region</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-corona">6.2.4. The Corona</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coronal-holes-and-the-solar-wind">6.2.4.1. Coronal Holes and the Solar Wind</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feb-28">Feb 28</a><ul class="nav section-nav flex-column">
@@ -1658,34 +2934,41 @@ E_{\rm photon} = h\nu = pc.
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-20">Mar 20</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interiors-of-stars-part-iv">The Interiors of Stars Part IV</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Teaching Presentations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-transport-and-thermodynamics">7.4 Energy Transport and Thermodynamics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#three-energy-transport-systems">7.4.1 Three Energy Transport Systems</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-radiative-temperature-gradient">7.4.2 The Radiative Temperature Gradient</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#the-pressure-scale-height">7.4.3 The Pressure Scale Height</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-25">Mar 25</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-i">The Interstellar Medium and Star Formation Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interiors-of-stars-part-v">The Interiors of Stars Part V</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Teaching Presentations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mar-27-exam-ii-take-home">Mar 27 (Exam II take-home)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-ii">The Interstellar Medium and Star Formation Part II</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-i">The Interstellar Medium and Star Formation Part I</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-1">Apr 1</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-i">Main-Sequence and Post-Main-Sequence Stellar Evolution Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-interstellar-medium-and-star-formation-part-ii">The Interstellar Medium and Star Formation Part II</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-3">Apr 3</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-ii">Main-Sequence and Post-Main-Sequence Stellar Evolution Part II</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-i">Main-Sequence and Post-Main-Sequence Stellar Evolution Part I</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-8">Apr 8</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-pulsation">Stellar Pulsation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-sequence-and-post-main-sequence-stellar-evolution-part-ii">Main-Sequence and Post-Main-Sequence Stellar Evolution Part II</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-10">Apr 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fate-of-massive-stars-part-i">The Fate of Massive Stars Part I</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stellar-pulsation">Stellar Pulsation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-15">Apr 15</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fate-of-massive-stars-part-ii">The Fate of Massive Stars Part II</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fate-of-massive-stars">The Fate of Massive Stars</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-17">Apr 17</a><ul class="nav section-nav flex-column">
@@ -1701,7 +2984,7 @@ E_{\rm photon} = h\nu = pc.
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apr-29">Apr 29</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Review Paper Presentations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Review Paper Presentations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#may-2-final-exam">May 2 (Final Exam)</a><ul class="nav section-nav flex-column">
@@ -1731,7 +3014,7 @@ By Billy Quarles
     
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
@@ -1744,6 +3027,9 @@ By Billy Quarles
   
   <div class="footer-item">
     
+<div class="extra_footer">
+  This page was created by <a href="https://www.billyquarles.com">Billy Quarles</a> using <a href="https://jupyterbook.org">Jupyter Book</a>.
+</div>
   </div>
   
 </div>
